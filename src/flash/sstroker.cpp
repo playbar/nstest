@@ -14,6 +14,7 @@ permission of Macromedia, Inc.
 // Thick line stroking code
 //
 
+
 SStroker::SStroker(CRaster*r, REdge** list)
 {
 	raster = r;
