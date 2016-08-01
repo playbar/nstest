@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/nd3_more_bind_check_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:paddingTop="@dimen/nd3_bind_phonenumber_paddingTop"
+	android:gravity="center"
+	android:orientation ="vertical"
+	>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/nd3_more_bind_check_tip_number"
+		android:textColor="@color/nd3_white"
+		android:layout_marginTop="@dimen/nd3_option_margin_top"
+		style="@style/nd3_option_margin_style"
+		>
+	</TextView>
+
+	<EditText
+		android:id="@+id/nd3_more_bind_check_number"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:singleLine="true"
+		style="@style/nd3_option_margin_style"
+		>
+	</EditText>		
+	
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/nd3_more_bind_check_tip_send_sms"
+		android:textColor="@color/nd3_white"
+		style="@style/nd3_option_margin_style"
+		>
+	</TextView>
+		 
+</LinearLayout>

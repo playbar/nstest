@@ -1,0 +1,6 @@
+#pragma once
+
+//生成密钥文件
+#define MakeKeyFile "makekeyfile.bat"
+//配置文件
+#define ConfigFile  "config.cfg"

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--装备改良-->
+<config properties='{"initX":0, "initY":0,"styleName":"window1", "titleID":"512000", "isSpecial":true }'>
+	<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+	<alertText properties='{"key":"improveErrorTips", "colors":["0xCC3300", "0x00CC00"], "showEffDuration":1, "duration":2}' />
+	<!--左侧背包-->
+	<container name="bag" properties='{"x":0, "y":0, "showEffectDuration":0, "hideEffectDuration":0}' >
+		<label  properties='{"x":255, "y":40, "width":570,"height":30,"size":20,"align":"center", "textID":"512423", "color":"0xe6f09a", "stroke":"0x302010","border":false, "mouseEnabled":false}' />	
+		<!--<displayObject definition="improve.recoin.recoinBg" properties='{"y":0,"width":640,"height":700,"x":0}' /> -->
+		<!-- <BXBackBar properties='{"width":576,"x":30,"height":494,"y":60,"clip":[30,30,30,30],"styleName":"VerList"}'/> -->
+		<!--<displayObject name="bg" definition="improve.bag.BG" properties='{"x":-378, "y":-60}' /> -->
+		<itemGroup name="tabBtnGroup" properties='{"x":35, "y":34, "layout":"horizontal"}' />
+		<button name="tabBtn1" properties='{"x":0, "y":0, "width":100,"height":40,"styleName":"button8", "labelID":"512501"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		<button name="tabBtn2" properties='{"x":0, "y":0,"width":100,"height":40, "styleName":"button8", "labelID":"512502"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		
+    <displayObject definition="gameUI.icon.BlackBG" properties='{"width":596,"height":600,"x":20,"y":80 }'/>
+
+	<!--背包列表-->
+	<BXList name="goodsList" properties='{"styleName":"VList", "y":90,"x":35,"width":566,"height":580,"acc":true,"itemSize2":200,"backColor":"0x1E201A"}'>
+		<BXRender properties='{"width":566,"height":103}'>
+			<BXBackBar name="_back" properties='{"width":566,"height":103,"x":0,"y":0,"clip":[50,26,50,26],"styleName":"VerListItem"}'/>
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":10,"y":10 }'/>
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":102,"y":10 }'/>
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":194,"y":10 }'/>	
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":286,"y":10 }'/>	
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":378,"y":10 }'/>	
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":470,"y":10 }'/>		
+			<list name="hGoodsList" properties='{"x":10, "y":10, "columnCount":6, "rowCount":1, "horizontalGap":8, "verticalGap":19}' />
+		</BXRender>
+	</BXList>
+<!--
+<displayObject definition="gameUI.bg.GimpFrameNew" properties='{"width":280,"height":52,"x":319,"y":130}'/>
+<label properties='{"width":200,"size":36,"x":222,"height":50,"textID":"512401","y":108,"color":"0xCBCC66","autoSize":"none","stroke":0,"align":"center","styleName":"label"}'/>
+
+
+<label properties='{"width":350,"size":24,"x":123,"height":30,"textID":"512422","y":658,"color":"0x8C9F34","autoSize":"none","stroke":0,"align":"right","styleName":"label"}'/>
+-->
+		<!--
+		<displayObject properties='{"x":136, "y":422, "width":80, "height":28}' definition='skin.page2.PageBG' />		
+		<page name="page" properties='{"x":96, "y":422,
+			"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+			"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":130 },
+			"labelProp":{"x":32, "y":4, "textID":"570203","width":100, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+		}' /> -->
+	</container>
+	
+	
+	<!--装备精炼-->
+<container name="refine" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.jinglian", "starClassName":"improve.refine.Star", "starGapX":14 , "showEffectDuration":0, "hideEffectDuration":0,
+										"baojiEffect":{"initPoint":{"x":110,"y":245},"endPoint":{"x":110,"y":245},"duraTime":1}}' >
+		  <displayObject definition="BW.gameUI.BG.improveBG" properties='{"y":29,"x":12}' />
+			<alertText properties='{"key":"refineTips","colors":["0xCC3300","0x00CC00"],"y":315,"duration":2,"showEffDuration":1,"x":165}' />
+	<!--<displayObject definition="improve.refine.RefineBG" properties='{"height":996,"x":0,"y":0,"width":720}' />	-->
+<!-- 精炼操作提示 -->
+<BXBackBar properties='{"clip":[0,0,300,0],"x":12,"styleName":"LeftLabelBG","width":440,"image":"BW.gameUI.BG.leftLabelBG","height":41,"y":35}'/>
+    <label name="titleText" properties='{"styleName":"label","x":32,"autoSize":"none","stroke":0,"width":500,"textID":"512421","height":30,"y":40,"size":24,"color":"0xdfda5e"}'/>
+    <displayObject definition="gameUI.icon.BlackBG" properties='{"width":455,"height":455,"x":40,"y":130}'/>
+		<displayObject name="starMCBg" definition='improve.refine.StarBg' properties='{"height":66,"x":353,"y":207,"width":72}'/>
+		<sprite name="starNnm" properties='{"classPath":"improve.refine.StarNumber","x":390,"align":"center","y":220}'/>
+		<displayObject name="fullIcon" definition='gameUI.icon.FullIcon' properties='{"height":30,"x":363,"visible":false,"y":256,"width":51}'/>
+		<BXRender name="goodsIconRender" properties='{"x":136,"y":200}'>
+			
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":0,"y":0}'/>
+			<label name="goodsText" properties='{"multiline":true,"x":15,"y":11,"stroke":"0x302010","width":60,"height":60,"color":"0x8C9F34","mouseEnabled":false,"size":24,"textID":"512152"}'/>
+		</BXRender>
+		<sprite name="goodsIcon" properties='{"x":143,"y":206}' />	
+		<displayObject name="myCopperIcon" definition='BW.gameUI.icon.silver' properties='{"y":159,"x":115}'/>
+		<displayObject name="myGoldIcon" definition='BW.gameUI.icon.gold' properties='{"y":159,"x":264}'/>
+		<label name="myCopperText" properties='{"x":145,"stroke":"0x302010","y":155,"size":20,"color":"0xFFFFCC"}'/>
+		<label name="myGoldText" properties='{"x":297,"stroke":"0x302010","y":155,"size":20,"color":"0xFFFFCC"}'/>
+		
+		<label name="maxStarTipsText" properties='{"x":179,"stroke":"0x302010","textID":512409,"text":"maxstartips","y":584,"size":24,"color":"0xCBCC64"}'/>
+
+<BXBackBar properties='{"clip":[100,0,100,0],"x":58,"y":340,"width":400,"image":"BW.gameUI.BG.centertableBG","height":33,"styleName":"CenterLabelBG"}'/>
+<label name="successRateTitleText" properties='{"y":341,"x":167,"size":24,"stroke":0,"styleName":"label","color":"0xdfda5e","textID":"512405","height":30,"autoSize":"none","width":300,"textID":512405}'/>
+<label name="successRateText" properties='{"x":279,"stroke":"0x302010","color":"0xE5EF99","y":341,"size":24,"textID":570203}'/>
+
+<BXBackBar properties='{"clip":[100,0,100,0],"x":58,"y":401,"width":400,"image":"BW.gameUI.BG.centertableBG","height":33,"styleName":"CenterLabelBG"}'/>
+		<label name="successResultTitleText" properties='{"stroke":"0x302010","x":167,"y":402,"width":300,"color":"0xCBCC64","textID":"512407","height":30,"styleName":"label","size":24,"textID":512407}'/>
+		<label name="successResultText" properties='{"y":402,"x":279,"stroke":"0x302010","width":300,"height":30,"styleName":"label","size":24,"color":"0xE5EF99"}'/>
+
+<BXBackBar properties='{"clip":[100,0,100,0],"x":58,"y":462,"width":400,"image":"BW.gameUI.BG.centertableBG","height":33,"styleName":"CenterLabelBG"}'/>
+		<label name="failResultTitleText" properties='{"stroke":"0x302010","x":167,"y":463,"width":300,"color":"0xCBCC64","textID":"512408","height":30,"styleName":"label","size":24,"textID":512408}'/>
+	<label name="failResultText" properties='{"y":463,"x":279,"stroke":"0x302010","width":300,"height":30,"styleName":"label","size":24,"color":"0xE5EF99"}'/>
+
+<BXBackBar properties='{"clip":[100,0,100,0],"x":58,"y":523,"width":400,"image":"BW.gameUI.BG.centertableBG","height":33,"styleName":"CenterLabelBG"}'/>
+<label name="costMoldTipText" properties='{"stroke":"0x302010","x":167,"y":524,"width":300,"color":"0xCBCC64","textID":"512410","height":30,"styleName":"label","size":24,"textID":512410}'/>
+
+		
+		<itemGroup name="costGroup" properties='{"y":119}'/>
+		<radioButton group="costGroup" name="costSilverRB" properties='{"y":530,"x":245,"visible":false,"data":0,"styleName":"radioButton1"}' />
+		<radioButton group="costGroup" name="costGoldRB" properties='{"y":557,"x":245,"visible":false,"data":1,"styleName":"radioButton1"}' />
+		<label name="costSilverText" properties='{"x":279,"stroke":"0x302010","y":528,"size":20,"color":"0xE5EF99"}'/>
+		<label name="costGoldText" properties='{"x":279,"stroke":"0x302010","visible":false,"y":558,"size":20,"color":"0xF2C22C"}'/>
+		<displayObject name="sivlerIcon" definition='BW.gameUI.icon.silver' properties='{"x":379,"y":532,"mouseEnabled":false}'/>
+		<displayObject name="goldIcon" definition='BW.gameUI.icon.gold' properties='{"x":381,"visible":false,"y":555,"mouseEnabled":false}'/>
+		
+		<checkBox name="protectCostCB" properties='{"x":137,"visible":false,"styleName":"checkBox1","y":582}' />
+
+		<button name="refineBtn" properties='{"x":377,"y":630, "styleName":"button3", "labelID":"512402", "height":48,"width":120, "enabled":false}' />
+		<button name="rebuildBtn" properties='{"x":65,"y":630,"width":120,"height":48,"autoSize":false, "styleName":"button5", "labelID":"512416","enabled":false}' />
+		
+		<displayObject name="successEffect" definition='improve.refine.SuccessEffect' properties='{"height":54,"x":199,"visible":false,"y":289,"width":65}'/>
+		<displayObject name="baoji" definition='improve.refine.baoji' properties='{"x":120,"visible":false,"y":150}'/>
+		<list name="iconList" properties='{"x":550, "y":140, "columnCount":1, "rowCount":3, "horizontalGap":1, "verticalGap":30}' />
+	</container>					
+	
+	<!-- 装备洗炼 -->
+<container name="recoin" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.xilian", "showEffectDuration":0, "hideEffectDuration":0,"tigerMoviePropArr":[0.02,0.03,0.05,0.07],"movieIndexArr":[0,1,2,3,4,9,8,7,6,5]}' >
+		<displayObject definition="BW.gameUI.BG.improveBG" properties='{"y":29,"x":12}' />
+		
+		<displayObject definition="improve.recoin.reBg" properties='{"y":120,"width":500,"height":360,"x":70}' />
+		<displayObject definition="improve.recoin.defSkillBg" properties='{"y":608,"width":610,"height":160,"x":323}' />
+		<displayObject definition="improve.recoin.Equipgrid"  properties='{"x":30 , "y":586}'/>	
+		<displayObject definition="improve.recoin.combBorder" properties='{"x":479, "y":586}' />
+		<displayObject definition="improve.recoin.SkillGrid" properties='{"x":511, "y":586}' />
+		<BXBackBar properties='{"clip":[0,0,300,0],"image":"BW.gameUI.BG.leftLabelBG","x":12,"y":35,"width":440,"styleName":"LeftLabelBG","height":41}'/>
+		<label  properties='{"x":32, "y":40, "size":24,"color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"512505","width":500}'/>
+		<label  name="curSkillText" properties='{"x":30, "y":546, "size":24,"color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"512514"}'/>
+		<label  name="freeCountText" properties='{"textID":570203,"color":"0xFFFFCC","size":20,"x":303,"stroke":"0x302010","border":false,"y":79}'/>
+		<label  name="skillMaxLvText" properties='{"x":87, "y":130, "color":"0xFFFF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="belongToText" properties='{"x":86, "y":197, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"size":24,"align":"right","width":180,"height":30}'/>
+		<BXRender name="goodsIconRender" properties='{"x":274, "y":172}'>
+			<displayObject definition="gameUI.icon.Grid1" properties='{"width":84,"height":84,"x":0,"y":0}'/>
+			<label name="goodsText" properties='{"multiline":true,"x":14,"y":10,"stroke":"0x302010","width":60,"height":60,"color":"0x8C9F34","mouseEnabled":false,"size":24,"textID":"512152"}'/>
+		</BXRender>
+		<sprite name="goodsIcon" properties='{"x":281, "y":179}' />	
+		<list name="skillsList" properties='{"x":104, "y":279, "columnCount":5, "rowCount":2, "horizontalGap":2, "verticalGap":2}' />
+		<list name="defSkillList" properties='{"x":29, "y":585, "columnCount":5, "rowCount":1, "horizontalGap":8, "verticalGap":2}' />
+		<button name="recoinBtn" properties='{"x":419, "y":184, "styleName":"button3", "labelID":"512508", "height":48,"width":120, "enabled":false}' />
+		<label name="priceText" properties='{"x":419, "y":148, "color":"0xE7F19B", "stroke":"0x302010","height":28, "autoSize":"left"}'/>
+		<displayObject name="goldIcon" definition="BW.gameUI.icon.silver" properties='{"x":530, "y":151,"visible":false}' />
+		
+		<imageLoader name="combSkillIL" properties='{"pathFormatName":"skill32",  "x":515, "y":590, "width":70, "height":70}' />	
+		<displayObject name="combEffect" definition="gameUI.effect.Cincture" properties='{"height":83,"x":512,"width":79,"y":586,"visible":false}' />
+		
+		<label name="combIntroText" properties='{"underline":true,"size":24, "width":100, "height":28, "x":503, "y":546, "color":"0x99FF00", "stroke":"0x302010", "width":161, "autoSize":"none", "align":"left","textID":"512522"}' />
+	</container>
+	<!-- 背包里装备 呈视器  -->
+	<goodsRenderer properties='{"itemHeight":84, "itemWidth":84,"attColor":["0x6CC3EE","0xFF6437","0xFFCC00"]}'>	
+		<sprite name="goodsIcon" properties='{"x":7, "y":7}' />	
+		<label  name="countText" properties='{"x":7, "y":50, "width":70, "height":30,"size":16,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="attrText" properties='{"x":7, "y":50, "width":70, "height":30, "size":16, "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<bitmapMC name="cinctureEffect" properties='{"sourceName":"gameUI.effect.Cincture", "fps":9, "x":-4, "y":-4, "visible":false}'/>
+	</goodsRenderer>
+	<!-- 背包里装备 呈视器  -->
+	<EquipSkillRenderer properties='{"itemHeight":84, "itemWidth":84}'>
+		<displayObject name="skillGrid" definition="improve.recoin.SkillGrid"  properties='{"x":0 , "y":0,"visible":false}'/>			
+		<imageLoader name="skillIL" properties='{"pathFormatName":"skill32",  "x":7, "y":7, "width":70, "height":70}' />	
+		<label  name="levelText" properties='{"x":7, "y":50, "width":70, "height":30,"size":16,  "autoSize":"none", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<displayObject name="shade" definition="improve.recion.shade"  properties='{"x":7 , "y":7,"visible":false,"mouseEnabled":false}'/>	
+	</EquipSkillRenderer>
+	
+	<!--宝石合成-->
+	<container name="compose" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.hecheng", "showEffectDuration":0, "hideEffectDuration":0}' >
+      <displayObject definition="BW.gameUI.BG.improveBG" properties='{"y":29,"x":12}' />
+        
+			<alertText properties='{"key":"composeTips", "colors":["0xCC3300", "0x00CC00"], "showEffDuration":1, "duration":2, "x":118, "y":200}' />
+			
+			<BXBackBar properties='{"clip":[0,0,300,0],"image":"BW.gameUI.BG.leftLabelBG","x":12,"y":35,"width":440,"styleName":"LeftLabelBG","height":41}'/>
+			<label properties='{"x":32, "y":40,"size":24, "color":"0xCBCC64", "stroke":"0x302010", "textID":"512002","width":500}'/>
+			
+			<displayObject definition="gemstone.compose.grid" properties='{"height":98,"x":260,"y":217,"width":124}'/>
+			<imageLoader name="materialIL" properties='{"height":70,"x":286,"y":240,"width":70,"pathFormatName":"gemstone32"}' />
+			<label name="materialNumText" properties='{"stroke":"0x302010","x":285,"align":"right","y":285,"width":70,"color":"0xCBCC66","height":40,"autoSize":"none","size":20,"mouseEnabled":false}'/>
+			<displayObject definition="gemstone.compose.grid" properties='{"height":98,"x":133,"y":370,"width":124}'/>
+			<imageLoader name="produceIL" properties='{"height":70,"x":159,"y":394,"width":70,"pathFormatName":"gemstone32"}' />
+			<label name="produceNumText" properties='{"stroke":"0x302010","x":152,"align":"right","y":440,"width":76,"height":40,"autoSize":"none","mouseEnabled":false,"color":"0xCBCC66"}'/>
+			<displayObject definition="gemstone.compose.grid" properties='{"height":98,"x":386,"y":370,"width":124}'/>
+			<imageLoader name="splitIL" properties='{"height":70,"x":413,"y":394,"width":70,"pathFormatName":"gemstone32"}' />
+			<label name="splitNumText" properties='{"stroke":"0x302010","x":411,"align":"right","y":440,"width":70,"height":40,"autoSize":"none","mouseEnabled":false,"color":"0xCBCC66"}'/>
+			<button name="composeBtn" properties='{"x":129,"enabled":false,"styleName":"button3","width":120,"height":48,"labelID":512005,"y":572}' />
+			<button name="splitBtn" properties='{"x":390, "y":572, "styleName":"button3", "labelID":"512011", "height":48,"width":120, "enabled":false}' />
+			<label name="produceCostText" properties='{"stroke":"0x302010","x":125,"align":"right","y":635,"width":140,"height":28,"size":24,"color":"0xCBCC64"}'/>
+			<label name="splitCostText" properties='{"x":390,"align":"right","size":24,"y":635,"width":140,"height":28,"stroke":"0x302010","color":"0xCBCC64"}'/>
+			<displayObject  name="produceSilverIcon" definition="BW.gameUI.icon.silver"  properties='{"y":643,"x":215}'/>
+			<displayObject  name="splitSilverIcon" definition="BW.gameUI.icon.silver"  properties='{"y":643,"x":477}'/>
+			<displayObject definition="gemstone.compose.he" properties='{"height":60,"x":163,"y":320,"width":65}'/>
+			<displayObject definition="gemstone.compose.chai" properties='{"height":65,"x":420,"y":320,"width":59}'/>
+			<displayObject definition="gemstone.compose.leftarrow" properties='{"height":39,"x":225,"y":305,"width":36}'/>
+			<displayObject definition="gemstone.compose.rightarrow" properties='{"height":39,"x":380,"y":305,"width":39}'/>
+	</container>
+	
+	<alertText properties='{"key":"improveErrorTips", "colors":["0xCC3300", "0x00CC00"], "showEffDuration":1, "duration":2}' />
+	
+	
+	<!--宝石镶嵌-->
+	<container name="inlay" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.xiangqian", "holePostions":"271,155|120,416|436,416|271,507|120,241|436,241", "showEffectDuration":0, "hideEffectDuration":0,"tipPostions":{"x":200,"y":640}}' >	
+			<displayObject definition="BW.gameUI.BG.improveBG" properties='{"y":29,"x":12}' />
+			<BXBackBar properties='{"clip":[0,0,300,0],"x":12,"image":"BW.gameUI.BG.leftLabelBG","styleName":"LeftLabelBG","width":440,"height":41,"y":35}'/>	
+			<displayObject definition="gameUI.icon.Line" properties='{"width":600,"height":3,"x":26,"y":670}'/>
+			<label name="titleText" properties='{"stroke":"0x302010","x":32,"y":40,"width":500,"textID":512104,"size":24,"color":"0xCBCC64"}'/>
+			
+		<BXRender name="goodsIconRender" properties='{"y":328,"x":277}'>
+			  
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":0,"y":0}'/>
+			<label name="goodsText" properties='{"multiline":true,"x":15,"y":11,"stroke":"0x302010","width":60,"height":60,"color":"0x8C9F34","mouseEnabled":false,"size":24,"textID":"512152"}'/>
+		</BXRender>
+			<sprite name="goodsIcon" properties='{"x":283, "y":334}' />
+	
+			<label properties='{"stroke":"0x302010","x":110,"y":680,"textID":512102,"size":24,"color":"0x8C9F34"}'/>
+			<displayObject name="successEffect" definition='improve.inlay.SuccessEffect' properties='{"x":237, "y":296, "visible":false}'/>
+			<label name="ownerText" properties='{"border":false,"x":185, "y":420, "color":"0xCBCC64", "stroke":"0x302010", "width":270, "height":30, "autoSize":"none","size":24, "align":"center"}'/>
+				<!-- 装备宝石界面 -->
+	<container name="gemListPanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300,"titleID":"512116"}'>
+				<list name="gemList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' />
+	    	<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":120, "y":240, "width":60,"height":30 }'/>
+				<page name="page" properties='{"x":85, "y":242,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":100 },
+								"labelProp":{"x":35, "y":2, "width":60, "height":20,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+		
+	</container>
+	<alertText properties='{"key":"inlayTips", "colors":["0xCC3300", "0x00CC00"], "showEffDuration":1, "duration":2, "x":195, "y":500,"border":false,"width":270,"height":30,"size":20,"autoSize":"none","align":"center" }' />
+		
+	</container>
+	
+	<!-- 背包里装备 呈视器  -->
+	<bagGoodsRenderer properties='{"itemHeight":84, "itemWidth":84}'>
+		<sprite name="goodsIcon" properties='{"x":7, "y":7}' />	
+		<label  name="countText" properties='{"x":7, "y":50, "width":70, "height":30,"size":16,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	
+	</bagGoodsRenderer>
+	
+	<!-- 【镶嵌】 “孔”渲染器-->
+	<holeRenerer>
+		<displayObject definition="gemstone.inlay.HoleBG" properties='{"x":0, "y":0}' />
+		<displayObject name="drillBtn" definition="gemstone.inlay.unLockBtn" properties='{"height":70,"x":12,"y":13,"width":70}' />
+		<displayObject name="lockIcon" definition="improve.inlay.lock" properties='{"height":64,"x":13,"visible":false,"y":15,"width":70}' />
+		<imageLoader name="gemstoneIL" properties='{"height":70,"x":13,"pathFormatName":"gemstone32","y":14,"width":70}' />	
+		<label name="tipText" properties='{"multiline":true,"x":22,"y":18,"stroke":"0x302010","width":60,"height":60,"color":"0x8C9F34","mouseEnabled":false,"size":24}'/>
+	</holeRenerer>
+	
+	<!--装备启灵-->
+<container name="cast" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.qiling", "castEffectTime":0, "castResultEffectTime":0.5
+		, "fireCastResultEffectPx":147, "earthCastResultEffectPx":485, "waterCastResultEffectPx":308
+		, "fireCastResultEffectPy":370, "earthCastResultEffectPy":370, "waterCastResultEffectPy":190
+		, "fireCastResultEffect": "improve.CastSuccessEffectHuo", "earthCastResultEffect": "improve.CastSuccessEffectTu", "waterCastResultEffect": "improve.CastSuccessEffectShui"
+		, "fireArtNumProp":{"x":200, "y":320, "align":"center", "classPath":"improve.icon.Number",  "mouseEnabled":false}
+		, "earthArtNumProp":{"x":525,"y":320, "align":"center", "classPath":"improve.icon.Number",  "mouseEnabled":false}
+		, "waterArtNumProp":{"x":368,"y":160, "align":"center", "classPath":"improve.icon.Number",  "mouseEnabled":false}
+		, "fireStartNum":{"x":140, "y":295, "duration":0.2, "delay":0 }, "fireHideNum":{"x":110, "y":295, "duration":0.3, "delay":0.6 }
+		, "earthStartNum":{"x":660, "y":295, "duration":0.2, "delay":0 }, "earthHideNum":{"x":295, "y":295, "duration":0.3, "delay":0.6 }
+		, "waterStartNum":{"x":202, "y":125, "duration":0.2, "delay":0 }, "waterHideNum":{"x":202, "y":125, "duration":0.3, "delay":0.6 }
+		, "showEffectDuration":0, "hideEffectDuration":0,"baojiEffect":{"initPoint":{"x":110,"y":200},"endPoint":{"x":110,"y":200},"duraTime":0}}' >
+			<!-- 启灵背景 -->
+		<displayObject definition="BW.gameUI.BG.improveBG" properties='{"y":29,"x":12}' />
+		<displayObject name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":540,"y":42,"visible":false}' />	
+		<!--<displayObject name="castEffect" definition="improve.CastEffect" properties='{"x":198, "y":206, "visible":false}' />旋光	-->
+		<!--<displayObject name="castSuccessEffect" definition="improve.CastSuccessEffect" properties='{"x":200, "y":207, "visible":false}' />-->	
+		<displayObject name="castFailedEffect" definition="improve.CastFailedEffect" properties='{"x":150,"y":341,"visible":false}' />
+		<alertText properties='{"key":"castTips", "colors":["0xCC3300", "0x00CC00"], "showEffDuration":1, "duration":2, "x":282, "y":99,"size":20}' />
+		
+		
+		<BXBackBar properties='{"width":440,"height":41,"x":12,"y":35,"clip":[0,0,300,0],"image":"BW.gameUI.BG.leftLabelBG","styleName":"LeftLabelBG"}'/>
+		<label name="titleText" properties='{"color":"0xCBCC64","size":24,"x":32,"y":40,"textID":512314,"stroke":"0x302010","width":500}'/>
+		
+		<BXRender name="goodsIconRender" properties='{"y":328,"x":277}'>
+			<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":0,"y":0}'/>
+			<label name="goodsText" properties='{"multiline":true,"x":15,"y":11,"stroke":"0x302010","width":60,"height":60,"color":"0x8C9F34","mouseEnabled":false,"size":24,"textID":"512152"}'/>
+		</BXRender>
+		<sprite name="goodsIcon" properties='{"y":334,"x":283}' />	
+		<displayObject name="water" definition="improve.cast.water" properties='{"x":316,"visible":false,"y":105}' />	
+		<displayObject name="fire" definition="improve.cast.fire" properties='{"x":80, "y":180, "visible":false}' />	
+		<displayObject name="earth" definition="improve.cast.earth" properties='{"x":275,"visible":false,"y":188}' />
+		<displayObject definition="improve.cast.grid" properties='{"height":142,"x":252,"y":146,"width":144}'/>
+		<displayObject definition="improve.cast.grid" properties='{"height":142,"x":425,"y":325,"width":144}'/>
+		<displayObject definition="improve.cast.grid" properties='{"height":142,"x":90,"y":325,"width":144}'/>
+		<label name="waterNumText" properties='{"autoTooltip":false,"autoSize":"none","mouseEnabled":false,"color":"0x6CC3EE","stroke":"0x302010","x":324,"border":false,"y":176,"width":90,"height":30,"align":"center","size":18}'/>
+		<label name="fireNumText" properties='{"autoTooltip":false,"autoSize":"none","mouseEnabled":false,"color":"0xFF6437","stroke":"0x302010","x":162,"align":"center","y":353,"width":90,"height":30,"size":18}'/>
+		<label name="earthNumText" properties='{"autoTooltip":false,"autoSize":"none","mouseEnabled":false,"color":"0xFFCC00","stroke":"0x302010","x":497,"align":"center","y":355,"width":90,"height":30,"size":18}'/>
+		<label name="allAttributeText" properties='{"color":"0xCBCC64","stroke":"0x302010","x":456,"y":36,"size":24,"autoTooltip":false}'/>
+		<displayObject name="waterBtn" definition="improve.cast.waterBtn" properties='{"x":298,"visible":false,"y":198}' />
+		<displayObject name="fireBtn" definition="improve.cast.fireBtn" properties='{"x":138,"visible":false,"y":373}' />
+		<displayObject name="earthBtn" definition="improve.cast.earthBtn" properties='{"x":473,"visible":false,"y":379}' />
+		<displayObject name="waterArtBtn" definition="improve.cast.waterArtBtn" properties='{"x":294,"visible":false,"y":119}' />
+		<displayObject name="fireArtBtn" definition="improve.cast.fireArtBtn" properties='{"x":127,"visible":false,"y":290}' />
+		<displayObject name="earthArtBtn" definition="improve.cast.earthArtBtn" properties='{"x":455,"visible":false,"y":293}' />
+		<label name="waterCountText" properties='{"stroke":"0x302010","x":311,"align":"center","y":218,"width":90,"color":"0xFFFFCC","height":30,"autoSize":"none","size":18,"mouseEnabled":false}'/>
+		<label name="fireCountText" properties='{"stroke":"0x302010","x":144,"align":"center","y":393,"width":90,"color":"0xFFFFCC","height":30,"autoSize":"none","mouseEnabled":false,"size":18}'/>
+		<label name="earthCountText" properties='{"stroke":"0x302010","x":485,"align":"center","y":392,"width":90,"color":"0xFFFFCC","height":30,"autoSize":"none","size":18,"mouseEnabled":false}'/>
+		<label name="fireCostText" properties='{"align":"center","mouseEnabled":false,"color":"0xFFFFCC","width":150,"stroke":"0x302010","height":30,"autoSize":"none","x":85,"y":455,"size":18}'/>
+		<label name="waterCostText" properties='{"color":"0xFFFFCC","autoSize":"none","x":250,"align":"center","y":275,"width":150,"mouseEnabled":false,"stroke":"0x302010","height":30,"size":18}'/>
+		<label name="earthCostText" properties='{"color":"0xFFFFCC","autoSize":"none","x":425,"align":"center","y":455,"width":150,"mouseEnabled":false,"stroke":"0x302010","height":30,"size":18}'/>
+		<sprite name="gainEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<label name="ownerText" properties='{"color":"0xCBCC64","autoSize":"none","x":230,"stroke":"0x302010","y":420,"width":180,"border":false,"height":30,"size":24,"align":"center"}'/>
+		<label name="castExplainText" properties='{"x":120, "y":475, "height":30,"size":20,"color":"0xCBCC64", "stroke":"0x302010","autoSize":"none", "align":"center", "width":400}'/>
+		<displayObject name="successEffect" definition='improve.cast.SuccessEffect' properties='{"height":65.15,"x":226,"visible":false,"y":420,"width":224.15}'/>
+		<displayObject name="baoji" definition="gem.icon.baoji" properties='{"x":100,"visible":false,"y":270}' />
+    <BXButton name="_exchange" properties='{"width":120,"label":"灵石兑换","styleName":"button15","x":450,"y":600,"height":50}'/>
+</container> 
+
+	
+	<!-- 宝石项呈器 -->
+	<GemRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"gemstone32",  "x":7, "y":7, "width":70, "height":70}' />	
+		<label  name="countText" properties='{"x":7, "y":50, "width":70, "height":30, "size":16, "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</GemRenderer>
+</config>

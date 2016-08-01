@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 方向键布局 -->
+ <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/menudirection"
+	android:visibility="gone"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<Button
+			android:id="@+id/menu_direction_up"
+	        android:background="@drawable/menu_direction_up"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        />
+	<Button
+			android:id="@+id/menu_direction_left"
+	        android:background="@drawable/menu_direction_left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        />
+	<Button
+			android:id="@+id/menu_direction_right"
+	        android:background="@drawable/menu_direction_right"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:gravity="right"/>
+
+	<Button
+			android:id="@+id/menu_direction_down"
+	        android:background="@drawable/menu_direction_down"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        />
+
+</RelativeLayout>

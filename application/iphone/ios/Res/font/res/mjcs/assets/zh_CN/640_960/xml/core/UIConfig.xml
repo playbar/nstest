@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--界面配置文件-->
+<config>
+	<!--获得不同主将头上称号的位置-->
+	<titlePositon value="-100, -110, -120, -100, -70" />
+
+	<!-- 阵容颜色（默认，汉室，诸侯） -->
+	<countryColor value="ffffff,f1ae15,81e8ff" />
+	<!-- 装备品质颜色 -->
+	<equipQualityColor value="ffffff,76B0CF,9AD15C,DEBB46,E46565,A861DC" />
+	<!-- 银矿品质颜色 -->
+	<silverMineQualityColor value="76B0CF,9AD15C,DEBB46,E46565,A861DC" />	
+	<!-- 精力状态颜色 -->
+	<energyStateColor value="ff0000,82E3F8,00ff00,ffff00" />
+	<!-- 装备品质颜色框图片名 -->
+	<equipQualityFrame value="lan,lv,huang,hong,zi" />
+	
+	<!-- 武将品质颜色 -->
+	<generalQualityColor value="FFFFCC,76B0CF,9AD15C,DEBB46,E46565,A861DC" />
+
+	<!-- 荣誉等级颜色 和名称对应 -->
+	<honorColor value="FFFFFF,A5CD61,62AFD9,FFA43E,A634F1" />
+	
+	<!-- 机械制造等级颜色（1：灰色 2：绿色 3：红） -->
+	<machineLvColor value="FFFFCC,99FF00,FF3300" />
+
+	<!-- 农夫状态对应的颜色 精力旺盛  精力一般 轻度疲劳  筋疲力尽-->
+	<farmerStatus value="0099CC,A5CD61,FFFFFF,EF6262" />
+	
+	<!--聊天颜色列表[频道名称和说话者，全服，私聊，国家，系统，军团]-->
+	<chatColors value="E6EC80,FFFF00,6965FF,FF7933,FFFFFF,3399FF" />
+	
+	<!--地图数据-->
+	<mapData value="assets/{resVersion}/map/{0}/Data" />
+	<!--地图元素地址-->
+	<mapElement value="assets/{resVersion}/map/{0}/{1}" />
+	
+	<!--角色外貌BMC-->
+	<avatarShape value="assets/{resVersion}/swf/avatar/{0}.swf" />
+	<!--坐骑角色和马匹外貌BMC-->
+	<horseShape value="assets/{resVersion}/swf/avatar/horse/{0}.swf" />
+	<!--家具外貌BMC-->
+	<furnitureShape value="assets/{resVersion}/swf/avatar/furniture/{0}.swf" />
+	<!--当前卷屏角色移动结束点的提示动画-->
+	<moveEndPointMovie value="mainUI.movie.MoveEndPoint" />
+	<!--鼠标光标皮肤-->
+	<mouseSkin value="mainUI.skin.Mouse" />
+	<!--角色统一阴影-->
+	<avatarShadow value="mainUI.img.AvatarShadow" />
+	<!--自己脚下光圈-->
+	<ownFlag value="mainUI.img.OwnFlag" />
+	
+	
+	<!--特效-->
+	<effect value="assets/{resVersion}/swf/effect/{0}.swf" />
+	<!--技能-->
+	<skillEffect value="assets/{resVersion}/swf/effect/skill/{0}.swf" />
+	<!--攻击特效（刀光）-->
+	<attackEffect value="assets/{resVersion}/swf/effect/attack/{0}.swf" />
+	<!--受击特效-->
+	<hittedEffect value="assets/{resVersion}/swf/effect/hitted/{0}.swf" />
+	<!--场景特效特效-->
+	<sceneEfffect value="assets/{resVersion}/swf/effect/sceneEfffect/{0}.swf" />
+	
+	<!--战斗掉落图标32*32-->
+	<fightDropPic32 value="assets/{resVersion}/img/fightDropPic32/{0}.jpg" />
+	
+	<!--战车图标32*32-->
+	<machine32 value="assets/{resVersion}/img/machine32/{0}.jpg" />		
+
+	<!--装备图片32*32-->
+	<equip32 value="assets/{resVersion}/img/equip32/{0}.jpg" />	
+	<!--装备外框图片32*32-->
+	<equipColorFrame32 value="assets/{resVersion}/img/equipColorFrame32/{0}.png" />
+	
+	<!-- 物品图片32*32 -->
+	<goodsPic32 value="assets/{resVersion}/img/goodsPic32/{0}.jpg" />
+	
+	<!-- 将军府背景 -->
+	<homeBg value="assets/{resVersion}/img/homeBg/{0}.jpg" />
+
+	<!--技能图片32*32-->
+	<skill32 value="assets/{resVersion}/img/skill32/{0}.jpg" />
+
+	<!--角色图片-->
+	<!-- <rolePic value="assets/{resVersion}/img/rolePic/{0}.png" /> -->
+
+	<!--武将头像40*40-->
+	<generalPic40 value="assets/{resVersion}/img/generalPic40/{0}.jpg" />
+
+	<!--武将头像70*70-->
+	<generalPic70 value="assets/{resVersion}/img/generalPic70/{0}.jpg" />
+	
+	<!--buff头像24*24-->
+	<buff24 value="assets/{resVersion}/img/buff24/{0}.jpg" />
+
+	<!--种子图片 32*32 -->
+	<seed32 value="assets/{resVersion}/img/seed32/{0}.jpg" />
+
+	<!--农产品图片 32*32 -->
+	<farmProduct32 value="assets/{resVersion}/img/farmProduct32/{0}.jpg" />	
+	
+	<!--宝石图片 32*32 -->
+	<gemstone32 value="assets/{resVersion}/img/gemstone32/{0}.jpg" />
+
+	<!--农场建筑图片 40*40 -->
+	<!-- <farmBuild40 value="assets/{resVersion}/img/farmBuild40/{0}.jpg" /> -->
+	
+	<!--农场建筑图片 70*70 -->
+	<!-- <farmBuild70 value="assets/{resVersion}/img/farmBuild70/{0}.jpg" /> -->
+	
+	<!--家丁图片 70*70 -->
+	<servant70 value="assets/{resVersion}/img/servant70/{0}.jpg" />
+
+	<!--配方 包括药方和食谱等 图片 32*32 -->
+	<recipePic32 value="assets/{resVersion}/img/recipePic32/{0}.jpg" />
+
+	<!--技能训练科技图片 32*32 -->
+	<skillTech32 value="assets/{resVersion}/img/skillTech32/{0}.jpg" />
+
+	<!--技能训练卡片 100*100 -->
+	<skillTrainCard100 value="assets/{resVersion}/img/skillTrainCard100/{0}.jpg" />
+	
+	<!--VIP图标 35*34 -->
+	<vipIcon value="assets/{resVersion}/img/vipIcon/{0}.jpg" />
+
+	<!--技能训练场 提示图片-->
+	<skillTrainTipPic value="assets/{resVersion}/img/skillTrainTipPic/{0}.png" />
+	
+	<!--角色、npc半身像-->
+	<feature value="assets/{resVersion}/swf/feature/{0}.swf" />
+	
+	<!--地区外貌-->
+	<areaView value="assets/{resVersion}/swf/area/{0}.swf" />
+	
+	<!--将军府图片 200*120 -->
+	<home200_120 value="assets/{resVersion}/img/home200_120/{0}.jpg" />
+	<!--将军府图片 92*53 -->
+	<home92_53 value="assets/{resVersion}/img/home92_53/{0}.jpg" />	
+	<!--将军府图片 70*70 -->
+	<home70_70 value="assets/{resVersion}/img/home70_70/{0}.jpg" />
+	
+	<!--任务幕图片 104*324-->
+	<taskStory value="assets/{resVersion}/img/taskStory/{0}.jpg" />
+	<!--功能解锁图片 100*100-->
+	<function value="assets/{resVersion}/img/function/{0}.png" />
+	<!--公会等级图标 60*60-->
+	<guildLevelPic value="assets/{resVersion}/img/guildLevelPic/{0}.png" />
+	
+	<!--功能开放提示图标 60*60-->
+	<!-- <functionOpenIntroPic value="assets/{resVersion}/img/functionOpenIntroPic/{0}.jpg" /> -->
+
+	<!--功能开放提示图标 60*60-->
+	<statePropPic value="assets/{resVersion}/img/statePropPic/{0}.png" />
+	
+	<!--活动图片 -->
+	<activityPic value="assets/{resVersion}/img/activityPic/{0}.jpg" />
+	
+	<!--活动图片-->
+	<activityPng value="assets/{resVersion}/img/activityPng/{0}.png" />
+
+	<!--武将的形象-->
+	<generalShape value="assets/{resVersion}/swf/generalShape/{0}.swf" />
+	
+	<!--场景背景 一些场景背景比较固定的可以放在这里-->
+	<sceneBgPic value="assets/{resVersion}/img/sceneBgPic/{0}.jpg" />
+	
+	<!--商人图片 -->
+	<traders70 value="assets/{resVersion}/img/traders70/{0}.jpg" />
+
+	<!--小马的动画 -->
+	<farmMC value="assets/{resVersion}/swf/farm/{0}.swf" />
+	<!--农民头像 -->
+	<farmerPic value="assets/{resVersion}/img/farmerPic/{0}.jpg" />
+	<!--马食物 -->
+	<horseFood value="assets/{resVersion}/img/horseFood/{0}.jpg" />
+
+	<!--马的图片32*32 -->
+	<horse32 value="assets/{resVersion}/img/horse32/{0}.jpg" />
+	<!--马的图片70*70 -->
+	<horse70 value="assets/{resVersion}/img/horse70/{0}.png" />
+	<!--马具图片32*32 -->
+	<horseEquip32 value="assets/{resVersion}/img/horseEquip32/{0}.jpg" />
+	<!--马技能图片32*32 -->
+	<horseSkill32 value="assets/{resVersion}/img/horseSkill32/{0}.jpg" />
+	
+	<!--宝物图片32*32 -->
+	<treasure32 value="assets/{resVersion}/img/treasure32/{0}.jpg" />
+	
+	<!--藏宝图图片32*32 -->
+	<treasureMap value="assets/{resVersion}/img/treasureMap/{0}.jpg" />
+	
+	<!--藏宝图图片32*32 -->
+	<denglongPNG value="assets/{resVersion}/img/denglongPNG/{0}.png" />
+	
+	<!--科技图标32*32 -->
+	<tech32 value="assets/{resVersion}/img/tech32/{0}.png" />
+	<!--蛮族副本图片-->
+	<manzuPic value="assets/{resVersion}/img/manzu/{0}.png" />
+	<!--宝石通商图片70*70-->
+	<gemTrades70 value="assets/{resVersion}/img/gemTrades70/{0}.jpg" />
+	<!--蛮族进入小场景图片-->
+	<manzuSkimPic value="assets/{resVersion}/img/manzuSkim/{0}.jpg" />
+	<!--副本掉落图标 32*32-->
+	<drops32 value="assets/{resVersion}/img/drops32/{0}.png" />
+	<!--好友动态图标 34*34-->
+	<friendsActivityPic34 value="assets/{resVersion}/img/friendsActivityPic34/{0}.png" />
+	<!--今日运势图片 75*53-->
+	<luckToday75_53 value="assets/{resVersion}/img/luckToday75_53/{0}.png" />
+	
+	<!--战车，零件图片-->
+	<chariotPic value="assets/{resVersion}/img/chariotPic/{0}.jpg" />
+	<!--文官图片 32*32-->
+	<civil32 value="assets/{resVersion}/img/civilJPG32/{0}.jpg" />
+	<!--文官图片70*70 -->
+	<civil70 value="assets/{resVersion}/img/civilJPG70/{0}.jpg" />
+	<!--爵位图片-->
+	<titleRank value="assets/{resVersion}/img/titleRank/{0}.png" />
+	<!--矿石图片-->
+	<stone32 value="assets/{resVersion}/img/stone32/{0}.jpg" />
+	<!--npc图片-->
+	<npc value="assets/{resVersion}/img/npc/{0}.png" />
+	
+</config>

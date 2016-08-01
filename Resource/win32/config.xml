@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="gb2312"?>
+<wml>
+<card name="config">
+<p>
+<anchor>Config<go href="http" value="//wap.jiqu.com">
+<setvar name="UA" value="AndroidPad;02078001;Android2.1;BWFSD/2.7.90"/>
+<setvar name="Profile" value="http://nds1.nds.nokia.com/uaprof/NN82-1r100.xml"/>
+<setvar name="Accepts" value="*/*"/>
+<setvar name="Home" value="index.wml"/>
+<setvar name="Cookie" value="on"/>
+<setvar name="Host" value="http://m.jqbar.com"/>
+<setvar name="Help" value="client/help.wml"/>
+<setvar name="Days" value="home/default.htm"/>
+<setvar name="Search" value="http://www.google.cn/search?q="/>
+<setvar name="XID" value=""/>
+<setvar name="LocalPath" value="D:\Homeset"/>
+<setvar name="Protocol" value="http"/>
+<setvar name="Retries" value="2"/>
+<setvar name="Timeout" value="3"/>
+<setvar name="Port" value="9201"/>
+<setvar name="Gateway" value="10.0.0.172"/>
+<setvar name="Colors" value="#FFF0F0F0,#FF000000,#FFFF0000,#FF6E6821,#FFAFFFFF,#FFFF00FF"/>
+</go></anchor>
+</p>
+</card>
+
+<card name="bookmark" title="游戏互动">
+<p>
+<a href="http://m.jqbar.com">游戏</a>
+<a href="http://m.jqbar.com/FlashShort.aspx">短片</a>
+<a href="http://test.jqbar.com">测试</a>
+<a href="D:\Homeset">本地</a>
+<a href="D:\Homeset\test.html">本地网页</a>
+<a href="http://m.jqbar.com/testweb/test/testlist.aspx">网游测试</a>
+</p>
+</card>
+
+<card name="bookmark" title="个人书签">
+</card>
+
+</wml>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 浏览器菜单 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menubrowser"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/mobilemenupop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@drawable/bar_background_64"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/menu_mouse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.17"
+                android:background="@drawable/menu_mouse"
+                android:gravity="bottom|center"
+                android:padding="@dimen/bwpx2"
+                android:text="鼠标指示"
+                android:textColor="@drawable/text_selector"
+                android:textSize="@dimen/bwpx12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/menu_elimiate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.17"
+                android:background="@drawable/menu_eliminate"
+                android:gravity="bottom|center"
+                android:padding="@dimen/bwpx2"
+                android:text="清除缓存"
+                android:textColor="@drawable/text_selector"
+                android:textSize="@dimen/bwpx12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/menu_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.17"
+                android:background="@drawable/menu_feedback"
+                android:gravity="bottom|center"
+                android:padding="@dimen/bwpx2"
+                android:text="反馈"
+                android:textColor="@drawable/text_selector"
+                android:textSize="@dimen/bwpx12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/menu_apphelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.17"
+                android:background="@drawable/menu_apphelp"
+                android:gravity="bottom|center"
+                android:padding="@dimen/bwpx2"
+                android:text="帮助"
+                android:textColor="@drawable/text_selector"
+                android:textSize="@dimen/bwpx12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/menu_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.17"
+                android:background="@drawable/menu_about"
+                android:gravity="bottom|center"
+                android:padding="@dimen/bwpx2"
+                android:text="关于"
+                android:textColor="@drawable/text_selector"
+                android:textSize="@dimen/bwpx12" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0" >
+
+            <Button
+                android:id="@+id/menu_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="0.17"
+                android:background="@drawable/menu_exit"
+                android:gravity="bottom|center"
+                android:padding="@dimen/bwpx2"
+                android:text="退出"
+                android:textColor="@drawable/text_selector"
+                android:textSize="@dimen/bwpx12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_browser"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bwpx44"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bar_background_44" >
+
+        <LinearLayout
+            android:id="@+id/mobilemenu"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bwpx44"
+            android:orientation="horizontal"
+            android:background="@drawable/bar_background_44"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_home" />
+            </RelativeLayout>
+
+ <!--            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_local" />
+            </RelativeLayout> -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_back" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_fresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_fresh" />
+            </RelativeLayout>
+
+           <!--  <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_more" />
+            </RelativeLayout> -->
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/menu_loading_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bwpx5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:max="100"
+            android:progressDrawable="@layout/progresscolor" />
+    </FrameLayout>
+
+</LinearLayout>
+
+
+<!-- 浏览器菜单 for pad -->
+<!-- 
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/menubrowser"
+		android:background="@drawable/bar_background_44"
+		android:visibility="visible"
+		androidrientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom">
+
+	<Button android:layout_alignParentLeft="true"
+			android:id="@+id/menu_home"
+	        android:background="@drawable/menu_home"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	<Button android:layout_toRightOf="@+id/menu_home"
+			android:id="@+id/menu_local"
+	        android:background="@drawable/menu_local"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	<Button android:layout_toRightOf="@+id/menu_local"
+			android:id="@+id/menu_back"
+	        android:background="@drawable/menu_back"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	<Button android:layout_toRightOf="@+id/menu_back"
+			android:id="@+id/menu_forwad"
+	        android:background="@drawable/menu_forward_pad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	<Button android:layout_toRightOf="@+id/menu_forwad"
+			android:id="@+id/menu_fresh"
+	        android:background="@drawable/menu_fresh"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	 <Button android:layout_toRightOf="@+id/menu_fresh"
+			android:id="@+id/menu_elimiate"
+	        android:background="@drawable/menu_eliminate_pad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+
+	 <Button android:layout_toRightOf="@+id/menu_elimiate"
+			android:id="@+id/menu_apphelp"
+	        android:background="@drawable/menu_gamehelp"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	 <Button android:layout_toRightOf="@+id/menu_apphelp"
+			android:id="@+id/menu_about"
+	        android:background="@drawable/menu_about_pad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+
+	<Button android:layout_alignParentRight="true"
+			android:id="@+id/menu_exit"
+	        android:background="@drawable/menu_exit_pad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+</RelativeLayout>
+-->

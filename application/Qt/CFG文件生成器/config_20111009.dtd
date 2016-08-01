@@ -1,0 +1,84 @@
+﻿<!ELEMENT defines (file_info*, operate_define*, display_define*, sound_define*, network_define*, txt_define*)>
+
+<!ELEMENT file_info EMPTY>
+	<!ATTLIST file_info content_ID CDATA #REQUIRED>
+	<!ATTLIST file_info content_level CDATA #REQUIRED>
+  	<!ATTLIST file_info zcontent_type (media|game) #IMPLIED>
+	<!ATTLIST file_info mobile_operate_type (Nontouch_Numpad|Nontouch_Fullpad|Touch_Nopad|Touch_Numpad|Touch_Fullpad) #REQUIRED>
+	<!ATTLIST file_info default_operate_mode CDATA #REQUIRED>
+	<!ATTLIST file_info hotkey_for_zoom CDATA #REQUIRED>
+	
+<!ELEMENT operate_define (acc*, mouse_normal_define, mouse_table_define, key_define, touch_define)>
+	<!ATTLIST operate_define default_mouse_move_pace CDATA #IMPLIED>
+	<!ATTLIST operate_define default_long_press_lock_time CDATA #IMPLIED>
+	<!ATTLIST operate_define touchsize CDATA #IMPLIED>
+	<!ATTLIST operate_define zacc (true|false) #IMPLIED>
+	<!ATTLIST operate_define zbutton (true|false) #IMPLIED>	
+	
+	<!ELEMENT acc EMPTY>
+		<!ATTLIST acc direction (x|-x|y|-y|z|-z) #REQUIRED>
+		<!ATTLIST acc accspeed  CDATA #REQUIRED>
+		<!ATTLIST acc step CDATA #REQUIRED>
+		<!ATTLIST acc key_map_to CDATA>
+		<!ATTLIST acc mouse_act (up|down|left|right|left-key|right-key)>
+		<!ATTLIST acc onlyone (true|false) #IMPLIED>
+
+	<!ELEMENT mouse_normal_define (mouse_normal_map*) >
+		<!ATTLIST mouse_normap_map name CDATA #REQUIRED>
+		
+		<!ELEMENT mouse_normal_map EMPTY>
+			<!ATTLIST mouse_normal_map virtual_key CDATA #REQUIRED>
+			<!ATTLIST mouse_normal_map mouse_act (up|down|left|right|left-key|right-key)>
+			
+	<!ELEMENT mouse_table_define (mouse_table_map*) >
+		<!ATTLIST mouse_table_define name CDATA #REQUIRED>
+		
+		<!ELEMENT mouse_table_map EMPTY>
+			<!ATTLIST mouse_table_map virtual_key CDATA #REQUIRED>
+			<!ATTLIST mouse_table_map mouse_act (up|down|left|right|left-key|right-key)>
+			
+	<!ELEMENT key_define (key_map*) >
+		<!ELEMENT key_map EMPTY >
+			<!ATTLIST key_map key_pressed CDATA #REQUIRED>
+			<!ATTLIST key_map key_map_to CDATA #REQUIRED>
+			<!ATTLIST key_map long_press (true|false) #IMPLIED>
+ 			<!ATTLIST key_map long_press_lock_time CDATA #IMPLIED>
+ 			
+	<!ELEMENT touch_define (touch_map*) >
+	  <!ATTLIST touch_define zmouse_pos (true|false) "false" >
+		<!ELEMENT touch_map EMPTY >
+			<!ATTLIST touch_map button_name	 (LEFT|RIGHT|UP|DOWN|A|B) #REQUIRED>		
+			<!ATTLIST touch_map button_hor_pos CDATA #IMPLIED>
+			<!ATTLIST touch_map button_ver_pos CDATA #IMPLIED>
+			<!ATTLIST touch_map button_map_to CDATA #REQUIRED>
+			<!ATTLIST touch_map org (0|1|2|3) #IMPLIED>
+			<!ATTLIST touch_map button_long_press (true|false) "#IMPLIED>
+			<!ATTLIST touch_map button_long_press_lock_time CDATA #IMPLIED>
+		
+<!ELEMENT display_define (showtag*)>
+	<!ATTLIST display_define screen_direction (Vertical|Horizon) "Horizon">
+	<!ATTLIST display_define zoom_size (Original|Fit) "Fit">
+	<!ATTLIST display_define quality (low|medium|high|auto) "auto">
+	<!ATTLIST display_define zad_url CDATA #IMPLIED>	
+	<!ATTLIST display_define zad_pos CDATA "1">	
+	
+	<!ELEMENT showtag EMPTY>
+		<!ATTLIST showtag zoom CDATA #REQUIRED>
+		<!ATTLIST showtag zoffx CDATA #IMPLIED>
+		<!ATTLIST showtag zoffy CDATA #IMPLIED>
+		<!ATTLIST showtag ztags CDATA #REQUIRED>	
+	
+<!ELEMENT sound_define EMPTY>
+	<!ATTLIST sound_define mute (truefalse) "false">
+	<!ATTLIST sound_define volume CDATA "4">
+	<!ATTLIST sound_define sound_device (Speaker|Phone|Earset) "Speaker">
+	
+<!ELEMENT network_define EMPTY>	
+	<!ATTLIST network_define score_type (VAR|OBJ) #REQUIRED>
+	<!ATTLIST network_define score_var_name CDATA #IMPLIED>	
+	<!ATTLIST network_define submit_url CDATA "http://m.jqbar.com/sumbmit.aspx">
+	<!ATTLIST network_define autotag CDATA #IMPLIED>
+
+<!ELEMENT txt_define CDATA> 
+	
+

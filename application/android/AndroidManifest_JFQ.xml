@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="com.jqbar"
+		android:installLocation="auto"
+		android:versionName="2.8.90" 
+		android:versionCode="1912">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <supports-screens android:anyDensity="true"
+    	android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_INPUT_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.SET_ORIENTATION"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"></uses-permission>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>   
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/> 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+  	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  	
+    
+
+    
+    <application android:label="@string/app_name"
+        	android:debuggable="true"
+    		android:icon="@drawable/byone_logo"
+    		android:theme="@style/ThemeActivity">
+        <activity android:name=".MobileMain"
+        		  android:label="@string/app_name"
+        		  android:screenOrientation="portrait"
+  				android:exported="true"
+        		  android:windowSoftInputMode="stateUnchanged|adjustPan"
+        		  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+     <!-- 多盟积分墙 -->
+         <activity android:name="cn.domob.download.OActivity"></activity>         
+        <activity android:name="JQBarMain"     android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="AboutActivity" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="LocalFlashAct" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="HelpActivity"  android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="BwWebView"     android:configChanges="orientation|keyboardHidden" android:theme="@android:style/Theme.Dialog"></activity>
+		<service android:name="UpgradeService"/>
+		
+		<service android:name=".BwPushService" android:label="BwPushService"></service>
+		
+		 <receiver android:name=".BwStartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>  
+            </intent-filter>
+        </receiver> 
+     
+			
+    </application>
+</manifest>

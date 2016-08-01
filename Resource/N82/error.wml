@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wml><card title="错误">
+<br/>
+<p>访问(%1)时发生错误!<br/>错误原因:<br/>
+(%2)<br/>
+<a href="%3">
+重新尝试</a>
+<br/>
+<a href="%4">尝试她的首页</a>
+<br/><anchor>返回上次页面<prev/>
+</anchor></p>
+</card>
+</wml>

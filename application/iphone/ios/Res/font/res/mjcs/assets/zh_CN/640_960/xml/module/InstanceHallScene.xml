@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【副本大厅 场景】配置文件-->
+<config properties='{"showEffectDuration":0, "hideEffectDuration":0,
+		"doorNpcs":[{"x":3, "y":7, "key":"enter", "shape":"npc12", "direction":4, "clickHandler":"npcClickHandler", "id":4},{"x":3, "y":7, "key":"out", "shape":"npc14", "direction":4, "clickHandler":"npcClickHandler", "id":2}]
+		}'>
+		
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "delayWalk":15,"labelProp":{"size":13,"width":160, "height":16, "x":0, "y":0, "autoSize":"none", "align":"center", "color":"0x99FF00",  "stroke":"0x151515","bold":true, "mouseEnabled":false, "border":false},"duration":3,"distance":-30,"initY":-90,"mapDropTextColor":["0x99FF00","0xDEBB46","0xE46565","0xA861DC"]}'>
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+	
+		<label name="stateText" properties='{"width":100, "size":16, "height":30, "x":-50, "y":-110, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label name="countText" properties='{"width":100, "size":16, "height":30, "x":-50, "y":-95, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<sprite name="sp" properties='{"x":-20, "y":10}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":30, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":30, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>
+		<displayObject name="attentionBg" definition="gameUI.view.attentionBg"  properties='{"x":20, "y":-80,  "visible":false}'/>
+		<button name="attentionBtn" parent="attentionBg" properties='{"x":3, "y":3 , "width":60, "height":30, "styleName":"button5", "labelID":"550119"}' />
+		<sprite name="gemEffectC" properties='{"x":0,"mouseEnabled":false, "mouseChildren":false}'/>
+		<imageLoader name="titleRankIL" properties='{"x":-70, "y":-120,"pathFormatName":"titleRank",  "mouseEnabled":false, "mouseChildren":false}' /><!--爵位头衔-->
+	</avatarBasicUI>
+	<arenaNpcUI properties='{"mouseEnabled":false, "mouseChildren":false}'>
+		<label name="nameText" properties='{"width":100, "height":30, "x":-50, "y":10, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+	</arenaNpcUI>
+
+	<sprite name="mapContainer"/>	
+	
+	
+<!--	<button name="teamListBtn" properties='{"x":873, "y":465, "styleName":"button8", "labelID":"550202"}' />
+	<button name="createTeamBtn" properties='{"x":873, "y":500, "styleName":"button8", "labelID":"550203"}' />
+-->
+	<BXButton name="quitBtn" properties='{"width":120,"x":25,"y":670,"height":48,"label":"退出副本","styleName":"button5"}'/>
+	<BXButton name="teamListBtn" properties='{"width":120,"x":200,"y":670,"height":48,"label":"队伍列表","styleName":"button10"}'/>
+	<BXButton name="createTeamBtn" properties='{"width":120,"x":330,"y":670,"height":48,"label":"创建队伍","styleName":"button10"}'/>	
+	<displayObject name="_go" definition="BW.battle.icon.go" properties='{"y":590,"width":212,"height":66,"x":403}'/>
+
+<!-- 	<BXButton  properties='{"width":140,"x":490,"y":600,"height":54,"label":"进入副本","styleName":"button13"}'/> -->
+	
+	<sprite name="autoBtnC"/>	
+	<!--<button name="autoFightBtn" properties='{"x":863, "y":425, "styleName":"button11"}' parent="autoBtnC" />-->
+	<BXButton name="autoFightBtn" properties='{"width":120,"x":510,"y":670,"height":48,"label":"自动挂机","styleName":"button5"}'/>
+	<!--<displayObject  name="autoArtTextMC" definition="instanceHall.artText.autoArt" properties='{"x":890, "y":429, "mouseEnabled":false ,"mouseChildren":false}' parent="autoBtnC" />-->
+	<!--<displayObject name="autoEffect" definition="instanceHall.effect.shanliangEffect" properties='{"x":940, "y":445,"mouseEnabled":false ,"mouseChildren":false}' parent="autoBtnC" />-->
+	<container name="guildBg" properties='{"initX":862, "initY":320, "labelProperty":{"x":27, "y":-236, "color":"0xffffcc", "stroke":"0x302010", "textID":"550118"},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":false}'/>
+	<label name="autoFightText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":70, "height":20, "x":913,"y":528, "color":"0x99FF00", "stroke": "0x2D261E" , "mouseEnabled":false, "textID":"550113", "visible":false}'/>
+	
+	<container name="teamTips" properties='{"x":720,"y":435,"initX":720, "initY":435, "labelProperty":{"x":25, "y":-235, "width":90,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"550120","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":2},"classPath":"gameUI.arrow.right","visible":true}'/>
+	
+	<container name="maoyiTips" properties='{"x":830,"y":440,"initX":820, "initY":440, "labelProperty":{"x":27, "y":-230, "width":90,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"550122","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+
+	
+	
+	<!-- 副本信息 -->
+	<container name="instanceInfoPanel" properties='{"x":270, "y":178}'>
+<!--		<displayObject definition="instanceHall.view.InstanceInfo" properties='{"x":0, "y":0, "mouseEnabled":false}' />
+		<label name="senceText" properties='{"x":0, "y":2, "width":162,  "height":20,  "autoSize":"none",  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<label properties='{"x":0, "y":23, "width":162,  "height":20,  "autoSize":"none",  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010" , "textID":"550601"}'/>
+-->		
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":240,"height":120,"x":121,"y":-35 }'/>	
+		<label properties='{"text":"本关掉落","width":240, "height":30, "x":121, "y":-25, "size":19,"autoSize":"none", "align":"center", "color":"0x8D9E3D",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<imageLoader name="goodsIcon" properties='{"x":137,"y":0,"pathFormatName":"drops32"}'/>
+		<imageLoader name="skillsIcon" properties='{"x":208,"y":0,"pathFormatName":"skill32"}'/>
+		<imageLoader name="techIcon" properties='{"x":281,"y":0,"pathFormatName":"tech32"}'/>
+		<imageLoader name="iconBack" properties='{"x":208,"y":0,"pathFormatName":"drops32"}'/>
+		<!-- <label properties='{"x":0, "y":113, "width":162, "height":20, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010","textID":"550604"}'/> -->
+	</container>
+
+
+	
+	<!-- 队员列表 -->
+	<container name="memberListPanel" properties='{"x":390,"y":320, "initX":390, "delayTime":0.5}'>
+		<displayObject definition="instanceHall.view.MemberListBg"  properties='{"x":0 , "y":0,"width":240}'/>	
+		<list name="memberList" properties='{"x":9, "y":99, "columnCount":1, "rowCount":2, "horizontalGap":8, "verticalGap":8}' />  <!-- 队员列表  -->
+		
+		<button name="memberExitBtn" properties='{"x":60, "y":5,  "width":120,  "height":30, "styleName":"button3", "labelID":"550302"}' />
+		<button name="exitBtn" properties='{"x":60, "y":5,  "width":120,  "height":30, "styleName":"button3", "labelID":"550302", "visible":false}' />
+		<button name="startBtn" properties='{"x":60, "y":5, "width":120, "height":30, "styleName":"button5", "labelID":"550301", "visible":false}' />
+		<checkBox name="autoAcceptCB" properties='{"x":40, "y":57, "width":154, "height":30,  "styleName":"checkBox1",  "labelID":550305, "visible":false}'/>
+		<!--<checkBox  name="allowCB" properties='{"x":12, "y":57, "width":154, "height":19,  "styleName":"checkBox1",  "labelID":550305, "visible":false}'/>-->
+		<!-- 成员 呈视器 -->
+		<memberRenderer properties='{"itemHeight":50}'>
+				<displayObject name="leaderTypeIcon" definition="gameUI.icon.generalTypeSmall"  properties='{"x":0 , "y":7}'/>
+				<!--<displayObject name="assistantTypeIcon" definition="gameUI.icon.generalTypeSmall"  properties='{"x":0 , "y":47, "visible":false}'/>-->
+				<label  name="leaderNameText" properties='{"x":45, "y":5, "size":16,"width":90, "height":30,  "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false}'/>
+				<label  name="leaderLevelText" properties='{"x":45, "y":27, "size":16,"width":90, "height":30,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+				<displayObject name="kickoutBtn" definition="instanceHall.btn.KickOut"  properties='{"x":193 , "y":10,"width":30,"height":30, "visible":false}'/> 
+				<!-- <label  name="assistantNameText" properties='{"x":30, "y":45, "width":90, "height":20,  "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false}'/>
+				<label  name="assistantLevelText" properties='{"x":30, "y":62, "width":90, "height":20,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>-->
+		</memberRenderer>
+	</container>
+
+	<!-- 队伍面板 -->
+	<container name="teamListPanel" properties='{"styleName":"panel3",
+		"titleID":"550201", "initX":145, "initY":200, "bgWidth":355, "bgHeight":425, "hideScene":false
+	}'>
+		<displayObject definition="instanceHall.view.TeamListBg"  properties='{"x":0 , "y":0}'/>	
+		<label properties='{"x":17,"y":53, "width":75, "height":30, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"550204", "visible":false}'/>
+		<label properties='{"x":26,"y":53, "width":50, "height":30, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"550215"}'/>
+		<label properties='{"x":92,"y":53, "width":80, "height":30, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"550205"}'/>
+		<label properties='{"x":202,"y":53, "width":35, "height":30, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"550206"}'/>
+		
+		<list name="teamList" properties='{"x":18, "y":75, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":0}' />
+
+		<page name="page" properties='{"x":132, "y":380,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":75 },
+								"labelProp":{"x":26, "y":0, "width":44, "height":30, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+			
+		<!-- 队伍列表 呈视器 -->
+
+		<teamRenderer properties='{"itemHeight":30}'>
+				<displayObject definition="instanceHall.view.ListItemBg"  properties='{"x":0 , "y":0}'/>	
+				
+				<label name="instanceNameText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":75, "height":30, "x":1,"y":7, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+				<label name="fitLevelText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":65, "height":30, "x":0,"y":7, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+				<label name="numText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":35, "height":30, "x":180,"y":7, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+				<label name="leaderNameText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":75, "height":30, "x":75,"y":7, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+
+				<button name="enterBtn" properties='{"x":245, "y":0, "width":70,  "styleName":"button6", "style":{"labelPaddingLeft":0, "labelPaddingRight":0},  "labelID":"490205"}' />
+		</teamRenderer>
+
+	</container>
+	
+	
+	<!-- 藏宝图 -->
+	<container name="treasureMapView" parent="mapContainer" properties='{"x":700, "y":430,"duration":20}'>
+		<displayObject name="treasureMovie" definition="instanceHall.movie.treasureMap" properties='{"x":50, "y":0}' />
+		<displayObject name="rateMc" definition="instanceHall.view.rateMC" properties='{"x":0, "y":60, "mouseEnabled":false,"visible":false}' />
+		<displayObject name="boxMC" definition="instanceHall.daily.BoxEffect" properties='{"x":20, "y":-30, "mouseEnabled":false,"visible":false}' />
+		<displayObject name="baojiMC" definition="instanceHall.cion.BreakOut" properties='{"x":20, "y":90, "mouseEnabled":false,"visible":false}' />
+		<sprite name="rewardTips" properties='{"x":20,"y":20}'/>
+	</container>
+	
+	<!-- 藏宝图分红 -->
+	<container name="shareTreasureMap" properties='{"x":-30, "y":630}'>	
+		<displayObject name="boxMC" definition="instanceHall.daily.BoxEffect" properties='{"x":20, "y":-30, "mouseEnabled":false}' />
+		<sprite name="rewardTips" properties='{"x":0,"y":20}'/>
+	</container>
+
+</config>

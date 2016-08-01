@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>baseView</key>
+	<dict>
+		<key>backgroundColor</key>
+		<string>0.92,0.92,0.92,1</string>
+		<key>startHeight</key>
+		<string>24</string>
+	</dict>
+	<key>logoBar</key>
+	<dict>
+		<key>image</key>
+		<string>logobar_01</string>
+		<key>rect</key>
+		<string>{{0,0},{320,24}}</string>
+	</dict>
+	<key>btnQuit</key>
+	<dict>
+		<key>bgImage</key>
+		<string>logobar_02</string>
+		<key>rect</key>
+		<string>{{291,0},{29,24}}</string>
+	</dict>
+</dict>
+</plist>

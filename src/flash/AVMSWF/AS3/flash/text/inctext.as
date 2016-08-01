@@ -1,0 +1,32 @@
+//flash.astext 
+
+include "TextExtent.as"
+include "TextInteractionMode.as"
+include "TextFormat.as"
+include "TextSnapshot.as"
+include "AntiAliasType.as"
+include "CSMSettings.as"
+include "Font.as"
+include "FontStyle.as"
+include "FontType.as"
+include "GridFitType.as"
+include "TextColorType.as"
+include "TextDisplayMode.as"
+include "TextFieldAutoSize.as"
+include "TextFieldType.as"
+include "TextFormatAlign.as"
+include "TextLineMetrics.as"
+include "TextRenderer.as"
+include	"StyleSheet.as"
+include	"TextField.as"
+include	"StaticText.as"	
+
+
+include "engine/incengine.as"
+include "ime/incime.as"
+
+include "AutoCapitalize.as"
+include "ReturnKeyLabel.as"
+include "SoftKeyboardType.as"
+include "StageText.as"
+include "StageTextInitOptions.as"

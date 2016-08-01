@@ -1,0 +1,4321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--语言包-->
+<language>
+	<!--提示消息-->
+	<item id="010001">RPG</item><!--游戏名称-->
+	<item id="010002">加入收藏夹失败，请使用 CTRL+D 快捷键进行添加！</item><!--加入收藏夹错误时的提示-->
+
+	<!--loading-->
+	<item id="010101">正在加载[{0}] {1}kb/s {2}/{3}</item>
+	<item id="010102">{0}%</item>
+	<item id="010103">加载 {0} 完成！</item>
+	<item id="010104">加载完毕！</item>
+	<item id="010105">加载 {0} 失败！</item>
+	
+	<!--模块加载条-->
+	<item id="010201">[{0}]  {1}%  {2}kb/s  {3}/{4}</item>
+	<item id="010202">加载 {0} 成功！</item>
+	<item id="010203">加载 {0} 失败！</item>
+	<item id="010204">正在初始化加载中...</item>
+	
+	<!--通信-->
+	<item id="010301">转换数据失败</item>
+	<item id="010302">请求超时，请重试</item>
+	<item id="010303">处理请求时发生异常！[br]异常代码：{0}</item>
+	<item id="010304">连接服务器发生异常！[br]请点击确定按钮，重新进入游戏。</item>
+	<item id="010305">提示：连接已断开，正在尝试与服务器进行重连...</item>
+	<item id="010306">与服务器重连失败！</item>
+	<item id="010307">连接已断开，您的帐号已在别处登录！</item>
+	<item id="010308">与服务器重连成功！</item>
+	
+	<!--Alert-->
+	<item id="010401">确定</item><!--ok-->
+	<item id="010402">取消</item><!--cancel-->
+	<item id="010403">确定</item><!--yes-->
+	<item id="010404">取消</item><!--no-->
+	<item id="010405">关闭</item><!--close-->
+	<item id="010406">返回</item><!--back-->
+	
+	<!--时间单位-->
+	<item id="010501">天</item>
+	<item id="010502">天</item><!--复数-->
+	<item id="010503">小时</item>
+	<item id="010504">分钟</item>
+	<item id="010505">秒</item>
+	
+	<!--时间值的默认显示方式-->
+	<item id="010601">vu</item>
+	<item id="010602">v:</item>
+	<item id="010603">v:</item>
+	<item id="010604">v</item>
+	
+	<!--前端GM命令-->
+	<item id="010610">前端GM命令：[br]自己[br]统计[br]版本号[br]战斗数据[br]数据[br]战斗加速[br]任务引导[br]加载信息[br]广播[br]gc[br]断开</item>
+	
+	<!--武将类型 -->
+	<item id="010631">剑师</item>
+	<item id="010632">铁骑</item>
+	<item id="010633">猛士</item>
+	<item id="010634">神射</item>
+	<item id="010635">舞姬</item>
+	
+	<!--角色选择，创建，删除，恢复-->
+	<item id="010651">创 建</item>
+	<item id="010652">删 除</item>
+	<item id="010653">等级：{0}</item>
+	<item id="010661">您确定要删除</item>
+	<item id="010662">{0} {1} {2}</item>
+	<item id="010663">请在框中输入"删除角色"来确认删除</item>
+	<item id="010664">该角色将在3天后彻底删除</item>
+	<item id="010665">删除角色</item>
+	<item id="010666">删除中...</item>
+	<item id="010667">{0}后删除角色</item>
+	<item id="010668">恢复</item>
+	<item id="010669">返回</item>
+	<item id="010670">创建</item>
+	<item id="010671"><![CDATA[<font color='#{0}'>【{1}】</font> {2}]]></item>
+	<item id="010672">随机取名</item>
+	<item id="010673"><![CDATA[合服后，你的角色名有重复，临时名为<font color='#E5EF99'>{0}</font>，请输入新的角色名：]]></item>
+	<item id="010674">军团名修改</item>
+	<item id="010675"><![CDATA[合服后，你的军团名有重复，临时名为<font color='#E5EF99'>{0}</font>，请输入新的军团名：]]></item>	
+	<item id="010676">角色名修改</item>
+	<item id="010677">请选择阵营</item>
+	<item id="010678">默认充值</item>
+	<item id="010679">你确定将{0}设置为默认充值角色吗？</item>
+	<item id="010680"><![CDATA[<font color='#FF0000'>角色名包含非法字符！</font>]]></item>
+	<item id="010681">你没有默认充值角色，是否去设置？</item>
+	<item id="010682">设置</item>
+	<item id="010683">忽略</item>
+
+	<!-- tip描述 -->
+	<item id="010701"><![CDATA[需求：{0}]]></item>
+	<item id="010702"><![CDATA[{0}<font color='#6699FF'>(+{1})</font>]]></item>
+	<item id="010703"><![CDATA[水：{0}]]></item>
+	<item id="010704"><![CDATA[火：{0}]]></item>
+	<item id="010705"><![CDATA[土：{0}]]></item>
+	<item id="010706"><![CDATA[出售价格：]]></item>
+	<item id="010707"><![CDATA[使用等级：<font color='#FFFFCC'>{0}</font>]]></item>
+	<item id="010708"><![CDATA[<font color='#CBCC66'>使用效果：</font><font color='#99FF00'>{0}</font>]]></item>
+	<item id="010709"><![CDATA[<font color='#CBCC66'>镶嵌在不同装备上效果不同：</font><font color='#99FF00'>{0}</font>]]></item>
+	<item id="010710"><![CDATA[未镶嵌宝石]]></item>
+	<item id="010711">lv.{0}</item>
+	<item id="010712"><![CDATA[<font color='#00ff00'>统：{0}</font>]]></item>
+	<item id="010713"><![CDATA[<font color='#ff0000'>勇：{0}</font>]]></item>
+	<item id="010714"><![CDATA[<font color='#62AFD9'>智：{0}</font>]]></item>
+	<item id="010715"><![CDATA[武器效果：<font color='#00ff00'>{0}</font>]]></item>
+	<item id="010716">lv.{0}</item>
+	<item id="010717"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="010718">{0}碎片合成{1}</item>
+	<item id="010719"><![CDATA[{0}<font color='#FFFFCC' size='16'>({1}/{2})</font>]]></item>
+	<item id="010720">无</item>
+	<item id="010721"><![CDATA[<font color='#FF0000'>{0}级</font>]]></item>
+	<item id="010722"><![CDATA[{0}级]]></item>
+	<item id="010723"><![CDATA[攻击：{0}]]></item>
+	<item id="010724"><![CDATA[防御：{0}]]></item>
+	<item id="010725"><![CDATA[最大血量：{0}]]></item>
+	<item id="010726"><![CDATA[技能防御：{0}]]></item>
+	<item id="010727"><![CDATA[技能攻击：{0}]]></item>
+	<item id="010728"><![CDATA[血量：{0}]]></item>
+	<item id="010729"><![CDATA[精力：{0}]]></item>
+	<item id="010730"><![CDATA[技能伤害系数：{0}]]></item>
+	<item id="010731"><![CDATA[技能防御系数：{0}]]></item>
+	<item id="010732"><![CDATA[全伤害系数：{0}]]></item>
+	<item id="010733"><![CDATA[全防御系数：{0}]]></item>
+	<item id="010734"><![CDATA[战斗力：{0}]]></item>
+	<item id="010735"><![CDATA[使用期限: {0}]]></item>	
+	<item id="010736"><![CDATA[：]]></item>
+	<item id="010737"><![CDATA[+]]></item>
+	
+	<item id="010740"><![CDATA[攻击{0}{1}]]></item>
+	<item id="010741"><![CDATA[防御{0}{1}]]></item>
+	<item id="010742"><![CDATA[最大血量{0}{1}]]></item>
+	<item id="010743"><![CDATA[技能防御{0}{1}]]></item>
+	<item id="010744"><![CDATA[技能攻击{0}{1}]]></item>
+	<item id="010745"><![CDATA[血量{0}{1}]]></item>
+
+	<item id="010751"><![CDATA[需求：{0}]]></item>
+	<item id="010752"><![CDATA[Lv.{0}]]></item>
+	<item id="010753"><![CDATA[<font color='#ffffcc'>{0}</font>]]></item>
+	<item id="010754"><![CDATA[<font color='#ee1d1d'>{0}</font>]]></item>
+	<item id="010755">{0}  Lv.{1}</item>
+	<item id="010756"><![CDATA[<font color='#FFFFCC'>{0}:</font><font color='#00ff00'>{1}</font>]]></item>
+	<item id="010757"><![CDATA[<font color='#CBCC66'>{0}</font> <font color='#FFFFCC'>x{1}</font>]]></item>
+		<!-- 战车tip -->
+	<item id="010758"><![CDATA[工匠等级：{0}]]></item>
+	<item id="010759"><![CDATA[耐久：{0}/{1}]]></item>
+	<item id="010760"><![CDATA[未装备配件]]></item>
+	<item id="010761"><![CDATA[闪避：{0}%]]></item>
+	<item id="010762"><![CDATA[暴击：{0}%]]></item>
+	<item id="010763"><![CDATA[眩晕：{0}%]]></item>
+	<item id="010764"><![CDATA[{0}灵石]]></item>
+	<item id="010765">装备在前三个增加自身技能属性[br]装备在后三个降低敌人技能属性</item>
+	
+	<item id="010771">双击使用</item>
+	<item id="010772">{0}掉落</item>
+	
+	<item id="010780"><![CDATA[宝物介绍]]></item>
+	<item id="010781"><![CDATA[统：<font color='#00FF00'>+{0}</font>]]></item>
+	<item id="010782"><![CDATA[智：<font color='#00FF00'>+{0}</font>]]></item>
+	<item id="010783"><![CDATA[勇：<font color='#00FF00'>+{0}</font>]]></item>
+	<item id="010784"><![CDATA[<font color='#7CFC00'>关注成功！</font>]]></item>	
+	<!--矿石TIP-->
+	<item id="010785">战斗力：{0}</item>	
+	<item id="010786">（{0}次熔炼）</item>	
+	<item id="010787">{0}灵石</item>	
+	<item id="010788">出售价格</item>	
+	
+	
+	<!--聊天-->
+	<item id="010801">全服</item>
+	<item id="010803">势力</item>
+	<item id="010804">系统</item>
+	<item id="010805">军团</item>
+	<item id="010806">私聊</item>
+	
+	
+	<item id="010901">【</item>
+	<item id="010902">】</item>
+	<item id="010903">：</item>
+	<item id="010904">您对</item>
+	<item id="010905">对您</item>
+	<item id="010906">说</item>
+	<item id="010907">请输入玩家名称：</item>
+	<item id="010908">确定</item>
+	<item id="010909">取消</item>
+	<item id="010910">发言频率太快，稍后可发送</item>
+	<item id="010911">关注</item>
+	<item id="010912">私聊</item>
+	<item id="010913">【系统】：</item>
+	<item id="010914"><![CDATA[<font color='#FF0000'>请在名称后面添加空格或者内容不要为空！</font>]]></item>
+	<item id="010915"><![CDATA[<font color='#FF0000'>自言自语可不是个好习惯！</font>]]></item>
+	<item id="010916">屏蔽</item>
+	
+	<item id="010950"><![CDATA[<font color='#FF0000'>当前状态不可前往！</font>]]></item>
+	<item id="010951">是否打断当前操作前往</item>
+	<item id="010952"><![CDATA[重磅消息！！<color=0xFF0000>{0}</color>正在<color=0xFF0000>{1}</color>挖宝，前往可获得宝藏。<link={2}>（点击前往{3}s）</link>]]></item>
+	<item id="010953">（点击前往{0}s）</item>
+	<item id="010954"><![CDATA[<font color='#E6EC80'>【系统】</font>重磅消息！！<font color='#FF0000'>{0}</font>正在<font color='#FF0000'>{1}</font>挖宝，前往可获得宝藏。（点击前往{2}s）]]></item>
+
+<!--国家-->
+	<item id="011000">中立</item>
+	<item id="011001">汉室</item>
+	<item id="011002">诸侯</item>
+	
+<!--资源名称-->
+	<!--核心-->
+	<item id="020101">组件皮肤</item>
+	<item id="020102">游戏核心</item>
+	<item id="020103">核心UI配置</item>
+	<item id="020104">核心UI界面</item>
+	<item id="020105">开发商信息</item>
+	<item id="020106">地图数据包</item>
+	<item id="020107">传送门</item>
+	<item id="020108">组件皮肤2</item><!--Modify by xiepeifu-->
+	<!--手机画面-->
+-	<item id="024001">手机版主城资源</item>
+-	<item id="024002">手机版将军资源</item>
+-	<item id="024003">手机版强化资源</item>
+-	<item id="024004">手机版战斗资源</item>
+-	<item id="024005">手机版活动资源</item>
+	<item id="024011">手机版将军府资源</item>
+	<item id="024012">手机版政事堂资源</item>
+	<item id="024013">手机版农庄资源</item>
+	<item id="024014">手机版酒肆资源</item>
+	<item id="024015">手机版武馆资源</item>
+	<item id="024016">手机版市场资源</item>
+	<item id="024017">手机版布告栏资源</item>
+	<item id="024018">手机版仓库资源</item>
+	<item id="024019">手机版边塞资源</item>
+
+	<item id="024101">百玩首页界面</item>
+-	<item id="024102">手机版游戏UI资源</item>
+-	<item id="024103">手机版元件资源</item>
+
+	<item id="025001">手机版主城配置</item>
+	<item id="025002">手机版将军配置</item>
+	<item id="025003">手机版强化配置</item>
+	<item id="025004">手机版战场配置</item>
+	<item id="025005">手机版活动配置</item>
+	<item id="025011">手机版将军府配置</item>
+	<item id="025012">手机版政事堂配置</item>
+	<item id="025013">手机版农庄配置</item>
+	<item id="025014">手机版酒肆配置</item>
+	<item id="025015">手机版武馆配置</item>
+	<item id="025016">手机版市场配置</item>
+	<item id="025017">手机版布告栏配置</item>
+	<item id="025018">手机版仓库配置</item>
+	<item id="025019">手机版边塞配置</item>
+	
+	<item id="025101">手机版模板配置</item>
+	
+	<item id="026001">手机版主城程序包</item>
+	<item id="026002">手机版将军程序包</item>
+	<item id="026003">手机版强化程序包</item>
+	<item id="026004">手机版战场程序包</item>
+	<item id="026005">手机版活动程序包</item>
+	<item id="026011">手机版将军府程序包</item>
+	<item id="026012">手机版政事堂程序包</item>
+	<item id="026013">手机版农庄程序包</item>
+	<item id="026014">手机版酒肆程序包</item>
+	<item id="026015">手机版武馆程序包</item>
+	<item id="026016">手机版市场程序包</item>
+	<item id="026017">手机版布告栏程序包</item>
+	<item id="026018">手机版仓库程序包</item>
+	<item id="026019">手机版边塞程序包</item>
+	
+	<!--场景-->
+	<item id="020201">登录场景配置</item>
+	<item id="020202">登录场景界面</item>
+	<item id="020203">登录场景模块</item>
+	<item id="020204">副本场景配置</item>
+	<item id="020205">副本场景界面</item>
+	<item id="020206">副本场景模块</item>
+	<item id="020207">地区场景配置</item>
+	<item id="020208">地区场景界面</item>
+	<item id="020209">地区场景模块</item>
+	<item id="020210">角色场景配置</item>
+	<item id="020211">角色场景界面</item>
+	<item id="020212">角色场景模块</item>
+	<item id="020213">城镇场景配置</item>
+	<item id="020214">城镇场景界面</item>
+	<item id="020215">城镇场景模块</item>
+	<item id="020216">农庄场景配置</item>
+	<item id="020217">农庄场景界面</item>
+	<item id="020218">农庄场景模块</item>
+	<item id="020219">修炼场配置</item>
+	<item id="020220">修炼场界面</item>
+	<item id="020221">修炼场模块</item>
+	<item id="020222">竞技场配置</item>
+	<item id="020223">竞技场界面</item>
+	<item id="020224">竞技场模块</item>
+	<item id="020225">敌国入侵配置</item>
+	<item id="020226">敌国入侵界面</item>
+	<item id="020227">敌国入侵模块</item>
+	<item id="020228">银矿配置</item>
+	<item id="020229">银矿界面</item>
+	<item id="020230">银矿模块</item>
+	<item id="020231">副本大厅配置</item>
+	<item id="020232">副本大厅界面</item>
+	<item id="020233">副本大厅模块</item>
+	<item id="020234">多人副本配置</item>
+	<item id="020235">多人副本界面</item>
+	<item id="020236">多人副本模块</item>	
+	<item id="020237">将军府配置</item>
+	<item id="020238">将军府界面</item>
+	<item id="020239">将军府模块</item>
+	<item id="020240">边塞场景配置</item>
+	<item id="020241">边塞场景界面</item>
+	<item id="020242">边塞场景模块</item>
+	<item id="020243">国战场景配置</item>
+	<item id="020244">国战场景界面</item>
+	<item id="020245">国战场景模块</item>
+	<item id="020246">武斗会场景配置</item>
+	<item id="020247">武斗会景界面</item>
+	<item id="020248">武斗会景模块</item>
+	<item id="020249">赛马场景配置</item>
+	<item id="020250">赛马景界面</item>
+	<item id="020251">赛马景模块</item>
+	<item id="020252">背景地图</item>
+	<item id="020253">势力挑战赛场景配置</item>
+	<item id="020254">势力挑战赛场景界面</item>
+	<item id="020255">势力挑战赛场景模块</item>
+	<item id="020256">跨服国战场景配置</item>
+	<item id="020257">跨服国战场景界面</item>
+	<item id="020258">跨服国战场景模块</item>
+	<item id="020259">蛮族入侵场景配置</item>
+	<item id="020260">蛮族入侵场景界面</item>
+	<item id="020261">蛮族入侵场景模块</item>
+	<item id="020262">争霸赛场景配置</item>
+	<item id="020263">争霸赛景界面</item>
+	<item id="020264">争霸赛景模块</item>
+	<item id="020265">跨服国战排行榜配置</item>
+	<item id="020266">跨服国战排行榜界面</item>
+	<item id="020267">跨服国战排行榜模块</item>
+	<item id="020268">打年兽配置</item>
+	<item id="020269">打年兽界面</item>
+	<item id="020270">打年兽模块</item>
+	<item id="020271">守卫农庄配置</item>
+	<item id="020272">守卫农庄界面</item>
+	<item id="020273">守卫农庄模块</item>
+	<item id="020274">五毒兽配置</item>
+	<item id="020275">五毒兽界面</item>
+	<item id="020276">五毒兽模块</item>
+	
+
+	<!--模块-->
+	<item id="020500">游戏公用模块</item>
+	<item id="020501">游戏UI配置</item>
+	<item id="020502">游戏UI界面</item>
+	<item id="020503">游戏UI模块</item>
+	<item id="020504">角色模块配置</item>
+	<item id="020505">角色模块界面</item>
+	<item id="020506">角色模块</item>
+	<item id="020507">背包模块配置</item>
+	<item id="020508">背包模块界面</item>
+	<item id="020509">背包模块</item>
+	<item id="020510">技能模块配置</item>
+	<item id="020511">技能模块界面</item>
+	<item id="020512">技能模块</item>
+	<item id="020513">武将模块配置</item>
+	<item id="020514">武将模块界面</item>
+	<item id="020515">武将模块</item>
+	<item id="020516">商店模块配置</item>
+	<item id="020517">商店模块界面</item>
+	<item id="020518">商店模块</item>
+	<item id="020519">酒肆模块配置</item>
+	<item id="020520">酒肆模块界面</item>
+	<item id="020521">酒肆模块</item>
+	<item id="020522">生产模块配置</item>
+	<item id="020523">生产模块界面</item>
+	<item id="020524">生产模块</item>
+	<item id="020525">自动战斗配置</item>
+	<item id="020526">自动战斗界面</item>
+	<item id="020527">自动战斗模块</item>
+	<item id="020528">战斗配置</item>
+	<item id="020529">战斗界面</item>
+	<item id="020530">战斗模块</item>	
+	<item id="020531">威望系统配置</item>
+	<item id="020532">威望系统界面</item>
+	<item id="020533">威望系统模块</item>	
+	<item id="020534">排行榜配置</item>
+	<item id="020535">排行榜界面</item>
+	<item id="020536">排行榜模块</item>
+	<item id="020537">角色配置</item>
+	<item id="020538">角色界面</item>
+	<item id="020539">角色模块</item>	
+	<item id="020540">装备改良配置</item>
+	<item id="020541">装备改良界面</item>
+	<item id="020542">装备改良模块</item>
+	<item id="020543">聊天配置</item>
+	<item id="020544">聊天界面</item>
+	<item id="020545">聊天模块</item>
+	<item id="020546">邮件配置</item>
+	<item id="020547">邮件界面</item>
+	<item id="020548">邮件模块</item>
+	<item id="020549">任务配置</item>
+	<item id="020550">任务界面</item>
+	<item id="020551">任务模块</item>
+	<item id="020552">采购配置</item>
+	<item id="020553">采购界面</item>
+	<item id="020554">采购模块</item>
+	<item id="020555">组队管理配置</item>
+	<item id="020556">组队管理界面</item>
+	<item id="020557">组队管理模块</item>
+	<item id="020558">军团配置</item>
+	<item id="020559">军团界面</item>
+	<item id="020560">军团模块</item>
+	<item id="020561">将军府排行配置</item>
+	<item id="020562">将军府排行界面</item>
+	<item id="020563">将军府排行模块</item>		
+	<item id="020564">武将招募配置</item>
+	<item id="020565">武将招募界面</item>
+	<item id="020566">武将招募模块</item>
+	<item id="020567">升级提示配置</item>
+	<item id="020568">升级提示界面</item>
+	<item id="020569">升级提示模块</item>
+	<item id="020570">自动挂机配置</item>
+	<item id="020571">自动挂机界面</item>
+	<item id="020572">自动挂机模块</item>
+	<item id="020573">功能开放配置</item>
+	<item id="020574">功能开放界面</item>
+	<item id="020575">功能开放模块</item>
+	<item id="020576">功能开放信息</item>
+	<item id="020577">任务引导配置</item>
+	<item id="020578">任务引导界面</item>
+	<item id="020579">任务引导模块</item>
+	<item id="020580">神庙配置</item>
+	<item id="020581">神庙界面</item>
+	<item id="020582">神庙模块</item>	
+	<item id="020583">监狱配置</item>
+	<item id="020584">监狱界面</item>
+	<item id="020585">监狱模块</item>
+	<item id="020586">VIP、礼包配置</item>
+	<item id="020587">VIP、礼包界面</item>
+	<item id="020588">VIP、礼包模块</item>
+	<item id="020589">查看武将实力配置</item>
+	<item id="020590">查看武将实力界面</item>
+	<item id="020591">查看武将实力模块</item>	
+	<item id="020592">宝石系统配置</item>
+	<item id="020593">宝石系统界面</item>
+	<item id="020594">宝石系统模块</item>
+	<item id="020595">活动系统配置</item>
+	<item id="020596">活动系统界面</item>
+	<item id="020597">活动系统模块</item>
+	<item id="020598">商业系统配置</item>
+	<item id="020599">商业系统界面</item>
+	<item id="020600">商业系统模块</item>
+	<item id="020601">武斗会面板系统配置</item>
+	<item id="020602">武斗会面板系统界面</item>
+	<item id="020603">武斗会面板系统模块</item>
+	<item id="020604">选择马匹配置</item>
+	<item id="020605">选择马匹界面</item>
+	<item id="020606">选择马匹模块</item>
+	<item id="020607">争霸赛面板系统配置</item>
+	<item id="020608">争霸赛面板系统界面</item>
+	<item id="020609">争霸赛面板系统模块</item>
+	<item id="020700">好友系统配置</item>
+	<item id="020701">好友系统界面</item>
+	<item id="020702">好友系统模块</item>
+	<item id="020703">灵石兑换系统配置</item>
+	<item id="020704">灵石兑换系统界面</item>
+	<item id="020705">灵石兑换系统模块</item>
+	<item id="020706">国战奖励系统配置</item>
+	<item id="020707">国战奖励系统界面</item>
+	<item id="020708">国战奖励系统模块</item>
+	<item id="020709">机械系统配置</item>
+	<item id="020710">机械系统界面</item>
+	<item id="020711">机械系统模块</item>	
+	<item id="020712">帮助系统配置</item>
+	<item id="020713">帮助系统界面</item>
+	<item id="020714">帮助系统模块</item>
+	<item id="020715">帮助内容配置</item>
+	<item id="020716">每日任务配置</item>
+	<item id="020717">每日任务界面</item>
+	<item id="020718">每日任务模块</item>
+	
+	<item id="020900">VIP特权介绍信息</item>
+	<item id="020901">背包内无此道具[br]请先获得此道具</item>
+	
+	<item id="021001">任务信息</item>
+	<item id="021002">对白信息</item>
+	<item id="021003">新系统开放信息</item>
+	<item id="021004">任务引导配置信息</item>
+	<item id="021005">边塞Npc配置信息</item>
+	<item id="021006">城镇Npc配置信息</item>
+	<item id="021007">怪物喊话配置</item>
+	<item id="021008">名字配置</item>
+	<item id="021009">场景对话信息</item>
+
+<!-- UI -->
+	<item id="030001">商店</item>
+	<item id="030002">背包</item>
+	<item id="030003">强化</item>
+	<item id="030004">技能</item>
+	<item id="030005">武将</item>
+	<item id="030006">官职</item>
+	<item id="030007">排行榜</item>
+
+	<item id="030011">{0}</item>
+	<item id="030012">血量</item>
+	<item id="030013">精力</item>
+	<item id="030014"><![CDATA[{0}]]></item>
+	<item id="030015">{0}    剩余：{1}[br][br]【效果】[br]{2}</item>
+	<item id="030016">金币：{0}</item>
+	<item id="030017">银币：{0}</item>
+	<item id="030018">威望：{0}</item>
+	<item id="030019">木材：{0}</item>
+	<item id="030020"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="030021">{0}年</item>
+	<item id="030022">{0}月</item>
+	<item id="030023">一|二|三|四|五|六|七|八|九|十|十一|十二</item>
+	<item id="030024">武器,头盔,胸甲,腿甲,靴子,戒指,坐骑</item>
+	<item id="030025">来犯敌人,通缉要犯,头号通缉,穷凶极恶,国家公敌</item>
+	<item id="030026">剑师,铁骑,猛士,神射,舞姬</item>
+	<item id="030027">经验：{0}</item>
+	<item id="030028"></item>
+	<item id="030029">补充</item>
+	<item id="030030">{0}万</item>
+
+	<!--防沉迷-->
+	<item id="030031">您累计在线时间已满1小时</item>
+	<item id="030032">您累计在线时间已满2小时</item>
+	<!-- <item id="030033">您累计在线时间已满3小时，请您下线休息，做适当身体活动</item> -->
+	<item id="030033">您已经进入疲劳游戏时间，您的游戏收益将降为正常值的50%，为了您的健康，请尽快下线休息，做适当身体活动，合理安排学习生活</item>
+	<item id="030034">您已经进入疲劳游戏时间，您的游戏收益将降为正常值的50%，为了您的健康，请尽快下线休息，做适当身体活动，合理安排学习生活</item>
+	<item id="030035">您已经进入疲劳游戏时间，您的游戏收益将降为正常值的50%，为了您的健康，请尽快下线休息，做适当身体活动，合理安排学习生活</item>
+	<item id="030036">您已经进入疲劳游戏时间，您的游戏收益将降为正常值的50%，为了您的健康，请尽快下线休息，做适当身体活动，合理安排学习生活</item>
+	<item id="030037">您已进入不健康游戏时间，为了您的健康，请您立即下线休息。如不下线，您的身体将受到损害，您的收益已降为零，直到您的累计下线时间满5小时后，才能恢复正常</item>
+	<item id="030038"><![CDATA[]]></item><!-- 链接URL地址 -->
+	<item id="030039"><![CDATA[你被防沉迷了，<font color='#ff0000'>游戏所有收益为零！</font>请尽快填写个人身份证信息！]]></item>
+	<item id="030040">马上填写</item>	
+	<item id="030041">今日官职奖励：</item>
+	<item id="030042">{0}×{1}</item>
+	<item id="030043">领取</item>
+	<item id="030044">领取成功！</item>
+	<item id="030045">点击显示或隐藏其他玩家</item>
+	<item id="030046">点击显示或屏蔽战斗特效</item>
+	<item id="030047">血</item>
+	<item id="030048">体</item>
+	<item id="030049">设置</item>
+	<item id="030050">点击服用背包中buff药</item>
+
+	
+	<!--精力-->
+	<item id="030051">疲劳状态</item>
+	<item id="030052">普通状态</item>
+	<item id="030053">充沛状态</item>
+	<item id="030054">高昂状态</item>
+	<item id="030055"></item>
+	<item id="030056"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="030057">银矿收益</item>
+	<item id="030058">修炼场收益</item>
+	<item id="030059">副本经验</item>
+	<item id="030060">入侵敌国收益</item>
+	<item id="030061">副本掉落</item>
+	<item id="030062"></item>
+	<item id="030063">{0}倍</item>
+	<item id="030064">您当前精力处于{0}    [br][br]【效果】[br]{1}</item>
+	<item id="030065"><![CDATA[修炼场效率为普通状态的{0}[br]银矿挖矿速度为普通状态的{0}[br]副本通关速度为普通状态的{0}[br]敌国入侵效率为普通状态的{0}[br]]]></item>
+	<item id="030066"><![CDATA[<b><font color='{0}' size="14">×</font><font color='{1}' size="12">{2}</font></b>]]></item>
+	<item id="030067"></item>
+	<item id="030068">你的精力从{0}进入{1}</item>
+	<item id="030069">，请及时补充</item>
+	<item id="030070">请选择精力补充方式</item>
+	<item id="030071">若不补充，你将失去</item>
+	<item id="030072">{0}倍的银矿收益[br]{1}倍的副本经验和物品掉率[br]{2}倍的入侵敌国威望[br]{3}倍的技能修炼速度</item>
+	<item id="030073">金币补充</item>
+	<item id="030074">以后再说</item>
+	<item id="030075">{0}金币</item>
+	<item id="030076">1、在酒肆点菜可补充精力[br]2、自己烹饪菜肴可补充精力</item>
+	<item id="030081">精力补充</item>
+	<item id="030082">请选择要补充到的精力状态：</item>
+	<item id="030083">疲劳，{0}倍经验、银币掉落</item>	
+	<item id="030084">普通，{0}倍经验、银币掉落</item>
+	<item id="030085">充沛，{0}倍经验、银币掉落</item>
+	<item id="030086">高昂，{0}倍经验、银币掉落</item>
+	<item id="030087"><![CDATA[<font color='#E46565'>（当前）</font>]]></item>
+	<item id="030088">补充</item>
+	<item id="030089"><![CDATA[您确定要花费<font color='#ECAD13'>{0}</font>金币补充精力到{1}吗？]]></item>
+	<item id="030090">是否花费{0}金币补充精力</item>
+	<item id="030091">点击消耗背包中菜肴，补充精力</item>
+	<item id="030092">点击消耗银币，补充生命</item>
+	<item id="030093">前20次关注好友[br]每名获赠1金币</item>
+	<item id="030094">帮助好友获得热心值！</item>
+	<item id="030096">您是否花费{0}金币购买一个{1}倍经验丹？</item>
+	<item id="030097">服用此BUFF将要顶替掉之前BUFF效果，是否替换？</item>
+	<item id="030098">服用经验丹会顶替10倍经验丹效果，是否服用？</item>
+	<item id="030099">服用10倍经验丹会覆盖其他经验丹效果，是否服用？</item>
+	
+	<!-- 培养 -->
+	<item id="030101">培养</item>
+	<item id="030102">恢复</item>
+	<item id="030103">服用</item>
+	<item id="030104">维持</item>
+	<item id="030105">替换</item>
+	<item id="030106">原属性</item>
+	<item id="030107">新属性</item>
+	<item id="030108"><![CDATA[<font color='#CBCC66' >统：</font>{0}<font color='#CBCC66' >(+{1})</font>]]></item>
+	<item id="030109"><![CDATA[<font color='#CBCC66' >勇：</font>{0}<font color='#CBCC66' >(+{1})</font>]]></item>
+	<item id="030110"><![CDATA[<font color='#CBCC66' >智：</font>{0}<font color='#CBCC66' >(+{1})</font>]]></item>
+	<item id="030111">确定</item>
+	<item id="030112">没有属性可以恢复</item>
+	<item id="030113"><![CDATA[<font color='#ee1d1d'>↓{0}</font>]]></item>
+	<item id="030114"><![CDATA[<font color='#99FF00'>↑{0}</font>]]></item>
+	<item id="030115">恢复属性：</item>
+	<item id="030116"><![CDATA[<font color='#FF0000'>(满)</font>]]></item>
+	<item id="030117"><![CDATA[ <font color='#ee1d1d'>请选择一种培养模式！</font>]]></item>
+	<item id="030118">你确定花费金币购买丹药给武将服用吗？</item>
+	<item id="030119"><![CDATA[ <font color='#FFFFFF'>（剩余{0}个）</font>]]></item>
+	<item id="030120">请选择丹药培养武将</item>
+	
+	<item id="030121">(科技免费培养{0}次)</item>
+	<item id="030122"><![CDATA[是否花费<font color='#FFCC00'>{0}</font>个蓝木丹提升<font color='#FFCC00'>1</font>点{1}属性？]]></item>
+	<item id="030123">统</item>
+	<item id="030124">智</item>
+	<item id="030125">勇</item>
+	<item id="030126"><![CDATA[ <font color='#FF0000'>当前不能培养</font>]]></item>
+	<item id="030127">武将列表(1/1)</item>
+	<item id="030128">武将列表({0})</item>
+	<item id="030129">武将列表</item>
+	
+	
+	<item id="030201">数据加载中...</item>
+	<item id="030202">国战细则</item>
+	<item id="030203"><![CDATA[1.国战在每年秋季晚上8:30开始[br]2.参加国战可获得大量点券[br]3.国战中占领城池多的一方获胜[br]4.国战结束后双方按胜负各获一定点券奖励]]></item>
+	<item id="030204">宝箱</item>
+	<item id="030205">跨服国战可获得海量点券</item>
+	<item id="030206">知道了</item>
+	<item id="030207">{0}：{1}/{2}</item>
+	<item id="030208">进入</item>
+	<item id="030209">水</item>
+	<item id="030210">火</item>
+	<item id="030211">土</item>
+	<item id="030212">请先退出副本！</item>
+	<item id="030213">请从边塞传送门进入</item>
+	<item id="030214">跨服国战细则</item>
+	<item id="030215"><![CDATA[1.参加跨服国战可获得大量点券[br]2.跨服国战中占领城池多的一方获胜[br]3.跨服国战后双方按胜负各获一定点券奖励[br]4.奖励在活动结束后在界面右上方领取]]></item>
+	<item id="030216">距离跨服国战开启还有（{0}）</item>
+	<item id="030217">跨服国战已开启</item>
+	<item id="030218">前往战场</item>
+	<item id="030219">国战可获得大量点券</item>
+	
+	<!-- 国战宝箱 -->
+	<item id="030301">{0}级普通宝箱</item>
+	<item id="030302">{0}级荣誉宝箱</item>
+	<item id="030303">开启</item>
+	<item id="030304">x{0}</item>
+	<item id="030305">有效期：{0}</item>
+	<item id="030306">{0} x{1}</item>
+	<item id="030307">金币开启</item>
+	<item id="030308">你确认花费{0}金币再开启{1}个荣誉宝箱吗？</item>
+	<item id="030309">已过期</item>
+	<item id="030310">每次开启10个宝箱</item>
+	<item id="030311">{0} x{1} 统:{2} 智:{3} 勇:{4}</item>
+	<item id="030312">{0} x{1} 战斗力:{2} </item>
+
+	<!-- ui -->
+	<item id="030501"></item>
+	<item id="030502">确定</item>
+	<item id="030503">取消</item>
+	<item id="030504">不再提示</item>
+	
+	<!-- 每日登录奖励 -->
+	<item id="030701">五谷丰登</item>
+	<item id="030702">吉星高照</item>
+	<item id="030703">吉祥如意</item>
+	<item id="030704">大吉大利</item>
+	<item id="030705">财源滚滚</item>
+	<item id="030706">飞黄腾达</item>
+	<item id="030707">鸿运当头</item>
+	<item id="030708">今日运势：<![CDATA[ <font color='#FFFF00' size='18'>{0}，{1}</font>]]></item>
+	<item id="030709">金币</item>
+	<item id="030710">x{0}</item>
+	<item id="030711">获得每日奖励：金币x{0}，{1}x{2}</item>
+	<item id="030712">今日奖励：</item>
+	<item id="030713">额外奖励：</item>
+	<item id="030714">我知道了</item>
+	<item id="030715">领取成功</item>
+	
+	<!-- 操练 -->
+	<item id="030750">{0}次数：{1}/{2}[br]</item>
+	<item id="030751">战车耐久{0}/{1}，建议修理一下。</item>
+	<item id="030752"><![CDATA[<font size='17' color='#{0}'><b>{1}</b></font>]]></item>
+	
+	<!-- 老玩家回归奖励 -->
+	<item id="030762">将军不在的日子，奴婢甚是想念[br]这些东西是奴婢平日节省下来的，[br]希望可以帮助将军重振雄风！！！</item>
+	<item id="030763">确定</item>
+	<item id="030764">恭喜你获得了1级宝石×{0}[br]10倍经验丹×{1}</item>
+	<item id="030765">1级宝石</item>
+	<item id="030766">10倍经验丹</item>
+	
+	
+	<!-- 首次充值 -->
+	<item id="030802">我知道了</item>
+	<item id="030803"></item>
+	<item id="030804"></item>
+	<item id="030805"><![CDATA[ <font color='#FFFF00' size='25'>{0}</font>]]>金币</item>
+	<item id="030806">领取成功</item>
+	<item id="030807">恭喜您获得了首次充值礼金</item>
+	<item id="030808"></item>
+	
+	<item id="030900">消耗{0}银币，补充了{1}点血！</item>
+	
+	<!--战斗面板-->
+	<item id="031001">战斗</item>
+
+<!-- 对白 -->
+	<item id="040001">点击继续</item>
+	<item id="040002">确定</item>
+	
+<!-- 建议面板 -->
+	<item id="050001">建议</item>
+	<item id="050002">提交</item>
+	<item id="050003">感谢您对我们的游戏作出建议或者评论！</item>
+	<item id="050004">输入非法，请重新输入，谢谢！</item>
+	<item id="050005">提交成功，感谢您对我们游戏的支持！</item>
+	
+<!--用户习惯-->
+	<item id="050011">设置</item>
+	<item id="050012">显示</item>
+	<item id="050013">隐藏</item>
+	<item id="050014">开启</item>
+	<item id="050015">关闭</item>
+	<item id="050016">玩家</item>
+	<item id="050017">音效</item>
+	<item id="050018">特效</item>
+	<item id="050019">快速战斗</item>
+	<item id="050020">吃菜数量</item>
+	<item id="050021">1个</item>
+	<item id="050022">10个</item>
+	
+<!--场景名称-->
+	<item id="060004">世界地图</item>
+	<item id="060006">农庄</item>
+	<item id="060007">修炼场</item>
+	<item id="060008">竞技场</item>
+	<item id="060011">副本大厅</item>
+	<item id="060012">副本中</item>
+	<item id="060013">将军府</item>
+	<item id="060014">边塞</item>
+	<item id="060015">国战</item>
+	<item id="060016">武斗会</item>
+	<item id="060017">赛马场</item>
+	<item id="060018">势力排行</item>
+	<item id="060019">跨服国战</item>
+	<item id="060020">蛮族入侵</item>
+	<item id="060021">跨服争霸</item>
+	<item id="060022">年兽战场</item>
+	<item id="060023">农庄守卫</item>
+	<item id="060024">五毒兽</item>
+
+<!--模块-->
+	<!--副本战斗场景-->
+	<item id="100101">退出副本</item>
+	<item id="100102">自动挂机中不能参加跨服活动，请停止挂机！</item>
+	
+	<item id="100201">Lv{0}</item>
+	<item id="100202"><![CDATA[{0} <font color='#C7B585' size='16'>({1})</font>]]></item>
+	<item id="100203"><![CDATA[{0} <font color='#00ff00' size='16'>↑{1}</font> <font color='#C7B585' size='16'>({2})</font>]]></item>
+	<item id="100204"><![CDATA[<b><font color='#FFFFCC'>{0}</font></b> Lv.{1}[br]{2}{3}{4}]]></item>
+	<item id="100205">独立通关副本开启</item>
+	
+	<item id="100301">领悟 {0}，等级 +{1}</item>
+	<item id="100302">俘获副将 {0}</item>
+	<item id="100303">金币 +{0}</item>
+	<item id="100304">银币 +{0}</item>
+	<item id="100305">经验 +{0}</item>
+	<item id="100306">获得装备 {0}</item>
+	<item id="100307">获得菜谱 {0}</item>
+	<item id="100308">获得药方 {0}</item>
+	<item id="100309">获得宝石 {0}</item>
+	<item id="100310">获得 {0}</item>
+	<item id="100311">获得灵石 {0}</item>
+	<item id="100312">获得 {0}×{1}</item>
+	<item id="100316">获得 {0}</item>
+	<item id="100320">获得图纸 {0}</item>
+
+	<item id="100401">上一页</item>
+	<item id="100402">下一页</item>
+	<item id="100403">关闭</item>
+	
+	<!--城镇场景-->
+	<item id="110101">城镇</item>
+	<item id="110102">边塞</item>
+	<item id="110103">出城</item>
+	<item id="110104">汉室城镇</item>
+	<item id="110105">诸侯城镇</item>
+	<item id="110151"><![CDATA[<font color='#ee1d1d'>竞技次数已经用完，请明天再来。</font>]]></item>
+	<item id="110152"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="110153">国战</item>
+	<item id="110154">关注</item>
+	
+	<item id="110201">战斗记录</item>
+	<item id="110202">刷新敌人</item>
+	<item id="110203"><![CDATA[你已经取得了<font size='18'><b>{0}</b></font>连胜！]]></item>
+	<item id="110204"><![CDATA[你已经被通缉了<font size='18'><b>{0}</b></font>次！]]></item>
+	<item id="110207"><![CDATA[<font color='#EFE63F'>【胜】</font>]]></item>
+	<item id="110208"><![CDATA[<font color='#ff0000'>【负】</font>]]></item>
+	<item id="110209"><![CDATA[<font color='#76CAEA'>【势】</font>]]></item>
+	<item id="110210">你攻击{0}失败</item>
+	<item id="110211"><![CDATA[你攻击{0}失败，扣除<font color='#ffff00'>{1}</font>威望]]></item>
+	<item id="110212"><![CDATA[你攻击{0}胜利，获得<font color='#ffff00'>{1}</font>威望]]></item>
+	<item id="110213"><![CDATA[你攻击{0}胜利，并将其俘获！获得<font color='#ffff00'>{1}</font>威望]]></item>
+	<item id="110214"><![CDATA[你攻击{0}胜利，并将其俘获！获得<font color='#ffff00'>{1}</font>威望。[br]但监狱已满，只能放其一条生路]]></item>
+	<item id="110215">{0}偷袭了你，铩羽而归！</item>
+	<item id="110216">{0}偷袭了你，你不幸战败！</item>
+	<item id="110217">你被{0}偷袭，不幸战败被俘！</item>
+	<item id="110218"><![CDATA[你攻击{0}胜利，获得<font color='#ffff00'>{1}</font>威望。[br]并且杀入其监狱，救走一名我方人员！]]></item>
+	<item id="110219">{0}攻击敌人，凯旋而归！</item>
+	<item id="110220">反击</item>
+	<item id="110221">确定</item>
+	<item id="110222">[反击]</item>
+	<item id="110225">（点此收缩）</item>
+	<item id="110226">展开激战日志</item>
+	<item id="110231"><![CDATA[<font color='#ff0000'>{0}</font> ]]></item>
+	<item id="110240">请选择入侵者进行反击</item>
+	<item id="110241">Lv {0}</item>
+	<item id="110242">行动CD：</item>
+	<item id="110250">刷新敌人，消耗{0}精力</item>
+	<item id="110251">攻击敌人，消耗{0}精力</item>
+	<item id="110252">反击敌人，消耗{0}精力</item>
+	<item id="110260">【{0}】偷袭了你！</item>
+	<item id="110261">【{0}】偷袭并俘虏了你！</item>
+	<item id="110270">{0}偷袭了你，并且杀入你的监狱，放走了一名俘虏！</item>
+	<item id="110271">通关仓亭之战-粮营，此区域自动开放</item>
+	<item id="110276">进入</item>
+	<item id="110277">自动入侵</item>
+	<item id="110278">进入监狱</item>
+	<item id="110279"><![CDATA[有新将招募]]></item>
+	<item id="110280">点击酒楼</item>
+	<item id="110281">点击二楼客房</item>
+	<item id="110282">新开启通商功能</item>
+	<item id="110283">今天不再提示</item>
+	<item id="110284">开放文官功能，文官在酒肆招募</item>
+	<item id="110285">当前威望：{0}</item>
+	<item id="110286">连胜榜</item>
+	<item id="110287">恭喜你获得了{0}×{1}</item>
+	<item id="110288"><![CDATA[<font color='#FFCC00'>【{0}】</font>已经完成了<font color='#FFCC00'>{1}连胜</font>,真是可喜可贺]]></item>
+	<item id="110289"><![CDATA[只有<font color='#FFCC00'>{0}</font>的勇士[br]才能完成]]></item>
+	<item id="110290">恭喜完成了全部的连胜</item>
+	<item id="110291">点击加血按钮补充血量</item>
+	
+	<!--地区场景-->
+	<item id="120101">地区{0}外貌</item>
+	<item id="120102">自动清剿[br][br][br][br]　{0}</item>
+	<item id="120103">进入下一幕需要等级{0}</item>
+	<item id="120104">请先完成本幕最后一个副本</item>
+	<item id="120105">通关白马之围-中营后，此区域自动开放</item>
+	<item id="120106">通关白马之围-大帐后，此区域自动开放</item>
+	<item id="120107">地区{0}地图背景</item>
+	
+	<item id="120201">简单</item>
+	<item id="120202">普通</item>
+	<item id="120203">困难</item>
+	<item id="120204">自动</item>
+	
+	<item id="120300">进入限制</item>
+	<item id="120301">{0}[br]{1}{2}[br]{3}</item>
+	<item id="120302">精力：</item>
+	<item id="120303"><![CDATA[<font color='#FF0000'>{0}精力</font>]]></item>
+	<item id="120304">{0}</item>
+	<item id="120305"><![CDATA[<font color='#FF0000'>{0}</font>]]></item>
+	<item id="120306">开放新系统[br]{0}</item>
+	<item id="120307">等级：</item>
+	<item id="120308"><![CDATA[<font color='#FF0000'>等级{0}</font>]]></item>
+	<item id="120309"><![CDATA[<font color='#FF0000'>你等级未达到{0}级，不能进入！</font>]]></item>
+	<item id="120310"><![CDATA[[br]<font color='#FF0000'>威望{0}</font>]]></item>
+	<item id="120311">威望：</item>
+	<item id="120312"><![CDATA[<font color='#FF0000'>你威望未达到{0}，不能进入！</font>]]></item>
+	<item id="120313">进入下一幕将无法再进入本幕银矿，是否进入下一幕？</item>
+
+	<item id="120401">背景图片</item>
+	<item id="120402">加入</item>
+	<item id="120403">返回</item>
+	<item id="120404">背景</item>
+	<item id="120405">阵营动画</item>
+	<item id="120406">{0}[br]{1}</item>
+	<item id="120407">阵营选择</item>
+	<item id="120408"><![CDATA[可招募武将：[br]小乔,周瑜,吕布,张辽,司马懿等百余武将]]></item>
+	<item id="120409"><![CDATA[可招募武将：[br]貂蝉,关羽,诸葛亮,张飞,赵云等百余武将]]></item>
+	<item id="120410"><![CDATA[可额外获得<font color='#DFB500'>50</font>金币奖励。]]></item>
+	<item id="120411"><![CDATA[<font color='#FFCC00'>[{0}]</font>通过听天命选择了[{1}]阵营]]></item>
+
+	<item id="120501">入侵敌人（{0}）</item>
+	<item id="120502">上一页</item>
+	<item id="120503">下一页</item>
+	<item id="120504">退出</item>
+	<item id="120505">你攻击了【{0}】，取得了胜利。[br]你获得了{1}威望，{2}荣誉。</item>
+	<item id="120506"><![CDATA[<font color='#FF0000'>该玩家受保护中，冷却时间：{0}！</font>]]></item>
+	<item id="120507"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="120508">你攻击了【{0}】 失败了。[br]你获得了{1}威望，{2}荣誉。</item>
+	<item id="120550">采集银矿可产出银币</item>
+	<item id="120551">进入边塞</item>
+	
+	<item id="120600">x{0}</item>
+	<item id="120601">通关可得：</item>
+	<item id="120602">独立通关[{0}]可进入</item>
+	<item id="120603">进入试炼需花费{0}金币，确定进入么？</item>
+	<item id="120604">据点试炼</item>
+	<item id="120605">点击使用双倍经验丹</item>
+	<item id="120606">本次免费</item>
+
+	<!--背包面板-->
+	<item id="410001">背包</item>
+	<item id="410002">出售列表</item>
+
+	<item id="410011">背包1</item>
+	<item id="410012">背包2</item>
+	<item id="410013">背包3</item>
+	<item id="410014">背包4</item>
+	<item id="410015">背包5</item>
+	<item id="410016">背包6</item>
+
+	<item id="410021"><![CDATA[银<br>币]]></item>
+	<item id="410022">金币</item>
+	<item id="410023">整理背包</item>
+	<item id="410024">食物：</item>
+	<item id="410025">技能：</item>
+	<item id="410026">菜谱：</item>
+	<item id="410027">增加背包</item>
+	<item id="410028">未开启</item>
+	<item id="410029">商店</item>
+	<item id="410030">团购</item>
+	<item id="410031">批量出售</item>
+	<item id="410032">出售</item>
+	<item id="410033">取消</item>
+
+	<item id="410101">价格：</item>
+	<item id="410102">数量：</item>
+	<item id="410103">出售总价</item>
+	<item id="410104">出售</item>
+	<item id="410105">取消</item>
+
+	<item id="411001">装备类型不一样，不能穿！</item>
+	<item id="411002"><![CDATA[出售物品获得{0}银币]]></item>
+	<item id="411003"><![CDATA[你确定要丢弃[{0}]吗？]]></item>
+	<item id="411004"><![CDATA[只能设置加血的药物！]]></item>
+	<item id="411005">出售</item>
+	<item id="411006">丢弃</item>
+	<item id="411007"><![CDATA[你装备了【{0}】装备]]></item>
+	<item id="411008"><![CDATA[购买背包需要{0}金币，确定购买？]]></item>
+	<item id="411009"><![CDATA[确定使用1.5倍经验buff药吗？(若有2.0倍buff，时间将折算入2.0倍buff)]]></item>
+	<item id="411010"><![CDATA[确定使用2.0倍经验buff药吗？(若有1.5倍buff，时间将折算入2.0倍buff)]]></item>
+	<item id="411011"><![CDATA[不能直接使用，请在培养界面中使用！]]></item>
+	<item id="411012"><![CDATA[出售物品获得{0}灵石]]></item>
+	<item id="411013">已花费{0}金增加一个背包</item>
+	
+	<item id="411101">当前数量：</item>
+	<item id="411102">输入数量：</item>
+	<item id="411103">确定</item>
+	<item id="411104">取消</item>
+	<item id="411105">打开大礼包</item>
+	<item id="411106">领取成功</item>
+	<item id="411107">自动连续开宝箱（剩余{0}）</item>
+	<item id="411108">恭喜您获得 {0} x{1}</item>
+	<item id="411109">战马已经死亡，复活需要{0}金币，是否要复活？</item>
+	<item id="411110">全部卖出</item>
+	<item id="411111">{0}个</item>
+	<item id="411112">机械制造时不能打开商店</item>
+	
+
+
+	<!--技能面板-->
+	<item id="420001">技能</item>
+
+	<item id="420011">已装备技能</item>
+	<item id="420012">主动技能</item>
+	<item id="420013">被动技能</item>
+	<item id="420014">剩余时间</item>
+	<item id="420015">技能简介</item>
+
+	<item id="420021">开始</item>
+	<item id="420022"><![CDATA[<font color='#ff0000'>请先选择要升级的技能</font>]]></item>
+	<item id="420023"><![CDATA[<font color='#ff0000'>不能重复升级技能</font>]]></item>
+	
+
+	<!--阵型面板-->
+	<item id="430001">武将</item>
+	<item id="430002">阵型</item>
+	<item id="430003">督军</item>
+	<item id="430004">督军令上阵武将属性加成</item>
+	<item id="430005">点击完成上将</item>
+	<item id="430006">拖动副将更换阵型</item>
+	<item id="430007">主督军：满亲密度时，将自己60%属性提供给上阵武将</item>
+	<item id="430008">副督军：满亲密度时，将自己40%属性提供给上阵武将</item>
+	<item id="430009">主[br]督</item>
+	<item id="430010">副[br]督</item>
+	<item id="430011">出战</item>
+	<item id="430012">解雇</item>
+	<item id="430013">血量</item>
+	<item id="430014">经验</item>
+	<item id="430015">站在前排</item>
+	<item id="430016">被动技</item>
+	<item id="430017">技能</item>
+	<item id="430018">武将换位</item>
+	<item id="430019">武将位置：{0}</item>
+	<item id="430020">任命</item>
+	<item id="430021">{0}（Lv{1}）</item>
+	<item id="430022">{0}/{1}</item>
+	<item id="430023"><![CDATA[<font color='#FFFFCC'>攻击：</font><font color='#FFFFFF'>{0}</font><font color='#76923C'>(+{1})</font>]]></item>
+	<item id="430024"><![CDATA[<font color='#FFFFCC'>防御：</font><font color='#FFFFFF'>{0}</font><font color='#76923C'>(+{1})</font>]]></item>
+	<item id="430025"><![CDATA[<font color='#{0}' size='18'>{1}</font>]]></item>
+	<item id="430026"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="430027"><![CDATA[<font color='#DD9D45'>{0}</font>]]></item>
+	<item id="430028">技能</item>
+	<item id="430030">lv.{0}</item>
+	<item id="430031">({0})</item>
+	<item id="430032">休息</item>
+	<item id="430033"><![CDATA[<font color='#FFFFCC'>生命：</font><font color='#FFFFFF'>{0}</font><font color='#76923C'>(+{1})</font>]]></item>
+	<item id="430034">培养</item>
+	<item id="430035"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="430036">lv.{0}</item>
+	<item id="430037">武将介绍</item>
+	<item id="430038"><![CDATA[<font color='#{0}'>主将</font>]]></item>
+	<item id="430039">阵型</item>
+	<item id="430040">督军</item>
+	<item id="430041">背包中的装备类型不一样，脱装备请将装备拖到空的位置！</item>
+	<item id="430042"><![CDATA[任命官员：{0}[br]官员加成：对{1}基础值增加{2}]]></item>
+	<item id="430043">农场</item>
+	<item id="430044">牧场</item>
+	<item id="430045"><![CDATA[<font color='#CBCC66'>生命：</font>{0}]]></item>
+	<item id="430046"><![CDATA[<font color='#CBCC66'>攻击：</font>{0}]]></item>
+	<item id="430047"><![CDATA[<font color='#CBCC66'>防御：</font>{0}]]></item>
+	<item id="430048"><![CDATA[<font color='#CBCC66'>统：</font>{0}]]></item>
+	<item id="430049"><![CDATA[<font color='#CBCC66'>勇：</font>{0}]]></item>
+	<item id="430050"><![CDATA[<font color='#CBCC66'>智：</font>{0}]]></item>
+	<item id="430051"><![CDATA[<font color='#7b8a2e'>(+{0})</font>]]></item>
+	<item id="430052">赏赐</item>
+	<item id="430053"><![CDATA[是否赏赐<font color='#FFCC00'>{0}</font>金币给<font color='#FFCC00'>{1}</font>增加{2}点亲密度，亲密度影响督军提供属性的效果]]></item>
+	<item id="430054">骑马</item>
+	<item id="430055">下马</item>
+	<item id="430056"><![CDATA[点击[br]骑马]]></item>
+	<item id="430057">寄存</item>
+	<item id="430058">武将寄存后可以在酒肆召回。[br]确定要寄存{0}吗？</item>
+	<item id="430059">已花费{0}金币赏赐</item>
+	<item id="430060"><![CDATA[<font color='#CBCC66'>统：</font><font color='#FF0000'>{0}  (赠)</font>]]></item>
+	<item id="430061"><![CDATA[<font color='#CBCC66'>勇：</font><font color='#FF0000'>{0}  (赠)</font>]]></item>
+	<item id="430062"><![CDATA[<font color='#CBCC66'>智：</font><font color='#FF0000'>{0}  (赠)</font>]]></item>
+	<item id="430063">更换</item>
+	<item id="430064">更换称号</item>
+	<item id="430065">{0}</item>
+	<item id="430066">称号：</item>
+	<item id="430067"><![CDATA[<font color='#CBCC66'>属性：</font>{0}]]></item>
+	<item id="430068">称号预览</item>
+	<item id="430069">-称号相关-</item>
+	<item id="430070">使用称号</item>
+	<item id="430071"><![CDATA[<font color='#ffffcc'>永久有效</font>]]></item>
+	<item id="430072">称号：无</item>
+	<item id="430073">属性：无</item>
+	<item id="430074">大赏赐</item>
+	<item id="430075">总属性</item>
+	<item id="430076">当前称号</item>
+	<item id="430077">使用期限</item>
+	<item id="430078">-称号-</item>
+	<item id="430079"><![CDATA[攻<font color='#ffffcc'>+{0}</font>；防<font color='#ffffcc'>+{1}</font>；血<font color='#ffffcc'>+{2}</font>；战力<font color='#ffffcc'>+{3}</font>；PVP<font color='#ffffcc'>+{4}%</font>]]></item>
+	<item id="430080"><![CDATA[装备[br]宝物]]></item>
+	<item id="430081">宝物一览</item>
+	<item id="430082">收回</item>
+	<item id="430083"><![CDATA[是否花费<font color='#FFCC00'>{0}</font>银币收回当前装备的宝物么？]]></item>
+	<item id="430084"><![CDATA[<font color='#FF0000'>宝物功能尚未开放</font>]]></item>
+	<item id="430085"><![CDATA[<font color='#FF0000' size='18'>背包里没有该种物品</font>]]></item>
+	<item id="430086">无</item>
+	<item id="430087">时效：{0}</item>
+	<item id="430088">（未获得）</item>
+	<item id="430089">称号总属性对督军加成无效</item>
+	<item id="430090"><![CDATA[点击[br]穿戴]]></item>
+	<item id="430091">点击完成穿戴</item>
+	<item id="430092"><![CDATA[<font color='#FF0000'>副将武器不可拆卸</font>]]></item>
+	<item id="430093">武将</item>
+	<item id="430094">提升实力后可以招募名将</item>
+	<item id="430095">获得科技：</item>
+	<item id="430096">马铃列表</item>
+	
+	<item id="430101">前军</item>
+	<item id="430102">中军</item>
+	<item id="430103">后军</item>
+	<item id="430104">督军</item>
+	<item id="430105">亲密度：{0}</item>
+	<item id="430106">每天24:00增加当前督军亲密度；[br]亲密度越高督军提供的属性越多。[br]100点亲密度时，[br]主督军提供自身60%属性，[br]副督军提供自身40%属性。</item>
+	
+	<item id="430200">阵[br]型</item>
+	<item id="430201">可拖拽武将姓名到阵型/督军中</item>
+	<item id="430202">未开放</item>
+	<item id="430203">独立通关华容小树林通关后开启</item>
+	<item id="430204">独立通关襄阳内城通关后开启</item>
+	<item id="430205">独立通关定军山主帐通关后开启</item>
+	<item id="430206">独立通关通关第五幕生死峡口-内城开启</item>	
+	<item id="430207"><![CDATA[<font color='#CBCC66'>攻击：</font><font color='#99FF00'>+{0}</font>]]></item>
+	<item id="430208"><![CDATA[<font color='#CBCC66'>防御：</font><font color='#99FF00'>+{0}</font>]]></item>
+	<item id="430209"><![CDATA[<font color='#CBCC66'>生命：</font><font color='#99FF00'>+{0}</font>]]></item>	
+	<item id="430210"><![CDATA[<font color='#CBCC66'>战力：</font><font color='#99FF00'>+{0}</font>]]></item>
+	<item id="430211"><![CDATA[<font color='#CBCC66'>战力：</font><font color='#99FF00'>{0}</font>]]></item>
+	<item id="430300"><![CDATA[<font color='#FF0000'>战斗状态中不能换将</font>]]></item>
+	
+	
+	<item id="430301"><![CDATA[<font color='#CBCC66'>攻击：</font><font color='#99FF00'>+{0}</font><font color='#E02A21'>(满)</font>]]></item>
+	<item id="430302"><![CDATA[<font color='#CBCC66'>防御：</font><font color='#99FF00'>+{0}</font><font color='#E02A21'>(满)</font>]]></item>
+	<item id="430303"><![CDATA[<font color='#CBCC66'>生命：</font><font color='#99FF00'>+{0}</font><font color='#E02A21'>(满)</font>]]></item>	
+	<item id="430304"><![CDATA[<font color='#CBCC66'>战力：</font><font color='#99FF00'>+{0}</font><font color='#E02A21'>(满)</font>]]></item>
+	<item id="430305"><![CDATA[<font color='#{0}'>LV.{1} 主将</font>]]></item>
+	<item id="430306"><![CDATA[<font color='#{0}'>LV.{1} {2}</font>]]></item>
+	<item id="430307">今日掠夺宝石：{0}/{1}</item>
+	<item id="430308"><![CDATA[<font color='#FF0000'>战斗状态中不能换装</font>]]></item>
+	<item id="430309">基础+{0}；心法+{1}；装备+{2}；宝石+{3}；督军+{4}；洗炼+{5}</item>
+	<item id="430309">增加攻击伤害，减少所受伤害；坐骑+{0}；督军+{1}；洗炼+{2}</item>
+	<item id="430310">花费10金币增加1点亲密度</item>
+	<item id="430311">花费50金币增加5点亲密度</item>
+	
+	<!--商店面板-->
+	<item id="440001">商店</item>
+
+	<item id="440011">药品</item>
+	<item id="440012">装备</item>
+	<item id="440013">宝石</item>
+	<item id="440014">杂项</item>
+	<item id="440015">回购</item>
+	<item id="440016">灵石</item>
+
+	<item id="440021">购买</item>
+	<item id="440022">价格：</item>
+	<item id="440023">数量：</item>
+	<item id="440024">总价：</item>
+	<item id="440025">购买</item>
+	<item id="440026">取消</item>
+	<item id="440027">购买物品需要花费{0}金币，确定购买？</item>
+	<item id="440028">回购时间:{0}</item>
+	
+	<!--酒肆面板-->
+	<item id="450101">酒肆</item>
+	<item id="450102">欢迎光临，本店各色菜肴应有尽有！</item>
+	<item id="450103">您补给了【{0}】，精力增加了{1}</item>
+	<item id="450104"><![CDATA[{0}	<font color='#B63A5A'>（未用餐）</font>]]></item>
+	<item id="450105"><![CDATA[{0}	<font color='#1F930A'>（已用餐）</font>]]></item>
+	<item id="450106">{0}	（即将开放）</item>
+	<item id="450107">{0}</item>
+	<item id="450108">酒肆开放时间</item>
+	<item id="450109">小店已打烊，君请留意开放时间，届时一定要来哦！</item>
+	<item id="450110">欢迎光临，本店二十四小时开放，内有特色菜肴，物美价廉。菜肴每小时+1！</item>		
+	<item id="450111">你是否花费{0}金币点这盘菜？</item>
+	<item id="450111">购买菜肴需要{0}金币，确定购买?</item>
+	<item id="450112">购买{0}并放入背包</item>	
+	<item id="450201"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚点了一份<font color='#EAD993'>【{1}】</font>]]></item>
+	
+	<item id="450301">︻{0}︼</item>
+	<item id="450302">恢复精力</item>
+	
+	<item id="450401">银币：</item>
+	<item id="450402">金币：</item>
+	<item id="450403">银币刷新</item>
+	<item id="450404">金币刷新</item>
+	
+	<item id="450501">大[br]厅</item>
+	<item id="450502">包[br]间</item>
+	<item id="450503">招[br]募</item>
+	<item id="450504"></item>
+	<item id="450505">寄[br]存</item>
+	<item id="450506">召回</item>
+	<item id="450507">您当前可以召回的武将有{0}</item>
+	<item id="450508">当前没有武将可召回</item>
+	<item id="450509">--武将召回--</item>
+	<item id="450510">你已召回{0}</item>
+	<item id="450511">洗[br]髓</item>
+	<item id="450512">炼[br]骨</item>
+	<item id="450513">选定左右武将，对其培养属性进行互换</item>
+	<item id="450514">互换</item>
+	<item id="450515">5</item>
+	<item id="450516"><![CDATA[<font color='#FF0000'>请在左右两边放入两个需要交换属性的武将</font>]]></item>
+	<item id="450517"><![CDATA[<font color='#FF0000'>请放入两个不同武将</font>]]></item>
+	<item id="450518"><![CDATA[<font color='#CBCC66'>精炼：</font><font color='#FFFFCC'>{0}阶{1}星</font>]]></item>
+	<item id="450519"><![CDATA[<font color='#CBCC66'>镶嵌：</font><font color='#FFFFCC'>攻击+{0}</font>]]></item>
+	<item id="450520">启灵：</item>
+	<item id="450521"><![CDATA[<font color='#CBCC66'>启灵：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	<item id="450522">选定左右武将，对其武器三项属性进行互换</item>
+	<item id="450523"><![CDATA[<font color='#CBCC66' >统：</font>+{0}]]></item>
+	<item id="450524"><![CDATA[<font color='#CBCC66' >勇：</font>+{0}]]></item>
+	<item id="450525"><![CDATA[<font color='#CBCC66' >智：</font>+{0}]]></item>
+	<item id="450526">您确定花费{0}金币进行洗髓？</item>
+	<item id="450527">您确定花费{0}金币进行炼骨？</item>
+	<item id="450528">{0}阶•{1}</item>
+	
+	<!--农庄场景-->
+	<item id="460101">农庄</item>
+	
+	<item id="460201">剩余：</item>
+	<item id="460202">产量：</item>
+	<item id="460203">已成熟</item>
+	<item id="460204">金币：</item>
+	<item id="460205">10</item>
+	<item id="460206">放弃</item>
+	<item id="460207">种植</item>
+	<item id="460208">恢复</item>
+	<item id="460209"><![CDATA[<font color='#A5CD61' size='18'><b>{0}</b></font><font color='#FFFFCC' size='18'>（{1}）分钟</font>[br]<font color='#FFFFCC'>{2}</font>[br]<font color='#A69551'>消耗</font>[br]<font color='#FFFFCC'>    银币 {3}</font>[br]<font color='#A69551'>产出</font>[br]<font color='#FFFFCC'>    {4} [br]    数量 {5}</font>[br]{6}<font color='#A69551'>简介</font>[br]<font color='#FFFFCC'>    {7}</font>]]></item>
+	<item id="460210">请先选择一种种子！</item>
+	<item id="460211"><![CDATA[获得 {0}*{1}[br]]]></item>
+	<item id="460212">已成熟</item>
+	<item id="460213"><![CDATA[<font color='#A5CD61'>{0}</font>]]></item>
+	<item id="460214"><![CDATA[<font color='#FFA43E'>{0}</font>]]></item>
+	<item id="460215"><![CDATA[<font color='#990000'>需{0}级</font>]]></item>
+	<item id="460216">满仓</item>
+	<item id="460217">满仓</item>
+	<item id="460218">需{0}级</item>
+	<item id="460219">获得{0}{1}</item>
+	<item id="460220"><![CDATA[<font color='#990000'>【{0}】作物减产，</font>]]></item>
+	<item id="460221"><![CDATA[<font color='#009900'>【{0}】作物丰收，</font>]]></item>
+	<item id="460222"></item>
+	<item id="460223"><![CDATA[<font color='#62AFD9'>[{0}]等级提升至{1}</font>]]></item>
+	<item id="460224">、{0}{1}</item>
+	<item id="460231"><![CDATA[<font color='#A69551'>药材</font>[br]<font color='#FFFFCC'>    {0} [br]    数量 {1}</font>[br]]]></item>
+	<item id="460232">加星</item>
+	<item id="460233">更换</item>
+	<item id="460234">单击可收获</item>
+	<item id="460235"><![CDATA[需要等级：<font color='#FFFFCC'>{0}</font>]]></item>
+	<item id="460236"><![CDATA[需要银币：<font color='#FFFFCC'>{0}</font>]]></item>
+	<item id="460237"><![CDATA[产品：<font color='#99FF00'>{0}({1}-{2})</font>]]></item>
+	<item id="460238"><![CDATA[副产品：<font color='#99FF00'>{0}({1}-{2})</font>]]></item>
+	<item id="460239"><![CDATA[成熟时间：<font color='#99FF00'>{0}分钟</font>]]></item>
+	<item id="460240">更换作物</item>
+	<item id="460241"><![CDATA[<font color='#EE1D1D'>作物相同，不需要更换！</font>]]></item>
+	<item id="460242"><![CDATA[<font color='#ee1d1d'>需要等级：{0}</font>]]></item>
+	<item id="460243">你确认要放弃当前种植的作物吗？</item>
+	<item id="460244">你确认要放弃当前养殖的家畜吗？</item>
+	<item id="460245">更换幼崽</item>
+	<item id="460246">背包已满，请清理背包！</item>
+	<item id="460247">更换矿产</item>
+	<item id="460248">选择矿产</item>
+	<item id="460249">选择马崽</item>
+	<item id="460250">你确认要放弃当前采集的矿物吗？</item>
+	<item id="460251">战斗</item>
+
+
+	<item id="460301">是否花费{0}金币开垦这块地？</item>
+	<item id="460302">你确定要放弃种植{0}吗？</item>
+	<item id="460303">是否花费{0}银币开垦这块地？</item>
+	<item id="460304">精力不够！开垦所需精力{0}。</item>
+	<item id="460305">等级不够！开垦所需等级{0}。</item>
+	<item id="460306">VIP等级不够！开垦所需VIP等级{0}。</item>
+	<item id="460307">银币不够！开垦所需银币{0}。</item>
+	<item id="460308">金币不够！开垦所需金币{0}。</item>
+	<item id="460309">恭喜你花费{0}银币获得一块新地</item>
+	<item id="460310">恭喜你花费{0}金币获得一块新地</item>
+
+	<item id="460401">包裹</item>
+	<item id="460402">包裹1</item>
+	<item id="460403">包裹2</item>
+	<item id="460404">包裹3</item>
+	<item id="460405">包裹4</item>
+	<item id="460421"><![CDATA[<font color='#62AFD9' size='18'><b>{0}</b></font>[br]<font color='#A69551' size='16'>精力：</font><font color='#FFFFFF' size='16'>+{1}</font>[br]<font color='#FFFFFF' size='16'>单击使用</font>]]></item>
+
+	<item id="460501"><![CDATA[<font color='#99FF00' size='18'><b>【{0}】</b></font><font color='#8D9E3D' size='16'>（建筑lv{2}激活）</font>[br] {1}]]></item>
+	<item id="460502"><![CDATA[<font size='18'><b>{0}</b></font>(lv.{1})]]></item>
+	<item id="460503">{0}（{1}）</item>
+	<item id="460504">lv.{0}</item>
+	<item id="460505">请选择建筑</item>
+	<item id="460506"><![CDATA[<font color='#6F7744' size='18'><b>【{0}】</b></font><font color='#6F7744' size='16'>（建筑lv{2}激活）[br] {1}</font>]]></item>
+	<item id="460507">-建筑科技-</item>
+	<item id="460508">升级</item>
+	<item id="460509">建筑已经满级！</item>
+	
+	<item id="460601">农屋</item>
+	<item id="460602">强化</item>
+	<item id="460603">恢复</item>
+	<item id="460604">精力旺盛</item>
+	<item id="460605">精力一般</item>
+	<item id="460606">轻度疲劳</item>
+	<item id="460607">筋疲力尽</item>
+	<item id="460608"><![CDATA[当前状态：<font color='#{0}'>{1}</font>]]></item>
+	<item id="460609"><![CDATA[<font color='#FFFFCC'><b>小提示：</b></font>[br]1.农夫精力降为0时将无法耕作，需休息后才能进行耕作。[br]2.强化后的农夫，其精力消耗更慢]]></item>
+	<item id="460610">你确定要花费5金币恢复农夫的状态吗？</item>
+	<item id="460611">你确定要花费{0}金币强化农夫吗？</item>
+	<item id="460612">你的农夫已经顶级了，不需要强化！</item>
+	<item id="460613">强化可提高产量和满仓上限</item>
+	<item id="460614">Lv.{0}</item>
+	<item id="460615">加星增产：{0}%→{1}%</item>
+	<item id="460616">已强化至最高品质[br]效果总共提高{0}%</item>
+	<item id="460617">此田块增产5小时</item>
+	<item id="460618">农牧场快速增产5小时[br]每天可使用一次</item>
+
+	<item id="460701">460702-460711</item>
+	<item id="460702">将军，三国第一美女可不是貂蝉，是俺老婆哦。</item>
+	<item id="460703">将军，今天你团购了没有？</item>
+	<item id="460704">将军，身体是打仗的本钱，粮食是身体的本源。</item>
+	<item id="460705">将军，等我种好了地，跟你一块打仗去。</item>
+	<item id="460706">将军，猪最近心情好，长得可膘了，你呢？</item>
+	<item id="460707">将军，我有个姓诸葛的表哥也在南阳种地。</item>
+	<item id="460708">将军，我只养过鸡，可没养过战斗鸡。</item>
+	<item id="460709">将军，你踩到牛粪了。。。</item>
+	<item id="460710">将军，猪最近在发情，要当心。</item>
+	<item id="460711">将军，要想富，少生孩子多养猪。</item>
+
+	<item id="460751">460752-460755</item>
+	<item id="460752">将军，我已经筋疲力尽了，请赏我点水喝。|赏水</item>
+	<item id="460753">将军，我现在浑身乏力，需要喝点酒提神。|赏酒</item>
+	<item id="460754">将军，我已经筋疲力尽了，让我喝口茶吧。|赏茶</item>
+	<item id="460755">将军，我实在没有力气再干了，需要吃些东西。|赏饭</item>
+
+	<item id="460801">食</item>
+	<item id="460802">药</item>
+	<item id="460803"></item>
+	
+	<item id="460811"><![CDATA[需要银币：<font color='#FFFFCC'>{0}</font>]]></item>
+	<item id="460812"><![CDATA[需要金币：<font color='#DEBB46'>{0}</font>]]></item>
+	<item id="460813">喂养</item>
+	<item id="460814">放弃</item>
+	<item id="460815">更换马崽</item>
+	<item id="460816">喂养</item>
+	<item id="460817">返回</item>
+	<item id="460818"><![CDATA[战斗力：<font color='#DEBB46'>{0}</font>]]></item>
+	<item id="460819"><![CDATA[可喂养：<font color='#DEBB46'>{0}/{1}</font>次(每半小时+1)]]></item>
+	<item id="460820">饥饿度:{0}(无需喂养)</item>
+	<item id="460821"><![CDATA[已经喂养了<font color='#DEBB46'>{0}/{3}</font>次，已经赛马<font color='#DEBB46'>{1}/{2}</font>次]]></item>
+	<item id="460822">更换马崽要先放弃马栏中的马崽，是否放弃？</item>
+	<item id="460823"><![CDATA[{0}<font color='#DEBB46'>({1})</font>]]></item>
+	<item id="460824">免费</item>
+	<item id="460825">{0}银币</item>
+	<item id="460826">{0}金币</item>
+	<item id="460827">你确定花费{0}金币喂养吗？</item>
+	<item id="460828">还需再喂养{0}次</item>
+	<item id="460829">你确定花费{0}开垦这块地吗？</item>
+	<item id="460830">是否确定要放弃喂养坐骑？</item>
+	<item id="460831">出栏</item>
+	<item id="460832">选配坐骑套装提高战斗力</item>
+	<item id="460833">-赛马获得的战斗力-</item>
+	<item id="460834">-喂养获得的战斗力-</item>
+	<item id="460835">升级套装</item>
+	<item id="460836">战斗力：{0}({1} + {2} + {3} + {4})</item>
+	<item id="460837">战斗力：+ {0}</item>
+	<item id="460838"><![CDATA[<font color='#8D9E3D'>战马：</font><font size='18'>{0}</font>]]></item>
+	<item id="460839">升级</item>
+	<item id="460840">单击查看</item>
+	<item id="460841">强化</item>
+	<item id="460842">养马师</item>
+	<item id="460843">lv.{0}</item>
+	<item id="460844">{0}/{1}</item>
+	<item id="460845">1.养马可增加养马师的经验[br]2.养马师等级对养马、赛马都有加成</item>
+	<item id="460846">养马可获得{0}%经验</item>
+	<item id="460847">养马需要花费{0}金币，确定养马吗？</item>
+	<item id="460848">升级坐骑套装需要花费{0}金币，确定升级吗？</item>
+	<item id="460849">强化可使养马师升级更快，需要花费{0}金币，确定强化吗？</item>
+	<item id="460850">喂养9次可参加1次赛马</item>
+	<item id="460851">选择饲料</item>
+	<item id="460852">{1}：战斗力 +{0}</item>
+	<item id="460853">战马出栏后将放到背包中，不能升级坐骑套装和参加赛马，是否要出栏？</item>
+	<item id="460854">战斗力：{0}</item>
+	<item id="460855">养马师获得{0}经验</item>
+	<item id="460856">战斗力 +{0}</item>
+	<item id="460857"><![CDATA[赛马数：<font color='#DEBB46'>{0}</font>]]></item>
+	<item id="460858"><![CDATA[<font color='#FFFFDD'>养马师获得{0}经验</font>]]></item>
+	<item id="460859">{1}：战斗力 +{0} 可获得养马师经验</item>
+	<item id="460860">根据科技，农夫等级、星级不同，每日可获得如下资源：[br]</item>
+	<item id="460861">{0}：{1} - {2}[br]</item>
+	<item id="460862">介绍</item>
+	
+	<item id="460900">lv.{0}</item>
+	<item id="460901">矿田：{0}块</item>
+	<item id="460902">气力值：</item>
+	<item id="460903">x{0}</item>
+	<item id="460904">等  级：Lv.{0}</item>
+	<item id="460905"><![CDATA[农庄主：<font color='#{0}'>{1}</font>]]></item>
+	<item id="460906">汉[br]室</item>
+	<item id="460907">诸[br]侯</item>
+	<item id="460908">返回农庄>></item>
+	<item id="460909">将军，多去己方农庄逛一逛，会有意想不到的收获哦！</item>
+	<item id="460910">据说敌方农庄又出事了，将军不妨前往一探究竟。</item>
+	<item id="460911"><![CDATA[<color=#{0}>{1}</color>]]></item>
+	<item id="460912"><![CDATA[<link=#FF0000>（复仇）</link>]]></item>
+	<item id="460913">收获：{0}x{1}</item>
+	<item id="460914">{0}/50</item>
+	<item id="460915">互访</item>
+	<item id="460916">农庄记事</item>
+	<item id="460917">农庄最近无人访问</item>
+	<item id="460918"><![CDATA[<color=#f1ae15>•</color>]]></item>	
+	<item id="460919">每12分钟恢复1点气力值[br]处理事件需消耗10点气力值</item>
+	<item id="460920">返回农庄</item>
+	
+	<!--生产-->
+	<item id="470100">生产</item>
+	<!--烹饪面板-->
+	<item id="470101">烹[br]饪</item>
+	<item id="470102">烹饪</item>
+	<item id="470103"><![CDATA[<font color='#A69551'>精力+</font><font color='#62AFD9'>{0}</font>]]></item>
+	<item id="470104">烹饪产物</item>
+	<item id="470105">所需材料</item>
+	<item id="470106">加速</item>
+	<item id="470107">烹饪CD：{0}</item>
+	<item id="470108"><![CDATA[<font color='#990000'>烹饪CD：{0}</font>]]></item>
+	<item id="470109">你确定花费{0}金币清除CD吗？</item>
+	<item id="470110">升级厨师</item>
+	<item id="470111">研发秘制菜谱</item>
+	<item id="470112"><![CDATA[<font color='#CBCC66' size='16'>厨师：</font>{0}]]></item>
+	<item id="470113"><![CDATA[<font color='#CBCC66' size='16'>等级：</font>{0}]]></item>
+	<item id="470114">{0}</item>
+	<item id="470115">{0}</item>
+	<item id="470116">- 选择烹饪菜肴 -</item>
+	<item id="470117">烹饪</item>
+	<item id="470118">所需原料↓</item>
+	<item id="470119">刷新菜谱</item>
+	<item id="470120">金币刷新</item>
+	<item id="470121"><![CDATA[将军等级越高，小女会做的菜越多哦~[br]小女今天还可烹饪<font color='#f5d300' size='18'><b>{0}</b></font>次]]></item>
+	<item id="470122">是否烹饪？</item>
+	<item id="470123"><![CDATA[<font color='#FFFFCC' size='18'><b>{0}</b></font>[br]<font color='#CBCC66'>拥有数目：</font><font color='#99FF00'>{1}</font>]]></item>
+	<item id="470124"><![CDATA[<font color='#FFFFCC' size='18'><b>{0}（{1}精力）</b></font>]]></item>
+	<item id="470125"><![CDATA[<font color='#62AFD9' size='18'><b>秘制菜谱</b></font>[br]未研发]]></item>
+	<item id="470126"><![CDATA[<font color='#62AFD9'>{0}</font>[br]<font color='#A69551'>精力+ </font>{1}]]></item>
+	<item id="470127"><![CDATA[<font color='#FF0000' size='16'>{0}</font>]]></item>
+	<item id="470128"><![CDATA[<font color='#99FF00' size='16'>研发成功</font>]]></item>
+	<item id="470129"><![CDATA[<font color='#FF0000' size='16'>研发失败</font>]]></item>
+	<item id="470130">▪ 你还有{0}次免费研发机会</item>
+	<item id="470131">▪ 今日免费研发次数已用完</item>
+	<item id="470132">今日还能烹饪{0}次</item>
+	<item id="470133">是否花费{0}金币刷新菜谱</item>
+	<item id="470134">{0}（{1}精力）</item>
+  //Modify by xiepeifu
+  <item id="470135">+{0} 精力</item>
+	<!--炼药面板-->
+	<item id="470201">炼[br]药</item>
+	<item id="470202">炼药配方列表</item>
+	<item id="470203">所需材料</item>
+	<item id="470204">小火炼制</item>
+	<item id="470205">文火炼制</item>
+	<item id="470206">中火炼制</item>
+	<item id="470207">武火炼制</item>
+	<item id="470208">炼制</item>
+	<item id="470209"><![CDATA[<font color='#990000'>炼药冷却：{0}</font>]]></item>
+	<item id="470210"><![CDATA[<font color='#FDFFCD'>炼药冷却：{0}</font>]]></item>
+	<item id="470211">你确定花费{0}金币清除CD吗？</item>
+	<item id="470212">血量+{0}</item>
+	<item id="470213"><![CDATA[<font color='#990000'>需要：{0}</font>]]></item>
+	<item id="470214"><![CDATA[<font color='#FDFFCD'>需要：{0}</font>]]></item>
+	<item id="470215"><![CDATA[<font color='#FFFFFF'>{0}</font>刚刚炼成了<font color='#E9D892'>{1}</font>[br]]]></item>
+	<item id="470216">增加炼药成功率</item>
+	<item id="470217">增加炼药暴击率</item>
+	<item id="470218">概率使消耗减半</item>
+	<item id="470219">概率减少炼药CD</item>
+	<item id="470220">{0}，持续{1}</item>
+	<item id="470221">名称：</item>
+	<item id="470222">效果：</item>
+	<item id="470223"><![CDATA[<font color='#FDFFCD'>已获得</font>]]></item>
+	<item id="470224"><![CDATA[<font color='#990000'>未获得</font>]]></item>
+	<item id="470225">快速炼制</item>
+	<item id="470226">炼药成功，获得{0}×{1}</item>
+	<item id="470227">每次完成5次炼制，不足5次无法使用</item>
+	<item id="470228">（国战）</item>
+	
+	<!--自动刷副本面板-->
+	<item id="480101">清剿</item>
+	<item id="480102">清剿设置</item>
+	
+	<item id="480201"><![CDATA[<font color='#CBCD68'>小提示：</font>[br]  1.清剿前请整理背包，预留至少<font color='#FFFFCC'>6</font>格。[br]  2.取消清剿仍将获得此前的经验和掉落。]]></item>
+	<item id="480202">清理背包</item>
+	<item id="480203">开始清剿</item>
+	<item id="480204">Lv.{0}</item>
+	<item id="480205">清剿{0}次，消耗{1}精力</item>
+	
+	<item id="480301">副本统计</item>
+	<item id="480302">获得经验：</item>
+	<item id="480303">获得物品：</item>
+	<item id="480304">取消清剿</item>
+	<item id="480305">加速清剿</item>
+	<item id="480306"><![CDATA[<font color='#FFFFFF'>【{0}】</font> +{1}]]></item>
+	<item id="480307"><![CDATA[剩余：<font color='#FF0000'>{0}</font>]]></item>
+	<item id="480308">完成</item>
+	
+	<item id="480401">获得经验：</item>
+	<item id="480402">获得物品：</item>
+	<item id="480403"><![CDATA[<font color='#CBCC66'>【{0}】</font> +{1}]]></item>
+	<item id="480404">经过殊死搏斗，我方胜利！</item>
+	<item id="480405"><![CDATA[<font color='#FF0000'>战斗失败，挂机结束！</font>]]></item>
+	<item id="480406">第{0}轮清剿，第{1}场战斗</item>
+	<item id="480407">我方遇到了{0}</item>
+	<item id="480408">{0}x{1}</item>
+	<item id="480409">，</item>
+	<item id="480410">金币 +{0}</item>
+	<item id="480411">银币 +{0}</item>
+	<item id="480412">{0} x{1}</item>
+	<item id="480413">[br]</item>
+	<item id="480414">银币</item>
+	<item id="480415">灵石</item>
+	<item id="480416"><![CDATA[<font color='#FF0000'>请选择要卖出的物品</font>]]></item>
+	
+	<!--  修炼场场景 -->
+	<item id="490101">修炼场</item>
+	<item id="490102">快速加入</item>
+	<item id="490103">队伍列表</item>
+	<item id="490104">创建队伍</item>
+	<item id="490106">lv.{0}</item>
+	<item id="490107"><![CDATA[<font color='#990000'>请选择要升级的技能！</font>]]></item>
+	<item id="490108"><![CDATA[训练已经开始，扣除精力值{0}]]></item>
+	<item id="490109"><![CDATA[升级速度：{0}/分钟]]></item>
+	<item id="490110"><![CDATA[队伍加成：{0}%]]></item>
+	<item id="490111"><![CDATA[你选择的技能和该队伍训练的技能不一致，是否自动切换？]]></item>
+	<item id="490112"><![CDATA[剩余时间：{0}]]></item>
+	<item id="490113"><![CDATA[<font color='#ffff33'>经验 +{0}</font>]]></item>
+	<item id="490114"><![CDATA[自动选择倒计时]]></item>
+	<item id="490115"><![CDATA[加入失败，没找到修炼同一技能的队伍！]]></item>
+	<item id="490116"><![CDATA[队伍：{0}/{1}]]></item>
+	<item id="490117"><![CDATA[<font color='#A69551' size='18'>{0}</font><font color='#FFFFCC'>（lv{1}）</font>[br]<font color='#FFFFCC'>{2}</font>]]></item>
+	<item id="490118"><![CDATA[<font color='#A5CD61'>修炼中</font>]]></item>
+	<item id="490119">是否要加入队伍</item>
+	<item id="490120">要先离开队伍才能退出修炼场，是否要离开？</item>
+	<item id="490121">技能[{0}]经验 +{1}</item>
+	<item id="490122">科技[{0}]经验 +{1}</item>
+	<item id="490123">你没有和他相同的技能</item>
+	<item id="490124"><![CDATA[<font color='#990000'>技能等级不能超过武将的等级！</font>]]></item>
+	<item id="490125"><![CDATA[额外奖励 <font color='#99FF00'>{0}</font>]]></item>
+	<item id="490126"><![CDATA[<font color='#EE1D1D'>+{0} 暴击！</font>]]></item>
+	<item id="490127">修炼战术心法扣除{0}精力</item>
+	<item id="490128">离开</item>
+	<item id="490129">加速修炼</item>
+	<item id="490130">正常速度</item>
+	<item id="490131">快速修炼：增加{1}%经验，每分钟消耗{0}银币</item>
+	<item id="490132">急速修炼：增加{1}%经验，每分钟消耗{0}银币</item>
+	<item id="490133">飞速修炼：增加{1}%经验，每分钟消耗{0}金币，同时开放自动吃菜功能</item>
+	<item id="490134">使用飞速修炼，每分钟消耗{0}金币。[br]同时开放自动吃菜功能，是否加速？</item>
+	<item id="490135">修炼科技</item>
+    <item id="490136">开</item>
+	<item id="490137">关</item>	 
+	<item id="490138">吃菜维持高昂精力状态</item>
+	<item id="490139">倒计时结束后不再自动吃菜</item>
+	<item id="490140">经验值：{0}/{1}</item>	 
+	<item id="490141">{0}经验增加{1}</item>	 
+	<item id="490142">今日领取{0}/{1}次</item>	 
+	<item id="490143">修炼完成度 {0}/{1}</item>	 
+	<item id="490144">提取的经验将增加当前正在修炼的心法经验，是否提取？</item>
+	<item id="490145">微臣已经完成修炼，[br]请将军及时提取经验！</item>	 
+	
+	<item id="490201">队伍列表</item>
+	<item id="490202">技能</item>
+	<item id="490203">队长</item>
+	<item id="490204">人数</item>
+	<item id="490205">加入</item>
+	<item id="490206">请先退出队伍再加入！</item>
+	<item id="490207">训练已经开始，现在离开会中断训练，是否要离开？</item>
+
+	<item id="490301">技能选择</item>
+	<item id="490302">请选择要修炼的技能</item>
+	<item id="490303">主动技能</item>
+	<item id="490304">被动技能</item>
+	<item id="490305">取消</item>
+	<item id="490306">退出</item>
+
+	<item id="490401">开始修炼</item>
+	<item id="490402">离开队伍</item>
+	<item id="490403">队伍加成：{0}%</item>
+
+	<item id="490501">修炼统计</item>
+	<item id="490502">修炼时间：</item>
+	<item id="490503">修炼经验：</item>
+	<item id="490504">修炼速度：</item>
+	<item id="490505">确定</item>
+	<item id="490506">{0}分钟</item>
+	<item id="490507">{0}经验/分钟</item>
+	<item id="490508">lv{0} ---> lv{1}</item>
+	<item id="490509">{0}秒</item>
+
+	<item id="490601"><![CDATA[点击卡牌获得<font color='#FFCC00'>{0}</font>点技能经验]]></item>
+	<item id="490602"><![CDATA[点击卡牌获得<font color='#FFCC00'>{0}</font>点[{1}]科技经验]]></item>
+	
+	
+	<!--竞技场场景-->
+	<item id="500101">离开</item>
+	<item id="500102">人数不足，竞技取消！</item>
+	<item id="500103"><![CDATA[<font color='#FE5936'>{0}</font> 战胜了 <font color='#55B6F0'>{1}</font>]]></item>
+	<item id="500104"><![CDATA[<font color='#55B6F0'>{0}</font> 战胜了 <font color='#FE5936'>{1}</font>]]></item>
+	<item id="500105">人数：{0}/{1}</item>
+	<item id="500106">开启特效</item>
+	<item id="500107">关闭特效</item>
+	<item id="500108">Lv{0}</item>
+	
+	<item id="500201"><![CDATA[<b>竞技将在<font color='#FF0000'>{0}</font>后开始</b>[br]<font color='#55B6F0' size='18'>竞技开始后，点击其他玩家可发起挑战</font>]]></item>
+	<item id="500203"><![CDATA[竞技将在<b><font color='#FF0000'>{0}</font></b>后结束]]></item>
+	
+	<item id="500301">Lv{0}</item>
+	<item id="500302">{0}，已死亡！</item>
+	
+	<item id="500310">本场战报</item>
+	<item id="500311">竞技积分：</item>
+	<item id="500312"><![CDATA[次数：{0}/{1}(每4小时+1)]]></item>
+	<item id="500313">{0}/{1}</item>
+	<item id="500314">积分满可以领取奖励</item>
+	
+	<item id="500401">Lv.{0}</item>
+	<item id="500402"><![CDATA[<font color='#999999'>杀敌：</font>{0}]]></item>
+	<item id="500403">战斗时间 {0}</item>
+	<item id="500404">确定</item>
+	<item id="500405"><![CDATA[你获得了{0}]]></item>
+	<item id="500406"><![CDATA[你杀敌 <font size='17'><b>{0}</b></font> 人，获得了{1}]]></item>
+	<item id="500407">{0}挑战了你！</item>
+	<item id="500408">你打败了{0}！</item>
+	<item id="500409">你已经阵亡了！</item>
+	<item id="500410">{0}连胜</item>
+	<item id="500411">Lv. {0}</item>
+	<item id="500412">{0}</item>
+	<item id="500413">（查看）</item>
+	<item id="500414">当前人数：{0} 人</item>
+	<item id="500415">点此收缩</item>
+	<item id="500416"></item>
+	<item id="500417"><![CDATA[当前血量：[br]<font color='#99FF00'>{0}/{1}</font>]]></item>
+	<item id="500418"><![CDATA[当前血量：<font color='#99FF00'>{0}/{1}</font>]]></item>
+	<item id="500419"><![CDATA[<font color='#99FF00'>(双倍)</font>，{0} x{1}]]></item>
+	<item id="500420"><![CDATA[<font size='17'>{0}<b>x{1}</b></font>]]></item>
+	<item id="500421"><![CDATA[<font size='17'>{0}<b>x{1}</b></font><font color='#99FF00'>(双倍)</font>]]></item>
+	<item id="500422"><![CDATA[展[br]开[br]面[br]板]]></item>
+	
+	<!--官职系统-->
+	<item id="510101">官职</item>
+	<item id="510102">升   官</item>
+	<item id="510103">领取俸禄</item>
+	<item id="510104">下次升官：</item>
+	<item id="510105">所需威望：</item>
+	<item id="510106">金币俸禄：</item>
+	<item id="510107">开放武将：{0}</item>
+	<item id="510108">当前官职：</item>
+	<item id="510109">当前威望：</item>
+	<item id="510110">金币俸禄：</item>
+	<item id="510111">恭贺高升！您获得如下奖励：</item>
+	<item id="510112">名将年表</item>
+	<item id="510113">距离下次升官还需要{0}威望</item>
+	<item id="510114">将军威望甚高，再提升少许等级，就可提升官职</item>
+	<item id="510115">将军威望甚高，可以升官！</item>
+	<item id="510116">当前等级：</item>
+	<item id="510117">所需等级：</item>
+	<item id="510118">当前排名：</item>
+	<item id="510119">所需排名：</item>
+	<item id="510120"><![CDATA[<font color='#FF0000'>{0}</font>]]></item>
+	<item id="510121"><![CDATA[<font color='#FDFFCB'>{0}</font>]]></item>
+	<item id="510122"><![CDATA[{0}[br]<font color='#CBCC66'>{1}</font>[br]能征善战，谋勇双全[br]特敕封<font color='#FFFF00'>{2}</font>]]></item>
+	<item id="510123"><![CDATA[{0}[br]{1}<font color='#CBCC66'>{2}</font>[br]能征善战，谋勇双全[br]特敕封<font color='#FFFF00'>{3}</font>]]></item>
+	<item id="510124"><![CDATA[{0}[br]{1}<font color='#CBCC66'>{2}</font>[br]文韬武略，军绩斐然[br]特加封<font color='#FFFF00'>{3}</font>]]></item>
+	<item id="510125"><![CDATA[{0}[br]{1}<font color='#CBCC66'>{2}</font>[br]助国定边，三军勇冠[br]特加封<font color='#FFFF00'>{3}</font>]]></item>
+	<item id="510126"><![CDATA[{0}[br]{1}<font color='#CBCC66'>{2}</font>[br]文韬武圣，威服四海[br]特加封<font color='#FFFF00'>{3}</font>]]></item>
+	<item id="510127"><![CDATA[{0}[br]{1}<font color='#CBCC66'>{2}</font>[br]能征善战，威服四海[br]今众望所归，特封<font color='#FFFF00'>{3}</font>]]></item>
+	<item id="510128">{0}年{1}月 {2}</item>
+	<item id="510129"><![CDATA[{0} <font color='#CBCC66'>（{1}）</font>]]></item>
+	<item id="510130">[br]{0}*{1}</item>
+	<item id="510131">你领取了{0}银币</item>
+	<item id="510132">你领取了{0}金币</item>
+	<item id="510135"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="510136"><![CDATA[<font color='#FDFFCB'>、</font>]]></item>
+	<item id="510137"><![CDATA[<font color='#FDFFCB'> 等</font>]]></item>
+	<item id="510138"><![CDATA[<font color='#FDFFCB'>无</font>]]></item>
+	<item id="510140">将军您已升到最高爵位！</item>
+	<item id="510141">每天21:00点分配爵位</item>
+	<item id="510142">银币俸禄：</item>
+	<item id="510143">每天21:00威望榜前50可分配爵位[br]若当时已获得爵位官职[br]则按比例扣除超出30万的威望[br]先扣除威望，后分配爵位</item>
+	<item id="510144">相关说明</item>
+	<item id="510145"><![CDATA[主将达{0}级且[br]威望达到{1}[br]敕封为<font color='#f5d300'>{2}</font>可领奖]]></item>
+	<item id="510146"><![CDATA[PVP攻防效果<font color='#FFFFCC'>+{0}%</font>]]></item>
+	<item id="510147">与其他玩家对战时[br]攻击伤害增加{0}%[br]所受伤害减少{1}%</item>
+	<item id="510148">恭喜将军已达到最高爵位</item>	
+	<item id="510149"><![CDATA[<font color='#FF0000'>尚未达到领奖条件</font>]]></item>	
+	<item id="510150"><![CDATA[<font color='#C9CC65'>官职类型：</font>  普通官职]]></item>	
+	<item id="510151"><![CDATA[<font color='#C9CC65'>官职类型：</font>  爵位官职]]></item>	
+	<item id="510152"><![CDATA[<font color='#C9CC65'>官职类型：</font>  无]]></item>	
+	
+	<!--排行榜-->
+	<item id="510200">排行榜</item>
+	<!--威望排名-->
+	<item id="510201">威[br]望[br]榜</item>
+	<item id="510202">威望排名</item>
+	<item id="510203">排名</item>
+	<item id="510204">角色</item>
+	<item id="510205">等级</item>
+	<item id="510206">官职</item>
+	<item id="510207">威望</item>
+	<item id="510208">全国</item>
+	<item id="510209">汉室</item>
+	<item id="510210">诸侯</item>
+	<!--等级排名-->
+	<item id="510220">等[br]级[br]榜</item>
+	<item id="510221">阵营</item>
+	<item id="510222">关注</item>
+	<item id="510223"><![CDATA[<font color='#d7e297'>已关注</font>]]></item>
+	<item id="510224"><![CDATA[<font color='#c8e13c'>关  注</font>]]></item>
+	<item id="510225"><![CDATA[<font color='#c42d2d'>未开放</font>]]></item>
+	
+	<!--财富排名（活动）-->
+	<item id="510230">-富豪榜-</item>
+	<item id="510231">今日银币收入:{0}(每日24:00重置)</item>
+	<item id="510232">当前排名:{0}</item>
+	<item id="510233">排名奖励:{0} + 10%的收入({1})</item>
+	<item id="510234">快速获得银币的途径</item>
+	<item id="510235">祭祀神灵</item>
+	<item id="510236">商会贸易</item>
+	<item id="510237">集市淘宝</item>
+	<item id="510238"><![CDATA[<u>立即前往>></u>]]></item>
+	<item id="510239">通关襄阳-太守府开启</item>
+	<item id="510240">下次领奖还有:{0}</item>
+	<item id="510241">领取奖励</item>
+	<item id="510242">只差{0}银币就能超越【{1}】,上升一位了!</item>
+	<item id="510243">通关仓亭-采粮场开启</item>
+	<item id="510244">快速获得银币的途径</item>
+	<item id="510245">获得{0}银币</item>
+	<item id="510246">排名</item>
+	<item id="510247">角色</item>
+	<item id="510248">活动倒计时:{0}</item>
+	<item id="510249">活动期间银矿收益额外增加20%！</item>
+	<item id="510250">{0}可领奖：{1}+{2}</item>
+	<item id="510251">奖励规则:排名奖励+10%的收入</item>
+	<item id="510252">获取</item>
+	<item id="510253">结算中</item>
+	<item id="510254">已领取</item>
+	<item id="510255">提示:{0}后收入的银币不计入富豪榜!</item>
+	<item id="510256">小提示：活动当天祭祀银币最多消耗{0}金币</item>
+	
+	<!--宝石排名（活动）-->
+	<item id="510300">-宝石榜-</item>
+	<item id="510301">今日宝石积分:{0}(每日24:00重置)</item>
+	<item id="510302">活动说明：</item>
+	<item id="510303">排名奖励:{0} + 10%的收入({1})</item>
+	<item id="510304">快速获得宝石的途径</item>
+	<item id="510305">主线任务奖励</item>
+	<item id="510306">系统特别补贴</item>
+	<item id="510307">NPC购买</item>
+	<item id="510308"><![CDATA[<u>立即前往>></u>]]></item>
+	<item id="510309">通关襄阳-太守府开启</item>
+	<item id="510310">下次领奖还有:{0}</item>
+	<item id="510311">领取奖励</item>
+	<item id="510312">只差{0}宝石积分就能超越【{1}】,上升一位了!</item>
+	<item id="510313">通关仓亭-采粮场开启</item>
+	<item id="510314">活动期间以下方式中获得的宝石不计算排名！</item>
+	<item id="510315">获得{0}宝石</item>
+	<item id="510316">排名</item>
+	<item id="510317">角色</item>
+	<item id="510318">活动倒计时:{0}</item>
+	<item id="510320">{0}可领宝石:{1}+{2}</item>
+	<item id="510322">获取</item>
+	<item id="510323">结算中</item>
+	<item id="510324">已领取</item>
+	<item id="510325">提示:{0}后收入的宝石不计入宝石榜!</item>
+	<item id="510326">所获得的宝石会根据等级折算[br]为积分，积分越高奖励越多</item>
+	<item id="510327">升级奖励</item>
+	<item id="510328">点券商城兑换</item>
+	<item id="510329"></item>
+	<item id="510330">小提示：活动当天祭祀宝石最多消耗{0}金币</item>
+	
+	<!--灵石排行榜-->
+	<item id="510400">灵石排行榜</item>
+	<item id="510401">以下方式获得灵石计算奖励</item>
+	<item id="510402">排名奖励：{0}灵石</item>
+	<item id="510403">提成奖励：{0}灵石</item>
+	<item id="510404">第{0}次奖励</item>
+	<item id="510405"><![CDATA[<font color='#ff0000'>目前不可领奖</font>]]></item>
+	<item id="510406">已领取{0}</item>
+	<item id="510407">只差{0}灵石就能超越【{1}】,上升一位了!</item>
+	<item id="510408">总灵石：{0}</item>
+	<item id="510409">每次领奖可额外获得当时所得灵石的{0}%</item>
+	<item id="510410">排名越高，奖励灵石数量越多</item>
+	<item id="510411">小提示：活动当天祭祀灵石最多消耗{0}金币</item>
+		
+	<!--武将招募系统-->
+	<item id="510501">招募</item>
+	<item id="510502">--武将招募--</item>
+	<item id="510503"></item>
+	<item id="510504">招 募</item>
+	<item id="510505">刷新武将</item>
+	<item id="510506">金币刷新</item>
+	<item id="510507"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="510508">{0}，</item>
+	<item id="510509"><![CDATA[ 等等]]></item>
+	<item id="510510">您当前没有官职，不能招募武将！</item>
+	<item id="510511"><![CDATA[您当前的官职是<font color='#FDFF00'>{0}</font>，]]></item>
+	<item id="510512">可以招募到的新武将：</item>
+	<item id="510513">所有可招募的武将已全在您的麾下！</item>
+	<item id="510514">招募成功，{0}已在您的麾下！</item>
+	<item id="510515">是否花费{0}金币招募该将？</item>
+	<item id="510516">是否花费{0}金币刷新武将？</item>
+	<item id="510517">第五幕可以招募到的文官：{0}</item>
+	<item id="510518">所有可招募的文官已全在您的麾下！</item>
+	<item id="510519">花费{1}金币招募成功，{0}已在您的麾下！</item>
+	
+	<!--装备改良系统-->
+	<!--合成-->
+	<item id="512000">强化</item>
+	<item id="512001">合成</item>
+	<item id="512002">放入宝石进行合成、拆分</item>
+	<item id="512003">放入宝石</item>
+	<item id="512004">合成后宝石</item>
+	<item id="512005">合成</item>
+	<item id="512006">合成或拆分需要消耗{0}银币</item>
+	<item id="512007">请放入同等级同颜色的宝石进行合成</item>
+	<item id="512008">恭喜合成【{0}】 lv{1} * {2} </item>
+	<item id="512009">请放入宝石！ </item>
+	<item id="512010">宝石</item>
+	<item id="512011">拆分</item>
+	<item id="512012">恭喜拆分【{0}】 lv{1} * {2} </item>
+	
+	<!--镶嵌-->
+	<item id="512101">镶嵌</item>
+	<item id="512102">点击宝石孔位完成宝石镶嵌及拆卸操作</item>
+	<item id="512103">您确定要花费{0}银币解封该槽位吗？</item>
+	<item id="512104">请先放入一件装备</item>
+	<item id="512105"></item>
+	<item id="512106"></item>
+	<item id="512107"></item>
+	<item id="512108">该位置已有物品</item>
+	<item id="512109">请先放入一件装备！</item>
+	<item id="512110">请拖入宝石进行镶嵌！</item>
+	<item id="512111">请将宝石拖到已解封的槽位！</item>
+	<item id="512112">请先解封该槽位！</item>
+	<item id="512113">请双击一件装备进行镶嵌！</item>
+	<item id="512114">宝石镶嵌完成</item>
+	<item id="512115">宝石已拆卸并放入背包</item>
+	<item id="512116">点击宝石镶嵌</item>
+	<item id="512120"><![CDATA[属主：<font color='#E5EF99'>{0}</font>]]></item>
+	<item id="512121">主将</item>
+	<item id="512122">无</item>
+	<item id="512150"><![CDATA[<font color='#FF0000'>进入第三幕开放宝石相关功能</font>]]></item>
+	<item id="512151"><![CDATA[<font color='#FF0000'>进入第四幕开放启灵功能</font>]]></item>
+	<item id="512152">点击[br]选择</item>
+	<!--熔化-->
+	<item id="512201">熔化</item>
+	<item id="512202">熔化</item>	
+	<item id="512203">将装备放入此处进行熔化</item>	
+	<item id="512204">请放入装备！</item>	
+	<item id="512205">一次最多只能熔化10件装备！</item>	
+	<item id="512206">获得{0}*{1}</item>	
+	<item id="512207">[br]{0}倍暴击！</item>	
+	<item id="512208">该装备镶嵌有宝石，不能熔化！</item>	
+	<item id="512209">+{0}</item>	
+	<!--启灵-->
+	<item id="512301">启灵</item>
+	<item id="512302">启灵</item>
+	<item id="512303">{0}</item>
+	<item id="512304">{0}</item>
+	<item id="512305">{0}</item>
+	<item id="512306">本次消耗：{0}</item>
+	<item id="512307">请先放入一件装备</item>
+	<item id="512308">材料不对，请放入灵石</item>
+	<item id="512309">点击开启</item>
+	<item id="512310">点击镶嵌</item>
+	<item id="512311"></item>
+	<item id="512312"><![CDATA[<font color='#990000'>{0}</font>]]></item>
+	<item id="512313"><![CDATA[<font color='#FDFFCD'>{0}</font>]]></item>
+	<item id="512314">请先放入一件装备</item>
+	<item id="512320">{0}倍暴击！</item>
+	<item id="512321">主属性：    {0}</item>
+	<item id="512331">水属性克制火属性</item>
+	<item id="512332">火属性克制土属性</item>
+	<item id="512333">土属性克制水属性</item>
+	<item id="512334">数值最高属性为主属性[br]仅主属性可产生效果</item>
+	<item id="512335">启灵可增加攻击伤害</item>
+	<item id="512336">点击水、火、土升级相应属性</item>
+	<item id="512337">属性已满</item>
+	
+	<!--精炼-->
+	<item id="512401">精炼</item>
+	<item id="512402">精炼</item>
+	<item id="512403">请放入一件装备</item>
+	<item id="512404">请放入一件装备！</item>
+	<item id="512405">成功率：</item>
+	<item id="512406">{0}%</item>
+	<item id="512407">成功后：</item>
+	<item id="512408">属    主：</item>
+	<item id="512409">星级已满，不能再升</item>
+	<item id="512410">消    耗：</item>
+	<item id="512411">花费{0}金币保证装备不降级</item>
+	<item id="512412">恭喜您精炼成功！</item>
+	<item id="512413">精炼失败，保持原星级</item>
+	<item id="512414">精炼失败，降一星级</item>
+	<item id="512415">精炼失败，星级归零！</item>
+	<item id="512416">免费重铸</item>
+	<item id="512417">重铸以后，装备成为紫色装备，是否重铸？</item>
+	<item id="512418">通过重铸，可以提升装备品阶[br]请先通关指定副本开启重铸功能</item>
+	<item id="512419">你要花费{0}金币精炼这件装备么？</item>
+	<item id="512420">你是否要重铸当前装备，提升他的品阶么？</item>
+	<item id="512421">请点击装备框选择要精炼的装备</item>
+	<item id="512422">请点击选择需要精炼的装备</item>
+	<item id="512423">按住物品就可以查看物品属性了哦！</item>
+	
+	<!--改良-背包-->
+	<item id="512501">武将</item>
+	<item id="512502">背包</item>
+	<item id="512503">未出战</item>
+
+	<!-- 洗炼 -->
+	<item id="512504">洗炼</item>
+	<item id="512505">防具技能效果只对自己有效</item>
+	<item id="512506">洗炼</item>
+	<item id="512507">洗炼装备获得{0}级{1}</item>
+	<item id="512508">洗炼</item>
+	<item id="512509">?</item>
+	<item id="512510"><![CDATA[<font color='#FF0000'>此件装备不能洗炼</font>]]></item>
+	<item id="512511">消耗：{0}</item>
+	<item id="512512">技能当前可洗炼至{0}级</item>
+	<item id="512513">是否花费{0}银币洗炼技能？</item>
+	<item id="512514">当前武将防具技能</item>
+	<item id="512515"><![CDATA[属主：<font color='#E5EF99'>{0}</font>]]></item>
+	<item id="512516">免费洗炼次数：{0}/{1}(半小时+1)</item>
+	<item id="512517"><![CDATA[<font color='#FF0000'>正在洗炼技能，请稍候更换！</font>]]></item>
+	<item id="512518"><![CDATA[<font color='#FF0000'>Max</font>]]></item>	
+	<item id="512519">当前武将防具技能(4幕开放)</item>
+	<item id="512520"><![CDATA[<font color='#FFFF00'>防具按下表从左至右依次洗炼可得：</font>]]></item>
+	
+	
+	<item id="512522">技能组合</item>	
+
+	
+	
+	
+	<!-- 背包新 -->
+	<item id="512600">背包1</item>
+	<item id="512601">背包2</item>
+	<item id="512602">背包3</item>
+	<item id="512603">背包4</item>
+	
+	
+	<!--敌国入侵场景-->
+	<item id="520101">敌国入侵</item>
+	<item id="520102">敌国入侵背景</item>
+	<item id="520103">退出</item>
+	<item id="520104">上一页</item>
+	<item id="520105">下一页</item>
+	<item id="520106"><![CDATA[<font color='#A5CD61'>剩余精力：</font>{0}]]></item>
+	<item id="520107"><![CDATA[<font color='#A5CD61'>威望：</font>{0}]]></item>
+	<item id="520108"><![CDATA[<font color='#FF0000'>玩家受保护中，请稍后。</font>]]></item>
+	<item id="520109"><![CDATA[<font color='#A5CD61'>你战胜了</font><font color='#FFFF00'>【{0}】，</font><font color='#A5CD61'>获得<font color='#FFFFCC'>{1}</font>威望。</font>]]></item>
+	<item id="520110"><![CDATA[<font color='#A5CD61'>你未能战胜</font><font color='#FFFF00'>【{0}】，</font><font color='#A5CD61'>获得<font color='#FFFFCC'>{1}</font>威望。</font>]]></item>
+	<item id="520111"><![CDATA[攻击CD：<font color='#B09E08'>{0}</font>]]></item>
+	<item id="520112"><![CDATA[<font color='#FF0000'>战斗CD中，请稍做休息。</font>]]></item>
+	<item id="520113"><![CDATA[<font color='#A5CD61'><font color='#FFFF00'>【{0}】，</font>攻击你，你获得了胜利！</font>]]></item>
+	<item id="520114">精力不足，无法攻击！</item>
+	<item id="520121">- 自动入侵 -</item>
+	<item id="520122">请选择入侵次数</item>
+	<item id="520123">-</item>
+	<item id="520124">+</item>
+	<item id="520125">+10</item>
+	<item id="520126">开始入侵</item>
+	<item id="520127">1、自动入侵随机选择敌方武将攻击[br]2、精力不足时，自动入侵将停止</item>
+	<item id="520128">入侵次数</item>
+	<item id="520129">停止入侵</item>
+	<item id="520130">第{0}次入侵中，剩余{1}次</item>
+	<item id="520141">- 入侵完成 -</item>
+	<item id="520142">本次入侵{0}次，消耗{1}精力</item>
+	<item id="520143">战绩</item>
+	<item id="520144"><![CDATA[{0}<font color='#EFE63F'>【胜】</font>   {1}<font color='#ff0000'>【败】</font>]]></item>
+	<item id="520145">威望</item>
+	<item id="520146">+{0}</item>
+	<item id="520147">我知道了</item>
+	<item id="520148">（精力不足，挂机结束）</item>
+	<item id="520149">（敌城无人，挂机结束）</item>
+	<item id="520150">正在挂机，是否退出？[br]在战斗状态下不能退出</item>
+	<item id="520151">自动挖矿可离线，持续2小时</item>
+	<item id="520152">+99</item>
+	<item id="520153">你即将进入敌国主城，攻击敌人获得威望[br]有几率抓捕敌人到自己的监狱</item>
+	<item id="520154">(可在监狱鞭笞敌人)</item>
+	<item id="520155">取消</item>
+	
+		
+	<item id="520201">进入监狱</item>
+
+	<!--银矿场景-->
+	<item id="530101">退出银矿</item>
+	<item id="530102">您真的要放弃现在正在开采的银矿吗？</item>
+	<item id="530103"><![CDATA[<font color='#CB751E'>【汉室】</font>占领中]]></item>
+	<item id="530104"><![CDATA[<font color='#1C8CFF'>【诸侯】</font>占领中]]></item>
+	<item id="530105">CD中，请勿攻打</item>
+	<item id="530106">获得{0}银子</item>
+	<item id="530107">产量：{0}[br]状态：{1}[br]占领：{2}</item>
+	<item id="530108">lv{0} {1}</item>
+	<item id="530109">{0}/分钟</item>
+	<item id="530110">可攻击</item>
+	<item id="530111">可占领</item>
+	<item id="530112">可放弃</item>
+	<item id="530113">无</item>
+	<item id="530114"><![CDATA[<font color='#CB751E'>【{0}】</font> lv{1}]]></item>
+	<item id="530115"><![CDATA[<font color='#1C8CFF'>【{0}】</font> lv{1}]]></item>
+	<item id="530116">lv{0}</item>
+	<item id="530117">矿稿信息</item>
+	<item id="530118">拥有的矿稿数量:{0}/{1}</item>
+	<item id="530119"><![CDATA[购买新稿<font color='#FF800A'>（{0}金）</font>]]></item>
+	<item id="530120">购买</item>
+	<item id="530121">小贴士：</item>
+	<item id="530122">1、矿稿最多可累积{0}个[br]2、花费金币可立即获得全新的矿稿</item>
+	<item id="530123"><![CDATA[<font color='#EFE63F'>【胜】</font><font color='#F1AE15'>{0}</font>偷袭你失败]]></item>
+	<item id="530124"><![CDATA[<font color='#EFE63F'>【胜】</font><font color='#A8FFFF'>{0}</font>偷袭你失败]]></item>
+	<item id="530125"><![CDATA[<font color='#FF0000'>【败】</font><font color='#F1AE15'>{0}</font>击败了你]]></item>
+	<item id="530126"><![CDATA[<font color='#FF0000'>【败】</font><font color='#A8FFFF'>{0}</font>击败了你]]></item>
+	
+	<item id="530190">消耗{0}精力，一个金锹</item>
+	<item id="530191">，{0}颗{1}</item>
+	<item id="530192">消耗{0}精力</item>
+	<item id="530193"><![CDATA[<font color='#FF0000'>金币不足</font>]]></item>
+	<item id="530194"></item>
+	<item id="530195">达到第三幕后开放</item>
+	<item id="530196">挖矿获得{0}银币</item>
+	<item id="530197"><![CDATA[{0}]]></item>
+	<item id="530198"><![CDATA[<font color='#FF800A'>[br]每次{0}金币</font>]]></item>
+	<item id="530199">消耗{0}精力，一个银锹</item>
+	<item id="530200">银矿出口</item>
+	<item id="530201">安全区</item>
+	<item id="530202">独占区</item>
+	<item id="530203">争夺区</item>
+	<item id="530204"></item>
+	<item id="530205">挖矿获得{0}银币</item>
+	<item id="530206">批准采矿</item>
+	<item id="530207">退出银矿</item>
+	<item id="530208">{0}/{1}</item>
+	<item id="530210">银矿储量:无穷</item>
+	<item id="530211">银矿储量:{0}</item>
+	<item id="530212">采集人数:{0}</item>
+	<item id="530213">采集人数:{0}/{1}</item>
+	<item id="530214">{0}独占中</item>
+	<item id="530215">【汉室】守卫者：{0}</item>
+	<item id="530216">【诸侯】守卫者：{0}</item>
+	<item id="530220">独占</item>
+	<item id="530221">申请</item>
+	<item id="530222"></item>
+	<item id="530223">踢人</item>
+	<item id="530224">接受</item>
+	<item id="530225">拒绝</item>
+	<item id="530231">成员列表</item>
+	<item id="530232">申请</item>
+	<item id="530233">挖矿</item>
+	<item id="530234">姓名</item>
+	<item id="530235">等级</item>
+	<item id="530236">操作</item>
+	<item id="530237"></item>
+	<item id="530238"></item>
+	<item id="530239"></item>
+	<item id="530241">:( 您已经被【{0}】请出银矿</item>
+	<item id="530242">恭喜，【{0}】通过了您的采矿申请！</item>
+	<item id="530243">:( 您的采矿申请被【{0}】拒绝</item>
+	<item id="530244">您的矿车已满，本次开采无法再收获银子~~</item>
+	<item id="530245">您的精力不足，无法继续开采</item>
+	<item id="530250">我被打败了，更要命的是，我的{0}银子也被打掉了:(</item>
+	<item id="530251">嘿嘿，我赢了，地上还掉了{0}银子，我花了{1}精力捡起银子$_$</item>	
+	<item id="530252">拾取成功！</item>	
+	<item id="530260">{0}挖矿用力过度，导致银矿塌方！很多人下落不明！</item>
+	<item id="530261">{0}在矿区第一线连续奋战，搬走一座银矿！</item>
+	<item id="530262">{0}给予{1}最后一击，成功占领一座银矿！</item>
+	<item id="530270">进入矿区，消耗{0}精力</item>
+	<item id="530271">您本次挖矿共获得{0}银币</item>
+	<item id="530272">{0}档效率额外获得{1}银币</item>
+	<item id="530273">意外惊喜！</item>
+	
+	<item id="530280">你挖到一块宝石！</item>
+	<item id="530281">确定</item>
+	<item id="530286">进入银矿需要扣除{0}精力</item>
+	<item id="530287">你挖到{0}颗{1}！</item>
+	
+	<item id="530290">您确定要消耗{0}精力提取银币吗？</item>
+	<item id="530291">提取银币</item>
+	<item id="530292">自动连续提取</item>
+	<item id="530293">成功提取{0}银币！</item>
+	<item id="530294">提取银币</item>
+	<item id="530295">自动连续提取</item>
+	<item id="530296"></item>
+	<item id="530297"></item>
+	<item id="530298"></item>
+	<item id="530299">进矿消耗{0}精力</item>
+	
+	<item id="530350">挖矿设置</item>	
+	<item id="530351">一</item>
+	<item id="530352">二</item>
+	<item id="530353">三</item>
+	<item id="530354">{0}档挖矿</item>
+	<item id="530355">购买次数</item>
+	<item id="530356">点击矿山开采</item>
+	<item id="530357">快来看啊，这是什么，藏宝图？</item>
+	<item id="530358">无限次</item>
+	<item id="530359"><![CDATA[次数：<font color='#FFFFCC'>{0}</font>次]]></item>
+	<item id="530360"><![CDATA[售价：<font color='#FFCC00'>{0}</font>]]></item>
+	<item id="530361"><![CDATA[<font color='#FFCC00'>{0}</font>次]]></item>
+	<item id="530362"><![CDATA[你确定花费<font color='#FFCC00'>{0}</font>金币购买]]></item>
+	<item id="530363">{0}次{1}档挖矿</item>
+	<item id="530364"></item>
+	
+	<item id="530370"><![CDATA[点此使用已有最高级<font color='#FFCC00'>炸弹</font>，也可在背包中双击使用。]]></item>
+	<item id="530371"><![CDATA[点此使用已有最高级<font color='#FFCC00'>陷阱</font>，也可在背包中双击使用。]]></item>
+	<item id="530372"><![CDATA[可恶，我被<font color='#F1AE15'>{0}</font>炸飞了！]]></item>
+	<item id="530373"><![CDATA[疼，我中了<font color='#F1AE15'>{0}</font>的陷阱！]]></item>
+	<item id="530374"><![CDATA[哼！<font color='#F1AE15'>{0}</font>被我的陷阱困住了！]]></item>
+	<item id="530375"><![CDATA[<font color='#F1AE15'>{0}</font>被你炸昏了，{1}内怕回不来了。]]></item>
+	<item id="530376">布置成功，我方陷阱+1</item>
+	<item id="530377">我方陷阱：{0}/{1}</item>
+	
+	<item id="530380">{0}</item>
+	<item id="530381"><![CDATA[<font size='18'><b>{0}</b>[br]</font>{1},今日已提取{2}次]]></item>
+	<item id="530382">我真的受不住了，让我修养一下。</item>
+	<item id="530383"><![CDATA[<font color='#00FF00'>{0}</font>后再找我吧。]]></item>
+	<item id="530384">将军：</item>
+	<item id="530385">微臣精通机械...和急救术，定能保护主公安心挖矿！</item>
+	<item id="530386">是否要立刻提取银矿中所有剩余银币？银矿会因此倒塌。</item>
+	<item id="530387">[{0}]的计策让你快速搬空了银矿，收入{1}银币</item>
+	<item id="530388"><![CDATA[<font color='#FF0000'>我在清点收入，不能继续提取[br]{0}后再来找我吧</font>]]></item>
+	<item id="530389"><![CDATA[<font color='#FF0000'>你必须在银矿中才能提取</font>]]></item>
+	<item id="530390"><![CDATA[休息中]]></item>
+	<item id="530391"><![CDATA[<font size='18'><b>{0}</b>[br]</font>{1}]]></item>
+	<item id="530392">抵挡次数：{0}/{1}</item>
+	
+	
+	<item id="531000">自动挖矿</item>
+	<item id="531001">开始挂机</item>
+	<item id="531002">共享银矿</item>
+	<item id="531003">独霸银矿</item>
+	<item id="531004">自动申请入矿，批准他人入矿</item>
+	<item id="531005">自动独占银矿，拒绝他人入矿</item>
+	<item id="531006">独占区挖矿方式</item>
+	<item id="531007">自动入矿</item>
+	<item id="531008">自动进入我方矿，不攻击敌方矿</item>
+	<item id="531009">杀敌占矿</item>
+	<item id="531010">自动攻击敌方矿，优先进入我方矿</item>
+	<item id="531011">争夺区挖矿方式</item>
+	<item id="531012">勾选后，若被敌人击败，自动返回争夺区，继续挂机。否则，挂机结束</item>
+	<item id="531013">结束挂机</item>
+	<item id="531014">请退出银矿以后再进行操作</item>
+	<item id="531015"><![CDATA[<font color='#FF0000'>请选择一种占矿模式</font>]]></item>
+	
+	<item id="531020">总共挂机{0}次，还剩{1}次</item>
+	
+	<item id="531030">本次挂机完成了{0}次占矿</item>
+	<item id="531031">你获得了</item>
+	<item id="531032"><![CDATA[<font color='#FFFF00' size='19'>银币：</font>]]></item>
+	<item id="531033"><![CDATA[<font color='#FFFF00' size='19'>宝石：</font>]]></item>
+	<item id="531034">我知道了</item>
+	<item id="531035">挂机完成</item>
+	<item id="531036"><![CDATA[<font color='#FFFF00' size='19'>藏宝图：</font>]]></item>
+	
+
+	<item id="532000">{0}x{1}</item>
+	<item id="532001">{0}/{1}</item>
+	<item id="532002">{0}</item>
+	
+	<!-- 主将面板  -->
+	<item id="540101">角色信息</item>
+	<item id="540102"><![CDATA[<font color='#CBCC66'>统：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	<item id="540103"><![CDATA[<font color='#CBCC66'>智：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	<item id="540104"><![CDATA[<font color='#CBCC66'>勇：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	
+	
+	
+	<item id="540105"><![CDATA[<font color='#CBCC66'>生命：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	<item id="540106"><![CDATA[<font color='#CBCC66'>攻击：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	<item id="540107"><![CDATA[<font color='#CBCC66'>防御：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	
+	<item id="540108">技能</item>
+	<item id="540109">装备类型不一样，不能穿！</item>
+	<item id="540110">背包中的装备类型不一样，脱装备请将装备拖到空的位置！</item>
+	<item id="540111"><![CDATA[你装备了【{0}】装备]]></item>
+	
+	<item id="540112"><![CDATA[<font color='#76923C'>(+{0})</font>]]></item>
+	<item id="540113">武[br]将</item>
+	<item id="540114">布[br]阵</item>
+	<item id="540115">武将</item>
+	<item id="540116">- 战术心法 -</item>
+	<item id="540117">包裹1</item>
+	<item id="540118">包裹2</item>
+	<item id="540119">包裹3</item>
+	<item id="540120">包裹4</item>
+	<item id="540121">培[br]养</item>
+	<item id="540122"><![CDATA[<font color='#00CCFF'>水({0})</font>]]></item><!--水属性-->
+	<item id="540123"><![CDATA[<font color='#FF3300'>火({0})</font>]]></item><!--火属性-->
+	<item id="540124"><![CDATA[<font color='#FFCC00'>土({0})</font>]]></item><!--土属性-->
+	<item id="540125"><![CDATA[<font color='#CBCC66'>灵：</font><font color='#FFFFFF'>{0}</font>]]></item>
+	<item id="540126">熔[br]炼</item>
+	<item id="540127">阵型</item>
+	<item id="540128">培养</item>
+	<item id="540129">熔炼</item>
+	<item id="540130"><![CDATA[<font color='#CBCC66'>战力：</font><font color='#FFFFFF'>{0}</font><font color='#76923C'>(+{1})</font>]]></item>
+	<item id="540131">战斗力可增加攻击伤害</item>
+	<item id="540132">骑马可增加攻击伤害[br]通关第四幕赤壁决战-护船副本后开启</item>
+	<item id="540133">骑马可增加攻击伤害</item>
+	<item id="540134">启灵可增加攻击伤害[br]通关第四幕襄阳之争-城郊副本后开启</item>
+	<item id="540135">启灵可增加攻击伤害</item>
+	<item id="540136">lv：{0}</item>
+	<item id="540137">战车</item>
+	
+	<item id="540180"><![CDATA[统：影响攻防[br]]]></item>
+	<item id="540181"><![CDATA[智：影响闪避[br]]]></item>
+	<item id="540182"><![CDATA[勇：影响暴击[br]]]></item>
+	<item id="540183"><![CDATA[ <font color='#FFCC00'>科技+10</font>]]></item>
+	
+	<item id="540184">基础{0}[br]心法{1}[br]装备{2}[br]宝石{3}[br]督军{4}[br]洗炼{5}[br]buff{6}[br]称号{7}</item>
+	<item id="540185">增加攻击伤害[br]减少所受伤害[br]坐骑{0}[br]督军{1}[br]洗炼{2}[br]马铃{3}[br]称号{4}</item>
+	<item id="540186">基础{0}[br]培养{1}[br]宝物{2}[br]洗炼{3}[br]科技{4}</item>
+	<item id="540187">增加攻击伤害[br]减少所受伤害[br]装备{0}[br]洗炼{1}[br]buff{2}</item>
+	
+	<item id="540188"><![CDATA[(满属性体验)[br]  {0}[br]统：影响攻防[br]]]></item>
+	<item id="540189"><![CDATA[(满属性体验)[br]  {0}[br]智：影响闪避[br]]]></item>
+	<item id="540190"><![CDATA[(满属性体验)[br]  {0}[br]勇：影响暴击[br]]]></item>
+	<item id="540191"><![CDATA[基础{0}[br]<font color='#FF0000'>培养{1}</font>[br]宝物{2}[br]洗炼{3}[br]科技{4}]]></item>
+	<!--战车系统-->
+	<item id="541000">战[br]车</item>
+	<item id="541001"><![CDATA[<font color='#CBCC66'>生命：</font><font color='#FFFFFF'>{0}</font><font color='#7b8a2e'>(+{1})</font>]]></item>
+	<item id="541002"><![CDATA[<font color='#CBCC66'>攻击：</font><font color='#FFFFFF'>{0}</font><font color='#7b8a2e'>(+{1})</font>]]></item>
+	<item id="541003"><![CDATA[<font color='#CBCC66'>防御：</font><font color='#FFFFFF'>{0}</font><font color='#7b8a2e'>(+{1})</font>]]></item>
+	<item id="541004"><![CDATA[<font color='#CBCC66'>闪避：</font><font color='#7b8a2e'>{0}</font>]]></item>
+	<item id="541005"><![CDATA[<font color='#CBCC66'>暴击：</font><font color='#7b8a2e'>{0}</font>]]></item>
+	<item id="541006"><![CDATA[<font color='#CBCC66'>眩晕：</font><font color='#7b8a2e'>{0}</font>]]></item>
+	<item id="541007">点击完成装备</item>
+	<item id="541008">耐久</item>
+	<item id="541009">{0}/{1}</item>
+	<item id="541010"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="541011"><![CDATA[<font color='#FF0000'>战斗中不能切换战车</font>]]></item>
+	<item id="541012">使用战车的形象</item>
+	<item id="541013">该战车不能装备更多零件</item>
+	<item id="541014">战斗中不能设置战车形象</item>
+	<item id="541015">要求{0}级工匠</item>
+	<item id="541016">是否花费{0}银币，恢复战车{1}点耐久度？</item>	     
+	<item id="541017">-{0}%</item>	 
+	<item id="541018">+{0}%</item>	 
+	<item id="541019">闪避：[br]增加自身{0}%几率[br]降低敌人{1}%几率</item>	 
+	<item id="541020">暴击：[br]增加自身{0}%几率[br]降低敌人{1}%几率</item>	 
+	<item id="541021">晕眩：[br]增加自身{0}%几率[br]降低敌人{1}%几率</item>	 
+	
+	<!-- 多人副本大厅场景  -->
+	<item id="550101">副本大厅</item>
+	<item id="550102">副本信息</item>
+	<item id="550103">队伍：{0}/{1}</item>
+	<item id="550104"><![CDATA[<b><font color='#99FF00'>等待中</font></b>]]></item>
+	<item id="550105"><![CDATA[<b><font color='#CBCC66'>进行中</font></b>]]></item>
+	<item id="550106"><![CDATA[副本入口]]></item>
+	<item id="550107"><![CDATA[返回地图]]></item>
+	<item id="550108"><![CDATA[<font color='#FFFFCC'>{0}申请加入队伍</font>]]></item>
+	<item id="550109"><![CDATA[<font color='#FFFFCC'>你已向{0}的队伍申请加入</font>]]></item>
+	<item id="550110">自动挂机</item>
+	<item id="550111">进入副本扣除{0}精力。</item>
+	<item id="550112">挂机消耗{0}金币。</item>
+	<item id="550113">通关后开放</item>
+	<item id="550114">高效挂机，自动补充精力消耗{0}金币。</item>
+	<item id="550115">银币补血</item>
+	<item id="550116">消耗{0}银币，补充了{1}点血！</item>
+	<item id="550117">复活需要消耗{0}金币，确定复活？</item>
+	<item id="550118">可尝试自动挂机</item>
+	<item id="550119">关注</item>
+	<item id="550120">可尝试组队战斗</item>
+	<item id="550121">已领取{0}经验</item>
+	<item id="550122">开放集市功能</item>
+	<item id="550123">离开队伍将退出副本返回世界地图，是否离开？</item>
+
+	<item id="550201">队伍列表</item>
+	<item id="550202">队伍列表</item>
+	<item id="550203">创建队伍</item>
+	<item id="550204">副本</item>
+	<item id="550205">队长</item>
+	<item id="550206">人数</item>
+	<item id="550207">加入</item>
+	<item id="550208">副本：</item>
+	<item id="550209">推荐等级：</item>
+	<item id="550210">消耗精力：</item>
+	<item id="550211">人数：</item>
+	<item id="550212">队长：</item>
+	<item id="550213">你已经有队伍，不能再加入其它队伍！</item>
+	<item id="550214">lv.{0}</item>
+	<item id="550215">等级</item>
+	<item id="550216">{0}/{1}</item>
+  	
+	
+	<item id="550301">开始</item>
+	<item id="550302">离开队伍</item>
+	<item id="550303">Lv.{0}</item>
+	<item id="550304">{0}(副)</item>
+	<item id="550305">自动批准入队</item>
+
+	<item id="550401">创建队伍</item>
+	<item id="550402">创建</item>
+	<item id="550403">选择</item>
+	<item id="550404">掉落</item>
+
+	<item id="550501">获得新装备</item>
+	<item id="550502">点击装备</item>
+	<item id="550503">你装备了[{0}]</item>
+	<item id="550504">获得新技能</item>
+	
+	<item id="550505">{0}×{1}</item>
+	
+	<item id="550510">{0}+{1}</item>
+	
+	<!-- 副本信息 -->
+	<item id="550601">掉落</item>
+	<item id="550602">掉落率{0}</item>
+	<item id="550603">{0}</item>
+	<item id="550604">组队拥有经验加成</item>
+	<item id="550605">经验奖励完成度：{0}/{1}</item>
+	<item id="550606">[br]今日领取{0}/{1}次</item>
+	<item id="550607">敌人组数：{0} 组</item>
+
+	<!-- 多人副本场景  -->
+	<item id="560101">多人副本</item>
+	<item id="560102">退出</item>
+	<item id="560103"><![CDATA[<b><font color='#FFFFCC'>{0}</font></b> Lv.{1}[br]{2}]]></item>
+	<item id="560104">点击更换副本</item>
+	<item id="560105">恭喜你通关副本！点击返回副本大厅。</item>
+	<item id="560106">你确定要离开副本吗？</item>
+	<item id="560107">你已阵亡</item>
+	<item id="560108">满血复活({0}金币)</item>
+	<item id="560109">满血复活</item>
+	<item id="560110">退出副本</item>
+	<item id="560111">复活剩余时间：{0}</item>
+	<item id="560112">{0}</item>
+	<item id="560113"><![CDATA[<font color='#EE1D1D'>{0}</font>]]></item>
+	<item id="560114"><![CDATA[清除CD需要花费{0}金币，你确定要清除CD吗？]]></item>
+	<item id="560115"><![CDATA[你花费了{0}{1}补充{2}点血]]></item>
+	<item id="560116"><![CDATA[<b>{0}</b><font color='#8D9E3D' size='16'>( Lv.{1})</font>]]></item>
+	<item id="560117"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="560118">背包已满，物品[{0}]无法获得!</item>
+	<item id="560119">组队挂机中不能操作！</item>
+	<item id="560120">你正在组队挂机中，是否要退出?</item>
+	<item id="560121"><![CDATA[总共挂机{0}次，还剩{1}次[br]退出挂机方可自由操作]]></item>
+	<item id="560122">你已经阵亡了！</item>
+	<item id="560123"><![CDATA[<font color='#00CCFF'>水({0})</font>]]></item><!--水属性-->
+	<item id="560124"><![CDATA[<font color='#FF3300'>火({0})</font>]]></item><!--火属性-->
+	<item id="560125"><![CDATA[<font color='#FFCC00'>土({0})</font>]]></item><!--土属性-->
+	<item id="560126">灵：{0}</item>
+	<item id="560127">战斗力：{0}</item>
+	<item id="560128">本次挂机总共{0}次，已进行{1}次[br]{2}</item>
+	<item id="560129"><![CDATA[总共挂机{0}次，还剩{1}次，剩余{2}次复活[br]退出挂机方可自由操作]]></item>
+	
+	<item id="560201">由于精力不足，您已经被移除队伍!</item>
+	<item id="560202">精力不足，挂机结束!</item>
+	<item id="560203">攻击CD中，请稍候再试!</item>
+	<item id="560204">气力恢复中({0})[br]请补充精力或休息下</item>
+	<item id="560205">发动攻击，扣除{0}精力。</item>
+	<item id="560206">关注</item>
+	<item id="560207">恭喜！您获得了农场土地证！</item>
+	
+	<item id="560250">华小眉</item>
+	<item id="560251">点击打开牢笼</item>
+	<item id="560252">救救我！</item>
+	<item id="560253">打败她就可以救我出来了</item>
+	<item id="560254">谢谢你救了我</item>
+	
+	<item id="560300"><![CDATA[经验 <font size='18'>+{0}</font>]]></item>
+	<item id="560301">免费满血复活！</item>
+
+
+<!--邮件-->
+	<item id="570101">邮件</item>
+	<item id="570102">全[br]部</item>
+	<item id="570103">保[br]存</item>
+	<item id="570104">删[br]除</item>
+	
+	<item id="570201">收件人:</item>
+	<item id="570202">主题:</item>
+	<item id="570203">内容:</item>
+	<item id="570204">发送</item>
+	<item id="570205">取消</item>
+	<item id="570206">收件人格式不正确！</item>
+	<item id="570207">主题格式不正确！</item>
+	<item id="570208">内容格式不正确！</item>
+	<item id="570209">发送邮件成功！</item>
+	
+	<item id="570301">新建邮件</item>
+	
+	<item id="570401">邮件列表</item>
+	<item id="570402">【{0}】{1}</item>
+	<item id="570403">发件人：{0}</item>
+	<item id="570404">{0}[br][br]　　　　　　　　　　　　　　　　　　{1}</item>
+	<item id="570405">{0}月{1}日 {2}:{3}</item>
+	<item id="570406">删除本页</item>
+	<item id="570407">删除成功！</item>
+	<item id="570408">删除</item>
+	<item id="570409">保存</item>
+	<item id="570410">回复</item>
+	<item id="570411">保存成功！</item>
+	<item id="570412">返回</item>
+	
+	<item id="570501">系统</item>
+	<item id="570502">玩家</item>
+	
+<!--将军府-->		
+	<item id="580101">升级</item>
+	<item id="580102"></item>
+	<item id="580103"><![CDATA[Lv.<b>{0}</b>]]></item>
+	<item id="580104">升级需要{0}银币</item>
+	<item id="580105"></item>
+	<item id="580106">升级需主将Lv{0}</item>
+	<item id="580107">精力上限+{0}</item>
+	<item id="580108">精力产出+{0}</item>
+	<item id="580111">升级家具</item>
+	<item id="580112">升级摆件</item>
+	<item id="580116">家具每小时产生一次精力星，点击星星即可补充。</item>
+	<item id="580120">门牌：{0}</item>
+	<item id="580130">敌方势力破坏了该家具，是否花费{0}银币进行修复？</item>
+	<item id="580131">修复成功！</item>
+	<item id="580140">（满）</item>
+	<item id="580141">将军府已经产生{0}个星星</item>
+	<item id="580142">睡 觉</item>
+	<item id="580143">起床</item>
+	<item id="580144"></item>
+	<item id="580145"></item>
+	<item id="580146"><![CDATA[睡觉已恢复<font color='#FFCC32'>{0}</font>精力]]></item>
+	<item id="580147">精力增加</item>
+	<item id="580148"><![CDATA[<font color='#FF0000'>精力充沛，睡不着了</font>]]></item>
+	<item id="580150">自 宅</item>
+	<item id="580151">参 观</item>
+	<item id="580152">主 城</item>
+	<item id="580153">扩 建</item>
+	<item id="580154">消耗{0}金币</item>
+	<item id="580155">放弃梦境</item>
+	<item id="580156">{0}/{1}</item>
+	<item id="580157">数量：{0}</item>
+	<item id="580158">您确定花费{0}金币实现美梦吗？</item>
+	<item id="580159">消耗{0}银币</item>
+	<item id="580160"></item>
+	<item id="580161"></item>
+	<item id="580162">x{0}</item>
+	<item id="580163"><![CDATA[<font size='17'><b>领取</b></font>]]></item>
+	<item id="580164">菜肴领取成功！</item>
+	<item id="580165">机 械</item>
+	
+	<item id="580166">将军你好，我是元方！</item>
+	<item id="580167">将军，今天我又为你准备了一些菜肴！</item>
+	<item id="580168">今天就由我亲自下厨！</item>
+	
+	<item id="580169">将军，我只会做一道菜。</item>
+	<item id="580170">小鸡炖蘑菇很不错哦，就是食材太少了。</item>
+	<item id="580171">晴雯要我陪她上山采蘑菇！真麻烦…</item>
+	
+	<item id="580172">元方：</item>
+	<item id="580173">晴雯：</item>
+	<item id="580174">红姐：</item>
+	
+	
+<!--将军府排行-->	
+	<item id="580301">宅邸</item>
+	<item id="580302">-我的宅邸-</item>
+	<item id="580303">-宅邸排名-</item>
+	<item id="580304">进入</item>
+	<item id="580305">扩建</item>
+	<item id="580306">-宅邸查询-</item>
+	<item id="580307">按姓名：</item>
+	<item id="580308">按门牌：</item>
+	<item id="580309">参观</item>
+	<item id="580351">-宅邸扩建-</item>
+	<item id="580352">都尉府</item>
+	<item id="580353">校尉府</item>
+	<item id="580354">中郎将府</item>
+	<item id="580355">将军府</item>
+	<item id="580356">大将军府</item>
+	<item id="580357"></item>
+	<item id="580358">银币扩建</item>
+	<item id="580359">金币扩建</item>
+	<item id="580360">持有者</item>
+	<item id="580361"><![CDATA[<font size='16' color='#FDFFCB'><b>{0}</b></font> [{1}]</font>]]></item>
+	<item id="580362">{0}银币</item>
+	<item id="580363">{0}金币</item>
+	<item id="580364">是否花费{0}金币扩建？</item>
+	<item id="580365">是否花费{0}银币扩建？</item>
+	<item id="580366">{0}万</item>
+	<item id="580367">恭喜你花费{0}，完成一个府邸的扩建</item>
+	
+	
+	<item id="580370">【{0}】</item>
+	<item id="580371">家具：床榻、桌椅。[br]家丁每日赠送菜肴：5个小鸡炖蘑菇。</item>
+	<item id="580372">家具：床榻、桌椅、古董柜[br]家丁每日赠送菜肴：10个小鸡炖蘑菇。</item>
+	<item id="580373">家具：床榻、桌椅、古董柜、书桌。[br]家丁每日赠送菜肴：20个小鸡炖蘑菇。</item>
+	<item id="580374">家具：床榻、桌椅、古董柜、书桌、假山(两倍精力产出)。[br]家丁每日赠送菜肴：25个小鸡炖蘑菇。</item>
+	<item id="580375">家具：床榻、桌椅、古董柜、书桌、假山(两倍精力产出)、武器架(两倍精力产出)。[br]家丁每日赠送菜肴：40个小鸡炖蘑菇。</item>
+	
+<!--采购-->
+	<item id="590000">团购</item>
+	<item id="590001">采[br]购</item>
+	<item id="590002">卖出</item>
+	<item id="590003">御膳府特别采购</item>
+	<item id="590004">贴士：特殊采购均为秘制菜，研发秘制菜谱成功后可制作。</item>
+	<item id="590005"><![CDATA[限前<font color='#FDFFCB'>5</font>名，每人限售<font color='#FDFFCB'>1</font>次]]></item>
+	<item id="590006">{0}:00点开放</item>
+	<item id="590007"><![CDATA[<font color='#FFCC00'>【{0}】</font>投标了{1}，获得{2}银币]]></item>
+	<item id="590008">已卖出</item>
+	<item id="590009">未开放</item>
+	<item id="590010">{0}[br]数量：{1}[br]单价：{2}</item>
+	
+<!--团购-->
+	<item id="590050">团[br]购</item>
+	<item id="590051">抢购</item>
+	<item id="590052">原价</item>
+	<item id="590053">折扣</item>
+	<item id="590054">节省</item>
+	<item id="590055"><![CDATA[<font color='#FFCC00'>{0}</font>人已购买，数量有限哦]]></item>
+	<item id="590056">结束倒计时</item>
+	<item id="590057">原价：</item>
+	<item id="590058">现价：</item>
+	<item id="590059">抢 购</item>
+	<item id="590060">{0}</item>
+	<item id="590061">距活动开始剩余时间</item>
+	<item id="590062">活动结束倒计时</item>
+	<item id="590063">购买成功</item>
+	<item id="590064">今天活动已结束</item>
+	
+<!--任务面板模块-->
+	<item id="590101">任务</item>
+	<!-- 主线任务模块 -->
+	<item id="590102">完成度：{0}%</item>
+	<item id="590103">{0}/{1}</item>
+	<item id="590104">奖励</item>
+	<item id="590105"><![CDATA[<b><font size='18' color='#FFFFCC'>{0}</font></b>　{1}<br/><font color='#414A1E'>───────────────</font><br/><font color='#81883D'>【任务描述】</font><br/>{2}<br/>　<br/><font color='#81883D'>【任务目标】</font><br/>{3}<br/>　<br/><font color='#81883D'>【任务奖励】</font><br/>{4}<br/>　]]></item>
+	<item id="590106"><![CDATA[<br/><font color='#81883D'>【限时奖励】</font><br/>{0}<br/>　<br/><font color='#81883D'>【限时时间】</font><font color='#00FF00'>{1}</font>]]></item>
+	<item id="590107">（已完成）</item>
+	<item id="590108">返回</item>
+	<item id="590109"><![CDATA[<font color='#FFCC00'>主</font>）]]></item>
+	<item id="590110"><![CDATA[<font color='#00CCFF'>支</font>）]]></item>
+	<item id="590111"><![CDATA[<font color='#FFFFFF'>已超时</font>]]></item>
+	<item id="590112"><![CDATA[限时：<font color='#00FF00'>{0}</font>]]></item>
+	<item id="590113"><![CDATA[您有<font color='#FF0000'>{0}</font>个任务已完成]]></item>
+	<item id="590114">当前任务追踪（点此收缩）</item>
+	<item id="590115">展开任务追踪</item>
+	<item id="590116">你获得了：{0}</item>
+	
+	<item id="590117">主[br]线</item>
+	<item id="590118">势[br]力</item>
+	<item id="590119">科[br]技</item>
+	<item id="590120">主线</item>
+	<item id="590121">科技</item>
+	<item id="590122">当前任务追踪</item>
+	<item id="590123">功[br]能</item>
+	<item id="590124">功能解锁</item>
+	
+	<!--会根据防沉迷减少收益的资源名称，需要和TaskInfo.xml一致-->
+	<item id="590150">银币</item>
+	<item id="590151">经验</item>
+
+	
+	<!-- 势力任务模块 -->
+	<item id="590152">上交</item>
+	<item id="590153">未完成</item>
+	<item id="590154">上交{0}</item>
+	<item id="590155">奖励 {0} x{1}</item>
+	<item id="590156"><![CDATA[<font color='#00FF00'>每日任务完成，你获得了{0} x{1}</font>]]></item>
+	<item id="590157">威望</item>
+	<item id="590158"><![CDATA[<font color='#81883D'>【任务描述】</font><br/>{0}<br/>]]></item>
+	<item id="590159">数量：{0}</item>
+	<item id="590160"><![CDATA[每日<font color='#FFCC32'>24:00</font>任务重置]]></item>
+	<item id="590161">势力任务</item>
+	<item id="590162">任务需求</item>
+	<item id="590163">任务奖励</item>
+	<item id="590164">放弃任务</item>
+	<item id="590165">提交任务</item>
+	<item id="590166">您今天已完成任务：{0}/{1}</item>
+	<item id="590167"><![CDATA[<font color='#ff7473'>{0}</font>/{1}]]></item>
+	<item id="590168">{0}/{1}</item>
+	<item id="590169">将军已放弃当前任务，请等待新任务发布或用金币立刻接取任务。</item>
+	<item id="590170">未接到任务</item>
+	<item id="590171">{0}后发布新任务</item>
+	<item id="590172">{0} Lv{1}</item>
+	<item id="590173">立即接取</item>
+	<item id="590174">您确定要花费{0}金币立即接取任务？[br]（每2分钟消耗1金币）</item>
+	<item id="590175">经验：{0}/{1}[br]等级越高刷新高品质任务概率越高</item>
+	<item id="590176">每日任务</item>
+	<item id="590177">按住物品可以查看奖励物品属性和数量哦！</item>
+	
+<!-- 军团模块 -->
+	<item id="590201">军团</item>
+	<item id="590202">加[br]入</item>
+	<item id="590203">成[br]员</item>
+	<item id="590204">科[br]技</item>
+	<item id="590205">情[br]况</item>
+	<item id="590206">申[br]请</item>
+	<item id="590207">军团列表</item>
+	<item id="590208">选中军团</item>
+	<item id="590209">军团宣言</item>
+	<item id="590210">等级：</item>
+	<item id="590211">军长：</item>
+	<item id="590212">阵营：</item>
+	<item id="590213">人数：</item>
+	<item id="590214">{0}</item>
+	<item id="590215">{0}级</item>
+	<item id="590216">{0}/{1}</item>
+	<item id="590217">申请加入</item>
+	<item id="590218">创建军团</item>
+	<item id="590219">退出军团</item>
+	<item id="590220">取消申请</item>
+	<item id="590221">创建</item>
+	<item id="590222">取消</item>
+	<item id="590223">军团名称：</item>
+	<item id="590224">旗号：</item>
+	<item id="590225">军团宣言：</item>
+	<item id="590226">-创建军团-</item>
+	
+	<item id="590227">成员列表</item>
+	<item id="590228">选中成员</item>
+	<item id="590229">军团贡献：</item>
+	<item id="590230">军团职位：</item>
+	<item id="590231">贡献排名：</item>
+	<item id="590232">内部留言：</item>
+	
+	
+	<item id="590233">通过</item>
+	<item id="590234">拒绝</item>
+	<item id="590235">申请列表</item>
+	<item id="590236">申请玩家</item>
+	
+	<item id="590237">修改留言</item>
+	<item id="590238">升级为{0}</item>
+	<item id="590239">军团通知</item>
+	<item id="590240">转让军团长</item>
+	<item id="590241">开除玩家</item>
+	<item id="590242">修改</item>
+	<item id="590243">需要排名{0}</item>
+	<item id="590244">你要将{0}开除吗？</item>
+	<item id="590245">你要将军团长转让给{0}吗？</item>
+	<item id="590246">军团通知</item>
+	<item id="590247">发布</item>
+	
+	<item id="590248">你确定让{0}加入军团吗？</item>
+	<item id="590249">你拒绝让{0}加入军团吗？</item>
+	<item id="590250">你确定要退出军团吗？</item>
+	<item id="590251">你确定要加入军团吗？</item>
+	<item id="590252">返回</item>
+	<item id="590253">军团留言：</item>
+	<item id="590254">军团邮件</item>
+	<item id="590255">邮件标题：</item>
+	<item id="590256">邮件内容：</item>
+	<item id="590257"><![CDATA[<font color='#FF0000'>旗号字数不能大于1个！</font>]]></item>
+	<item id="590258"><![CDATA[<font color='#FF0000'>军团名称字数过多！</font>]]></item>
+	<!-- 军团情况面板 -->
+	<item id="590270">军团创始：</item>
+	<item id="590271">创建日期：</item>
+	<item id="590272">所属国家：</item>
+	<item id="590273">军团等级：</item>
+	<item id="590274">徽章等级：</item>
+	<item id="590275">军团职位</item>
+	<item id="590276">军团长：</item>
+	<item id="590277">督  军：</item>
+	<item id="590278">营  长：</item>
+	<item id="590279">千夫长：</item>
+	<item id="590280">百夫长：</item>
+	<item id="590281">升级军徽</item>
+	<item id="590282">修改旗号</item>
+	<item id="590283">是否花费{0}银币升级军徽？</item>
+	<item id="590284">修改宣言</item>
+	<item id="590285">旗号：</item>
+	<item id="590286">军团信息</item>
+	<item id="590287">{0}-{1}-{2}</item>
+	<item id="590288">{0}年{1}月{2}</item>
+	<item id="590289">春</item>
+	<item id="590290">夏</item>
+	<item id="590291">秋</item>
+	<item id="590292">冬</item>
+
+<!-- 升级提示面板 -->
+	<item id="590401">你获得新功能：</item>
+	<item id="590402">{0}级开放功能：</item>
+	<item id="590403">你获得升级奖励：</item>
+	<item id="590404"><![CDATA[<font color='#99FF00' size ='24' >{0}金币</font>]]></item>
+	<item id="590405"><![CDATA[<font color='#99FF00' size ='24' >{0}银币</font>]]></item>
+	<item id="590406">领取成功</item>
+	<item id="590407">x{0}</item>
+	<item id="590408">领取</item>
+	<item id="590409"><![CDATA[<b>恭喜你升到{0}级！</b>[br]<font color='#99FF00' size ='24'>奖励：</font>]]></item> 
+	
+	
+	
+<!--组队管理面板模块-->	
+	<item id="600101">请求列表</item>
+	<item id="600102">名称</item>
+	<item id="600103">等级</item>
+	<item id="600104">操作</item>
+	<item id="600105">拒绝</item>
+	<item id="600106">接受</item>
+
+<!-- 自动挂机系统 -->
+	<item id="610001">自动挂机</item>
+	<item id="610002"><![CDATA[<font size ='19'>挂机次数</font>]]></item>
+	<item id="610003">开始挂机</item>
+	<item id="610004">停止挂机</item>
+	<item id="610005">(已拥有)</item>
+	<item id="610006">VIP{0}{1}</item>
+	<item id="610007">挂机补血</item>
+	<item id="610008">挂机一直保持1.5倍通关速度(低于高昂状态，自动金币补满)</item>
+	<item id="610009"><![CDATA[<font size ='18'>银币补血</font>]]></item>
+	<item id="610010">金币补血</item>
+	<item id="610011"><![CDATA[<font size ='18'>1银币{0}血</font>]]></item>
+	<item id="610012">自动消耗金币补血，1金币{0}血</item>
+	<item id="610013">只有在大厅中才能开启挂机！</item>
+	<item id="610014">只能单人才可以挂机！</item>
+	<item id="610015">自动挂机中，若想手动操作请停止挂机，是否要停止？</item>
+	<item id="610016">你有{0}次免费挂机机会</item>
+	<item id="610017">挂机消耗{0}金币</item>
+	<item id="610018">第{0}次挂机中，还剩{1}次....</item>
+	<item id="610019">开始挂机，扣除了{0}金币。</item>
+	<item id="610021">-</item>
+	<item id="610022">+</item>
+	<item id="610023">20</item>
+	<item id="610024">1</item>
+	<item id="610025">自动批准入队</item>
+	<item id="610026"><![CDATA[<font size ='18'>1.5倍经验</font>]]></item>
+	<item id="610027"><![CDATA[<font size ='18'>2倍经验</font>]]></item>
+	<item id="610028"><![CDATA[<font size ='18'>10金每小时</font>]]></item>
+	<item id="610029"><![CDATA[<font size ='18'>25金每小时</font>]]></item>
+	<item id="610030">你当前有1.5倍经验buff，是否要折算到2倍经验buff？</item>
+	<item id="610031">自动挂机每次需要消耗1金币，确定要挂机?</item>
+	<item id="610032"><![CDATA[<font size ='18'>(无限免费挂机)</font>]]></item>
+	<item id="610033"><![CDATA[<font size ='18'>(免费挂机{0}次)</font>]]></item>
+	<item id="610034">{0}次VIP挂机，{1}次新手挂机</item>
+	<item id="610035">{0}次VIP挂机</item>
+	<item id="610036">副本挂机可离线，持续2小时</item>
+	<item id="610037"><![CDATA[<font color='#FF0000' >战斗状态下，不能开启自动挂机</font>]]></item>
+	<item id="610038"><![CDATA[<font color='#FF0000' >死亡状态下，不能开启自动挂机</font>]]></item>
+	<item id="610039">50级前挂机免费</item>
+	<item id="610040"><![CDATA[<font size ='18'>(50级前挂机免费)</font>]]></item>
+	<item id="610041"><![CDATA[<font size ='18'>自动复活</font>]]></item>
+	<item id="610042"><![CDATA[<font size ='18'>上限5次</font>]]></item>
+	<item id="610043">自动挂机每次需要消耗{0}银币，确定要挂机?</item>
+	<item id="610044">开始挂机，扣除了{0}银币。</item>
+
+	<item id="610101">挂机完成</item>
+	<item id="610102">经验获得</item>
+	<item id="610103">获得物品</item>
+	<item id="610104">我知道了</item>
+	<item id="610105">*{0}</item>
+	<item id="610106">本次挂机完成了{0}次副本，消耗了{1}精力，{2}金币，{3}银币。</item>
+	<item id="610107"><![CDATA[ 经验 <font color='#99FF00'>+ {0}</font>   lv{1}↑]]></item>
+	<item id="610108">不错哦</item>
+
+<!-- 功能开放介绍面板 -->
+	<item id="620001">确定</item>
+	<item id="620002">恭喜你开放{0}</item>
+	
+<!-- 神庙窗口 -->
+	<item id="630001">神庙</item>
+	<item id="630002">神[br]庙</item>
+	<item id="630003">点击祭祀</item>
+	<item id="630004">大祭祀</item>
+	<item id="630005">花费金币对神祗各进行一次祭祀</item>
+	<item id="630006">银币</item>
+	<item id="630007">宝石</item>
+	<item id="630008">灵石</item>
+	<item id="630009">请点击神祇进行祭祀</item>
+	<item id="630010">{0} x{1}</item>
+	<item id="630011"><![CDATA[请点击神祇进行祭祀，活动期间祭祀可获得<font color='#FFCC00' size='20'><b>双倍</b></font>收益！]]></item>
+	<item id="630012"><![CDATA[<font color='#99FF00' >( {0}后结束！)</font>]]></item>
+	<item id="630013">本次祭祀需要花费{0}金币，确定祭祀？</item>
+	<item id="630014">免费祭祀{0}次</item>
+	
+	<item id="630050"><![CDATA[虔诚度Lv{0}[br]经验{1}点[br]祭祀收益增加{2}%]]></item>
+	<item id="630051"><![CDATA[{0}/{1}]]></item>
+	<item id="630052">虔诚度经验</item>
+	<item id="630053">当前Lv{0}，第二天衰减{1}点</item>
+	<item id="630054">虔诚度等级越高，祭祀增效越多</item>
+	<item id="630055">通关生死峡口-渡口副本，可获得虔诚度，虔诚度等级越高，祭祀效果越好</item>
+	<item id="630056"><![CDATA[古代机械--<font color='#99FF00' >{0}</font>的图纸，虔诚{1}可领取]]></item>
+	<item id="630057">将军府中可以制造新的机械</item>
+	
+<!-- 监狱系统 -->
+	<item id="640001">-汉室监狱-</item>
+	<item id="640002">-诸侯监狱-</item>
+	<item id="640003">监狱</item>
+	<!-- 我的监狱 -->
+	<item id="640010">俘虏的人数越多，等级越高，就能越快得到奖励，春天凌晨5点刷新</item>
+	<item id="640011">鞭笞</item>
+	<item id="640012">释放</item>
+	<item id="640013">点击开启新牢房</item>
+	<item id="640014">开启</item>
+	<item id="640015">你确定花费{0}金币开启一个新的牢房吗？</item>
+	<item id="640016">你确定花费{0}金币鞭笞犯人{1}吗？</item>
+	<item id="640017">鞭笞犯人，消耗{0}银币</item>
+	<item id="640018">你确定要释放{0}吗？</item>
+	<item id="640019"></item>
+	<item id="640020"></item>
+	<item id="640030">{0}已经逃走了！</item>
+	<item id="640031">{0}已经保释出狱了！</item>
+	<item id="640032">【{0}】被你一顿好打，你获得了{1}威望！</item>
+	<item id="640033">【{0}】开始逃跑！！</item>
+	<item id="640034">【{0}】保释出狱了~</item>
+	<item id="640035">【{0}】被你打的太惨了，你不能再获得威望！</item>
+	<item id="640036">保释需要花费{0}金币，确定保释？</item>
+	<item id="640037"><![CDATA[（点击领取<font color='#FF0000'>奖励</font>工钱）]]></item>
+	<item id="640038"> 俘虏工作中</item>
+	<item id="640039">（每年春季刷新）</item>
+	<item id="640040"><![CDATA[<font color='#FF0000'>已领取</font>]]></item>
+	<item id="640041">需{0}级</item>
+	<item id="640042">Lv {0}</item>
+	<item id="640043">请对犯人进行处置</item>
+	<item id="640044">完成{0}工作量可领取</item>
+	<item id="640045">鞭笞俘虏可以获得威望！</item>
+	<item id="640046"><![CDATA[<font color='#CCCCCC'>{0}</font>]]></item>
+	<item id="640047">+{0}工作量/分</item>
+	<item id="640048">已花费{0}金币开启一个新的牢房</item>
+	
+	<!-- 敌方监狱 -->
+	<item id="640120">通缉</item>
+	<item id="640121">{0}对你进行了{1}次鞭笞！</item>
+	<item id="640122">逃跑</item>
+	<item id="640123">保释</item>
+	<item id="640125">你确定花费{0}金币直接保释恢复自由吗？</item>
+	<item id="640126">保释出狱，花费{0}银币</item>
+	<item id="640127">{0}的监狱</item>
+	<item id="640130">通缉成功！</item>
+	<item id="640131"></item>
+	<item id="640132"></item>
+	<item id="640135">【{0}】送了你一顿皮鞭炒肉，t_T</item>
+	<item id="640136">恭喜，你被释放了！</item>
+	<item id="640137">我方壮士杀入牢中，将你救出！！</item>
+	
+	<!-- 文官系统 -->
+	<item id="640200">文官</item>
+	<item id="640201">技能：{0}</item>
+	<item id="640202">文官可为将军提供各种锦囊妙计，达到事半功倍的效果！将军可去酒肆招募文官。</item>
+	<item id="640203">本轮经验奖励已完成，[br]请将军及时提取经验！</item>
+	
+<!-- 任务引导 -->
+	<item id="650001">任务引导</item>
+	<item id="650002">任务提示</item>
+	<item id="650003">(关闭提示)</item>
+	<item id="650004">请点击右下角[返回主城]</item>
+	<item id="650005">请点击左下角的[退出副本]</item>
+
+<!-- 充值VIP、礼包 -->
+	<item id="660001">充值</item>
+	<item id="660002"><![CDATA[当前VIP <font color='#FF0000'>{0}</font> 级]]></item>
+	<item id="660003"><![CDATA[下一VIP <font color='#FF0000'>{0}</font> 级]]></item>
+	<item id="660004">{0} / {1} 金币</item>
+	<item id="660005"><![CDATA[即将升级 <font color='#FF0000'>{0}</font> 个等级特权]]></item>
+	<item id="660006">更多精彩特权：</item>
+	<item id="660007"><![CDATA[<font color='#99FF00'>VIP介绍>>></font>]]></item>
+	<item id="660008"><![CDATA[我已享有 <font color='#FF0000'>{0}</font> 个特权]]></item>
+	<item id="660009">VIP</item>
+	<item id="660010"><![CDATA[当前为：<font color='#FF0000'>普通用户</font>]]></item>
+	<item id="660011"><![CDATA[当前VIP <font color='#FF0000'>{0}</font> 级，已达最高级]]></item>
+	<item id="660012"></item><!-- 充值链接URL地址 -->
+	<item id="660013"></item><!-- 链接URL地址 -->
+	<item id="660014">已充值：{0} 金币</item>
+	<item id="660015">每日可以领取一次奖励</item>
+	<item id="660016">今日奖励已经领取</item>
+	<item id="660017">获得{0}金币，{1}级VIP</item>
+	<item id="660018">V[br]I[br]P</item>
+	<item id="660019">礼[br]包</item>
+	<item id="660020">礼包</item>
+	
+	<item id="660200">领取</item>
+	<item id="660201">获取</item>
+	<item id="660202">礼包名称</item>
+	<item id="660203">状态</item>
+	<item id="660204">有效期</item>
+	<item id="660205">请输入礼品码：</item>
+	<item id="660206">领取成功，请去背包查看</item>
+	<item id="660207">恭喜您获得一个礼包</item>
+	<item id="660208">x{0}</item>
+	<item id="660209">恭喜您获得:{0} x{1}</item>
+	
+	<item id="660300">特[br]权</item>
+	<item id="660301">介绍</item>
+	<item id="660302">VIP{0}</item>
+	<item id="660303">VIP[br]特[br]权[br]介[br]绍</item>
+	<item id="660304">充值金额</item>
+	<item id="660305">特权介绍</item>
+	
+	<!-- 消费提示 -->
+	<item id="660401">消费提示</item>
+	<item id="660402">消费提示：选中表示不再提示金币消费</item>
+	<item id="660403">全部勾选</item>
+	<item id="660404">全部撤销</item>
+	<item id="660405">消[br]费</item>
+
+		
+	<!-- 新VIP界面 -->
+	<item id="660500"><![CDATA[再充值<font color='#FFCC00'>{0}</font>金币即可升为<font color='#FFCC00'>VIP{1}</font>]]></item>
+	<item id="660501"><![CDATA[<font color='#999999'>你尚未享受任何特权</font>]]></item>
+	<item id="660502">VIP{0}</item>
+	<item id="660503">已获得</item>
+	
+	<item id="660504">{0}({1})</item>
+	<item id="660505">永久加三围</item>
+	<item id="660506">拥有更多土地</item>
+	<item id="660507">精炼100%成功</item>
+	<item id="660508">享有精炼暴击</item>
+	<item id="660509">永久免费挂机</item>
+	<item id="660510">每日免费祭祀</item>
+	<item id="660511">离线补充精力</item>	
+	
+	<item id="660512"><![CDATA[<font color='#99FF00'>查看全部VIP特权>>></font>]]></item>
+	<item id="660513">你当前VIP已是最高级</item>
+	<item id="660514"><![CDATA[<font color='#FFCC00'>当前：VIP{0}</font>]]></item>
+	<item id="660515">充值到VIP{0}，{1}[br]点击前往充值</item>
+	<item id="660516">当前享有特权:[br]{0}</item>
+	<!-- 提醒面板 -->
+	<item id="660600">提[br]醒</item>
+	<item id="660601">提醒</item>
+	<item id="660602">提醒：选中表示不再出现提醒</item>
+	
+<!-- 查看武将实力 -->
+	<item id="670001">主[br]将</item>
+	<item id="670002">副[br]将</item>
+	<item id="670003">武将</item>
+	<item id="670004">武[br]将</item>
+	<item id="670010">查看</item>
+
+
+<!-- 国战 -->
+	<item id="680001">国战</item>
+	<item id="680002">军需官</item>
+	<item id="680003"><![CDATA[<font color='#{0}'>{1}</font> ]]></item>
+	<item id="680004">你攻击别人失败，退到了后方阵营！</item>
+	<item id="680005"><![CDATA[国战将在<font color='#da4646'>{0}</font> 后开始]]></item>
+	<item id="680006">在战场中点击使用</item>
+	<item id="680007"><![CDATA[首次进入城池宝箱+{0}]]></item>
+	<item id="680008"><![CDATA[<font color='#99FF00'>胜!</font><font color='#FFFFCC'><font color='#FFFF00'>【{0}】</font> 偷袭你失败！</font>]]></item>
+	<item id="680009"><![CDATA[<font color='#da4646'>败!</font><font color='#FFFFCC'><font color='#FFFF00'>【{0}】</font>砍翻了你！</font>]]></item>	
+	<item id="680010">你被{0}攻击，退到了后方阵营！</item>
+	<item id="680011"><![CDATA[<font color='#da4646'>你正在cd中，不能过传送门！</font>]]></item>
+	<item id="680012"><![CDATA[<font color='#da4646'>你正在cd中，不能攻击！</font>]]></item>
+	<item id="680013"><![CDATA[秘宝城池开启：{0}]]></item>
+	<item id="680014"><![CDATA[国战将在<font color='#da4646'>{0}</font> 后结束]]></item>
+	<item id="680015">天降宝箱，宝箱+{0}</item>
+	<item id="680016">使用道具窃取获得{0}个{1}</item>
+	<item id="680017">随机增加一个道具(偷宝箱/清CD/补血/攻击对方全体等)(10金)</item>
+	<item id="680018">发现敌人，危险！！！</item>
+	<item id="680019">国战•{0}</item>
+	<item id="680020">国战正在进行中，你确认退出国战吗？</item>
+	<item id="680021">国战开始:{0}</item>
+	<item id="680022">国战结束:{0}</item>
+	<item id="680023"><![CDATA[<font color='#99FF00'>胜!</font><font color='#FFFFCC'>你砍翻了<font color='#FFFF00'>【{0}】</font>！</font>]]></item>
+	<item id="680024"><![CDATA[<font color='#da4646'>败!</font><font color='#FFFFCC'>你偷袭<font color='#FFFF00'>【{0}】</font>失败！</font>]]></item>
+	<item id="680025"><![CDATA[<font color='#da4646'>{0}</font>]]></item>
+	<item id="680026"><![CDATA[<font color='#f0bc10'>{0}</font>]]></item>
+	<item id="680027"><![CDATA[<font color='#{0}'>{1}</font> <font size='18'><b>{2}:{3}</b></font> <font color='#{4}'>{5}</font>]]></item>
+	<item id="680028">购买{0}需要{1}金币，你确定购买吗？</item>
+	<item id="680029">你被{0}攻击，原地复活！</item>
+	<item id="680030"><![CDATA[<font color='#f0bc10'>你被使用道具，退到了后方阵营！</font>]]></item>
+	<item id="680031"><![CDATA[<font color='#f0bc10'>你被使用道具，原地复活！</font>]]></item>
+	<item id="680032">退出</item>
+	<item id="680033">跨服{0}</item>
+	<item id="680034">跨服国战正在进行中，你确认退出国战吗？</item>
+	<item id="680035">跨服国战开始:{0}</item>
+	<item id="680036">跨服国战结束:{0}</item>
+	<item id="680037">我方</item>
+	<item id="680038">敌方</item>
+	<item id="680039">跨服国战连接断开，请返回主城稍后再次进入。</item>
+	<item id="680040">跨服国战结束后点击[br]右上角领取按钮领取</item>
+	<item id="680041">对阵信息</item>
+	<item id="680042">攻击敌人失败，原地复活！</item>
+	<item id="680043"><![CDATA[<font color='#{0}'>{1}服{2}</font>]]></item>
+	<item id="680044">小箭塔</item>
+	<item id="680045">大箭塔</item>
+	<item id="680046">是否花费{1}金币购买{0}？[br]效果持续至国战结束。</item>
+	<item id="680047">随机增加一个道具(清CD/补血/炸弹等)(10金)</item>
+	<item id="680048"><![CDATA[首次进入城池点券+{0}]]></item>
+	<item id="680049">天降点券，点券+{0}</item>
+	<item id="680050">攻击敌人获得点券+{0}</item>
+	<item id="680051">死亡获得点券+{0}</item>
+	<item id="680052"><![CDATA[<font color='#da4646'>你被箭塔攻击死亡，退到了后方阵营！</font> ]]></item>
+	<item id="680053"><![CDATA[<font color='#da4646'>你被箭塔攻击死亡，原地复活！</font> ]]></item>
+	<item id="680054"><![CDATA[<font color='#f0bc10'>你攻击箭塔死亡，退到了后方阵营！</font> ]]></item>
+	<item id="680055"><![CDATA[<font color='#f0bc10'>你攻击箭塔死亡，原地复活！</font> ]]></item>
+	<item id="680056">修塔获得点券+{0}</item>
+	<item id="680057">使用工程车获得点券+{0}</item>
+	<item id="680058">攻击敌塔获得点券+{0}</item>
+	<item id="680059">第{0}名：{1}×{2}，{3}×{4}</item>
+	<item id="680060"><![CDATA[<font color='#ffed00'>等级达100级玩家可领取经验丹</font> ]]></item>
+	<item id="680061">第{0}名：</item>
+	<item id="680062">{0}×{1}，</item>
+	<item id="680063">{0}×{1}</item>
+	<item id="680064">等级达100级[br]可领取经验丹</item>
+	<item id="680065">刷新道具</item>
+	<item id="680066">您确定花费{0}点券开启一个道具栏吗？</item>
+	<item id="680067">免费刷新</item>
+	<item id="680068">您确定花费{0}金币刷新未锁定的道具吗？</item>
+	<item id="680069">点击道具进行锁定操作[br]已锁定的道具不会刷新[br]刷新后道具栏已有CD保留</item>
+	<item id="680070">规则说明</item>
+	<item id="680071">您确定花费{0}金币锁定一个道具栏吗？</item>
+	<item id="680072">未解锁</item>
+	<item id="680073">是否要解锁该道具？</item>
+	<item id="680074">道具刷新</item>
+	<item id="680075">{0}：{1}[br]冷却时间：{2}秒</item>
+	<item id="680076">点击解锁</item>
+	<item id="680077">[br]当前拥有{0}点券</item>
+	<item id="680078">道[br]具</item>
+	
+	
+	<item id="680101">国战结束</item>
+	<item id="680102">查看地图</item>
+	<item id="680103">退出国战</item>
+	<item id="680104">击杀数：{0}</item>
+	<item id="680105">战斗失败：{0}</item>
+	<item id="680106">国战开始</item>
+	<item id="680107">秘宝城池</item>
+	<item id="680108"><![CDATA[{0}<font color='#{1}'>（{2}）</font> ]]></item>
+	<item id="680109">未开启</item>
+	<item id="680110">天降宝箱</item>
+	<item id="680111">购买道具</item>
+	<item id="680112">国战规则</item>
+	<item id="680113">自动杀敌</item>
+	<item id="680114">杀敌中</item>
+	<item id="680115">本场国战已获得{0}点券</item>
+	<item id="680116">请选择杀敌方式</item>
+	<item id="680117"><![CDATA[<font color='#FFFFCC'>杀敌</font>  优先攻击敌将，[br]其次攻击敌塔]]></item>
+	<item id="680118"><![CDATA[<font color='#FFFFCC'>拆塔</font>  优先攻击敌塔，[br]其次攻击敌将]]></item>
+	<item id="680119"><![CDATA[<font color='#FFFFCC'>修塔</font>  优先修理己塔，其次攻击敌塔]]></item>
+	<item id="680120">停止挂机</item>
+	<item id="680121">{0}(Lv.{1})</item>
+	<item id="680122">状态：</item>
+	<item id="680123"><![CDATA[<font color='#ff0000'>背包内无国战使用道具]]></item>
+	<item id="680124"><![CDATA[<font color='#ff0000'>战斗中不可使用道具]]></item>
+	<item id="680125">在本场景召唤幻影[br]属性与自身相同[br]幻影不会跑动[br]优先拆塔，其次杀敌</item>
+	<item id="680126">当前位置：大本营[br]城池效果：无</item>
+	
+	<item id="680201">{0}兵力</item>
+	<item id="680202">守</item>
+	<item id="680203">攻</item>
+	<item id="680204">本场国战已杀敌{0}人</item>
+
+	<item id="680301">国战军需</item>
+	<item id="680302">血包</item>
+	<item id="680303">丹药</item>
+	<item id="680311">免费领取</item>
+	<item id="680312">领取</item>
+	<item id="680313">服用</item>
+	<item id="680314">获得一个{0}！</item>
+	<item id="680315">血量{0}</item>
+	<item id="680316">你确认花费{0}金币购买一个{1}吗？</item>
+	<item id="680317">跨服国战军需</item>
+
+	<item id="680401">[{0}]城池：{1}</item>
+
+	<item id="680501">荣誉宝箱</item>
+	<item id="680502">x{0}</item>
+	<item id="680503">确认</item>
+	<item id="680504">{0}胜</item>
+	<item id="680505">成功领取{0}个荣誉宝箱！</item>
+	<item id="680506">lv.{0}</item>
+	<item id="680507">城池数</item>
+	<item id="680508">击杀数</item>
+	<item id="680509">点券×{0}</item>
+	<item id="680510">退出</item>
+	<item id="680511">幻影</item>
+	<item id="680512">您确定花费{0}金币召唤一个幻影？</item>
+	<item id="680513"><![CDATA[<font size='20'><b>+</b></font>]]></item>
+	<item id="680514"><![CDATA[退出跨服国战[br]在右上方领取]]></item>
+	<item id="680515">参战人数</item>
+	<item id="680516">点击选择道具</item>
+	<item id="680517">选择道具</item>
+	<item id="680518">可选择</item>
+	<item id="680519">已选择</item>
+	<item id="680520">随机选取</item>
+	<item id="680521">确定</item>
+	<item id="680522">{0}连胜，攻击cd减少{1}秒</item>
+	<item id="680523">下一幕开放新道具栏</item>
+	<item id="680524">无可用道具</item>
+	<item id="680525">你仍有可选择道具，是否继续选择？</item>
+	<item id="680526">继续选择</item>
+	<item id="680527">放弃选择</item>
+	<item id="680528">点击获得大炸弹道具</item>
+	<item id="680529">{0}连败，修塔和拆塔效果减{1}</item>
+	<item id="680530">{0}连胜</item>
+	<item id="680531"><![CDATA[<font color='#ff0000'>{0}连败</font>]]></item>
+	<item id="680532">挂机</item>
+	<item id="680533">布阵</item>
+	<item id="680534">设置</item>
+	<item id="680535">排行</item>
+	<item id="680536">强化</item>
+	<item id="680537">展开杀敌榜</item>
+	<item id="680538">点此收缩</item>
+	<item id="680539">杀敌榜前10名可在将军府领奖</item>
+	<item id="680540"><![CDATA[当前排名：<font color='#ffed00'><b>{0}</b></font>，杀敌<font color='#ffed00'><b>{1}</b></font>人]]></item>
+	<item id="680541">排名</item>
+	<item id="680542">角色</item>
+	<item id="680543">杀敌数</item>
+	<item id="680544">  将军骁勇善战，国战中冲锋陷阵，屡建奇功！[br]勇夺杀敌榜第{0}名，特封赏以下奖励，以资鼓励！</item>
+
+	<item id="680601"><![CDATA[探马来报！<font color='#{0}'>{1}</font>出现大量<font color='#da4646'>秘宝</font>！占领可获得宝箱，将军们还等什么，上啊！]]></item>
+	<item id="680602"><![CDATA[狭路相逢勇者胜！<font color='#{0}'>【{1}】</font>攻击<font color='#{2}'>【{3}】</font>失败了，获得<font color='#da4646'>{4}个宝箱</font>！]]></item>
+	<item id="680603"><![CDATA[<font color='#{0}'>【{1}】</font>击败了<font color='#{2}'>{3}、{4}</font>最后一个顽抗者，成功占领了该城！]]></item>
+	<item id="680604"><![CDATA[狭路相逢勇者胜！<font color='#{0}'>【{1}】</font>击败了<font color='#{2}'>【{3}】</font>，获得<font color='#da4646'>{4}个宝箱</font>！]]></item>
+	<item id="680605"><![CDATA[<font color='#{0}'>{1}【{2}】</font>占领了{3}！]]></item>
+	
+	<item id="680606"><![CDATA[<font color='#{0}'>【{1}】</font>占领了{2}！]]></item>
+	<item id="680607"><![CDATA[<font color='#{0}'>【{1}】</font>击败了<font color='#{2}'>{3}</font>最后一个顽抗者，成功占领了该城！]]></item>
+	
+	<item id="680701">国战奖励</item>
+	<item id="680702">有效期：{0}</item>
+	<item id="680703"><![CDATA[<font color='#FFFFCC'>国战共获得</font>  点券×{0}]]></item>
+	<item id="680704"><![CDATA[<font color='#FFFFCC'>胜负奖励：</font>  点券×{0}]]></item>
+	<item id="680705"><![CDATA[<font color='#FFFFCC'>杀敌奖励：</font>  点券×{0}]]></item>
+	<item id="680706">花费{0}金币再领一次</item>
+	<item id="680707">您确定花费{0}金币再领一次奖励吗？</item>
+	<item id="680708"><![CDATA[<font color='#{0}'>『{1}•{2}』</font>打爆了{3}敌方的{4}箭塔！]]></item>
+	<item id="680709"><![CDATA[<font color='#{0}'>『{1}•{2}』</font>在{3}建造了{4}箭塔！]]></item>
+	<item id="680710">大</item>
+	<item id="680711">小</item>
+	<item id="680712">血量：{0}/{1}</item>
+	<item id="680713">跨服国战奖励</item>
+	<item id="680714">{0}服[br]{1}</item>
+	<item id="680715"><![CDATA[<font color='#FFFFCC'>科技加成：</font>  点券×{0}]]></item>
+	
+	<!-- 国战提示信息 -->
+	<item id="680720"><![CDATA[<font color='#f0bc10'>攻击<font color='#{0}'>箭塔</font>，砍掉箭塔{1}点血</font>]]></item>	
+	<item id="680721"><![CDATA[<font color='#f0bc10'>攻击<font color='#{0}'>箭塔</font>死亡，原地复活</font>]]></item>
+	<item id="680722"><![CDATA[<font color='#f0bc10'>攻击<font color='#{0}'>箭塔</font>死亡，退回后方阵营</font>]]></item>
+	<item id="680723"><![CDATA[<font color='#f0bc10'>攻击<font color='#{0}'>箭塔</font>死亡，退回大本营</font>]]></item>	
+	<item id="680724"><![CDATA[<font color='#f0bc10'>【胜】你砍翻了<font color='#{0}'>{1}</font>，他原地复活</font>]]></item>
+	<item id="680725"><![CDATA[<font color='#f0bc10'>【胜】你砍翻了<font color='#{0}'>{1}</font>，他退回后方阵营</font>]]></item>
+	<item id="680726"><![CDATA[<font color='#f0bc10'>【胜】你砍翻了<font color='#{0}'>{1}</font>，他退回大本营</font>]]></item>	
+	<item id="680727"><![CDATA[<font color='#da4646'><font color='#f0bc10'>【胜】</font><font color='#{0}'>{1}</font>偷袭你失败，他原地复活</font>]]></item>
+	<item id="680728"><![CDATA[<font color='#da4646'><font color='#f0bc10'>【胜】</font><font color='#{0}'>{1}</font>偷袭你失败，他退回后方阵营</font>]]></item>
+	<item id="680729"><![CDATA[<font color='#da4646'><font color='#f0bc10'>【胜】</font><font color='#{0}'>{1}</font>偷袭你失败，他退回大本营</font>]]></item>	
+	<item id="680730"><![CDATA[<font color='#f0bc10'><font color='#da4646'>【败】</font>你攻击<font color='#{0}'>{1}</font>失败，原地复活</font>]]></item>
+	<item id="680731"><![CDATA[<font color='#f0bc10'><font color='#da4646'>【败】</font>你攻击<font color='#{0}'>{1}</font>失败，退回后方阵营</font>]]></item>
+	<item id="680732"><![CDATA[<font color='#f0bc10'><font color='#da4646'>【败】</font>你攻击<font color='#{0}'>{1}</font>失败，退回大本营</font>]]></item>	
+	<item id="680733"><![CDATA[<font color='#da4646'>【败】你被<font color='#{0}'>{1}</font>偷袭了，原地复活</font>]]></item>
+	<item id="680734"><![CDATA[<font color='#da4646'>【败】你被<font color='#{0}'>{1}</font>偷袭了，退回后方阵营</font>]]></item>
+	<item id="680735"><![CDATA[<font color='#da4646'>【败】你被<font color='#{0}'>{1}</font>偷袭了，退回大本营</font>]]></item>	
+	<item id="680736"><![CDATA[<font color='#FFFFCC'><font color='#{0}'>{1}</font>攻击<font color='#{2}'>{3}</font></font>]]></item>
+	<item id="680737"><![CDATA[<font color='#FFFFCC'>20秒就绪<font color='#{0}'>箭塔</font>开始攻击</font>]]></item>
+	<item id="680738"><![CDATA[<font color='#99FF00'><font color='#{0}'>{1}</font>骁勇善战拆掉了{2}<font color='#{3}'>箭塔</font></font>]]></item>
+	<item id="680739"><![CDATA[<font color='#99FF00'><font color='#{0}'>{1}</font>使用了<font color='{2}'>{3}箭塔</font></font>]]></item>
+	<item id="680740"><![CDATA[<font color='#FFFFCC'><font color='#{0}'>{1}</font>进入本场景</font>]]></item>
+	<item id="680741"><![CDATA[<font color='#FFFFCC'><font color='#{0}'>{1}</font>离开本场景</font>]]></item>
+	<item id="680742"><![CDATA[<font color='#FFFFCC'><font color='#{0}'>{1}</font>死亡离开城池</font>]]></item>
+	<item id="680743"><![CDATA[<font color='#99FF00'><font color='#{0}'>{1}</font>占领了<font color='{2}'>{3}</font>]]></item>
+	<item id="680744"><![CDATA[<font color='#99FF00'><font color='#{0}'>{1}</font>开启了秘宝城池</font>]]></item>	
+	<item id="680745"><![CDATA[<font color='#da4646'>你被使用道具，原地复活</font>]]></item>
+	<item id="680746"><![CDATA[<font color='#da4646'>你被使用道具，退回后方阵营</font>]]></item>
+	<item id="680747"><![CDATA[<font color='#da4646'>你被使用道具，退回大本营</font>]]></item>	
+	<item id="680748"><![CDATA[<font color='#da4646'>被<font color='#{0}'>箭塔</font>攻击血量损失{1}%</font>]]></item>
+	<item id="680749"><![CDATA[<font color='#da4646'>被<font color='#{0}'>箭塔</font>攻击血量损失{1}%，原地复活</font>]]></item>
+	<item id="680750"><![CDATA[<font color='#da4646'>被<font color='#{0}'>箭塔</font>攻击血量损失{1}%，退回后方阵营</font>]]></item>
+	<item id="680751"><![CDATA[<font color='#da4646'>被<font color='#{0}'>箭塔</font>攻击血量损失{1}%，退回大本营</font>]]></item>
+	<item id="680752"><![CDATA[<font color='#f0bc10'>修理箭塔，恢复我方箭塔{0}点血</font>]]></item>	
+	<item id="680753"><![CDATA[<font color='#da4646'><font color='#{0}'>{1}</font>砍翻了我</font>]]></item>
+	<item id="680754"><![CDATA[<font color='#da4646'><font color='#{0}'>{1}</font>使用道具偷袭了我</font>]]></item>
+	<item id="680755"><![CDATA[<font color='#da4646'><font color='#{0}'>敌方箭塔</font>击杀了我</font>]]></item>		
+	<item id="680756"><![CDATA[<font color='#da4646'>我被<font color='#{0}'>{1}</font>砍翻了</font>]]></item>
+	<item id="680757"><![CDATA[<font color='#da4646'>明枪易躲，<font color='#{0}'>{1}</font>的道具难防</font>]]></item>
+	<item id="680758"><![CDATA[<font color='#da4646'>我一直很好，直到我中了<font color='#{0}'>箭塔</font>一箭</font>]]></item>
+	<item id="680759"><![CDATA[<font color='#FFFFCC'>战事凶险！<font color='#{0}'>{1}</font>参与战斗，保家卫国！</font>]]></item>
+	<item id="680760"><![CDATA[<font color='#FFFFCC'><font color='#{0}'>{1}</font>招募幻影，威武真英雄！</font>]]></item>
+	
+	
+	<item id="680800">我方参战人数占优势或双方人数差距较小，拆塔、修塔维持正常效率</item>
+	<item id="680801">我方参战人数劣势较大，拆塔、修塔效果得到提升</item>
+	<item id="680802">我方参战人数劣势很大，拆塔、修塔效果得到大幅提升</item>
+	
+	<item id="680803">当前位置：{0}[br]城池效果：每次攻击塔, 有额外2点伤害</item>
+	<item id="680804">当前位置：{0}[br]城池效果：塔受到的伤害减少2点</item>
+	<item id="680805">当前位置：{0}[br]城池效果：本场景移动CD减半</item>
+	<item id="680806">当前位置：{0}[br]城池效果：本城池所有玩家, 每2分钟获得10点券</item>
+	<!--<item id="680807">当前位置：{0}[br]城池效果：本城池所有玩家, 每2分钟获得10点券</item>-->
+	
+	<item id="680810">当前处于死亡状态，复活cd结束后进入健康状态</item>
+	<item id="680811">当前处于重伤状态，被击杀后进入死亡状态</item>
+	<item id="680812">当前处于负伤状态，被击杀后进入重伤状态</item>
+	<item id="680813">当前处于健康状态，被击杀后进入负伤状态</item>
+	
+	<item id="680820">我方城池仅剩5个，将士背水奋战，拆塔、修塔效果+{0},攻击+{1},防御+{2}</item>
+	<item id="680821">我方城池仅剩3个，将士背水奋战，拆塔、修塔效果+{0},攻击+{1},防御+{2}</item>
+	<item id="680822">我方城池仅剩1个，将士背水奋战，拆塔、修塔效果+{0},攻击+{1},防御+{2}</item>
+	
+	<item id="680830">我方城池仅剩5个[br]将士背水奋战[br]拆塔、修塔效果+{0}[br]攻击+{1},防御+{2}[br]点击继续</item>
+	<item id="680831">我方城池仅剩3个[br]将士背水奋战[br]拆塔、修塔效果+{0}[br]攻击+{1},防御+{2}[br]点击继续</item>
+	<item id="680832">我方城池仅剩1个[br]将士背水奋战[br]拆塔、修塔效果+{0}[br]攻击+{1},防御+{2}[br]点击继续</item>
+	<item id="680833">我方参战人数劣势较大[br]获得{0}倍拆塔、修塔效果[br]点击继续</item>
+	<item id="680834">我方参战人数劣势很大[br]获得{0}倍拆塔、修塔效果[br]点击继续</item>		
+	
+<!-- 威望系统 -->
+	<item id="690000">威望</item>
+	<item id="690001">监[br]狱</item>
+	<item id="690002">任[br]务</item>
+	<item id="690003">官[br]职</item>
+	<item id="690004">文[br]官</item>
+	
+<!-- 活动界面 -->
+	<item id="700000">{0}：{1}/{2}</item>
+	<!--冲级奖励活动  -->
+	<item id="700001">- 冲级奖励 -</item>
+	<item id="700002">等级要求</item>
+	<item id="700003">威望要求</item>
+	<item id="700004">奖励</item>
+	<item id="700005">状态</item>
+	<item id="700006">（已领取）</item>
+	<item id="700007">领取</item>
+	<item id="700008">恭喜您获得{0}！</item>
+	<item id="700009">达成事件</item>
+	<item id="700010">{0}：</item>
+	<item id="700011">{0}/{1}</item>
+	<!--战斗次数提示（3.0）-->
+	<item id="700012"><![CDATA[<font color='#FFFFcb'>奖励海量银币宝石[br]每天定时双倍奖励</font>[br]<font color='#CBCC66'>{0}/{1}（每4小时+1）</font>]]></item>
+	<item id="700013"><![CDATA[<font color='#FFFFcb'>免费6倍通关奖励[br]额外奖励性价比高</font>[br]<font color='#CBCC66'>{0}/{1}（每4小时+1）</font>]]></item>
+	<item id="700014"><![CDATA[<font color='#FFFFcb'>达到积分可领奖[br]丰厚奖励等您来</font>[br]<font color='#CBCC66'>{0}/{1}（每天24:00刷新）</font>]]></item>
+	<item id="700015">此功能未开启</item>
+	<item id="700016">提示</item>
+	<item id="700017">点击前往设置面板</item>
+	<item id="700018">竞技场</item>
+	<item id="700019">蛮族入侵</item>
+	<item id="700020">积分赛</item>
+	<item id="700021">文官已完成2小时修炼，请将军前往修炼场提取经验！</item>
+	
+	<!-- 首次充值活动 -->
+	<item id="700100">- 首次充值活动 -</item>
+	<item id="700101">前往充值</item>
+	<item id="700102">活动倒计时：</item>
+	<item id="700103">活动规则：</item>
+	<item id="700104">1、活动期间首次充值1000金币，即可额外获得1000金币的充值礼金！</item>
+	<item id="700105"></item>
+	<item id="700106"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚进行了充值，已获得首次充值礼金{1}金币！]]></item>
+	<item id="700107">活动规则：</item>
+	<item id="700108"></item><!-- 链接URL地址 -->
+	<item id="700109">活动已结束</item>
+	<item id="700110">领取金币</item>
+	<item id="700111">已参加</item>
+	
+	<!-- 送钱啦活动 -->
+	<item id="700200">- 返金 -</item>
+	<item id="700201"><![CDATA[恭喜您获得<font color='#FFCC00'>{0}</font>返金]]></item>
+	<item id="700202"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚领取了<font color='#FFCC00'>{1}金币</font>。]]></item>
+	<item id="700203"><![CDATA[<font color='#FFCC00'>({0}后结束！)</font>]]></item>
+	<item id="700204">领取</item>
+	<item id="700205">已领取</item>
+	<item id="700206">领取成功</item>
+	<item id="700207">充值{0}金币赠送{1}金币！</item>
+	<item id="700208">充值</item>
+	<item id="700209">关闭</item>
+	<item id="700210"></item><!-- 充值链接URL地址 -->
+	<item id="700211"><![CDATA[今日累计充值：<font color='#FFCC00'>{0} 金币</font>]]></item>
+	
+	<!-- 宝石促销活动 -->
+	<item id="700300">- 宝石促销 -</item>
+	<item id="700301"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚购买了<font color='#FFCC00'>{1}</font>,今日总计购买了<font color='#FFCC00'>{2}</font>次]]></item>
+	<item id="700302">购买</item>
+	<item id="700303">可购买次数：{0}</item>
+	<item id="700304">{0}金币买{1}个1级宝石</item>
+	<item id="700305"><![CDATA[<font color='#76B0CF'>套餐A</font>]]></item>
+	<item id="700306"><![CDATA[<font color='#DEBB46'>套餐B</font>]]></item>
+	<item id="700307"><![CDATA[<font color='#A861DC'>套餐C</font>]]></item>
+	<item id="700308">获得{0} x{1}</item>
+	<item id="700309">套餐A</item>
+	<item id="700310">套餐B</item>
+	<item id="700311">套餐C</item>
+	<item id="700312"><![CDATA[<font color='#99FF00' >( {0}后结束！)</font>]]></item>
+	<item id="700313"><![CDATA[<font color='#FF0000' >( 活动已结束！)</font>]]></item>
+	<item id="700314">您确定花费{0}金币，购买{1}个1级宝石吗？</item>
+
+	<!-- 充值送宝箱活动 -->
+	<item id="700400">- 充值送宝箱 -</item>
+	<item id="700401">（剩余{0}个，点击开启）</item>
+	<item id="700402">{0}/{1}</item>
+	<item id="700403"><![CDATA[充值<font color='#FFCC00'>{0}</font>金币[br]奖励<font color='#FFCC00'>{1}</font>个宝箱]]></item>
+	<item id="700404"><![CDATA[奖励<font color='#FFCC00'>{0}</font>个宝箱[br]<font color='#99FF00'>（已领取）</font>]]></item>
+	<item id="700405">{0} x{1}</item>
+	<item id="700406"><![CDATA[<font color='#DEBB46'>（二倍暴击）</font>]]></item>
+	<item id="700407"><![CDATA[<font color='#E46565'>（四倍暴击）</font>]]></item>
+	<item id="700408"><![CDATA[<font color='#A861DC'>（十倍暴击）</font>]]></item>
+	<item id="700409"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚打开了宝箱,获得{1} x <font color='#FFCC00'>{2}</font>]]></item>
+	<item id="700410">今日累计充值</item>
+	<item id="700411"><![CDATA[<font color='#FF0000'>你没有宝箱了！</font>]]></item>
+	<item id="700412">每日23:59分系统将自动开启今日剩余宝箱。请提前开启或整理好包裹，以免因包裹不足损失宝箱奖励。</item>
+	
+	<!-- 菜肴促销活动 -->
+	<item id="700500">- 菜肴促销 -</item>
+	<item id="700501"><![CDATA[{0}金币买{1}个菜肴<font color='#99FF00'>[br]（每个精力+{2}）</font>]]></item>
+	<item id="700502"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚购买了<font color='#FFCC00'>{1}</font>,今日总计购买了<font color='#FFCC00'>{2}</font>次]]></item>
+	<item id="700503">获得{0} x{1}</item>
+	<item id="700504"><![CDATA[您确定花费{0}金币，购买{1}个菜肴]]></item>
+	
+	<!-- 消费送宝箱活动 -->
+	<item id="700600">- 消费送宝箱 -</item>
+	<item id="700601"></item>
+	<item id="700602"></item>
+	<item id="700603"><![CDATA[<font size='19'>您今日消费可领取的宝箱数已达到最大</font>]]></item>
+	<item id="700604"><![CDATA[消费<font color='#FFCC00'>{0}</font>金币[br]奖励<font color='#FFCC00'>{1}</font>个宝箱]]></item>
+	<item id="700605"><![CDATA[奖励<font color='#FFCC00'>{0}</font>个宝箱[br]<font color='#99FF00'>（已领取）</font>]]></item>
+	<item id="700606">今日累计消费</item>
+	
+	<!--充值活动-->
+	<item id="700700">- 充值活动 -</item>
+	<item id="700701">{0}/{1}</item>
+	<item id="700702">活动倒计时:{0}</item>
+	<item id="700703"><![CDATA[<font color='#FFCC00'>{0}</font>已领取{1}金币宝箱]]></item>
+	<item id="700704">你获得{0}×{1}</item>
+	<item id="700705">(已领取)</item>
+	<item id="700706">活动结束系统将自动开启未领取宝箱。请提前开启或整理好包裹,以免因包裹不足损失宝箱奖励。</item>
+	<item id="700707">(未开放)</item>
+	<item id="700708">点宝箱可领</item>
+	<item id="700709">银币×60000[br]增血药×5[br]精力菜×5</item>
+	<item id="700710">银币×200000[br]宝石×20[br]增血药×10[br]精力菜×20</item>
+	<item id="700711">银币×500000[br]宝石×100[br]增血药×10[br]攻击药×10[br]防御药×10[br]精力菜×60</item>
+	<item id="700712">银币×800000[br]宝石×120[br]增血药×10[br]攻击药×10[br]防御药×10[br]精力菜×80</item>
+	<item id="700713">银币×2000000[br]宝石×200[br]增血药×10[br]攻击药×10[br]防御药×10[br]精力菜×150</item>
+	
+	<!--武将菜肴活动-->
+	<item id="700800">- 武将促销 -</item>
+	<item id="700801"><![CDATA[<font color='#FF0000'>你还没有开放该功能，加油升级哦！</font>]]></item>
+	
+	<!--武斗会庆祝-->
+	<item id="700850">- 武斗会庆祝 -</item>
+	<item id="700851">热烈庆祝[br]{0}在本届武斗会中勇夺{1}积分</item>
+	<item id="700852">领取{0}胜点券</item>
+	<item id="700853">查看龙虎榜</item>
+	<item id="700854">您确定花费{0}金币购买{1}张点券吗？</item>
+	<item id="700855">获得{0}×{1}</item>
+	<item id="700856">返回</item>
+	<item id="700857">很遗憾，你的国家在争霸战中失利，仅获得基础奖励</item>
+	<item id="700858">冠军</item>
+	<item id="700859">亚军</item>
+	<item id="700860">四强</item>
+	<item id="700861">战胜国奖励：</item>
+	<item id="700862"><![CDATA[{0} {1}服  <font color='#DEBB46'>{2}</font>]]></item>
+	<item id="700863">已领取{0}点券</item>
+	<item id="700864">点券商城</item>
+	<item id="700865">领取点券</item>
+	<!--地产大亨活动-->
+	<item id="700900">- 地产大亨 -</item>
+	<item id="700901">将军府已花费{0}金币</item>
+	<item id="700902">农庄中已花费{0}金币</item>
+	<item id="700903">活动期间继续在将军府和农场消费可以增加奖励！</item>
+	<item id="700904">合计地产：{0}金币</item>
+	<item id="700905">{0}金币</item>
+	<item id="700906">可领取宝石{0}个</item>
+	<item id="700907"><![CDATA[<font color='#DEBB46'>【{0}】</font>刚刚领取{1}个宝石]]></item>
+	<item id="700908">金币×{0}</item>
+	
+<!-- 灵石促销活动 -->
+	<item id="701000">- 灵石促销 -</item>
+	<item id="701001"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚购买了<font color='#FFCC00'>{1}</font>,今日总计购买了<font color='#FFCC00'>{2}</font>次]]></item>
+	<item id="701002">购买</item>
+	<item id="701003">可购买次数：{0}</item>
+	<item id="701004">{0}金币买{1}个灵石</item>
+	<item id="701005"><![CDATA[<font color='#76B0CF'>套餐A</font>]]></item>
+	<item id="701006"><![CDATA[<font color='#DEBB46'>套餐B</font>]]></item>
+	<item id="701007"><![CDATA[<font color='#A861DC'>套餐C</font>]]></item>
+	<item id="701008">获得{0} x{1}</item>
+	<item id="701009">套餐A</item>
+	<item id="701010">套餐B</item>
+	<item id="701011">套餐C</item>
+	<item id="701012"><![CDATA[<font color='#99FF00' >( {0}后结束！)</font>]]></item>
+	<item id="701013"><![CDATA[<font color='#FF0000' >( 活动已结束！)</font>]]></item>
+	<item id="701014"><![CDATA[<font color='#76B0CF'>水</font>]]></item>
+	<item id="701015"><![CDATA[<font color='#E46565'>火</font>]]></item>
+	<item id="701016"><![CDATA[<font color='#DEBB46'>土</font>]]></item>
+	<item id="701017">寒铁</item>
+	<item id="701018">乌金</item>
+	<item id="701019">赤铜</item>
+	<item id="701020">您确定花费{0}金币，购买{1}个灵石吗？</item>
+	
+	<!--宝石通商活动-->
+	<item id="702000">- 宝石通商 -</item>
+	<item id="702001">卡牌等级越高可领取的宝石越多，点击卡牌升级，3张卡牌相同或相连触发额外奖励！</item>
+	<item id="702002">升级</item>
+	<item id="702003">领取</item>
+	<item id="702004">增加次数</item>
+	<item id="702005">领取次数：{0}    今日还可以增加{1}次</item>
+	<item id="702006">您的领取次数已用完，无法提升宝石牌等级！</item>
+	<item id="702007"><![CDATA[<font color='#DEBB46'>【{0}】</font>刚刚获得了一次<font color='{1}'>{2}级宝石的额外奖励！</font>获得了{3}个宝石！]]></item>
+	<item id="702008">{0}×{1}个</item>
+	<item id="702009">您确定花费{0}金币，增加一次通商吗？</item>
+	<item id="702010">您确定花费{0}金币，升级宝石等级吗？</item>
+	<item id="702011"><![CDATA[宝石×<font color='#ffff33'>{0}</font>]]></item>
+	<item id="702012">{0}级</item>
+	<item id="702013"><![CDATA[合计：宝石×<font color='#ffff33'>{0}</font>]]></item>
+	<item id="702014"><![CDATA[宝石×<font color='#ffff33'>?</font>]]></item>
+	<!--中秋活动-->
+	<item id="703000">- 中秋活动 -</item>
+	<item id="703001">领取</item>
+	<item id="703002">月饼礼盒</item>
+	<item id="703003">您确定花费{0}金购买月饼礼盒？</item>
+	<item id="703004">已领取月饼礼盒一件</item>
+	<item id="703005">月饼礼盒[br]免费领取</item>
+	<item id="703006">月饼礼盒[br]全部领完</item>
+	
+	<!--吃月饼大赛活动-->
+	<item id="703050">- 吃月饼大赛 -</item>
+	<item id="703051">规则：活动期间每食用一个蛋黄月饼，就可在23:00领3个莲蓉月饼</item>
+	<item id="703052">已食用蛋黄月饼：{0}</item>
+	<item id="703053">可领取莲蓉月饼：{0}个</item>
+	<item id="703054">已领取莲蓉月饼{0}个</item>
+	<item id="703055">23:00可领取积累的{0}个莲蓉月饼，每个月饼可恢复500精力。</item>
+	
+	<!-- 矿锄促销活动 -->
+	<item id="703200">- 矿锄促销 -</item>
+	<item id="703201"><![CDATA[工欲善其事，必先利其器！<font color='#99FF00'>({0}后结束)</font>]]></item>
+	<item id="703202"></item>
+	<item id="703203"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚购买了{1}个{2}]]></item>
+	<item id="703204">{0}个</item>
+	<item id="703205"><![CDATA[可购次数：<font color='#{0}'>{1}</font>]]></item>
+	<item id="703206">v天</item>
+	<item id="703207">v小时</item>
+	<item id="703208">v分</item>
+	<item id="703209">v秒</item>
+	<item id="703210"><![CDATA[<font color='#76B0CF'>银锄</font>]]></item>
+	<item id="703211"><![CDATA[<font color='#FFCC00'>金锄</font>]]></item>
+	<item id="703212">买光选中的矿锄</item>
+	<item id="703213">购买了{0}个{1}</item>
+	<item id="703214">你确定花费{0}金币</item>
+	<item id="703215">购买{0}个{1}吗？</item>
+	<item id="703216">我有：</item>
+	<item id="703217">x{0}</item>
+	<item id="703218"><![CDATA[<font color='#FF0000'>进入第二幕才可购买</font>]]></item>
+	
+	<!-- 赛马活动 -->
+	<item id="703300">- 赛马大会 -</item>
+	<item id="703301">未领奖励：{0}银币</item>
+	<item id="703302">马场消费：</item>
+	<item id="703303">{0}金币</item>
+	<item id="703304">活动免费享受：</item>
+	<item id="703305">活动倒计时：{0}</item>
+	<item id="703306">消费获赠：</item>
+	<item id="703307">{0}金币--奖励：{1}万银币</item>
+	<item id="703308">←</item>	
+	<item id="703309"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚领取了<font color='#{1}'>{2}万银币</font>]]></item>
+	<item id="703310">只记录马场中所有的金币消费项目</item>
+	<item id="703311">马场消费最低50金可领奖！</item>
+	<item id="703312"><![CDATA[下阶领奖需消费<font color='#FFCC00'>{0}金币</font>]]></item>
+	<item id="703313">本次活动奖励已经全部领取</item>
+	<item id="703314">活动获赠{0}万银币！</item>
+	<item id="703315">{0}银币</item>
+	
+	<!-- 今日运势 -->
+	<item id="703400">- 今日运势 -</item>
+	<item id="703401">持续时间：{0}-{1}[br]{2} [br]内容描述:{3}</item>
+	<item id="703402">无</item>
+	<item id="703403">是否升级当前运势？[br]升级后：{0}[br]每天可逆天改命一次，仅对自己有效</item>
+	
+	<!-- 元旦经验活动（赠礼） -->
+	<item id="703500">- 元旦赠礼 -</item>
+	<item id="703501">2倍经验丹[br]持续3小时</item>
+	<item id="703502">据点试炼所[br]需金币减半</item>
+	<item id="703503">领取2倍经验丹以后将自动服用(持续3小时)，是否领取并服用？</item>
+	<item id="703504"><![CDATA[<font color='#99FF00'>领取成功</font>]]></item>
+	<item id="703505">我知道了</item>
+	<item id="703506">领取</item>
+	<item id="703507">倒计时：{0}</item>
+	<item id="703508">第四幕可进入</item>
+	
+	<!-- 跨服排行奖励 -->
+	<item id="703600">- 排名奖励 -</item>
+	<item id="703601">有效期：{0}</item>
+	<item id="703602">{0}×{1}</item>
+	<item id="703603">灵石</item>
+	<item id="703605">奖励已领取</item>
+	<item id="703606">本赛季参战未满3场，奖励减半</item>
+	
+	<!-- 银币促销 -->
+	<item id="703700">- 银币促销 -</item>
+	<item id="703701"><![CDATA[<font color='#76B0CF'>套餐A</font>]]></item>
+	<item id="703702"><![CDATA[<font color='#DEBB46'>套餐B</font>]]></item>
+	<item id="703703"><![CDATA[<font color='#A861DC'>套餐C</font>]]></item>
+	<item id="703704"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚购买了<font color='#FFCC00'>{1}</font>,今日总计购买了<font color='#FFCC00'>{2}</font>次]]></item>
+	<item id="703705">可购买次数：{0}</item>
+	<item id="703706">{0}金币买{1}万银币</item>
+	<item id="703707">您确定花费{0}金币，购买{1}万银币吗？</item>
+	<item id="703708">获得{0}万银币</item>
+	
+	<!--春节活动-->
+	<item id="703800">- 恭贺新春 -</item>
+	<item id="703801"><![CDATA[<font color='#4b5c13'>活动一 </font><font color='#747a4c'>神降福禄 贺新春</font>]]></item>
+	<item id="703802"><![CDATA[<font color='#8baf1e'>活动一 </font><font color='#CBCC66'>神降福禄 贺新春</font>]]></item>
+	<item id="703803"><![CDATA[<font color='#4b5c13'>活动二 </font><font color='#747a4c'>饕餮盛宴 庆新年</font>]]></item>
+	<item id="703804"><![CDATA[<font color='#8baf1e'>活动二 </font><font color='#CBCC66'>饕餮盛宴 庆新年</font>]]></item>
+	<item id="703805"><![CDATA[<font color='#4b5c13'>活动三 </font><font color='#747a4c'>降妖伏魔 赢新礼</font>]]></item>
+	<item id="703806"><![CDATA[<font color='#8baf1e'>活动三 </font><font color='#CBCC66'>降妖伏魔 赢新礼</font>]]></item>
+	<item id="703807"><![CDATA[<font color='#747a4c'>新春新气象，祭祀祈福保平安；活动期间祭祀可获得双倍收益；普天同庆，赠送15次免费祭祀！</font>]]></item>
+	<item id="703808"><![CDATA[<font color='#CBCC66'>新春新气象，祭祀祈福保平安；活动期间祭祀可获得双倍收益；普天同庆，赠送15次免费祭祀！</font>]]></item>
+	<item id="703809"><![CDATA[<font color='#747a4c'>犒赏三军，登陆即赠20份水饺；每食用1份水饺当日返2份年糕；年糕、水饺食用恢复500精力！</font>]]></item>
+	<item id="703810"><![CDATA[<font color='#CBCC66'>犒赏三军，登陆即赠20份水饺；每食用1份水饺当日返2份年糕；年糕、水饺食用恢复500精力！</font>]]></item>
+	<item id="703811"><![CDATA[<font color='#747a4c'>年兽抢夺了百姓红包准备逃跑；请将军于13:00 21:00阻止；爆竹可重伤年兽，特赠5个爆竹！</font>]]></item>
+	<item id="703812"><![CDATA[<font color='#CBCC66'>年兽抢夺了百姓红包准备逃跑；请将军于13:00 21:00阻止；爆竹可重伤年兽，特赠5个爆竹！</font>]]></item>
+	<item id="703813">将军新年快乐！很多活动等你来~</item>
+	<item id="703814"><![CDATA[<font color='#ff0000'>没有购买或领取次数</font>]]></item>
+	<item id="703815">您是否花费{0}金币购买菜肴？</item>
+	<item id="703816">规则：活动期间每食用一个水饺，在23:00后可领取2份年糕</item>
+	<item id="703817">已食用水饺数：{0}</item>
+	<item id="703818">可领取年糕：{0}份</item>
+	<item id="703819">已领取年糕{0}份</item>
+	<item id="703820">23:00可领取积累的{0}份年糕，每份年糕可恢复500精力。</item>
+	<item id="703821">已领取年糕{0}个</item>
+	<item id="703822"><![CDATA[<font color='#747a4c'>15</font>]]></item>
+	<item id="703823"><![CDATA[<font color='#CBCC66'>15</font>]]></item>
+	<item id="703824"><![CDATA[<font color='#747a4c'>20</font>]]></item>
+	<item id="703825"><![CDATA[<font color='#CBCC66'>20</font>]]></item>
+	<item id="703826"><![CDATA[<font color='#747a4c'>5</font>]]></item>
+	<item id="703827"><![CDATA[<font color='#CBCC66'>5</font>]]></item>
+	<item id="703828">免费祭祀：进入祭祀界面使用</item>
+	<item id="703829">水饺：食用恢复500精力</item>
+	<item id="703830">爆竹：使用后对年兽造成大量伤害，并可获得红包奖励</item>
+	<item id="703831">水饺</item>
+	<item id="703832">爆竹</item>
+	
+	<!--五一活动-->
+	<item id="703900">五一活动</item>
+	<item id="703901"><![CDATA[<font color='#4b5c13'>活动一 </font><font color='#747a4c'>佳肴酬勤 庆五一</font>]]></item>
+	<item id="703902"><![CDATA[<font color='#8baf1e'>活动一 </font><font color='#CBCC66'>佳肴酬勤 庆五一</font>]]></item>
+	<item id="703903"><![CDATA[<font color='#4b5c13'>活动二 </font><font color='#747a4c'>节日劳作 增硕果</font>]]></item>
+	<item id="703904"><![CDATA[<font color='#8baf1e'>活动二 </font><font color='#CBCC66'>节日劳作 增硕果</font>]]></item>
+	<item id="703905"><![CDATA[<font color='#4b5c13'>活动三 </font><font color='#747a4c'>驱贼降盗 保家园</font>]]></item>
+	<item id="703906"><![CDATA[<font color='#8baf1e'>活动三 </font><font color='#CBCC66'>驱贼降盗 保家园</font>]]></item>
+	<item id="703907"><![CDATA[<font color='#747a4c'>菜肴喜迎五一劳动节，登陆赠精力，每天登陆即赠15个小鸡炖蘑菇，每日领取一次</font>]]></item>
+	<item id="703908"><![CDATA[<font color='#CBCC66'>菜肴喜迎五一劳动节，登陆赠精力，每天登陆即赠15个小鸡炖蘑菇，每日领取一次</font>]]></item>
+	<item id="703909"><![CDATA[<font color='#747a4c'>工欲善其事，必先利其器！！矿锄buff可增加金银矿锄收益，2小时内金银矿锄收益增加1倍</font>]]></item>
+	<item id="703910"><![CDATA[<font color='#CBCC66'>工欲善其事，必先利其器！！矿锄buff可增加金银矿锄收益，2小时内金银矿锄收益增加1倍</font>]]></item>
+	<item id="703911"><![CDATA[<font color='#747a4c'>山贼猖獗，请将军前去守卫农庄，共可抵御3次山贼入侵，成功守卫3次可领取免费祭祀</font>]]></item>
+	<item id="703912"><![CDATA[<font color='#CBCC66'>山贼猖獗，请将军前去守卫农庄，共可抵御3次山贼入侵，成功守卫3次可领取免费祭祀</font>]]></item>
+	<item id="703913">将军五一快乐！很多活动等你来哦~</item>
+	<item id="703914"><![CDATA[<font color='#ff0000'>不可购买或领取</font>]]></item>
+	<item id="703915">您是否花费{0}金币购买菜肴？</item>
+	<item id="703916">免费</item>
+	<item id="703917">已食用水饺数：{0}</item>
+	<item id="703918">可领取年糕：{0}份</item>
+	<item id="703919">已领取年糕{0}份</item>
+	<item id="703920">23:00可领取积累的{0}份年糕，每份年糕可恢复500精力。</item>
+	<item id="703921">已领取年糕{0}个</item>
+	<item id="703922"><![CDATA[<font color='#747a4c'>15</font>]]></item>
+	<item id="703923"><![CDATA[<font color='#CBCC66'>15</font>]]></item>
+	<item id="703924"><![CDATA[<font color='#747a4c'></font>]]></item>
+	<item id="703925"><![CDATA[<font color='#CBCC66'></font>]]></item>
+	<item id="703926"><![CDATA[<font color='#747a4c'>10</font>]]></item>
+	<item id="703927"><![CDATA[<font color='#CBCC66'>10</font>]]></item>
+	<item id="703928">小鸡炖蘑菇：食用恢复300精力</item>
+	<item id="703929">金银矿锄buff：领取后2小时内金银矿锄收益增加100%</item>
+	<item id="703930">免费祭祀：进入祭祀界面使用</item>
+	<item id="703931">菜肴</item>
+	<item id="703932">高档矿锄增效</item>
+	<item id="703933">{0}/3次</item>
+	<item id="703934">小鸡炖蘑菇</item>
+	<item id="703935">免费</item>
+	<item id="703936"><![CDATA[<font color='#747a4c'>{0}</font>]]></item>
+	<item id="703937"><![CDATA[<font color='#CBCC66'>{0}</font>]]></item>
+	
+	<!-- 经验副本半价活动 -->
+	<item id="704300">- 经验赠礼 -</item>
+	<item id="704301">2倍经验丹[br]持续1小时</item>
+	<item id="704302">据点试炼所[br]需金币减半</item>
+	<item id="704303">领取2倍经验丹以后将自动服用(持续1小时)，是否领取并服用？</item>
+	<item id="704304"><![CDATA[<font color='#99FF00'>领取成功</font>]]></item>
+	<item id="704305">我知道了</item>
+	<item id="704306">领取</item>
+	<item id="704307">倒计时：{0}</item>
+	<item id="704308">第四幕可进入</item>
+	
+	<!--夺宝活动-->
+	<item id="704500"><![CDATA[<font color='#CB751E'>【{0}】</font>刚刚夺得{1}*{2}]]></item>
+	<item id="704501"><![CDATA[<font color='#81E8FF'>【{0}】</font>刚刚夺得{1}*{2}]]></item>
+	<item id="704502">夺宝活动</item>
+	<item id="704503">我要夺宝</item>
+	<item id="704504">副本已开启</item>
+	<item id="704505">前往</item>
+	<item id="704506">夺宝倒计时：{0}</item>
+	<item id="704507">当前已有{0}名玩家参与夺宝</item>
+	<item id="704508">点击图标获得奖励</item>
+	<item id="704509"><![CDATA[<font color='#CB751E'>{0}</font>]]></item>
+	<item id="704510"><![CDATA[<font color='#81E8FF'>{0}</font>]]></item>
+	<item id="704511">报名成功！</item>
+	<item id="704512">我的序号：{0}</item>
+	<item id="704513">？？？</item>
+	<item id="704514">杀五毒，护国卫民保平安！</item>
+	<item id="704515">开香囊，招财进宝迎端午！</item>
+	<item id="704516"><![CDATA[<font color='#ff0000'>当前不可进入</font>]]></item>
+	<item id="704517">端午节到了，五毒兽又要出现了~[br]攻击五毒兽，使用爆竹可得香囊。[br]击杀者可额外获得50个香囊。[br]五毒兽死亡后可开启宝箱奖励，[br]开启宝箱个数由伤害榜排名决定。[br]副本中服用攻防血buff药无效，[br]提高上阵武将攻击可提高伤害。</item>
+	<item id="704518">相关说明</item>
+	<item id="704519">本轮未报名</item>
+	<item id="704520"><![CDATA[<font color='#ff0000'>小于20级不可进入</font>]]></item>
+	<item id="704521"><![CDATA[<font color='#ff0000'>活动已结束</font>]]></item>
+	
+	
+	<!-- 集市模块 -->
+	<item id="710000">集市</item>
+	<item id="710001">客官，时间就是金钱！</item>
+	<item id="710002">购买次数：{0}/{1}(每半小时+1)</item>
+	<item id="710003">购买</item>
+	<item id="710004"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="710005"><![CDATA[<font color='#{0}'>数量:{1}</font>]]></item>
+	<item id="710006">剩余刷新时间 {0}</item>
+	<item id="710007"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚通过{1}次购买抢到了{2}个【{3}】]]></item>
+	<item id="710008">你购买了{0}×{1}</item>
+	<item id="710009">是否花费{0}金币购买该物品</item>
+	
+	<!--商业系统-->
+	<item id="720000">集市</item>
+	<item id="720001">商会</item>
+	<item id="720002">宝物</item>
+	<item id="720003">点券</item>
+	<item id="720004">马铃</item>
+	
+	<!--商会模块-->
+	<item id="720100">商会</item>
+	<item id="720101">购买次数：{0}/{1}(每半小时+1)</item>
+	<item id="720102">今天还可免费提升贸易额{0}次</item>
+	<item id="720103">刷新商人</item>
+	<item id="720104">批准本次贸易</item>
+	<item id="720105">提高贸易额</item>
+	<item id="720106"><![CDATA[<font color='#{0}'>贸易额:{1}额</font>]]></item>
+	<item id="720107">{0}×{1}</item>
+	<item id="720108">小</item>
+	<item id="720109">中</item>
+	<item id="720110">大</item>
+	<item id="720111">高</item>
+	<item id="720112">巨</item>
+	<item id="720113">超</item>
+	<item id="720114"><![CDATA[确定花费<font color='#DEBB46'>{0}金币</font>提高贸易额吗？(提升至{1})</font>]]></item>
+	<item id="720115"></item>
+	<item id="720116">特殊事件：回扣{0}</item>
+	<item id="720117"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	<item id="720118">无</item>
+	<item id="720119">本次贸易获得{0}：{1}</item>
+	<item id="720120">“期待下次合作！”商人边笑着边塞给你{0}</item>
+	<item id="720121">通商科技：</item>
+	<item id="720122">{0}+{1}</item>
+	<item id="720123">刷新商人需要花费{0}金币，确定刷新？</item>
+	<item id="720124">神秘包裹</item>
+	<item id="720125">商人亲密度：</item>
+	<item id="720126">消耗{0}精力</item>
+	<item id="720127">[br]神秘宝物×1</item>
+	<item id="720128">3个商人等级相同或相连可获得额外贸易！</item>
+	<item id="720129">{0}/{1}</item>
+	<item id="720130">传闻商人们会给更高级的将军额外的优惠</item>
+	
+
+	
+	<!-- 武斗报名 -->
+	<item id="730000">武斗报名</item>
+	<item id="730001">武斗大会</item>
+	<item id="730002">火热报名中！</item>
+	<item id="730003">——活动举办时间：{0}——</item>
+	<item id="730004">点击报名</item>
+	<item id="730005">汉失其鹿，天下逐之。东汉末年，朝廷失德。[br]遂英雄群起，誓以武功论高低！[br]是要匡扶汉室？又或是称霸立业？[br]还看这武斗中，谁敢笑傲群雄！</item>
+	<item id="730006">您当前可报名{0}级别组比赛</item>
+	<item id="730007">当前活动未开启</item>
+	<item id="730008">当前{0}人已报名</item>
+	<item id="730009">您的等级不满足参赛条件</item>
+	<item id="730010">胜场越多获得的宝箱越多</item>
+	<item id="730011">普通宝箱</item>
+	<item id="730012">荣誉宝箱</item>
+	<item id="730013">您的等级不满足参赛条件(最低组别要求{0}级别)</item>
+	
+	<!-- 武斗战绩 -->
+	<item id="732000">战绩</item>
+	<item id="732001"><![CDATA[胜利:<font color='#FFFF33'>{0}</font>胜  排名:<font color='#FFFF33'>{1}</font>]]></item>
+	<item id="732002">胜利</item>
+	<item id="732003">排名</item>
+	<item id="732004">角色</item>
+	<item id="732005">等级</item>
+	<item id="732006">对战战绩</item>
+	<item id="732007">第{0}场</item>
+	<item id="732008">第{0}回合</item>
+	<item id="732009">轮空</item>	
+	<item id="732010">您未成功报名本届武斗会</item>
+	<item id="732011"><![CDATA[积分:<font color='#FFFF33'>{0}  </font>]]></item>
+	<item id="732012">排名奖励</item>
+	<item id="732013">领取了排名奖励{0}点券</item>
+	<item id="732014"><![CDATA[<font color='#FFFF33'>{0}</font> ]]></item>
+	<item id="732015">积分</item>
+	
+	<!-- 武斗会场景 -->
+	<item id="733000">比赛准备中:{0}</item>
+	<item id="733001">比赛准备中</item>
+	<item id="733002">同步</item>
+	<item id="733003">Lv{0}</item>
+	<item id="733004">前军</item>
+	<item id="733005">中军</item>
+	<item id="733006">后军</item>
+	<item id="733007">{0}胜</item>
+	<item id="733008">您确定花费{0}金币，使获胜奖励翻倍！</item>
+	<item id="733009">同步成功</item>
+	<item id="733010">使用成功</item>
+	<item id="733011">武斗宝箱</item>
+	<item id="733012">{0} {1}服</item>
+	<item id="733013">您本场比赛轮空</item>
+	<item id="733014">购买更多</item>
+	<item id="733015">获胜奖励</item>
+	<item id="733016">{0}[br]点击购买</item>
+	<item id="733017">您确定花费{0}金币，购买此药品吗？</item>
+	<item id="733018">您确定花费{0}金币，购买全部状态吗？</item>
+	<item id="733019">全部购买</item> 
+	<item id="733020">{0}级别武斗会顺利闭幕</item>
+	<item id="733021">本届的武斗会已经结束，敬请待下一届武斗会</item>
+	<item id="733022">冠军</item>
+	<item id="733023">亚军</item>
+	<item id="733024">季军</item>
+	<item id="733025">优胜</item>
+	<item id="733026">下一回合</item>
+	<item id="733027">返回</item>
+	<item id="733028">5秒自动进入下一回合</item>
+	<item id="733029">10秒自动刷新</item>
+	<item id="733031">报名完成，等待安排比赛！</item>
+	<item id="733032">比赛安排完成，即刻开战！</item>
+	<item id="733033">强敌来袭，准备迎战！</item>
+	<item id="733034">布阵阶段已经结束，开战！</item>
+	<item id="733035">比赛结束，等待下一回合安排。</item>
+	<item id="733036">最高点券×{0}</item>
+	<item id="733037">点击[br]购买</item>
+	<item id="733038">每次开启10个宝箱</item>
+	<item id="733039">你确认花费{0}金币再开启{1}个荣誉宝箱吗？</item>
+	<item id="733040">你确定进入武斗会吗？</item>
+	<item id="733041">失败获得{0}点券</item>
+	<item id="733042">战胜方存活武将越多，排名积分和点券奖励越多</item>
+	
+	<!-- 赛马场景 -->
+	<item id="740000">赛马开始倒计时 {0}</item>
+	<item id="740001">玩家</item>
+	<item id="740002">马匹</item>
+	<item id="740003">赛道</item>
+	<item id="740004">Lv{0}</item>
+	<item id="740005">离开</item>
+	<item id="740006">第{0}名</item>
+	<item id="740007"><![CDATA[你现在处于<font color='#FFCC00'>第{0}名</font>，当前<font color='#FFCC00'>第{1}圈</font>]]></item>
+	<item id="740008">本次赛马的玩家是：</item>
+	<item id="740009">- 您的赛马名次获得战斗力 -</item>
+	<item id="740010">继续赛马</item>
+	<item id="740011"><![CDATA[<font color='#FFCC00'>第{0}名：</font>{1}]]></item>
+	<item id="740012"><![CDATA[<font color='#FFCC00'>战斗力：</font>+{0}]]></item>
+	<item id="740013"><![CDATA[<font color='#00FF00' size='18'>{0}</font>]]></item>
+	<item id="740014"><![CDATA[<font color='#FFCC00'>奖励：</font>]]></item>
+	<item id="740015"><![CDATA[<font color='#E5EF99'>{0}</font> +{1}  ]]></item>
+	<item id="740016">排名</item>
+	<item id="740017">奖励</item>
+	<item id="740018">战斗力+{0}</item>
+	<item id="740019">{0}×{1}</item>
+	<item id="740020">经验+{0}</item>
+
+
+<!-- 选择马匹模块 -->
+	<item id="750000">选择马匹</item>
+	<item id="750001">选择马匹赛马</item>
+	<item id="750002">选定参赛</item>
+	<item id="750003"><![CDATA[<font color='#CBCC66'>战斗力:</font>{0}]]></item>
+	<item id="750004"><![CDATA[<font color='#CBCC66'>可参赛次数:</font>{0}]]></item>
+	<item id="750005"><![CDATA[<font color='#CBCC66'>战马:</font>{0}]]></item>
+	<item id="750006"><![CDATA[<font color='#CBCC66'>参赛次数已经用完!</font>{0}]]></item>
+	
+	<!-- 马技能 -->
+	<item id="750100">马匹技能</item>
+	<item id="750101">更换马匹</item>
+	<item id="750102">刷新技能</item>
+	<item id="750103">开始比赛</item>
+	<item id="750104">提升等级</item>
+	<item id="750105">等级:{0}</item>
+	<item id="750106"><![CDATA[<font color='#CBCC66'>战斗力:</font>{0}]]></item>
+	<item id="750107"><![CDATA[<font color='#CBCC66'>可参赛次数:</font>{0}]]></item>
+	<item id="750108">升级技能需要{0}金币，是否升级？</item>
+	<item id="750109">刷新技能需要{0}金币，是否刷新？</item>
+    <item id="750110">规则说明</item>
+	<item id="750111">速度、名次、养马师影响马匹战力[br]赛马技能越高，增加战斗力越多[br]坐骑战斗力越高，养马师经验越多</item>
+	
+	<!-- 技能说明 -->
+	<item id="750200">提升坐骑的体质，使坐骑更能稳定的发挥出良好的成绩。</item>
+	<item id="750201">提升坐骑的幸运，使坐骑更容易避免赛马中的意外减速。</item>
+	<item id="750202">提升坐骑的爆发力，使坐骑更容易爆发出超绝的速度。</item>
+	<item id="750203">提升坐骑的奔跑技巧，使坐骑可以最大限度的发挥潜能。</item>
+	
+	<!-- 新的马场界面 -->
+	<item id="750300">马场信息</item>
+	<item id="750301">空栏</item>
+	<item id="750302">尚未开启</item>
+	<item id="750303">初始战斗力：{0}</item>
+	<item id="750304"><![CDATA[点击图标可喂养<font color='#DEBB46'>{0}/{1}</font>次（每半小时+1）]]></item>
+	<item id="750305">养马师 lv.{0}</item>
+	<item id="750306">技能升级</item>
+	<item id="750307">lv.{0}</item>
+	<item id="750308">养马师</item>
+	<item id="750309"><![CDATA[喂养<font color='#DEBB46'>{0}</font>次后赛马次数提升为<font color='#DEBB46'>{1}</font>]]></item>
+	<item id="750310">{0}/{1}</item>
+	<item id="750311">马匹总战斗力：</item>
+	<item id="750312">放弃</item>
+	<item id="750313"><![CDATA[<font color='#E46565'>可出栏</font>]]></item>
+	<item id="750314">选配坐骑套装提高战斗力</item>
+	<item id="750315">喂养获得的战斗力</item>
+	<item id="750316">赛马获得的战斗力</item>
+	<item id="750317">坐骑的总战斗力</item>
+	<item id="750318">完成{0}次喂养和{1}次赛马后可出栏</item>
+	<item id="750319">养成进度</item>
+	<item id="750320">出栏</item>
+	<item id="750321">完成全部喂养和赛马后自动出栏</item>
+	<item id="750322">选配坐骑套装提高战斗力</item>
+	<item id="750323">exp</item>
+	<item id="750324">养马师升级！</item>
+	<item id="750325">LV.{0}----LV.{1}</item>
+	<item id="750326">养马师等级越高，养的马匹战斗力越高</item>
+	<item id="750327"><![CDATA[总战斗力：<font color='#DEBB46'>{0}</font>]]></item>
+	<item id="750328">{0}次</item>
+	<item id="750329">喂养次数</item>
+	<item id="750330">(每{0}分钟+1)</item>
+	<item id="750331">赛马</item>
+	<item id="750332">加满次数</item>
+	<item id="750333">你是否花费{0}金币把喂养次数提升{1}次？</item>
+	<item id="750334">+{0}次</item>
+	<item id="750335">请提升主将等级</item>
+	<item id="750336">免费提升{0}次</item>
+	<item id="750337">当前享有特权：开启VIP专属马料</item>
+	<item id="750338">充值到VIP7，开启VIP专属马料，点击前往充值</item>
+		
+	<!-- 跨服拍卖模块 -->
+	<item id="760000">宝物</item>
+	<item id="760001">跨服宝物拍卖</item>
+	<item id="760002">开放时间[br]({0}:00~{1}:00)</item>
+	<item id="760003">我要拍卖</item>
+	<item id="760004">统：+{0}</item>
+	<item id="760005">智：+{0}</item>
+	<item id="760006">勇：+{0}</item>
+	<item id="760007">出价：</item>
+	<item id="760008">第{0}次竞价</item>
+	<item id="760009">竞价</item>
+	<item id="760010"><![CDATA[<font color='#FFCC00'>【{0}】</font>通过{1}次竞价买到了{2}（统：+{3} 智：+{4} 勇：+{5}）]]></item>
+	<item id="760011">你确定出{0}金币竞价吗？</item>
+	<item id="760012">您的充值金币余额不足。</item>
+	<item id="760013"><![CDATA[仅能使用充值金币进行竞价[br]（可用充值金币：<font color='#ffff33'>{0}</font>）]]></item>
+	<item id="760014">当前没有物品在拍卖！</item>
+	<item id="760015">开启</item>
+	<item id="760016">关闭</item>
+	<item id="760017">自动[br]吃菜</item>
+	<item id="760018">开启自动补精力</item>
+	<item id="760019">关闭自动补精力</item>
+	<item id="760020">拍卖者：</item>
+	<item id="760021">竞拍者：</item>
+	<item id="760022">{0} {1}服</item>
+	<item id="760023">马铃</item>
+	<item id="760024">战斗力[br]+{0}</item>
+	<item id="760025"><![CDATA[<font color='#FFCC00'>【{0}】</font>通过{1}次竞价买到了{2}（战斗力：+{3}）]]></item>
+	
+	
+	<!-- 我的拍卖界面 -->
+	<item id="760100">我要拍卖</item>
+	<item id="760101">可拍卖宝物</item>
+	<item id="760102">拍卖</item>
+	<item id="760103">下架</item>
+	<item id="760104">拍卖价格</item>
+	<item id="760105">已上架宝物</item>
+	<item id="760106">拍卖中</item>
+	<item id="760107">已卖出</item>
+	<item id="760108">你确认以{0}金币的价格拍卖吗？</item>
+	<item id="760109">你确认将该物品下架吗？</item>
+	<item id="760110">你当前没有可拍卖的宝物[br]黄色及黄色以上品质方可拍卖</item>
+	<item id="760111">你还没有上架任何宝物</item>
+	<item id="760112">可拍卖马铃</item>
+	<item id="760113">已上架马铃</item>
+	<item id="760114">你当前没有可拍卖的马铃[br]红色、紫色品质可拍卖</item>
+	<item id="760115">你还没有上架任何马铃</item>
+	
+	
+	<!-- 点券商城 -->
+	<item id="761000">点券商城</item>
+	<item id="761001"><![CDATA[参加国战、跨服国战、武斗会、争霸赛可获得点券，当前剩余<font color='#DEBB46' size='18'><b>{0}</b></font>点券]]></item>
+	<item id="761002"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚兑换了<font color='#FFCC00'>{1}</font>{2}]]></item>
+	<item id="761003">还需消耗{0}点券可获赠一个宝箱</item>
+	<item id="761004"><![CDATA[<font color='#ff0000'>{0}</font>]]></item>
+	<item id="761005"><![CDATA[<font color='#FFCC00'>【{0}】</font>刚刚兑换了<font color='#FFCC00'>{1}</font>个{2}]]></item>
+		
+	<!--积分排行赛-->
+	<item id="770000">{0}名</item>
+	<item id="770001">挑战</item>
+	<item id="770002">查看</item>
+	<item id="770003">排行列表发生变化</item>
+	<item id="770004">您领奖时的排名：{0}</item>
+	<item id="770005">获得奖励：</item>
+	<item id="770006">你挑战{0}成功</item>
+	<item id="770007">你挑战{0}失败</item>
+	<item id="770008">【{0}】击败了你！</item>
+	<item id="770009">领奖</item>
+	<item id="770010">排位赛奖励</item>
+	<item id="770011">你获得银币×{0}，1级宝石×{1}</item>
+	<item id="770012">我的排名：{0}</item>
+	<item id="770013">×{0}</item>
+	<item id="770014">规则说明</item>
+	<item id="770015">排位赛奖励：[br]{0}[br](每天22点发放奖励)</item>
+	<item id="770016">领奖还需</item>
+	<item id="770017"><![CDATA[挑战机会：<font color='#f5d300' size='18'><b>{0}</b></font>次]]></item>
+	<item id="770018">查看战况</item>
+	<item id="770019"><![CDATA[<font color='#ff0000'>战斗中不可挑战对方</font>]]></item>
+	<item id="770020"><![CDATA[<font color='#ff0000'>该场景不可复仇</font>]]></item>
+	<item id="770021"><![CDATA[<font color='#ff0000'>自动占矿不可复仇</font>]]></item>
+	<item id="770022">每天有10次免费挑战机会[br]每天首次获胜可得100点券奖励[br]挑战成功可获得积分，失败无惩罚[br]挑战敌对势力对手可获得更多积分[br]被人挑战战败后积分-1[br]积分达到要求后可领取奖励</item>
+	<item id="770023">排名</item>
+	<item id="770024">角色</item>
+	<item id="770025">积分</item>
+	<item id="770026"><![CDATA[<font color='#{0}'>+{1}积分</font>]]></item>
+	<item id="770027">{0}击败了我{1}次，积分{2}</item>
+	<item id="770028">挑战{0}胜利，积分{1}</item>
+	<item id="770029">挑战{0}失败，积分{1}</item>
+	<item id="770030"><![CDATA[<font color='#ff0000'>{0}</font>]]></item>
+	<item id="770031"><![CDATA[<font color='#f5d300'>+{0}</font>]]></item>
+	<item id="770032"><![CDATA[<font color='#ff0000'>【负】</font>]]></item>
+	<item id="770033"><![CDATA[<font color='#f5d300'>【胜】</font>]]></item>
+	<item id="770034">没有该种奖励</item>
+	<item id="770035">点击查看</item>
+	<item id="770036">积分</item>
+	<item id="770037">奖励：{0}</item>
+	<item id="770038">已领取全部积分奖励</item>
+	<item id="770039"><![CDATA[<font color='#f5d300' size='18'><b>{0}</b></font>]]></item>
+	<item id="770040">请领取积分奖励</item>
+	<item id="770041"><![CDATA[<font color='#ff0000'>挑战次数已用完</font>]]></item>
+	<item id="770042">再战一次</item>
+	<item id="770043">您确定花费{0}金币增加一次挑战机会吗？</item>
+	
+	<!--科技面板-->
+	<item id="780000">科技</item>
+	<item id="780001">科技名</item>
+	<item id="780002">开启条件</item>
+	<item id="780003">提示</item>
+	<item id="780004"><![CDATA[<font color='#FFCC00'>独立通关<font color='#CBCD67'>{0}</font>开启</font>]]></item>
+	<item id="780005">此功能还没有开放</item>
+    <item id="780006">奖励：{0}个{1}</item>
+	
+	<!--蛮族入侵-->
+	<item id="790000">蛮族入侵</item>
+	<item id="790001">通关次数：{0}/{1}（每{2}小时+1）</item>
+	<item id="790002">进入条件：{0}级可进入</item>
+	<item id="790003">在蛮族士兵的的攻击中存活越久奖励越多，击败副本内所有的蛮族士兵可以获得全额奖励。</item>
+	<item id="790004">点击挑战</item>
+	<item id="790005">退出</item>
+	<item id="790006">×{0}</item>
+	<item id="790007">通关副本获得奖励：[br]{0}</item>
+	<item id="790008">{0}/{1}波</item>
+	<item id="790009">战斗间隔时,点击使用道具</item>
+	<item id="790010">结算面板</item>
+	<item id="790011">本次抵御蛮族总共击退了{0}波敌人，今日还可挑战{1}/{2}次</item>
+	<item id="790012">奖励已发放，您可花费{0}金币加倍领取奖励！</item>
+	<item id="790013">你确定花费{0}金币让奖励翻倍吗？[br](不与通关6倍奖励叠加)</item>
+	<item id="790014">提示：40级之后每10级将新增一个蛮族入侵的副本，挑战越高等级的副本，奖励将会大幅度提升。当你的等级超过副本10级时，奖励则会按照一定比例减少。奖励最多可降为0。</item>
+	<item id="790015">已使用{0}</item>
+	<item id="790016">副本结束[br]可以领取</item>
+	<item id="790017">银币</item>
+	<item id="790018">宝石</item>
+	<item id="790019">灵石</item>
+	<item id="790020">双倍奖励已发放</item>
+	<item id="790021">轰！！！炸飞了！！！</item>
+	<item id="790022">您的等级太高[br]进入该副本将不会获得奖励</item>
+	<item id="790023">您的等级太高，该副本将不会获得奖励。</item>
+	<item id="790024">六倍通关奖励可领取{0}次！</item>
+	<item id="790025">六倍奖励已发放！</item>
+	<item id="790026"><![CDATA[<b><font size='20'>快速[br]开始</font></b>]]></item>
+	<item id="790027"><![CDATA[<font color='#FFFFCC'>点击快速出击</font>   赏银：{0}]]></item>	
+	<item id="790028"><![CDATA[<b>{0}</b><font color='#8D9E3D' size='16'>( Lv.{1})</font>]]></item>
+	<item id="790029"><![CDATA[<font color='#00CCFF'>水({0})</font>]]></item><!--水属性-->
+	<item id="790030"><![CDATA[<font color='#FF3300'>火({0})</font>]]></item><!--火属性-->
+	<item id="790031"><![CDATA[<font color='#FFCC00'>土({0})</font>]]></item><!--土属性-->
+	<item id="790032">领取</item>
+	<item id="790033">返回</item>	
+	<item id="790034">银币×{0}</item>
+	<item id="790035">宝石×{0}</item>
+	<item id="790036">灵石×{0}</item>
+	<item id="790037">奖励已发放</item>
+	<item id="790038">额[br]外[br]奖[br]励</item>
+	<item id="790039">{0}×{1}</item>	
+	<item id="790040">简单</item>
+	<item id="790041">普通</item>
+	<item id="790042">困难</item>
+	<item id="790043">战神</item>
+	<item id="790044">地狱</item>
+	<item id="790045">传说</item>
+	<item id="790046"><![CDATA[<font color='#d3c123'>完成{0}后开启</font>]]></item>
+	<item id="790047"><![CDATA[<font color='#a2a19d'>未开启</font>]]></item>
+	<item id="790048">{0}/{1}</item>
+	<item id="790049">第{0}波阵亡</item>
+	
+	<!-- 跨服争霸赛 -->
+	<item id="800000">跨服争霸赛</item>
+	<item id="800001">当前没有此活动</item>
+	<item id="800002">比赛已结束</item>
+	<item id="800003">比赛被取消</item>
+	<item id="800004">比赛已全部结束</item>
+	<item id="800005">你确定进入争霸赛吗？</item>
+	<item id="800017">距离比赛开始：{0}</item>
+	<item id="800018">● 争霸赛采用互相破阵的方式进行[br]● 攻击方可更换阵型、武将。防守方则会被锁定[br]● 每轮败者会成为观众</item>
+	<item id="800019">● 参赛者与观众都可获得点券[br]● 观战者需押中胜者才能获得奖励</item>
+	<item id="800020">{0}强战</item>
+	<item id="800021">第{0}场</item>
+	<item id="800022">{0}局{1}胜制</item>
+	<item id="800023">Lv{0}</item>
+	<item id="800024">10秒自动刷新</item>
+	<item id="800025">最后一分钟可翻倍</item>
+	<item id="800026">获胜可获得：{0}点券</item>
+	<item id="800027">战斗中...</item>
+	<item id="800028">准备中...</item>
+	<item id="800029">{0}  {1}服</item>
+	<item id="800030">奖励翻倍</item>
+	<item id="800031">{0}金</item>
+	<item id="800032">攻击方支持数</item>
+	<item id="800033">防守方支持数</item>
+	<item id="800034">当前不可继续翻倍</item>
+	<item id="800035">您没有支持任何人</item>
+	<item id="800036">[ 阵型锁定 ]</item>
+	<item id="800037">[ 防守方同步锁定 ]</item>
+	<item id="800038">已支持攻方</item>
+	<item id="800039">已支持守方</item>
+	<item id="800040">点击支持</item>
+	<item id="800041">决    赛</item>
+	<item id="800042">半 决 赛</item>
+	<item id="800043">八 强 赛</item>
+	<item id="800044">十 六 强</item>
+	<item id="800045">三十二强</item>
+	<item id="800046">六十四强</item>
+	<item id="800047">外 围 赛</item>
+	<item id="800048">外 围 赛</item>
+	<item id="800051">闪避+10%</item>
+	<item id="800052">暴击+10%</item>
+	<item id="800053">攻击+600</item>
+	<item id="800054">防御+500</item>
+	<item id="800055">血上限+1000</item>
+	<item id="800056">全防+6%</item>
+	<item id="800057">全攻+6%</item>
+	<item id="800058">{0} {1}服  {2}</item>
+	<item id="800059"><![CDATA[增加全攻全防<font color='#FFCC00'><b>{0}%</b></font>[br]增加<font color='#FFCC00'><b>{1}</b></font>基础攻防]]></item>
+	<item id="800060">少量</item>
+	<item id="800061">中量</item>
+	<item id="800062">大量</item>
+	<item id="800100">兑换</item>
+	<item id="800101">兑换10个</item>
+	<item id="800102">结束时间：{0}</item>
+	<item id="800103">点券 ×{0}</item>
+	<item id="800104">当前奖品为{0} - {1}级区间对应商品</item>
+	<item id="800105">售价：</item>
+	<item id="800106">{0} ×{1}</item>
+	<item id="800107">你确定花费{0}金币奖励翻倍么？</item>
+	<item id="800108">开启</item>
+	<item id="800109">开启10个</item>
+	
+	
+	<!--好友系统-->
+	<item id="800201">好友</item>
+	<item id="800202">好友列表</item>
+	<item id="800203">lv.{0}</item>
+	<item id="800204">关注别人</item>
+	<item id="800205">查看实力</item>
+	<item id="800206">{0}的最新动态</item>
+	<item id="800207">您确定要删除好友？</item>
+	<item id="800208">方法一：在框中输入你想关注玩家的名字</item>
+	<item id="800209">点击添加最近队友</item>
+	<item id="800210">方法二：在聊天框中点击玩家名字</item>
+	<item id="800211">方法三：直接点击同势力玩家关注</item>
+	<item id="800212">关注</item>
+	<item id="800213">在线{0}/{1}</item>
+	<item id="800215">角色名：</item>
+	<item id="800216">我的首页</item>
+	<item id="800217">好友们的最新动态</item>
+	<item id="800218">热心值：{0}/{1}，满了可领奖</item>
+	<item id="800219">解救</item>	
+	<item id="800220">恭喜</item>
+	<item id="800221"><![CDATA[<font color='#FF0000'>当前没有新消息</font>]]></item>
+	<item id="800222">王[br]者</item>
+	<item id="800223">争霸王者</item>
+	<item id="800224">好[br]友</item>
+	<item id="800225">第{0}届</item>
+	<item id="800226">{0} {1}服</item>
+	<item id="800227">历届争霸赛冠军信息</item>
+	<item id="800228">您确定要将{0}加入黑名单？</item>
+	<item id="800229">动态</item>
+	
+	<!--黑名单-->
+	<item id="800230">黑名单</item>
+	<item id="800231">黑[br]名[br]单</item>
+	<item id="800232">对于那些肆意谩骂，散播谣言的家伙，我们要毫不犹豫的把他们拖进小黑屋！</item>
+	<item id="800233"><![CDATA[<font size='18'>+</font>]]></item>
+	<item id="800234">Lv.{0}</item>
+	<item id="800235">输入你想屏蔽的玩家名称</item>
+	<item id="800236">返回好友</item>
+	
+	<!--升级系统-->
+	<item id="801000">×{0}</item>
+	<item id="801001"><![CDATA[<font color='#00FF00'>领取成功</font>]]></item>
+	<item id="801002">奖励次数</item>
+	<item id="801003">奖励道具</item>
+	<item id="801004"><![CDATA[农场产量<font color='#FF9900'>+{0}</font>小时]]></item>
+	<item id="801005"><![CDATA[酒肆次数<font color='#FF9900'>+{0}</font>]]></item>
+	<item id="801006"><![CDATA[集市次数<font color='#FF9900'>+{0}</font>]]></item>
+	<item id="801007"><![CDATA[通商次数<font color='#FF9900'>+{0}</font>]]></item>
+	<item id="801008">领取</item>
+	<item id="801009">发布新鲜事[br]奖励{0}金币</item>
+	<item id="801010">本[br]级</item>
+	<item id="801011">下[br]级</item>
+	<item id="801012">{0}×{1}</item>
+	<item id="801013">{0}</item>
+	
+	<!-- 灵石兑换 -->
+	<item id="810000">灵石兑换</item>
+	<item id="810001"><![CDATA[<font color='#6CC3EE'>水{0}</font>]]></item>
+	<item id="810002"><![CDATA[<font color='#FF6437'>火{0}</font>]]></item>
+	<item id="810003"><![CDATA[<font color='#FFCC00'>土{0}</font>]]></item>
+	<item id="810004">我用这个交换：</item>
+	<item id="810005">兑换比率：{0}比1</item>
+	<item id="810006">-</item>
+	<item id="810007">+</item>
+	<item id="810008">成交</item>
+	<item id="810009">你获得了{0} x{1}</item>
+	<item id="810010">寒铁</item>
+	<item id="810011">赤铜</item>
+	<item id="810012">乌金</item>
+	<item id="810013"><![CDATA[你确定<font color='#FFCC00'>消耗{0}个</font>{1}兑换<font color='#FFCC00'>{2}个</font>{3}吗？]]></item>
+	
+	<!-- 机械系统 -->
+	<item id="820000">机械制造</item>
+	<item id="820001">工[br]匠</item>
+	<item id="820002">工匠 Lv.{0}</item>
+	<item id="820003">{0}/{1}</item>
+	<item id="820004">银币：{0}</item>
+	<item id="820005">精力：{0}</item>
+	<item id="820006">制造</item>
+	<item id="820007">{0}%</item>
+	<item id="820008">增加工匠经验{0}点</item>
+	<item id="820009">熟练度{0}%，满了提升品质</item>
+	<item id="820010">暂停</item>
+	<item id="820011">制造列表</item>
+	<item id="820012">需求：工匠Lv.{0}</item>
+	<item id="820013">等级过低</item>
+	<item id="820014">正在建造中...</item>
+	<item id="820015">更换机械会放弃现在已经建造的进度，你确定要这样吗？</item>
+	<item id="820016">恢复</item>
+	<item id="820017"><![CDATA[<font color='#FF0000'>工匠等级不够，请努力提升哦。</font>]]></item>
+	<item id="820018"><![CDATA[<font color='#FF0000'>金钱不够哦。</font>]]></item>
+	<item id="820019">熟练度越高，制造出的机械品级越高</item>
+	<item id="820020"><![CDATA[<font size='17' color='#{0}'><b>{1}</b></font>[br]{2}]]></item>
+	<item id="820021">推荐制造：</item>
+	<item id="820022">已经制造{0}个{1}</item>
+	<item id="820023">工匠增加{0}点经验</item>
+	<item id="820024">机械等级太低，工匠无法获得经验</item>
+	<item id="820025">生死峡口-渡口掉落图纸</item>
+	<item id="820026">工匠等级越高，所能制造的机械等级也越高（生死峡口-渡口掉落图纸）。</item>
+	<item id="820027">工匠经验值</item>
+	<item id="820028">点击右下道具图标可更换机械</item>
+	<item id="820029">点击添加或者更换机械</item>
+	<item id="820030">无法获得经验</item>
+	<item id="820031">角色增加{0}点经验</item>
+	<item id="820032">快速完成</item>
+	<item id="820033">是否花费{0}金币立刻完成制造</item>
+	<item id="820034">新零件</item>
+	<item id="820035">{0}：{1}%</item>
+	<!-- 跨服国战排行榜 -->
+	<item id="830000">跨服国战排行榜</item>
+	<item id="830001">势[br]力</item>
+	<item id="830002">杀[br]敌</item>
+	<item id="830003">趣[br]闻</item>
+	
+	<item id="830010">排名</item>
+	<item id="830011">角色</item>
+	<item id="830012">等级</item>
+	<item id="830013">势力</item>
+	<item id="830014">杀敌数</item>
+	<item id="830015">胜场</item>
+	<item id="830016">积分</item>
+		
+	<item id="830020">{0} {1} 服</item>
+	<item id="830021"><![CDATA[拆塔<font color='#FF6437'>{0}</font>血]]></item>
+	<item id="830022"><![CDATA[我拆塔共<font color='#FF6437'>{0}</font>血]]></item>
+	<item id="830023"><![CDATA[修塔<font color='#FF6437'>{0}</font>血]]></item>
+	<item id="830024"><![CDATA[我修塔共<font color='#FF6437'>{0}</font>血]]></item>
+	<item id="830025"><![CDATA[使用<font color='#FF6437'>{0}</font>个道具]]></item>
+	<item id="830026"><![CDATA[我共使用<font color='#FF6437'>{0}</font>个道具]]></item>
+	<item id="830027"><![CDATA[最高<font color='#FF6437'>{0}</font>连败]]></item>
+	<item id="830028"><![CDATA[我最高<font color='#FF6437'>{0}</font>连败]]></item>
+	<item id="830029"><![CDATA[<font color='#{0}'>{1}</font>]]></item>
+	
+	<item id="830030"><![CDATA[{0} {1}服]]></item>
+	<item id="830031">第{0}名：[br]银币×{1}[br]{4}×{2}[br]灵石×{3}[br]等级达到40级玩家[br]本赛季结束后可领取</item>
+	<item id="830032">第{0}名：[br]银币×{1}[br]{8}×{2}[br]灵石×{3}[br]达到第{4}名奖励：[br]银币×{5}[br]{9}×{6}[br]灵石×{7}[br]等级达到40级玩家[br]本赛季结束后可领取</item>
+	<item id="830033">第{0}名：[br]无奖励[br]达到第{1}名奖励：[br]银币×{2}[br]{5}×{3}[br]灵石×{4}[br]等级达到40级玩家[br]本赛季结束后可领取</item>
+	<item id="830034">暂无势力上榜</item>
+	<item id="830035">暂无人员上榜</item>
+	<item id="830036">当前无排名：[br]无奖励[br]达到第{0}名奖励：[br]银币×{1}[br]{2}×{3}[br]灵石×{4}[br]等级达到40级玩家[br]本赛季结束后可领取</item>
+	<item id="830037"><![CDATA[ <font color='#{0}'>{1}</font>]]></item>
+	
+	
+	<!-- 帮助窗口 -->
+	<item id="840000">帮助</item>
+	<item id="840001">公告</item>
+	<item id="840002">帮助</item>
+	<item id="840003">点击领取</item>
+	<item id="840004">领取成功</item>
+	<item id="840005">活动</item>
+	<item id="840006">每日活动</item>
+	<item id="840007">活动{0}：{1}（点击查看）</item>
+	<item id="840008">时间：{0} 至 {1}</item>
+	<item id="840009">{0}.{1}.{2}-{3}:{4}</item>
+	
+	<!--奥特曼打年糕兽-->
+	<item id="850000">伤害排名（点此收缩）</item>
+	<item id="850001">展开伤害排名</item>
+	<item id="850002">排名</item>
+	<item id="850003">角色</item>
+	<item id="850004">伤害</item>
+	<item id="850005">倒计时：{0}</item>
+	<item id="850006"><![CDATA[<font color='#ff0000'>cd中不可攻击</font>]]></item>
+	<item id="850007">年兽血量：{0}/{1}</item>
+	<item id="850008">×{0}</item>
+	<item id="850009">每次开启10个</item>
+	<item id="850010">我就陪你们玩一会儿，等会我再走~</item>
+	<item id="850011">看我一巴掌把你们拍飞，哈哈！</item>
+	<item id="850012">休想夺回我身上的红包！</item>
+	<item id="850013">爆竹是什么？炸得我好疼！</item>
+	<item id="850014">我身上的宝箱怎么可以给你们！</item>
+	<item id="850015">您确定花费{0}金币购买并使用一个爆竹？</item>
+	<item id="850016">使用爆竹花费{0}金币</item>
+	<item id="850017">你确定花费{0}金币使用迅捷buff？[br]使用后攻击年兽cd减半</item>
+	<item id="850018">搜寻年兽中：{0}</item>
+	<item id="850019">年兽逃跑中：{0}</item>
+	<item id="850020">年兽已被{0}击杀，大家捡宝箱喽</item>
+	<item id="850021">是否前往击杀年兽？</item>
+	<item id="850022"><![CDATA[<font color='#ff0000'>20级以上才可进入</font>]]></item>
+	<item id="850023">您确定花费{0}金币开启一个金币宝箱？</item>
+	<item id="850024">未能及时击杀年兽，他携带大量红包逃跑了！</item>
+	<item id="850025">你们胆敢挡我去路，找打！</item>
+	<item id="850026">活动结束前未击杀年兽无宝箱奖励</item>
+	<item id="850027">当前排名可开{0}个宝箱</item>
+	<item id="850028">挂机中不可进入</item>
+	<item id="850029"><![CDATA[<font color='#F1AE15'>{0}</font>]]></item>
+	<item id="850030"><![CDATA[<font color='#81E8FF'>{0}</font>]]></item>
+	<item id="850031">攻击扣除{0}点精力</item>
+	<item id="850032"><![CDATA[<font color='#ff0000'>该场景不可操作战车</font>]]></item>
+	<item id="850033"><![CDATA[<font color='#ff0000'>自动入侵中不可进入</font>]]></item>
+	<item id="850034"><![CDATA[<font color='#ff0000'>将军起床后才可前往</font>]]></item>
+	<item id="850035"><![CDATA[<font color='#ff0000'>战斗中不可进入</font>]]></item>
+	<item id="850036">年兽活动已结束，请返回主城</item>
+	<item id="850037">年兽掠夺了百姓大量资财！[br]现在正准备逃跑！[br]攻击年兽、使用爆竹可获得红包，击杀年兽可获得宝箱奖励，[br]击杀者可获得50个红包，[br]战斗时仅计算基础攻防，[br]提高上阵武将攻击可造成更多伤害[br]服用攻防血buff药无效。</item>
+	<item id="850038">我知道了</item>
+	<item id="850039">副本结束倒计时：{0}</item>
+	<item id="850040">一次购买并使用10个爆竹</item>
+	<item id="850041"><![CDATA[<font color='#ff0000'>年兽已死，无法攻击</font>]]></item>
+	<item id="850042">您确定花费{0}金币购买并使用十个爆竹？</item>	
+	<item id="850043">隐藏其他玩家</item>
+	<item id="850044"><![CDATA[<font color='#ff0000'>年兽出现后可以购买</font>]]></item>
+	<item id="850045">无</item>
+	<item id="850046">称号：{0}[br]属性：{1}</item>
+	
+	<!--守卫农庄-->
+	<item id="860000">守卫农庄</item>
+	<item id="860001">将军赶走山贼可获得丰[br]厚的奖励，开地越多，[br]奖励越高啊！</item>
+	<item id="860002">山贼已被全部赶走</item>
+	<item id="860003"><![CDATA[山贼还有<font color='#f5d300'>{0}</font>到达农庄]]></item>
+	<item id="860004">请将军守卫农庄</item>
+	<item id="860005">农场[br]奖励：</item>
+	<item id="860006">牧场[br]奖励：</item>
+	<item id="860007">矿场[br]奖励：</item>
+	<item id="860008">×{0}</item>
+	<item id="860009">（开地增至{0}）</item>
+	<item id="860010">（已达最大奖励）</item>
+	<item id="860011">农场</item>
+	<item id="860012">牧场</item>
+	<item id="860013">矿场</item>
+	<item id="860014">您确定花费{0}{1}开启一块农田？</item>
+	<item id="860015">您确定花费{0}{1}开启一块牧田？</item>
+	<item id="860016">您确定花费{0}{1}开启一块矿地？</item>
+	<item id="860017">金币</item>
+	<item id="860018">银币</item>
+	<item id="860019">恭喜您开启一块新地</item>
+	<item id="860020">结算面板</item>
+	<item id="860021">农场奖励</item>
+	<item id="860022">牧场奖励</item>
+	<item id="860023">矿场奖励</item>
+	<item id="860024">{0}×{1}</item>
+	<item id="860025"><![CDATA[<font color='#ff0000'>CD中</font>]]></item>
+	<item id="860026"><![CDATA[<font color='#ff0000'>没有攻击次数</font>]]></item>
+	<item id="860027">再次领取</item>
+	<item id="860028">{0}</item>
+	<item id="860029">确定要花费{0}金再领取一次该种奖励吗？</item>
+	<item id="860030"><![CDATA[<font color='#ff0000'>请将军提升等级至20级再来守卫农庄</font>]]></item>
+	<item id="860031">倒计时中可用道具，点击快速开始立即战斗</item>
+	<item id="860032"><![CDATA[<font color='#ff0000'>活动已结束</font>]]></item>
+	
+	<!--五毒兽-->
+	<item id="870000">伤害排名（点此收缩）</item>
+	<item id="870001">展开伤害排名</item>
+	<item id="870002">排名</item>
+	<item id="870003">角色</item>
+	<item id="870004">伤害</item>
+	<item id="870005">倒计时：{0}</item>
+	<item id="870006"><![CDATA[<font color='#ff0000'>cd中不可攻击</font>]]></item>
+	<item id="870007">五毒兽血量：{0}/{1}</item>
+	<item id="870008">×{0}</item>
+	<item id="870009">每次开启10个</item>
+	<item id="870010">端午节到了，我五毒兽又回来了！~</item>
+	<item id="870011">看我一巴掌把你们拍飞，哈哈！</item>
+	<item id="870012">休想夺回我身上的香囊！</item>
+	<item id="870013">爆竹是什么？炸得我好疼！</item>
+	<item id="870014">我身上的宝箱怎么可以给你们！</item>
+	<item id="870015">您确定花费{0}金币购买并使用一个爆竹？</item>
+	<item id="870016">使用爆竹花费{0}金币</item>
+	<item id="870017">你确定花费{0}金币使用迅捷buff？[br]使用后攻击五毒兽cd减半</item>
+	<item id="870018">五毒兽尚未出现：{0}</item>
+	<item id="870019">围剿中：{0}</item>
+	<item id="870020">五毒兽已被{0}击杀，大家捡宝箱喽</item>
+	<item id="870021">是否前往击杀五毒兽？</item>
+	<item id="870022"><![CDATA[<font color='#ff0000'>20级以上才可进入</font>]]></item>
+	<item id="870023">您确定花费{0}金币开启一个金币宝箱？</item>
+	<item id="870024">未能及时击杀，五毒兽负伤逃走了</item>
+	<item id="870025">哈哈，我五毒兽又回来了！</item>
+	<item id="870026">活动结束前未击杀五毒兽无宝箱奖励</item>
+	<item id="870027">当前排名可开{0}个宝箱</item>
+	<item id="870028">挂机中不可参加五毒兽活动</item>
+	<item id="870029"><![CDATA[<font color='#F1AE15'>{0}</font>]]></item>
+	<item id="870030"><![CDATA[<font color='#81E8FF'>{0}</font>]]></item>
+	<item id="870031">攻击扣除{0}点精力</item>
+	<item id="870032"><![CDATA[<font color='#ff0000'>该场景不可操作战车</font>]]></item>
+	<item id="870033"><![CDATA[<font color='#ff0000'>自动入侵不可进入五毒兽</font>]]></item>
+	<item id="870034"><![CDATA[<font color='#ff0000'>将军起床后才可前往攻击五毒兽</font>]]></item>
+	<item id="870035"><![CDATA[<font color='#ff0000'>战斗中不可进入五毒兽场景</font>]]></item>
+	<item id="870036">五毒兽活动已结束，请返回主城</item>
+	<item id="870037">五毒兽掠夺了百姓大量资财！[br]现在正准备逃跑！[br]攻击五毒兽、使用爆竹可获得红包，击杀五毒兽可获得宝箱奖励，[br]击杀者可获得50个红包，[br]战斗时仅计算基础攻防，[br]提高上阵武将攻击可造成更多伤害[br]服用攻防血buff药无效。</item>
+	<item id="870038">我知道了</item>
+	<item id="870039">副本结束倒计时：{0}</item>
+	<item id="870040">一次购买并使用10个爆竹</item>
+	<item id="870041"><![CDATA[<font color='#ff0000'>五毒兽已死，无法攻击</font>]]></item>
+	<item id="870042">您确定花费{0}金币购买并使用十个爆竹？</item>	
+	<item id="870043">隐藏其他玩家</item>
+	<item id="870044"><![CDATA[<font color='#ff0000'>五毒兽出现后可以购买</font>]]></item>
+	<item id="870045">刚刚是天雷？劈得我好疼！</item>
+	
+	<!--【熔炼3.1版】-->
+	<item id="870100">熔炼等级：{0}级[br]熔炼等级影响熔炼所加战斗力，每次熔炼可增加熟练度。</item>
+	<item id="870101">没有[br]矿石</item>
+	<item id="870102">购买次数</item>
+	<item id="870103">熔炼</item>
+	<item id="870104"><![CDATA[<b>战斗力：<font color='#fdc13c'>{0}</font></b>]]></item>
+	<item id="870105"><![CDATA[<b>熔炼次数：<font color='#fdc13c'>{0}/10</font></b>]]></item>
+	<item id="870106">铸造</item>
+	<item id="870107">收获</item>
+	<item id="870108">快速完成</item>
+	<item id="870109">已熔炼：{0}/10</item>
+	<item id="870110">{0}/{1}</item>
+	<item id="870111">您确定要花费{0}金币购买1次熔炼次数？</item>
+	<item id="870112">您确定要花费{0}金币清除CD？[br]（每2分钟消耗1金币）</item>
+	<item id="870113">请在点券商城购买矿石</item>
+	<item id="870114">（未收获）</item>
+	<item id="870115">当前拥有木材：{0}[br]木材可在牧场中获得</item>
+	<item id="870116">熔炼次数每2小时+1</item>
+	<item id="870117">已达到最高熔炼等级</item>
+	<item id="870118"><![CDATA[<font color='#ff0000'>{0}</font>]]></item>
+	<item id="870119">出售矿石</item>
+	<item id="870120">灵石</item>
+	
+	<!-- add by xiepeifu -->
+	<item id="900001">小贴士：点击种植可更换品种哦！</item>
+	<item id="900002">小贴士：点击养殖可更换品种哦！</item>
+	<item id="900003">小贴士：点击开采可更换品种哦！</item>
+	<item id="900004">加星增产：{0}%→{1}%</item>
+	<item id="900005">已到最高品质(产出提高{0}%)</item>
+	<item id="900006">(☆★)</item>
+	<item id="900010">(食)</item>
+	<item id="900011">(药)</item>
+	<item id="900012">(矿)</item>
+	<item id="900013">种植</item>
+	<item id="900014">养殖</item>
+	<item id="900015">开采</item>
+	<item id="900016">已赛马{0}次(共需赛马{1}次)</item>
+	<item id="900017"><![CDATA[你现在处于<font color='#FFCC00'>第{0}名</font>]]></item>
+	<item id="900018"><![CDATA[当前是<font color='#FFCC00'>第{0}圈</font>]]></item>
+</language>

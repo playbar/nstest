@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 短片播放 -->
+ <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/menumedia"
+	android:background="@drawable/bar_background_44"
+	android:orientation="horizontal"
+	android:layout_width="wrap_content"
+	android:layout_height="@dimen/bwpx44"
+	android:layout_gravity="bottom"
+	android:visibility="gone">
+	<Button android:layout_alignParentLeft="true"
+			android:id="@+id/menu_switch_media_old"
+	        android:background="@drawable/menu_switch_old"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        />
+		<Button android:layout_toRightOf="@+id/menu_switch_media_old"
+			android:id="@+id/menu_setting_media_old"
+	        android:background="@drawable/menu_setting_old"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        />
+		<Button android:layout_toRightOf="@+id/menu_setting_media_old"
+			android:id="@+id/menu_save_media_old"
+	        android:background="@drawable/menu_save_old"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        />
+		<Button android:layout_toRightOf="@+id/menu_save_media_old"
+			android:id="@+id/menu_zooming_media_old"
+	        android:background="@drawable/menu_zom_max_old"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        />
+		<ImageView android:layout_toRightOf="@+id/menu_save_media_old"
+		    android:id="@+id/img_progress_media_old"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"
+		    android:layout_centerInParent="true"/>
+		<Button android:layout_alignParentRight="true"
+	        android:id="@+id/menu_close_media_old"
+	        android:background="@drawable/menu_close_old"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        />	
+</RelativeLayout>

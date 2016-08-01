@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--新手引导配置文件-->
+
+<!-- 大概思路是：主城，地区，副本大厅，边塞 为主线路。。。其他场景都是他们的子线路，通过判断当前场景是否是引导步骤的场景，来开始引导，如果是打开窗口之类的引导，还要
+判断当前打开的是否是对应的窗口，或者当前引导的窗口是否是已经打开。。。窗口打开或者关闭都会去检测，，， -->
+
+
+
+
+<!-- id :表示新手引导的ID，通过此来判断显示哪一个引导，跟任务ID是一样的-->
+<!-- targetScene :引导最终目的的场景，如果是地区，后面要带上幕数（SCENE_ID_AREA,1）；是副本大厅，逗号后面的参数表示powerID；是农场，逗号后面的参数表示农场类型。。。-->
+<!-- isNeedSearchLoad :表示是否需要寻路，也就是说，如果当前场景没有在引导配置任何一个步骤 的场景时，不显示箭头。。-->
+<!-- showOnlyOne :表示是否只显示一次，，，如果值为true，显示一次以后，不会再显示（重新登录，状态会刷新）。这个参数可不写，代码中有判断是否存在这个参数。-->
+
+<!--
+index:		表示步骤；
+doType： 	操作类型（scene:表示当前操作在场景上，power:表示当前操作是在副本信息面板上，window:表示当前操作在窗口上，dialog:表示在NPC对话上（点击NPC弹出的那种），
+			 panel:表示在面板上。。。等等还有其他）。。。分这个，，一个是用来寻路的，一个是用来判断箭头显示的层次，防止被覆盖等。。。
+
+uiType：   有一些特殊的情况，比如sceneDialog：表示显示场景对话。。。。checkPanel:表示这一步是用来检测窗口页签是否正确的。。。等等，，，。。。
+checkUI：  引导的检测ID，在程序中相应配置
+args：     一些参数。。逗号前面表示当前步骤在这一场景（这一窗口）显示，逗号后面跟的都是该场景所需要的一些参数
+arrowArgs： 箭头的一些参数,方向_x_y....，，例如1_270_320：表示方向为1，x坐标290，y坐标280，   1_270_320_0：后面多的这个0表示不显示箭头；
+draw:      扣洞。具体见代码中方法NewPlayerGuide.drawMask的注释。该参数不写或者为空，表示不抠洞；
+
+
+
+
+
+
+
+具体。。好吧。。说不清楚。。。come on。。来问我吧、、、
+手机：110；
+QQ：110；
+-->
+
+
+
+<config>
+	<!-- 出城前往函谷前线，进入副本入口 -->
+	<guide id="1101" targetScene="SCENE_ID_INSTANCEHALL,1" isNeedSearchLoad="true" showOnlyOne ="false">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>城门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,1"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<guide id="1103" targetScene="SCENE_ID_INSTANCE,1" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,1"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+		<!--<step index="4" doType="" uiType="getReward" checkUI="UI_ID_TASK1" args="SCENE_ID_INSTANCE,1,1" draw="rect,162,143,1,162,0.2" arrowArgs="1_120_210" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					-->
+		<step index="3" doType="scene" uiType="getReward" checkUI="UI_ID_TASK2" args="SCENE_ID_INSTANCE,1,1" arrowArgs="4_60_870" ><![CDATA[点击<font color='#65FFFF'>任务</font>]]></step> 					
+		<step index="4" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="5" doType="task" uiType="closeTask" checkUI="UI_ID_TASK3" args="PANEL_ID_TASK" arrowArgs="4_310_350" ><![CDATA[点击<font color='#65FFFF'>关闭任务</font>]]></step> 					
+		<step index="6" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCE,1,1" dialogId="0101001"></step> 					
+		<step index="7" doType="scene" uiType="" checkUI="UI_ID_ATTACKMONSTER" args="SCENE_ID_INSTANCE,1,1"  arrowArgs="4_80_490" ><![CDATA[点击敌人开始攻击]]></step> 					
+	</guide>
+	
+	<!-- 进入中营，消灭哨兵0/2 -->
+	<guide id="1104" targetScene="SCENE_ID_INSTANCE,1" isNeedSearchLoad="true">	
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >	
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,1"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+		<step index="3" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCE,1,2" dialogId="0101002"></step> 						 		
+	</guide>
+	
+	<!-- 进入主营，杀死守将赵琳 -->
+	<guide id="1105" targetScene="SCENE_ID_INSTANCE,1" isNeedSearchLoad="true">	
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >	
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,1"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >				
+		<step index="3" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCE,1,3" dialogId="0101003"></step> 						 		
+	</guide>
+	
+	<!-- 进入后营，消灭哨兵 -->
+	<guide id="1106" targetScene="SCENE_ID_INSTANCE,1" isNeedSearchLoad="true">	
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >	
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,1"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >				
+						 		
+	</guide>
+	<!-- 退出副本返回主城 -->
+	<guide id="1107" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false">		
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,1" arrowArgs="4_90_685" ><![CDATA[点击<font color='#65FFFF'>退出副本</font>]]></step> 	
+		<!--<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  draw="circle,50,920,540,0.1" arrowArgs="3_850_450" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step> 		-->
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="3_510_760" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step> 		
+	</guide>
+	
+	<!-- 返回城镇以后点击领取奖励 -->
+	<guide id="1108" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false">		
+		<step index="0" doType="scene" uiType="getReward" checkUI="UI_ID_TASK2" args="SCENE_ID_TOWN" arrowArgs="4_60_870" ><![CDATA[点击<font color='#65FFFF'>任务</font>]]></step> 					
+		<step index="1" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="2" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >点击继续领取</step> 		
+		<step index="3" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >还有哦，再领</step> 		
+		<step index="4" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >哇，好多奖励</step> 		
+		<step index="5" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，手软了</step> 		
+		<step index="6" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >奖励真多，我点</step> 		
+	</guide>
+	
+	<!-- 打开强化界面，精炼武器到5星 -->
+	<guide id="1109" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">		
+		<step index="0" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="1" doType="task" uiType="closeTask" checkUI="UI_ID_TASK3" args="PANEL_ID_TASK" arrowArgs="4_310_350" ><![CDATA[点击<font color='#65FFFF'>关闭任务</font>]]></step> 					
+		<step index="2" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_240_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="3" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>精炼</font>页签]]></step> 	
+		<step index="4" doType="window" uiType="refine,1,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="5" doType="window" uiType="refine,1,5,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_80_130" ><![CDATA[点击<font color='#65FFFF'>选取武器</font>]]></step> 	
+		<step index="6" doType="window" uiType="refine,1,5" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>精炼</font>]]></step> 		
+	</guide>
+	<!-- 精炼戒指到5星 -->
+	<guide id="1110" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">		
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_240_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>精炼</font>页签]]></step> 	
+		<step index="2" doType="window" uiType="refine,6,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="3" doType="window" uiType="refine,6,5,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="2_510_130" ><![CDATA[点击<font color='#65FFFF'>选取戒指</font>]]></step> 	
+		<step index="4" doType="window" uiType="refine,6,5" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>精炼</font>]]></step> 		
+	</guide>
+	
+	<!-- 前往函谷城内 -->
+	<guide id="1112" targetScene="SCENE_ID_INSTANCEHALL,1" isNeedSearchLoad="true">
+		<step index="0" doType="window" uiType="" checkUI="UI_ID_IMPROVECLOSE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_540_720" ><![CDATA[点击<font color='#65FFFF'>关闭</font>]]></step> 		
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>城门</font>出城]]></step >	
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="3" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_300" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >						
+	</guide>
+	<!-- 消灭守城巡逻0/2 -->
+	<guide id="1113" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_290" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >	
+		<step index="3" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCE,2,1" dialogId="0102001"></step> 				
+	</guide>
+	
+	<!-- 消灭守城巡逻0/2 -->
+	<guide id="1114" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_290" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >	
+		<step index="3" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCE,2,2" dialogId="0102002"></step> 				
+	</guide>
+	<!-- 消灭大将华雄 -->
+	<guide id="1115" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_290" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >	
+		<step index="3" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCE,2,3" dialogId="0102003"></step> 				
+	</guide>
+	
+		<!-- 消灭府内守卫0/2 -->
+	<guide id="1116" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_290" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >	
+					
+	</guide>
+	<!-- 消灭城守李肃 -->
+	<guide id="1117" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_120_430" ><![CDATA[点击<font color='#65FFFF'>函谷大捷</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_520_290" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >	
+					
+	</guide>
+	<!-- 领取所有奖励，返回主城 -->
+	<guide id="1118" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">					
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2" arrowArgs="4_90_685" ><![CDATA[点击<font color='#65FFFF'>退出副本</font>]]></step> 	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1" arrowArgs="3_510_760" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step> 
+		<step index="2" doType="scene" uiType="getReward" checkUI="UI_ID_TASK2" args="SCENE_ID_TOWN" arrowArgs="4_60_870" ><![CDATA[点击<font color='#65FFFF'>任务</font>]]></step> 					
+		<step index="3" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="4" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >哇，好多奖励</step> 		
+		<step index="5" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="6" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="7" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="8" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >奖励真多，我点</step> 
+		<step index="9" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >一定要领完，点</step> 
+	</guide>
+	
+	<!-- 打开强化界面，精炼皮盔到5星 -->
+	<guide id="1119" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">		
+		<step index="0" doType="task" uiType="closeTask" checkUI="UI_ID_TASK3" args="PANEL_ID_TASK" arrowArgs="4_310_350" ><![CDATA[点击<font color='#65FFFF'>关闭任务</font>]]></step> 					
+		<step index="1" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_250_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="2" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>精炼</font>页签]]></step> 	
+		<step index="3" doType="window" uiType="refine,2,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="4" doType="window" uiType="refine,2,5,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_170_130" ><![CDATA[点击<font color='#65FFFF'>选取皮盔</font>]]></step> 	
+		<step index="5" doType="window" uiType="refine,2,5" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>精炼</font>]]></step> 		
+	</guide>
+	
+	<!-- 精炼皮甲到5星，精炼皮靴到5星 -->
+	<guide id="1120" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">		
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_240_760" ><![CDATA[点击<font color='#65FFFF'>[强化]</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>[精炼]</font>页签]]></step> 	
+		<step index="2" doType="window" uiType="refine,3,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="3" doType="window" uiType="refine,3,5,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_260_130" ><![CDATA[点击<font color='#65FFFF'>[皮甲]</font>]]></step> 	
+		<step index="4" doType="window" uiType="refine,3,5" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>[精炼]</font>]]></step> 	
+		<step index="5" doType="window" uiType="refine,5,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="6" doType="window" uiType="refine,5,5,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_440_130" ><![CDATA[点击<font color='#65FFFF'>[皮靴]</font>]]></step> 	
+		<step index="7" doType="window" uiType="refine,5,5" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>[精炼]</font>]]></step> 		
+	</guide> 
+	
+	<!-- 精炼皮护腿到5星-->
+<guide id="1121" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">		
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_250_760" ><![CDATA[点击<font color='#65FFFF'>[强化]</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>[精炼]</font>页签]]></step> 	
+		<step index="2" doType="window" uiType="refine,4,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="3" doType="window" uiType="refine,4,5,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_350_130" ><![CDATA[点击<font color='#65FFFF'>[皮护腿]</font>]]></step> 	
+		<step index="4" doType="window" uiType="refine,4,5" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>[精炼]</font>]]></step> 	
+	</guide> 
+	
+	<!-- 与农夫对话，进入农庄 -->
+	<guide id="1111" targetScene="SCENE_ID_FARM" isNeedSearchLoad="true" >		
+   <step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step>
+
+<!--<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step>  -->
+
+			
+	</guide>
+	
+	<!-- 前往虎牢粮营哨 -->
+	<guide id="1201" targetScene="SCENE_ID_INSTANCEHALL,3" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_340_640" ><![CDATA[点击<font color='#65FFFF'>虎牢攻坚战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,3"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,3"  arrowArgs="2_265_160" ><![CDATA[点击<font color='#65FFFF'>传送门</font>进入]]></step >			
+	</guide>
+
+	<!-- 领取所有奖励，返回主城 raynor 2013/12/18-->
+	<guide id="1207" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">					
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2" arrowArgs="4_90_670" ><![CDATA[点击<font color='#65FFFF'>退出副本</font>]]></step> 	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1" arrowArgs="3_510_760" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step> 
+		<step index="2" doType="scene" uiType="getReward" checkUI="UI_ID_TASK2" args="SCENE_ID_TOWN" arrowArgs="4_60_870" ><![CDATA[点击<font color='#65FFFF'>任务</font>]]></step> 					
+		<step index="3" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="4" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >哇，好多奖励</step> 		
+		<step index="5" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="6" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="7" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="8" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 
+		<step index="9" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 
+		<step index="10" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 
+		<step index="11" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 
+		<step index="12" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 
+		<step index="13" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 
+	</guide>
+
+	
+	<!-- 进入农庄，种植土豆 -->
+	<guide id="1208" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,0" arrowArgs="4_310_260" ><![CDATA[点击<font color='#65FFFF'>第一个地块</font>]]></step> 		
+		<step index="3" doType="farmePanel" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="2_510_255" ><![CDATA[点击<font color='#65FFFF'>种植土豆</font>]]></step> 		
+				
+	</guide>
+	
+	<!-- 进入牧场，养殖小鸡 -->
+	<guide id="1209" targetScene="SCENE_ID_FARM,1" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="4_115_700" ><![CDATA[点击<font color='#65FFFF'>进入牧场</font>]]></step> 						 		
+		<step index="3" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,1" arrowArgs="4_310_260" ><![CDATA[点击<font color='#65FFFF'>第一个地块</font>]]></step> 	
+		<step index="4" doType="farmePanel" uiType="" checkUI="" args="SCENE_ID_FARM,1" arrowArgs="2_510_255" ><![CDATA[点击<font color='#65FFFF'>养殖小鸡</font>]]></step> 		
+				
+	</guide>
+	
+	<!-- 与竞技NPC对话，进入一次竞技场 -->
+	<guide id="1211" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKARENA" args="SCENE_ID_TOWN" arrowArgs="1_190_570" ><![CDATA[点击<font color='#65FFFF'>校场</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_160_450" ><![CDATA[点击<font color='#65FFFF'>进入竞技场</font>]]></step>
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_ARENA" arrowArgs="" ></step>	
+	</guide>
+	
+
+	
+	<!-- 打开强化，精炼武器到10星 -->
+	<guide id="1212" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false">		
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_250_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>精炼</font>页签]]></step> 	
+		<step index="2" doType="window" uiType="refine,4,5" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="3" doType="window" uiType="refine,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_80_130" ><![CDATA[点击<font color='#65FFFF'>武器</font>]]></step> 	
+		<step index="4" doType="window" uiType="refine,1" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>精炼</font>]]></step> 		
+	</guide>
+	
+	<!-- 前往虎牢粮仓，击败敌将董媛 -->
+	<guide id="1213" targetScene="SCENE_ID_INSTANCEHALL,4" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="1_340_640" ><![CDATA[点击<font color='#65FFFF'>虎牢攻坚战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,4"  arrowArgs="2_520_295" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+		<step index="3" doType="scene" uiType="sceneDialog" checkUI="" args="SCENE_ID_INSTANCEHALL,4" dialogId="1111111"></step> 		
+	</guide>
+	
+  <!--返回城镇，领取奖励-->	
+	<guide id="1215" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">					
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2" arrowArgs="4_90_670" ><![CDATA[点击<font color='#65FFFF'>退出副本</font>]]></step> 	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1" arrowArgs="3_510_760" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step> 
+		<step index="2" doType="scene" uiType="getReward" checkUI="UI_ID_TASK2" args="SCENE_ID_TOWN" arrowArgs="4_60_870" ><![CDATA[点击<font color='#65FFFF'>任务</font>]]></step> 					
+		<step index="3" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="4" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >哇，好多奖励</step> 		
+		<step index="5" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >记得常来看哦</step> 
+		<step index="6" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >要跟着任务走</step> 
+		<step index="7" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >给力，继续点</step>  
+		<step index="8" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >还有，继续点</step> 
+		<step index="9" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，再来</step>
+		<step index="10" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step>
+		<step index="11" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step>
+	</guide>
+	
+	<!-- 进入酒肆一楼，购买一道菜肴 -->
+	<guide id="1216" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">
+		<step index="0" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="1" doType="task" uiType="closeTask" checkUI="UI_ID_TASK3" args="PANEL_ID_TASK" arrowArgs="4_310_350" ><![CDATA[点击<font color='#65FFFF'>关闭任务</font>]]></step> 	
+		<step index="2" doType="scene" uiType="" checkUI="UI_ID_CKLICKXIAOER" args="SCENE_ID_TOWN" arrowArgs="1_360_600" ><![CDATA[点击<font color='#65FFFF'>酒楼</font>]]></step> 	
+		<step index="3" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入酒肆一楼</font>]]></step>
+		<step index="4" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_RESTAURANT,PN_RESTAURANT_NEW" arrowArgs="4_-25_15" ><![CDATA[点击<font color='#65FFFF'>包间</font>页签]]></step> 	
+		<step index="5" doType="window" uiType="" checkUI="" args="WINDOW_ID_RESTAURANT,PN_RESTAURANT_NEW" arrowArgs="4_70_360" ><![CDATA[点击<font color='#65FFFF'>购买菜肴</font>]]></step>
+				
+	</guide>
+	
+	<!-- 与竞技NPC对话，进入一次竞技场 -->
+	<guide id="1217" targetScene="SCENE_ID_ARENA" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKARENA" args="SCENE_ID_TOWN" arrowArgs="1_190_570" ><![CDATA[点击<font color='#65FFFF'>校场</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_160_450" ><![CDATA[点击<font color='#65FFFF'>进入竞技场</font>]]></step>
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_ARENA" arrowArgs="" ></step>
+				
+	</guide>
+	
+	<!-- 进入农庄，收获土豆 -->
+	<guide id="1301" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="4_310_260" ><![CDATA[点击<font color='#65FFFF'>收获土豆</font>]]></step> 		
+						
+	</guide>
+	
+	<!-- 开垦第二块农田，种植土豆 -->
+	<guide id="1302" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="kaidi,2" checkUI="UI_ID_FARMNOOPEN" args="SCENE_ID_FARM,0" arrowArgs="4_260_300" ><![CDATA[点击<font color='#65FFFF'>开启一块新地</font>]]></step> 			
+		<step index="3" doType="scene" uiType="kaidi,2" checkUI="UI_ID_FARM5" args="SCENE_ID_FARM,0" arrowArgs="" ></step> 			
+		<step index="4" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,0" arrowArgs="4_260_300" ><![CDATA[点击<font color='#65FFFF'>第二个地块</font>]]></step> 	
+		<step index="5" doType="farmePanel" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="2_510_255" ><![CDATA[点击<font color='#65FFFF'>种植土豆</font>]]></step>		
+	</guide>
+	
+	<!-- 开垦第三块农田，种植土豆 -->
+	<guide id="1902" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="kaidi,3" checkUI="UI_ID_FARMNOOPEN" args="SCENE_ID_FARM,0" arrowArgs="4_160_350" ><![CDATA[点击<font color='#65FFFF'>开启一块新地</font>]]></step> 			
+		<step index="3" doType="scene" uiType="kaidi,3" checkUI="UI_ID_FARM5" args="SCENE_ID_FARM,0" arrowArgs="" ></step> 			
+		<step index="4" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,0" arrowArgs="4_160_350" ><![CDATA[点击<font color='#65FFFF'>第三个地块</font>]]></step>		 		
+		<step index="5" doType="farmePanel" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="2_510_255" ><![CDATA[点击<font color='#65FFFF'>种植土豆</font>]]></step>		
+	</guide>
+	
+	
+	<!-- 进入牧场，收获鸡肉 -->
+	<guide id="1303" targetScene="SCENE_ID_FARM,1" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="4_115_700" ><![CDATA[点击<font color='#65FFFF'>进入牧场</font>]]></step> 						 		
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,1" arrowArgs="4_310_260" ><![CDATA[点击<font color='#65FFFF'>收获鸡肉</font>]]></step> 												
+	</guide>
+	
+	<!-- 开垦第二块农田，养殖小鸡 -->
+	<guide id="1304" targetScene="SCENE_ID_FARM,1" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 	
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="4_115_700" ><![CDATA[点击<font color='#65FFFF'>进入牧场</font>]]></step>					 		
+		<step index="3" doType="scene" uiType="kaidi,2" checkUI="UI_ID_FARMNOOPEN" args="SCENE_ID_FARM,1" arrowArgs="4_260_300" ><![CDATA[点击<font color='#65FFFF'>开启一块新牧场</font>]]></step> 
+		<step index="4" doType="scene" uiType="kaidi,2" checkUI="UI_ID_FARM5" args="SCENE_ID_FARM,1" arrowArgs="" ></step> 			
+		<step index="5" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,1" arrowArgs="4_260_300" ><![CDATA[点击<font color='#65FFFF'>第二个牧场</font>]]></step> 					
+		<step index="6" doType="farmePanel" uiType="" checkUI="" args="SCENE_ID_FARM,1" arrowArgs="2_510_255" ><![CDATA[点击<font color='#65FFFF'>养殖小鸡</font>]]></step>		
+	</guide>
+	
+	<!-- 开垦第三块农田，养殖小鸡 -->
+	<guide id="1903" targetScene="SCENE_ID_FARM,1" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 			
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="4_115_700" ><![CDATA[点击<font color='#65FFFF'>进入牧场</font>]]></step>
+		<step index="3" doType="scene" uiType="kaidi,3" checkUI="UI_ID_FARMNOOPEN" args="SCENE_ID_FARM,1" arrowArgs="4_160_350" ><![CDATA[点击<font color='#65FFFF'>开启一块新牧场</font>]]></step> 			
+		<step index="4" doType="scene" uiType="kaidi,3" checkUI="UI_ID_FARM5" args="SCENE_ID_FARM,1" arrowArgs="" ></step> 			
+		<step index="5" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,1" arrowArgs="4_160_350" ><![CDATA[点击<font color='#65FFFF'>第三个牧场</font>]]></step>		 		
+		<step index="6" doType="farmePanel" uiType="" checkUI="" args="SCENE_ID_FARM,1" arrowArgs="2_510_255" ><![CDATA[点击<font color='#65FFFF'>养殖小鸡</font>]]></step>		
+	</guide>
+	
+	<!-- 卖土豆给王武 -->
+	<guide id="1306" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKWANGWU" args="SCENE_ID_TOWN" arrowArgs="3_440_760" ><![CDATA[点击<font color='#65FFFF'>背包</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_SHOP1" args="" arrowArgs="3_560_690" ><![CDATA[<font color='#65FFFF'>卖掉土豆和鸡肉</font>]]></step> 	
+	</guide>
+	
+	<!-- 精炼装备到10星 -->
+	<guide id="1308" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_240_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>精炼</font>页签]]></step> 	
+		<step index="2" doType="window" uiType="refine,2,10" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="3" doType="window" uiType="refine,2,10,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_160_130" ><![CDATA[点击<font color='#65FFFF'>[铁冠]</font>]]></step> 	
+		<step index="4" doType="window" uiType="refine,2,10" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>精炼</font>]]></step> 		
+		<step index="5" doType="window" uiType="refine,3,10" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_195_170" ><![CDATA[点击<font color='#65FFFF'>选择框</font>]]></step> 	
+		<step index="6" doType="window" uiType="refine,3,10,1" checkUI="UI_ID_IMPROVESELECT" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="1_260_130" ><![CDATA[点击<font color='#65FFFF'>[铁甲]</font>]]></step> 	
+		<step index="7" doType="window" uiType="refine,3,10" checkUI="UI_ID_IMPROVEREFINE" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="3_420_590" ><![CDATA[点击<font color='#65FFFF'>精炼</font>]]></step> 		
+											
+	</guide>
+
+	
+	<!-- 卖出背包中所有蓝色装备 -->
+	<guide id="1901" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN" arrowArgs="3_450_760" ><![CDATA[点击<font color='#65FFFF'>背包</font>]]></step> 
+		<step index="1" doType="panel" uiType="double" checkUI="UI_ID_CKLICKBAGCLEAR" args="PANEL_ID_BAG,PANEL_ID_SHOP" arrowArgs="3_385_730" ><![CDATA[点击<font color='#65FFFF'>整理背包</font>]]></step> 		
+		<step index="2" doType="panel" uiType="double" checkUI="UI_ID_CKLICKSELLEQUIP" args="PANEL_ID_BAG,PANEL_ID_SHOP" arrowArgs="3_560_645" ><![CDATA[<font color='#65FFFF'>出售所有蓝色装备</font>]]></step> 			
+		 			
+	</guide>
+	
+	<!-- 前往洛阳城郊，消灭守将高顺 -->
+	<guide id="1309" targetScene="SCENE_ID_INSTANCEHALL,6" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_460_320" ><![CDATA[点击<font color='#65FFFF'>火烧洛阳</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,6"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,6"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 洛阳城郊，返回领取所有奖励 -->	
+	<guide id="1401" targetScene="SCENE_ID_INSTANCEHALL,2" isNeedSearchLoad="true">					
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,2" arrowArgs="4_90_670" ><![CDATA[点击<font color='#65FFFF'>退出副本</font>]]></step> 	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1" arrowArgs="3_510_760" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step> 
+		<step index="2" doType="scene" uiType="getReward" checkUI="UI_ID_TASK2" args="SCENE_ID_TOWN" arrowArgs="4_60_870" ><![CDATA[点击<font color='#65FFFF'>任务</font>]]></step> 					
+		<step index="3" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK" arrowArgs="4_150_730" ><![CDATA[点击<font color='#65FFFF'>领取奖励</font>]]></step> 					
+		<step index="4" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >又忘了领取吧</step> 		
+		<step index="5" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >以后要记住哦</step> 		
+		<step index="6" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="7" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >继续点，我点</step> 		
+		<step index="8" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >奖励真多，我点</step> 
+		<step index="9" doType="task" uiType="getReward" checkUI="UI_ID_TASK1" args="PANEL_ID_TASK"  arrowArgs="4_150_730" >一定要领完，点</step> 
+	</guide>
+	
+	<!-- 点击体力按钮补充精力 -->
+	<guide id="1402" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="1_275_65" ><![CDATA[点击<font color='#65FFFF'>体力按钮</font>]]></step >		
+	</guide>
+	
+	<!-- 进入农庄，收获土豆 -->
+	<guide id="1403" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step>		 						 		
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="2_520_630" ><![CDATA[点击<font color='#65FFFF'>一键收获</font>]]></step> 		
+						
+	</guide>
+	
+		<!-- 开垦第三块农田，种植土豆 -->
+<!--BUG没有这一步-->
+<!--	<guide id="1404" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_230_300" ><![CDATA[点击<font color='#65FFFF'>农夫</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 		
+		<step index="2" doType="scene" uiType="" checkUI="UI_ID_FARMNOOPEN" args="SCENE_ID_FARM,0" arrowArgs="4_310_240" ><![CDATA[点击<font color='#65FFFF'>开启一块新地</font>]]></step> 	
+		<step index="3" doType="scene" uiType="" checkUI="UI_ID_FARM5" args="SCENE_ID_FARM,0" arrowArgs="" ></step> 			
+		<step index="4" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,0" arrowArgs="4_310_240" ><![CDATA[点击<font color='#65FFFF'>第三个地块</font>]]></step> 		
+		<step index="5" doType="panel" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="1_385_125" ><![CDATA[点击<font color='#65FFFF'>种植土豆</font>]]></step> 											
+	</guide>-->
+	
+	<!-- 进入牧场，收获鸡肉 -->
+<!--	<guide id="1405" targetScene="SCENE_ID_FARM,1" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_345_180" ><![CDATA[点击<font color='#65FFFF'>农夫</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="3_910_475" ><![CDATA[点击<font color='#65FFFF'>进入牧场</font>]]></step> 						 		
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,1" arrowArgs="4_500_120" ><![CDATA[点击<font color='#65FFFF'>收获鸡肉</font>]]></step> 												
+	</guide>-->
+	
+	
+		<!-- 开垦第三块牧场，养殖小鸡-->
+<!--	<guide id="1406" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_345_180" ><![CDATA[点击<font color='#65FFFF'>农夫</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 		
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="3_910_475" ><![CDATA[点击<font color='#65FFFF'>进入牧场</font>]]></step> 
+		<step index="3" doType="scene" uiType="" checkUI="UI_ID_FARMNOOPEN" args="SCENE_ID_FARM,1" arrowArgs="4_310_240" ><![CDATA[点击<font color='#65FFFF'>开启一块新牧场</font>]]></step> 	
+		<step index="4" doType="scene" uiType="" checkUI="UI_ID_FARM5" args="SCENE_ID_FARM,1" arrowArgs="" ></step> 			
+		<step index="5" doType="scene" uiType="" checkUI="UI_ID_FARMINFO" args="SCENE_ID_FARM,1" arrowArgs="4_310_240" ><![CDATA[点击<font color='#65FFFF'>第三个地块</font>]]></step> 		
+		<step index="6" doType="panel" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="1_385_125" ><![CDATA[点击<font color='#65FFFF'>养殖小鸡</font>]]></step> 											
+	</guide>-->
+	
+	<!-- 卖土豆给王武 -->
+<!--	<guide id="1407" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKWANGWU" args="SCENE_ID_TOWN" arrowArgs="1_430_140" ><![CDATA[点击<font color='#65FFFF'>王武</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_SHOP1" args="" arrowArgs="3_560_650" ><![CDATA[<font color='#65FFFF'>卖掉鸡肉和土豆</font>]]></step> 	
+													
+	</guide>-->
+	
+	<!-- 前往洛阳城门，消灭守将李儒 -->
+	<guide id="1410" targetScene="SCENE_ID_INSTANCEHALL,6" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_460_320" ><![CDATA[点击<font color='#65FFFF'>火烧洛阳</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,7"  arrowArgs="2_510_295" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,7"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 精炼装备到10星 -->
+	<guide id="1411" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_240_760" ><![CDATA[<font color='#65FFFF'>强化装备</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_EQUIP_REFINE" arrowArgs="4_50_710" ><![CDATA[点击<font color='#65FFFF'>精炼</font>页签]]></step> 	
+													
+	</guide>
+	
+	<!-- 前往洛阳外城，消灭守将 -->
+	<guide id="1501" targetScene="SCENE_ID_INSTANCEHALL,8" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_460_320" ><![CDATA[点击<font color='#65FFFF'>火烧洛阳</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,8"  arrowArgs="2_520_410" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,8"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 进入酒肆一楼，购买一道菜肴 -->
+	<guide id="1504" targetScene="SCENE_ID_ARENA" isNeedSearchLoad="false" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKXIAOER" args="SCENE_ID_TOWN" arrowArgs="1_360_600" ><![CDATA[点击<font color='#65FFFF'>酒楼</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入酒肆一楼</font>]]></step>
+		<step index="2" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_RESTAURANT,PN_RESTAURANT_NEW" arrowArgs="4_-25_15" ><![CDATA[点击<font color='#65FFFF'>包间</font>页签]]></step> 	
+		<step index="3" doType="window" uiType="" checkUI="" args="WINDOW_ID_RESTAURANT,PN_RESTAURANT_NEW" arrowArgs="4_70_360" ><![CDATA[点击<font color='#65FFFF'>购买菜肴</font>]]></step>
+				
+	</guide>
+
+	
+		<!-- 与竞技NPC对话，进入一次竞技场 -->
+<!--BUG没有这一步-->
+<!--	<guide id="1505" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKARENA" args="SCENE_ID_TOWN" arrowArgs="2_730_180" ><![CDATA[点击<font color='#65FFFF'>李云龙</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入竞技场</font>]]></step>
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_ARENA" arrowArgs="" ></step>
+				
+	</guide>-->
+	
+	
+	<!-- 进入农庄，收获土豆 -->
+	<guide id="1506" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农庄</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_FARM,0" arrowArgs="4_310_260" ><![CDATA[点击<font color='#65FFFF'>收获土豆</font>]]></step> 		
+						
+	</guide>
+	
+	<!-- 卖土豆给王武 -->	
+	<guide id="1507" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKWANGWU" args="SCENE_ID_TOWN" arrowArgs="3_440_760" ><![CDATA[点击<font color='#65FFFF'>背包</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_SHOP1" args="" arrowArgs="3_560_690" ><![CDATA[<font color='#65FFFF'>卖掉土豆和鸡肉</font>]]></step> 	
+													
+	</guide>
+	
+	<!-- 进入洛阳内城，消灭乱臣董卓 -->
+	<guide id="1509" targetScene="SCENE_ID_INSTANCEHALL,9" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_460_320" ><![CDATA[点击<font color='#65FFFF'>火烧洛阳</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,9"  arrowArgs="2_520_530" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,9"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 点击侍女进入修炼场，修炼勇武到2级 -->
+	<guide id="1512" targetScene="SCENE_ID_SKILLTRAIN" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKSHINV" args="SCENE_ID_TOWN" arrowArgs="1_190_570" ><![CDATA[点击<font color='#65FFFF'>校场进入修炼场</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_SKILLTRAIN1" args="" arrowArgs="1_470_320" ><![CDATA[点击<font color='#65FFFF'>进入修炼场</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="" checkUI="UI_ID_SKILLTRAIN2" args="SCENE_ID_SKILLTRAIN" arrowArgs="2_180_310" ><![CDATA[点击<font color='#65FFFF'>选择技能</font>]]></step> 		
+						
+	</guide>
+	
+	<!-- 前往洛阳内城，领取所有奖励 -->
+	<guide id="1513" targetScene="SCENE_ID_INSTANCEHALL,9" isNeedSearchLoad="false" showOnlyOne="true" >
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_SKILLTRAIN"  arrowArgs="1_250_200" ><![CDATA[点击<font color='#65FFFF'>传送门返回主城</font>]]></step >
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_460_320" ><![CDATA[点击<font color='#65FFFF'>火烧洛阳</font>]]></step >		
+		<step index="3" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,9"  arrowArgs="2_510_530" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="4" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,9"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	
+	<!--点切幕箭头，进入第二幕 -->
+	<guide id="2101" targetScene="SCENE_ID_AREA,2" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,1"  arrowArgs="2_560_90" ><![CDATA[点击<font color='#65FFFF'>进入第二幕</font>]]></step >			
+	</guide>
+	
+	<!-- 打开官职界面-->
+	<guide id="2102" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">		
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_PRESTIGE1" args="SCENE_ID_TOWN" arrowArgs="3_390_420" ><![CDATA[点击<font color='#65FFFF'>官衙</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_PRESTIGE,PN_PRESTIGE_OFFICE" arrowArgs="4_-25_15" ><![CDATA[点击<font color='#65FFFF'>官职</font>]]></step> 			<step index="2" doType="window" uiType="" checkUI="UI_ID_PRESTIGE1" args="WINDOW_ID_PRESTIGE,PN_PRODUCE_COOKING" arrowArgs="2_510_250" ><![CDATA[点击<font color='#65FFFF'>烹饪</font>]]></step> 	
+
+	</guide>
+	
+	<!-- 进入酒肆二楼，招募绿名副将 -->
+	<guide id="2104" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKXIAOER" args="SCENE_ID_TOWN" arrowArgs="1_360_600" ><![CDATA[点击<font color='#65FFFF'>酒楼</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_RESTAURANT1" args="" arrowArgs="1_485_300" ><![CDATA[点击<font color='#65FFFF'>进入酒肆二楼</font>]]></step>
+		<step index="2" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_RESTAURANT,PN_RESTAURANT_EMPLOY" arrowArgs="4_170_720" ><![CDATA[点击<font color='#65FFFF'>招募</font>]]></step> 	
+		<step index="3" doType="window" uiType="" checkUI="" args="WINDOW_ID_RESTAURANT,PN_RESTAURANT_NEW" arrowArgs="1_130_330" ><![CDATA[点击<font color='#65FFFF'>招募绿色武将</font>]]></step>
+				
+	</guide>
+	
+	<!-- 打开阵型界面，设置绿将出战 -->
+	<guide id="2105" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_GENERAL1" args="SCENE_ID_TOWN" arrowArgs="4_50_760" ><![CDATA[点击<font color='#65FFFF'>武将</font>按钮]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_GENERAL,PN_GENERAL_EMBATTLE" arrowArgs="4_170_720" ><![CDATA[点击<font color='#65FFFF'>布阵</font>]]></step> 	
+		<step index="2" doType="window" uiType="" checkUI="UI_ID_GENERALLIST" args="WINDOW_ID_GENERAL,PN_GENERAL_EMBATTLE" arrowArgs="4_300_120" ><![CDATA[点击<font color='#65FFFF'>空白处</font>上阵]]></step> 	
+		<step index="3" doType="window" uiType="" checkUI="UI_ID_GENERAL3" args="WINDOW_ID_GENERAL,PN_GENERAL_EMBATTLE" arrowArgs="2_180_280" ><![CDATA[点击<font color='#65FFFF'>武将</font>上阵]]></step> 
+													
+	</guide>
+	
+	
+	<!-- 进入白马营哨，升级绿将到10级 -->
+	<guide id="2109" targetScene="SCENE_ID_INSTANCEHALL,10" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="2_180_430" ><![CDATA[点击<font color='#65FFFF'>白马之围</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,10"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,10"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 通关白马营哨，集齐黄色武器碎片 -->
+	<guide id="2110" targetScene="SCENE_ID_INSTANCEHALL,10" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="2_180_430" ><![CDATA[点击<font color='#65FFFF'>白马之围</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,10"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,10"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 前往白马前营，集齐黄色套装 -->
+	<guide id="2115" targetScene="SCENE_ID_INSTANCEHALL,11" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="2_180_430" ><![CDATA[点击<font color='#65FFFF'>白马之围</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,11"  arrowArgs="2_520_295" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,11"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	<!-- 前往白马中营，获得种药科技 -->
+	<guide id="2201" targetScene="SCENE_ID_INSTANCEHALL,12" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="2_180_430" ><![CDATA[点击<font color='#65FFFF'>白马之围</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,12"  arrowArgs="2_520_410" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,12"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 前往白马后营，获得活血散药方 -->
+	<guide id="2208" targetScene="SCENE_ID_INSTANCEHALL,13" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="2_180_430" ><![CDATA[点击<font color='#65FFFF'>白马之围</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,13"  arrowArgs="2_520_530" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,13"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 打开炼药界面，制作一个活血散 -->
+	<guide id="2212" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_370_260" ><![CDATA[点击<font color='#65FFFF'>工场</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_PRODUCE,PN_PRODUCE_PHARMACY" arrowArgs="4_165_710" ><![CDATA[点击<font color='#65FFFF'>炼药</font>]]></step> 	
+			
+	</guide>
+	
+	<!-- 通关白马大帐，获取边塞许可 -->
+	<guide id="2214" targetScene="SCENE_ID_INSTANCEHALL,14" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="2_180_430" ><![CDATA[点击<font color='#65FFFF'>白马之围</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,14"  arrowArgs="2_520_645" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,14"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 点击进入边塞（修改至返回皇榜） -->
+	<guide id="2215" targetScene="SCENE_ID_AREA,2" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="4_60_750" ><![CDATA[点击<font color='#65FFFF'>进入边塞</font>]]></step >	
+		
+	</guide>
+	
+	<!-- 找徐虎查看势力任务 -->
+	<guide id="2216" targetScene="SCENE_ID_BORDER" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_BORDER"  arrowArgs="3_420_700" ><![CDATA[进入<font color='#65FFFF'>传送门出塞</font>]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="3_210_650" ><![CDATA[点击<font color='#65FFFF'>皇榜</font>]]></step> 	
+
+				
+	</guide>
+	
+	<!-- 通关仓亭-粮道前，获得烹饪科技 -->
+	<guide id="2308" targetScene="SCENE_ID_INSTANCEHALL,15" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="1_330_620" ><![CDATA[点击<font color='#65FFFF'>仓亭之战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,15"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,15"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	<!-- 打开烹饪界面，烹饪一次 -->
+	<guide id="2310" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_370_260" ><![CDATA[点击<font color='#65FFFF'>工场</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		 		
+		<step index="2" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_PRODUCE,PN_PRODUCE_COOKING" arrowArgs="4_-25_35" ><![CDATA[点击<font color='#65FFFF'>烹饪</font>]]></step> 	
+		<step index="3" doType="window" uiType="" checkUI="UI_ID_PRODUCE1" args="WINDOW_ID_PRODUCE,PN_PRODUCE_COOKING" arrowArgs="2_510_260" ><![CDATA[点击<font color='#65FFFF'>烹饪</font>]]></step> 	
+			
+	</guide>
+	
+	<!-- 通关仓亭-粮道中 -->
+	<guide id="2312" targetScene="SCENE_ID_INSTANCEHALL,16" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="1_330_620" ><![CDATA[点击<font color='#65FFFF'>仓亭之战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,16"  arrowArgs="2_520_295" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,16"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 通关仓亭-粮道后 -->
+	<guide id="2316" targetScene="SCENE_ID_INSTANCEHALL,17" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="1_330_620" ><![CDATA[点击<font color='#65FFFF'>仓亭之战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,17"  arrowArgs="2_520_410" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,17"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 对话侍女进入将军府 -->
+	<guide id="2318" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKSHINV" args="SCENE_ID_TOWN" arrowArgs="2_195_420" ><![CDATA[点击<font color='#65FFFF'>将军府</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_HOME1" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入将军府</font>]]></step>
+	</guide>
+	
+	<!-- 对话侍女进入将军府 -->
+	<guide id="2319" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKSHINV" args="SCENE_ID_TOWN" arrowArgs="2_195_420" ><![CDATA[点击<font color='#65FFFF'>将军府</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_HOME1" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入将军府</font>]]></step> 
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_HOME" arrowArgs="1_320_290_0" ><![CDATA[点击<font color='#65FFFF'>精力星补充精力</font>]]></step>				 		
+		
+	</guide>
+	
+	<!-- 通关仓亭-采粮场 -->
+	<guide id="2321" targetScene="SCENE_ID_INSTANCEHALL,18" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="1_330_620" ><![CDATA[点击<font color='#65FFFF'>仓亭之战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,18"  arrowArgs="2_520_530" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,18"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 对话侍女进入将军府 -->
+	<guide id="2401" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKSHINV" args="SCENE_ID_TOWN" arrowArgs="2_195_420" ><![CDATA[点击<font color='#65FFFF'>将军府</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_HOME1" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入将军府</font>]]></step>
+	</guide>
+	
+	<!-- 对话侍女进入将军府 -->
+	<guide id="2402" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" >
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKSHINV" args="SCENE_ID_TOWN" arrowArgs="2_195_420" ><![CDATA[点击<font color='#65FFFF'>将军府</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="UI_ID_HOME1" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入将军府</font>]]></step>
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_HOME" arrowArgs="1_320_270_0" ><![CDATA[点击<font color='#65FFFF'>打开床榻界面</font>]]></step>
+		<step index="3" doType="panel" uiType="" checkUI="" args="PANEL_ID_FURNITUREINFO" arrowArgs="2_390_100" ><![CDATA[点击<font color='#65FFFF'>升级家具</font>]]></step>
+	</guide>
+	
+	<!-- 通关仓亭-粮营 -->
+	<guide id="2407" targetScene="SCENE_ID_INSTANCEHALL,19" isNeedSearchLoad="false" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN"  arrowArgs="4_60_640" ><![CDATA[点击<font color='#65FFFF'>传送门</font>出城]]></step >	
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="1_330_620" ><![CDATA[点击<font color='#65FFFF'>仓亭之战</font>]]></step >		
+		<step index="2" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,19"  arrowArgs="2_520_645" ><![CDATA[点击<font color='#65FFFF'>粮营</font>]]></step >
+			
+		<step index="3" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,19"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 进入边塞，进入敌国入侵-->
+	<guide id="2412" targetScene="SCENE_ID_BORDER" isNeedSearchLoad="true" showOnlyOne="false">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="4_60_750" ><![CDATA[点击<font color='#65FFFF'>进入边塞</font>]]></step >
+		<step index="1" doType="scene" uiType="" checkUI="" args="SCENE_ID_BORDER"  arrowArgs="4_200_720" ><![CDATA[<font color='#65FFFF'>进入敌国</font>]]></step >	
+		
+	</guide>
+	
+	<!-- 通关官渡巡船副本 -->
+	<guide id="2501" targetScene="SCENE_ID_INSTANCEHALL,20" isNeedSearchLoad="true" showOnlyOne="true">
+			
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="3_430_280" ><![CDATA[点击<font color='#65FFFF'>官渡之战</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,20"  arrowArgs="2_520_185" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,20"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 通关官渡护船副本 -->
+	<guide id="2502" targetScene="SCENE_ID_INSTANCEHALL,21" isNeedSearchLoad="true" showOnlyOne="true">
+			
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="3_430_280" ><![CDATA[点击<font color='#65FFFF'>官渡之战</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,21"  arrowArgs="2_520_295" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,21"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 通关官渡主船副本 -->
+	<guide id="2503" targetScene="SCENE_ID_INSTANCEHALL,22" isNeedSearchLoad="true" showOnlyOne="true">
+			
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="3_430_280" ><![CDATA[点击<font color='#65FFFF'>官渡之战</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,22"  arrowArgs="2_520_410" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,22"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 通关官渡甲板副本 -->
+	<guide id="2504" targetScene="SCENE_ID_INSTANCEHALL,23" isNeedSearchLoad="true" showOnlyOne="true">
+			
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="3_430_280" ><![CDATA[点击<font color='#65FFFF'>官渡之战</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,23"  arrowArgs="2_520_530" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,23"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 通关官渡船舱副本 -->
+	<guide id="2505" targetScene="SCENE_ID_INSTANCEHALL,24" isNeedSearchLoad="true" showOnlyOne="true">
+			
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,2"  arrowArgs="3_430_280" ><![CDATA[点击<font color='#65FFFF'>官渡之战</font>]]></step >		
+		<step index="1" doType="power" uiType="" checkUI="" args="SCENE_ID_AREA,24"  arrowArgs="2_520_645" ><![CDATA[点击<font color='#65FFFF'>攻</font>]]></step >
+			
+		<step index="2" doType="scene" uiType="" checkUI="" args="SCENE_ID_INSTANCEHALL,24"  arrowArgs="3_495_610" ><![CDATA[点击<font color='#65FFFF'>GO</font>进入]]></step >			
+	</guide>
+	
+	<!-- 进入农庄，强化农夫-->
+	<guide id="2901" targetScene="SCENE_ID_FARM,0" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_CKLICKFARM" args="SCENE_ID_TOWN" arrowArgs="1_250_320" ><![CDATA[点击<font color='#65FFFF'>农夫</font>]]></step> 	
+		<step index="1" doType="dialog" uiType="" checkUI="" args="" arrowArgs="1_470_270" ><![CDATA[点击<font color='#65FFFF'>进入农庄</font>]]></step> 						 		
+		<step index="2" doType="scene" uiType="" checkUI="UI_ID_CLICKFARMITEM" args="SCENE_ID_FARM,0" arrowArgs="4_310_260" ><![CDATA[点击<font color='#65FFFF'>打开土地面板</font>]]></step> 		
+		<step index="3" doType="farmePanel" uiType="" checkUI="UI_ID_UPGRADEEARTH" args="SCENE_ID_FARM,0" arrowArgs="2_520_140" ><![CDATA[点击<font color='#65FFFF'>升级土地星级</font>]]></step> 		
+				
+	</guide>
+	
+	<!-- 进入银矿挖满两车 -->
+	<guide id="3104" targetScene="SCENE_ID_AREA,3" isNeedSearchLoad="true" showOnlyOne="true">
+			
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_AREA,3"  arrowArgs="1_80_560" ><![CDATA[点击<font color='#65FFFF'>进入银矿</font>]]></step >		
+	
+	</guide>
+	
+	<!-- 打开强化界面，进入宝石合成界面 -->
+	<guide id="3106" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_140_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_GEMSTONE_COMPOSE" arrowArgs="3_250_720" ><![CDATA[点击<font color='#65FFFF'>合成</font>]]></step> 	
+													
+	</guide>
+	
+	<!-- 打开镶嵌界面，把主将紫武打孔 -->
+	<guide id="3108" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="false" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="UI_ID_IMPROVE1" args="SCENE_ID_TOWN" arrowArgs="3_140_760" ><![CDATA[点击<font color='#65FFFF'>强化</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_IMPROVE,PN_GEMSTONE_INLAY" arrowArgs="3_350_720" ><![CDATA[点击<font color='#65FFFF'>镶嵌</font>]]></step> 	
+													
+	</guide>
+	
+	<!-- 打开阵型界面，设置督军 -->
+	<guide id="3304" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN" arrowArgs="4_50_760" ><![CDATA[点击<font color='#65FFFF'>武将</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_GENERAL,PN_GENERAL_EMBATTLE" arrowArgs="4_150_720" ><![CDATA[点击<font color='#65FFFF'>布阵</font>]]></step> 
+		<step index="2" doType="window" uiType="" checkUI="UI_ID_CKLICKEMBATTLE" args="WINDOW_ID_GENERAL,PN_GENERAL_EMBATTLE" arrowArgs="3_160_310" ><![CDATA[点击<font color='#65FFFF'>设置督军</font>]]></step> 			
+			
+	</guide>
+	
+	<!-- 打开培养界面，培养武将 -->
+	<guide id="3407" targetScene="SCENE_ID_TOWN" isNeedSearchLoad="true" showOnlyOne="true">
+		<step index="0" doType="scene" uiType="" checkUI="" args="SCENE_ID_TOWN" arrowArgs="4_50_760" ><![CDATA[点击<font color='#65FFFF'>武将</font>]]></step> 	
+		<step index="1" doType="window" uiType="checkPanel" checkUI="" args="WINDOW_ID_GENERAL,PN_GENERAL_FOSTER" arrowArgs="4_250_720" ><![CDATA[点击<font color='#65FFFF'>培养</font>]]></step> 
+		<step index="1" doType="window" uiType="" checkUI="UI_ID_GENERAL2" args="WINDOW_ID_GENERAL,PN_GENERAL_FOSTER" arrowArgs="4_520_530" ><![CDATA[点击<font color='#65FFFF'>服用</font>]]></step> 
+			
+	</guide>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- 寻路 ____________________________这些是用来寻路的__________________________________-->
+	<mainLoad>
+		<mainLine scene="SCENE_ID_TOWN">		<!-- 主城 -->	
+			<step index="0" doType="scene"  target="SCENE_ID_AREA" arrowArgs="4_60_640"  ><![CDATA[点击<font color='#65FFFF'>城门</font>出城]]></step>		
+		</mainLine>
+		
+		<mainLine scene="SCENE_ID_AREA"><!-- 世界-->
+			<step index="0" doType="scene" target="SCENE_ID_AREA" arrowArgs="1_70_90">点击返回上一幕</step>	
+			<step index="1" doType="scene" target="SCENE_ID_AREA" arrowArgs="2_925_260">点击去下一幕</step>	
+			<step index="2" doType="scene" target="SCENE_ID_BORDER" arrowArgs="3_510_760"><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step>	
+			<step index="3" doType="scene" target="SCENE_ID_TOWN" arrowArgs="3_520_740" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step>	
+			<step index="4" doType="scene" target="SCENE_ID_SILVER" arrowArgs="4_200_180" >点击进入银矿</step>	
+			<!-- <step index="5" doType="scene" target="SCENE_ID_INSTANCEHALL" arrowArgs="4_200_180" >点击返回世界</step> -->	
+			
+		</mainLine>
+		
+		<mainLine scene="SCENE_ID_BORDER"><!-- 边塞 -->
+			<step index="0" doType="scene" target="SCENE_ID_AREA" arrowArgs="3_420_700" ><![CDATA[点击<font color='#65FFFF'>传送门出塞</font>]]></step>	
+			<!-- <step index="1" doType="scene" target="" arrowArgs="4_200_180" >点击前往敌国</step>	 -->
+		</mainLine>
+		
+		<mainLine scene="SCENE_ID_INSTANCEHALL"><!-- 副本大厅 -->
+			<step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="4_65_685" ><![CDATA[点击<font color='#65FFFF'>退出副本</font>]]></step>	
+			<step index="1" doType="scene" target="SCENE_ID_INSTANCE" arrowArgs="2_265_160" ><![CDATA[点击<font color='#65FFFF'>传送门</font>进入]]></step>
+		</mainLine>
+	</mainLoad>
+	
+	<childLoad>
+		<!-- ____________________________________________________________________________ -->
+		<!-- ______________________________主城的子线______________________________________- -->
+		<childLine parent="SCENE_ID_TOWN" scene="SCENE_ID_ARENA"><!-- 竞技场 -->
+			<!-- <step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="3_430_530" >点击离开竞技场</step>	 -->
+		</childLine>
+		<childLine parent="SCENE_ID_TOWN" scene="SCENE_ID_RANKINGBATTLE"><!-- 排位赛-->
+			<step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="3_850_450" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step>	
+		</childLine>
+		<childLine parent="SCENE_ID_TOWN" scene="SCENE_ID_FARM"><!-- 农场-->
+			<step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="3_560_700" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step>	
+			<step index="1" doType="scene" target="SCENE_ID_FARM,0" arrowArgs="3_910_435"  ><![CDATA[点击<font color='#65FFFF'>[农场]</font>]]></step>	
+			<step index="2" doType="scene" target="SCENE_ID_FARM,1" arrowArgs="3_910_495"  ><![CDATA[点击<font color='#65FFFF'>[牧场]</font>]]></step>	
+			<step index="3" doType="scene" target="SCENE_ID_FARM,2" arrowArgs="3_910_515"  ><![CDATA[点击<font color='#65FFFF'>[矿场]</font>]]></step>	
+			<step index="4" doType="scene" target="SCENE_ID_FARM,3" arrowArgs="3_910_515"  ><![CDATA[点击<font color='#65FFFF'>[马场]</font>]]></step>	
+		</childLine>	
+		<childLine parent="SCENE_ID_TOWN" scene="SCENE_ID_HOME"><!-- 将军府-->
+			<step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="3_550_635" ><![CDATA[点击<font color='#65FFFF'>主城</font>]]></step>
+<!--<step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="3_570_635" >返回主城</step>-->	
+		</childLine>		
+		<childLine parent="SCENE_ID_TOWN" scene="SCENE_ID_SKILLTRAIN"><!-- 修炼场-->	
+			<!-- <step index="0" doType="scene" target="SCENE_ID_TOWN" arrowArgs="1_250_130" ><![CDATA[点击<font color='#65FFFF'>返回主城</font>]]></step>	 -->
+		</childLine>
+		
+		<!-- ____________________________________________________________________________ -->
+		<!-- ______________________________-地区的子线____________________________________________- -->
+	
+		<childLine parent="SCENE_ID_AREA"  scene="SCENE_ID_SILVER"><!-- 银矿 -->	<!-- 银矿有3层。。。可能需要特殊处理 -->	
+			<step index="0" doType="scene" target="SCENE_ID_AREA" arrowArgs="2_745_90" >点击返回主城</step>	
+			<step index="1" doType="scene" target="SCENE_ID_AREA" arrowArgs="4_120_380" >点击返回主城</step>	
+			<step index="2" doType="scene" target="SCENE_ID_SILVER" arrowArgs="4_200_180" >点击前往安全区</step>	
+			<step index="3" doType="scene" target="SCENE_ID_SILVER" arrowArgs="4_200_180" >点击前往独占区</step>	
+		</childLine>
+				
+		<childLine parent="SCENE_ID_AREA"  scene="SCENE_ID_MANZU"><!-- 蛮族入侵 -->
+			<!-- <step index="0" doType="scene" target="SCENE_ID_AREA" arrowArgs="4_200_180" >点击返回世界</step>	 -->
+		</childLine>
+		
+		<!-- ____________________________________________________________________________ -->
+		<!-- __________________________________副本大厅的子线__________________________________________ -->
+		<childLine parent="SCENE_ID_INSTANCEHALL"  scene="SCENE_ID_INSTANCE"><!-- 副本 -->
+			<!-- <step index="0" doType="scene" target="SCENE_ID_INSTANCEHALL" arrowArgs="2_880_110" >点击退出副本</step>	 -->
+		</childLine>
+		
+	</childLoad>
+	
+	
+</config>

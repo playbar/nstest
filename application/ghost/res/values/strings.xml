@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, GhostActivity!</string>
+    <string name="app_name">百玩三国游戏</string>
+    <string name="download">游戏需要百玩客户端支持，“猛击”安装百玩</string>
+    <string name="start">开始</string>
+    <string name="derror">数据出错</string>
+    <string name="lerror">连接超时，请检查网络</string>
+    <string name="install">安装</string>
+    <string name="linking">正在连接</string>
+    <string name="loaded">已下载</string>
+    <string name="http_ok">200</string>
+    <string name="content_length">Content-Length: </string>
+    <string name="http_body">PKG</string>
+	<string name="spirit_code_name">UA_CODE</string>
+	<string name="spirit_code_value">SPSGYX</string>
+	<string name="channel_id_name">CHANNEL_ID</string>
+	<string name="channel_id_value">01040001</string>
+</resources>

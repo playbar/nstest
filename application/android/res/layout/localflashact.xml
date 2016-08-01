@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+		    <TextView android:id="@+id/title"
+		    	android:textSize="@dimen/bwpx24"
+		    	android:textStyle="bold"
+		    	android:text="本地文件"
+		        android:layout_gravity="center_horizontal"
+		        android:layout_width="fill_parent"
+		        android:layout_height="@dimen/bwpx40"
+		        android:gravity="center"
+		        android:textColor="#FFFFFF"
+		        android:background="@drawable/bar_black_bg" 
+		        />
+		    <Button 
+		        android:id="@+id/local_back_btn"
+		        android:layout_width="@dimen/bwpx64"
+		        android:layout_height="@dimen/bwpx38"
+		        android:gravity="center"
+		        android:layout_gravity="right"
+		        android:text="返回"
+		        android:background="@drawable/back_btn"
+		        android:layout_marginTop="@dimen/bwpx4"
+		        android:layout_marginRight="@dimen/bwpx5"
+		        android:layout_marginBottom="@dimen/bwpx2"
+		        /> 
+    </FrameLayout>
+	<ListView 
+	  android:id="@id/android:list"
+	  android:layout_width="fill_parent" 
+	  android:layout_height="wrap_content"
+	  android:longClickable="true"
+	/>
+
+</LinearLayout>
+

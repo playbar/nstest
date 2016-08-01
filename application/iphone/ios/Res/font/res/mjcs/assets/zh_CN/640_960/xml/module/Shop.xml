@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【角色信息 面板】配置文件-->
+<config properties='{"initX":5, "initY":95, "titleID":440001, "bgWidth":330, "bgHeight":418}'>
+		<displayObject definition="shop.view.shopBg"  properties='{"x":0 , "y":0}'/>	
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":17 , "y":56, "width":296, "height":322}'/>	
+
+		<itemGroup name="tabBtnGroup" properties='{"x":20, "y":39, "layout":"horizontal"}' />
+		<button name="tabBtn1" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440011"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		<button name="tabBtn2" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440012"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		<button name="tabBtn3" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440013"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		<!--<button name="tabBtn4" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440014"}' parent="tabBtnGroup"  group="tabBtnGroup"/>-->
+		<button name="tabBtn5" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440015"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":144 , "y":382, "width":45}'/>	
+		<page name="page" properties='{"x":123, "y":383,
+						"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":72 },
+						"labelProp":{"x":18, "y":0, "width":46, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+						}' />
+		<page name="pageBack" properties='{"x":123, "y":383,
+						"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":72 },
+						"labelProp":{"x":18, "y":0, "width":46, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+		}' />
+		
+		<list name="goodsList" properties='{"x":21, "y":60, "columnCount":2, "rowCount":7, "horizontalGap":3, "verticalGap":1}' /> 
+		<list name="buyBackGoodsList" properties='{"x":18, "y":58, "columnCount":2, "rowCount":5, "horizontalGap":3, "verticalGap":1}' /> 
+		<!--<button name="buyBtn" properties='{"x":130, "y":402, "styleName":"button3", "labelID":"440021"}' />-->
+		
+		<!-- 购买面板 -->
+		<container name="bugPanel" properties='{"x":60,"y":100,"pricePos":"98,69,88,59"}'>
+			<displayObject definition="skin.Panel2$bg"  properties='{"x":0 , "y":0, "width":190 , "height":180}'/>	
+			<displayObject definition="shop.view.buyBg"  properties='{"x":0 , "y":0}'/>	
+			<displayObject definition="gameUI.icon.Grid1"  properties='{"x":26 , "y":37}'/>	
+			<displayObject name="priceIcon1" definition="gameUI.icon.Price"  properties='{"x":148 , "y":62}'/>	
+			<displayObject name="priceIcon2" definition="gameUI.icon.Price"  properties='{"x":148 , "y":109}'/>	
+			<imageLoader name="goodIL" properties='{"pathFormatName":"skill32",  "x":30, "y":41, "width":32, "height":32}' />	
+
+			<label name="priceIconText1" properties='{"x":138, "y":60, "width":99,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+			<label name="priceIconText2" properties='{"x":138, "y":107, "width":99,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+			
+			<label name="nameText" properties='{"x":67, "y":39, "width":99,  "height":22, "size":12, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+			<label name="priceText" properties='{"x":98, "y":60, "width":50,  "height":22, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+			<inputText name="numberText" properties='{"x":89, "y":84, "width":58,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+			<label name="totalPriceText" properties='{"x":69, "y":107, "width":78,  "height":22, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+			<label properties='{"x":67, "y":59, "width":40,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"440022"}'/>
+			<label properties='{"x":22, "y":82, "width":50,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xA69551", "stroke":"0x302010", "textID":"440023"}'/>
+			<label properties='{"x":22, "y":103, "width":50,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xA69551", "stroke":"0x302010", "textID":"440024"}'/>
+
+			<buttonBasic name="reduceBtn" properties='{"x":69, "y":83, "width":17, "height":17,  "skin":"skin.page2.PrevBtn"}' />
+			<buttonBasic name="addBtn" properties='{"x":148, "y":83, "width":17, "height":17,"skin":"skin.page2.NextBtn"}' />
+
+			<button name="buyBtn" properties='{"x":32, "y":137, "width":60, "styleName":"button3", "labelID":"440025"}' />
+			<button name="cancelBtn" properties='{"x":100, "y":137, "width":60, "styleName":"button3", "labelID":"440026"}' />
+		</container>
+
+
+		<GoodRenderer properties='{"itemWidth":143, "itemHeight":44}'>
+			<displayObject name="itemBg" definition="shop.view.itemBg"  properties='{"x":0 , "y":0}'/>	
+			<displayObject name="priceIcon" definition="gameUI.icon.Price"  properties='{"x":128 , "y":29}'/>	
+			<sprite name="goodsIcon" properties='{"x":6, "y":6}' />	
+			<label name="nameText" properties='{"x":44, "y":4, "width":96,  "height":22, "size":12, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+			<label name="priceLabel" properties='{"x":42, "y":27, "width":40,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"440022"}'/>
+			<label name="priceText" properties='{"x":73, "y":27, "width":55,  "height":22, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		</GoodRenderer>
+		
+		<BuyBackGoodRenderer properties='{"itemWidth":143, "itemHeight":62,"pricePos":"73,63"}'>
+			<displayObject name="itemBg" definition="shop.view.BackItemBG"  properties='{"x":0 , "y":0}'/>	
+			<displayObject name="priceIcon" definition="gameUI.icon.Price"  properties='{"x":128 , "y":29}'/>	
+			<sprite name="goodsIcon" properties='{"x":6, "y":6}' />	
+			
+			<label name="priceIconText" properties='{"x":115, "y":27, "width":99,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010", "mouseEnabled":false}'/>
+			<label  name="countText" properties='{"x":6, "y":25, "width":35, "height":15,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+			<label name="nameText" properties='{"x":44, "y":4, "width":96,  "height":22, "size":12, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+			<label name="priceLabel" properties='{"x":42, "y":27, "width":40,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"440022"}'/>
+			<label name="priceText" properties='{"x":73, "y":27, "width":55,  "height":22, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+			<label  name="countDownText" properties='{"x":5, "y":47, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		</BuyBackGoodRenderer>
+</config>

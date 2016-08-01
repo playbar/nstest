@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【势力排行赛场景】配置文件-->
+<config properties='{
+	"showEffectDuration":0, "hideEffectDuration":0, "runPlace":{"ownX":5, "ownY":14, "otherX":6, "otherY":12}, "prop":{"definition":"rankingBattleScene.ArtFive","gap":50, "dropStartY":0, "dropEndY":190, "dropDur":2.5, "sliceDur":1}}'>
+	<sprite name="mapContainer" />
+	<displayObject name="backBtn" definition="gameUI.btn.Back" properties='{"x":530, "y":600}' />
+	<sprite name="movSp" properties='{"x":420, "y":280}'/>
+	
+		<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "mouseChildren":false, "defNameTextY":25}'>
+		
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="sp" properties='{"x":-20, "y":25}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label name="rankText" properties='{"width":100, "height":30, "size":20,"x":-50, "y":40, "autoSize":"none", "align":"center", "color":"0xCACB65",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":30, "size":20, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":30, "size":20,"x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>
+		<imageLoader name="titleRankIL" properties='{"x":-60, "y":-150,"pathFormatName":"titleRank",  "mouseEnabled":false, "mouseChildren":false}' /><!--爵位头衔-->
+	</avatarBasicUI>
+	
+		<!--  查看对手/挑战对手 -->
+	<container name="doWithOpponentTip" properties='{"x":0, "y":0, "gapX":-110, "gapY":-70}' >
+		<displayObject definition="rankingBattleScene.view.DoWithOpponentTipBG" properties='{"x":0, "y":0}' />
+		<button name="attackBtn" properties='{"x":4, "y":4, "styleName":"button17", "labelID":"770001"}' />
+		<button name="seeBtn" properties='{"x":3, "y":36,"styleName":"button17", "labelID":"770002","visible":false}' />
+	</container>	
+
+	<!--  排位赛奖励详情  -->
+	<container name="rankingBattleRewardDetail" properties='{"x":0, "y":160}' >
+		<displayObject definition="rankingBattleScene.RightPanel" properties='{"height":330,"x":0,"y":0,"width":280}' />
+		<label properties='{"x":16,"align":"center","textID":770023,"width":40,"stroke":"0x151515","autoSize":"none","height":24,"y":30,"size":18,"color":"0xe3eb98"}' />
+		<label properties='{"x":82,"align":"center","y":30,"width":100,"stroke":"0x151515","autoSize":"none","height":24,"border":false,"textID":770024,"size":16,"color":"0xe3eb98"}' />
+		<label properties='{"color":"0xe3eb98","x":220,"align":"center","y":30,"width":40,"stroke":"0x151515","height":24,"border":false,"textID":770025,"autoSize":"none","size":16}' />
+		<list name="list" properties='{"x":15, "y":58, "columnCount":1, "rowCount":6, "horizontalGap":10, "verticalGap":6}' />
+		<label name="timesText" properties='{"width":140, "height":26,  "size":18, "x":80, "y":215,  "color":"0xe3eb98",  "stroke":"0x151515","size":16}' />
+<!--挑战次数-->
+		<label name="canGetRewardText" properties='{"width":140, "height":24,  "size":16, "x":11, "y":270,  "color":"0xe3eb98",  "stroke":"0x151515","size":16}' />
+		<label name="numText" properties='{"width":35, "height":24,  "size":16,  "x":75, "y":270,   "stroke":"0x151515", "autoSize":"none", "align":"center","border":false}' />	<!--积分数字-->	
+		<sprite name="sp"/>
+		<label parent="sp" name="add" properties='{"x":80, "y":240, "width":80, "height":24,  "size":16, "color":"0xe3eb98",  "stroke":"0x151515","textID":"770042","underline":true,"mouseEnabled":false}' />
+<!--增加次数-->
+		<label name="jfText" properties='{"width":40, "height":24,  "size":16, "x":108, "y":270,  "color":"0xe3eb98",  "stroke":"0x151515","size":16 , "textID":"770036", "border":false}' />	<!--领奖还需9999积分-->
+		<sprite name="sp1"/>
+		<label parent="sp1" name="todayText" properties='{"width":100, "height":28,  "size":17, "x":11, "y":295,  "color":"0xc8ce64",  "stroke":"0x151515","underline":true,"mouseEnabled":false}' />
+<!--今日战况-->
+		<label name="ruleText" properties='{"width":100, "height":28,  "size":17,"x":90, "y":295,  "color":"0xc8ce64",  "stroke":"0x151515", "underline":true}' />
+<!--规则说明-->
+		<displayObject name="rewardBtn" definition="gameUI.box.LibaoBtn" properties='{"y":250,"x":202}' />
+<!--礼包按钮-->
+		<displayObject name="gxMC" definition="gameUI.giiftBag.lightEffect" properties='{"x":237,"visible":false,"y":285,"mouseEnabled":false}' />
+<!--礼包光效-->
+		<displayObject definition='gameUI.icon.Gold' properties='{"x":175, "y":245}'/>
+<!--金币图标-->		
+		<label name="goldText" properties='{"width":50, "height":20, "x":152, "y":240,  "color":"0xf5d300",  "stroke":"0x151515"}' />
+<!--价格-->
+		<sprite name="rewardTips" properties='{"x":-380, "y":130}' />
+		<!--今日战况-->
+		<container name="todayFight" properties='{"x":0, "y":0}' >
+			<displayObject definition="rankingBattleScene.TodayFight" properties='{"height":400,"x":0,"y":0,"width":440}' /> 
+			<list name="list" properties='{"x":35, "y":77, "columnCount":1, "rowCount":8, "horizontalGap":1, "verticalGap":10}' />
+			<displayObject properties='{"height":30,"x":188,"y":335,"width":60}' definition='skin.page2.PageBG' />		
+			<page name="page" properties='{"x":160, "y":335,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":86 },
+							"labelProp":{"x":29, "y":2, "width":60, "height":26, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+			<buttonBasic name="closeBtn" properties='{"x":385,"y":-28,"skin":"skin.CloseBtn"}' />
+
+
+		</container>
+	</container>
+	
+
+
+	<!--积分排行呈示器-->
+	<RankingBattleRankRenderer properties='{"itemWidth":180, "itemHeight":21}'>	
+		<displayObject name="self" definition="rankingBattleScene.Self" properties='{"height":23,"x":-6,"y":0,"width":261}' />
+		<label name="rankText" properties='{"width":40, "height":24, "size":16, "x":12, "y":0,  "color":"0xe3eb98",  "stroke":"0x151515", "border":false}' />
+		<label name="nameText" properties='{"width":100, "height":24, "size":16, "x":65, "y":0,  "stroke":"0x151515", "border":false, "autoSize":"none", "align":"center"}' />
+		<label name="scoreText" properties='{"width":60,"height":24, "size":16, "x":178, "y":0,  "color":"0xe3eb98",  "stroke":"0x151515", "autoSize":"none", "align":"right", "border":false}' />
+		
+	</RankingBattleRankRenderer>
+	<!--今日战况呈示器-->
+	<TodayFightRenderer properties='{"itemWidth":180, "itemHeight":21}'>	
+		<label name="winText" properties='{"width":60, "height":30, "size":18, "x":15, "y":0,  "color":"0xe3eb98",  "stroke":"0x151515", "border":false}' />
+		<label name="introText" properties='{"width":300, "height":60, "size":18, "x":65, "y":0,  "color":"0xe3eb98","stroke":"0x151515", "border":false,"multiline":true}' />
+		<!--<label name="scoreText" properties='{"width":43, "height":20,  "x":135, "y":0,  "color":"0xe3eb98",  "stroke":"0x151515", "autoSize":"none", "align":"right", "border":false}' />		-->
+	</TodayFightRenderer>
+	
+</config>

@@ -1,0 +1,159 @@
+STRING	XIDS_TITLE 百玩
+STRING  XIDS_HELLO W你好H
+STRING  XIDS_OK	   确定
+STRING  XIDS_CANCEL 取消
+STRING  XIDS_ABORT 终止
+STRING  XIDS_RETRY 重试
+STRING  XIDS_IGNORE 忽略
+STRING  XIDS_YES 是的
+STRING  XIDS_NO 不要
+STRING  XIDS_STOP 停止
+STRING  XIDS_START 开始
+STRING  XIDS_FONT  新宋体
+STRING	XIDS_MARK  ,.?:\;'!)]}>，。？”’〉；：、》」』】〕〗〉！
+STRING  XIDS_LEFTMARK <({[“‘〈《「『【〔〖"
+STRING  XIDS_CLEARCATCH 清除缓存...
+STRING  XIDS_BEGINCLEAR 按[确定]开始清除
+STRING  XIDS_CLEARED 已经清除
+STRING  XIDS_CLEARCOUNT 个.
+STRING  XIDS_SAVEFILE	保存文件
+STRING  XIDS_SUCCESS	成功
+STRING  XIDS_FAILED	失败
+STRING  XIDS_FINISHED	结束
+STRING  XIDS_CLOSEWINDOW 关闭窗口
+STRING  XIDS_FORWARD 前进[3]
+STRING  XIDS_CLOSE 关闭[C]
+STRING  XIDS_SAVE 保存
+STRING  XIDS_ORIG 放大显示
+STRING  XIDS_FIT 全屏显示
+STRING  XIDS_SCORE 上传积分
+STRING  XIDS_RESTART 重新开始
+STRING  XIDS_MOUSEMODE 鼠标模式
+STRING  XIDS_TOUCHMODE 按键模式
+STRING  XIDS_ENDPLAY 结束播放
+STRING  XIDS_SEARCH 搜索:
+STRING  XIDS_NEARCNT [最近访问过的内容]
+STRING  XIDS_MORE >更多...
+STRING  XIDS_HOMEPAGE 主页
+STRING  XIDS_QUITSYSTEM 您确定要退出集趣吧?
+STRING  XIDS_CLOSEALLMSG 您确定要关闭全部浏览窗口?
+STRING  XIDS_ABOUT 关于
+STRING  XIDS_CLOSEALL 关闭全部
+STRING  XIDS_HELP 帮助
+STRING  XIDS_CLEARCMD 清除缓存
+STRING  XIDS_QUIT 退出
+STRING  XIDS_MENU 菜单
+STRING  XIDS_BACK 后退
+STRING  XIDS_SELECT 选择
+STRING  XIDS_EDIT 编辑
+STRING  XIDS_OVER 完成
+STRING  XIDS_UNKNOW 未知
+STRING  XIDS_NETWORK 网络
+STRING  XIDS_LOCAL 本地
+STRING  XIDS_NOCONTEXT -没有最近内容
+STRING  XIDS_ROOTDIR 根目录
+STRING  XIDS_UPDIR 上级目录
+STRING  XIDS_REMOVEBLEDISK 可移动盘
+STRING  XIDS_SYSDISK 系统盘
+STRING  XIDS_VIRDISK 虚拟盘
+STRING  XIDS_BAKDISK 备份盘
+STRING  XIDS_LOADING 载入数据
+STRING  XIDS_FULLSCREEN 满屏显示
+STRING  XIDS_SAVEMARK	保存书签
+STRING	XIDS_PUSHSCORE  您的成绩是%,上传成绩？
+STRING  XIDS_BOOKMARK	个人书签
+STRING  XIDS_QUITFLASH  您确定要结束游戏(动画)?
+STRING  XIDS_RESETFLASH 刷新重新载入游戏，您确定？
+STRING  XIDS_WAITTIME 游戏加载中，请稍候
+
+SORRY		sorry.swf
+ANI			er.gif
+BUTTONOFF	boff.png
+BUTTONON	bon.png
+CONNECT		connect.gif
+CURSOR		cursor.gif
+DISK		disk.gif
+FAILED		failed.gif
+FILE		file.gif
+FLASH		flash_app.png
+FOLDER		folder.gif
+PAGELOADING     pageloading.gif
+GOGO		gogo.gif
+GRAYDOT		37hui.png
+GREENDOT	37lv.png
+HOME		home.gif
+IMAGE		image.gif
+KEYA		a_on.png
+KEYB		b_on.png
+KEYDOWN		down_on_ipad.png
+KEYLEFT		left_on_ipad.png
+KEYRIGHT	right_on_ipad.png
+KEYUP		up_on_ipad.png
+LEFTSOFT	lefts.png
+LOADING		loading.gif
+MAINICON	icon.gif
+MEDIA		media.gif
+PDF			pdf.gif
+RAR			rar.gif
+RIGHTSOFT	rights.png
+TEXT		text.gif
+WML			wml.png
+WORD		word.gif
+CONFIG		ipad.xml
+FLASHCONFIG	flashcfg.xml
+GRAYBLOCK	gryblock.gif
+GREENBLOCK	gnblock.gif
+BLUEBLOCK	blublock.gif
+ERRORPAGE	error.wml
+HOMEPAGE	home.htm
+BUTTON		button.gif
+BACKGROUND	back.gif
+ICONSSHOW	icons1.png
+ICONSGRAY	icons2.png
+ICONSACTIVE	icons3.png
+ICONSCHECK	icons4.png
+CLOSE		close.png
+SLIDERBAR	slbar.png
+ERROR_NEW app_neterror.png
+KEY_0		0.png
+KEY_1		1.png
+KEY_2		2.png
+KEY_3		3.png
+KEY_4		4.png
+KEY_5		5.png
+KEY_6		6.png
+KEY_7		7.png
+KEY_8		8.png
+KEY_9		9.png
+KEY_SPACE 	spa.png
+KEY_ENTER 	enter.png
+KEY_A		A.png
+KEY_B		B.png
+KEY_C		C.png
+KEY_D		D.png
+KEY_E		E.png
+KEY_F		F.png
+KEY_G		G.png
+KEY_H		H.png
+KEY_I		I.png
+KEY_J		J.png
+KEY_K		K.png
+KEY_L		L.png
+KEY_M		M.png
+KEY_N		N.png
+KEY_O		O.png
+KEY_P		P.png
+KEY_Q		Q.png
+KEY_R		R.png
+KEY_S		S.png
+KEY_T		T.png
+KEY_U		U.png
+KEY_V		V.png
+KEY_W		W.png
+KEY_X		X.png
+KEY_Y		Y.png
+KEY_Z		Z.png
+KEY_UP	up_on_ipad.png
+KEY_DOWN	down_on_ipad.png
+KEY_RIGHT	right_on_ipad.png
+KEY_LEFT	left_on_ipad.png

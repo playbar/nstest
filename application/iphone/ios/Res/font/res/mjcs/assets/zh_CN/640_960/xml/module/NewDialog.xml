@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NewDialogs>
+	<!-- name空的时候默认用玩家的名称  pic为main是主将头像  follow是副将的头像  其他为NPC头像-->
+	<!-- isAutoNext是否自动下一步  click值为“btn”：表示点击按钮下一步，值为“this”：表示点击任意地方  isShowContinueText是否显示继续提示 -->
+	<!-- type 值为“btn”：表示按钮，值为“content”：表示对话文本内容 -->
+	<!-- clickTo 文本内容默认都是0，值为“-1”表示直接结束，其他情况按钮的值表示对话跳到哪一步，clickTo="2"表示对话跳到第三步，从0开始 -->
+	<!-- addName 为main传入主将名字，为follow传入副将名字，其他情况不传 -->
+	
+	<Dialog id="0101001" desc="机械对话">
+		<item name="工匠"  pic="npc11" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName="main"><![CDATA[阁下就是水镜先生所说的<font color='#FFFF00'>{0}</font>吧，小人虽然只是一个身份低微的工匠，却也有几个问题想要请教将军。]]></content> 
+			<content type="btn" clickTo="1" addName="">好，请说</content> 			
+		</item>
+		<item name="工匠"  pic="npc11" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="1" desc="对话1"> >
+			<content type="content"  clickTo="0" addName="">如今刘备已经打下东西二川，汉室复兴有望，请问将军有何打算？</content> 
+			<content type="btn" clickTo="2" addName="">1、刘备强大，必会引起曹孙两家担心，只怕祸不远了。</content> 
+			<content type="btn" clickTo="4" addName="">2、你谁啊？问来干嘛？</content> 
+		</item>
+		<item name="工匠"  pic="npc11" align="right" isAutoNext="false" click="btn" isShowContinueText="false" index="2" desc="对话2"> >
+			<content type="content"  clickTo="0" addName="">将军此言差矣，自古只有连弱抗强。孙权即使担心刘备作大，眼下也不会和刘备翻脸，给曹操可趁之机。</content> 
+			<content type="btn" clickTo="3" addName="">1、孙权当然不希望和刘备翻脸，但孙权的部下就未必了。。。</content> 
+			<content type="btn" clickTo="4" addName="">2、你这人怎么没完了？？我跟你很熟么？</content> 
+		</item>
+		<item name="工匠"  pic="npc11" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="3" desc="结局1"> >
+			<content type="content"  clickTo="0" addName="">将军所言太过骇人，我现在就去荆州看看。今日暂且别过，若事情真像将军所说，我一定亲自登门拜访将军。</content> 
+			<content type="btn" clickTo="-1" addName="">好的，不过你到底是谁。。。</content> 
+		</item>
+		<item name="工匠"  pic="npc11" align="left" isAutoNext="false" click="this" isShowContinueText="false" index="4" desc="结局2"> >
+			<content type="content"  clickTo="-1" addName=""><![CDATA[我乃墨门机关术第10代传人，原以为你是我值得效力的人，不想居然如此无礼！真是枉费了水镜先生称赞你的“名将”二字！你要是能打到<font color='#FFFF00'>第五幕</font>，你怎么使唤我都行！（他生气地走掉了。。。）]]>
+			</content> 
+			
+		</item>
+	</Dialog>	
+	
+	<Dialog id="0101002" desc="机械对话">
+		<item name="侍女"  pic="npc9" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName=""><![CDATA[主人，<font color='#FFFF00'>将军府</font>上来了个奇怪的人，说一定要见你。]]></content> 
+			<content type="btn" clickTo="-1" addName="">好的，我知道了。</content> 			
+		</item>
+	</Dialog>	
+	
+	<Dialog id="0101003" desc="机械对话">
+		<item name="工匠"  pic="npc11" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName="">将军，可还记得老夫，我来了（点击机械按钮可以制造机械）。</content> 
+			<content type="btn" clickTo="-1" addName="">好，请先生助我一臂之力。</content> 			
+		</item>
+	</Dialog>	
+	
+	<!-- 洗炼对话 -->
+	<Dialog id="0102001" desc="洗炼对话">
+		<item name="军师"  pic="npc8" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName=""><![CDATA[将军，现在武将<font color='#FFFF00'>防具</font>也可以洗炼技能了。打开洗炼面板，赶快去试试吧。]]></content> 
+			<content type="btn" clickTo="-1" addName="">好的，我知道了。</content> 			
+		</item>
+	</Dialog>	
+	
+	<!-- 出现自动挂机按钮的剧情 -->
+	<Dialog id="0103000" desc="出现自动挂机按钮的剧情">
+		<item name="华小眉"  pic="hero05" align="left" isAutoNext="false" click="btn" isShowContinueText="false" callback="showAutoBtnFun" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName="" ><![CDATA[奴家堂兄曾说，武艺高强者，熟睡时也能击退来犯的敌人，将军天资聪颖不妨尝试点击【自动挂机】，可以大大减轻负担。]]></content> 
+			<content type="btn" clickTo="-1" addName="">好的，我知道了。</content> 			
+		</item>
+	</Dialog>	
+	
+	<!-- 集市剧情 -->
+	<Dialog id="0104000" desc="出现集市剧情 ">
+		<item name="王武"  pic="npc1" align="left" isAutoNext="false" click="btn" isShowContinueText="false" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName="" ><![CDATA[将军，袁绍手下的士兵设置关卡征收重税，我们这些小商人实在活不下去啊。请将军打跑他们，恢复市场繁荣！]]></content> 
+			<content type="btn" clickTo="-1" addName="">可恶！放心，在下定不负所托！</content> 			
+		</item>
+	</Dialog>	
+	
+	<!-- 银币补血按钮剧情 -->
+	<Dialog id="0105000" desc="银币补血按钮剧情 ">
+		<item name="前线军师"  pic="npc8" align="left" isAutoNext="false" click="btn" isShowContinueText="false" callback="showAddBloodGuideFun" index="0" desc="对话0" >
+			<content type="content" clickTo="0" addName="" ><![CDATA[将军，战斗之后如果血量不满，请点击左上方，血条右边的加血按钮，消耗银币，补充血量。]]></content> 
+			<content type="btn" clickTo="-1" addName="">这么简单，我记下了。</content> 			
+		</item>
+	</Dialog>	
+	
+</NewDialogs>

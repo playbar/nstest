@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	089C165DFE840E0CC02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 645}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 45}";
+		};
+	};
+	1E931402143FEAC000640508 /* ResMaker */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = ResMaker;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	1E93140F143FEADF00640508 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	1E931410143FEADF00640508 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1E931414143FEB1000640508 /* ResMaker.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 861}}";
+			sepNavSelRange = "{670, 0}";
+			sepNavVisRange = "{31, 780}";
+			sepNavWindowFrame = "{{15, 58}, {1226, 995}}";
+		};
+	};
+	1E931415143FEB1000640508 /* ResMaker.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 15813}}";
+			sepNavSelRange = "{2142, 0}";
+			sepNavVisRange = "{1414, 833}";
+			sepNavWindowFrame = "{{15, 58}, {1226, 995}}";
+		};
+	};
+	1E93144B143FEEB400640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E93144C143FEEB400640508 /* resmaker.cpp */;
+		name = "resmaker.cpp: 9";
+		rLen = 9939;
+		rLoc = 133;
+		rType = 0;
+		vrLen = 729;
+		vrLoc = 9611;
+	};
+	1E93144C143FEEB400640508 /* resmaker.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = resmaker.cpp;
+		path = /Users/JQBar/macos/resmaker.cpp;
+		sourceTree = "<absolute>";
+	};
+	1E9314C7143FF58500640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3F00F4B6AF500CF3369 /* ResMaker_Prefix.pch */;
+		name = "ResMaker_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 147;
+		vrLoc = 0;
+	};
+	1E93153E143FF7F300640508 /* NSApplication.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSApplication.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSApplication.h;
+		sourceTree = "<absolute>";
+	};
+	1E931558143FF87F00640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E931559143FF87F00640508 /* NSAutoreleasePool.h */;
+		name = "NSAutoreleasePool.h: 7";
+		rLen = 42;
+		rLoc = 118;
+		rType = 0;
+		vrLen = 408;
+		vrLoc = 0;
+	};
+	1E931559143FF87F00640508 /* NSAutoreleasePool.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSAutoreleasePool.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSAutoreleasePool.h;
+		sourceTree = "<absolute>";
+	};
+	1E93155A143FF87F00640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E93153E143FF7F300640508 /* NSApplication.h */;
+		name = "NSApplication.h: 412";
+		rLen = 67;
+		rLoc = 18850;
+		rType = 0;
+		vrLen = 1395;
+		vrLoc = 18089;
+	};
+	1E93155B143FF87F00640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 12";
+		rLen = 0;
+		rLoc = 185;
+		rType = 0;
+		vrLen = 247;
+		vrLoc = 0;
+	};
+	1E9315A2143FFAC700640508 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* ResMaker-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/JQBar/WorkSpace/ResMaker/ResMaker-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	1E9315A4143FFAC700640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* ResMakerAppDelegate.h */;
+		name = "ResMakerAppDelegate.h: 15";
+		rLen = 0;
+		rLoc = 294;
+		rType = 0;
+		vrLen = 409;
+		vrLoc = 0;
+	};
+	1E9315A5143FFAC700640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E9315A6143FFAC700640508 /* stdio.h */;
+		name = "stdio.h: 163";
+		rLen = 8;
+		rLoc = 6167;
+		rType = 0;
+		vrLen = 1145;
+		vrLoc = 5679;
+	};
+	1E9315A6143FFAC700640508 /* stdio.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = stdio.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/usr/include/stdio.h;
+		sourceTree = "<absolute>";
+	};
+	1E9316341440463700640508 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C165DFE840E0CC02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 45;
+		vrLoc = 0;
+	};
+	1EB31FC31442776400C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB31FC41442776400C33EE1 /* cssmtype.h */;
+		name = "cssmtype.h: 983";
+		rLen = 62;
+		rLoc = 34888;
+		rType = 0;
+		vrLen = 1501;
+		vrLoc = 34274;
+	};
+	1EB31FC41442776400C33EE1 /* cssmtype.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = cssmtype.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Security.framework/Versions/A/Headers/cssmtype.h;
+		sourceTree = "<absolute>";
+	};
+	1EB31FC51442776400C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB31FC61442776400C33EE1 /* SBMakeResDlg.cpp */;
+		name = "SBMakeResDlg.cpp: 580";
+		rLen = 554;
+		rLoc = 14125;
+		rType = 0;
+		vrLen = 790;
+		vrLoc = 13984;
+	};
+	1EB31FC61442776400C33EE1 /* SBMakeResDlg.cpp */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = SBMakeResDlg.cpp;
+		path = /Users/JQBar/WorkSpace/AS3/trunk/application/Win32/SBMakeRes/SBMakeResDlg.cpp;
+		sourceTree = "<absolute>";
+	};
+	1EB31FC81442776400C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A59314419D0100857FD6 /* XVector.cpp */;
+		name = "XVector.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 715;
+		vrLoc = 0;
+	};
+	1EB31FEC1442798A00C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB31FED1442798A00C33EE1 /* MultiStringUtil.h */;
+		name = "MultiStringUtil.h: 23";
+		rLen = 0;
+		rLoc = 520;
+		rType = 0;
+		vrLen = 795;
+		vrLoc = 0;
+	};
+	1EB31FED1442798A00C33EE1 /* MultiStringUtil.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = MultiStringUtil.h;
+		path = /Users/JQBar/WorkSpace/ResMaker/MultiStringUtil.h;
+		sourceTree = "<absolute>";
+	};
+	1EB31FF01442798A00C33EE1 /* iconv.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = iconv.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/usr/include/iconv.h;
+		sourceTree = "<absolute>";
+	};
+	1EB3201E14427B1400C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB31FF01442798A00C33EE1 /* iconv.h */;
+		name = "iconv.h: 77";
+		rLen = 34;
+		rLoc = 3087;
+		rType = 0;
+		vrLen = 1297;
+		vrLoc = 2439;
+	};
+	1EB3204414427CC600C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A57E14419C4600857FD6 /* XString.cpp */;
+		name = "XString.cpp: 21";
+		rLen = 0;
+		rLoc = 650;
+		rType = 0;
+		vrLen = 695;
+		vrLoc = 655;
+	};
+	1EB3205D14427D9B00C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A5F614419F8000857FD6 /* string_comp.cpp */;
+		name = "string_comp.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 399;
+		vrLoc = 0;
+	};
+	1EB3205F14427D9B00C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A57D14419C3C00857FD6 /* XString.h */;
+		name = "XString.h: 564";
+		rLen = 10;
+		rLoc = 12161;
+		rType = 0;
+		vrLen = 663;
+		vrLoc = 11853;
+	};
+	1EB3206114427D9B00C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A5A614419D2A00857FD6 /* GGType.h */;
+		name = "GGType.h: 77";
+		rLen = 40;
+		rLoc = 1595;
+		rType = 0;
+		vrLen = 683;
+		vrLoc = 1245;
+	};
+	1EB320901442866400C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB320911442866400C33EE1 /* iphone.srs */;
+		name = "iphone.srs: 19";
+		rLen = 0;
+		rLoc = 583;
+		rType = 0;
+		vrLen = 931;
+		vrLoc = 0;
+	};
+	1EB320911442866400C33EE1 /* iphone.srs */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text;
+		name = iphone.srs;
+		path = /Users/JQBar/WorkSpace/AS3/trunk/Resource/ios/iphone.srs;
+		sourceTree = "<absolute>";
+	};
+	1EB3211A1442984400C33EE1 /* CFStringEncodingExt.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CFStringEncodingExt.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFStringEncodingExt.h;
+		sourceTree = "<absolute>";
+	};
+	1EB321251442987400C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB321261442987400C33EE1 /* CFString.h */;
+		name = "CFString.h: 733";
+		rLen = 84;
+		rLoc = 40057;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 39439;
+	};
+	1EB321261442987400C33EE1 /* CFString.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = CFString.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework/Versions/A/Headers/CFString.h;
+		sourceTree = "<absolute>";
+	};
+	1EB321311442994900C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EB3211A1442984400C33EE1 /* CFStringEncodingExt.h */;
+		name = "CFStringEncodingExt.h: 136";
+		rLen = 30;
+		rLoc = 6895;
+		rType = 0;
+		vrLen = 1751;
+		vrLoc = 6344;
+	};
+	1EB3215E14429CE800C33EE1 /* ResMaker.mm:333 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		functionName = "-start";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 333;
+		location = ResMaker;
+		modificationTime = 339913668.795915;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1EB321B61442A1E700C33EE1 /* ResMaker.mm:333 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		functionName = "-start";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 333;
+		location = ResMaker;
+		modificationTime = 339913668.815632;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1EB321C81442A22000C33EE1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A5111441890D00857FD6 /* NSString.h */;
+		name = "NSString.h: 45";
+		rLen = 30;
+		rLoc = 2106;
+		rType = 0;
+		vrLen = 1772;
+		vrLoc = 1060;
+	};
+	1EB321D31442ABC100C33EE1 /* ResMaker.mm:77 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		functionName = "-start";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 77;
+		location = ResMaker;
+		modificationTime = 339913671.616335;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1EB321EB1442AC3800C33EE1 /* ResMaker.mm:81 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		functionName = "-start";
+		hitCount = 11;
+		ignoreCount = 0;
+		lineNumber = 81;
+		location = ResMaker;
+		modificationTime = 339913831.0474931;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1EC1A435144125EB00857FD6 /* ResMaker.mm:400 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		functionName = "-start";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 400;
+		location = ResMaker;
+		modificationTime = 339913668.782734;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	1EC1A43F1441264800857FD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E931414143FEB1000640508 /* ResMaker.h */;
+		name = "ResMaker.h: 30";
+		rLen = 0;
+		rLoc = 670;
+		rType = 0;
+		vrLen = 780;
+		vrLoc = 31;
+	};
+	1EC1A5111441890D00857FD6 /* NSString.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSString.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSString.h;
+		sourceTree = "<absolute>";
+	};
+	1EC1A5271441935500857FD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A5281441935500857FD6 /* NSControl.h */;
+		name = "NSControl.h: 64";
+		rLen = 27;
+		rLoc = 1688;
+		rType = 0;
+		vrLen = 1003;
+		vrLoc = 1195;
+	};
+	1EC1A5281441935500857FD6 /* NSControl.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = NSControl.h;
+		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSControl.h;
+		sourceTree = "<absolute>";
+	};
+	1EC1A57D14419C3C00857FD6 /* XString.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = XString.h;
+		path = /Users/JQBar/WorkSpace/ResMaker/XString.h;
+		sourceTree = "<absolute>";
+	};
+	1EC1A57E14419C4600857FD6 /* XString.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = XString.cpp;
+		path = /Users/JQBar/WorkSpace/ResMaker/XString.cpp;
+		sourceTree = "<absolute>";
+	};
+	1EC1A58414419C5000857FD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* ResMakerAppDelegate.m */;
+		name = "ResMakerAppDelegate.m: 14";
+		rLen = 0;
+		rLoc = 252;
+		rType = 0;
+		vrLen = 387;
+		vrLoc = 0;
+	};
+	1EC1A58814419C6400857FD6 /* StdAfx.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = StdAfx.h;
+		path = /Users/JQBar/WorkSpace/ResMaker/StdAfx.h;
+		sourceTree = "<absolute>";
+	};
+	1EC1A59314419D0100857FD6 /* XVector.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = XVector.cpp;
+		path = /Users/JQBar/WorkSpace/ResMaker/XVector.cpp;
+		sourceTree = "<absolute>";
+	};
+	1EC1A59414419D0100857FD6 /* XVector.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = XVector.h;
+		path = /Users/JQBar/WorkSpace/ResMaker/XVector.h;
+		sourceTree = "<absolute>";
+	};
+	1EC1A5A214419D1D00857FD6 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 1EC1A58814419C6400857FD6 /* StdAfx.h */;
+	};
+	1EC1A5A614419D2A00857FD6 /* GGType.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = GGType.h;
+		path = /Users/JQBar/WorkSpace/ResMaker/GGType.h;
+		sourceTree = "<absolute>";
+	};
+	1EC1A5E414419F1A00857FD6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1EC1A59414419D0100857FD6 /* XVector.h */;
+		name = "XVector.h: 1257";
+		rLen = 0;
+		rLoc = 34747;
+		rType = 0;
+		vrLen = 972;
+		vrLoc = 34483;
+	};
+	1EC1A5F614419F8000857FD6 /* string_comp.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = string_comp.cpp;
+		path = /Users/JQBar/WorkSpace/ResMaker/string_comp.cpp;
+		sourceTree = "<absolute>";
+	};
+	1EE708CE1442BD6500DE1790 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		name = "ResMaker.mm: 77";
+		rLen = 0;
+		rLoc = 2142;
+		rType = 0;
+		vrLen = 848;
+		vrLoc = 1399;
+	};
+	1EE708E41442BD7D00DE1790 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1E931415143FEB1000640508 /* ResMaker.mm */;
+		name = "ResMaker.mm: 77";
+		rLen = 0;
+		rLoc = 2142;
+		rType = 0;
+		vrLen = 833;
+		vrLoc = 1414;
+	};
+	256AC3D80F4B6AC300CF3369 /* ResMakerAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 670}}";
+			sepNavSelRange = "{294, 0}";
+			sepNavVisRange = "{0, 409}";
+		};
+	};
+	256AC3D90F4B6AC300CF3369 /* ResMakerAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 641}}";
+			sepNavSelRange = "{252, 0}";
+			sepNavVisRange = "{0, 387}";
+			sepNavWindowFrame = "{{15, 58}, {1226, 995}}";
+		};
+	};
+	256AC3F00F4B6AF500CF3369 /* ResMaker_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 670}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 147}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1E931402143FEAC000640508 /* ResMaker */;
+		activeTarget = 8D1107260486CEB800E47090 /* ResMaker */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* ResMaker */,
+		);
+		breakpoints = (
+			1EC1A435144125EB00857FD6 /* ResMaker.mm:400 */,
+			1EB3215E14429CE800C33EE1 /* ResMaker.mm:333 */,
+			1EB321B61442A1E700C33EE1 /* ResMaker.mm:333 */,
+			1EB321D31442ABC100C33EE1 /* ResMaker.mm:77 */,
+			1EB321EB1442AC3800C33EE1 /* ResMaker.mm:81 */,
+		);
+		codeSenseManager = 1E931410143FEADF00640508 /* Code sense */;
+		executables = (
+			1E931402143FEAC000640508 /* ResMaker */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1409,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 339918184;
+			PBXWorkspaceStateSaveDate = 339918184;
+		};
+		perUserProjectItems = {
+			1E93144B143FEEB400640508 /* PBXTextBookmark */ = 1E93144B143FEEB400640508 /* PBXTextBookmark */;
+			1E9314C7143FF58500640508 /* PBXTextBookmark */ = 1E9314C7143FF58500640508 /* PBXTextBookmark */;
+			1E931558143FF87F00640508 /* PBXTextBookmark */ = 1E931558143FF87F00640508 /* PBXTextBookmark */;
+			1E93155A143FF87F00640508 /* PBXTextBookmark */ = 1E93155A143FF87F00640508 /* PBXTextBookmark */;
+			1E93155B143FF87F00640508 /* PBXTextBookmark */ = 1E93155B143FF87F00640508 /* PBXTextBookmark */;
+			1E9315A2143FFAC700640508 /* PlistBookmark */ = 1E9315A2143FFAC700640508 /* PlistBookmark */;
+			1E9315A4143FFAC700640508 /* PBXTextBookmark */ = 1E9315A4143FFAC700640508 /* PBXTextBookmark */;
+			1E9315A5143FFAC700640508 /* PBXTextBookmark */ = 1E9315A5143FFAC700640508 /* PBXTextBookmark */;
+			1E9316341440463700640508 /* PBXTextBookmark */ = 1E9316341440463700640508 /* PBXTextBookmark */;
+			1EB31FC31442776400C33EE1 /* PBXTextBookmark */ = 1EB31FC31442776400C33EE1 /* PBXTextBookmark */;
+			1EB31FC51442776400C33EE1 /* PBXTextBookmark */ = 1EB31FC51442776400C33EE1 /* PBXTextBookmark */;
+			1EB31FC81442776400C33EE1 /* PBXTextBookmark */ = 1EB31FC81442776400C33EE1 /* PBXTextBookmark */;
+			1EB31FEC1442798A00C33EE1 /* PBXTextBookmark */ = 1EB31FEC1442798A00C33EE1 /* PBXTextBookmark */;
+			1EB3201E14427B1400C33EE1 /* PBXTextBookmark */ = 1EB3201E14427B1400C33EE1 /* PBXTextBookmark */;
+			1EB3204414427CC600C33EE1 /* PBXTextBookmark */ = 1EB3204414427CC600C33EE1 /* PBXTextBookmark */;
+			1EB3205D14427D9B00C33EE1 /* PBXTextBookmark */ = 1EB3205D14427D9B00C33EE1 /* PBXTextBookmark */;
+			1EB3205F14427D9B00C33EE1 /* PBXTextBookmark */ = 1EB3205F14427D9B00C33EE1 /* PBXTextBookmark */;
+			1EB3206114427D9B00C33EE1 /* PBXTextBookmark */ = 1EB3206114427D9B00C33EE1 /* PBXTextBookmark */;
+			1EB320901442866400C33EE1 /* PBXTextBookmark */ = 1EB320901442866400C33EE1 /* PBXTextBookmark */;
+			1EB321251442987400C33EE1 /* PBXTextBookmark */ = 1EB321251442987400C33EE1 /* PBXTextBookmark */;
+			1EB321311442994900C33EE1 /* PBXTextBookmark */ = 1EB321311442994900C33EE1 /* PBXTextBookmark */;
+			1EB321C81442A22000C33EE1 /* PBXTextBookmark */ = 1EB321C81442A22000C33EE1 /* PBXTextBookmark */;
+			1EC1A43F1441264800857FD6 /* PBXTextBookmark */ = 1EC1A43F1441264800857FD6 /* PBXTextBookmark */;
+			1EC1A5271441935500857FD6 /* PBXTextBookmark */ = 1EC1A5271441935500857FD6 /* PBXTextBookmark */;
+			1EC1A58414419C5000857FD6 /* PBXTextBookmark */ = 1EC1A58414419C5000857FD6 /* PBXTextBookmark */;
+			1EC1A5A214419D1D00857FD6 /* PBXBookmark */ = 1EC1A5A214419D1D00857FD6 /* PBXBookmark */;
+			1EC1A5E414419F1A00857FD6 /* PBXTextBookmark */ = 1EC1A5E414419F1A00857FD6 /* PBXTextBookmark */;
+			1EE708CE1442BD6500DE1790 /* PBXTextBookmark */ = 1EE708CE1442BD6500DE1790 /* PBXTextBookmark */;
+			1EE708E41442BD7D00DE1790 /* PBXTextBookmark */ = 1EE708E41442BD7D00DE1790 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1E93140F143FEADF00640508 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1587, 670}}";
+			sepNavSelRange = "{185, 0}";
+			sepNavVisRange = "{0, 247}";
+		};
+	};
+	8D1107260486CEB800E47090 /* ResMaker */ = {
+		activeExec = 0;
+		executables = (
+			1E931402143FEAC000640508 /* ResMaker */,
+		);
+	};
+}

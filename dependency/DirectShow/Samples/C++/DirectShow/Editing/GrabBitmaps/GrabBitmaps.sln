@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GrabBitmaps", "GrabBitmaps.vcproj", "{A865960D-1593-447F-B11A-A76901FCFAA0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Unicode|Win32 = Debug Unicode|Win32
+		Debug|Win32 = Debug|Win32
+		Release Unicode|Win32 = Release Unicode|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Debug Unicode|Win32.ActiveCfg = Debug Unicode|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Debug Unicode|Win32.Build.0 = Debug Unicode|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Debug|Win32.Build.0 = Debug|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Release Unicode|Win32.ActiveCfg = Release Unicode|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Release Unicode|Win32.Build.0 = Release Unicode|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Release|Win32.ActiveCfg = Release|Win32
+		{A865960D-1593-447F-B11A-A76901FCFAA0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

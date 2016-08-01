@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--威望模块-->
+<config properties='{ "initX":0, "initY":0, "styleName":"window1", "duration":2000}'>
+		<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+
+	<displayObject name="shine" definition="gameUI.effect.ShineShu"  properties='{"x":323 , "y":35,"width":145, "mouseEnabled":false, "mouseChildren":false, "visible":false}'/>	
+
+		
+
+	
+	
+	<!--新官职-->
+	<container name="newOffice" properties='{"tabBtnMC":"BW.gameUI.button.guanzhi"}'>			
+		<!--<displayObject definition='gameUI.icon.Layer' properties='{"x":18 , "y":40,"width":573,"height":361}'/>-->	
+		<!--<displayObject definition='prestige.office.RightBg' properties='{"x":225, "y":46}'/>-->
+		<itemGroup name="tabBtnGroup" properties='{"width":289,"height":48,"x":168,"y":45}'/>
+		<button name="_left" properties='{"width":120,"x":0,"y":0,"height":48,"label":"当前","styleName":"button8"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		<button name="_right" properties='{"width":120,"x":169,"y":0,"height":48,"label":"履历","styleName":"button8"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		<!--<displayObject definition="gameUI.icon.Line" properties='{"width":600,"height":3,"x":20,"y":100}'/>-->
+		
+	<!--右边官职界面-->
+		<container name="rightOffice" properties='{"x": -180, "y":100, "curInitY":[305, 283]}'>
+	
+			<displayObject  definition="BW.gameUI.BG.itemBG108"  properties='{"x":220 , "y":49}'/>
+			<imageLoader name="generalIL" properties='{"pathFormatName":"generalPic70", "x":228, "y":57}' />
+			<label name="playerNameText" properties='{"x":350, "y":55, "size":24, "bold":true, "color":"0xFFFFCB", "stroke":"0x302010"}'/>
+			<label name="needHonorText" properties='{"x":350, "y":88, "color":"0xCACC67", "stroke":"0x302010"}'/>
+			<displayObject name="progressBar" definition="panel.office.ProgressBar"  properties='{"x":350, "y":120}' />
+
+			<label properties='{"x":256, "y":191, "color":"0xC9CC65", "stroke":"0x302010", "textID":"510108"}'/>
+			<label name="curHonorText" properties='{"x":355, "y":191, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			<label name="curHonorTypeText" properties='{"x":256,  "y":221, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			<label properties='{"x":256, "y":251, "color":"0xC9CC65", "stroke":"0x302010", "textID":"510109"}'/>
+			<label name="curPrestigeText" properties='{"x":355, "y":251, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			<label properties='{"x":256, "y":281, "color":"0xC9CC65", "stroke":"0x302010", "textID":"510116"}'/>
+			<label name="curLevelText" properties='{"x":355, "y":281, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			<label name="curRankingTitleText" properties='{"x":256, "y":311, "color":"0xC9CC65", "stroke":"0x302010", "textID":"510118"}'/>
+			<label name="curRankingText" properties='{"x":355, "y":311, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			
+			<label name="curGoldTitleText" properties='{"x":256, "y":341, "color":"0xC9CC65", "stroke":"0x302010", "textID":"510110"}'/>
+			<label name="curGoldText" properties='{"x":355, "y":341, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			<displayObject  name="curGoldIcon" definition="gameUI.icon.Gold"  properties='{"x":430 , "y":355}'/>
+			<displayObject  name="curSilverIcon" definition="gameUI.icon.Copper"  properties='{"x":430 , "y":385}'/>
+			<label name="curSilverTitleText" properties='{"x":256, "y":371, "color":"0xC9CC65", "stroke":"0x302010", "textID":"510142"}'/>
+			<label name="curSilverText" properties='{"x":355, "y":371, "color":"0xFDFFCB", "stroke":"0x302010"}'/>
+			<label name="curpvpText" properties='{"x":256, "y":401, "color":"0xC9CC65", "stroke":"0x302010","visible":false}'/>
+			
+			<button name="getBtn" properties='{"x":256, "y":440, "styleName":"button2", "labelID":"510103", "height":48,"width":120}' />
+			
+			<label name="nextHonorTitleText" properties='{"stroke":"0x302010","x":526,"y":191,"textID":510104,"color":"0xC9CC65"}'/>
+			<label name="nextHonorText" properties='{"stroke":"0x302010","x":626,"y":191,"color":"0xFDFFCB"}'/>
+			<label name="nextHonorTypeText" properties='{"stroke":"0x302010","x":526,"y":221,"color":"0xFDFFCB"}'/>
+			<label name="nextPrestigeTitleText" properties='{"stroke":"0x302010","x":526,"y":251,"textID":510105,"color":"0xC9CC65"}'/>
+			<label name="nextPrestigeText" properties='{"stroke":"0x302010","x":626,"y":251,"color":"0xFDFFCB"}'/>
+			<label name="needLevelTitleText" properties='{"stroke":"0x302010","x":526,"y":281,"textID":510117,"color":"0xC9CC65"}'/>
+			<label name="needLevelText" properties='{"stroke":"0x302010","x":626,"y":281,"color":"0xFDFFCB"}'/>
+			<label name="needRankingTitleText" properties='{"stroke":"0x302010","x":526,"y":311,"textID":510119,"color":"0xC9CC65"}'/>
+			<label name="needRankingText" properties='{"stroke":"0x302010","x":626,"y":311,"color":"0xFDFFCB"}'/>
+			
+			<label name="nextGoldTitleText" properties='{"stroke":"0x302010","x":526,"y":341,"textID":510106,"color":"0xC9CC65"}'/>
+			<label name="nextGoldText" properties='{"stroke":"0x302010","x":626,"y":341,"color":"0xFDFFCB"}'/>	
+			<displayObject  name="nextGoldIcon" definition="gameUI.icon.Gold"  properties='{"y":355,"x":696}'/>
+			<displayObject  name="nextSilverIcon" definition="gameUI.icon.Copper"  properties='{"y":385,"x":696}'/>
+			<label name="nextSilverTitleText" properties='{"stroke":"0x302010","x":526,"y":371,"textID":510142,"color":"0xC9CC65"}'/>
+			<label name="nextSivlerText" properties='{"stroke":"0x302010","x":626,"y":371,"color":"0xFDFFCB"}'/>	
+			
+			<label name="newGeneralsText" properties='{"stroke":"0x302010","x":526,"y":401,"width":150,"multiline":true,"color":"0xC9CC65"}'/>	
+			
+			<button name="upBtn" properties='{"x":256, "y":440, "styleName":"button5", "labelID":"510102", "width":120, "height":48,"visible":false}' />
+			<!--<label name="rankOfficeTipText" properties='{"x":475, "y":391, "textID":"510141", "color":"0xFDFFCB", "stroke":"0x302010", "width":161, "autoSize":"none", "align":"center", "visible":false}' />-->
+			<label name="explainText" properties='{"stroke":"0x302010","x":626,"align":"center","y":431,"width":200,"height":30,"underline":true,"size":20,"color":"0xC9CC65"}' />
+			<label name="highestText" properties='{"width":270, "height":30, "x":475, "y":160, "color":"0xC9CC65", "stroke":"0x302010", "autoSize":"none", "align":"left", "bold":true}' />
+			
+		
+		</container>
+		
+		
+		<container name="leftOffice" properties='{"x":5,"y":80, "args":{"dur":0.3, "initY":67, "limitRows":4}}'>
+<!--左边官职界面-->
+			<displayObject definition='prestige.office.LeftBg' properties='{"x":20, "y":40,"width":590}'/>
+			
+			<list name="list" properties='{"x":25,"columnCount":1, "rowCount":99, "horizontalGap":0, "verticalGap":0,"visible":true}' />
+<!--列表-->
+			<displayObject name="upBtn" definition='prestige.office.UpBtn' properties='{"x":20, "y":44,"width":590}'/>
+<!--上翻按钮-->
+			<displayObject name="downBtn" definition='prestige.office.DownBtn' properties='{"x":20, "y":540,"width":590}'/>
+<!--下翻按钮-->
+			<mask target="list" properties='{"x":25,"y":70,"width":590, "height":470}' />
+			<sprite name="rewardTips" properties='{"x":260, "y":160}' />	
+		</container>
+
+	</container>
+	
+	<!--【新官职】界面左侧列表 呈示器-->
+	<LeftOfficeRenderer properties='{"itemWidth":560, "itemHeight":119, "initY1":15, "initY2":0}'>
+		<displayObject definition="prestige.office.LeftItemBg" properties='{"x":0, "y":0,"width":560,"height":100,"visible":false}' />
+	<label name="eventText" properties='{"x":20, "y":13,"size":20, "color":"0xFDFFCB", "stroke":"0x302010", "multiline":true, "width":370,"height":120, "mouseEnabled":false}' />	
+		<displayObject name="rewardBtn" definition="gameUI.box.LibaoBtn" properties='{"x":468, "y":10, "visible":false}' />
+<!--礼包按钮-->		
+		<displayObject name="haveGot" definition="gameUI.HaveGot" properties='{"x":487, "y":45,  "mouseEnabled":false,"mouseChildren":false}' />
+<!--礼包已领取-->
+		<displayObject name="effect" definition="gameUI.giiftBag.lightEffect" properties='{"x":495, "y":45, "mouseEnabled":false, "visible":false}' />
+<!--礼包光效-->
+	</LeftOfficeRenderer>
+	<!--文官-->
+	<container name="polemarch" properties='{"pic":"npc8","tabBtnMC":"BW.gameUI.button.wenguan" }'>
+		<displayObject definition="prestige.polemarch.Bg" properties='{"x":35, "y":200}' />
+		<list name="civilHeroList" properties='{"x":66, "y":220, "columnCount":2, "rowCount":3, "horizontalGap":230, "verticalGap":5, "isColumnSort":true}' />
+		
+		<displayObject name="npcPopo" definition="prestige.polemarch.NpcPopo" properties='{"x":220, "y":85, "height":110,"width":330,"visible":false}' />
+		<label name="npcText" properties='{"x":245, "y":100, "textID":"640202", "color":"0xFDFFCB", "stroke":"0x302010", "width":280,  "height":100,"leading":10, "multiline":true,"autoSize":"none", "align":"left", "visible":false, "mouseEnabled":false}' />
+		<imageLoader name="imgLoader" properties='{"pathFormatName":"feature","x":280, "y":400}' />
+	</container>
+	
+	
+	<!--升官记录renderer-->
+	<promotionEventRenderer properties=''>
+		<label name="eventText" properties='{"x":0, "y":0, "color":"0xFDFFCB","size":20, "stroke":"0x302010", "multiline":true, "width":370, "mouseEnabled":false, "mouseWheelEnabled":false}' />
+	</promotionEventRenderer>
+	
+	<!-- 文官 项呈器 -->
+
+	<PolemarchRenderer properties='{"itemWidth":210, "itemHeight":110, "leftX": 85, "rightX":-7, "introLX":112, "introRX":-203}'>
+		<displayObject definition="prestige.polemarch.ImgBg" properties='{"x":0, "y":0}' />
+		<imageLoader name="pic" properties='{"pathFormatName":"civil70", "x":4, "y":3, "width":70, "height":70}' />
+		<label name="nameText" properties='{"x":-5, "y":80, "width":80,"height":30,"size":20,"align":"center", "color":"0xCBCD67", "stroke":"0x302010","border":false,"autoSize":"none", "mouseEnabled":false}' />
+		
+		<displayObject name="popo" definition="prestige.polemarch.Popo" properties='{"y":-15,"visible":true}' />
+		<label name="skillInfoText" properties='{"x":0, "y":10, "size":16,"width":170,"height":90,"align":"left", "color":"0xCBCD67", "stroke":"0x302010","border":false,"autoSize":"none", "mouseEnabled":false,"multiline":true}' />
+	</PolemarchRenderer>
+	
+	<!-- 功能面板 -->
+	<container name="functionPanel" properties='{"functionInitX":82,"showColumn":5,"duration":1.5,"tabBtnMC":"BW.gameUI.button.gongneng"}'>
+		<displayObject  name="functionBg" definition='task.view.functionBg' properties='{"x":73, "y":200}' />
+		<list name="functionList" properties='{"x":98, "y":210, "rowCount":4, "columnCount":15, "horizontalGap":19, "verticalGap":8, "defaultSelected":false}' />
+		 <mask target="functionList" properties='{"x":88, "y":210,"width":445, "height":338}' />
+		<displayObject  name="prevBtn" definition='task.btn.Prev' properties='{"x":31, "y":330}' />
+		<displayObject  name="nextBtn" definition='task.btn.Next' properties='{"x":557, "y":330}' />	
+        <sprite name="rewardTips" properties='{"x":234, "y":436}' />			
+	</container>
+	
+	<!-- 科技面板 -->
+	<container name="tech" properties='{"tabBtnMC":"BW.gameUI.button.keji"}'>
+			<displayObject definition='gameUI.icon.Layer' properties='{"x":18 , "y":40,"width":600,"height":660}'/>	
+	<!--	<label properties='{"x":74, "y":48, "width":120, "height":30,"color":"0xCBCC66", "stroke":"0x302010", "textID":"780001"}'/>
+		<label properties='{"x":190, "y":48, "width":120, "height":30,"color":"0xCBCC66", "stroke":"0x302010", "textID":"780002"}'/>
+		<label properties='{"x":390, "y":48, "width":120, "height":30,"color":"0xCBCC66", "stroke":"0x302010", "textID":"780003"}'/> -->
+		<list name="technologyList" properties='{"x":25, "y":74, "columnCount":1, "rowCount":6, "horizontalGap":1, "verticalGap":0}' /> 
+		<displayObject properties='{"x":290, "y":650, "width":60, "height":30}' definition='skin.page2.PageBG' />		
+		<page name="page" properties='{"x":250, "y":651,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":110 },
+								"labelProp":{"x":40, "y":0, "width":60, "height":30, "size":20,"autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+								}' />
+	</container>
+	<!--功能解锁子项-->
+	<functionItemRenderer properties='{"itemWidth":71,"itemHeight":72,"mouseChildren":true}'>		
+		<displayObject  name="functionItemBG" definition='task.view.functionItemRendererBG' properties='{"x":0, "y":0}' />
+		<displayObject  name="functionItemUnlocked" definition='task.view.functionUnlocked' properties='{"x":25, "y":14,"visible":false}' />
+        <imageLoader name="picLoader" properties='{"pathFormatName":"function", "x":-8, "y":-14}' />  
+		<label name="nameText" properties='{"x":6, "y":49, "size":16,"font":"宋体", "width":72, "bold": true, "autoSize":"none","align":"center", "color":"0xFFF874", "stroke":"0x000000", "mouseEnabled":false}' />
+		<displayObject  name="unLockAnimation" definition='task.view.unlockAnimation' properties='{"x":43, "y":36,"visible":false}'/>
+		
+		
+	</functionItemRenderer>
+	
+	<!--科技面板ItemRenderer-->
+	<TechnologyRenderer properties='{"itemWidth":573,"itemHeight":90,"mouseChildren":true, "doubleClickEnabled":true}'>
+		<label name="technologyNameText" properties='{"x":90, "y":10, "width":100, "height":80, "size":20,"multiline":"true","autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010"}'/>
+		<label name="openConditionText" properties='{"x":200, "y":10, "width":180, "height":80,"size":20,"multiline":"true", "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010"}'/>
+		<label name="tipsText" properties='{"x":390, "y":10, "width":180, "height":80, "size":20,"multiline":"true","autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010"}'/>
+		
+		<imageLoader name="pic"  properties='{"pathFormatName":"tech32", "x":5, "y":2}' />
+		<imageLoader name="activatePic"  properties='{"pathFormatName":"tech32", "x":5, "y":3}' />
+		<displayObject properties='{"x":0, "y":82, "width":570, "height":3}' definition='gameUI.icon.Line' />			
+	</TechnologyRenderer>
+	
+	<!--不再提示—确认框-->
+	<SetNoAlert>		
+		<checkBox name="checkBox" properties='{"x":117, "y":136,"size":20, "width":200, "styleName":"checkBox1","labelID":"110283"}' />
+	</SetNoAlert>
+</config>

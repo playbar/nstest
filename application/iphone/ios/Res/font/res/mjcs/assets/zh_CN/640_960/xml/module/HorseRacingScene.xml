@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【赛马】配置文件-->
+<config properties='{"startPoint":[{"x":327,"y":247},{"x":337,"y":252},{"x":347,"y":258},{"x":358,"y":264},{"x":368,"y":271}],"leftTime":3,"colorTrans":[[255,204,0],[51,153,204],[87,255,0],[51,153,204],[255,204,0]]}'>
+	<!-- <sprite name="mapContainer" properties='{}'/> -->
+	<BXRender name="_scene" properties='{"x":-180,"y":16,"width":1000,"height":600,"alx":"map","aly":"map"}'>
+		<imageLoader name="bgPic" properties='{"pathFormatName":"sceneBgPic","fileName":"horseRacing", "x":0, "y":15}' />
+		
+		<sprite name="avatarC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<button name="exitBtn" properties='{"x":435, "y":565,  "styleName":"button3", "labelID":"740005","width":100,"height":48,"visible":false}' />
+		<label  name="leftTimeText" properties='{"x":450, "y":200, "size":60,"bold":true,"color":"0xFFCC00", "stroke":"0x302010", "border":false}'/> 
+		
+		<displayObject name="endBtn" definition="horseRacing.btn.endBtn"  properties='{"x":430 , "y":320,"visible":false}'/>
+		<sprite name="fireSpriteC" properties='{"x":0, "y":0}'/>	
+	</BXRender>
+	
+	<!-- 等待面板 -->
+	<container name="waitPanel" properties='{"x":250,"y":150,"visible":false}'>
+		<displayObject definition="horseRacingScence.view.waitBG"  properties='{"y":50,"x":-179}'/>
+		<displayObject definition="horseRacingScence.text.waitText"  properties='{"y":14,"x":43}'/>
+		<label  name="leftTimeText" properties='{"color":"0xFFCC00","y":96,"border":false,"x":41,"stroke":"0x302010"}'/> 
+		<label properties='{"y":58,"autoSize":"none","stroke":"0x302010","size":24,"x":-69,"align":"left","color":"0xFFCC00","width":137,"bold":true,"height":28,"textID":740001}'/>
+		<label properties='{"y":60,"autoSize":"none","bold":true,"size":24,"x":73,"align":"left","color":"0xFFCC00","stroke":"0x302010","width":160,"height":28,"textID":740002}'/>
+		<label properties='{"y":60,"autoSize":"none","size":24,"width":160,"x":246,"align":"left","color":"0xFFCC00","stroke":"0x302010","bold":true,"height":28,"textID":740003}'/>
+		<list name="playerList" properties='{"width":460,"rowCount":5,"x":-119,"y":93,"columnCount":1,"verticalGap":0,"height":180,"horizontalGap":0}' />
+		<button name="exitBtn" properties='{"labelID":740005,"x":54,"y":293,"width":100,"styleName":"button3","height":48}' />
+	</container> 
+	
+	<!-- 新的结束面板 -->
+	<container name="newEndPanel" properties='{"x":210,"y":200}'>
+		<displayObject definition="horseRacingScence.view.waitBG"  properties='{"x":300 , "y":0}'/>
+		<displayObject definition="horseRacingScence.text.endText"  properties='{"y":-33,"x":530}'/>
+		<label properties='{"y":11,"autoSize":"none","bold":true,"size":24,"x":405,"align":"left","color":"0xFFCC00","stroke":"0x302010","width":121,"height":28,"textID":740001}'/>
+		<label properties='{"y":13,"autoSize":"none","stroke":"0x302010","size":24,"x":524,"align":"left","color":"0xFFCC00","width":78,"bold":true,"height":28,"textID":740002}'/>
+		<label properties='{"y":13,"autoSize":"none","bold":true,"size":24,"x":603,"align":"left","color":"0xFFCC00","stroke":"0x302010","width":116,"height":28,"textID":740016}'/>
+		<label properties='{"y":13,"autoSize":"none","bold":true,"size":24,"x":705,"align":"left","color":"0xFFCC00","stroke":"0x302010","width":163,"height":28,"textID":740017}'/>
+		<list name="playerList" properties='{"width":460,"rowCount":5,"x":366,"y":42,"columnCount":1,"verticalGap":0,"height":180,"horizontalGap":0}' />
+		<button name="exitBtn" properties='{"labelID":740005,"x":622,"y":226,"width":120,"styleName":"button3","height":48}' />
+		<button name="contiuneBtn" properties='{"labelID":740010,"x":428,"y":226,"width":120,"styleName":"button3","height":48}' />
+		<imageLoader name="techPic1" properties='{"pathFormatName":"tech32",  "x":725, "y":20, "width":32, "height":32}' />		
+	</container> 
+	
+	
+	<!-- 我的技能 -->
+	<container name="myHorseSkill" properties='{"y":15,"x":95}'>
+		<displayObject definition="horseRacing.view.skillBG"  properties='{}'/>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"y":16,"width":80,"height":80,"x":15}'/>
+		<imageLoader name="horsePic" properties='{"x":23,"y":24,"width":64,"pathFormatName":"horse32","fileName":"ma2","height":64}' />
+		<list name="skillList" properties='{"x":102, "y":16, "columnCount":4, "rowCount":1, "horizontalGap":3, "verticalGap":0}' />
+	</container> 
+	<!-- 左边的排名 -->
+	<BXRender name="rank" properties='{"x":0 , "y":655,"width":640,"height":158,"alx":"fit","aly":"bottom"}'>
+		<BXBackBar properties='{"image":"horseRacing.view.rankBG2","x":0,"y":0,"width":640,"height":158,"clip":[160,0,40,0]}'/>
+		<list name="rankList" properties='{"x":19, "y":42, "columnCount":2, "rowCount":1, "horizontalGap":4, "verticalGap":0}' />
+		<!--label  name="myRankText" properties='{"x":12, "y":165, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/--> 
+		<label name="_nowRank" properties='{"alx":"right","align":"right","y":91,"autoSize":"none","x":437,"text":"当前是第三圈","color":"0xffffff","width":182,"styleName":"label","height":28,"stroke":0}'/>
+	  <label name="_nowScore" properties='{"alx":"right","align":"right","y":50,"autoSize":"none","x":442,"text":"你现在处于第一名","color":"0xffffff","width":177,"styleName":"label","height":28,"stroke":0}'/>
+	</BXRender>
+	
+	
+	
+	
+	<!-- 跑啊，小马 -->
+	<container name="run" properties='{"startScale":0.4,"roadArr":[{"x":300,"y":300},{"x":300,"y":350},{"x":445,"y":430},{"x":525,"y":430},{"x":670,"y":360},{"x":670,"y":300},{"x":520,"y":225},{"x":440,"y":225}]}'>
+	</container>  
+	
+	<!-- 马匹UI -->
+	<HorseAvatarUI properties='{"angleArr":[{"x":50,"y":-10,"angle":180},{"x":35,"y":-46,"angle":120},{"x":-3,"y":-60,"angle":60},
+	{"x":-30,"y":-47,"angle":30},{"x":-45,"y":-30,"angle":0},{"x":-32,"y":12,"angle":300},
+	{"x":10,"y":30,"angle":240},{"x":25,"y":14,"angle":210}],
+	"reducePointArr":[{"x":30,"y":-7},{"x":43,"y":0},{"x":60,"y":-6},{"x":70,"y":-17},{"x":60,"y":-30},{"x":46,"y":-33},{"x":27,"y":-33},{"x":22,"y":-16}],
+	"namePointArr":[{"x":-80,"y":-36},{"x":-78,"y":-26},{"x":-75,"y":-15},{"x":-35,"y":6},{"x":20,"y":0},{"x":20,"y":-25},{"x":12,"y":-36},{"x":-20,"y":-50}]}'>
+		<displayObject name="quickEffectMC" definition="horseRacing.effect.quickEffect"  properties='{"x":0 , "y":0,"scaleX":0.6,"scaleY":0.6,"visible":false}'/>
+		<displayObject name="reduceEffectMC" definition="horseRacing.effect.reduceEffect"  properties='{"x":0 , "y":0,"scaleX":0.2,"scaleY":0.2,"visible":false}'/>
+		<displayObject name="reduceEffectMC" definition="horseRacing.effect.reduceEffect"  properties='{"x":0 , "y":0,"scaleX":0.2,"scaleY":0.2,"visible":false}'/>
+		<displayObject name="nameBG" definition="horseRacing.view.nameBG"  properties='{"x":0 , "y":0,"visible":true}'/>
+		<label  name="nameText" properties='{"x":0, "y":0,"size":20,"color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/> 
+		
+		<label  name="quickText" properties='{"x":30, "y":15,"size":20,"color":"0xFFFFCC", "stroke":"0x302010", "border":false,"visible":false}'/> 
+	</HorseAvatarUI>
+	<!-- =================================================================以下是项呈器============================================================== -->
+	<!-- ===========================================================分割线呀割割割割割割割割======================================================== -->
+	
+	<!-- 烟花 -->
+	<Fireworks properties='{"x":200, "y":200,"propert":{"definition":"horseRacingScence.view.fireWorks"}}' >
+		<displayObject name="fireBangzi" definition="horseRacingScence.view.fire" properties='{"x":0, "y":0,"visible":false}' />
+		<sprite name="fireSpriteC" properties='{"x":0, "y":0}'/>		
+	</Fireworks>
+	
+	
+	<!-- 等待玩家界面 玩家项呈器 -->
+	<PlayerItemRenderer properties='{"itemWidth":450,"itemHeight":38}'>
+		<label  name="lvText" properties='{"y":0,"size":24,"x":0,"text":"Hello","color":"0xFFCC00","width":56,"border":false,"height":36,"stroke":"0x302010"}'/> 
+		<label  name="nameText" properties='{"color":"0xFFFFCC","size":24,"x":60,"text":"Hello","y":0,"width":100,"border":false,"height":28,"stroke":"0x302010"}'/> 
+		<label  name="horseNameText" properties='{"color":"0xFFFFCC","size":24,"x":194,"text":"Hello","y":0,"border":false,"stroke":"0x302010"}'/> 
+		<label  name="trackText" properties='{"y":0,"size":24,"x":374,"text":"Hello","color":"0xFFCC00","border":false,"stroke":"0x302010"}'/> 
+	</PlayerItemRenderer>	
+	
+	<!-- 新结束界面 玩家项呈器 -->
+	<PlayerEndRenderer properties='{"itemWidth":450,"itemHeight":38, "txtX1":255, "txtX2":335}'>
+		<label  name="lvText" properties='{"x":-20, "y":0,"size":18, "color":"0xFFCC00", "stroke":"0x302010", "border":false}'/> 
+		<label  name="nameText" properties='{"x":32, "y":0,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/> 
+		<label  name="horseNameText" properties='{"color":"0xFFFFCC","x":164,"y":0,"size":18,"border":false,"stroke":"0x302010"}'/> 
+		<label  name="rankText" properties='{"y":0,"x":255,"size":18,"color":"0xFFCC00","border":false,"stroke":"0x302010"}'/> 
+		<label  name="rewardText" properties='{"y":0,"autoSize":"none","x":275,"size":18,"align":"center","color":"0xFFCC00","width":200,"border":false,"height":28,"stroke":"0x302010"}'/> 
+		<displayObject name="tip" definition="horseRacing.view.tips"  properties='{"y":-3,"width":479,"height":37,"x":-2}'/>
+	</PlayerEndRenderer>	
+	
+	<!-- 马匹技能项呈器 -->
+	<HorseSkillRenderer properties='{"picArr":["0","1","2","3"]}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"y":0,"width":80,"height":80,"x":0}'/>
+		<imageLoader name="pic" properties='{"x":7,"y":7,"width":64,"pathFormatName":"horseSkill32","fileName":0,"height":64}' />
+		<label  name="lvText" properties='{"color":"0xFFFFCC","autoSize":"none","size":20,"x":4,"align":"right","y":49,"width":71,"border":false,"height":28,"stroke":"0x302010"}'/> 
+	</HorseSkillRenderer>	
+	
+	<!--比赛过程中的排名 项呈器  -->
+	<RankRenderer properties='{}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"y":6,"width":80,"height":80,"x":0}'/>
+		<imageLoader name="horsePic" properties='{"x":8,"y":14,"width":64,"pathFormatName":"horse32","fileName":"ma8","height":64}' />
+		<label  name="horseNameText" properties='{"y":30,"size":20,"x":88,"text":"Hello","color":"0xFFCC00","border":false,"stroke":"0x302010"}'/>
+		<label  name="playerNameText" properties='{"y":60,"size":20,"x":88,"text":"Hello","color":"0xFFFFCC","border":false,"stroke":"0x302010"}'/>
+		<label  name="rankText" properties='{"y":0,"size":24,"x":88,"text":"第一名","color":"0xFFCC00","border":false,"stroke":"0x302010"}'/>
+	</RankRenderer>	
+	
+	<!-- 结束面板排名项呈器 -->
+	<HorseEndRankRenderer properties='{}'>
+		<displayObject name="bg" definition="horseRacing.view.properText"  properties='{"x":0 , "y":20}'/>
+		<label  name="RankText" properties='{"x":0, "y":0,"border":false, "color":"0xFFFFCC", "stroke":"0x302010"}'/> 
+		<label  name="fightCountText" properties='{"x":150, "y":0, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/> 
+		
+		<label  name="rewardTitleText" properties='{"x":0, "y":20, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/> 
+		<label  name="rewardContentText" properties='{"x":40, "y":20, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/> 
+		
+		<list name="skillList" properties='{"x":57, "y":27, "columnCount":4, "rowCount":1, "horizontalGap":3, "verticalGap":0}' />			
+	</HorseEndRankRenderer>	
+	
+</config> 

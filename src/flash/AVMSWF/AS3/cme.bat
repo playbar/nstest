@@ -1,0 +1,1 @@
+java -jar asc.jar -import builtin.abc -import TotalInclude.abc %1

@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+	        <TextView android:id="@+id/title"
+	    	android:textSize="@dimen/bwpx24"
+	    	android:textStyle="bold"
+	    	android:text="帮助"
+	        android:layout_gravity="center_horizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="@dimen/bwpx40"
+	        android:gravity="center"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/bar_black_bg" 
+	        />
+	    	<Button 
+	        android:id="@+id/help_back_btn"
+	        android:layout_width="@dimen/bwpx64"
+	        android:layout_height="@dimen/bwpx38"
+	        android:gravity="center"
+	        android:layout_gravity="right"
+	        android:text="返回"
+	        android:background="@drawable/back_btn"
+	        android:layout_marginTop="@dimen/bwpx4"
+	        android:layout_marginRight="@dimen/bwpx5"
+	        android:layout_marginBottom="@dimen/bwpx2"/> 
+        
+    </FrameLayout>
+   <ScrollView
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		     
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical" >
+
+	    <ImageView
+	        android:id="@+id/help_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/bar_help_title" />
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_vertical">
+
+	        <ImageView
+	            android:id="@+id/help_home"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_home" />
+
+	        <TextView
+	            android:id="@+id/help_home_text"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	          
+	            android:layout_toRightOf="@id/help_home"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="快速回到软件主页。" 
+	            android:layout_marginBottom="@dimen/bwpx14"/>
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="fill_parent"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_home_text" />
+	    </RelativeLayout>
+
+<!-- 	    <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_local"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_local" />
+
+	        <TextView
+	            android:id="@+id/help_local_text"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_toRightOf="@id/help_local"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="本地文件目录，在这里查看保存过的游戏和短片，本地文件在播放时不会产生下载流量。"
+	             android:layout_marginBottom="@dimen/bwpx14" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="fill_parent"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_local_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_back"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_back" />
+
+	        <TextView
+	            android:id="@+id/help_back_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	     
+	            android:layout_toRightOf="@id/help_back"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="后退操作。"
+	             android:layout_marginBottom="@dimen/bwpx14" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_back_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout>
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_refresh"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_refresh" />
+
+	        <TextView
+	            android:id="@+id/help_refresh_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	             android:layout_marginBottom="@dimen/bwpx14"
+	         
+	            android:layout_toRightOf="@id/help_refresh"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="刷新操作。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_refresh_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout>
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_more"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_more" />
+
+	        <TextView
+	            android:id="@+id/help_more_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	             android:layout_marginBottom="@dimen/bwpx14"
+	          
+	            android:layout_toRightOf="@id/help_more"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="更多项，点击可唤出二级菜单。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_more_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_mouse"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_mouse" />
+
+	        <TextView
+	            android:id="@+id/help_mouse_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_mouse"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="开启/关闭鼠标点击指示。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_mouse_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_feedback"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_feedback" />
+
+	        <TextView
+	            android:id="@+id/help_feedback_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_feedback"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="用户反馈：在这里留下您宝贵的意见和建议。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_feedback_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_eliminate"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_eliminate" />
+
+	        <TextView
+	            android:id="@+id/help_eliminate_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_eliminate"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="点击可清除网页缓存；缓存是把访问过的部分网页资源储存到手机，可加快再次访问时的加载速度并有效减少
+下载流量。当缓存过多时，会使软件变慢，建议您在网络资源加载异常或软件运行变慢时使用。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_eliminate_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout>
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_vertical">
+
+	        <ImageView
+	            android:id="@+id/help_apphelp"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_apphelp" />
+
+	        <TextView
+	            android:id="@+id/help_apphelp_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	          android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_apphelp"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="帮助：点击可以查看软件的帮助信息。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_apphelp_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_vertical">
+
+	        <ImageView
+	            android:id="@+id/help_about"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_about" />
+
+	        <TextView
+	            android:id="@+id/help_about_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_about"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="关于：点击可以查看软件的版本信息和联系方式。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_about_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout>
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_save"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_save" />
+
+	        <TextView
+	            android:id="@+id/help_save_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_save"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="点击可把文件保存到本地，可在本地播放和管理。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_save_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_virbtn"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_virbtn" />
+
+	        <TextView
+	            android:id="@+id/help_virbtn_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_virbtn"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="开启/关闭虚拟按键。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_virbtn_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_fbar_more"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/fbar_more" />
+
+	        <TextView
+	            android:id="@+id/help_fbar_more_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_fbar_more"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="打开游戏播放菜单。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_fbar_more_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_max"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            
+	            android:src="@drawable/bar_max" />
+
+	        <TextView
+	            android:id="@+id/help_max_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_max"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="界面放大。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_max_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <!-- <RelativeLayout
+	        xmlns:android="http://schemas.android.com/apk/res/android"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical" >
+
+	        <ImageView
+	            android:id="@+id/help_min"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_min" />
+
+	        <TextView
+	            android:id="@+id/help_min_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	           android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_min"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="界面缩小。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_min_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout> -->
+
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center_vertical">
+
+	        <ImageView
+	            android:id="@+id/help_close"
+	            android:layout_width="@dimen/bwpx64"
+	            android:layout_height="@dimen/bwpx44"
+	            android:layout_centerVertical="true"
+	            android:src="@drawable/bar_float_close" />
+
+	        <TextView
+	            android:id="@+id/help_close_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginBottom="@dimen/bwpx14"
+	            android:layout_toRightOf="@id/help_close"
+	            android:gravity="left"
+	            android:paddingRight="@dimen/bwpx40"
+	            android:text="退出游戏。" />
+
+	        <com.jqbar.DashedLine
+	            android:id="@+id/dashedLine"
+	            android:layout_width="wrap_content"
+	            android:layout_height="@dimen/bwpx2"
+	            android:layout_below="@id/help_close_text"
+	            android:layout_centerHorizontal="true" />
+	    </RelativeLayout>
+
+	    <ImageView
+	        android:id="@+id/help_title_post"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:src="@drawable/bar_help_title_post" />
+	</LinearLayout>
+
+     </ScrollView>   
+          
+	    
+
+</LinearLayout>

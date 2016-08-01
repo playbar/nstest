@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--任务引导-->
+<config properties='{}'>
+	<sprite name="drawC" />
+	<container name="arrow" properties='{"x":200,"y":200,"mouseEnabled":false,"offset":0}'>		
+		<displayObject name="arrowMC" definition="taskGuide.icon.Arrow"  properties='{"x":19 , "y":40, "visible":true}'/>
+		<sprite name="textC" properties='{"x":0, "y":0,"mouseEnabled":false,"mouseChildren":false}'/>
+		<displayObject name="textBg" parent="textC"  definition="taskGuide.view.Bg" properties='{"x":0, "y":0,"mouseEnabled":false}' />
+		<label name="promptText" parent="textC"  properties='{"size":20,"bold":true,"autoSize":"center","color":"0xFFFF00", "mouseEnabled":false,"stroke":"0x302010"}' />	
+		
+	</container>
+</config>

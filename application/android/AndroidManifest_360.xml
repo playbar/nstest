@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="com.jqbar"
+		android:installLocation="auto"
+		android:versionName="2.8.50" 
+		android:versionCode="1061">
+    <uses-sdk android:minSdkVersion="8" />
+
+    <supports-screens android:anyDensity="true"
+    	android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true" />
+
+    <!-- 添加360SDK必需要的权限。 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    
+
+    <!-- 快捷支付必须的权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    
+    <application android:label="@string/app_name"
+        	android:debuggable="true"
+    		android:icon="@drawable/byone_logo"
+    		android:theme="@style/ThemeActivity">
+        <activity android:name="MobileMain"
+        		  android:label="@string/app_name"
+        		  android:screenOrientation="portrait"
+        		  android:windowSoftInputMode="stateUnchanged|adjustPan"
+        		  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="AboutActivity"     android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="JQBarMain"     android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="LocalFlashAct" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="HelpActivity"  android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="BwWebView"     android:configChanges="orientation|keyboardHidden" android:theme="@android:style/Theme.Dialog"></activity>
+	
+       
+        
+        	<service android:name="UpgradeService"/>
+		
+		<service android:name=".BwPushService" android:label="BwPushService"></service>
+		
+		 <receiver android:name=".BwStartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"></action>  
+            </intent-filter>
+        </receiver> 
+   <!-- 添加360SDK必需的activity：com.qihoopay.insdk.activity.ContainerActivity -->
+        <activity
+            android:name="com.qihoopay.insdk.activity.ContainerActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        
+        <!-- 添加360SDK必需的activity：com.qihoopp.qcoinpay.QcoinActivity -->
+        <activity
+            android:name="com.qihoopp.qcoinpay.QcoinActivity"
+            android:configChanges="fontScale|orientation|keyboardHidden|locale|navigation|screenSize|uiMode"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" >
+        </activity>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPID。 -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值。读取失败会影响统计和结算，务必填写正确。 -->
+    <meta-data
+            android:name="QHOPENSDK_APPID"
+            android:value="200949676" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_APPKEY。此处value为app_key。请在360应用开放平台http://open.app.360.cn/?from=open_dt注册申请app_key和app_secret -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值。读取失败会影响统计和结算，务必填写正确。 -->
+        <meta-data
+            android:name="QHOPENSDK_APPKEY"
+            android:value="1c5e463f54ae7479aa0785adc8e0753b" >
+        </meta-data>
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_PRIVATEKEY。此处value为private_key，其生成算法为md5(app_secret +”#”+ app_key)，全小写，详细算法请看开发文档附录。 -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值 。读取失败会影响统计和结算，务必填写正确。-->
+        <meta-data
+            android:name="QHOPENSDK_PRIVATEKEY"
+            android:value="d01c137a67375dc2686cb3b81937f449" >
+        </meta-data>
+       
+
+        <!-- 添加360SDK必需的meta-data：QHOPENSDK_CHANNEL。此处value通常为default，如需修改请联系我们，并以字母开头，不支持纯数字，不支持中文等全角字符，用于标识应用方的子渠道。 -->
+        <!-- 此处不要使用@string引用，上传APK时服务器要从这里读取值。读取失败会影响统计和结算，务必填写正确。 -->
+        <meta-data
+            android:name="QHOPENSDK_CHANNEL"
+            android:value="default" >
+        </meta-data>
+   
+      <!-- Start 快捷支付 -->
+        <activity
+            android:name="cn.paypalm.jar.game360.InitialAct"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="cn.paypalm.jar.game360.UserMessageAct"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="cn.paypalm.jar.game360.BankcardPayAct"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="cn.paypalm.jar.game360.SuccessAct"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <activity
+            android:name="cn.paypalm.jar.game360.BankcardAgreement"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+            </application>
+        
+</manifest>

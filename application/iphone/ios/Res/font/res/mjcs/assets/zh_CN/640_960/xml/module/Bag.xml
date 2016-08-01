@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【背包 面板】配置文件-->
+<config properties='{"initX":0 , "initY":0,"styleName":"window3", "bgWidth":640, "bgHeight":820, "titleID":"410001", "args":{"x":0, "y":0, "dur":0.3, "gap":100}}'>
+	<modalBG name="modalBG" properties='{"alpha":0.2, "visible":false, "width":10, "height":10}'/>
+	<!--<displayObject definition="bag.view.PanelBg"  properties='{"x":0 , "y":0}'/>	-->
+	
+	<label name="countText" properties='{"x":265, "y":48, "width":47, "height":23, "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+
+	<!--<button name="shopBtn" properties='{"x":30, "y":755, "styleName":"button5", "labelID":"410029", "width":0,"height":0}' />-->
+	<button name="sellBtn" properties='{"x":175,"y":755,"width":110,"styleName":"button2","labelID":410031,"height":40}' />
+	
+	<button name="bulkBtn" properties='{"visible":false,"x":105,"y":755,"width":70,"styleName":"button5","labelID":410030,"height":40}' />
+
+	<button name="buyBtn" properties='{"visible":false,"labelID":410027,"x":25,"y":755,"width":110,"styleName":"button2","height":40}' />
+	<button name="cleanBtn" properties='{"labelID":410023,"x":320,"y":755,"width":110,"styleName":"button2","height":40}' />
+
+
+	<itemGroup name="tabBtnGroup" properties='{"x":18, "y":55, "layout":"horizontal"}' />
+	<button name="tabBtn1" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"410011"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+	<button name="tabBtn2" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"410028"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+	<button name="tabBtn3" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"410028"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+	<button name="tabBtn4" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"410028"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+	<button name="tabBtn5" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"410028"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+	<button name="tabBtn6" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"410028"}' parent="tabBtnGroup"  group="tabBtnGroup"/> 
+	
+	<list name="propList" properties='{"x":18, "y":100, "columnCount":7, "rowCount":5, "horizontalGap":1, "verticalGap":1}' />
+
+
+
+	<page name="page" properties='{"x":93, "y":276,"visible":false,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":95 },
+							"labelProp":{"x":25, "y":4, "width":64, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+							
+	<!--物品信息-->
+	<container name="goodsInfo" properties='{"x":20, "y":540}'>
+		
+		<container name="infoTips" properties='{"autoRemove":false, "y":30}'/>
+		<scrollBar name="vsb" target="infoTips" properties='{"style":{"autoDisplay":true},"disArea":{"x":0,"y":13,"width":500,"height":180},"y":13,"x":503,"size":180,"styleName":"vScrollBar1","isShowScroll":false}' />		
+		
+		<button name="useBtn" properties='{"x":530, "y":55, "width":70, "styleName":"button2", "label":"使用"}' />
+		<!--<button name="infoBtn" properties='{"x":520, "y":95, "width":70, "styleName":"button2", "label":"详细"}' />-->
+		<button name="sellBtn" properties='{"x":530, "y":135, "width":70, "styleName":"button2", "label":"出售"}' />
+	</container>
+
+	<!--2.12版 出售-->
+	<container name="bagSellListPanel" properties='{"x":0, "y":540}'>		
+		<!--<displayObject definition="bag.view.PanelBg"  properties='{"x":0 , "y":0}'/>	-->
+		<displayObject definition="gameUI.bg.GimpFrameNew" properties='{"width":605,"height":270,"x":319,"y":130}'/>
+		<label properties='{"x":90, "y":0, "width":300, "height":26, "text":"点击选择出售物品", "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<list name="list" properties='{"x":18, "y":29, "columnCount":5, "rowCount":2, "horizontalGap":1, "verticalGap":1}' />
+		<button name="sellAllBtn" properties='{"x":470, "y":155, "width":70, "styleName":"button2", "labelID":"410032"}' />
+		<button name="hideBtn" properties='{"x":550, "y":155, "width":70, "styleName":"button2", "labelID":"410033"}' />
+		
+		<label properties='{"x":470, "y":35, "width":150,  "height":26, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010","border":false, "textID":"410103"}'/>
+		<displayObject definition="gameUI.icon.Copper"  properties='{"x":475, "y":82}'/>	
+		<displayObject definition="gameUI.icon.Ks"  properties='{"x":470, "y":115}'/>	
+		<label name="silverIncomeText" properties='{"x":520, "y":75, "width":150,  "height":26, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010","border":false}'/>
+		<label name="lingIncomeText" properties='{"x":520, "y":115, "width":150,  "height":26, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010","border":false}'/>
+		<sprite name="rewardTips" properties='{"x":100, "y":150}' />
+	</container>		
+	
+	<!--礼包面板-->
+	<GiftBagPanel properties='{"initX":340 , "initY":200,  "bgWidth":330, "bgHeight":240, "closeBtnPorp":{"y":8}, "titlePorp":{"y":8}}'>
+		<list name="costRewardList" properties='{"x":22, "y":40, "columnCount":3, "rowCount":1, "horizontalGap":1, "verticalGap":1}' />
+		<list name="goodsList" properties='{"x":22, "y":65, "columnCount":7, "rowCount":3, "horizontalGap":1, "verticalGap":1}' />
+		<button name="openGiftBtn" properties='{"x":128, "y":194, "width":74, "styleName":"button5", "autoSize":true,"labelID":"411105", "visible":true}' />
+	</GiftBagPanel>	
+							
+		<!--开宝箱面板-->
+	<OpenChestsPanel properties='{"x":300,"y":200,"initX":305,"initY":113}'>
+		<modalBG properties='{"alpha":0.2}'/>
+		<displayObject  definition="bag.view.openChestsBg"  properties='{"x":0 , "y":0}'/>	
+		<displayObject name="rateMC" definition="bag.view.rateMC"  properties='{"x":97 , "y":124}'/>	
+		<displayObject name="grid1"  definition="gameUI.icon.Grid1"  properties='{"x":176 , "y":65}'/>	
+		<displayObject name="grid2"  definition="gameUI.icon.Grid1"  properties='{"x":301 , "y":109}'/>	
+		
+		<displayObject name="randomMC" definition="bag.view.randomMC"  properties='{"x":97 , "y":124}'/>	
+		<displayObject name="again" definition="bag.view.againText"  properties='{"x":94 , "y":118}'/>	
+		<displayObject name="getTextView" definition="bag.text.get"  properties='{"x":112 , "y":30}'/>	
+		<displayObject name="openText" definition="bag.text.text"  properties='{"x":131 , "y":30}'/>	
+		<list name="goodsList" properties='{"x":22, "y":65, "columnCount":7, "rowCount":3, "horizontalGap":1, "verticalGap":1}' />
+		<buttonBasic name="selectBtn" properties='{"x":117, "y":151, "skin":"skin.CheckBox1"}' />
+		<label name="countText" properties='{"x":136, "y":150,  "height":23, "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+		
+		<displayObject name="openChestesBtn" definition="gameUI.taskTraced.RewardBtn"  properties='{"x":138 , "y":120,"visible":false}'/>	
+		<sprite name="curItem" properties='{"x":306, "y":116,  "mouseChildren":false, "mouseEnabled":true}' />	
+		<!-- <button name="openChestesBtn" properties='{"x":128, "y":194, "width":74, "styleName":"button5", "autoSize":true,"labelID":"411105", "visible":false}' /> -->
+		<!-- <button name="openGiftBtn" properties='{"x":128, "y":194, "width":74, "styleName":"button5", "autoSize":true,"labelID":"411105", "visible":true}' /> -->
+	</OpenChestsPanel>						
+							
+	<!-- 购买面板 -->
+		<container name="sellPanel" properties='{
+		"styleName":"panel2", "initX":148, "initY":190, "bgWidth":350, "bgHeight":300,"pricePos":"98,69,88,59"
+	}'>
+			<modalBG/>
+			<displayObject definition="bag.view.BuyBg"  properties='{"y":61,"x":30}'/>	
+				
+			<displayObject name="inputBG" definition="gameUI.icon.InputTextBG"  properties='{"y":173,"width":59,"height":17,"x":166}'/>	
+			<displayObject name="priceIcon1" definition="gameUI.icon.Price"  properties='{"y":122,"x":259}'/>	
+			<displayObject name="priceIcon2" definition="gameUI.icon.Price"  properties='{"y":210,"x":259}'/>	
+			<imageLoader name="goodIL" properties='{"y":72,"width":70,"height":70,"x":42,"pathFormatName":"skill32"}' />	
+			<label name="priceIconText1" properties='{"y":115,"autoSize":"none","size":18,"x":255,"align":"left","color":"0xFFFFFF","width":70,"stroke":"0x302010","height":24}'/>
+			<label name="priceIconText2" properties='{"y":202,"autoSize":"none","size":18,"x":255,"align":"left","color":"0xFFFFFF","width":70,"stroke":"0x302010","height":24}'/>
+			
+			<label name="nameText" properties='{"y":67,"autoSize":"none","size":18,"x":137,"align":"center","color":"0xFFFFFF","width":154,"stroke":"0x302010","height":24}'/>
+			<label name="priceText" properties='{"y":116,"autoSize":"none","size":18,"x":177,"align":"right","color":"0xFFFFCC","width":160,"stroke":"0x302010","height":24}'/>
+			<inputText name="numberText" properties='{"y":170,"autoSize":"none","size":18,"x":167,"align":"left","color":"0xFFFFCC","width":58,"stroke":"0x302010","height":24}'/>
+			<label name="totalPriceText" properties='{"y":203,"autoSize":"none","size":18,"x":141,"align":"right","color":"0xFFFFCC","width":190,"stroke":"0x302010","height":24}'/>
+			<label name="totalTreasureText" properties='{"y":171,"autoSize":"none","size":18,"x":198,"align":"right","color":"0xFFFFCC","visible":false,"width":78,"stroke":"0x302010","height":24}'/>
+			<label properties='{"textID":440022,"autoSize":"none","size":18,"x":126,"align":"left","color":"0xFFFFCC","y":115,"width":70,"stroke":"0x302010","height":24}'/>
+			<label name="numLabel" properties='{"y":173,"autoSize":"none","size":18,"x":82,"align":"left","color":"0xA69551","width":65,"stroke":"0x302010","height":24}'/>
+			<label properties='{"textID":440024,"autoSize":"none","size":18,"x":82,"align":"left","color":"0xA69551","y":202,"width":65,"stroke":"0x302010","height":24}'/>
+			<checkBox name="checkbox" properties='{"visible":false,"labelID":411110,"x":86,"y":168,"width":20,"styleName":"checkBox1"}'/>
+
+			<buttonBasic name="reduceBtn" properties='{"y":173,"width":17,"skin":"skin.page2.PrevBtn","height":17,"x":147}' />
+			<buttonBasic name="addBtn" properties='{"y":173,"width":17,"skin":"skin.page2.NextBtn","height":17,"x":226}' />
+
+			<button name="buyBtn" properties='{"labelID":410104,"x":50,"y":235,"width":80,"styleName":"button3","height":35}' />
+			<button name="cancelBtn" properties='{"labelID":410105,"x":217,"y":235,"width":80,"styleName":"button3","height":35}' />
+				</container>						
+							
+	<goodsRenderer properties='{"itemWidth":86, "itemHeight":86, "mouseChildren":true, "doubleClickEnabled":true}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<sprite name="goodsIcon" properties='{"x":8, "y":8, "doubleClickEnabled":true, "mouseChildren":false, "mouseEnabled":true}' />	
+		<label  name="countText" properties='{"x":10, "y":55, "width":65, "height":25,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<bitmapMC name="cinctureEffect" properties='{"sourceName":"gameUI.effect.Cincture", "fps":9, "x":-4, "y":-4, "visible":false}'/>
+	</goodsRenderer>
+	
+	<GiftCostRenderer properties='{"itemWidth":90, "itemHeight":20}'>
+		<displayObject definition="bag.view.costBg"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<label name="costNumText" properties='{"x":27, "y":5, "width":40, "height":23, "color":"0xFFFFFF", "stroke":"0x302010"}'/>
+		<displayObject name="copperIcon" definition="gameUI.icon.Copper"  properties='{"x":6 , "y":9,"visible":false}'/>	
+		<displayObject name="preIcon" definition="gameUI.icon.Prestige"  properties='{"x":6 , "y":9,"visible":false}'/>	
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold"  properties='{"x":6 , "y":9,"visible":false}'/>	
+	</GiftCostRenderer>
+
+</config>

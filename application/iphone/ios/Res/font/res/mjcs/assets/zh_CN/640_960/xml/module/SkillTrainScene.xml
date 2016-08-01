@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【技能训练场 场景】配置文件-->
+<config properties='{"showEffectDuration":0, "hideEffectDuration":0, "showEffectDuration":0, "speedTime":2}'>
+	
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "delayWalk":15}'>
+		<sprite name="sp" properties='{"x":-20, "y":10}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":30, "size":20,"x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":60, "height":30, "size":20, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>
+		<displayObject name="skillBg" definition="gameUI.icon.Grid1"  properties='{"x":-40 , "y":-230}'/>	
+		<imageLoader name="skillIL" properties='{"pathFormatName":"skill32",  "x":-33, "y":-223, "width":70, "height":70}' />	
+		<label name="skillLevelText"  properties='{"text":"20","x":-33, "y":-173, "width":70, "height":30, "size":20, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false, "visible":false}'/>
+		<displayObject name="skillExpBar"  definition="skillTrain.icon.ExpBar"  properties='{"x":-40 , "y":-145, "width":84, "visible":false}'/>
+		<label  name="conutText" properties='{"x":-40, "y":-138, "width":90, "height":30,"size":20,  "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<sprite name="numberMovieC" properties='{"visible":false}'/>
+	</avatarBasicUI>
+
+	<!--文字动画（加经验）-->
+	<numberMovie properties='{"textColor":"0x00FF00",  "yForm":0, "yTo":-50, "mouseEnabled":false, "mouseChildren":false}'>
+		<label name="contentText" properties='{"font":"Arial", "size":20, "stroke":"0x151515", "mouseEnabled":false}' />
+	</numberMovie>
+
+	<sprite name="mapContainer"/>
+	<!--<displayObject definition="skillTrain.view.Bg" properties='{"x":0, "y":-110}' />-->
+	<displayObject definition="skillTrain.view.TipBg" properties='{"x":0, "y":690,"height":30 }' />
+	<list name="techList" properties='{"x":528, "y":260, "columnCount":1, "rowCount":4, "horizontalGap":0, "verticalGap":0}' /><!-- 科技列表 -->
+	<label  name="cardSelectCDText" properties='{"x":310, "y":695, "width":200, "height":30, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFF99", "stroke":"0x302010" , "mouseEnabled":false, "visible":false}'/>
+
+	
+	<!-- 当前升级的技能信息 -->
+	<container name="skillInfo" properties='{"x":500, "y":95}'>
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"x":0, "y":0,"width":140,"height":570 }' />
+<!--		<displayObject name="upgradeSkillBg" definition="skillTrain.view.UpgradeSkillBg" properties='{"x":7, "y":16}' />
+		<imageLoader name="upgradeSkillIL" properties='{"pathFormatName":"skill32",  "x":23, "y":32, "width":32, "height":32}' />	
+		<label  name="nameText" properties='{"x":97, "y":36, "width":63, "height":16,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="levelText" properties='{"x":72, "y":35, "width":23, "height":16,  "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<displayObject name="skillExpBar" definition="skillTrain.icon.ExpBar"  properties='{"x":74 , "y":54, "width":82}'/>
+-->		
+		<label properties='{"x":0, "y":10, "size":20,"width":140, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010", "textID":"490129", "mouseEnabled":false}'/>
+		<label properties='{"x":0, "y":130, "size":20,"width":140, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010", "textID":"490135", "mouseEnabled":false}'/>
+		
+		<!--<buttonBasic name="speed1Btn" properties='{"x":18, "y":30, "skin":"skillTrain.btn.Speed1"}' />
+		<buttonBasic name="speed2Btn" properties='{"x":57, "y":30, "skin":"skillTrain.btn.Speed2"}' />
+		<buttonBasic name="speed3Btn" properties='{"x":93, "y":30, "skin":"skillTrain.btn.Speed3"}'/>
+		<buttonBasic name="speed4Btn" properties='{"x":135, "y":30, "skin":"skillTrain.btn.Speed4"}'/>-->
+		<buttonBasic name="speedBtn" properties='{"x":20, "y":30, "skin":"skillTrain.btn.Speed1"}'/>
+
+	<!-- 新增：选择修炼速度面板 -->
+	
+		<container name="selectSpeedPanel" properties='{"x":-390, "y":30}'>
+			<displayObject definition="gameUI.view.PTView" properties='{"x":0, "y":0,"width":390,"height":320 }' />
+			<buttonBasic name="speed1Btn" properties='{"x":16, "y":30, "skin":"skillTrain.btn.Speed1"}' />
+			<buttonBasic name="speed2Btn" properties='{"x":106, "y":28, "skin":"skillTrain.btn.Speed2"}' />
+			<buttonBasic name="speed3Btn" properties='{"x":196, "y":26, "skin":"skillTrain.btn.Speed3"}'/>
+			<buttonBasic name="speed4Btn" properties='{"x":286, "y":22, "skin":"skillTrain.btn.Speed4"}'/>
+			<!-- <sprite name="numberMovieC"/> -->
+			<displayObject definition="gameUI.icon.BlackBG" properties='{"x":15, "y":130,"width":360,"height":100 }' />
+			<label name="speedTip" properties='{"width":340,"size":20,"x":25,"y":140,"multiline":"true","color":"0xffffff","autoSize":"none","height":200,"stroke":0,"styleName":"label"}'/>
+			<BXButton name="_select" properties='{"width":120,"label":"确定","x":135,"height":48,"y":250,"styleName":"button2"}'/>
+		</container>
+	</container>
+	
+	<!-- 技能修炼助手信息,未用 -->
+	<container name="skillAssistant" properties='{"x":804, "y":390}'>
+		<displayObject definition="skillTrain.view.SkillAssistant" properties='{"x":0, "y":0}' />
+        <displayObject name="skillAssistantBar" definition="skillTrain.icon.skillAssistantBar"  properties='{"x":30 , "y":6, "width":159}'/>
+		<button name="controlBtn" properties='{"x":5, "y":4,"width":26, "height":26, "styleName":"button6", "labelID":"490136", "visible":true}' />
+		<label  name="skillAssistantText" properties='{"x":30, "y":10, "width":159, "height":16,  "autoSize":"none", "align":"center", "color":"0xFFFF99", "stroke":"0x302010" , "mouseEnabled":false, "textID":"490138"}'/>
+	</container>
+	
+	<!--<button name="enterBtn" properties='{"x":915, "y":506, "width":70, "height":24, "styleName":"button2", "labelID":"490102", "visible":false}' />
+	<button name="teamListBtn" properties='{"x":915, "y":478, "width":70, "height":24, "styleName":"button2", "labelID":"490103", "visible":false}' />
+	<button name="createTeamBtn" properties='{"x":915, "y":450, "width":70, "height":24,  "styleName":"button2", "labelID":"490104", "visible":false}' />
+	-->
+	<sprite name="numberMovieC"/>
+	<!-- 队伍面板，未用 -->
+	<container name="teamListPanel" properties='{
+		"titleID":"490201", "initX":350, "initY":120, "bgWidth":330, "bgHeight":410
+	}'>
+		<displayObject definition="skillTrain.view.TeamListBg"  properties='{"x":0 , "y":0}'/>	
+		<label properties='{"x":17,"y":43, "width":43, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"490202"}'/>
+		<label properties='{"x":63,"y":43, "width":202, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"490203"}'/>
+		<label properties='{"x":274,"y":43, "width":35, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"490204"}'/>
+		
+		<list name="teamList" properties='{"x":18, "y":65, "columnCount":1, "rowCount":7, "horizontalGap":0, "verticalGap":0}' />
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":133 , "y":374, "width":55}'/>	
+
+		<page name="page" properties='{"x":115, "y":375,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":75 },
+								"labelProp":{"x":25, "y":0, "width":44, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+	</container>
+	
+	<!-- 选择升级技能 -->
+	<container name="selectSkillPanel" properties='{"x":140, "y":190, "initHeight":100, "columnCount":4}'>
+		<modalBG properties='{"alpha":0.3}'/>
+		<displayObject definition="skillTrain.icon.SeletSkill"  properties='{"x":-30 , "y":-40}'/>
+		<displayObject name="bg" definition="gameUI.bg.GimpFrame"  properties='{"x":0 , "y":0, "width":360, "height":420 }'/>	
+		<list name="skillList" properties='{"x":9, "y":25, "columnCount":4, "rowCount":2, "horizontalGap":1, "verticalGap":1}' />  <!-- 主动技能  -->
+		<displayObject  definition="gameUI.icon.BlackBG"  properties='{"x":10 , "y":200, "width":340, "height":150}'/>	
+		<!-- <list name="passivelySkillList" properties='{"x":9, "y":135, "columnCount":7, "rowCount":3, "horizontalGap":1, "verticalGap":1}' />  被动技能  -->
+	
+		<!-- <label properties='{"x":22, "y":55, "width":275,  "height":20, "size":14, "autoSize":"none", "align":"left", "bold":false, "color":"0xCBCC66", "stroke":"0x302010", "textID":"490302"}'/>
+		<label name="initiativeText" properties='{"x":9, "y":11, "width":75,  "height":20,  "size":14, "autoSize":"none", "align":"left",  "color":"0xCBCC66", "stroke":"0x302010", "textID":"490303"}'/>
+		<label name="passivelyText" properties='{"x":9, "y":117, "width":75,  "height":20, "size":14,  "autoSize":"none", "align":"left",  "color":"0xCBCC66", "stroke":"0x302010", "textID":"490304"}'/>  -->
+		<label name="nameText" properties='{"width":340,"size":20,"x":20,"y":220,"color":"0xffffff","autoSize":"none","height":30,"stroke":0,"styleName":"label"}'/>		
+		<label name="levelText" properties='{"width":340,"size":20,"x":20,"y":250,"color":"0xffffff","autoSize":"none","height":30,"stroke":0,"styleName":"label"}'/>		
+		<label name="introText" properties='{"width":340,"size":20,"x":20,"y":280,"color":"0xffffff","autoSize":"none","height":30,"stroke":0,"styleName":"label"}'/>		
+		<label name="gainText" properties='{"width":340,"size":20,"x":20,"y":310,"color":"0xffffff","autoSize":"none","height":30,"stroke":0,"styleName":"label"}'/>		
+		
+		<button name="cancelBtn" properties='{"x":10, "y":360,"width":120,"height":48, "styleName":"button5", "labelID":"490305", "visible":false}' />
+		<button name="exitBtn" properties='{"x":10, "y":360,"width":120,"height":48, "styleName":"button5", "labelID":"490306", "visible":false}' />
+   	<button name="_select" properties='{"x":230, "y":360,"width":120,"height":48, "styleName":"button2", "label":"确定" }' />  	
+	</container>
+
+	<!-- 操作提示 -->
+	<container name="tipPanel" properties='{"x":0, "y":134, "mouseEnabled":false, "centerPos":320, "moveDuration":1, "delayStop":1}'>
+		<displayObject definition="skillTrain.view.TipBg"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>
+		<imageLoader name="msgIL" properties='{"pathFormatName":"skillTrainTipPic",  "x":640, "y":-2, "mouseEnabled":false}' />	
+	</container>
+
+	<!-- 消息滚动提示面板 -->
+	<container name="msgPanel" properties='{"x":220, "y":160, "maxMsgCount":5, "delayShow":0.5}'>
+		<MsgText properties='{"x":0,"y":0, "width":200, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"right", "color":"0xFFCC00", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+	</container>
+	
+	<!-- 选择卡牌面板 -->
+	<container name="selectCardPanel" properties='{"x":0, "y":260, "distanceY":50, "delayDuration":0.5, "delayShow":0.2, "delayHide":0.3, "delayClose":3, "hideDuration":0.4}'>
+		<modalBG properties='{"alpha":0}'/>
+		<displayObject name="selectCardTip" definition="skillTrain.icon.SelectCardTip"  properties='{"x":150 , "y":-41, "visible":false}'/>
+		<displayObject name="bgMC" definition="skillTrain.effect.CardBgMovie"  properties='{"x":0 , "y":0}'/>	
+		<container name="card1" properties='{"initX":7, "initY":11, "alpha":0}'/>	
+		<container name="card2" properties='{"initX":132, "initY":11, "alpha":0}'/>	
+		<container name="card3" properties='{"initX":257, "initY":11, "alpha":0}'/>	
+		<container name="card4" properties='{"initX":383, "initY":11, "alpha":0}'/>	
+		<container name="card5" properties='{"initX":507, "initY":11, "alpha":0}'/>	
+		<sprite name="cdNumber" properties='{"x":320, "y":210, "align":"center", "classPath":"skillTrain.view.Number",  "mouseEnabled":false}' />
+		<label name="timeText" properties='{"x":170, "y":288, "width":300,  "height":30, "size":20,  "bold":true, "autoSize":"none", "align":"center",  "color":"0xFFFF67", "stroke":"0x302010", "textID":"490114"}'/>
+	</container>
+
+	<!-- 结束面板 -->
+<container name="resultPanel" properties='{"styleName":"panel3",
+		"titleID":"490501", "initX":110, "initY":180, "bgWidth":390, "bgHeight":360
+	}'>
+		<!--<displayObject definition="gameUI.view.PTView"  properties='{"x":0 , "y":0,"width":340,"height":360 }'/>	 -->
+		<label properties='{"x":20,"y":60, "width":120, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"490502"}'/>
+		<label properties='{"x":20,"y":90, "width":120, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"490503"}'/>
+		<label properties='{"x":20,"y":120, "width":120, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"490504", "visible":false}'/>
+
+		<label name="lastTimeText" properties='{"x":130,"y":60, "width":275, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="totalExpText" properties='{"x":130,"y":90, "width":275, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="speedText" properties='{"x":130,"y":120, "width":275, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "visible":false}'/>
+		
+		<imageLoader name="skillIL" properties='{"pathFormatName":"skill32",  "x":40, "y":160, "width":70, "height":70}' />	
+		<label  name="levelText" properties='{"x":120, "y":180, "width":240, "height":30, "size":24, "autoSize":"none", "align":"left", "color":"0xB7C906", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="nameText" properties='{"x":40, "y":235, "width":70, "height":30, "size":24, "autoSize":"none", "align":"center", "color":"0xB7C906", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<button name="sureBtn" properties='{"x":135, "y":280, "width":120,"height":48,"styleName":"button2", "labelID":"490505"}' />
+	</container>
+	
+	<!-- 队员列表 -->
+	<container name="memberListPanel" properties='{"x":10,"y":695, "initX":10, "delayTime":0.5}'>
+		
+		<label name="addText" properties='{"x":0,"y":0, "width":290, "height":30, "size":20, "bold": false, "autoSize":"none", "align":"right", "color":"0xFFCC00", "stroke": "0x2D261E"}'/>
+		<list name="memberList" properties='{"x":12, "y":21, "columnCount":4, "rowCount":1, "horizontalGap":0, "verticalGap":0}' />  <!-- 队员列表  -->
+
+		<button name="memberExitBtn" properties='{"x":47, "y":266,  "width":72,  "height":25, "styleName":"button2", "labelID":"490402", "visible":false}' />
+		<button name="exitBtn" properties='{"x":9, "y":266,  "width":72,  "height":25, "styleName":"button2", "labelID":"490402", "visible":false}' />
+		<button name="startBtn" properties='{"x":87, "y":266, "width":72, "height":25, "styleName":"button5", "labelID":"490401", "visible":false}' />
+	</container>
+	
+	<!--文官进度呈示器 2.13-->
+	<container name="skillCivil" properties='{"x":10, "y":600, "showDuration":0.3, "duration":3, "moveDuration":0.5, "expArrY":[60,25,15]}'>		
+		<displayObject definition="gameUI.view.CivilListBg" properties='{"x":0, "y":0}'/>	
+	<!--	<displayObject definition="gameUI.icon.Grid1" properties='{"x":12, "y":7}' />		-->
+		<imageLoader name="pic" properties='{"pathFormatName":"civil70","x":14, "y":8}' />	
+		<displayObject definition="gameUI.view.RateBg" properties='{"x":86, "y":82}'/>		
+		<displayObject name="rate" definition="gameUI.view.RateExp"  properties='{"x":86, "y":82}'/>		
+		<label  name="cdText" properties='{"x":12, "y":35, "width":23, "height":16,  "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<displayObject name="full" definition="gameUI.view.ProFull" properties='{"x":90, "y":43, "visible":false}' />
+		<sprite name="exp" properties='{"x":80, "y":60, "classPath":"gameUI.icon.Number", "align":"center"}'/>
+		<!--<displayObject name="rewardBtn" definition="gameUI.view.GainExpBtn"  properties='{"x":-55, "y":17}'/>-->
+		<displayObject name="speakPopo" definition="gameUI.view.SpeakPopo" properties='{"x":0, "y":-75, "visible":false}' />
+		<mcLabel name="msgText" properties='{"x":3, "y":-72, "lineFill":true, "stroke":"0x302010","labelProp":{ "font":"黑体","size":16,"width":165, "color":"0xCBCD67", "multiline":true,"leading":9},"multiColor":"gameUI.color.Tips7"}'/>							
+	</container>
+	
+	<!-- 卡牌 呈视器  -->
+	<CardRenderer properties=''>
+			<displayObject definition="skillTrain.view.CardItemBg"  properties='{"x":0 , "y":0}'/>	
+			<imageLoader name="cardIL" properties='{"pathFormatName":"skillTrainCard100",  "x":10, "y":13, "width":100, "height":100}' />	
+			<displayObject name="selectedEffect" definition="skillTrain.effect.CardSelected"  properties='{"x":0 , "y":0, "visible":false}'/>	
+			<label  name="nameText" properties='{"x":15, "y":22, "width":18, "height":80, "size":14, "autoSize":"none", "multiline":true, "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+			<label  name="expText" properties='{"x":9, "y":143, "width":104, "height":20, "size":14, "autoSize":"none", "align":"right", "bold":true, "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</CardRenderer>
+
+	<!-- 技能选择 呈视器  -->
+	<SkillRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+			<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0}'/>	
+			<imageLoader name="skillIL" properties='{"pathFormatName":"skill32",  "x":7, "y":7, "width":70, "height":70}' />	
+			<label  name="levelText" properties='{"x":7, "y":50, "width":70, "height":30,"size":20,  "autoSize":"none", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</SkillRenderer>
+	
+	<!-- 队伍列表 呈视器  -->
+	<TeamRenderer properties='{"itemHeight":43}'>
+			<displayObject definition="skillTrain.view.ListItemBg"  properties='{"x":0 , "y":0}'/>	
+			<displayObject name="itemSelectedBg" definition="skillTrain.effect.SelectedItem"  properties='{"x":-2 , "y":2, "visible":false}'/>	
+			<imageLoader name="skillIL" properties='{"pathFormatName":"skill32",  "x":5, "y":7, "width":32, "height":32}' />
+			<label name="nameText"  properties='{"size":12, "autoSize":"none", "align":"left", "width":202, "height":16, "x":43,"y":4, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+			<label name="countText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":31, "height":16, "x":258,"y":4, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+			<button name="enterBtn" properties='{"x":253, "y":20, "width":40,  "styleName":"button6", "style":{"labelPaddingLeft":0, "labelPaddingRight":0},  "labelID":"490205"}' />
+	</TeamRenderer>
+
+	<!-- 成员 呈视器  -->
+	<MemberRenderer properties='{"itemHeight":84}'>
+		<displayObject definition="gameUI.icon.Grid1"/>	
+		<imageLoader name="playerIL" properties='{"pathFormatName":"generalPic70",  "x":7, "y":7, "width":70, "height":70}' />
+	</MemberRenderer>
+
+	<!-- 训练科技 呈视器  -->
+	<TechRenderer properties='{"itemWidth":84,"itemHeight":100}'>
+			<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0}'/>
+			<imageLoader name="techIL" properties='{"pathFormatName":"skillTech32",  "x":7, "y":7, "width":70, "height":70}' />	
+			<displayObject definition="gameUI.bg.BlackBG1"  properties='{"x":0 , "y":68,"width":40,"height":24 }'/>
+	     <displayObject definition="gameUI.icon.BlackBG"  properties='{"x":0 , "y":68,"width":40,"height":24 }'/>
+			<displayObject name="expBar" definition="skillTrain.icon.ExpBar"  properties='{"x":40 , "y":84, "width":42}'/>
+			<label  name="levelText" properties='{"x":0, "y":70, "width":40, "height":24, "size":16,  "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</TechRenderer>
+	
+	<!--修炼场文官TIP 2.13 -->
+	<SkillCivilTip>
+		<displayObject definition='skin.DefaultToolTip$bg' properties='{"height":120,"width":200}' />
+		<label name="nameText" properties='{"x":10, "y":8,  "color":"0xE46565", "bold":true,"stroke":"0x302010", "border":false, "size":14}'/>
+		<label name="introText" properties='{"x":15, "y":30,  "color":"0xFFFFCC", "stroke":"0x302010", "border":false, "height":60}'/>
+		<label name="progressText" properties='{"x":15, "y":90,  "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<displayObject  definition='gameUI.icon.Line1' properties='{"x":5, "y":80, "width":190}'/>
+	</SkillCivilTip>
+	
+	
+	<list name="iconList" properties='{ "x":20, "y":190, "columnCount":1, "horizontalGap":1, "verticalGap":1, "rowCount":1}' />
+	<imageLoader name="pic" properties='{"pathFormatName":"tech32",  "x":5, "y":240, "width":51, "height":51}' />	
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE config SYSTEM "config.dtd">
+
+<defines>
+	<file_info zcontent_type="game"/>
+	<operate_define touchsize="15"/>
+	<display_define quality="auto" zoom_size="Original" screen_direction="Auto" />
+</defines>

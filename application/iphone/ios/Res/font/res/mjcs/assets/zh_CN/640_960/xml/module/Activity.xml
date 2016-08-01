@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--活动-->
+
+<!--活动开启ID：0、开启所有活动  1、？  2、双倍祭祀  3、返金  4、宝石促销  5、 充值送宝箱  6、消费送宝箱  7、菜肴促销  8、武将促销  9、富豪榜  10、武斗会庆祝
+           11、地产大亨  12、灵石促销  13、宝石榜  14、宝石通商  15、吃月饼大赛  16、矿锄促销  17、赛马大会  18、灵石排行榜  19、元旦赠礼
+           20、银币倾销  21、春节活动（年兽） 22、经验赠礼  23、五一活动  24、端午节活动（五毒兽）
+-->
+	
+<config properties='{ "hideScene":false,"bgWidth":608,"bgHeight":415,"initX":217,"initY":102, "isSpecial":true,"offsetY":530, "closeBtnPaddingRight":9,
+					"ver" : {"bgWidth":608,"bgHeight":475,"initBg":{"w":572,"h":391,"bg":"skin.Panel2$bg"},"middleMoonWidth":330,"middleMoonHieght":348,
+							"luckTodayWidth":378, "luckTodayHeight":290, "newYearsSize":{"w":330,"h":348}, "expInstanceHalfSize":{"w":340,"h":380}, "duobaoSize":{"w":270, "h":315}, "duanwuArg":{"w":574, "h":252, "bg":"activity.view.DuanwuView", "py": 65}}
+}'>
+	<displayObject name="bg" definition="gameUI.icon.Layer"  properties='{"x":18 , "y":60,"width":572,"height":361}'/>
+	<!-- 冲级奖励活动-->
+	<UpLvActivity  properties='{}'>
+			<label properties='{"textID":"700002","size":14, "bold": true, "autoSize":"none", "align":"left", "width":120, "height":23, "x":60,"y":50, "color":"0xCBCD67", "stroke": "0x2D261E"}'/>
+			<label properties='{"textID":"700003","size":14, "bold": true, "autoSize":"none", "align":"left", "width":120, "height":23, "x":150,"y":50, "color":"0xCBCD67", "stroke": "0x2D261E"}'/>
+			<label properties='{"textID":"700009","size":14, "bold": true, "autoSize":"none", "align":"left", "width":120, "height":23, "x":250,"y":50, "color":"0xCBCD67", "stroke": "0x2D261E"}'/>
+
+			<label properties='{"textID":"700004","size":14, "bold": true, "autoSize":"none", "align":"left", "width":120, "height":23, "x":392,"y":50, "color":"0xCBCD67", "stroke": "0x2D261E"}'/>
+			<label properties='{"textID":"700005","size":14, "bold": true, "autoSize":"none", "align":"left", "width":120, "height":23, "x":495,"y":50, "color":"0xCBCD67", "stroke": "0x2D261E"}'/>
+			
+			<list name="upLvList" properties='{"x":21, "y":68, "columnCount":1, "rowCount":7, "horizontalGap":0, "verticalGap":0}' />
+			<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":273 , "y":368,"width":56}'/>
+			<page name="page" properties='{"x":248, "y":369,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":84 },
+								"labelProp":{"x":23, "y":0, "width":64, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+	</UpLvActivity>
+		
+	<!-- 首次充值活动-->
+	<FirstCost  properties='{}'>
+		<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":26 , "y":53,"width":556,"height":285}'/>
+		<displayObject definition="activity.firstPay.textBg"  properties='{"x":24 , "y":340}'/>
+		<imageLoader name="pic"  properties='{"fileName":"a","pathFormatName":"activityPic", "x":26, "y":50}' />
+		<displayObject name="gotoCostBtn" definition="activity.btn.gotoPay" properties='{"x":240, "y":180}' />
+		
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":250}'/>
+		<sprite name="countDownText" properties='{"x":360, "y":250, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		
+		<label name="stateText" properties='{"size":20, "bold": true, "autoSize":"none","mouseEnabled":false, "align":"center", "width":554, "height":23, "x":20,"y":185, "color":"0x99FF00", "stroke": "0x2D261E"}'/>
+		
+		<label properties='{"textID":"700107","size":14, "bold": false, "autoSize":"none", "align":"left", "width":200, "height":23, "x":30,"y":305, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label properties='{"textID":"700104","size":12, "bold": false, "autoSize":"none", "align":"left", "width":500, "height":23, "x":100,"y":305, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+	
+		
+	<!--玩家的充值新闻（滚动）-->
+		<container name="news" properties='{"x":115,"y":355}'/>
+		
+	
+	
+	</FirstCost>
+	
+	
+	<!-- 送钱啦活动，返金ID3-->
+	<GiveMoney  properties='{"y":20}'>
+		<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":26 , "y":69,"width":556,"height":268}'/>
+		<displayObject definition="activity.firstPay.textBg"  properties='{"x":24 , "y":340}'/>
+		<list name="giveMoneyList" properties='{"x":41, "y":87, "columnCount":4, "rowCount":2, "horizontalGap":40, "verticalGap":4}' />
+		<label name="gainMoneyText"  properties='{ "textID":"700201","border":false,"autoSize":"none", "align":"left", "width":180, "height":23, "x":25,"y":42, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label name="downTimeText"  properties='{"border":false,"autoSize":"none", "align":"left", "width":180, "height":23, "x":300,"y":42, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label name="payText"  properties='{"border":false,"autoSize":"none", "align":"left", "width":280, "height":23, "x":200,"y":395, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<!--玩家的购买新闻（滚动）-->
+		<container name="news" properties='{"x":115,"y":355}'/>
+			
+	</GiveMoney>
+	
+	<!-- 充值送宝箱活动，活动ID5 -->
+	<GiveBox  properties='{"y":20,"gainTextProp":{"width":180, "height":20, "size":14, "autoSize":"none", "align":"center", "multiline":true, "color":"0xffffCC", "stroke":"0x302010", "mouseEnabled":false},
+							"gainMovie":{
+										"moveDuration":2, "alphaDuration":0.5, "alphaDelay":1.5,
+										"movie":{"startX":0, "startY":0}								
+		}}'>
+		<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":26 , "y":49,"width":556,"height":315}'/>
+		<displayObject definition="activity.firstPay.textBg"  properties='{"x":24 , "y":370}'/>
+		
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":60}'/>
+		<sprite name="countDownText" properties='{"x":360, "y":60, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		
+		<displayObject name="boxBtn" definition="activity.giveBox.box"  properties='{"x":263 , "y":85}'/>
+		<linkText  name="clickOpenText" properties='{"style":{"overStyle":{"underline":true}},"x":195, "y":180, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textType":"htmlText"}'/> 
+		<displayObject name="gotoPayBtn" definition="activity.btn.gotoPay" properties='{"x":240, "y":210}' />
+	
+		
+	
+		<label properties='{"textID":"700412", "bold": false, "size":"18", "align":"left",  "multiline":true, "width":180, "height":170, "x":400,"y":85, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+	
+		<label properties='{"textID":"700410", "bold": false, "autoSize":"none", "align":"left", "width":200, "height":24, "x":33,"y":235, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<displayObject name="rateMC" definition="activity.giveBox.rate"  properties='{"x":35 , "y":263,"width":535}'/>
+		<label  name="rateText" properties='{"x":270, "y":260, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+		<list name="requireList" properties='{"x":70, "y":315, "columnCount":5, "rowCount":1, "horizontalGap":15, "verticalGap":4}' />
+		<sprite name="rewardTips" properties='{"x":220, "y":130}' />
+		<!--开宝箱新闻（滚动）-->
+		<container name="news" properties='{"x":115,"y":370}'/>
+		
+	</GiveBox>
+	
+	<!-- 宝石促销活动，活动ID4-->
+	<GemPromotionActivity  properties='{"maskHeight":50,"y":20}'>
+		<displayObject definition="activity.gemPromo.bg"  properties='{"x":25 , "y":45,"height":350}'/>
+		<label  name="timeDownText" properties='{"x":27, "y":40, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+		<list name="gemList" properties='{"x":40, "y":76, "columnCount":3, "rowCount":1, "horizontalGap":10, "verticalGap":4}' />
+		<!--开宝箱新闻（滚动）-->
+		<container name="newsView" properties='{"x":115,"y":360}'/>
+	</GemPromotionActivity>
+	
+	<!-- 菜肴促销活动，活动ID7-->
+	<RecipePromoActivity  properties='{"maskHeight":50,"y":20}'>
+		<displayObject definition="activity.gemPromo.bg"  properties='{"x":25 , "y":45,"height":350}'/>
+		<label  name="timeDownText" properties='{"x":27, "y":40, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+		<list name="recipeList" properties='{"x":40, "y":76, "columnCount":3, "rowCount":1, "horizontalGap":10, "verticalGap":4}' />
+		<!--开宝箱新闻（滚动）-->
+		<container name="newsView" properties='{"x":115,"y":360}'/>
+	</RecipePromoActivity>
+	
+	
+	<!-- 消费送宝箱活动，活动ID6 -->
+	<ExpendGiveBox  properties='{"y":20,"gainTextProp":{"width":180, "height":20, "size":14, "autoSize":"none", "align":"center", "multiline":true, "color":"0xffffCC", "stroke":"0x302010", "mouseEnabled":false},
+							"gainMovie":{
+										"moveDuration":2, "alphaDuration":0.5, "alphaDelay":1.5,
+										"movie":{"startX":0, "startY":0}								
+		}}'>
+		<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":26 , "y":49,"width":556,"height":315}'/>
+		<displayObject definition="activity.firstPay.textBg"  properties='{"x":24 , "y":370}'/>
+		
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":60}'/>
+		<sprite name="countDownText" properties='{"x":360, "y":60, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		
+		<displayObject name="boxBtn" definition="activity.giveBox.box"  properties='{"x":263 , "y":85}'/>
+		<linkText  name="clickOpenText" properties='{"style":{"overStyle":{"underline":true}},"x":195, "y":180, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textType":"htmlText"}'/> 
+		<displayObject name="gotoPayBtn" definition="activity.btn.gotoPay" properties='{"x":240, "y":210,"visible":false}' />
+	    <!-- <label name="ruleIntro" properties='{"size":12,  "autoSize":"none","mouseEnabled":false, "align":"center", "width":554, "height":23, "x":28,"y":240, "color":"0xFFFF00", "stroke": "0x2D261E"}'/>
+	    <label name="balanceText" properties='{"size":14,  "autoSize":"none","mouseEnabled":false, "align":"center", "width":554, "height":23, "x":28,"y":270, "color":"0xFFFF00", "stroke": "0x2D261E"}'/> -->
+		
+		<!-- <label properties='{"textID":"700412", "bold": false, "autoSize":"none", "align":"left",  "multiline":true, "width":180, "height":70, "x":388,"y":135, "color":"0xE5EF99", "stroke": "0x2D261E"}'/> -->
+		
+		<!--  -->
+		<label properties='{"textID":"700412", "bold": false, "size":"18", "align":"left",  "multiline":true, "width":180, "height":170, "x":410,"y":85, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+	
+		<label properties='{"textID":"700606", "bold": false, "autoSize":"none", "align":"left", "width":200, "height":24, "x":33,"y":235, "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<displayObject name="rateMC" definition="activity.expend.rateMC1"  properties='{"x":35 , "y":263,"width":535}'/>
+		<label  name="rateText" properties='{"x":270, "y":260, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+		<list name="requireList" properties='{"x":5, "y":315, "columnCount":6, "rowCount":1, "horizontalGap":15, "verticalGap":0}' />
+		
+		
+		
+		<sprite name="rewardTips" properties='{"x":220, "y":130}' />
+		<!--开宝箱新闻（滚动）-->
+		<container name="news" properties='{"x":115,"y":370}'/>
+		
+	</ExpendGiveBox>
+	
+	<!--充值活动-->
+	<CostActivity properties='{"y":20,"showDur":0, "hideDur":0.2, "showDelay":2.5}'>
+		<displayObject definition="activity.costActivity.ViewBG"  properties='{"x":25 , "y":52}'/>
+		<displayObject name="gotoCostBtn" definition="activity.btn.gotoPay" properties='{"x":40, "y":290}' />
+		<list name="boxList" properties='{"x":33, "y":56, "columnCount":10, "rowCount":1, "horizontalGap":4, "verticalGap":0}' />
+		<displayObject name="rateMC" definition="activity.cost.rate"  properties='{"x":35 , "y":257,"width":535}'/>
+		<label  name="countDownText" properties='{"x":195, "y":400, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="rateText" properties='{"x":275, "y":253, "color":"0xFEFECA", "stroke":"0x302010", "border":false, "align":"center"}'/>
+		<container name="news" properties='{"x":111,"y":358}'/>
+		
+		<label  properties='{"x":190, "y":285, "textID": "700706" ,"size":18,"color":"0xFEFECA", "stroke":"0x302010", "border":false, "multiline":true, "width":390,"height":80}'/>
+		<displayObject name="getReward" definition="activity.cost.rewardMC" properties='{"x":24, "y":55, "visible":false}' />
+	</CostActivity>
+	
+	<!-- 武将打折活动，活动ID8-->
+	<GeneralDiscountActy  properties='{"y":20}'>
+		<displayObject definition="gameUI.bg.GimpFrame"  properties='{"x":25 , "y":52,"width":265,"height":300}'/>
+		<displayObject definition="gameUI.bg.GimpFrame"  properties='{"x":315 , "y":52,"width":265,"height":300}'/>
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":380}'/>
+		<sprite name="leftTime" properties='{"x":360, "y":380, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		<displayObject name="gotoEmployBtn" definition="activity.btn.gotoRecruit" properties='{"x":95, "y":290}' />
+		<displayObject name="gotoFosterBtn" definition="activity.btn.gotoForst" properties='{"x":385, "y":290}' />
+		<displayObject name="animationMC" definition="activity.generalDis.animation" properties='{"x":300, "y":190}' />
+	</GeneralDiscountActy>
+	
+	<!--富豪排行榜活动，活动ID9-->
+	<RankingView  properties='{"y":20}'>
+		<displayObject definition="activity.ranking.BG"  properties='{"x":15 , "y":38}'/>
+		<label  properties='{"textID":"510246","x":23, "y":117,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  properties='{"textID":"510247","x":145, "y":117,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  properties='{"textID":"510251","x":285, "y":166,"size":18, "color":"0xFF0000", "stroke":"0x302010", "border":false}'/>
+		
+		<list name="rankList" properties='{"x":31, "y":149, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":1}' />
+		<label  name="gapText" properties='{"x":260, "y":98, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="incomeText" properties='{"x":285, "y":122,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="rankText" properties='{"x":285, "y":144,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="rewardText12" properties='{"x":285, "y":186,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false,"width":180}'/>
+		<label  name="rewardText22" properties='{"x":285, "y":209,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false,"width":230}'/>
+		<!--<label  name="countDownText" properties='{"x":330, "y":220, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>-->
+		<label  name="actCountDownText" properties='{"x":355, "y":375, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="sacrificeLimitText" properties='{"x":100, "y":400, "color":"0xFFC207", "stroke":"0x302010", "border":false}'/><!--祭祀最多花费-->
+				
+		<label name="tip" properties='{"x":285, "y":240, "color":"0xFF0000", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510244","x":285, "y":262, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510235","x":285, "y":284, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510236","x":285, "y":306, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510237","x":285, "y":328, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		
+		<label  name="goText1" properties='{"x":390, "y":284, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="goText2" properties='{"x":390, "y":306, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="goText3" properties='{"x":390, "y":328, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510249","x":310, "y":351,"size":17, "color":"0xFFFF00", "stroke":"0x302010", "border":false}'/>
+		<button name="gainBtn1" properties='{"x":510, "y":188, "width":70,"height":23, "styleName":"button3"}' />
+		<button name="gainBtn2" properties='{"x":510, "y":212, "width":70,"height":23, "styleName":"button3"}' />
+		<sprite name="artNumber" properties='{"x":385, "y":50, "classPath":"activity.ranking.artistNumber", "align":"center"}'/>
+	</RankingView>
+	
+	<!--武斗庆功-->
+	<WudouHappy>
+		<button name="lookBtn" properties='{"x":500, "y":360, "width":80, "styleName":"button3", "labelID":"700853", "visible":false}' />
+		<button name="backBtn" properties='{"x":500, "y":360, "width":80, "styleName":"button3", "labelID":"700856", "visible":false}' />
+		
+	</WudouHappy>
+	
+	<WudouReportView properties='{"gapX":180}'>
+		<displayObject definition="activity.wudouHappy.JiebaoBG"  properties='{"x":26 , "y":110}'/>
+		<mcLabel name="titleText" properties='{"x":20, "y":50,  "stroke":"0x302010","labelProp":{ "font":"黑体","size":20,"width":573,  "height":60,  "autoSize":"none",  "align":"center", "color":"0xCBCD67"},"multiColor":"gameUI.color.Tips1"}'/>
+		<!--<label  name="titleText" properties='{"x":190, "y":50, "color":"0xFFFFCC", "align":"center", "stroke":"0x302010", "border":false,"size":20,"bold":true}'/>-->
+		<label  name="rewardText" properties='{"x":220, "y":360, "width":50,"color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<button name="wantBtn" properties='{"x":260, "y":350, "width":104,"height":35, "styleName":"button3"}' />
+		<button name="pointBtn" properties='{"x":400, "y":360, "width":80,"labelID":"700864","styleName":"button3"}' />
+		
+		<displayObject definition="activity.wudouHappy.LittleBox"  properties='{"x":170 , "y":345}'/>
+		
+		<displayObject definition="activity.wudouHappy.Taizi"  properties='{"x":47 , "y":220}'/>
+		<displayObject definition="activity.wudouHappy.Taizi"  properties='{"x":225 , "y":220}'/>
+		<displayObject definition="activity.wudouHappy.Taizi"  properties='{"x":400 , "y":220}'/>
+		<sprite name="avatars" properties='{"x":130, "y":260}'/>
+		<sprite name="rewardTips" properties='{"x":250, "y":180}' />
+		<!--<sprite name="msgSp" properties='{"x":220, "y":180}'/>-->
+	</WudouReportView>
+	
+	<!--龙虎榜,活动ID10-->
+	<DragonTigerView>
+		<displayObject definition="activity.wudouHappy.BG"  properties='{"x":28 , "y":110,"width":550, "height":235}'/>
+		<displayObject definition="activity.wudouHappy.DragonTitle"  properties='{"x":183 , "y":58}'/>
+		<list name="list" properties='{"x":15, "y":100, "columnCount":1, "rowCount":3, "horizontalGap":0, "verticalGap":0}' />
+		<label  name="regretText" properties='{"x":32, "y":364, "color":"0x958844", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="box" definition="activity.wudouHappy.LittleBox"  properties='{"x":320 , "y":350}'/>
+		<label  name="boxText" properties='{"x":365, "y":364, "color":"0xFFFFCC", "stroke":"0x272018", "border":false}'/>
+		<button name="wantBtn" properties='{"x":400, "y":355, "width":104,"height":35, "styleName":"button3", "visible":false}' />
+		<sprite name="rewardTips" properties='{"x":250, "y":180}' />
+		<!--<sprite name="msgSp" properties='{"x":220, "y":180}'/>-->
+	</DragonTigerView>
+	
+	<!--地产大亨,活动ID11-->
+	<landBoss>
+	
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":45}'/><!--倒计时-->
+		<displayObject definition="activity.landBoss.PicBG"  properties='{"x":26 , "y":63}'/><!--图片背景-->
+		
+		<imageLoader name="imgHome"  properties='{"fileName":"home","pathFormatName":"activityPic", "x":75, "y":75}' /><!--图片-->
+		<imageLoader name="imgFarm"  properties='{"fileName":"farm","pathFormatName":"activityPic", "x":328, "y":75}' />
+		<sprite name="countDownText" properties='{"x":360, "y":45, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		<label name="homeCostText" properties='{"x":105, "y":205, "color":"0xDEBB46", "stroke":"0x272018", "border":false , "align":"center"}'/>
+		<label name="farmCostText" properties='{"x":355, "y":205, "color":"0xDEBB46", "stroke":"0x272018", "border":false, "align":"center"}'/>
+		<label name="totalText" properties='{"x":225, "y":250, "color":"0xDEBB46", "stroke":"0x272018", "border":false, "align":"center"}'/>
+		<label properties='{"textID":"700903", "x":75, "y":230, "color":"0xFF0000", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="rateMC" definition="acitivty.landBoss.rate"  properties='{"x":30 , "y":280,"width":540}'/>
+		<list name="rewardList" properties='{"x":30, "y":270, "columnCount":6, "rowCount":1, "horizontalGap":0, "verticalGap":10}' />
+		<!--<button name="seeHomeBtn" properties='{"x":400, "y":355, "width":104,"height":35, "styleName":"button3", "labelID":"700901","visible":false}' />
+		<button name="seeHomeBtn" properties='{"x":400, "y":355, "width":104,"height":35, "styleName":"button3", "labelID":"700901","visible":false}' />-->
+	<!--新闻播报-->
+		<container name="news" properties='{"x":111,"y":380}'/>
+		
+		<sprite name="rewardTips" properties='{"x":235, "y":180}' />
+	</landBoss>
+	
+		<!--宝石排行榜活动,活动ID13-->
+	<GemListView  properties='{"y":20}'>
+		<displayObject definition="activity.gemList.BG"  properties='{"x":15 , "y":38}'/>
+		<label  properties='{"textID":"510246","x":23, "y":117,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  properties='{"textID":"510247","x":145, "y":117,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  properties='{"textID":"510302","x":280, "y":125,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  properties='{"textID":"510326","x":358, "y":125,"multiline":true,"width":250,"height":50,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		
+		<list name="GemList" properties='{"x":31, "y":149, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":1}' />
+		<label  name="gapText" properties='{"x":300, "y":97,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="incomeText" properties='{"x":290, "y":168,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="rewardText12" properties='{"x":290, "y":190,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false,"width":300}'/>
+		<label  name="rewardText22" properties='{"x":290, "y":212,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false,"width":300}'/>
+		<label  name="actCountDownText" properties='{"x":355, "y":375, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="sacrificeLimitText" properties='{"x":100, "y":402, "color":"0xFFC207", "stroke":"0x302010", "border":false}'/><!--祭祀最多花费-->
+		<label name="tip" properties='{"x":280, "y":240,"size":18, "color":"0xFF0000", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510314","x":280, "y":265,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510305","x":303, "y":290,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510306","x":303, "y":315,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510307","x":303, "y":340,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		
+		<label properties='{"textID":"510327","x":430, "y":290,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510328","x":430, "y":315,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label properties='{"textID":"510329","x":430, "y":340,"size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		
+		<button name="gainBtn1" properties='{"x":510, "y":188, "width":70,"height":22, "styleName":"button3"}' />
+		<button name="gainBtn2" properties='{"x":510, "y":212, "width":70,"height":22, "styleName":"button3"}' />
+		<sprite name="artNumber" properties='{"x":385, "y":50, "classPath":"activity.gemList.artistNumber", "align":"center"}'/>
+	</GemListView>
+	
+	
+	<!-- 灵石促销活动,活动ID12-->
+	<SpritPromoActivity  properties='{"maskHeight":50}'>
+		<displayObject definition="activity.spritPromo.Bg"  properties='{"x":25 , "y":45,"height":350}'/>
+		<list name="spritList" properties='{"x":40, "y":76, "columnCount":3, "rowCount":1, "horizontalGap":10, "verticalGap":4}' />
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":45}'/>
+		<sprite name="spritDownText" properties='{"x":360, "y":45, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		<!--开灵石新闻（滚动）-->
+		<container name="newsView" properties='{"x":115,"y":360}'/>
+		
+		<itemGroup name="typeGroup" properties='{"x":155,"y":315,"layout":"horizontal", "horizontalGap":100 }'/>
+		<radioButton name="type1RB" group="typeGroup" parent="typeGroup" properties='{"styleName":"checkBox1", "labelID":"701015", "data":0}'/><!--火-->
+		<radioButton name="type2RB" group="typeGroup" parent="typeGroup" properties='{"styleName":"checkBox1", "labelID":"701014", "data":1}'/><!--水-->
+		<radioButton name="type3RB" group="typeGroup" parent="typeGroup" properties='{"styleName":"checkBox1", "labelID":"701016", "data":2}'/><!--土-->
+	</SpritPromoActivity>
+	
+	<!--宝石通商,活动ID14-->
+	<GemTrade>
+		<displayObject definition="activity.gemTrade.bg"  properties='{"x":25 , "y":45}'/>
+		<displayObject definition="activity.view.downTimeText"  properties='{"x":190 , "y":45}'/>
+		<sprite name="countDownText" properties='{"x":360, "y":45, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		
+		<label properties='{"textID":"702001", "x":25, "y":393,"multiline":true,"width":510,"height":50,"size":20, "color":"0xffff33", "stroke":"0x272018", "border":false}'/>
+		<label  name="gemNum" properties='{"x":440, "y":318, "width":140, "size":18,"align":"center", "autoSize":"none", "color":"0xFEFECA","height":23, "stroke":"0x302010", "mouseEnabled":false, "border":false}'/>  
+		<label name="numText" properties='{"x":34, "y":274, "width":400, "height":24,"autoSize":"none", "align":"left", "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+		<label name="tipsText" properties='{"x":270, "y":274, "width":182, "height":22,"autoSize":"none", "align":"right", "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":453, "y":280, "visible":false}' />
+		<list name="gemList" properties='{"x":35, "y":75, "columnCount":4, "rowCount":1, "horizontalGap":23, "verticalGap":4}' />
+		
+		<!--宝石通商信息（滚动）-->
+		<container name="newsView" properties='{"x":30,"y":320}'/>
+		
+		<sprite name="rewardTips" properties='{"x":205, "y":160}' />
+		<button name="getRewardBtn" properties='{"x":472, "y":350, "width":80,"height":34, "styleName":"button5", "labelID":"702003"}' />
+		<button name="buyNumBtn" properties='{"x":480, "y":265, "width":100,"height":40, "styleName":"button5", "labelID":"702004"}' />
+	</GemTrade>
+	
+	<!-- 矿锄促销,活动ID16 -->
+	<MineHoePromo properties='{"maskHeight":50}'>
+		<displayObject definition="activity.gemPromo.bg"  properties='{"x":25 , "y":45,"height":370}'/>
+		<label  properties='{"x":30, "y":333, "color":"0xE5EF99", "stroke":"0x302010", "border":false,"textID":"703216"}'/>
+		
+		<label  name="timeText" properties='{"x":26, "y":70, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+		<list name="mineHoeList" properties='{"x":28, "y":100, "columnCount":6, "rowCount":1, "horizontalGap":2, "verticalGap":10}' />
+		<buttonBasic name="selectBtn" properties='{"x":405, "y":331, "skin":"skin.CheckBox1"}' />	
+
+		<displayObject  name="silverHoe" definition="gameUI.silver.digTool" properties='{"x":90, "y":322}'/>
+		<displayObject  name="goldHoe" definition="gameUI.silver.digTool" properties='{"x":250, "y":322}'/>		
+		<label  name="silverHoeCountText" properties='{"x":135, "y":333, "color":"0xE5EF99", "stroke":"0x302010", "border":false}'/>
+		<label  name="goldHoeCountText" properties='{"x":295, "y":333, "color":"0xE5EF99", "stroke":"0x302010", "border":false}'/>
+		<!--开宝箱新闻（滚动）-->
+		<container name="newsView" properties='{"x":115,"y":380}'/>
+		<label  name="btnDescText" properties='{"x":430, "y":333, "color":"0xE5EF99", "stroke":"0x302010", "border":false,"textID":"703212"}'/>
+		
+	
+	</MineHoePromo>
+	
+	<!-- 赛马活动，活动ID17 -->
+	<HorseActivity properties='{"y":20,"maskHeight":35,"textColor":["ffffff","76B0CF","9AD15C","DEBB46","E46565","A861DC"]}'>
+		<displayObject definition="activity.pic.horseTopPic"  properties='{"x":20 , "y":40}'/>
+		<displayObject definition="activity.bg.horseBg"  properties='{"x":25 , "y":122}'/>
+		<displayObject name="rateBg" definition="activity.rateBg.horseRateBg"  properties='{"x":136 , "y":188}'/>
+		<displayObject name="boxBtn" definition="gameUI.Btn.AllBoxBtn"  properties='{"x":430 , "y":140}'/>
+		<displayObject name="rate" definition="activity.rate.horseRate"  properties='{"x":154 , "y":198,"mouseEnabled":false}'/>
+		<displayObject name="openBox" definition="activity.box.horseBox"  properties='{"x":440 , "y":145,"visible":false}'/>
+		
+		<displayObject name="freeIcon" definition="activity.icon.horseFree"  properties='{"x":172 , "y":284}'/>
+		<displayObject name="discIcon" definition="activity.icon.horseDisc"  properties='{"x":282 , "y":284}'/>
+		<displayObject name="expIcon" definition="activity.icon.horseExp"  properties='{"x":392 , "y":284}'/>
+		
+		<sprite name="rewardTips" properties='{"x":450, "y":190}' />
+		
+		<label   properties='{"x":40, "y":190, "color":"0xE5EF99", "stroke":"0x302010", "border":false,"textID":"703302"}'/>
+		<label   properties='{"x":30, "y":295, "color":"0xE5EF99", "stroke":"0x302010", "border":false,"textID":"703304"}'/>
+		
+		<label  name="timeText"  properties='{"x":200, "y":395,"align":"center", "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		
+		<label  name="consumeText"  properties='{"x":40, "y":215, "color":"0xFFCC00", "stroke":"0x302010", "border":false}'/>
+		<label  name="nextConsumeText"  properties='{"x":147, "y":218, "color":"0xFFCC00", "stroke":"0x302010","autoSize":"none","bold":false,"align":"center","width":250,"height":24}'/>
+		
+		<mcLabel   name="rewardText" properties='{"multiColor":"gameUI2.color.Tip8","x":147, "y":160, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":22,"bold":false,"align":"center","width":270,"height":30,"font":"黑体"}}'/>
+		<mcLabel   name="getSilverText" properties='{"multiColor":"gameUI2.color.Tip8","x":147, "y":200, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":28,"multiline":true,"bold":false,"align":"center","width":270,"height":56,"font":"黑体"}}'/>
+		<container name="newsView" properties='{"x":115,"y":353}'/>
+	
+	</HorseActivity>
+	
+	<!-- 今日运势 -->
+	<LuckToday properties='{"y":20}'>
+		<displayObject definition="activity.luckToday.huaWen"  properties='{"x":15 , "y":33}'/>
+		<displayObject definition="activity.luckToday.luckTip" properties='{"x":29, "y":33}' />
+		<list name="luckList" properties='{"x":54, "y":90, "columnCount":3, "rowCount":2, "horizontalGap":15, "verticalGap":10}' />
+	</LuckToday>
+	
+	<!--中秋活动,活动ID15-->
+	<MiddleMoon>
+		<displayObject definition="activity.word.MiddleMoon1" properties='{"x":20, "y":50}' />
+		<displayObject definition="activity.word.MiddleMoon2" properties='{"x":236, "y":50}' />
+		<displayObject definition="activity.view.Mooncake" properties='{"x":106, "y":80}' />
+		<label name="staticText" properties='{"textID":"703002", "x":2, "y":198, "size":18,"width":330,"autoSize":"none", "align":"center", "border":false, "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+
+		<button name="getBtn" properties='{"x":105, "y":250,  "styleName":"button16"}' />
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":150, "y":225, "visible":true}' />
+		<label name="costText" properties='{"x":170, "y":218, "width":50, "height":22,"autoSize":"none", "align":"left", "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+	</MiddleMoon>
+	
+	<!--吃月饼大赛（中秋活动）-->
+	<EatMooncake properties='{"y":20}'>
+		<displayObject definition="activity.middle.EatMooncake" properties='{"x":18, "y":38}' />
+		<displayObject definition="gameUI.bg.ConcaveFrame" properties='{"x":26, "y":160, "width":557, "height":206}' />
+		<displayObject definition="activity.view.MooncakeBG" properties='{"x":18, "y":60}' />
+		<label name="ruleText" properties='{"x":23, "y":370, "width":570, "height":55,"autoSize":"none", "align":"left","multiline":true, "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+		<label name="moonText" properties='{"x":30, "y":315, "width":557, "height":24,"autoSize":"none", "align":"center", "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="moonBtn" definition="activity.btn.MooncakeBtn" properties='{"x":265, "y":200, "visible":true}' />
+		
+		<displayObject name="daojishi" definition="activity.view.downTimeText" properties='{"x":205, "y":129}' />
+		<sprite name="countDownText" properties='{"x":315, "y":130, "classPath":"activity.view.downTimeCount", "align":"left"}'/>
+	</EatMooncake>
+	
+	<!---升级系统 奖励面板-->
+	<LevelRewardView properties='{"x":110, "y":16, "dyWidth":220, "moveTime":0.3}'>
+		<displayObject name="bg" definition='skin.SpecialPanel' properties='{"mouseEnabled":false}' />
+		<displayObject definition='activity.view.lvText2' properties='{"x":149, "y":16, "mouseEnabled":false}' />
+		<displayObject name="mc2" definition='activity.view.lvMc2' properties='{"x":375, "y":98, "mouseEnabled":false, "scaleX":-1, "visible":false}' />
+		<displayObject name="mc3" definition='activity.view.lvMc3' properties='{"x":347, "y":83, "mouseEnabled":false, "scaleX":-1, "visible":false}' />
+		<sprite name="sp" properties='{"visible":false}'/><sprite name="mark"/>
+		<sprite parent="sp" name="line1"/><sprite parent="sp" name="line2"/><sprite parent="sp" name="line3"/><sprite parent="sp" name="line4"/><sprite parent="sp" name="line5"/><sprite parent="sp" name="line6"/>
+		
+		<displayObject parent="line1" name="level1Text" definition='activity.view.lvText1' properties='{"x":0, "y":94, "mouseEnabled":false}' />
+		<displayObject parent="line1" name="mc1" definition='activity.view.lvMc1' properties='{"x":0, "y":112, "mouseEnabled":false}' />
+		<sprite parent="line1" name="level" properties='{"x":0, "y":91, "classPath":"gameUI.icon.StarNumber", "align":"center"}'/>
+		
+		
+		<displayObject parent="line2" definition='activity.view.lvLine' properties='{"x":0, "y":148, "mouseEnabled":false}' />
+		<label parent="line2" properties='{"textID":"801002", "x":117, "y":136, "size":16, "bold":true, "autoSize":"left", "color":"0xFF9900",  "stroke":"0x151515", "mouseEnabled":false}' />
+		
+		<sprite parent="line3" name="nzText" properties='{"y":175, "txWidth":140, "txHeight":22, "style":{"size":16, "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false, "width":140, "height":22, "border":true}}'/>
+		<sprite parent="line3" name="jsText" properties='{"y":175, "txWidth":140, "txHeight":22, "style":{"size":16, "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false}}'/>
+		
+		<sprite parent="line4" name="markText" properties='{"y":210, "txWidth":140, "txHeight":22, "style":{"size":16, "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false}}'/>
+		<sprite parent="line4" name="tsText" properties='{"y":210, "txWidth":140, "txHeight":22, "style":{"size":16, "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false}}'/>
+		
+		<displayObject parent="line5" definition='activity.view.lvLine' properties='{"x":0, "y":255, "mouseEnabled":false}' />
+		<label parent="line5" properties='{"textID":"801003", "x":117, "y":243, "size":16, "bold":true, "autoSize":"left", "color":"0xFF9900",  "stroke":"0x151515", "mouseEnabled":false}' />
+		
+
+		<displayObject parent="line6" definition="gameUI.icon.Grid1" properties='{"x":0, "y":280,"width":40,"height":40 }' />
+		<!--<displayObject parent="line6" name="grid2" definition="gameUI.icon.Grid1" properties='{"x":0, "y":280,"visible":false}' />-->
+		<imageLoader parent="line6" name="goodIL" properties='{"pathFormatName":"gemstone32", "x":4, "y":284, "width":32, "height":32}' />
+		<displayObject parent="line6" definition="activity.view.ThisLv" properties='{"x":-27, "y":280, "mouseEnabled":false}' />
+		<label parent="line6" name="nextNameText" properties='{"width":50, "y":292, "size":16,  "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false}'/>
+		
+		<displayObject parent="line6" name="next" definition="activity.view.NextLv" properties='{"x":0, "y":280, "mouseEnabled":false}'/>
+		<label parent="line6" name="info" properties='{"y":290, "txWidth":70, "txHeight":22, "style":{"size":16, "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false}}'/>
+		<!--<imageLoader parent="line6" name="nextGoodIL" properties='{"pathFormatName":"gemstone32", "x":4, "y":284, "width":32, "height":32,"visible":false}' />-->
+		<label parent="line6" name="nextInfo" properties='{"y":290, "txWidth":70, "txHeight":22, "style":{"size":16, "autoSize":"left", "color":"0xCBCC66",  "stroke":"0x151515", "mouseEnabled":false,"visible":false}}'/>
+	
+		<checkBox name="newsCB" properties='{"x":257, "y":357, "width":106, "styleName":"checkBox1","visible":false, "style":{"labelPaddingTop":-8}}'/>
+		<button name="sureBtn" properties='{"x":128, "y":345, "styleName":"button13", "visible":false}' />
+		<displayObject parent="sureBtn" definition="activity.view.lqText" properties='{"x":37, "y":3}' />
+		<sprite name="rewardTips" properties='{"x":218, "y":160}' />		
+	</LevelRewardView>
+	
+	<!--灵石排行榜活动,活动ID18-->
+	<LingRank properties='{"y":20}'>
+		<displayObject definition="activity.lingRank.BG"  properties='{"x":15 , "y":38}'/>
+		<label  properties='{"y":237,"color":"0xFFFFCC","textID":510401,"size":17,"border":false,"x":285,"stroke":"0x302010"}'/>
+		<label  properties='{"textID":"510246","x":29, "y":122, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  properties='{"textID":"510247","x":152, "y":122, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		
+		<displayObject name="timeRate" definition="activity.lingRank.Rate" properties='{"x":380, "y":143}' />
+		
+		<list name="rankList" properties='{"x":31, "y":149, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":0}' />
+		<list name="openList" properties='{"x":310, "y":262, "columnCount":3, "rowCount":2, "horizontalGap":10, "verticalGap":-3}' />
+		<label  name="gapText" properties='{"x":300, "y":98, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="nextCDText" properties='{"color":"0xFFFFCC","autoSize":"none","x":380,"align":"center","y":147,"width":185,"border":false,"stroke":"0x302010"}'/>
+		
+		<label  name="totalLingText" properties='{"mouseEnabled":false,"color":"0x99FF00","x":400,"y":169,"border":false,"height":23,"size":17,"stroke":"0x302010"}'/>
+		<label  name="rankText" properties='{"mouseEnabled":true,"color":"0xFFFFCC","x":400,"y":190,"border":false,"height":23,"size":17,"stroke":"0x302010"}'/>
+		<label  name="exRewardText" properties='{"mouseEnabled":true,"color":"0xFFFFCC","x":400,"y":211,"border":false,"height":23,"size":17,"stroke":"0x302010"}'/>
+		<!--<label  name="countDownText" properties='{"x":330, "y":220, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>-->
+		<label  name="actCountDownText" properties='{"x":280, "y":350, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="sacrificeLimitText" properties='{"x":100, "y":400, "color":"0xFFC207", "stroke":"0x302010", "border":false}'/><!--祭祀最多花费-->
+		<label  name="whichTimeText" properties='{"color":"0x99FF00","autoSize":"none","size":18,"x":380,"align":"center","y":125,"width":185,"border":false,"height":23,"stroke":"0x302010"}'/>
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":401 , "y":378,"width":56}'/>
+			<page name="page" properties='{"x":369, "y":373,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":84 },
+								"labelProp":{"x":28, "y":3, "width":64, "height":23, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+		
+	
+		
+		<displayObject name="gainBtn" definition="activity.lingRank.BoxColor" properties='{"y":122,"visible":false,"x":289}' />
+		<displayObject name="unGainBtn" definition="activity.lingRank.Box" properties='{"y":135,"visible":false,"x":301}' />
+		<sprite name="artNumber" properties='{"x":385, "y":50, "classPath":"activity.ranking.artistNumber", "align":"center"}'/>
+	</LingRank>
+	
+	<!-- 元旦经验活动,活动ID19 -->
+	<NewYearsDay properties='{}' >
+		<sprite name="newYears" properties='{"visible":false}' />
+		<displayObject   definition="activity.word.MiddleMoon1" properties='{"x":20, "y":50}' />
+		<displayObject   definition="activity.word.MiddleMoon2" properties='{"x":236, "y":50}' />
+		<displayObject   definition="activity.pic.picBorder" properties='{"x":106, "y":80}' />
+		<displayObject name="expBall" parent="newYears" definition="activity.png.expBall" properties='{"x":115, "y":89}' />
+		<displayObject name="expInstancePic"  definition="activity.png.expInstance" properties='{"x":115, "y":89,"visible":false}' />
+		
+			
+		<label name="timeText" properties='{ "x":0, "y":50, "size":18,"width":330,"height":23,"autoSize":"none", "align":"center", "border":false, "color":"0x99FF00", "stroke":"0x302010"}'/>
+		
+		<label name="expIntroText" properties='{"textID":"703508", "x":0, "y":90, "size":18,"width":330,"autoSize":"none", "align":"center", "border":false, "color":"0xFFCC00", "stroke":"0x302010"}'/>
+		
+		<label parent="newYears" properties='{"textID":"703501", "x":0, "y":210, "size":18,"width":330,"autoSize":"none", "align":"center", "border":false, "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+
+		<button  name="getBtn" properties='{"x":104, "y":265, "styleName":"button16"}' />			
+	
+		<label name="introText" properties='{"textID":"703502", "x":0, "y":210, "width":330,"height":200,"autoSize":"none", "align":"center", "border":false, "color":"0xFFCC00", "stroke":"0x302010","visible":false,"multiline":true,"mouseEnabled":false}'/>
+		
+	</NewYearsDay>
+	<!-- 经验副本半价活动,活动ID22 -->
+	<ExpInstanceHalfDay properties='{"y":20,"x":5}' >
+		<sprite name="expInstanceHalf" properties='{"visible":false}' />
+		<displayObject   definition="activity.word.expInstanceHalf2" properties='{"x":24, "y":30}' />
+		<displayObject   definition="activity.word.expInstanceHalf1" properties='{"x":240, "y":30}' />
+		<displayObject   definition="activity.pic.picBorder" properties='{"x":106, "y":80}' />
+		<displayObject name="expBall" parent="expInstanceHalf" definition="activity.png.expBall" properties='{"x":115, "y":89}' />
+		<displayObject name="expInstancePic"  definition="activity.png.expInstance" properties='{"x":115, "y":89,"visible":false}' />
+		
+			
+		<label name="timeText" properties='{ "x":0, "y":50, "size":18,"width":330,"autoSize":"none", "align":"center", "border":false, "color":"0x99FF00", "stroke":"0x302010"}'/>
+		
+		<label name="expIntroText" properties='{"textID":"704308", "x":0, "y":90, "size":18,"width":330,"autoSize":"none", "align":"center", "border":false, "color":"0xFFCC00", "stroke":"0x302010"}'/>
+		
+		<label parent="expInstanceHalf" properties='{"textID":"704301", "x":0, "y":210, "size":18,"width":330,"autoSize":"none", "align":"center", "border":false, "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+
+		<button  name="getBtn" properties='{"x":104, "y":275, "styleName":"button16"}' />			
+	
+		<label name="introText" properties='{"textID":"704302", "x":0, "y":210, "width":330,"height":200,"autoSize":"none", "align":"center", "border":false, "color":"0xFFCC00", "stroke":"0x302010","visible":false,"multiline":true,"mouseEnabled":false}'/>
+		
+	</ExpInstanceHalfDay>
+	<!-- 跨服国战排名奖励活动 -->
+	<KfReward properties='{}' >		
+		<displayObject definition="activity.view.kfRewardBG"  properties='{"x":0 , "y":0}'/>
+		<displayObject definition="gameUI.bg.ConcaveFrame"  properties='{"x":23 , "y":123, "width":555, "height":220}'/>
+		<label  name="halfReward" properties='{"x":20, "y":135, "color":"0xE5EF99", "size":12, "width":569,"height":20, "autoSize":"none", "align":"center", "stroke":"0x302010", "border":false}'/>
+		<sprite name="rank" properties='{"x":464, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		<button name="sureBtn" properties='{"x":240, "y":350, "styleName":"button13"}' />
+		<label  name="cdTxt" properties='{"x":236, "y":315, "color":"0xE5EF99", "size":12, "width":135,"height":20, "autoSize":"none", "align":"center", "stroke":"0x302010", "border":false}'/>
+		<list name="list" properties='{"x":34, "y":175, "columnCount":10, "rowCount":1, "horizontalGap":5, "verticalGap":0}' />
+		<displayObject parent="sureBtn" definition="activity.view.lqText" properties='{"x":37, "y":5}' />
+		<sprite name="rewardTips" properties='{"x":220, "y":310}' />
+		<label  name="tips" properties='{"textID":"703605", "x":236, "y":360, "color":"0xFFFF00", "size":20, "width":135, "height":40, "autoSize":"none", "align":"center", "stroke":"0x302010", "bold":true}'/>
+	</KfReward>
+	
+	<!-- 银币促销活动,活动ID20-->
+	<SilverActivity  properties='{"maskHeight":50,"y":20}'>		
+		<displayObject definition="activity.gemPromo.bg"  properties='{"x":25 , "y":45,"height":350}'/>
+		<label  name="spritDownText" properties='{"x":27, "y":40, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+		<list name="list" properties='{"x":40, "y":76, "columnCount":3, "rowCount":1, "horizontalGap":10, "verticalGap":4}' />
+		<!--开宝箱新闻（滚动）-->
+		<container name="newsView" properties='{"x":115,"y":360}'/>
+	</SilverActivity>
+	
+	<!--春节活动,活动ID21-->
+	<SpringFest properties='{"args":{"shineGain2InitX":540, "shineGain2InitY":90, "shineGain2EndX":320, "shineGain2EndY":-65, "bezierX":400, "bezierY": 50}}' >	
+		<label name="actTimeText" properties='{ "x":20, "y":60, "size":20,"width":330,"autoSize":"none", "align":"left", "border":false, "color":"0x99FF00", "stroke":"0x302010","mouseEnabled":false}'/>			
+		
+		<imageLoader name="ladyImg"  properties='{"fileName":"npc","pathFormatName":"activityPng","size":18,"x":20,"y":160}'/>
+		<displayObject definition="activity.springFest.TalkBlank"  properties='{"x":45 , "y":100}'/>		
+		<label name="talkText" properties='{ "x":50, "y":105, "size":18,"width":230,"height":60,"multiline":true,"autoSize":"none", "align":"center", "border":false, "color":"0xCBCC66", "stroke":"0x302010","mouseEnabled":false}'/>
+		<list name="list" properties='{"x":300, "y":83, "columnCount":1, "rowCount":3, "horizontalGap":-6, "verticalGap":-6}' />
+		<displayObject name="redBagShine2" definition="gameUI.GainRedBag2" properties='{"x":540, "y":90, "mouseEnabled":false, "mouseChildren":false}' />	<!--爆竹闪烁-->	
+	</SpringFest>
+	
+	<!--吃饺子大赛-->
+	<SpringDumpling properties='{"y":20}'>
+		<displayObject definition="activity.springDumpling.Top" properties='{"x":18, "y":38}' />
+		<displayObject definition="gameUI.bg.ConcaveFrame" properties='{"x":26, "y":160, "width":557, "height":206}' />
+		<displayObject definition="activity.view.MooncakeBG" properties='{"x":18, "y":60}' />
+		<label name="ruleText" properties='{"x":23, "y":381, "width":570, "height":55,"multiline":true,"autoSize":"none", "align":"center", "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+		<label name="moonText" properties='{"x":30, "y":315, "width":557, "height":24,"autoSize":"none", "align":"center", "color":"0xFEFECA", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="moonBtn" definition="activity.btn.MooncakeBtn" properties='{"x":265, "y":200, "visible":true}' />
+		<displayObject name="daojishi" definition="activity.view.downTimeText" properties='{"x":205, "y":129}' />
+	
+		
+		<sprite name="countDownText" properties='{"x":315, "y":130, "classPath":"activity.view.downTimeCount", "align":"left"}'/>
+	</SpringDumpling>
+	
+	<!--五一活动,活动ID23-->
+	<mayFest properties='{"args":{"shineGain2InitX1":540, "shineGain2InitY1":300, "shineGain2EndX1":320, "shineGain2EndY1":-65,
+	"shineGain2InitX":540, "shineGain2InitY":195, "shineGain2EndX":-160, "shineGain2EndY":35, "bezierX":400, "bezierY": 50}}' >	
+	
+		<label name="actTimeText" properties='{ "x":20, "y":60, "size":20,"width":330,"autoSize":"none", "align":"left", "border":false, "color":"0x99FF00", "stroke":"0x302010","mouseEnabled":false}'/>			
+		
+		<imageLoader name="ladyImg"  properties='{"fileName":"npc","pathFormatName":"activityPng","x":20,"y":160}'/>
+		<displayObject definition="activity.springFest.TalkBlank"  properties='{"x":45 , "y":100}'/>		
+		<label name="talkText" properties='{ "x":50, "y":105, "size":18,"width":230,"height":60,"multiline":true,"autoSize":"none", "align":"center", "border":false, "color":"0xCBCC66", "stroke":"0x302010","mouseEnabled":false}'/>
+		<list name="list" properties='{"x":300, "y":83, "columnCount":1, "rowCount":3, "horizontalGap":-6, "verticalGap":-6}' />
+		<displayObject name="redBagShine2" definition="gameUI.GainRedBag2" properties='{"x":540, "y":90, "mouseEnabled":false, "mouseChildren":false}' />	<!--爆竹闪烁-->		
+	</mayFest>
+
+	
+	<!--端午活动,活动ID24-->
+	<DuanwuPanel properties='{}'>	
+		<label name="cdText" properties='{ "x":280, "y":168, "size":18,"width":128,"height":23,"autoSize":"none", "align":"center", "border":false, "color":"0x99FF00", "stroke":"0x302010","mouseEnabled":false,"bold":true}'/>	
+		<displayObject name="btn" definition="activity.duanwu.GoBtn" properties='{"x":295, "y":210}' />
+		<mcLabel name="colorLabel1" properties='{"multiColor":"gameUI2.color.Tip8","x":230, "y":98, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":18,"bold":true,"align":"center","width":250,"height":23,"font":"宋体"}}'/>
+		<mcLabel name="colorLabel2" properties='{"multiColor":"gameUI2.color.Tip8","x":230, "y":128, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":18,"bold":true,"align":"center","width":250,"height":23,"font":"宋体"}}'/>
+		
+		<label name="introText" properties='{ "x":440, "y":217, "size":18,"width":100,"height":23,"autoSize":"none", "align":"left", "border":false, "color":"0x99FF00", "stroke":"0x302010","mouseEnabled":true,"underline":true,"textID":"704518"}'/>	
+	</DuanwuPanel>
+	<!-- ==============================================================================知道这是什么吗================================================================ -->
+	<!-- ==============================================================================华丽的分割线================================================================ -->
+	<!-- ==============================================================================再次华丽的闪现================================================================ -->
+	
+	
+	<!-- 冲级奖励项呈器 -->
+	<UpLvRenderer properties='{"itemWidth":82 , "itemHeight":41}'>
+		<displayObject definition="activity.view.itemBg"  properties='{"x":0 , "y":0,"width":565}'/>
+		<label name="lvText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":120, "height":23, "x":10,"y":14, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="preText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":120, "height":23, "x":100,"y":14, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="introText"  properties='{ "border":false,"autoSize":"none", "align":"left", "width":120, "height":23, "x":230,"y":14, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="rewardText"  properties='{"border":false, "autoSize":"none", "align":"center", "width":120, "height":23, "x":330,"y":14, "color":"0xDEBB46", "stroke": "0x2D261E"}'/>
+		<label name="stateText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":120, "height":23, "x":434,"y":14, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<button name="getBtn" properties='{"x":460, "y":10, "width":64, "styleName":"button5", "labelID":"700007"}' />
+	</UpLvRenderer>
+	
+	<!--返金项呈器-->
+	<GiveMoneyRenderer properties='{"itemWidth":100 , "itemHeight":125}'>
+		<displayObject definition="activity.giveMoney.rendererBg"  properties='{"x":0 , "y":0}'/>
+		<sprite name="goldCount" properties='{"x":53, "y":15, "classPath":"activity.view.numart", "align":"center"}'/>
+		<button name="getBtn" properties='{"x":9, "y":100, "width":90, "styleName":"button5", "labelID":"700007"}' />
+		
+	</GiveMoneyRenderer>
+	
+	<!-- 充值送宝箱阶段奖励 项呈器 -->
+	<GiveBoxRequireRenderer properties='{"itemWidth":90 , "itemHeight":40}'>
+		<label name="rewardText"  properties='{ "border":false,"size":"16", "align":"left", "width":150,"multiline":true, "height":90, "x":-20,"y":-20, "color":"0xCBCC64", "stroke": "0x2D261E"}'/>
+	</GiveBoxRequireRenderer>
+	<!-- 宝石促销套餐 项呈器 -->
+	<GemItemRenderer properties='{"itemWidth":170 , "itemHeight":237,"picArr":["taocan1","taocan2","taocan3"]}'>	
+		<displayObject definition="activity.gemPromo.itemBg"  properties='{"x":0 , "y":0,"height":265}'/>
+		<imageLoader name="gemPic"  properties='{"pathFormatName":"activityPic","x":34,"y":35}'/>
+		<label name="promoTitleText"  properties='{ "autoSize":"none", "align":"center", "size":18,"width":160, "height":40, "x":5,"y":12, "color":"0xFFCC00", "stroke": "0x2D261E"}'/>
+		<label name="buyCountText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":160, "height":40, "x":2,"y":140, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<label name="costIntroText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":165, "height":60, "x":2,"y":170,"multiline":true, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<button name="buyBtn" properties='{"x":51, "y":225, "width":70, "styleName":"button5", "labelID":"700302"}' />
+	</GemItemRenderer>
+	
+	<!-- 菜肴促销套餐 项呈器 -->
+	<RecipePromoRenderer properties='{"itemWidth":170 , "itemHeight":237,"picArr":["recipe1","recipe2","recipe3"]}'>	
+		<displayObject definition="activity.gemPromo.itemBg"  properties='{"x":0 , "y":0,"height":265}'/>
+		<imageLoader name="recipePic"  properties='{"pathFormatName":"activityPic","x":34,"y":35}'/>
+		<label name="promoTitleText"  properties='{ "autoSize":"none", "align":"center", "size":18,"width":160, "height":40, "x":2,"y":12, "color":"0xFFCC00", "stroke": "0x2D261E"}'/>
+		<label name="buyCountText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":160, "height":40, "x":2,"y":140, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<label name="costIntroText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":175, "height":60, "x":-3,"y":170, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<button name="buyBtn" properties='{"x":51, "y":225, "width":70, "styleName":"button5", "labelID":"700302"}' />
+	</RecipePromoRenderer>
+	
+	
+	<!--充值活动 呈示器-->
+	<CostLevelRenderer properties='{"itemWidth":105, "itemHeight":195}'>
+		<displayObject name="ableBG" definition="activity.costActivity.AbleBG"  properties='{"x":0 , "y":0}'/>
+		<displayObject name="unableBG" definition="activity.costActivity.UnableBG"  properties='{"x":0 , "y":0}'/>
+		<sprite name="goldNum" properties='{"x":52, "y":12, "classPath":"activity.view.downTimeCount", "align":"center"}'/>
+		<label  properties='{"x":5, "y":26, "textID": "700708","size":18, "color":"0xDEBB46", "stroke":"0x302010", "border":false, "align":"center"}'/>
+		<label  name="rewardText" properties='{"x":2, "y":45, "color":"0xDEBB46", "stroke":"0x302010", "border":false,"size":18}'/>
+		<displayObject name="boxBtn" definition="activity.costActivity.BoxBtn"  properties='{"x":30 , "y":132, "visible":false}'/>
+		<label  name="isGetText" properties='{"x":13, "y":150, "color":"0x99FF00", "stroke":"0x302010", "border":false}'/>
+		<label  name="notOpenText" properties='{"x":13, "y":150, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+	</CostLevelRenderer>
+	
+	<!--富豪排行榜 列表呈示器-->
+	<RankRenderer properties='{"itemWidth":250, "itemHeight":22}'>
+		<displayObject name="rankBG" definition="activity.rank.First"  properties='{"x":-10 , "y":-3,"visible":false}'/>
+		
+		<label  name="rankText" properties='{"x":8, "y":-5, "autoSize":"center", "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="nameText" properties='{"x":132, "y":-3, "autoSize":"center","size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+	</RankRenderer>
+	
+	<!--龙虎榜 列表呈示器-->
+	<ChampionRenderer properties='{"itemWidth":550, "itemHeight":73}'>
+		<displayObject definition="activity.wudouHappy.Moji"  properties='{"x":46 , "y":20}'/>
+		<label  properties='{"x":55, "y":60, "textID": "700861", "color":"0xff9900", "stroke":"0x272018", "border":false}'/>
+		<label  name="rankText" properties='{"x":55, "y":28, "color":"0xFFFFCC", "stroke":"0x272018", "border":false,"size":14,"bold":true}'/>
+		<label  name="nameText" properties='{"x":150, "y":28, "color":"0xFFFFCC", "stroke":"0x272018", "border":false,"bold":true}'/>
+		<label  name="nameText2" properties='{"x":350, "y":28, "color":"0xFFFFCC", "stroke":"0x272018", "border":false,"bold":true}'/>
+		<displayObject definition="activity.wudouHappy.LittleBox"  properties='{"x":150 , "y":50}'/>
+		<label  name="rewardText" properties='{"x":200, "y":60, "color":"0xFFFFCC", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="rewardCard" definition="activity.wudouHappy.LittleBox"  properties='{"x":350 , "y":50}'/>
+		<label  name="reward4Text" properties='{"x":400, "y":60, "color":"0xFFFFCC", "stroke":"0x272018", "border":false}'/>
+	</ChampionRenderer>
+	
+	<!--地产大亨 - 阶段奖励呈示器 -->
+	<LandBossRewardRenderer properties='{"itemWidth":89 , "itemHeight":77}'>
+		<label name="goldText" properties='{"x":4, "y":30, "size":18, "align":"center", "color":"0xFFFFCC", "stroke":"0x272018", "border":false}'/>
+		<displayObject name="box" definition="activity.landBoss.box"  properties='{"x":26 , "y":20}'/>
+		<displayObject name="lightEffect" definition="gameUI.giiftBag.lightEffect" properties='{"x":53, "y":75, "mouseEnabled":false, "visible":false}' />
+	</LandBossRewardRenderer>
+	
+	
+	<!--宝石排行榜 列表呈示器-->
+	<GemListRenderer properties='{"itemWidth":250, "itemHeight":22}'>
+		<displayObject name="gemListBG" definition="activity.gem.First"  properties='{"x":-10 , "y":-3,"visible":false}'/>
+		
+		<label  name="gemListText" properties='{"x":8, "y":-5, "autoSize":"center", "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+		<label  name="nameText" properties='{"x":132, "y":-3, "autoSize":"center","size":17, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/>
+	</GemListRenderer>
+	
+	<!-- 灵石促销 项呈器 -->
+	<SpritPromoRenderer properties='{"itemWidth":170 , "itemHeight":237,"picArr":["sprit1","sprit2","sprit3"]}'>	
+		<displayObject definition="activity.spritPromo.itemBg"  properties='{"x":0 , "y":0,"height":240}'/>
+		<imageLoader name="spritPic"  properties='{"pathFormatName":"activityPic","x":49,"y":45}'/>
+		<label name="promoTitleText"  properties='{ "autoSize":"none", "align":"center", "size":18,"width":160, "height":40, "x":4,"y":15, "color":"0xFFCC00", "stroke": "0x2D261E"}'/>
+		<label name="buyCountText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":160, "height":40, "x":4,"y":120, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<label name="costIntroText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":160, "height":60, "x":4,"y":145,"multiline":true ,"color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<button name="buyBtn" properties='{"x":54, "y":200, "width":66, "styleName":"button5", "labelID":"700302"}' />
+	</SpritPromoRenderer>
+	
+	<!--宝石通商 - 列表呈示器 -->
+	<GemTradeRenderer properties='{"itemWidth":112, "itemHeight":167}'>
+		<displayObject name="ewItemBG" definition="activity.gemTrade.ewItemBG"  properties='{"x":0 , "y":0, "visible":false, "mouseEnabled":false}'/>
+		<displayObject name="ewWenZi" definition="activity.gemTrade.ewWenZi"  properties='{"x":50 , "y":35, "visible":false, "mouseEnabled":false}'/>
+		<displayObject name="updateBtn" definition="activity.gemTrade.ItemBtn"  properties='{"x":0 , "y":0, "visible":false}'/>		
+		<displayObject name="pic70BG" definition="gameUI.icon.Pic70BG" properties='{"x":29, "y":30,"width":74,"height":75, "mouseEnabled":false, "visible":false}' />
+		<displayObject name="combMC" definition="activity.gemTrade.combMC" properties='{"x":64, "y":92, "mouseEnabled":false, "visible":false}' />		
+		<imageLoader name="pic"  properties='{"pathFormatName":"gemTrades70", "x":31, "y":32, "mouseEnabled":false}' />
+		<displayObject name="noTimesBG" definition="activity.gemTrade.noTimesBG"  properties='{"x":47 , "y":36, "visible":false, "mouseEnabled":false}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":66, "y":133, "visible":false, "mouseEnabled":false}' />
+		<label  name="costText" properties='{"x":63, "y":125, "size":18, "autoSize":"right", "color":"0xFEFECA","height":22, "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label  name="levelText" properties='{"x":6, "y":5, "width":120, "size":18,"align":"center", "autoSize":"none", "color":"0xFEFECA","height":22, "stroke":"0x302010", "mouseEnabled":false}'/>  
+		<label  name="tipsText" properties='{"x":6, "y":105, "width":120, "size":18,"align":"center", "autoSize":"none", "color":"0xFEFECA","height":22, "stroke":"0x302010", "mouseEnabled":false}'/>  
+	</GemTradeRenderer>
+	
+	<!--矿锄促销 列表呈示器-->
+	<MineHoeRenderer properties='{"itemWidth":90, "itemHeight":183,"countColor":["FEFECA","E46565"],"iconNameArr":["9","83","75"]}'>
+		<displayObject definition="activity.mineBg.itemBg"  properties='{"x":0 , "y":0}'/>
+		<displayObject  definition="gameUI.icon.Grid1" properties='{"height":78,"x":7,"width":78,"y":23}'/>
+		<displayObject  name="hoeMC" definition="gameUI.silver.digTool" properties='{"x":12,"y":26,"width":70,"height":70}'/>
+		<imageLoader name="discIconPic"  properties='{"pathFormatName":"activityPng", "x":27, "y":0, "mouseEnabled":false}' />
+		<!-- <displayObject definition="activity.icon.discount"  properties='{"x":27 , "y":0}'/> -->
+		<label  name="descText" properties='{"autoSize":"none","align":"center","height":23,"stroke":"0x302010","size":18,"color":"0xFEFECA","y":71,"mouseEnabled":false,"x":3,"width":90}'/>
+		<label  name="buyCountText" properties='{"autoSize":"none","align":"center","height":23,"stroke":"0x302010","size":16,"color":"0xFEFECA","y":93,"mouseEnabled":false,"x":0,"width":90}'/>
+		<label  name="priceText" properties='{"x":5, "y":118, "size":18,"autoSize":"none","align":"right", "color":"0xFEFECA","height":22, "width":40,"stroke":"0x302010", "mouseEnabled":false}'/>
+		<displayObject definition="gameUI.icon.Gold"  properties='{"x":46 , "y":125}'/>
+	</MineHoeRenderer>	
+	<!--获得灵石途径 列表呈示器-->
+	<GetLingWaysRenderer properties='{"itemWidth":77 , "itemHeight":48}'>
+		<imageLoader name="icon"  properties='{"pathFormatName":"activityPic", "x":0, "y":0, "mouseEnabled":false}' />		
+		<displayObject  name="effectMC" definition="activity.lingRank.Effect" properties='{"x":28, "y":10,"visible":false}'/>
+	</GetLingWaysRenderer>
+	
+	<!--今日运势 列表呈示器-->
+	<LuckTodayRenderer properties='{"itemWidth":78, "itemHeight":73}'>		
+		<displayObject definition="activity.luckToday.iconBg"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>
+		<displayObject name="lvMc" definition="activity.luckToday.luckLv" properties='{"x":3, "y":3}' />
+		<imageLoader name="pic"  properties='{"pathFormatName":"luckToday75_53", "x":1, "y":10, "mouseEnabled":false}' />
+		<displayObject name="selectIt" definition="activity.luckToday.iconLight" properties='{"x":-5, "y":-5, "mouseEnabled":false}' />
+		<displayObject name="shiYun" definition="activity.luckToday.shiYun" properties='{"x":-20, "y":-18, "mouseEnabled":false}' />
+		<displayObject name="upMc" definition="activity.luck.UpArrow" properties='{"x":55, "y":10, "mouseEnabled":false}' />	
+	</LuckTodayRenderer>
+	
+	
+	<!-- 赛马奖励 的tip -->
+	<HorseRewardTip properties='{"initHeight":50,"labelGap":8}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":170,"width":190}' />
+		<label  properties='{"x":10, "y":8,  "color":"0xFFFFCC", "bold":true,"stroke":"0x302010", "border":false,"textID":"703306"}'/>
+		<displayObject  definition='gameUI.icon.Line1' properties='{"x":5, "y":32, "width":180}'/>
+		<list name="rewardList" properties='{"x":10, "y":40, "columnCount":1, "rowCount":10, "defaultSelected":false}' />
+	</HorseRewardTip>
+	
+	<!--赛马活动 奖励Tip呈示器-->
+	<HorseRewardRenderer properties='{"itemWidth":77 , "itemHeight":20,"textColor":["ffffff","76B0CF","9AD15C","DEBB46","E46565","A861DC"]}'>
+	    <label  name="rewardText" properties='{"x":0, "y":0, "size":12,"autoSize":"none","align":"left", "color":"0xFEFECA","height":18, "width":190,"stroke":"0x302010", "mouseEnabled":false}'/>
+		<label  name="arrowText" properties='{"x":155, "y":1,  "color":"0xFFFFCC", "stroke":"0x302010", "border":false,"textID":"703308"}'/>
+	</HorseRewardRenderer>
+	
+	<!--跨服排行榜奖励 列表呈示器-->
+	<KfRewardRenderer properties='{"itemWidth":174}'>		
+		<displayObject  definition="activity.view.kfRewardIcon" properties='{"x":0, "y":0}'/>
+		<displayObject  definition="gameUI.icon.Grid1" properties='{"x":25, "y":33}'/>
+	    <imageLoader name="pic"  properties='{"pathFormatName":"activityPng", "x":29, "y":37}' />
+		<label  name="info" properties='{"x":65, "y":45, "size":12, "autoSize":"none","align":"left",  "color":"0xE5EF99","height":20,  "width":120,"stroke":"0x302010", "mouseEnabled":false}'/>
+	</KfRewardRenderer>
+	
+	<!-- 银币促销 项呈器 -->
+	<SilverRenderer properties='{"itemWidth":170 , "itemHeight":237, "picArr":["sliver1","sliver2","sliver3"]}'>			
+		<displayObject definition="activity.gemPromo.itemBg"  properties='{"x":0 , "y":0,"height":265}'/>
+		<imageLoader name="pic"  properties='{"pathFormatName":"activityPic","x":34,"y":35}'/>
+		<label name="promoTitleText"  properties='{ "autoSize":"none", "align":"center", "size":18,"width":160, "height":40, "x":2,"y":12, "color":"0xFFCC00", "stroke": "0x2D261E"}'/>
+		<label name="buyCountText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":160, "height":40, "x":2,"y":140, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<label name="costIntroText"  properties='{ "border":false,"autoSize":"none", "align":"center", "width":160, "height":60,"multiline":true, "x":2,"y":170, "color":"0xFBF08E", "stroke": "0x2D261E"}'/>
+		<button name="buyBtn" properties='{"x":51, "y":225, "width":70, "styleName":"button5", "labelID":"700302"}' />
+	</SilverRenderer>
+	
+	<!--春节活动 项呈器-->
+	<SpringActivityRenderer properties='{"itemWidth":174,"itemHeight":118,"scale":0.98, "delay":0.2, "textX":[212,238]}'>		
+		<displayObject name="bg" definition="activity.springFest.BgItem"  properties='{"x":0 , "y":0}'/>
+		
+		<label name="titleText"  properties='{"border":false,"bold":true, "width":235, "height":20, "x":10,"y":8,"size":16,  "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<label name="infoText"  properties='{ "border":false,"autoSize":"none", "align":"left", "multiline":true,"width":190, "height":90, "x":10,"y":33,"size":16, "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<displayObject name="btn" definition="activity.springFest.Btn"  properties='{"y":17,"visible":false,"width":61,"height":89,"x":205}'/>
+		<displayObject name="imgGrid" definition="gameUI.icon.Grid1" properties='{"mouseEnabled":false,"visible":false,"x":209,"y":23,"width":56,"height":56}'/>
+		<imageLoader name="img"  properties='{"mouseEnabled":false,"x":212,"pathFormatName":"activityPng","y":25,"width":49,"height":49}' />
+		<label name="numText"  properties='{"border":false,"autoSize":"none", "align":"right", "width":40, "height":23,"x":222 ,"y":55, "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":210, "y":82, "visible":false,"mouseEnabled":false}' />
+		<label name="priceText"  properties='{ "border":false,"autoSize":"none", "align":"left", "width":50, "height":23, "y":75, "color":"0xFFCC00","stroke": "0x2D261E","mouseEnabled":false}'/>
+		<displayObject name="hasGot" definition="activity.springFest.HaveGot"  properties='{"x":235 , "y":60, "visible":false, "mouseEnabled":false,"mouseChildren":false}'/>
+		
+		<sprite name="rewardTips" properties='{"x":240, "y":170}' />
+		
+	</SpringActivityRenderer>
+	
+	<!--五一活动列表呈示器-->
+	<MayFestRenderer properties='{"itemWidth":174,"itemHeight":118,"scale":0.98, "delay":0.2, "textX":[212,238]}'>
+		<displayObject name="bg" definition="activity.springFest.BgItem"  properties='{"x":0 , "y":0}'/>
+		
+		<label name="titleText"  properties='{"border":false,"bold":true, "width":235, "height":20, "x":5,"y":0,"size":16,  "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<label name="infoText"  properties='{ "border":false, "align":"left", "multiline":true,"width":180, "height":90, "x":5,"y":25,"size":16, "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<displayObject name="btn" definition="activity.springFest.Btn"  properties='{"y":17,"visible":false,"width":61,"height":89,"x":205}'/>
+		<displayObject name="imgGrid" definition="gameUI.icon.Grid1" properties='{"mouseEnabled":false,"visible":false,"x":209,"y":23,"width":56,"height":56}'/>
+		<imageLoader name="img"  properties='{"mouseEnabled":false,"x":212,"pathFormatName":"activityPng","y":25,"width":49,"height":49}' />
+		<label name="numText"  properties='{"border":false,"autoSize":"none", "align":"right", "width":40, "height":23,"x":222 ,"y":55, "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":210, "y":82, "visible":false,"mouseEnabled":false}' />
+		<label name="priceText"  properties='{ "border":false,"autoSize":"none", "align":"left", "width":50, "height":23, "y":75, "color":"0xFFCC00","stroke": "0x2D261E","mouseEnabled":false}'/>
+		<displayObject name="hasGot" definition="activity.springFest.HaveGot"  properties='{"x":235 , "y":60, "visible":false, "mouseEnabled":false,"mouseChildren":false}'/>
+		
+		<sprite name="rewardTips" properties='{"x":240, "y":170}' />
+	
+	</MayFestRenderer>
+</config>

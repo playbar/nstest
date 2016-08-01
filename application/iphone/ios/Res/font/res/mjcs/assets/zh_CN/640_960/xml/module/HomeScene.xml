@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【将军府 场景】配置文件-->
+<config properties='{"furniturePosition":"462,463|266,398;259,354|443,442|127,464;183,377|289,478|367,377|504,444;119,417|301,341|547,439|474,338|273,535;202,300|552,415|440,524|464,300|111,506|66,388"
+					, "furnitureClassName":"homeScene.furniture.Bed|homeScene.furniture.Table|homeScene.furniture.Desk|homeScene.furniture.Antique|homeScene.furniture.Rockery|homeScene.furniture.Armrack"
+					, "bodyForcePosition":"0,-30|4,-36|5,-65|10,-40|-20,-30|10,-20"
+					, "bodyForceClassName":"homeScene.icon.BodyForce"
+					, "bodyForceSlidePosition":"274,100"	
+			}'>	
+	
+	
+	<!-- <displayObject name="homeBG" definition='homeScene.HomeGB' /> -->
+	<!--	<BXRender  properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff68be8d","alpha":0.2 }'/> -->
+			<displayObject definition="BW.gameUI.BG.homeBG" properties='{"x":0, "y":-60 }' />	
+	<imageLoader name="homeBgPic" properties='{"pathFormatName":"homeBg",  "x":0, "y":200}' />	
+	
+	<list name="furnitureList" properties='{"x":0, "y":0, "rowCount":100, "columnCount":50, "defaultSelected":false}' />
+	<imageLoader name="denglongImg" properties='{"pathFormatName":"denglongPNG",  "x":0, "y":0,"mouseEnabled":false}' />	
+	<!-- <displayObject definition='homeScene.DoorBG' properties='{"x":378, "y":520}' /> -->
+	<!-- <label name="doorNumText" properties='{"x":418, "y":543, "color":"0xFFFF67", "stroke":"0x302010", "size":12}'/>
+	<label name="homeTypeText" properties='{"x":503, "y":543, "color":"0xCD0299", "stroke":"0x302010", "size":12, "bold":true}'/>
+	<label name="ownerNameText" properties='{"x":403, "y":560, "color":"0xE8EE98", "stroke":"0x302010", "size":13, "bold":true, "width":172, "autoSize":"none", "align":"center"}'/> -->
+	
+	<!-- <displayObject name="backMyHomeBtn" properties='{"x":872, "y":485}'  definition='homeScene.BackMyHomeBtn' />
+	<displayObject name="visitOtherHomeBtn" properties='{"x":872, "y":521}' definition='homeScene.VisitOtherHomeBtn' />
+	<displayObject name="backTownBtn" properties='{"x":872, "y":555}'  definition='homeScene.BackTownBtn' /> -->
+	<itemGroup name="btnGroup" properties='{"x":332, "y":600, "layout":"horizontal","horizontalGap":20}' />
+	<!--<sprite name="machineBtn" properties='{"x":0, "y":0, "visible":false,"definition":"homeScence.btn.machine"}' parent="btnGroup" group="btnGroup"/>-->
+	<sprite name="sleepBtn"  properties='{"x":0, "y":0,  "visible":false,"definition":"homeScence.btn.sleep"}' parent="btnGroup" group="btnGroup"/>
+	<sprite name="extendBtn"  properties='{"x":0, "y":0, "visible":false,"definition":"homeScence.btn.extend"}' parent="btnGroup" group="btnGroup"/>	
+	<!--<sprite name="visitOtherHomeBtn"  properties='{"x":0, "y":0,"definition":"homeScence.btn.visitOther"}' parent="btnGroup" group="btnGroup"/>-->
+	<!--<sprite name="backMyHomeBtn"  properties='{"x":0, "y":0,  "visible":false,"definition":"homeScence.btn.backMyHome"}' parent="btnGroup" group="btnGroup"/>	-->
+	<sprite name="backTownBtn" properties='{"x":0, "y":0,"definition":"homeScence.btn.backTown"}' parent="btnGroup" group="btnGroup"/>
+		
+	
+	
+	<list name="servantList" properties='{"x":20, "y":600, "rowCount":1, "columnCount":3,"horizontalGap":20, "defaultSelected":false}' />
+	
+	<!--家具基本UI-->
+	<furnitureBasicUI properties='{"bodyForceIcon":"homeScene.icon.BodyForce"}'>
+		<sprite name="bodyForceIconC" properties='{"x":50, "y":0}'/>
+		<label name="bodyForceNumText" properties='{"x":70, "y":-5, "color":"0xCBCC64", "stroke":"0x302010"}'/>
+	</furnitureBasicUI>
+	
+	
+	<imageLoader name="techFurnPic" properties='{"pathFormatName":"tech32", "x":555, "y":515, "width":70, "height":70}' />	
+	
+	<!--家具信息（升级）-->
+	<container  name="furnitureInfo" properties='{"x":75, "y":90, "hideScene":false, "styleName":"panel3", "bgWidth":500, "bgHeight":485,
+		"reqColrs":"0x9AD15C|0xE46565"
+		}'>
+<!--			<container  name="furnitureInfo" properties='{"x":70, "y":150,
+		"reqColrs":"0x9AD15C|0xE46565"
+		}'>
+    <displayObject definition='gameUI.view.PTView' properties='{"width":500,"height":570 }' /> -->
+		<displayObject definition='gameUI.bg.GimpFrame' properties='{"x":14, "y":50, "width":472, "height":120}' />
+		<displayObject definition='gameUI.icon.Grid1' properties='{"x":27, "y":57}' />
+		<imageLoader name="furniturePicIL" properties='{"pathFormatName":"home70_70", "x":34, "y":64}' />
+			<displayObject definition='gameUI.icon.BlackBG' properties='{"x":31, "y":106, "width":76, "height":26}' />
+		<label name="furnitureLvText" properties='{"x":33, "y":107, "color":"0xCBCC64", "stroke":"0x302010", "size":20}'/>
+	
+	<label name="furnitureNameText" properties='{"x":27, "y":140, "color":"0xE7F392", "stroke":"0x302010", "bold":true, "size":20,"width":84,"align":"center" }'/> 
+		<label name="furniturePowerAddedText" properties='{"x":130, "y":57, "color":"0xE7F392", "stroke":"0x302010"}'/>
+		<label name="furnitureStarAddedText" properties='{"x":130, "y":87, "color":"0xE7F392", "stroke":"0x302010"}'/>
+		<label name="furnitureUpgradeLvText" properties='{"x":130, "y":117, "color":"0xCBCC64", "stroke":"0x302010"}'/>
+	
+		<displayObject definition='gameUI.icon.Copper' properties='{"x":345, "y":70}' />
+		<label name="furnitureUpgradeCostText" properties='{"x":370, "y":63, "size":20,"color":"0xCBCC64", "stroke":"0x302010"}'/>
+		<button name="furnitureUpgradeBtn" properties='{"x":340, "y":95, "width":120, "height":48,"styleName":"button5", "labelID":"580111"}' />
+		
+		<displayObject definition='gameUI.bg.GimpFrame' properties='{"x":14, "y":180, "width":472, "height":120}' />
+		<displayObject definition='gameUI.icon.Grid1' properties='{"x":27, "y":187}' />
+		<imageLoader name="decorationPicIL" properties='{"pathFormatName":"home70_70", "x":34, "y":194}' />
+			<displayObject definition='gameUI.icon.BlackBG' properties='{"x":31, "y":236, "width":76, "height":26}' /> 
+		<label name="decorationLvText" properties='{"x":33, "y":237, "color":"0xCBCC64", "stroke":"0x302010", "size":20}'/>
+		<label name="decorationNameText" properties='{"x":27, "y":266, "color":"0xE7F392", "stroke":"0x302010", "bold":true, "size":20,"width":84,"align":"center" }'/>
+		<label name="decorationPowerAddedText" properties='{"x":130, "y":187, "color":"0xE7F392", "stroke":"0x302010"}'/>
+		<label name="decorationStarAddedText" properties='{"x":130, "y":217, "color":"0xE7F392", "stroke":"0x302010"}'/>
+  	<label name="decorationUpgradeLvText" properties='{"x":130, "y":247, "color":"0xCBCC64", "stroke":"0x302010"}'/>
+		<displayObject definition='gameUI.icon.Copper' properties='{"x":345, "y":200}' />
+		<label name="decorationUpgradeCostText" properties='{"x":370, "y":193, "size":20,"color":"0xCBCC64", "stroke":"0x302010"}'/>		
+       <button name="decorationUpgradeBtn" properties='{"x":340, "y":225, "width":120,"height":48, "styleName":"button5", "labelID":"580112"}' />
+
+
+     <displayObject definition="gameUI.icon.Line" properties='{"width":472,"height":3,"x":14,"y":310}'/>
+		
+		<label properties='{"x":22, "y":322, "color":"0x8FA238", "stroke":"0x302010", "mouseEnabled":false, "autoSize":"none", "align":"center", "width":470, "textID":"580116"}'/>
+
+		<displayObject definition='gameUI.bg.GimpFrame' properties='{"x":14, "y":350, "width":472, "height":100}' />
+	<displayObject definition="homeScene.icon.BodyForce" properties='{"width":70,"height":70,"x":73,"y":400}'/>
+		<label name="starNum" properties='{"x":130, "y":385, "color":"0x8FA238", "stroke":"0x302010", "mouseEnabled":false, "autoSize":"none", "align":"left", "width":240}'/>
+ 		<button name="getStarBtn" properties='{"x":340, "y":375, "width":120,"height":48, "styleName":"button5", "label":"领取精力"}' />
+ <!--
+  <displayObject definition="gameUI.icon.Line" properties='{"width":472,"height":3,"x":14,"y":460}'/>	
+  <button properties='{"x":30, "y":475, "width":120,"height":48, "styleName":"button12", "label":"返回"}' />
+-->
+	</container>
+	
+	<!-- 睡觉面板 -->
+	<container  name="sleepPanel" properties='{"x":20, "y":290,"tipPoint":[536,292]}'>
+		<modalBG name="modal" properties='{"alpha":0.7}' />
+		<displayObject definition='homeScence.view.sleepBg' properties='{"x":0, "y":0}' />
+		<displayObject name="rateMC" definition='homeScence.view.rateMC' properties='{"x":162, "y":200}' />
+		<label properties='{"x":70,"y":33, "width":200, "height":23, "size":18, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false, "textID":"580145"}'/>
+		<!-- <label properties='{"x":117,"y":110, "width":80, "height":22, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false, "textID":"580144"}'/> -->
+		<label name="sleepTimeGapText" properties='{"x":195, "y":190, "width":130, "height":25,"size":20, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		
+		<label name="sleepTimeText" properties='{ "x":130, "y":20,"width":266, "height":25, "size":20, "autoSize":"none", "align":"center",  "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<button name="getUpBtn" properties='{"x":226, "y":220, "height":30,"styleName":"button3", "labelID":"580143"}' />
+		<list name="iconList" properties='{"x":430, "y":40, "columnCount":1, "rowCount":1}' />
+	</container>
+		
+	<!-- 美梦面板 -->
+	<container  name="dreamPanel" properties='{"x":100, "y":140 , "muColor":["gameUI.color.Tips7","gameUI.color.Tips4","gameUI.color.Tips5"]}'>
+		<displayObject name="bg" definition='homeScence.view.dreamBg' properties='{"x":0, "y":0}' />
+		
+		<mcLabel name="goodsNameText" properties='{"x":170,"y":54,"stroke":"0x302010","labelProp":{"size":18,"width":100,  "height":30,  "autoSize":"none", "align":"left", "color":"0xCBCD67"},"multiColor":"gameUI.color.Tips7"}'/>
+		<mcLabel name="goodsCountText" properties='{"x":170,"y":79,"stroke":"0x302010","labelProp":{"size":18,"width":100,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCD67"},"multiColor":"gameUI.color.Tips7"}'/>
+		<label name="dreamCountText" properties='{"x":245,"y":30, "width":100, "height":23, "size":18, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<imageLoader name="goodsPic" properties='{"pathFormatName":"farmProduct32",  "x":93, "y":43, "width":67, "height":67}' />	
+		<imageLoader name="iconBack" properties='{"pathFormatName":"drops32","x":91, "y":40}' />
+		<linkText  name="sureText" properties='{"style":{"overStyle":{"underline":true}},"x":65, "y":110, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textType":"htmlText"}'/>
+		<linkText  name="cancelText" properties='{"style":{"overStyle":{"underline":true}},"x":215, "y":110, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textType":"htmlText"}'/>
+	</container>
+	
+	<container  name="extendPanel" properties='{"initX":25, "initY":130}'/>	
+	<!--扩建面板-->
+	<extendPanel   properties='{"styleName":"panel3", "bgWidth":590, "bgHeight":590
+			, "titleID":580351, "costTextColors":"0xFFFECB,0xFFCC00,0xff0000","buildParam":{"duration":10,"point":{"x":500,"y":400},"cuiziPoint":{"x":690,"y":460}}
+		}'>
+	<!--	
+		<displayObject properties='{"x":14, "y":31, "width":590, "height":369}' definition='gameUI.icon.Layer' />
+		<displayObject properties='{"x":22, "y":39, "width":574, "height":265}' definition='gameUI.icon.BlackBG' />
+		<displayObject properties='{"x":156, "y":45, "width":214, "height":158}' definition='gameUI.icon.BlackBG' />
+		<displayObject properties='{"x":375, "y":45, "width":214, "height":158}' definition='gameUI.icon.BlackBG' />
+-->
+		<displayObject properties='{"x":77, "y":307,"width":434,"height":160 }' definition='gameUI.bg.GimpFrame' />
+		
+		<displayObject properties='{"x":77, "y":277, "width":204, "height":20}' definition='gameUI.icon.TextBG' />
+		<displayObject properties='{"x":301, "y":277, "width":204, "height":20}' definition='gameUI.icon.TextBG' />
+		<imageLoader name="picIL" properties='{"pathFormatName":"home200_120", "x":84, "y":153, "width":200, "height":120}' />
+		<imageLoader name="nextPicIL" properties='{"pathFormatName":"home200_120", "x":303, "y":153, "width":200, "height":120}' />		
+		<displayObject properties='{"x":82, "y":150}' definition='homeScene.extend.BG' />
+		<displayObject properties='{"x":301, "y":150}' definition='homeScene.extend.BG' />		
+		<label name="nameText" properties='{"x":77, "y":278, "color":"0xCACC67", "stroke":"0x302010", "mouseEnabled":false, "autoSize":"none", "align":"center", "width":204, "size":13, "bold":true}'/>
+		<label name="nextNameText" properties='{"x":301, "y":278, "color":"0xCACC67", "stroke":"0x302010", "mouseEnabled":false, "autoSize":"none", "align":"center", "width":204, "size":13, "bold":true}'/>
+		
+		<displayObject properties='{"x":71, "y":140}' definition='homeScene.extendArt.curHomeText' />
+		<displayObject name="newHomeIcon" properties='{"x":287, "y":143,"visible":false}' definition='homeScene.artText.newHome' />
+		<displayObject name="hasBigHomeIcon" properties='{"x":316, "y":196,"visible":false}' definition='homeScene.artText.hasHomeText' /> 
+		
+		
+		<label name="homeNameText" properties='{"x":90, "y":320, "color":"0xFFCC00", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":408}'/>
+		<label name="homeIntroText" properties='{"x":95, "y":360, "color":"0xE5EF99", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":400,"height":120,"multiline":true}'/>
+		
+		
+		<list name="gradeList" properties='{"x":25, "y":68, "columnCount":5, "horizontalGap":8, "rowCount":1, "defaultSelected":true}' />
+		
+		
+		<label name="neddOfficeText" properties='{"x":76, "y":477, "color":"0xFFFECB", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":101, "visible":false}'/>
+		<label name="silverCostText" properties='{"x":78, "y":542, "color":"0xFFFECB", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":120, "visible":true}'/>
+		<label name="goldCostText" properties='{"x":386, "y":542, "color":"0xFFCC00", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":120}'/>
+		
+		<button name="silverUpgradeBtn" properties='{"x":78, "y":492, "styleName":"button7", "labelID":"580358", "width":120,"height":48, "visible":true}' />
+		<button name="goldUpgradeBtn" properties='{"x":386, "y":492, "styleName":"button13","width":120,"height":48,  "artName":"homeScene.artText.goldExtend"}' />
+		
+		<modalBG name="modal" properties='{"alpha":0.7,"visible":false}' />
+		<displayObject name="buildRateMc" properties='{"x":211, "y":250,"visible":false}' definition='homeScence.build.rateMC' />
+		<displayObject name="chuiziMovie" properties='{"x":306, "y":217,"visible":false}' definition='homeScene.movie.chuizi' />
+		
+	</extendPanel>
+	<!-- 家丁领取菜肴面板 -->
+	<container  name="getServantFood" properties='{"x":160, "y":260,"styleName":"panel3","bgWidth":360,"bgHeight":280,"descObj":{"name":["580172","580173","580174"],"before":["580166","580167","580168"],"after":["580169","580170","580171"]}}'>
+		<!--<displayObject   definition='gameUI.view.PTView' properties='{"x":0, "y":0,"width":360,"height":280}'/> -->
+		<displayObject   definition='gameUI.icon.BlackBG' properties='{"x":25, "y":140,"width":310,"height":100}'/>
+		<displayObject   definition='gameUI.icon.Grid1' properties='{"x":25, "y":45}'/>
+		<displayObject   definition='gameUI.icon.Grid1' properties='{"x":35, "y":148}'/>
+		<imageLoader name="servantPic" properties='{"pathFormatName":"servant70", "x":32, "y":52}' />
+		<label  name="nameText" properties='{"x":130, "y":50, "textID":"580160","size":20,"color":"0xFFFECB", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":210,"height":60 }'/>
+		<label  name="descText" properties='{"x":130, "y":80,"size":20,"color":"0xFFFECB", "stroke":"0x302010", "autoSize":"none", "align":"left","multiline":true, "width":210,"height":60}'/>
+		<sprite name="goodsIcon" properties='{"x":42, "y":155}'/>
+		<label  name="goodsCountText" properties='{"x":130, "y":177,"size":20,"color":"0xFFFECB", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":120}'/>
+		<button name="getBtn" properties='{"x":255, "y":170, "styleName":"button14", "labelID":"580163", "width":70,"height":40}' />
+	</container>
+	
+	<!--国战/跨服领奖-->
+	<StateAndKfWarKillReward  properties='{"x":-10, "y":120}'>
+		<displayObject   definition='homeScene.GuozhanBg' properties='{"x":0, "y":0}'/>
+		<displayObject name="title"  definition='homeScene.GuozhanTitile' properties='{"x":135, "y":75}'/>
+		<label  name="introText" properties='{"x":251, "y":173,"size":20, "color":"0x000000", "stroke":"0xa8ad7b",  "width":23, "height":30, "bold":true, "border":false, "autoSize":"none", "align":"center"}'/>		
+		<displayObject name="rewardBtn" properties='{"x":280, "y":300}' definition='homeScene.getReward' />
+		<list name="rewardList" properties='{"x":175, "y":210, "columnCount":2, "horizontalGap":30, "rowCount":1}' />	
+		<displayObject  name="alertText"  definition='homeScene.war.AlertText' properties='{"x":350, "y":240, "mouseEnabled":false}'/>	
+		
+		<sprite name="rewardTips" properties='{"x":220, "y":170}' />		
+	</StateAndKfWarKillReward>
+	
+	<!--家具渲染器-->
+	<furnitureRenderer properties='{"maxSilverStar":150}'>
+		<sprite name="furnitSp" properties='{"x":0, "y":0}'/>
+		<displayObject name="starIcon"   definition='homeScene.icon.BodyForce' properties='{"x":0, "y":0,"visible":false}'/>	
+		<sprite name="bodyForceIconC" properties='{"x":0, "y":0}'/>
+	
+		<label name="bodyForceNumText" properties='{"x":17, "y":20, "color":"0xCBCC64", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<displayObject name="brokenIcon" definition='homeScene.BrokenIcon' properties='{"x":0, "y":0, "mouseEnabled":false, "visible":false}' />
+	</furnitureRenderer>
+	<!--不同等级的将军府的条目渲染器-->
+	<homeGradeItemRenderer properties='{"itemWidth":100,"itemHeight":48,"width":100,"height":48,"skin":"skin.Button8"}'>
+		<!-- <displayObject name="bg" definition='homeScene.extend.GradeItemRendererBG' properties='{"x":0, "y":0}' /> -->
+		<label name="nameText" properties='{"x":0, "y":12, "color":"0xCACC67", "stroke":"0x302010", "mouseEnabled":false, "autoSize":"none", "align":"center", "width":100, "size":16, "bold":true}'/>
+	</homeGradeItemRenderer>
+	
+	<!--家丁渲染器-->
+	<HomeServantRenderer properties='{"itemWidth":75,"itemHeight":75,"servantArr":["homeScence.btn.servant1","homeScence.btn.servant2","homeScence.btn.servant3"]}'>	
+		<sprite name="servantC" properties='{"x":0, "y":0}' />
+		<displayObject name="tipIcon" definition='homeScence.icon.servantTip' properties='{"x":2, "y":8,"visible":false}' />
+	</HomeServantRenderer>
+	
+	<!--国战/跨服家丁呈示器-->
+	<StateAndKfWarRewardRenderer properties='{"itemWidth":200,"itemHeight":100}'>	
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":0, "y":0}'/>		
+		<imageLoader name="pic" properties='{"pathFormatName":"gemstone32", "x":7, "y":7}' />
+		<sprite name="num" properties='{"x":95, "y":44, "align":"left", "classPath":"gameUI.icon.YellowNumber",  "mouseEnabled":false}' />
+	</StateAndKfWarRewardRenderer>
+	
+	
+</config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">A141211</string>
+    <string name="mobile_back">后退</string>
+    <string name="mobile_fresh">刷新</string>
+    <string name="mobile_forward">前进</string>
+    <string name="mobile_home">主页</string>
+    <string name="mobile_native">本地</string>
+    <string name="mobile_more">更多</string>
+    <string name="clear_buffer">清除缓存</string>
+    <string name="about_us">关于我们</string>
+    <string name="check_upgrade">检测升级</string>
+    <string name="meun_quit">退出</string>
+    <string name="media_save">保存</string>
+    <string name="media_help">帮助</string>
+    <string name="media_upscore">传分</string>
+    <string name="media_close">关闭</string>
+    <string name="media_play">播放</string>
+    <string name="media_pause">暂停</string>
+    <string name="media_stop">停止</string>
+    <string name="file_option">文件选项</string>
+    <string name="file_paly">播放</string>
+    <string name="file_delete">删除</string>
+    <string name="app_exit">真的要退出吗？</string>
+    <string name="positive_button">确定</string>
+    <string name="negative_button">取消</string>
+    <!-- 提示用户信息 -->
+    <string name="get_code_fail">从登录注册、切换账号，未获取Authorization Code</string>
+    <string formatted="false" name="pay_callback_toast">状态码:%d, 状态描述：%s</string>
+</resources>

@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--模块配置文件-->
+<config>
+
+	<localres name="language" url="res/mjcs/assets/{resVersion}/xml/core/Language" version="1" /><!--语言包-->
+	<localres name="style" url="res/mjcs/assets/{resVersion}/xml/core/Style.xml" version="1" /><!--样式配置-->
+	<localres name="uiConfig" url="res/mjcs/assets/{resVersion}/xml/core/UIConfig.xml" version="1" /><!--界面配置-->
+	<localres name="soundConfig" url="res/mjcs/assets/{resVersion}/xml/core/SoundConfig.xml" version="1" /><!--声音配置-->
+	<localres name="preloadConfig" url="res/mjcs/assets/{resVersion}/xml/core/Preload.xml" version="1" /><!--预加载配置-->	
+	<localres name="mainUIConfig" url="res/mjcs/assets/{resVersion}/xml/core/MainUI.xml" version="1" /><!--核心UI配置-->
+	
+	<localres name="component" url="res/mjcs/assets/{resVersion}/swf/core/Component.swf" version="1" /><!--组件皮肤-->
+	<localres name="component2" url="res/mjcs/assets/{resVersion}/swf/core/BWCompoment.swf" version="1" /><!--组件皮肤 Modify by xiepeifu-->
+	<localres name="doorView" url="res/mjcs/assets/{resVersion}/swf/core/Door.swf" version="1" /><!--传送门界面-->
+	<localres name="mainUIView" url="res/mjcs/assets/{resVersion}/swf/core/MainUI.swf" version="1" /><!--核心UI界面-->
+	
+	<localres name="mbGameUIView" url="res/mjcs/assets/{resVersion}/swf/module/Mobile/bwgameUI.swf" version="1" /><!--游戏UI界面-->
+	<localres name="mbComponentView" url="res/mjcs/assets/{resVersion}/swf/module/Mobile/bwcomponent.swf" version="1" /><!--元件资源-->
+	<localres name="mbTownView" url="res/mjcs/assets/{resVersion}/swf/module/Mobile/bwhome.swf" version="1" /><!--手机版主城资源-->
+	
+	<localres name="roleScene" url="res/mjcs/game/module/roleScene/view/RoleScene.swf" version="1" /><!--角色场景模块-->
+	<localres name="gameUI" url="res/mjcs/game/module/gameUI/view/GameUI.swf" version="1" />
+	<localres name="chat" url="res/mjcs/game/module/chat/view/Chat.swf" version="1" />
+	<localres name="townScene" url="res/mjcs/game/module/townScene/view/TownScene.swf" version="1" /><!--城镇场景模块-->
+	<localres name="fight" url="res/mjcs/game/module/fight/view/Fight.swf" version="1" />
+	<localres name="newPlayerGuide" url="res/mjcs/game/module/newPlayerGuide/view/NewPlayerGuide.swf" version="1" />
+	<localres name="game" url="res/mjcs/Game.swf" version="1" /><!--游戏核心-->
+	
+	
+
+
+	<localres name="activityConfig" url="res/mjcs/assets/{resVersion}/xml/module/Activity.xml" version="1" /><!--活动面板-->
+	<localres name="activityView" url="res/mjcs/assets/{resVersion}/swf/module/Activity.swf" version="1" />
+
+	<localres name="areaSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/AreaScene.xml" version="1" /><!--地区场景配置-->
+	<localres name="areaSceneView" url="res/mjcs/assets/{resVersion}/swf/module/AreaScene.swf" version="1" /><!--地区场景界面-->
+
+	<localres name="arenaSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/ArenaScene.xml" version="1" /><!--竞技场场景-->
+	<localres name="arenaSceneView" url="res/mjcs/assets/{resVersion}/swf/module/ArenaScene.swf" version="1" />
+
+	
+	<localres name="bagConfig" url="res/mjcs/assets/{resVersion}/xml/module/Bag.xml" version="1" /><!--背包面板-->
+	<localres name="bagView" url="res/mjcs/assets/{resVersion}/swf/module/Bag.swf" version="1" />
+
+	<localres name="borderSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/BorderScene.xml" version="1" /><!--边塞场景配置-->
+	<localres name="borderSceneView" url="res/mjcs/assets/{resVersion}/swf/module/BorderScene.swf" version="1" /><!--边塞场景界面-->
+
+	<localres name="chatConfig" url="res/mjcs/assets/{resVersion}/xml/module/Chat.xml" version="1" /><!--聊天模块-->
+	<localres name="chatView" url="res/mjcs/assets/{resVersion}/swf/module/Chat.swf" version="1" />
+	
+	<localres name="chooseHorseConfig" url="res/mjcs/assets/{resVersion}/xml/module/ChooseHorse.xml" version="1" /><!--选择马匹界面-->
+	<localres name="chooseHorseView" url="res/mjcs/assets/{resVersion}/swf/module/ChooseHorse.swf" version="1" />
+	
+	<localres name="commercialConfig" url="res/mjcs/assets/{resVersion}/xml/module/Commercial.xml" version="1" /><!--商业界面-->
+	<localres name="commercialView" url="res/mjcs/assets/{resVersion}/swf/module/Commercial.swf" version="1"/>
+	
+	<localres name="dialog" url="res/mjcs/assets/{resVersion}/xml/module/Dialog.xml" version="1" /><!--对白内容-->
+
+	<localres name="expendConfig" url="res/mjcs/assets/{resVersion}/xml/module/Expend.xml" version="1" /><!--VIP、礼包窗口-->
+	<localres name="expendView" url="res/mjcs/assets/{resVersion}/swf/module/Expend.swf" version="1" />
+	
+	<localres name="faneConfig" url="res/mjcs/assets/{resVersion}/xml/module/Fane.xml" version="1" /><!--神庙窗口-->
+	<localres name="faneView" url="res/mjcs/assets/{resVersion}/swf/module/Fane.swf" version="1" />
+
+	<localres name="farmSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/FarmScene.xml" version="1" /><!--农庄场景配置-->
+	<localres name="farmSceneView" url="res/mjcs/assets/{resVersion}/swf/module/FarmScene.swf" version="1" /><!--农庄场景界面-->
+
+	<localres name="fightConfig" url="res/mjcs/assets/{resVersion}/xml/module/Fight.xml" version="1" /><!--战斗模块-->
+	<localres name="fightView" url="res/mjcs/assets/{resVersion}/swf/module/Fight.swf" version="1" />
+
+	<localres name="friendsConfig" url="res/mjcs/assets/{resVersion}/xml/module/Friends.xml" version="1" /><!--好友界面-->
+	<localres name="friendsView" url="res/mjcs/assets/{resVersion}/swf/module/Friends.swf" version="1"/>
+
+	<localres name="functionInfo" url="res/mjcs/assets/{resVersion}/xml/module/FunctionInfo.xml" version="1" /><!--功能开放信息列表-->
+
+	<localres name="gameUIConfig" url="res/mjcs/assets/{resVersion}/xml/module/GameUI.xml" version="1" /><!--游戏UI模块-->
+	<localres name="gameUIView" url="res/mjcs/assets/{resVersion}/swf/module/GameUI.swf" version="1" />
+	
+	<localres name="gameUI2View" url="res/mjcs/assets/{resVersion}/swf/module/GameUI2.swf" version="1" />
+	<localres name="gameUI" url="res/mjcs/game/module/gameUI/view/GameUI.swf" version="1" /> 
+
+	<localres name="generalConfig" url="res/mjcs/assets/{resVersion}/xml/module/General.xml" version="1" /><!--武将面板-->
+	<localres name="generalView" url="res/mjcs/assets/{resVersion}/swf/module/General.swf" version="1" />
+
+
+	<localres name="homeRankConfig" url="res/mjcs/assets/{resVersion}/xml/module/HomeRank.xml" version="1" /><!--将军府排行系统-->
+	<localres name="homeRankView" url="res/mjcs/assets/{resVersion}/swf/module/HomeRank.swf" version="1" />
+	
+	<localres name="homeSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/HomeScene.xml" version="1" /><!--将军府场景-->
+	<localres name="homeSceneView" url="res/mjcs/assets/{resVersion}/swf/module/HomeScene.swf" version="1" />
+
+	<localres name="horseRacingSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/HorseRacingScene.xml" version="1" /><!--赛马场景-->
+	<localres name="horseRacingSceneView" url="res/mjcs/assets/{resVersion}/swf/module/HorseRacingScene.swf" version="1" />
+	
+	<localres name="improveConfig" url="res/mjcs/assets/{resVersion}/xml/module/Improve.xml" version="1" /><!--装备改良-->
+	<localres name="improveView" url="res/mjcs/assets/{resVersion}/swf/module/Improve.swf" version="1" />
+
+	<localres name="instanceHallSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/InstanceHallScene.xml" version="1" /><!--多人副本组队大厅场景-->
+	<localres name="instanceHallSceneView" url="res/mjcs/assets/{resVersion}/swf/module/InstanceHallScene.swf" version="1" />
+
+	<localres name="instanceSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/InstanceScene.xml" version="1" /><!--多人副本厅场景-->
+	<localres name="instanceSceneView" url="res/mjcs/assets/{resVersion}/swf/module/InstanceScene.swf" version="1" />
+
+	<localres name="kfNationRankingConfig" url="res/mjcs/assets/{resVersion}/xml/module/KfNationRanking.xml" version="1" /><!--跨服国战排行榜窗口系统-->
+	<localres name="kfNationRankingView" url="res/mjcs/assets/{resVersion}/swf/module/KfNationRanking.swf" version="1"/>
+
+	<localres name="mailConfig" url="res/mjcs/assets/{resVersion}/xml/module/Mail.xml" version="1" /><!--邮件窗口-->
+	<localres name="mailView" url="res/mjcs/assets/{resVersion}/swf/module/Mail.swf" version="1" />
+
+	<localres name="manzuSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/ManzuScene.xml" version="1" /><!--蛮族入侵-->
+	<localres name="manzuSceneView" url="res/mjcs/assets/{resVersion}/swf/module/ManzuScene.swf" version="1" />
+
+	<localres name="mechanicalConfig" url="res/mjcs/assets/{resVersion}/xml/module/Mechanical.xml" version="1" /><!--机械窗口系统-->
+	<localres name="mechanicalView" url="res/mjcs/assets/{resVersion}/swf/module/Mechanical.swf" version="1"/>
+	
+	<localres name="newDialog" url="res/mjcs/assets/{resVersion}/xml/module/NewDialog.xml" version="1" /><!--新的场景对白内容-->
+	
+	<localres name="newPlayerGuideInfo" url="res/mjcs/assets/{resVersion}/xml/module/NewPlaGuideInfo.xml" version="1" /><!--任务引导配置信息-->
+	
+	<localres name="newPlayerGuideConfig" url="res/mjcs/assets/{resVersion}/xml/module/NewPlayerGuide.xml" version="1" /><!--任务引导-->
+
+	<localres name="prestigeConfig" url="res/mjcs/assets/{resVersion}/xml/module/Prestige.xml" version="1" /><!--威望系统-->
+	<localres name="prestigeView" url="res/mjcs/assets/{resVersion}/swf/module/Prestige.swf" version="1" />
+
+	<localres name="prisonConfig" url="res/mjcs/assets/{resVersion}/xml/module/Prison.xml" version="1" /><!--监狱系统-->
+	<localres name="prisonView" url="res/mjcs/assets/{resVersion}/swf/module/Prison.swf" version="1" />
+
+	<localres name="produceConfig" url="res/mjcs/assets/{resVersion}/xml/module/Produce.xml" version="1" /><!--生产窗口-->
+	<localres name="produceView" url="res/mjcs/assets/{resVersion}/swf/module/Produce.swf" version="1" />
+
+	<localres name="rankingBattleSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/RankingBattleScene.xml" version="1" /><!--势力挑战赛场景-->
+	<localres name="rankingBattleSceneView" url="res/mjcs/assets/{resVersion}/swf/module/RankingBattleScene.swf" version="1" />
+
+	<localres name="restaurantConfig" url="res/mjcs/assets/{resVersion}/xml/module/Restaurant.xml" version="1" /><!--酒肆面板-->
+	<localres name="restaurantView" url="res/mjcs/assets/{resVersion}/swf/module/Restaurant.swf" version="1" />
+
+	<localres name="roleSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/RoleScene.xml" version="1" /><!--角色场景配置-->
+	<localres name="roleSceneView" url="res/mjcs/assets/{resVersion}/swf/module/RoleScene.swf" version="1" /><!--角色场景界面-->
+
+
+	<localres name="shopConfig" url="res/mjcs/assets/{resVersion}/xml/module/Shop.xml" version="1" /><!--商店面板-->
+	<localres name="shopView" url="res/mjcs/assets/{resVersion}/swf/module/Shop.swf" version="1" />
+
+	<localres name="silverSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/SilverScene.xml" version="1" /><!--银矿场景-->
+	<localres name="silverSceneView" url="res/mjcs/assets/{resVersion}/swf/module/SilverScene.swf" version="1" />
+
+	<localres name="skillTrainConfig" url="res/mjcs/assets/{resVersion}/xml/module/SkillTrainScene.xml" version="1" /><!--技能训练场 场景-->
+	<localres name="skillTrainView" url="res/mjcs/assets/{resVersion}/swf/module/SkillTrainScene.swf" version="1" />
+
+	<localres name="townNPC" url="res/mjcs/assets/{resVersion}/xml/module/TownNPC.xml" version="1" /><!--城镇Npc配置-->
+
+	<localres name="newPlayerGuideView" url="res/mjcs/assets/{resVersion}/swf/module/TaskGuide.swf" version="1" />
+
+	<localres name="townSceneConfig" url="res/mjcs/assets/{resVersion}/xml/module/TownScene.xml" version="1" /><!--城镇场景配置-->
+	<localres name="townSceneView" url="res/mjcs/assets/{resVersion}/swf/module/TownScene.swf" version="1" /><!--城镇场景界面-->
+
+	
+</config>
+	
+	

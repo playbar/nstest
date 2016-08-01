@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--邮件-->
+<config properties='{"bgWidth":520,"bgHeight":600,"x":80,"y":125, "titleID":"570101", "hideScene":false}'>
+
+	<button name="writeMailBtn" properties='{"x":55, "y":530, "width":120, "styleName":"button2", "labelID":"570301", "height":45}' />
+	
+	<!--公用界面-->
+	<container name="commonView"  properties='{"y":-4,"x":22}'>
+	
+		<BXBackBar properties='{"clip":[30,50,30,50],"x":30,"image":"BW.gameUI.BG.verlistRimBG","y":91,"width":424,"height":424,"styleName":"VerList"}'/>
+		<label properties='{"x":140, "y":100, "width":196, "size":24,"height":28, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"570401"}' />
+		<list name="list" properties='{"x":47, "y":147, "rowCount":7, "columnCount":1,"verticalGap":5,"defaultSelected":false}' />
+		
+		
+		<page name="page" properties='{"x":170, "y":534,
+							"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":101 },
+							"labelProp":{"x":40, "width":60,"size":24, "height":32, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+
+	  <button name="deletePageBtn" properties='{"x":330, "y":535, "width":120, "styleName":"button5", "labelID":"570406", "enabled":false, "height":45}' />
+		<sprite name="infoC"  properties='{"y":-5,"x":-80}'/>
+		
+		<BXBackBar parent="infoC"  properties='{"width":454,"styleName":"RoleBar","x":93,"y":77,"clip":[30,50,30,50],"height":520}'/>
+		<displayObject definition="gameUI.bg.GimpFrameNew" parent="infoC" properties='{"y":331,"width":485,"height":525,"x":318}'/>
+
+		<displayObject definition="mail.view.InfoBG" parent="infoC" properties='{"x":110,"width":424,"y":94,"height":440}'/>
+    <label name="titleText" parent="infoC" properties='{"x":122, "y":105, "width":310, "height":30, "selectable":true, "color":"0xFFFFCC", "size":26, "bold":true, "stroke":"0x302010","textID":"570401"}' />
+    <label name="senderText" parent="infoC" properties='{"x":120, "y":145,"size":20, "width":310, "height":26, "selectable":true, "color":"0xDDE899", "stroke":"0x302010","textID":"570401"}' />
+    <label name="contentText" parent="infoC" properties='{"x":120, "y":195, "size":20,"width":378, "height":290, "selectable":true, "multiline":true, "color":"0xDDE899", "stroke":"0x302010", "mouseWheelEnabled":false,"textID":"570401"}' />
+		
+
+		<button name="deleteBtn" parent="infoC" properties='{"x":341, "y":545, "width":85, "styleName":"button7", "labelID":"570408", "enabled":false}' />
+		<button name="saveBtn" parent="infoC" properties='{"x":236, "y":545, "width":85, "styleName":"button2", "labelID":"570409", "enabled":false}' />
+		<button name="replyBtn" parent="infoC" properties='{"x":446, "y":545, "width":85, "styleName":"button6", "labelID":"570410", "enabled":false}' />
+		<button name="backBtn" parent="infoC" properties='{"x":112, "y":545, "width":85, "styleName":"button2", "labelID":"570412"}' />
+	</container>
+	
+	<!--写邮件界面-->
+	<container name="writeMail" properties='{"y":95,"x":21}'>
+		<displayObject definition="gameUI.bg.GimpFrameNew" properties='{"y":229,"width":485,"height":520,"x":240}'/>
+		<displayObject definition="mail.view.WriteBG" />
+		<label properties='{"x":0, "y":26, "width":90, "size":20,"height":24, "autoSize":"none", "align":"right", "color":"0xE4EEA7", "stroke":"0x302010", "textID":"570201"}' />
+		<label properties='{"x":0, "y":65, "width":90,"size":20, "height":24, "autoSize":"none", "align":"right", "color":"0xE4EEA7", "stroke":"0x302010", "textID":"570202"}' />
+		<label properties='{"x":0, "y":108, "width":90,"size":20, "height":24, "autoSize":"none", "align":"right", "color":"0xE4EEA7", "stroke":"0x302010", "textID":"570203"}' />
+		<inputText name="addresseeIT" properties='{"x":90,"size":20, "y":26, "width":360, "height":24, "color":"0xFFFFFF"}' />
+		<inputText name="titleIT" properties='{"x":90,"size":20, "y":67, "width":360, "height":24, "color":"0xFFFFFF", "maxChars":20}' />
+		<inputText name="contentIT" properties='{"x":90,"size":20, "y":108, "width":360, "height":300, "multiline":true, "color":"0xFFFFFF", "maxChars":150}' />
+		
+		<button name="sendBtn" properties='{"x":86, "y":400, "width":90, "styleName":"button2", "labelID":"570204"}' />
+		<button name="cancelBtn" properties='{"x":370, "y":400, "width":90, "styleName":"button2", "labelID":"570205"}' />
+	</container>
+	
+	
+	
+	<!--邮件ItemRenderer-->
+	<mailItemRenderer properties='{"height":40,"x":50,"y":135,"width":392,"skin":"mail.view.ItemBG"}'>
+		<displayObject name="readIcon" definition="mail.icon.Read" properties='{"height":32,"x":16,"y":4,"width":32,"mouseEnabled":false}'/>
+		<displayObject name="unreadIcon" definition="mail.icon.Unread" properties='{"height":32,"x":15,"y":7,"width":32,"mouseEnabled":false}'/>
+		<label name="readText" properties='{"text":"物品回购","x":71, "y":8,"autoSize":"none", "width":260, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false,"height":26}' />
+		<label name="unreadText" properties='{"x":71, "y":8,"autoSize":"none", "width":260, "color":"0xF3CD00", "stroke":"0x302010", "bold":true, "mouseEnabled":false,"height":26}' />
+	</mailItemRenderer>
+</config>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【农庄场景】配置文件-->
+<config properties='{"width":640,"height":790}'>
+			<displayObject definition="BW.gameUI.BG.farmBG"  properties='{"x":0, "y":-140 }' />	
+	<BXRender name="_sene" properties='{"alx":"map","aly":"map","width":1000,"height":600,"x":-180,"y":47}'>
+	<!--  <displayObject definition="farmScene.view.Bg" properties='{"x":0, "y":0}' />  -->
+		<displayObject name="buildingList" definition="farmScene.view.buildingList" properties='{"x":0, "y":0}' />
+		<displayObject name="farmerRoom" definition="farmScene.view.farmerRoom" properties='{"x":55, "y":355, "visible":false}' />
+			<!-- 农场列表-->
+	<container name="farmPanel" properties='{"x":20, "y":-8, "farmeItemPos":["483:216","398:257","314:299","231:341","572:257","487:298","403:340","320:382","656:299","571:340","487:382","404:424","739:342","654:383","570:425","487:467"]}' >
+		<sprite name="farmC" properties='{"x":0, "y":0}' />
+		<sprite name="farmEventPanel" properties='{"x":0, "y":0}' />
+		
+	</container>
+	<!-- 牧场列表-->
+	<container name="fieldPanel" properties='{"x":20, "y":-8, "fieldItemPos":["483:216","398:257","314:299","231:341","572:257","487:298","403:340","320:382","656:299","571:340","487:382","404:424","739:342","654:383","570:425","487:467"]}' >
+		<sprite name="fieldC" properties='{"x":0, "y":0}' />
+		<sprite name="farmEventPanel" properties='{"x":0, "y":0}' />
+	</container>
+		<!-- 矿场列表-->
+	<container name="minePanel" properties='{"x":20, "y":-8, "mineItemPos":["483:216","398:257","314:299","231:341","572:257","487:298","403:340","320:382","656:299","571:340","487:382","404:424","739:342","654:383","570:425","487:467"]}' >
+		<sprite name="mineC" properties='{"x":0, "y":0}' />
+		<sprite name="farmEventPanel" properties='{"x":0, "y":0}' />
+	</container>
+	
+
+	</BXRender>
+	
+<BXGroup name="_tools" properties='{"aly":"bottom","width":640,"y":670,"alx":"fit"}'>
+	<BXActiveIcon name="_farm" properties='{"y":0,"skin":"BW.gameUI.icon.nongchang","x":0}'/>
+	<!--<BXActiveIcon name="_fact" properties='{"y":0,"skin":"BW.home.toolBar2.friend","x":102}'/>-->
+	<BXActiveIcon name="_mine" properties='{"y":0,"skin":"BW.gameUI.icon.kuangchang","x":120}'/>
+	<BXActiveIcon name="_field" properties='{"y":0,"skin":"BW.gameUI.icon.muchang","x":240}'/>
+	<BXActiveIcon name="_horse" properties='{"y":0,"skin":"BW.gameUI.icon.machang","x":360}'/>
+</BXGroup>
+	
+	<BXActiveIcon name="_quit" properties='{"skin":"BW.gameUI.icon.town", "y":670, "x":520}'/>
+	<buttonBasic name="gainBtn" properties='{"x":560, "y":590,"skin":"farmScene.btn.gain"}' />
+	<!--displayObject name="btnBg" definition="farmScene.view.btnbg" properties='{"x":300, "y":564}' />
+	<buttonBasic name="bagBtn" properties='{"x":393, "y":555,  "skin":"farmScene.btn.bag"}' />
+	<buttonBasic name="cookingBtn" properties='{"x":456, "y":560, "skin":"farmScene.btn.cooking"}' />
+	<buttonBasic name="pharmacyBtn" properties='{"x":530, "y":545,  "skin":"farmScene.btn.pharmacy"}' />
+	<buttonBasic name="recordBtn" properties='{"x":593, "y":550,  "skin":"farmScene.btn.record"}' /-->
+
+
+
+	<!--itemGroup name="tabBtnGroup" properties='{"x":936, "y":420, "layout":"vertical"}' />
+	<buttonBasic name="horseBtn" properties='{"x":936, "y":379,  "skin":"farmScene.btn.Horse", "visible":false, "data":3}' group="tabBtnGroup"/>
+	<buttonBasic name="mineBtn" properties='{"x":936, "y":420,  "skin":"farmScene.btn.Mine", "visible":false, "data":2}' group="tabBtnGroup"/>
+	<buttonBasic name="farmBtn" properties='{"x":936, "y":461,  "skin":"farmScene.btn.farm", "data":0}' group="tabBtnGroup"/>
+	<buttonBasic name="fieldBtn" properties='{"x":936, "y":502,"skin":"farmScene.btn.field", "data":1}' group="tabBtnGroup"/>
+	<buttonBasic name="visitsBtn" properties='{"x":936, "y":502,"skin":"farmScene.btn.visits", "visible":false,"data":4}' group="tabBtnGroup"/>
+	<buttonBasic name="villageBtn" properties='{"x":936, "y":543, "skin":"farmScene.btn.village"}' group="tabBtnGroup"/-->
+
+
+
+	<!-- 收获信息提示 -->
+    <sprite name="rewardTips" properties='{"x":200, "y":360}' />
+	<imageLoader name="goodIL" properties='{"pathFormatName":"tech32", "x":0, "y":560}' /><!-- 农民潜力科技-->
+
+	<!-- 互访界面-->
+	<!--container name="visitsPanel" properties='{"x":0, "y":0,"bgWidth":600, "bgHeight":410,"titleID":"460915"}' >
+		<displayObject definition="farmScene.view.visitsBg" properties='{"x":21, "y":42}' />
+		<itemGroup name="tabBtnGroup" properties='{"x":-22, "y":35, "layout":"vertical"}' />
+		<button name="tabBtn1" properties='{"x":0, "y":0, "styleName":"button4", "labelID":"460906"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		<button name="tabBtn2" properties='{"x":0, "y":0, "styleName":"button4", "labelID":"460907"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		<label name="farmSayText" properties='{"x":44, "width":179, "y":61, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		
+		<linkText  name="returnText" properties='{"style":{"overStyle":{"underline":true}},"x":480, "y":74, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textType":"htmlText"}'/> 
+		<displayObject name="strengthProgress" definition="farmScene.view.strengthProgress" properties='{"x":393, "y":76}' />
+		<label properties='{"x":344, "y":74, "width":60,  "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010","textID":"460902"}'/>
+		<label name="strengthNumText" properties='{"x":400, "y":74, "width":70,  "height":16, "size":12, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<page name="page" properties='{"x":395, "y":355,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":76 },
+								"labelProp":{"x":20, "y":0, "width":55, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+								}' />
+		<list name="farmFieldList" properties='{"x":319, "y":96, "columnCount":1, "rowCount":4, "horizontalGap":1, "verticalGap":3}' />
+	</container-->
+	<!--记录面板-->
+	<!--container name="recordPanel" properties='{"initX":380, "initY":200,"bgWidth":304, "bgHeight":280,"titleID":"460916"}' >
+		<list name="infoList" properties='{"x":40, "y":75, "columnCount":1, "rowCount":100, "horizontalGap":1, "verticalGap":1}' />
+		<scrollBar name="infoListvsb" target="infoList" properties='{"styleName":"vScrollBar1", "autoDisplay":true, "x":265, "y":43, "size":220, "disArea":{"x":10, "y":52, "width":247, "height":190}, "visible":true}' />
+		<label name="tipsText" properties='{"x":80, "y":130, "width":160,  "height":30, "size":16, "autoSize":"none", "bold":true,"align":"left", "color":"0xFFCC00","textID":"460917", "stroke":"0x302010"}'/>
+	</container-->
+	<!--农场主信息面板-->
+	<container name="farmOwerPanel" properties='{"x":373, "y":529}' >
+		<displayObject name="bg" definition="farmScene.view.farmOwnerInfoBg" properties='{"x":0, "y":0}' />
+		<displayObject definition="farmScene.view.grid" properties='{"x":16, "y":16}' />
+		<imageLoader name="heroPic" properties='{"pathFormatName":"generalPic40", "x":19, "y":19, "width":40, "height":40}' />
+		<label name="nameText" properties='{"x":65, "y":18, "width":130,  "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<label name="levelText" properties='{"x":65, "y":40, "width":100,  "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+	</container>
+	
+	
+	<!--事件面板-->
+	<farmEventPanel properties='{"x":0, "y":0}'>
+		<displayObject definition="farmScene.view.eventBg" properties='{"x":0, "y":0}' />
+		<displayObject name="eventBtn" definition="farmScene.btn.eventBtn" properties='{"x":165, "y":107}' />
+		<displayObject definition="farmScene.icon.seedBg"  properties='{"x":96 , "y":106}'/>
+		<imageLoader name="eventpic" properties='{"pathFormatName":"farmerPic", "x":6, "y":29, "width":82, "height":117}' />
+		<imageLoader name="goodsPic" properties='{"pathFormatName":"gemstone32", "x":97, "y":108, "width":32, "height":32}' />
+		<label name="eventName" properties='{"x":81, "y":6, "width":100,  "height":16, "size":12,"bold":true, "autoSize":"none", "align":"left", "color":"0xffffff", "stroke":"0x302010"}'/>
+		<label name="numText" properties='{"x":137, "y":128, "width":100,  "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<label name="introText" properties='{"x":99, "width":102, "y":43, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</farmEventPanel>
+	
+	<!--事件结果面板-->
+	<container name="farmEventResultPanel" properties='{"x":343, "y":329}' >
+		<displayObject definition="farmScene.view.eventResultBg" properties='{"x":0, "y":0}' />
+		<mcLabel name="msgText" properties='{"multiColor":"gameUI.color.Tips9","x":29, "y":14, "stroke":"0x302010", "labelProp":{"multiline":true,"autoSize":"left","size":14,"bold":true,"align":"center","width":255,"font":"宋体"}}'/>
+		<mcLabel name="gainText" properties='{"multiColor":"gameUI.color.Tips9","x":78, "y":50, "stroke":"0x302010", "labelProp":{"autoSize":"left","size":14,"bold":true,"align":"center","width":200,"height":30,"font":"宋体"}}'/>
+	</container>
+
+	
+	<!-- 马场列表  马场相关的界面单独配置-->
+	<horsePanel properties='{"x":0, "y":0, "itemPos":["656:299","571:340","487:382","404:424","739:342","654:383","570:425","487:467"]}' >
+			<displayObject name="horeHome" definition="farmScene.view.HorseHome" properties='{"x":317, "y":125}' />
+			<displayObject name="horseRace" definition="farmScene.view.HorseRace" properties='{"x":133, "y":237}' />
+			<sprite name="itemC" properties='{"x":0, "y":0}' />
+
+			<!-- 马夫面板-->
+			<container name="hostlerPanel" properties='{
+				"styleName":"panel2", "bgWidth":570, "bgHeight":430,"titleID":"460842","hideScene":false,"x":30,"y":170
+			}'>
+			<displayObject definition="gameUI.icon.Layer" properties='{"x":28, "y":64, "width":514,  "height":240}' />
+			<displayObject definition="gameUI.icon.Layer" properties='{"x":28, "y":308, "width":514,  "height":92}' />
+			<displayObject definition="gameUI.icon.Pic70BG" properties='{"x":95, "y":113,"width":84,"height":84}' />
+			<displayObject name="priceIcon" definition="gameUI.icon.Price" properties='{"x":230, "y":260}' />
+			<displayObject definition="farmScene.cion.BarBg" properties='{"x":300, "y":150}' />
+			<displayObject name="expBar" definition="gameui.icon.expbar" properties='{"x":300, "y":150}' />
+
+			<imageLoader name="hostlerIL" properties='{"y":118,"fileName":"nf4","x":100,"pathFormatName":"farmerPic","width":75,"height":75}' />
+			<displayObject name="levelIcon" definition="farmScene.icon.farmerLevel" properties='{"y":177,"width":44,"height":16,"x":103}' />
+			<label name="nameText" properties='{"x":220, "y":94, "width":300,  "height":44, "size":24, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"460842"}'/>
+			<label name="levelText" properties='{"x":220, "y":144, "width":120,  "height":44, "size":24, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+			<label name="expText" properties='{"x":360, "y":144, "width":200,  "height":44, "size":24, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+			<label name="addText" properties='{"x":220, "y":194, "width":300,  "height":44, "size":24, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+
+			<label name="costText" properties='{"y":242,"autoSize":"none","stroke":"0x302010","size":24,"x":270,"align":"left","color":"0xFFFFCC","width":200,"height":44}'/>
+			<button name="upgradeBtn" properties='{"labelID":460841,"x":60,"y":232,"width":160,"styleName":"button5","height":60}' />
+			<label properties='{"x":54, "y":320, "width":480,  "height":100, "multiline":true,  "size":24, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "textID":"460845"}'/>
+			</container>
+			
+		<!-- 养马师个人信息简表-->
+		 <container name="hostlerInfView" properties='{"x":425, "y":214}'>
+			<displayObject definition="farmScene.view.HostlerInf"  properties='{"x":0 , "y":0,"mouseEnabled":true}'/>
+			<imageLoader name="hostlerImgLoader" properties='{"pathFormatName":"farmerPic", "fileName":"nf4_small", "x":18, "y":5, "width":40, "height":40}' />
+			<label name="hostlerLevelText" properties='{"x":2, "y":28, "width":80,  "height":24, "size":20, "autoSize":"none", "align":"center", "color":"0xe3eb98", "stroke":"0x302010"}'/>
+			<label name="hostlerNameText" properties='{"x":60, "y":2, "width":150,  "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xe3eb98", "stroke":"0x302010", "textID":"460842"}'/>
+			<displayObject name="hostlerLevelIcon" definition="farmScene.icon.farmerLevel" properties='{"x":72, "y":30}' />
+	     </container>
+		<!-- 地块信息面板
+			<container name="itemInfoPanel" properties='{
+				"styleName":"panel2", "initX":400, "initY":190, "bgWidth":290, "bgHeight":250, "msgTextProp":{"x":120, "y":145, "width":280,  "height":20, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFDD", "stroke":"0x302010", "mouseEnabled":false, "omission":false}, "colorArr":["0xFFFFDD","0xFFFF00","0xE46565","0xA861DC"], "moveHeight":50
+			}'>
+			<displayObject definition="gameUI.icon.Layer" properties='{"x":14, "y":32, "width":262,  "height":105}' />
+			<displayObject definition="gameUI.icon.Layer" properties='{"x":14, "y":138, "width":262,  "height":97}' />
+			<displayObject definition="gameUI.icon.Grid1" properties='{"x":31, "y":38}' />
+			<imageLoader name="productIL" properties='{"pathFormatName":"horse32",  "x":35, "y":42, "width":32, "height":32}' />
+			<label name="nameText" properties='{"x":90, "y":40, "width":180,  "height":20,"bold":true, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+			<label name="attackText" properties='{"x":90, "y":67, "width":180,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+			<label name="hungryText" properties='{"x":90, "y":83, "width":180,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":true}'/>
+			<label name="leftRunCountText" properties='{"x":90, "y":100, "width":180,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+			<label properties='{"x":17, "y":145, "width":180,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xDEBB46", "stroke":"0x302010", "mouseEnabled":false, "textID":"460851"}'/>
+			<button name="abandonBtn" properties='{"x":17, "y":80, "width":70, "styleName":"button3", "labelID":"460814"}'/>
+			<button name="changBtn" properties='{"x":17, "y":108, "width":70, "styleName":"button3", "labelID":"460815"}'/>
+			<list name="foodList" properties='{"x":26, "y":169, "rowCount":1, "columnCount":4, "horizontalGap":2, "verticalGap":2, "defaultSelected":false}' />
+			<displayObject name="breakOutMC" definition="farmScene.cion.BreakOut" properties='{"x":66, "y":120, "visible":false}' />
+			<imageLoader name="goodIL1" properties='{"pathFormatName":"tech32",  "x":230, "y":36, "width":32, "height":32}' />
+			<imageLoader name="goodIL2" properties='{"pathFormatName":"tech32",  "x":195, "y":36, "width":32, "height":32}' />
+		</container>-->
+
+
+	</horsePanel>
+	<!-- 农场地块-->
+	<farmItem properties='{"x":0, "y":0, "farmerPos":["29:-6","-3:9","-22:-2"], "delayTime":15, "farmerRestTime":8, "farmerState":3, "eventDelayShow":0.05, "eventDelayHide":0.2, "eventDuration":5, "eventOffY":5}' >
+		<displayObject name="farmLand" definition="farmScene.view.farmItem" properties='{"x":0, "y":0}' />
+		<displayObject name="vip" definition="farmScene.icon.vip" properties='{"x":-22, "y":-33, "visible":false}' />
+		<displayObject name="timeBg" definition="farmScene.icon.timeBg" properties='{"x":-28, "y":-63}' />
+		<label name="timeText" properties='{"x":-28, "y":-61, "width":58,  "height":20, "size":12, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false}'/>
+
+		<displayObject name="farmerMC" definition="farmScene.icon.farmFarmer" properties='{"x":29, "y":-6}' />
+
+		<displayObject name="productImgBg" definition="farmScene.view.ProductImgBg" properties='{"x":-17, "y":-35, "visible":false}' />
+		<imageLoader name="productIL" properties='{"pathFormatName":"farmProduct32",  "x":-15, "y":-33, "width":32, "height":32, "visible":false}' />
+		<label name="countText" properties='{"x":-18, "y":-17, "width":37,  "height":20, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}'/>
+		<!--<label name="tipText" properties='{"x":-32, "y":0, "width":67,  "height":20, "underline":true, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false, "textID":"460234", "visible":false}'/>-->
+		<displayObject name="farmerStar" definition="farmScene.icon.farmerLevel" properties='{ "y":-48, "visible":true}' />
+		<displayObject name="eventMC" definition="farmScene.effect.event" properties='{"x":-3, "y":-17, "visible":false}' />
+	</farmItem>
+	<!-- 牧场地块-->
+	<fieldItem properties='{"x":0, "y":0, "farmerPos":["-34:10:1","29:-8:-1"], "fowlPos":["-25:13","-12:23", "6:7", "25:11", "31:7"], "delayTime":15, "farmerRestTime":8, "farmerState":3, "fowlStateMaxTime":20, "eventDelayShow":0.05, "eventDelayHide":0.2, "eventDuration":5, "eventOffY":5}' >
+		<displayObject name="fieldLand" definition="farmScene.view.fieldItem" properties='{"x":0, "y":0}' />
+		<displayObject name="vip" definition="farmScene.icon.vip" properties='{"x":-22, "y":-33, "visible":false}' />
+		<displayObject name="timeBg" definition="farmScene.icon.timeBg" properties='{"x":-32, "y":-63}' />
+		<label name="timeText" properties='{"x":-32, "y":-61, "width":58,  "height":20, "size":12, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false}'/>
+
+		<displayObject name="farmerMC" definition="farmScene.icon.fieldFarmer" properties='{"x":29, "y":-6}' />
+		<displayObject name="animalMC" definition="farmScene.icon.animal" properties='{}' />
+
+		<displayObject name="productImgBg" definition="farmScene.view.ProductImgBg" properties='{"x":-20, "y":-35, "visible":false}' />
+		<imageLoader name="productIL" properties='{"pathFormatName":"farmProduct32",  "x":-18, "y":-33, "width":32, "height":32, "visible":false}' />
+		<label name="countText" properties='{"x":-20, "y":-17, "width":37,  "height":20, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}'/>
+		<!--<label name="tipText" properties='{"x":-32, "y":0, "width":67,  "height":20, "underline":true, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false, "textID":"460234", "visible":false}'/>-->
+		<displayObject name="farmerStar" definition="farmScene.icon.farmerLevel" properties='{ "y":-48, "visible":true}' />
+		<displayObject name="eventMC" definition="farmScene.effect.event" properties='{"x":-13, "y":-17, "visible":false}' />
+	</fieldItem>
+	<!-- 矿场地块-->
+	<mineItem properties='{"x":0, "y":0, "farmerPos":["22:3:1","25:9:-1"], "delayTime":15, "farmerRestTime":8, "farmerState":3, "eventDelayShow":0.05, "eventDelayHide":0.2, "eventDuration":5, "eventOffY":5}' >
+		<displayObject name="farmLand" definition="farmScene.view.mineItem" properties='{"x":0, "y":0}' />
+		<displayObject name="timeBg" definition="farmScene.icon.timeBg" properties='{"x":-32, "y":-63}' />
+		<label name="timeText" properties='{"x":-32, "y":-61, "width":58,  "height":20, "size":12, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false}'/>
+      	<displayObject name="tipsIcon" definition="farmScene.icon.tips" properties='{"x":-22, "y":-37, "visible":false}' />
+		<label name="tipsText" properties='{"x":-19, "y":-29,"width":40,  "height":20, "bold":true, "size":12, "autoSize":"none", "align":"center", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false, "visible":false,"textID":"460862"}'/>
+
+		<displayObject name="farmerMC" definition="farmScene.icon.farmFarmer" properties='{"x":29, "y":-6}' />
+
+		<displayObject name="productImgBg" definition="farmScene.view.ProductImgBg" properties='{"x":-20, "y":-35, "visible":false}' />
+		<imageLoader name="productIL" properties='{"pathFormatName":"farmProduct32",  "x":-18, "y":-33, "width":32, "height":32, "visible":false}' />
+		<label name="countText" properties='{"x":-21, "y":-18, "width":37,  "height":20, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}'/>
+		<!--<label name="tipText" properties='{"x":-32, "y":0, "width":67,  "height":20, "underline":true, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false, "textID":"460234", "visible":false}'/>-->
+		<displayObject name="farmerStar" definition="farmScene.icon.farmerLevel" properties='{ "y":-48, "visible":true}' />
+		<displayObject name="eventMC" definition="farmScene.effect.event" properties='{"x":-3, "y":-17, "visible":false}' />
+	</mineItem>
+	<!-- 马场地块-->
+	<horseItem properties='{"x":0, "y":0, "farmerPos":["-34:10:1","29:-8:-1"], "fowlPos":["-12:23", "6:7", "25:11", "31:7", "110:45", "55:55"], "delayTime":15, "farmerRestTime":8, "farmerState":3, "fowlStateMaxTime":20, "eventDelayShow":0.05, "eventDelayHide":0.2, "eventDuration":5, "eventOffY":5}' >
+		<displayObject name="itemLand" definition="farmScene.view.horseItem" properties='{"x":0, "y":0}' />
+
+		<!-- <displayObject name="farmerMC" definition="farmScene.icon.fieldFarmer" properties='{"x":29, "y":-6}' />-->
+		<sprite name="animalC" />
+
+		<displayObject name="productImgBg" definition="farmScene.view.ProductImgBg" properties='{"x":21, "y":-1, "visible":false}' />
+		<imageLoader name="productIL" properties='{"pathFormatName":"horse32",  "x":23, "y":1, "width":32, "height":32, "visible":false}' />
+		<label name="countText" properties='{"x":22, "y":17, "width":33,  "height":20, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}'/>
+		<label name="tipText" properties='{"x":0, "y":34, "width":120,  "height":28, "underline":true, "autoSize":"none", "align":"center", "color":"0xCBCD67", "stroke":"0x302010", "mouseEnabled":false, "textID":"460840", "visible":false}'/>
+	</horseItem>
+
+	<!-- 消息滚动提示面板 -->
+	<container name="msgPanel" properties='{"x":665, "y":20, "maxMsgCount":24, "delayShow":0.2, "mouseEnabled":false}'>
+		<MsgText properties='{"x":0,"y":0, "width":330, "height":18, "size":12, "bold": false, "autoSize":"none", "align":"right", "color":"0xFFCC00", "stroke": "0x2D261E", "mouseEnabled":false ,"duration":10, "delay":0 ,"showEffDuration":0, "hideEffDuration":1.3 ,"topLayerShow":false, "autoRemove":true}'/>
+	</container>
+
+	<!-- 建筑信息-->
+	<container name="buildingInfo" properties='{
+		"styleName":"panel2", "initX":270, "initY":120, "bgWidth":439, "bgHeight":298
+	}'>
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":13, "y":30, "width":205, "height":254}' />
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":220, "y":30, "width":205, "height":254}' />
+		<displayObject definition="farmScene.view.buildingInfo" properties='{"x":0, "y":0}' />
+		<displayObject definition="gameUI.icon.Line" properties='{"x":223, "y":60, "width":200}' />
+		<displayObject name="copperIcon" definition="gameUI.icon.Copper" properties='{"x":59, "y":216}' />
+		<displayObject name="woodIcon" definition="gameUI.icon.Wood" properties='{"x":124, "y":216}' />
+		<sprite name="buildingC" properties='{"x":109, "y":155}'/>
+		<label properties='{"x":228, "y":35, "width":190,  "height":20, "size":14, "autoSize":"none", "bold":true,  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"460507"}'/>
+		<label name="maxLevelText" properties='{"x":19, "y":215, "width":190,  "height":20, "size":14, "autoSize":"none", "bold":true,  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "textID":"460509", "visible":false}'/>
+
+		<label name="nameText" properties='{"x":38, "y":180, "width":156,  "height":20, "bold":false,  "size":12, "autoSize":"none", "align":"center", "color":"0xffffcc", "stroke":"0x302010"}'/>
+		<label name="copperText" properties='{"x":75, "y":214, "width":50,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<label name="woodText" properties='{"x":145, "y":214, "width":50,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<list name="techList" properties='{"x":228, "y":70, "columnCount":1, "rowCount":5, "horizontalGap":6, "verticalGap":6}' />
+
+		<button name="upgradeBtn" properties='{"x":80, "y":243, "styleName":"button3", "labelID":"460508"}' />
+		<displayObject name="upgradeMC" definition="farmScene.effect.buildingUpgrade" properties='{"x":64, "y":121, "visible":false}' />
+	</container>
+
+
+	<!-- 种子列表-->
+	<BXRender name="farmerInfo" properties='{"width":616,"height":790,"alx":"fit","aly":"fit","addto":false}'>
+	<displayObject definition="BW.Com.listBack" properties='{"y":0,"alx":"fit","x":0,"aly":"fit","width":640,"height":820}'/>
+	<displayObject definition="gameUI.bg.GimpFrameNew" properties='{"y":85,"width":615,"height":115,"x":320}'/>
+	<displayObject definition="gameUI.icon.BlackBG" properties='{"y":141,"width":580,"height":530,"x":31}'/>
+		<displayObject definition="friends.king.Bgq" properties='{"x":45,"y":60}'/>
+			<BXList name="_seeds" properties='{"aly":"fit","acc":true,"itemSize":145,"x":45,"dir":"v","y":145,"width":550,"styleName":"VList","alx":"fit","height":510}'>				
+			<BXRender properties='{"y":0,"height":140,"width":550}'>
+				<BXBackBar name="_back" properties='{"clip":[20,20,20,20],"image":"BW.Com.listItemBack","x":0,"y":0,"width":500,"height":130}'/>
+				<BXButton name="_plant" properties='{"alx":"right","x":415,"y":35,"width":120,"styleName":"BXButton1","height":60,"label":"种植","common":true}'/>
+				<BXButton name="_mine" properties='{"alx":"right","x":415,"y":35,"width":120,"styleName":"BXButton1","height":60,"label":"开采","common":true}'/>
+				<BXButton name="_field" properties='{"alx":"right","x":415,"y":35,"width":120,"styleName":"BXButton1","height":60,"label":"养殖","common":true}'/>
+				<BXRender name="_opt" properties='{"y":12,"width":359,"height":123,"x":20}'>
+					<displayObject definition="BW.Com.iconBack72b" properties='{"y":0,"width":80,"height":80,"x":27,"cache":true}'/>
+					<imageLoader name="_icon" properties='{"x":31,"pathFormatName":"seed32","y":4,"width":72,"fileName":"ji","height":72}'/>
+					<label name="_seed" properties='{"align":"center","y":80,"autoSize":"none","stroke":0,"size":24,"x":-16,"text":"(食)土豆种子","color":"0xffffff","width":181,"styleName":"label","height":30}'/>
+					<label properties='{"align":"right","y":73,"autoSize":"none","stroke":0,"size":24,"x":125,"text":"成熟:","color":"0xc894ff","width":113,"styleName":"label","height":28}'/>
+					<label properties='{"align":"right","y":40,"autoSize":"none","stroke":0,"size":24,"x":125,"text":"产出:","color":"0xd0ff90","width":113,"styleName":"label","height":28}'/>
+					<label properties='{"align":"right","y":8,"autoSize":"none","stroke":0,"size":24,"x":125,"text":"需要等级:","color":"0xffc040","width":113,"styleName":"label","height":28}'/>
+					<label name="_level" properties='{"y":8,"autoSize":"none","size":24,"width":200,"x":240,"text":"5级","color":"0xffc040","stroke":0,"styleName":"label","height":28}'/>
+					<label name="_type" properties='{"y":40,"autoSize":"none","stroke":0,"size":24,"x":240,"text":"土豆","color":"0xd0ff90","width":200,"styleName":"label","height":28}'/>
+					<label name="_time" properties='{"y":73,"autoSize":"none","stroke":0,"size":24,"x":240,"text":"10分钟","color":"0xc894ff","width":200,"styleName":"label","height":28}'/>
+				</BXRender>
+			</BXRender>
+		</BXList>
+
+		<displayObject name="_add" definition="farmScene.view.Arrow" properties='{"x":130, "y":-179, "visible":false,"alx":"map","aly":"map"}' />
+		<displayObject name="upgradeMC" definition="farmScene.effect.buildingUpgrade" properties='{"x":-49, "y":-77, "visible":false,"alx":"map","aly":"map"}' />
+		<BXBackBar name="_back" properties='{"clip":[20,20,20,20],"image":"BW.Com.listItemBack","x":5,"y":711,"width":630,"alx":"fit","height":86}'/>		
+		<label name="_level" properties='{"y":43,"autoSize":"none","width":72,"x":198,"text":"Lv20","color":"0xffffff","stroke":0,"styleName":"label","height":24}'/>
+		<BXButton name="_return" properties='{"x":505,"y":725,"width":120,"styleName":"BXButton1","height":60,"label":"返回"}'/>
+		<label name="_tip" properties='{"y":690,"autoSize":"none","stroke":0,"x":175,"color":"0xffffff","width":340,"styleName":"label","height":26}'/>
+		<label name="_farmerName" properties='{"y":43,"autoSize":"none","styleName":"label","x":124,"text":"黄田华","color":"0xcf1f8f","stroke":0,"width":72,"height":24}'/>
+		<BXButton name="_powerup" properties='{"alx":"right","x":16,"y":725,"width":120,"styleName":"BXButton1","height":60,"label":"增产"}'/>
+		<label properties='{"y":741,"autoSize":"none","alx":"right","x":140,"text":"每日可增产一次","color":"0xffffff","stroke":0,"width":150,"styleName":"label","height":24}'/>
+		<label name="_gold" properties='{"align":"center","y":36,"autoSize":"none","size":24,"width":133,"x":464,"text":"30金币","color":"0xffcf020","stroke":0,"styleName":"label","height":31}'/>
+		<BXButton name="_addstar" properties='{"alx":"right","x":469,"y":65,"width":120,"styleName":"button3","height":60,"label":"加星"}'/>
+		
+		<label name="_levelInfo" properties='{"align":"left","y":98,"autoSize":"none","styleName":"label","size":20,"x":124,"text":"0-->25%","color":"0xffb020","stroke":0,"width":335,"height":27}'/>
+		<label properties='{"align":"left","y":69,"autoSize":"none","styleName":"label","size":20,"x":124,"text":"加星(可提高产量和满仓上限)","color":"0xffffff","stroke":0,"width":350,"height":27}'/>	
+						
+		<BXRender name="_header" properties='{"y":43,"width":84,"height":84,"x":33}'>
+			<displayObject definition="BW.Com.iconBack72b" properties='{"y":0,"width":84,"cache":true,"height":84,"x":0}'/>
+			<imageLoader name="_farmer" properties='{"pathFormatName":"farmerPic","fileName":"nf5","x":7,"y":7,"width":72,"height":72}'/>
+		</BXRender>
+		
+		<!-- olddisplayObject  definition="farmScene.view.seedList" properties='{"x":0, "y":0}' />
+
+		<displayObject  definition="gameUI.icon.Pic70BG" properties='{"x":-100, "y":-179}' />
+		<imageLoader name="farmerIL" properties='{"pathFormatName":"farmerPic", "fileName":"nf1", "x":-98 ,"y":-177, "width":70, "height":70}' />
+		<list name="seedList" properties='{"x":-104, "y":-73, "columnCount":6, "rowCount":2, "horizontalGap":1, "verticalGap":3}' />
+		<label name="listTitleText" properties='{"x":-88, "y":-203, "width":176,  "height":20, "size":14, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "textID":"460233"}'/>
+		<label name="farmerNameText" properties='{"x":-28, "y":-173, "width":130,  "height":20, "size":14, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label name="farmerLevelText" properties='{"x":-97, "y":-124, "width":69,  "height":20, "size":12, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label name="farmerTipText" properties='{"x":-28, "y":-153, "width":130,  "height":44, "size":12, "autoSize":"none", "align":"center", "multiline":true, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label properties='{"x":-100, "y":-97, "width":195,  "height":20,  "size":12, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "textID":"460613", "border":false}'/>
+
+		<displayObject name="gold" definition="gameUI.icon.Gold" properties='{"x":-17, "y":-121}' />
+		<label name="costText" properties='{"x":-2, "y":-124, "width":130,  "height":44, "size":12, "autoSize":"none", "align":"left", "multiline":true, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+
+		<button name="strengthenBtn" properties='{"x":28, "y":-131, "styleName":"button3", "labelID":"460232"}' />
+
+		<displayObject name="upgradeMC" definition="farmScene.effect.buildingUpgrade" properties='{"x":-49, "y":-77, "visible":false}' />
+		<displayObject name="add" definition="farmScene.view.Arrow" properties='{"x":130, "y":-179, "visible":false}' /-->
+
+	</BXRender>
+
+	<!-- 农夫面板 -->
+	<container name="farmManagePanel" properties='{
+		"titleID":"460601", "initX":215, "initY":120, "bgWidth":600, "bgHeight":400, "closeBtnPorp"		: {"skin":"skin.CloseBtn", "x":258, "y":13}
+	}'>
+		<displayObject definition="farmScene.view.farmerManage"  properties='{"x":0 , "y":0}'/>
+		<displayObject name="farmerListC" definition="farmScene.view.farmerList"  properties='{"x":0 , "y":0}'/>
+		<displayObject name="farmerLevel" definition="farmScene.icon.farmerLevel"  properties='{"x":468 , "y":71}'/>
+
+		<label name="nameText" properties='{"x":466,"y":49, "width":105, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="statusText" properties='{"x":410,"y":111, "width":115, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="levelText" properties='{"x":435,"y":77, "width":20, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+
+		<button name="strengthenBtn" properties='{"x":534, "y":73, "styleName":"button6", "labelID":"460602", "enabled":false}' />
+		<button name="resumeBtn" properties='{"x":534, "y":109, "styleName":"button6", "labelID":"460603", "enabled":false}' />
+
+		<label properties='{"x":513,"y":220, "width":70, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"460604"}'/>
+		<label properties='{"x":513,"y":242, "width":70, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"460605"}'/>
+		<label properties='{"x":513,"y":266, "width":70, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"460606"}'/>
+		<label properties='{"x":513,"y":289, "width":70, "height":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"460607"}'/>
+		<label properties='{"x":28,"y":325, "width":545, "height":50, "size":12, "multiline": true, "autoSize":"none", "align":"left", "color":"0x9DAC4C", "stroke": "0x2D261E", "textID":"460609"}'/>
+	</container>
+
+	<!-- 包裹的呈视器 -->
+	<BagRenderer>
+		<displayObject definition="farmScene.view.seedItemBg"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="itemIL" properties='{"pathFormatName":"farmProduct32",  "x":4, "y":4, "width":32, "height":32}' />
+		<label  name="countText" properties='{"x":4, "y":25, "width":35, "height":15,  "autoSize":"none", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</BagRenderer>
+	<!-- 种子的呈视器 -->
+	 <SeedRenderer properties='{"itemHeight":32}'>
+		<displayObject definition="farmScene.icon.seedBg"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="seedIL" properties='{"pathFormatName":"seed32",  "x":1, "y":1, "width":32, "height":32}' />
+		<label name="subTypeText"  properties='{"size":12, "autoSize":"none", "align":"right", "width":33, "height":23, "x":0, "y":18, "color":"0xffffff", "stroke":"0x302010"}'/>
+	</SeedRenderer>
+	<!-- 马崽的呈视器 -->
+	 <HorseSeedRenderer properties='{"itemHeight":32}'>
+		<displayObject definition="farmScene.icon.seedBg"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="seedIL" properties='{"pathFormatName":"seed32",  "x":1, "y":1, "width":32, "height":32}' />
+		<label name="subTypeText"  properties='{"size":12, "autoSize":"none", "align":"right", "width":33, "height":23, "x":0, "y":18, "color":"0xffffff", "stroke":"0x302010"}'/>
+	</HorseSeedRenderer>
+	<!-- 科技的呈视器 -->
+	<TechRenderer properties='{}'>
+		<label  name="introText" properties='{"x":0, "y":0, "width":275,  "multiline":true, "autoSize":"left", "leading":5, "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+	</TechRenderer>
+	<!--农庄主 呈现器-->
+	<farmOwnerRenderer properties='{"itemHeight":60}'>
+		<displayObject name="picBack" definition="farmScene.view.farmOwnerBg" properties='{"x":0 , "y":0, "mouseEnabled":false}'/>
+		<imageLoader name="heroPic" properties='{"pathFormatName":"generalPic40", "x":13, "y":13, "width":40, "height":40}' />
+		<displayObject name="eventMark" definition="farmScene.view.eventMark" properties='{"x":46, "y":0,"visible":false}' />
+		<label name= "levelText" properties='{"x":12, "y":40, "width":43, "height":23,"autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010"}'/>
+		<label name= "nameText" properties='{"x":65, "y":10, "width":100, "height":23,"color":"0xCBCC66", "stroke":"0x302010"}'/>
+		<label name= "infoText" properties='{"x":65, "y":30, "width":100, "height":23,"color":"0xCBCC66", "stroke":"0x302010","visible":false}'/>
+	</farmOwnerRenderer>
+	<!--记事呈现器-->
+	<recordInfoRenderer properties='{"contentStrokeColor":"0x000000","normalColor":"0xffffff"}'>
+		<sprite name="contentC" />
+		<richText name="introText" parent="contentC" properties='{"x":0, "y":0, "width":210, "selectable":false, "color":"0xFFFFFF"}' />
+		<!--<label name="introText" properties='{"x":0, "width":210, "y":0, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />-->
+	</recordInfoRenderer>
+	<!--种子的tip -->
+	<seedTip properties='{"initWidth":190, "initHeight":125, "labelGap":6}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":20, "size":14, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="useLevelText" properties='{"x":12, "y":34, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":5, "y":57, "width":180}'/>
+		<label name="productText" properties='{"x":12, "y":68, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="product1Text" properties='{"x":12, "y":85, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="useTimeText" properties='{"x":12, "y":106, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":12, "width":165, "y":129, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</seedTip>
+	<!--马崽的tip -->
+	<horseSeedTip properties='{"initWidth":190, "initHeight":95, "labelGap":6}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":20, "size":14, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="costText" properties='{"x":12, "y":34, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":5, "y":57, "width":180}'/>
+		<label name="productText" properties='{"x":12, "y":68, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="useTimeText" properties='{"x":12, "y":106, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="attText" properties='{"x":12, "y":68, "width":165, "height":16, "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":12, "width":165, "y":90, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</horseSeedTip>
+
+
+
+</config>

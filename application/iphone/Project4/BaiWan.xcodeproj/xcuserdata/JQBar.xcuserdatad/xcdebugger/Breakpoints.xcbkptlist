@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1580"
+         endingLineNumber = "1580"
+         landmarkName = "FrameTexture::beginPaint(bool zoom20,bool bFlash)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2734"
+         endingLineNumber = "2734"
+         landmarkName = "RasterGL::drawRadialGradient( GLuint textureId )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2944"
+         endingLineNumber = "2944"
+         landmarkName = "RasterGL::drawOffScreen( bool bOff )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2922"
+         endingLineNumber = "2922"
+         landmarkName = "RasterGL::drawOffScreen( bool bOff )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2309"
+         endingLineNumber = "2309"
+         landmarkName = "RasterGL::drawSegment(const ccVertex2F &amp;from, const ccVertex2F &amp;to, float radius, const ccColor4F &amp;color)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "433902092.87982"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1397"
+         endingLineNumber = "1397"
+         landmarkName = "FrameTexture::GetPixels(int x,int y,int w,int h, XU8 *pdata,bool bUpdate )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "3418"
+         endingLineNumber = "3418"
+         landmarkName = "RasterGL::beginBlendMode(enBlendMode blendmode)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "3392"
+         endingLineNumber = "3392"
+         landmarkName = "RasterGL::enableVertexAttribs( unsigned int flags )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "3182"
+         endingLineNumber = "3182">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2810"
+         endingLineNumber = "2810"
+         landmarkName = "RasterGL::BeginPaint(float* bkColor)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "3401"
+         endingLineNumber = "3401"
+         landmarkName = "RasterGL::enableVertexAttribs( unsigned int flags )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2387"
+         endingLineNumber = "2387"
+         landmarkName = "RasterGL::drawLine()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2357"
+         endingLineNumber = "2357"
+         landmarkName = "RasterGL::drawSegment(const ccVertex2F &amp;from, const ccVertex2F &amp;to, float radius, const ccColor4F &amp;color)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2348"
+         endingLineNumber = "2348"
+         landmarkName = "RasterGL::drawSegment(const ccVertex2F &amp;from, const ccVertex2F &amp;to, float radius, const ccColor4F &amp;color)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2320"
+         endingLineNumber = "2320"
+         landmarkName = "RasterGL::drawSegment(const ccVertex2F &amp;from, const ccVertex2F &amp;to, float radius, const ccColor4F &amp;color)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1975"
+         endingLineNumber = "1975"
+         landmarkName = "RasterGL::Uninit()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1610"
+         endingLineNumber = "1610">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/sdisplay.cpp"
+         timestampString = "433904156.555433"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "699"
+         endingLineNumber = "699"
+         landmarkName = "DisplayList::SetCamera( SRECT* frame )"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2789"
+         endingLineNumber = "2789"
+         landmarkName = "RasterGL::BeginPaint(float* bkColor)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "2818"
+         endingLineNumber = "2818"
+         landmarkName = "RasterGL::EndPaint()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1538"
+         endingLineNumber = "1538"
+         landmarkName = "FrameTexture::beginPaint(bool zoom20,bool bFlash)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../../../src/flash/Raster_gl.cpp"
+         timestampString = "436593007.323488"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1604"
+         endingLineNumber = "1604"
+         landmarkName = "FrameTexture::endPaint()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "../ios/Src/OpenGLView.m"
+         timestampString = "436585311.111005"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "259"
+         endingLineNumber = "259"
+         landmarkName = "-glviewHide"
+         landmarkType = "5">
+      </FileBreakpoint>
+   </FileBreakpoints>
+</Bucket>

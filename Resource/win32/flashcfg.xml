@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE config SYSTEM "config.dtd">
+
+<defines>
+	<operate_define default_mouse_move_pace="5">
+			<!--ËµÃ÷Ä¬ÈÏµÄÊó±ê¹â±êÒÆ¶¯²½³¤£¬Ã¿´Î5ÏñËØ-->		
+		
+	</operate_define>
+
+	<display_define screen_direction="Auto" />
+	
+	</defines>

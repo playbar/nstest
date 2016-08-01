@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="gb2312"?>
+<wml>
+<card name="config">
+<p>
+<anchor>Config<go href="http" value="//wap.jiqu.com">
+<setvar name="UA" value="AppleiPhone;02070101.BS;IOS3.2;BWNBCS/2.7.1"/>
+<setvar name="Profile" value="http://nds1.nds.nokia.com/uaprof/NN82-1r100.xml"/>
+<setvar name="Accepts" value="*/*"/>
+<setvar name="Home" value="index.wml"/>
+<setvar name="Cookie" value="on"/>
+<setvar name="Host" value="http://m.jqbar.com"/>
+<setvar name="Help" value="client/help.wml"/>
+<setvar name="Days" value="http://m.jqbar.com/home/default.aspx"/>
+<setvar name="Search" value="http://www.google.cn/search?q="/>
+<setvar name="XID" value=""/>
+<setvar name="Protocol" value="http"/>
+<setvar name="Retries" value="2"/>
+<setvar name="Timeout" value="10"/>
+<setvar name="LocalPath" value="D:/local">
+<setvar name="Port" value="9201"/>
+<setvar name="Gateway" value="10.0.0.172"/>
+<setvar name="Colors" value="#FFF0F0F0,#FF000000,#FFFF0000,#FF6E6821,#FFAFFFFF,#FFFF00FF"/>
+<setvar name="CID" value="86660266"/>
+</go></anchor>
+</p>
+</card>
+
+<card name="bookmark" title="游戏互动">
+<p>
+<a href="http://m.jqbar.com">主站</a>
+<a href="http://test.jqbar.com">测试站</a>
+<a href="http://m.jqbar.com/test">内容测试站</a>
+<a href="http://t.jqbar.com">T测试站</a>
+<a href="http://m.jqbar.com/testweb/test/testlist.aspx">webgame测试站</a>
+<a href="http://test.jqbar.com/testupdate.aspx">升级测试站</a>
+</p>
+</card>
+
+<card name="bookmark" title="个人书签">
+</card>
+
+</wml>

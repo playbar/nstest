@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--将军府排行-->
+<config properties='{"initX":163 , "initY":102, "bgWidth":668, "bgHeight":438, "titleID":"580301"}'>
+
+	<displayObject properties='{"x":18, "y":39, "width":232, "height":262}' definition='gameUI.icon.Layer' />
+	<displayObject properties='{"x":26, "y":76, "width":216, "height":158}' definition='gameUI.icon.BlackBG' />
+	<displayObject properties='{"x":32, "y":209, "width":204, "height":20}' definition='gameUI.icon.TextBG' />
+	
+	<displayObject properties='{"x":18, "y":303, "width":232, "height":120}'  definition='gameUI.icon.Layer' />
+	<displayObject properties='{"x":81, "y":348, "width":108, "height":24}' definition='gameUI.icon.BlackBG' />
+	<displayObject properties='{"x":81, "y":375, "width":108, "height":24}' definition='gameUI.icon.BlackBG' />
+	
+	<displayObject properties='{"x":252, "y":39, "width":398, "height":384}'  definition='gameUI.icon.Layer' />
+	<displayObject properties='{"x":260, "y":76, "width":382, "height":310}' definition='gameUI.icon.BlackBG' />
+	
+	<imageLoader name="picIL" properties='{"pathFormatName":"home200_120", "x":34, "y":84, "width":200, "height":120}' />
+	<displayObject properties='{"x":0, "y":0}' definition='homeRank.view.BG' />
+	
+	<list name="homeRankList" properties='{"x":266, "y":82, "columnCount":1, "verticalGap":2, "rowCount":5, "defaultSelected":false}' />
+	<displayObject properties='{"x":422, "y":393, "width":53, "height":18}' definition='skin.page2.PageBG' />		
+	<page name="page" properties='{"x":403, "y":395,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":76 },
+							"labelProp":{"x":19, "y":0, "width":55, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+	<label properties='{"x":86, "y":50, "size":13, "color":"0xCBCC64", "stroke":"0x302010", "textID":"580302", "bold":true}'/>
+	<label name="gradeText" properties='{"x":32, "y":209, "color":"0xCBCC64", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":204}'/>
+	<button name="enterBtn" properties='{"x":60, "y":254, "styleName":"button5", "labelID":"580304", "width":65}' />
+	<button name="extendBtn" properties='{"x":146, "y":254, "styleName":"button3", "labelID":"580305", "width":65}' />
+	
+	<label properties='{"x":86, "y":317, "size":13, "color":"0xCBCC64", "stroke":"0x302010", "textID":"580306", "bold":true}'/>
+	<label properties='{"x":29, "y":354, "color":"0xCBCC64", "stroke":"0x302010", "textID":"580307"}'/>
+	<inputText name="nameText" properties='{"x":83, "y":354, "width":108, "height":24, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+	<button name="visitByNameBtn" properties='{"x":194, "y":348, "styleName":"button6", "labelID":"580309", "width":43, "enabled":false}' />
+	<label properties='{"x":29, "y":381, "color":"0xCBCC64", "stroke":"0x302010", "textID":"580308"}'/>
+	<inputText name="doorplateText" properties='{"x":83, "y":381, "width":108, "height":24, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+	<button name="visitByDoorplateBtn" properties='{"x":194, "y":376, "styleName":"button6", "labelID":"580309", "width":43, "enabled":false}' />
+	
+	<label properties='{"x":404, "y":50, "size":13, "color":"0xCBCC64", "stroke":"0x302010", "textID":"580303", "bold":true}'/>
+	
+	
+	<!--扩建面板-->
+	<container  name="extendPanel" properties='{"initX":204, "initY":102}'/>
+	
+	<!--将军府排行榜条目渲染器-->
+	<homeRankItemRenderer properties=''>	
+		<displayObject definition='homeRank.rank.ItemBG' properties='{"x":0, "y":0}' />
+		<imageLoader name="picIL" properties='{"pathFormatName":"home92_53", "x":3, "y":3, "width":92, "height":53}' />
+		<label name="rankText" properties='{"x":2, "y":2, "color":"0xCACC67", "stroke":"0x302010"}'/>
+		<label name="nameText" properties='{"x":104, "y":5, "color":"0xCACC67", "stroke":"0x302010"}'/>
+		<label properties='{"x":104, "y":30, "color":"0xCACC67", "stroke":"0x302010", "textID":"580360"}'/>
+		<label name="ownerText" properties='{"x":151, "y":30, "color":"0xCACC67", "stroke":"0x302010"}'/>
+		<button name="visitBtn" properties='{"x":324, "y":32, "styleName":"button6", "labelID":"580309", "width":43}' />	
+	</homeRankItemRenderer>	
+
+</config>

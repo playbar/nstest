@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【竞技场场景】配置文件-->
+<config properties='{"hideEffectDuration":0, "showEffectDuration":0}'>
+	<sprite name="mapContainer" />
+	
+	
+	<label name="cdText" properties='{"width":300, "height":30, "x":160, "y":35, "size":20, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x302010", "mouseEnabled":false}' />
+	<label name="startCdText" properties='{"width":300, "height":100, "x":160, "y":190, "size":30, "autoSize":"none","bold":true, "align":"center", "color":"0xFFFFCC",  "stroke":"0x302010", "mouseEnabled":false}' />
+	<label name="groupCdText" properties='{"x":200, "y":230, "width":155,  "height":120, "size":80, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFB51B", "stroke":"0x302010", "mouseEnabled":false}'/>
+	
+	<button name="leaveBtn" properties='{"x":500, "y":670, "width":120,"height":48, "styleName":"button5", "labelID":"500101"}' />
+	<button name="effectBtn" properties='{"x":500, "y":616,"width":120,"height":48, "styleName":"button3"}' />
+	
+	
+	<!-- <list name="attackerList" properties='{"y":30, "columnCount":5, "rowCount":1, "horizontalGap":6, "defaultSelected":false, "mouseDownSelect":false}' />
+	<list name="defenderList" properties='{"y":30, "columnCount":5, "rowCount":1, "horizontalGap":6, "defaultSelected":false, "mouseDownSelect":false}' /> -->
+	
+	
+	<sprite name="reportList" properties='{"x":100, "y":475, "itemAddY":-28, "itemStartY":84, "moveDuration":0.5,	"contProp1":{"multiColor":"gameUI.color.Tips4", "lineFill":false},"contProp2":{"multiColor":"gameUI.color.Tips1", "lineFill":false}}' />
+	
+	<alertText properties='{"x":190, "y":290, "key":"arenaErrorTips", "color":"0xCC3300", "duration":5, "topLayerShow":true, "autoRemove":true}' />
+	<imageLoader name="techPic1" properties='{"pathFormatName":"tech32", "x":525, "y":540, "width":70, "height":70}' />
+	
+	<!--队伍信息界面-->
+<!-- 	<container name="groupInfo">
+		<displayObject name="view" definition="arenaScene.view.GroupInfo" properties='{"x":50, "y":1}' />
+		<displayObject name="redRate" definition="arenaScence.view.redRateMC" properties='{"x":56, "y":10}' />
+		<displayObject name="blueRate" definition="arena.view.blueRateMC" properties='{"x":540, "y":10}' />
+		<label name="redText" properties='{"autoSize":"none","align":"center","x":63,"y":12,"width":380,"height":20,"color":"0xFFFF00", "stroke":"0x302010","border":false}' /> 
+		<label name="blueText" properties='{"autoSize":"none","align":"center","x":556,"y":12,"width":380,"height":20,"color":"0xFFFF00", "stroke":"0x302010","border":false}' /> 
+	</container> -->
+	
+	
+	<!--地图数据加载时显示的界面-->
+	<container name="loadMapView">
+		<displayObject definition="arenaScene.img.LoadMapBG" />
+	</container>
+	
+	
+	
+	
+	<!--竞技场结束界面-->
+	<!-- <container name="endView" properties='{"x":211, "y":164}'>
+		<modalBG properties='{"alpha":0.2}'/>
+		<displayObject definition="arenaScene.bg.EndView" />
+		<displayObject name="winSide" definition="arenaScene.view.WinSide" properties='{"x":285, "y":35}'/>
+		<label name="timeText" properties='{"width":120, "height":18, "x":229, "y":57, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<list name="attackerList" properties='{"x":65, "y":89, "columnCount":1, "rowCount":5, "verticalGap":0, "defaultSelected":false, "mouseDownSelect":false}' />
+		<list name="defenderList" properties='{"x":305, "y":89, "columnCount":1, "rowCount":5, "verticalGap":0, "defaultSelected":false, "mouseDownSelect":false}' />
+		<label name="gainText" properties='{"width":446, "height":25, "size":14, "x":65, "y":202, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0xC44400"}' />
+		<button name="fixedBtn" properties='{"x":254, "y":240, "width":70, "styleName":"button3", "labelID":"500404"}' />
+	</container> -->
+	<!--你已经阵亡了-->
+	<!-- <container name="deadView" properties='{"x":0, "y":0}'>
+		<modalBG properties='{"alpha":0.2}'/>
+		<label name="deadText" properties='{"size":50, "x":510, "y":420, "font":"黑体","autoSize":"center", "color":"0xFFFF00", "stroke":"0xC44400"}' />
+	</container> -->
+	
+	<!--竞技结束界面-->
+	<container name="resultView" properties='{"x":50, "y":160,"initY":117,"endY":100,"artEffectObj":{"duration":0.7,"alphaDura":0.6,"reduceY":20,"initY":142}}'>
+		<modalBG properties='{"alpha":0.2}'/>
+		<displayObject definition="arenaScence.bg.resultBG" properties='{"x":0, "y":0,"mouseEnabled":false}'/>
+		<!-- <label properties='{"size":20, "x":287, "y":45,"bold":true, "font":"黑体","autoSize":"center", "color":"0xFFFF00", "stroke":"0xC44400","textID":"500310"}' /> -->
+		<mcLabel name="resultText" properties='{"x":0, "y":100, "stroke":"0x302010", "labelProp":{"font":"黑体","size":17, "autoSize":"none","align":"center","width":576,"height":30,"color":"0xFFFFCC"},"multiColor":"gameUI.color.Tips1"}'/>
+		<label name="countText" properties='{ "x":380, "y":25,"autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		
+		
+		<label name="scoreTitleText" properties='{ "x":85, "y":140,"autoSize":"left", "color":"0xE5EF99", "stroke":"0x302010","textID":"500311","visible":false}' />
+		<displayObject name="boxMC" definition="arenaScence.box.box" properties='{"x":420, "y":95,"width":70,"height":70,"enabled":false,"visible":false}'/>
+		<displayObject name="rateMC" definition="arenaScence.rate.integral" properties='{"x":180, "y":138,"mouseEnabled":false,"width":240,"visible":false}'/>
+		<label name="curIntegralText" properties='{ "x":253, "y":142,"autoSize":"none","align":"center","width":60,"height":30, "color":"0xFFCC00", "stroke":"0x302010","visible":false}' />
+		
+		<displayObject name="quanquanEffect" definition="gameUI.giiftBag.lightEffect" properties='{"x":450, "y":150,"mouseEnabled":false,"visible":false}'/>
+		
+		<sprite name="artNum" properties='{"x":447, "y":95, "classPath":"gameUI.icon.VIPNumber", "align":"center"}'/>
+		
+		<button name="exitBtn" properties='{"x":120, "y":195, "width":120, "height":48,"styleName":"button5", "labelID":"500101"}' />
+		<button name="continueBtn"  properties='{"x":320, "y":195, "width":120, "height":48,"styleName":"button2", "label":"继续竞技"}' />
+		<sprite name="boxDrops" properties='{"x":200, "y":150}' />
+	</container>
+	
+	<!--队伍界面-->
+	<container name="teamView" properties='{"x":380, "y":200,"durationArg":{"duration":0.3,"startAngle":180,"endAngle":0,"startX":380,"endX":640}}'>
+		
+		
+		
+		<displayObject name="teamBg" definition="gameUI.taskTraced.BG" properties='{"x":0, "y":25,"width":260,"mouseEnabled":false}'/>
+		<displayObject name="titleBg" definition="gameUI.taskTraced.TitleBG" properties='{"x":0, "y":0,"width":260}'/>
+		<displayObject name="openBtn" definition="gameUI.taskTraced.OpenAndCloseBtn" properties='{"x":0, "y":10}'/>
+		
+		<label name="showOrHideText" properties='{"x":20,"y":2,"color":"0xFFFFFF", "stroke":"0x302010","textID":"500422","visible":true}' /> 
+		<label name="curMLText" properties='{"x":105,"y":2,"width":140,"height":30,"autoSize":"none","align":"left","color":"0xFFFF00", "stroke":"0x302010"}' /> 
+		<label name="openViewText" properties='{"x":-24,"y":20,"color":"0xFFFFFF", "stroke":"0x302010","textID":"500422","visible":false}' /> 
+		<list name="teamList" properties='{ "y":25,"columnCount":1, "rowCount":22, "verticalGap":4,"horizontalGap":1,  "defaultSelected":false, "mouseDownSelect":false}' />
+	</container>
+	
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "mouseChildren":false, "defNameTextY":25, "defNameTextColor":"0xE02A21"}'>
+		<displayObject name="fightCdIcon" parent="null" definition='arenaScene.mc.FightCdIcon' properties='{"x":-42, "y":-103, "mouseEnabled":false}' />
+		<label name="fightCdText" properties='{"width":70, "x":-22, "y":-108, "color":"0xFFFFFF", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="positionText" properties='{"width":100, "height":26, "x":-40, "y":10, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="killCountText" properties='{"width":100, "height":26, "x":28, "y":-108, "autoSize":"none", "align":"left", "color":"0xFFFF00", "stroke":"0x302010", "mouseEnabled":false}' />
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="sp" properties='{"x":-20, "y":25}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>
+	</avatarBasicUI>
+	
+	
+	
+	
+	<!--单条战报-->
+	<reportItem>
+		<displayObject definition='arenaScene.bg.ReportItem' properties='{"mouseEnabled":false}'/>
+		<label name="contentText" properties='{"width":300, "height":30,"size":20, "x":20, "y":2, "mouseEnabled":false,"autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010","text":"report text" }' />
+	</reportItem>
+	
+	
+	<!--角色的ItemRenderer-->
+	<avatarItemRenderer properties='{"itemWidth":50,"itemHeight":90,"attNameTextColor":"0xFE5936", "defNameTextColor":"0x55B6F0","mouseEnabled":false}'>
+		<displayObject definition='arenaScene.bg.AvatarItem' />
+		<displayObject name="deadView" parent="null" definition='arenaScene.img.AvatarDead' />
+		
+		<imageLoader name="picLoader" properties='{"pathFormatName":"generalPic40", "x":6, "y":6, "width":38, "height":38}' />
+		<displayObject name="picMask" definition='arenaScene.mask.AvatarIcon' properties='{"x":6, "y":6}' />
+		
+		<label name="levelText" properties='{"width":50, "height":16, "y":44, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="killsText" properties='{"width":50, "height":20, "y":76, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0x302010", "mouseEnabled":false}' />
+		<linkText name="seeText" properties='{"style":{"overStyle":{"underline":true}},"x":0, "y":60, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"660007","textType":"htmlText"}' />
+	</avatarItemRenderer>
+	
+	<!--结束界面的杀敌数ItemRenderer-->
+	<killCountItemRenderer properties='{"itemWidth":225,"itemHeight":24,"attNameTextColor":"0xFE5936", "defNameTextColor":"0x55B6F0"}'>
+		<displayObject name="selectSelfIcon" definition='arena.view.selfIcon' properties='{"x":-10,"y":-5,"mouseEnabled":false,"visible":false}'/>
+		<label name="levelText" properties='{"width":50, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<label name="nameText" properties='{"width":100, "x":50, "stroke":"0x302010"}' />
+		<label name="countText" properties='{"width":50, "x":160, "color":"0xCCCCCC", "stroke":"0x302010"}' />
+		
+	</killCountItemRenderer>
+	
+	<!-- 队伍项呈器 -->
+	<TeamRenderer properties='{"itemWidth":36,"itemHeight":30,"textColor":["0x76B0CF","0xDEBB46","0x999999"],"mouseEnabled":false}'>
+		<displayObject definition='gameUI.icon.TitleLayer' properties='{"mouseEnabled":false}'/>
+		<label name="lvText" properties='{"x":4,"y":3,"width":110, "color":"0xFFFFFF", "stroke":"0x302010","mouseEnabled":false}' />
+		<label name="nameText" properties='{"x":68,"y":4,"width":180, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<linkText  name="seeText" properties='{"style":{"overStyle":{"underline":true}},"x":180, "y":4, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"500413","textType":"htmlText"}'/>
+	</TeamRenderer>
+</config>

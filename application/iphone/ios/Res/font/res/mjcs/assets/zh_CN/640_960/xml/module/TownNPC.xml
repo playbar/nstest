@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--边塞NPC配置-->
+<root>
+	<npc id="npc1" name="王武" x="5" y="8" shape="npc1" direction="4" >
+		<pic>npc1</pic>
+		<say key="trade">我这里的商品应有尽有，您请随便挑选！</say> 
+		<say key="market">我这里的商品应有尽有，您请随便挑选！</say> 
+		<say>客官,看这里,看这里!</say>
+		<link label="物品买卖" clickHandler="shopNpc_dlgClickHandler1"  />
+		<link key="market" value="true" label="集市" tip="通关仓亭之战-采粮场副本后开启" clickHandler="shopNpc_dlgClickHandler2"  />
+		<link key="trade" value="true" label="商会" tip="通关襄阳之争-太守府副本后开启" clickHandler="shopNpc_dlgClickHandler3" />
+		<guide>27</guide>
+		<taskGuide>13</taskGuide>
+	</npc>	
+	
+	<npc id="npc2" name="陈小二" x="7" y="8" shape="npc2" direction="4" >
+		<pic>npc2</pic>
+		<say key="tarvern3">欢迎光临，本店各色菜系应有尽有！</say>
+		<say >欢迎光临，本店各色菜系应有尽有！</say>
+		<!--<link label="一楼 - （大厅）补充精力" clickHandler="restaurantType1_dlgClickHandler"  />
+		<link label="二楼 - （包间）补充精力" clickHandler="restaurantType2_dlgClickHandler"  />-->
+		<link key="tarvern12" value="true" label="一楼 - （包间）补充精力" tip="通关第一幕-虎牢关粮仓后开启" clickHandler="restaurantType_dlgClickHandler"  />
+		<link key="tarvern3" value="true" label="二楼 - （客房）招募武将" tip="进入第二幕-河北争雄后开启" clickHandler="restaurantType2_dlgClickHandler"  />
+		<link key="xisui" value="true" label="三楼 - （密室）武将属性转换" tip="通关第四幕定军山-险道后开启" clickHandler="restaurantType3_dlgClickHandler"  />
+		
+		<guide>5</guide>
+		<taskGuide>9</taskGuide>
+	</npc>	
+		
+	<npc id="npc3" name="农夫" x="4" y="10" shape="npc3" direction="4" >
+		<pic>npc3</pic>
+		<say key="horse">锄禾日当午，汗滴禾下土！</say>
+		<say key="mineField">锄禾日当午，汗滴禾下土！</say>
+		<say>锄禾日当午，汗滴禾下土！</say>
+		<link key="farm" value="true" label="进入农庄" tip="通关虎牢粮营哨后开启" clickHandler="farmType1_dlgClickHandler"  />
+		<link key="gemExchange" value="true" tip="进入第四幕开启" label="灵石兑换" clickHandler="attrGemExchange_clickHandler"  />
+		<!-- <link key="farm" value="false" label="进入农庄（即将拥有农场，需通关虎牢粮营哨）" clickHandler="farmType1_dlgClickHandler"  /> -->
+		<guide>7</guide>
+		<taskGuide>4</taskGuide>
+	</npc>	
+	<!--
+	<npc id="npc4" name="诸葛云" x="8" y="10" shape="npc4" direction="4" >
+		<pic>npc4</pic>
+		<say key="skillImprove">技能也需勤修苦练，科技的提升帮你一臂之力！</say>
+		<say>技能也需勤修苦练，科技的提升帮你一臂之力！\n（洛阳主街通关后开启）</say>
+		<link key="skillImprove" value="true" label="进入修炼场" tip="通关洛阳主街后开启" clickHandler="skillTrainNpc_dlgClickHandler"  />
+		<taskGuide>17</taskGuide>
+	</npc>	
+	-->
+	
+	<npc id="npc5" name="李云龙" x="9" y="12" shape="npc5" direction="4" >
+		<pic>npc5</pic>
+		<say key="rankMatch">每天12:30-13:30、20:30-21:30参加竞技场奖励翻倍！</say>
+		<say key="arenaAct">每天12:30-13:30、20:30-21:30参加竞技场奖励翻倍</say>
+		<say key="arena">有没有本事，是不是英雄，不打一场怎知道！</say>
+		<say>有没有本事，是不是英雄，不打一场怎知道！</say>
+		<link key="arena" value="true" label="进入竞技场（剩余{arenaCount}次）" tip="虎牢关粮仓通关开启" clickHandler="arenaNpc_dlgClickHandler"  />
+		<link key="rankMatch" value="true" label="进入积分赛" tip="通关第四幕-攻陷定军山军营开启" clickHandler="rankingBattleNpc_dlgClickHandler"  />
+		<guide>19</guide>
+		<taskGuide>7</taskGuide>
+	</npc>	
+	<!--
+	<npc id="npc8" name="婉清" x="1" y="13" shape="npc8" direction="4" >
+		<pic>npc8</pic>
+		<say key="groupbuy">我这边只卖最划算的哦！</say>
+		<say>我这边只卖最划算的哦！\n(进入第二幕-河北争雄后开放团购，可购买打折物品)</say>
+		<link key="groupbuy" value="true" label="团购" clickHandler="purchasingNpc_bulkDlgClickHandler"  />
+		<guide>13</guide>
+	</npc>	
+	-->
+	<npc id="npc9" name="侍女" x="8" y="10" shape="npc9" direction="4" >
+		<pic>npc9</pic>
+		<say key="house">将军，常回家看看！</say>
+		<say key="guild">军团</say>
+		<say key="skillImprove">技能也需勤修苦练，科技的提升帮你一臂之力！</say>
+		<say>将军，常回家看看！</say>
+		<link key="house" value="true" label="进入将军府" tip="通关仓亭之战-粮道后开启" clickHandler="homeNpc_dlgClickHandler"  />
+		<link key="guild" label="军团" clickHandler="onGuildClick_Handler"  />
+		<link key="skillImprove" value="true" label="进入修炼场" tip="通关洛阳-内城后开启" clickHandler="skillTrainNpc_dlgClickHandler"  />
+		<!-- <taskGuide>17</taskGuide> -->
+		<taskGuide>26</taskGuide>
+	</npc>	
+
+	<!-- <npc id="npc10" name="玲珑" x="10" y="25" shape="npc10" direction="4" >
+		<pic>npc10</pic>
+		<say key="gemTrader">最好的装备当然要镶嵌最好的宝石啊</say>
+		<say>最好的装备当然要镶嵌最好的宝石啊\n(襄阳城郊通关后开启)</say>
+		<link key="gemTrader" value="true" label="宝石" clickHandler="gemStoneNpc_dlgClickHandler"  />
+		<guide>64</guide>
+		<taskGuide>33</taskGuide>
+	</npc>	 -->
+</root>

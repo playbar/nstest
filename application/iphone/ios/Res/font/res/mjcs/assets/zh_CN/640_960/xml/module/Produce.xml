@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--生产窗口-->
+<config properties='{"initX":0, "initY":0, "styleName":"window1",  "titleID":"470100"}'>
+		<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+	<!--烹饪面板-->
+	<container name="cooking" properties='{"x":0, "y":2, "tabBtnMC":"BW.gameUI.button.pengren"}' >
+		<sprite name="rewardTips" properties='{"x":100, "y":340}' />	
+		<label name="_freeLab" properties='{"align":"right","y":40,"autoSize":"none","alx":"right","x":20,"text":"今日免费烹饪次数:","color":"0xffffff","width":193,"styleName":"label","height":24,"stroke":0}'/>
+		<label name="_times" properties='{"alx":"right","y":40,"autoSize":"none","x":220,"text":"25次","color":"0xffdf7f","width":72,"styleName":"label","height":24,"stroke":0}'/>
+		<!-- 烹饪列表-->
+		<BXList name="_cookeList" properties='{"acc":true,"alx":"fit","aly":"fit","itemSize2":160,"dir":"v","y":78,"width":612,"styleName":"VList","height":582,"x":14}'>
+			<BXRender properties='{"width":612,"height":135}'>
+				<BXBackBar name="_back" properties='{"clip":[20,20,20,20],"x":0,"y":0,"width":612,"image":"BW.Com.listItemBack","clip":[20,20,20,20],"height":135}'/>
+				<BXButton name="_cooke" properties='{"alx":"right","x":440,"y":43,"width":120,"styleName":"button5","height":48,"label":"烹饪","common":true}'/>
+				<BXRender name="_opt" properties='{"y":23,"width":426,"height":117,"x":23}'>
+					<label name="_needlab" properties='{"y":60,"autoSize":"none","size":24,"x":175,"text":"羊肉x10,猪肉x20","color":"0xc894ff","width":240,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_plus" properties='{"y":27,"autoSize":"none","size":24,"x":175,"text":"+600 精力","color":"0xd0ff90","width":240,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_name" properties='{"y":-5,"autoSize":"none","size":24,"x":175,"text":"萝卜炖羊肉","color":"0xffc040","width":240,"styleName":"label","height":28,"stroke":0}'/>
+					<label properties='{"align":"right","y":-5,"autoSize":"none","size":24,"x":60,"text":"菜名:","color":"0xffc040","width":113,"styleName":"label","height":28,"stroke":0}'/>
+					<label properties='{"align":"right","y":27,"autoSize":"none","size":24,"x":60,"text":"效果:","color":"0xd0ff90","width":113,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_need" properties='{"align":"right","y":60,"autoSize":"none","size":24,"x":60,"text":"材料:","color":"0xc894ff","width":113,"styleName":"label","height":28,"stroke":0}'/>
+					<displayObject definition="farmScene.view.seedItemBg" properties='{"y":0,"width":90,"height":90,"x":0}'/>
+					<imageLoader name="_icon" properties='{"x":11,"pathFormatName":"farmProduct32","y":10,"width":72,"height":72}'/>	
+				</BXRender>
+			</BXRender>
+		</BXList>
+	</container>
+	
+	
+	<!--炼药面板-->
+	<container name="pharmacy"  properties='{"x":1, "y":2, "tabBtnMC":"BW.gameUI.button.lianyao", "timeInt":0.4}' >
+		<!--玩家的炼药新闻（滚动）-->
+		<container name="news" properties='{"x":120, "y":655, "movieArgs":{"y":-31, "duration":0.5, "delay":1.8}}'>
+			<label name="contentText" properties='{"width":400, "multiline":true,"size":24, "align":"center", "color":"0xA59353", "stroke":"0x302010", "leading":4}' />
+			<mask target="contentText" properties='{"width":400, "height":28}' />
+		</container>
+		<!-- 制药列表-->
+		<BXList name="_yaoList" properties='{"alx":"fit","aly":"fit","acc":true,"x":14,"dir":"v","y":50,"itemSize2":160,"width":612,"styleName":"VList","height":582}'>
+			<BXRender properties='{"width":612,"height":156}'>
+				<BXBackBar name="_back" properties='{"clip":[20,20,20,20],"x":0,"y":0,"width":612,"image":"BW.Com.listItemBack","clip":[20,20,20,20],"height":156}'/>
+				<BXRender name="_opt" properties='{"y":23,"width":426,"height":115,"x":23}'>
+					<label name="_needlab" properties='{"y":88,"autoSize":"none","size":24,"x":175,"text":"羊肉x10,猪肉x20","color":"0xc894ff","width":240,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_plus" properties='{"y":27,"autoSize":"none","size":24,"x":175,"text":"+600 精力","color":"0xd0ff90","width":240,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_name" properties='{"y":-5,"autoSize":"none","size":24,"x":175,"text":"大还丹","color":"0xffc040","width":240,"styleName":"label","stroke":0,"height":28}'/>
+					<label properties='{"align":"right","y":-5,"autoSize":"none","size":24,"x":60,"text":"药名:","color":"0xffc040","width":113,"styleName":"label","stroke":0,"height":28}'/>
+					<label properties='{"align":"right","y":27,"autoSize":"none","size":24,"x":60,"text":"效果:","color":"0xd0ff90","width":113,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_need" properties='{"align":"right","y":88,"autoSize":"none","size":24,"x":60,"text":"材料:","color":"0xc894ff","width":113,"styleName":"label","height":28,"stroke":0}'/>
+					<displayObject definition="farmScene.view.seedItemBg" properties='{"y":0,"width":90,"height":90,"x":0}'/>
+					<imageLoader name="_icon" properties='{"x":11,"pathFormatName":"farmProduct32","y":10,"width":72,"height":72}'/>
+					<label properties='{"align":"right","y":58,"autoSize":"none","size":24,"x":60,"text":"持续:","color":"0xd0ff90","width":113,"styleName":"label","height":28,"stroke":0}'/>
+					<label name="_keep" properties='{"y":59,"autoSize":"none","size":24,"x":175,"text":"15分钟","color":"0xd0ff90","width":119,"styleName":"label","height":28,"stroke":0}'/>
+				</BXRender>
+				<BXButton name="_cooke" properties='{"alx":"right","x":440,"y":20,"width":120,"styleName":"button2","common":true,"height":48,"label":"炼制"}'/>
+				<BXButton name="_quick" properties='{"alx":"right","x":440,"y":80,"width":120,"styleName":"button5","common":true,"height":48,"label":"快速炼制"}'/>
+			</BXRender>
+		</BXList>
+		<BXRender name="_taiji"  properties='{"x":200, "y":300,"alx":"fit","aly":"fit"}' >
+			<displayObject definition="pharmacy.view.mobileBG" properties='{"x":0, "y":0}' />			
+			<displayObject name="progressBar" definition="pharmacy.view.ProgressBar" properties='{"y":202,"x":9}' />
+			<displayObject name="taijiDoorOpenEffect" definition="pharmacy.effect.TaijiDoorOpen" properties='{"y":116,"x":113}' />		
+			<displayObject name="fireEffect" definition="pharmacy.effect.Fire" properties='{"y":92,"visible":false,"x":73}' />
+			<displayObject name="taijiDoorCloseEffect" definition="pharmacy.effect.TaijiDoorClose" properties='{"y":116,"visible":false,"x":113}' />
+		</BXRender>
+		<alertText properties='{"x":150, "y":420,"size":24, "key":"pharmacyFireFailedTips", "colors":["0xCC3300", "0x00CC00"], "showEffDuration":2, "duration":5}' />
+	</container>
+	
+
+	<!-- 材料清单-->
+	<BXRender name="_res" properties='{"y":224,"width":635,"height":165,"x":2}'>
+		<BXRender name="_opt" properties='{"width":603,"height":166,"x":22,"y":-1}'>
+			<displayObject definition="farmScene.view.seedItemBg" properties='{"y":24,"width":90,"height":90,"x":130}'/>
+			<displayObject definition="farmScene.view.seedItemBg" properties='{"y":24,"width":90,"height":90,"x":6}'/>
+			<displayObject definition="farmScene.view.seedItemBg" properties='{"y":24,"width":90,"height":90,"x":254}'/>
+			<displayObject definition="farmScene.view.seedItemBg" properties='{"y":24,"width":90,"height":90,"x":502}'/>
+			<displayObject definition="farmScene.view.seedItemBg" properties='{"y":24,"width":90,"height":90,"x":378}'/>
+			<displayObject definition="farmScene.view.seedItemBg" properties='{"y":24,"width":90,"height":90,"x":502}'/>
+			<label properties='{"align":"center","y":0,"autoSize":"none","stroke":0,"x":12,"text":"所需材料","color":"0xffffff","width":140,"styleName":"label","height":24}'/>
+			<label name="_num05" properties='{"align":"center","y":142,"autoSize":"none","stroke":0,"x":489,"text":150,"color":"0xcfffcf","width":104,"styleName":"label","height":24}'/>
+			<label name="_num04" properties='{"align":"center","y":142,"autoSize":"none","stroke":0,"x":355,"text":150,"color":"0xcfffcf","width":133,"styleName":"label","height":24}'/>
+			<label name="_num03" properties='{"align":"center","y":142,"autoSize":"none","stroke":0,"x":231,"text":150,"color":"0xcfffcf","width":133,"styleName":"label","height":24}'/>
+			<label name="_num02" properties='{"align":"center","y":142,"autoSize":"none","stroke":0,"x":107,"text":150,"color":"0xcfffcf","width":133,"styleName":"label","height":24}'/>
+			<label name="_num01" properties='{"align":"center","y":142,"autoSize":"none","stroke":0,"x":2,"text":150,"color":"0xcfffcf","width":103,"styleName":"label","height":24}'/>
+			<label name="_name05" properties='{"align":"center","y":116,"autoSize":"none","stroke":0,"x":488,"text":"猪肉","color":"0xffffff","width":115,"styleName":"label","height":24}'/>
+			<label name="_name04" properties='{"align":"center","y":116,"autoSize":"none","stroke":0,"x":356,"text":"猪肉","color":"0xffffff","width":133,"styleName":"label","height":24}'/>
+			<label name="_name03" properties='{"align":"center","y":116,"autoSize":"none","stroke":0,"x":232,"text":"猪肉","color":"0xffffff","width":133,"styleName":"label","height":24}'/>
+			<label name="_name02" properties='{"align":"center","y":116,"autoSize":"none","stroke":0,"x":108,"text":"猪肉","color":"0xffffff","width":133,"styleName":"label","height":24}'/>
+			<label name="_name01" properties='{"align":"center","y":116,"autoSize":"none","stroke":0,"x":0,"text":"猪肉","color":"0xffffff","width":112,"styleName":"label","height":24}'/>
+			<imageLoader name="_icon05" properties='{"pathFormatName":"farmProduct32","x":511,"y":33,"width":72,"height":72}'/>
+			<imageLoader name="_icon04" properties='{"pathFormatName":"farmProduct32","x":387,"y":33,"width":72,"height":72}'/>
+			<imageLoader name="_icon03" properties='{"pathFormatName":"farmProduct32","x":263,"y":33,"width":72,"height":72}'/>
+			<imageLoader name="_icon02" properties='{"pathFormatName":"farmProduct32","x":15,"y":33,"width":72,"height":72}'/>
+			<imageLoader name="_icon01" properties='{"pathFormatName":"farmProduct32","x":139,"y":33,"width":72,"height":72}'/>
+		</BXRender>
+	</BXRender>
+	
+	<container name="craftsmen" properties='{"x":20, "y":160, "tabBtnMC":"BW.gameUI.button.jixie"}' >
+		<modalBG name="modal" properties='{"alpha":0.7,"visible":false}' />
+		<displayObject definition="mechanical.view.craftsmenBG"  properties='{"x":20 , "y":-60,"mouseEnabled":false}'/>
+		<displayObject name="loadingBG" definition="mechanical.view.loadingBG"  properties='{"x":142 , "y":-49}'/>
+		<displayObject definition="gameUI.bg.GimpFrameNew" properties='{"height":100,"x":305,"width":558,"y":100}'/>
+		<displayObject name="exp" definition="mechanical.view.loading"  properties='{"x":160 , "y":-39, "mouseEnabled":false}'/>
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":42, "y":-47}' />
+		<imageLoader name="craftsmenIL" properties='{"pathFormatName":"servant70", "fileName":"j1", "x":48, "y":-40, "width":70, "height":70}' />	
+		<displayObject definition="mechanical.bg.picText" properties='{"x":44, "y":10}' />
+		<displayObject name="factoryMovie" definition="mechanical.movie.factory" properties='{"x":32, "y":148}' />
+		<label name="lvText" properties='{"width":90, "height":30, "x":37, "y":10, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label name="proText" properties='{"width":414, "height":30, "x":135, "y":-43, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<!-- <label name="finishText" properties='{"width":291, "height":20, "x":158, "y":327, "size":12, "bold": false, "autoSize":"none", "align":"center",  "color":"0xFFFF00", "stroke": "0x2D261E"}'/> -->
+		<label name="curMachineproficText" properties='{"width":40, "height":30, "x":470,"y":189, "size":16, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		
+		<label name="doMakeStateText" properties='{"width":200, "height":30, "x":234, "y":100, "size":16, "bold": false, "autoSize":"none", "align":"center", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820014","visible":false}'/>
+		
+		
+		
+		
+		<sprite name="timeText" properties='{"x":173, "y":348,"classPath":"mechanical.icon.artNumber1","align":"center"}'/>
+		<label name="costText" properties='{"width":120, "height":30, "x":410, "y":338, "size":16, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label name="energyText" properties='{"width":120, "height":30, "x":410,"y":358, "size":16, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		
+		<displayObject name="chuiziRate" definition="mechanical.rate.chuizi"  properties='{"x":432 , "y":179}'/>
+		<displayObject name="gridBg" definition="gameUI.icon.Grid1"  properties='{"x":409 , "y":216}'/>
+		<sprite name="goodsIconPic" properties='{"x":416, "y":223 }' />	
+		<!-- <sprite name="goodsIcon" properties='{"x":417, "y":216, "mouseChildren":false, "mouseEnabled":true}' /> -->
+		<displayObject name="leftBtn" definition="gameUI.btn.LeftBig"  properties='{"x":349 , "y":228}'/>
+		<displayObject name="rightBtn" definition="gameUI.btn.LeftBig"  properties='{"x":553 , "y":228,"scaleX":-1}'/>
+		<displayObject definition="mechanical.view.input.bg"  properties='{"x":429 , "y":310, "mouseEnabled":false}'/>
+		<inputText name="countText" properties='{"x":429, "y":312,"border":false, "width":50,  "height":30, "size":16,"autoSize":"none",  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "restrict":"0-9", "maxChars":3}'/>
+		<button name="reduceBtn" properties='{"x":398, "y":308, "width":26,"height":26, "styleName":"button10", "labelID":"810006"}' />
+		<button name="addBtn" properties='{"x":479, "y":308, "width":26,"height":26, "styleName":"button10", "labelID":"810007"}' />
+		
+		
+		<!--制造列表-->
+		<container name="makeView" properties='{"initX":110, "initY":50,"styleName":"panel3", "bgWidth":420, "bgHeight":570, "titleID":"820011"}'>
+			<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":157 , "y":520,"width":60,"height":30, "mouseEnabled":false}'/>
+			<displayObject name="introBg" definition="mechanical.bg.listbg"  properties='{"x":58 , "y":60,"mouseEnabled":false,"visible":false}'/>
+			<label name="introText" properties='{"width":400, "height":30, "x":7, "y":73, "size":20, "bold": false, "autoSize":"none", "align":"center", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820025","visible":false}'/>
+			<list name="makeList" properties='{"x":20, "y":55, "columnCount":1, "rowCount":4, "horizontalGap":1, "verticalGap":1}' />
+			<page name="page" properties='{"x":117, "y":520,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":110 },
+							"labelProp":{"x":40, "y":2, "width":60, "height":20,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+							}' />
+		</container>
+		<!--机械技能等级为3时提示-->
+		<container name="showTipView" properties='{"x":256, "y":199}'>
+			<displayObject definition="homeScene.mechanicalTip.bg"  properties='{"x":0 , "y":0,"mouseEnabled":false}'/>
+			<sprite name="tipMachinePic" properties='{ "x":16, "y":12}' />		
+			<label name="tipRegularText" properties='{"width":120, "height":30, "x":75, "y":7, "size":16, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke": "0x2D261E"}'/>
+			<label name="tipValueText" properties='{"width":120, "height":30, "x":75, "y":30, "size":16, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke": "0x2D261E"}'/>
+		</container>
+		<!--推荐制造-->
+		<container name="recommendMake" properties='{"x":150,"y":75}'>		
+			<label name="recommendText" properties='{"width":200, "height":30, "x":-40, "y":10, "size":16, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820021"}'/>	
+			<label name="descText" properties='{"width":400, "height":50, "x":5, "y":-88, "size":19, "bold": false,  "align":"left","multiline":true, "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820026","visible":false}'/>			
+			<list name="makeList" properties='{"x":40, "y":-15, "columnCount":3, "rowCount":1, "horizontalGap":18, "verticalGap":1}' />
+		</container>
+		
+		<container name="explainTip" properties='{"x":380,"y":115,"initX":380, "initY":115, "labelProperty":{"x":18,"y":20,"width":105,"height":50,"size":18,"align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"820029","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+		
+		<button name="makeBtn" properties='{"x":390, "y":415, "width":120,"height":48, "styleName":"button5", "labelID":"820006"}' />
+		<button name="rapidCompleteBtn" properties='{"x":110, "y":415, "width":120,"height":48, "styleName":"button3", "labelID":"820032"}' />
+	</container>
+	<!--制造列表呈现器-->
+	<makeRenderer properties='{"itemWidth":376, "itemHeight":115,"lvTextColor":"0xFFFF00"}'>
+		<displayObject definition="mechanical.bg.listbg" properties='{"x":0, "y":0,"width":376,"height":120, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":30 , "y":18, "mouseEnabled":false}'/>
+		<label name="nameText" properties='{"size":16, "border": false, "autoSize":"none", "align":"left", "width":200, "height":30, "x":120,"y":30, "color":"0xFFFF00", "stroke": "0x2D261E"}'/>
+		<sprite name="machinePic" properties='{"x":37, "y":25 }' />	
+		<displayObject name="chuiziMC" definition="mechanical.rate.chuizi"  properties='{"x":300 , "y":30, "mouseEnabled":false}'/>
+		<displayObject name="selectedBg" definition="mechanical.bg.selectedBg"  properties='{"x":5 , "y":5,"width":366,"height":110, "mouseEnabled":false,"visible":false}'/>
+		<label name="lvText" properties='{"size":16, "border": false, "autoSize":"none", "align":"left", "width":200, "height":30, "x":120,"y":60, "color":"0xFFFF00", "stroke": "0x2D261E"}'/>
+	</makeRenderer>
+	<!--推荐列表呈现器-->
+	<RecommendMakeRenderer properties='{"itemWidth":75, "itemHeight":45}'>
+		<displayObject  definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0}'/>
+			<sprite name="machinePic" properties='{ "x":7, "y":7}' />	
+	</RecommendMakeRenderer>
+	
+	<!--******************************【熔炼界面】************************************-->
+	<container name="melt" properties='{"tabBtnMC":"BW.gameUI.button.ronglian"}'>
+		<displayObject name="bg" definition="BW.gameUI.melt.Bg"  properties='{"x":12,"y":29}'/>	
+		
+		<sprite name="lvArt" properties='{"x":98, "y":64, "classPath":"general.melt.ArtNum", "align":"center"}'/>
+		<displayObject name="pro" definition="BW.gameUI.melt.Progress"  properties='{"y":93,"x":203,"mouseEnabled":false}'/>
+		<label name="proText" properties='{"stroke":"0x2D261E","mouseEnabled":false,"height":26,"x":197,"color":"0xe4f199","autoSize":"none","width":345,"y":89,"align":"center","border":false}'/>	
+		<mcLabel name="none" properties='{"x":115, "y":220, "stroke":"0x302010","labelProp":{ "font":"黑体","size":20,"width":220,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCD67"},"multiColor":"gameUI.color.Tips7"}'/>
+		
+		<!--<label properties='{"x":150,"y":89, "width":396, "height":16, "autoSize":"none", "align":"center", "color":"0xFFc205", "stroke": "0x2D261E", "mouseEnabled":false, "textID":"870100", "border":false}'/>	-->
+		<label properties='{"stroke":"0x2D261E","mouseEnabled":false,"y":427,"height":60,"color":"0xE5EF99","size":"18","textID":870101,"width":60,"align":"center","x":199}'/>	
+		
+		<container name="introView" properties='{"x":0, "y":0}'>		
+			<label name="hasMeltText" properties='{"mouseEnabled":false,"stroke":"0x2D261E","autoSize":"none","width":180,"x":133,"align":"center","y":583,"color":"0xe4f199","border":false,"height":27}'/>	
+			<label name="fightText" properties='{"x":135,"y":220, "width":165, "height":26, "autoSize":"none", "align":"center", "color":"0xd4d577", "stroke": "0x2D261E", "mouseEnabled":false, "border":false}'/>	
+			<label name="timesText" properties='{"x":405,"y":192, "width":165, "height":26, "autoSize":"none", "align":"center", "color":"0xd4d577", "stroke": "0x2D261E", "mouseEnabled":true, "border":false}'/>	
+			<displayObject name="buyBtn" definition="general.melt.AddBtn" properties='{"x":575, "y":191}' />
+			<sprite name="artCD" properties='{"x":225, "y":655, "classPath":"gameUI.icon.artNumber1", "align":"center"}'/>			
+			<displayObject name="colorCd" definition="BW.gameUI.melt.Pro"  properties='{"x":69 ,"y":619}'/>
+			
+			<imageLoader name="pic" properties='{"pathFormatName":"stone32" , "x":184, "y":420, "width":69, "height":69}' />		
+			
+			<button name="sellBtn" properties='{"x":475,"labelID":870119,"y":595,"width":100,"styleName":"button17","height":45}' />
+			<button name="meltBtn" properties='{"x":475,"labelID":870103,"y":655,"width":100,"styleName":"button5","height":45}' />
+			<button name="zhuzaoBtn" properties='{"x":475,"labelID":870106,"y":655,"width":100,"styleName":"button5","height":45}' />
+			<button name="gainBtn" properties='{"x":475,"labelID":870107,"y":655,"width":100,"styleName":"button5","height":45}' />
+			<button name="clearCDBtn" properties='{"x":475,"labelID":870108,"y":655,"width":100,"styleName":"button5","height":45}' />
+						
+			<displayObject name="iconKs" definition="general.melt.Ks"  properties='{"y":507,"x":545}'/>			
+		
+			<displayObject name="goldIcon2" definition="gameUI.icon.Copper"  properties='{"y":555,"visible":false,"x":549}'/>
+			<displayObject name="woodIcon" definition="general.melt.Wood"  properties='{"y":551,"x":547}'/>
+			<label name="ksText" properties='{"mouseEnabled":false,"y":507,"autoSize":"none","align":"right","x":480,"text":111,"color":"0xe4f199","stroke":"0x2D261E","width":60,"border":false,"height":26}'/>	
+			<label name="varietyText" properties='{"mouseEnabled":false,"stroke":"0x2D261E","autoSize":"none","text":222,"x":480,"align":"right","color":"0xe4f199","y":550,"width":60,"height":26}'/>
+			<label properties='{"y":507,"autoSize":"none","styleName":"label","x":390,"text":"出售获得","color":"0xE5EF99","stroke":0,"width":110,"height":24}'/>
+			<label name="needTxt" properties='{"stroke":0,"autoSize":"none","styleName":"label","x":390,"text":"熔炼消耗","color":"0xE5EF99","y":550,"width":110,"height":24}'/>			
+			<label name="hisText" properties='{"x":418,"y":262, "width":165, "height":340, "color":"0xe4f199", "stroke": "0x2D261E", "mouseEnabled":false, "multiline":true,"border":false}'/>	
+			<scrollBar name="vsb" target="hisText" properties='{"styleName":"vScrollBar1","size":206, "x":584, "y":257,  "disArea":{"x":418, "y":263, "width":165,"height":200},"style":{"autoThumbSize":false,"autoDisplay":true}}' />
+			<label properties='{"y":517,"autoSize":"none","width":137,"x":154,"text":"点击选择矿石","color":"0xE5EF99","stroke":0,"styleName":"label","height":24}'/>			
+			<displayObject name="mc" definition="general.melt.Mc"  properties='{"x":234 , "y":386}'/>
+			
+		</container>
+		<sprite name="rewardTips" properties='{"x":200, "y":180}' />
+
+		<sprite name="sp" properties='{"x":-20, "y":10,"visible":false}'/>
+		<displayObject parent="sp" definition="gameUI.bg.GimpFrameNew"  properties='{"width":608,"height":680,"x":340,"y":363}'/>	
+		<list name="list" parent="sp" properties='{"x":60, "y":50, "columnCount":6, "rowCount":6, "horizontalGap":10, "verticalGap":10}' />
+		<displayObject parent="sp" definition="gameUI.icon.InputTextBG"  properties='{"width":60,"height":26,"y":650,"x":283}'/>
+		<page name="page" parent="sp" properties='{"x":260, "y":640,
+								"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":80 },
+								"labelProp":{"x":47, "y":10, "width":50, "height":26, "size":20, "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+
+	</container>
+	<!--**************************************熔炼界面的renderer********************************************-->
+	<MeltRenderer properties='{"itemWidth":84, "itemHeight":84}'>
+		
+		<displayObject name="bg" definition="general.effect.ItemSelected"  properties='{"x":0 , "y":0, "visible":false}'/>	
+		<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":0,"y":0}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"stone32" , "x":7, "y":7, "width":70, "height":70}' />		
+	</MeltRenderer>
+	
+	
+</config>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "1.0">
+   <FileBreakpoints>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1190"
+         endingLineNumber = "1190"
+         landmarkName = "-onWebBack:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1433"
+         endingLineNumber = "1433"
+         landmarkName = "-checkStart"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1410"
+         endingLineNumber = "1410"
+         landmarkName = "-onCurrentStepCancel:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1375"
+         endingLineNumber = "1375"
+         landmarkName = "-saveIAPData"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1352"
+         endingLineNumber = "1352"
+         landmarkName = "-hideCurrentStep"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1636"
+         endingLineNumber = "1636"
+         landmarkName = "@implementation BaiWanViewController_iPad"
+         landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPhone/Src/BaiWanViewController_iPhone.mm"
+         timestampString = "351063114.169661"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "361"
+         endingLineNumber = "361"
+         landmarkName = "-showInWindow:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/Shared/Client/inputViewController_iPad.mm"
+         timestampString = "352190318.980248"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "143"
+         endingLineNumber = "143"
+         landmarkName = "-doneEditing"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352878142.717428"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1519"
+         endingLineNumber = "1519"
+         landmarkName = "-stopIosPid:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/src/dom/XClientApply.cpp"
+         timestampString = "352895132.357643"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "948"
+         endingLineNumber = "948"
+         landmarkName = "XClientApply::Release()"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352889844.78713"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1527"
+         endingLineNumber = "1527"
+         landmarkName = "-_91Pid:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/src/dom/XClientApply.cpp"
+         timestampString = "352891595.571925"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "676"
+         endingLineNumber = "676"
+         landmarkName = "XClientApply::Enc91UID(XString8&amp; strCnt)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/iPad/Src/BaiWanViewController_iPad.mm"
+         timestampString = "352894159.664582"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "831"
+         endingLineNumber = "831"
+         landmarkName = "-_91sdkLoginOK:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/src/dom/XClientApply.cpp"
+         timestampString = "352895132.357643"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "725"
+         endingLineNumber = "725"
+         landmarkName = "XClientApply::Enc91UID(XString8&amp; strCnt)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/src/dom/XClientApply.cpp"
+         timestampString = "352894458.052902"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "690"
+         endingLineNumber = "690"
+         landmarkName = "XClientApply::Enc91UID(XString8&amp; strCnt)"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/Shared/Client/inputViewController_iPad.mm"
+         timestampString = "352897937.771387"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "244"
+         endingLineNumber = "244"
+         landmarkName = "-textViewDidEndEditing:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/Users/Q/WorkSpace/AS3_NEW/trunk/application/iphone/Shared/Client/inputViewController_iPad.mm"
+         timestampString = "352897937.771387"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "237"
+         endingLineNumber = "237"
+         landmarkName = "-textViewShouldEndEditing:"
+         landmarkType = "5">
+      </FileBreakpoint>
+   </FileBreakpoints>
+</Bucket>

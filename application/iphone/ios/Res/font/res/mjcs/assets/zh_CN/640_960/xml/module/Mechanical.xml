@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--机械窗口-->
+<config properties='{"initX":206, "initY":102, "bgWidth":609, "bgHeight":416, "titleID":"820000"}'>
+	<!--工匠面板-->
+	<container name="craftsmen" properties='{"x":0, "y":2}' >
+		<modalBG name="modal" properties='{"alpha":0.7,"visible":false}' />
+		<displayObject definition="mechanical.view.craftsmenBG"  properties='{"x":20 , "y":40,"mouseEnabled":false}'/>
+		<displayObject name="loadingBG" definition="mechanical.view.loadingBG"  properties='{"x":142 , "y":51}'/>
+		<displayObject name="exp" definition="mechanical.view.loading"  properties='{"x":160 , "y":61, "mouseEnabled":false}'/>
+		<displayObject definition="gameUI.icon.Pic70BG" properties='{"x":42, "y":53}' />
+		<imageLoader name="craftsmenIL" properties='{"pathFormatName":"servant70", "fileName":"j1", "x":44, "y":55, "width":70, "height":70}' />	
+		<displayObject definition="mechanical.bg.picText" properties='{"x":44, "y":110}' />
+		<displayObject name="factoryMovie" definition="mechanical.movie.factory" properties='{"x":32, "y":148}' />
+		<label name="lvText" properties='{"width":73, "height":20, "x":47, "y":110, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label name="proText" properties='{"width":414, "height":20, "x":145, "y":57, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke": "0x2D261E","mouseEnabled":false}'/>
+		<!-- <label name="finishText" properties='{"width":291, "height":20, "x":158, "y":327, "size":12, "bold": false, "autoSize":"none", "align":"center",  "color":"0xFFFF00", "stroke": "0x2D261E"}'/> -->
+		<label name="curMachineproficText" properties='{"width":35, "height":20, "x":470,"y":189, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		
+		<label name="doMakeStateText" properties='{"width":200, "height":20, "x":234, "y":100, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820014","visible":false}'/>
+		
+		
+		
+		
+		<sprite name="timeText" properties='{"x":173, "y":348,"classPath":"mechanical.icon.artNumber1","align":"center"}'/>
+		<label name="costText" properties='{"width":120, "height":20, "x":410, "y":308, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		<label name="energyText" properties='{"width":120, "height":20, "x":410,"y":328, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E"}'/>
+		
+		<displayObject name="chuiziRate" definition="mechanical.rate.chuizi"  properties='{"x":432 , "y":179}'/>
+		<displayObject name="gridBg" definition="mechanical.icon.Grid1"  properties='{"x":417 , "y":216}'/>
+		<sprite name="goodsIconPic" properties='{"x":436, "y":232}' />	
+		<!-- <sprite name="goodsIcon" properties='{"x":417, "y":216, "mouseChildren":false, "mouseEnabled":true}' /> -->
+		<displayObject name="leftBtn" definition="gameUI.btn.LeftBig"  properties='{"x":379 , "y":218}'/>
+		<displayObject name="rightBtn" definition="gameUI.btn.LeftBig"  properties='{"x":524 , "y":218,"scaleX":-1}'/>
+		<displayObject definition="mechanical.view.input.bg"  properties='{"x":429 , "y":279, "mouseEnabled":false}'/>
+		<inputText name="countText" properties='{"x":429, "y":281,"border":false, "width":50,  "height":20, "size":15,"autoSize":"none",  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "restrict":"0-9", "maxChars":3}'/>
+		<button name="reduceBtn" properties='{"x":398, "y":278, "width":26,"height":26, "styleName":"button10", "labelID":"810006"}' />
+		<button name="addBtn" properties='{"x":479, "y":278, "width":26,"height":26, "styleName":"button10", "labelID":"810007"}' />
+		
+		
+		<!--制造列表-->
+		<container name="makeView" properties='{"initX":150, "initY":45, "bgWidth":325, "bgHeight":330, "titleID":"820011"}'>
+			<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":137 , "y":297,"width":50, "mouseEnabled":false}'/>
+			<displayObject name="introBg" definition="mechanical.bg.listbg"  properties='{"x":20 , "y":40,"mouseEnabled":false,"visible":false}'/>
+			<label name="introText" properties='{"width":286, "height":20, "x":20, "y":55, "size":12, "bold": false, "autoSize":"none", "align":"center", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820025","visible":false}'/>
+			<list name="makeList" properties='{"x":15, "y":38, "columnCount":1, "rowCount":5, "horizontalGap":1, "verticalGap":3}' />
+			<page name="page" properties='{"x":117, "y":298,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":76 },
+							"labelProp":{"x":20, "y":0, "width":55, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+							}' />
+		</container>
+		<!--机械技能等级为3时提示-->
+		<container name="showTipView" properties='{"x":256, "y":199}'>
+			<displayObject definition="homeScene.mechanicalTip.bg"  properties='{"x":0 , "y":0,"mouseEnabled":false}'/>
+			<sprite name="tipMachinePic" properties='{ "x":16, "y":12}' />		
+			<label name="tipRegularText" properties='{"width":90, "height":20, "x":75, "y":7, "size":14, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke": "0x2D261E"}'/>
+			<label name="tipValueText" properties='{"width":90, "height":20, "x":75, "y":30, "size":14, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke": "0x2D261E"}'/>
+		</container>
+		<!--推荐制造-->
+		<container name="recommendMake" properties='{"x":150,"y":75}'>		
+			<label name="recommendText" properties='{"width":200, "height":20, "x":0, "y":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820021"}'/>	
+			<label name="descText" properties='{"width":400, "height":20, "x":0, "y":20, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xE5EF99", "stroke": "0x2D261E","textID":"820026","visible":false}'/>			
+			<list name="makeList" properties='{"x":60, "y":0, "columnCount":3, "rowCount":1, "horizontalGap":1, "verticalGap":1}' />
+		</container>
+		
+		<container name="explainTip" properties='{"x":380,"y":115,"initX":380, "initY":115, "labelProperty":{"x":25,"y":26,"width":90,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"820029","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+		
+		<button name="makeBtn" properties='{"x":360, "y":345, "width":80,"height":30, "styleName":"button5", "labelID":"820006"}' />
+		<button name="rapidCompleteBtn" properties='{"x":460, "y":345, "width":80,"height":30, "styleName":"button3", "labelID":"820032"}' />
+	</container>
+	<!--制造列表呈现器-->
+	<makeRenderer properties='{"itemWidth":276, "itemHeight":48,"lvTextColor":"0xFFFF00"}'>
+		<displayObject definition="mechanical.bg.listbg" properties='{"x":0, "y":0, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":16 , "y":8, "mouseEnabled":false}'/>
+		<label name="nameText" properties='{"size":12, "border": false, "autoSize":"none", "align":"left", "width":100, "height":20, "x":63,"y":20, "color":"0xFFFF00", "stroke": "0x2D261E"}'/>
+		<sprite name="machinePic" properties='{"x":20, "y":12}' />	
+		<displayObject name="chuiziMC" definition="mechanical.rate.chuizi"  properties='{"x":245 , "y":11, "mouseEnabled":false}'/>
+		<displayObject name="selectedBg" definition="mechanical.bg.selectedBg"  properties='{"x":5 , "y":5, "mouseEnabled":false,"visible":false}'/>
+		<label name="lvText" properties='{"size":12, "border": false, "autoSize":"none", "align":"left", "width":100, "height":20, "x":135,"y":20, "color":"0xFFFF00", "stroke": "0x2D261E"}'/>
+	</makeRenderer>
+	<!--推荐列表呈现器-->
+	<RecommendMakeRenderer properties='{"itemWidth":75, "itemHeight":45}'>
+		<displayObject  definition="mechanical.icon.Grid1"  properties='{"x":0 , "y":0}'/>
+	
+		<sprite name="machinePic" properties='{ "x":19, "y":16}' />	
+	</RecommendMakeRenderer>
+</config>

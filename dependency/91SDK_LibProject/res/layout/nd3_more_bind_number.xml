@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/nd3_more_bind_number_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:paddingTop="@dimen/nd3_bind_phonenumber_paddingTop"
+	android:orientation ="vertical"
+	>
+
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/nd3_more_bind_number_tip_number"
+		android:textColor="@color/nd3_white"
+		android:textSize="@dimen/nd3_pay_tip_text_size"
+		android:layout_marginTop="@dimen/nd3_option_margin_top"
+		style="@style/nd3_option_margin_style"
+		>
+		
+	</TextView>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:orientation ="vertical"
+		android:background="@drawable/nd3_bk1"
+		android:gravity="center_vertical"
+		style="@style/nd3_option_margin_style"
+		>
+		
+		<EditText
+			android:id="@+id/nd3_more_bind_number_number"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:singleLine="true"
+			android:maxLength="11"
+			android:inputType="number"
+			style="@style/nd3_option_edittext_style"
+			>
+		</EditText>
+				
+	</LinearLayout>
+	
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/nd3_more_bind_number_tip_send_sms"
+		android:textColor="@color/nd3_white"
+		android:textSize="@dimen/nd3_pay_service_text_size"		
+		style="@style/nd3_option_margin_style"
+		>
+		
+	</TextView>
+		 
+</LinearLayout>

@@ -1,0 +1,20 @@
+// XXObjectStyleSheet.cpp: implementation of the XXObjectStyleSheet class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "StdAfxflash.h"
+#include "XXObjectStyleSheet.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+XXObjectStyleSheet::XXObjectStyleSheet(ScriptPlayer*pRoot):XXObject(pRoot)
+{
+
+}
+
+XXObjectStyleSheet::~XXObjectStyleSheet()
+{
+
+}

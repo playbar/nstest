@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【副本大厅 场景】配置文件-->
+<config properties='{"speakDelay":15}'>
+		
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "addY":-18, "stopDuration":0.8, "fullHpDuration":5,
+		"artNumProp":{"y":-60, "align":"center", "classPath":"gameUI2.icon.NumberJyan",  "mouseEnabled":false},
+		"startArgs":{"y":-98, "duration":0.2, "delay":0 },
+		"endArgs":{"y":-98, "duration":0.2, "delay":0.1 },
+		"hideArgs":{"y":-115, "duration":0.3, "delay":0.6 }
+	}'>
+		<displayObject name="attCDIcon" definition='instanceScene.icon.CD' properties='{"x":-105, "y":-116, "visible":false, "mouseEnabled":false, "visible":false}' />
+		<label name="attCDText" properties='{"x":-105, "y":-113, "width":210, "height":40, "autoSize":"none", "align":"center", "color":"0xff0000", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="fullHpMC" definition="instanceScene.icon.FullHp" properties='{"x":0, "y":-105, "visible":false}'/>
+		
+		<sprite name="sp" properties='{"x":-20, "y":10}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":32, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":32, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":5}'/>
+		
+		<displayObject name="arrowMC" definition="instanceScene.icon.Arrow" properties='{"x":20, "y":-60, "visible":false}'/>
+		<sprite name="gainEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<displayObject name="enemyFlag" definition="gameUI.avatar.EnemyFlag" properties='{"visible":false, "mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="speakPoPo" properties='{"mouseEnabled":false, "x":-50, "y":-125}'/>
+		<displayObject name="attentionBg" definition="gameUI.view.attentionBg"  properties='{"x":20, "y":-80,  "visible":false}'/>
+		<button name="attentionBtn" parent="attentionBg" properties='{"x":3, "y":3 , "width":40, "height":24, "styleName":"button5", "labelID":"560206"}' />
+		<imageLoader name="titleRankIL" properties='{"x":-70, "y":-120,"pathFormatName":"titleRank",  "mouseEnabled":false, "mouseChildren":false}' /><!--爵位头衔-->
+	</avatarBasicUI>
+	
+	<!-- 经验副本结果面板 -->
+	<container name="expResult" properties='{"background":"skin.SpecialPanel","bgWidth":383,"bgHeight":412,"x":128,"y":220 }'>
+		<displayObject  definition="instance.art.resultText" properties='{"x":153, "y":14,"mouseEnabled":false}'/>
+		<list name="generalList" properties='{"x":48, "y":73, "columnCount":1, "rowCount":3, "horizontalGap":0, "verticalGap":0}' /> 
+		<button name="sureBtn"  properties='{"x":134, "y":345 , "width":120, "height":48, "styleName":"button13","artName":"instance.artText.goBackText"}' />
+	</container>
+	
+	<modalBG name="modalBG" properties='{"visible":false}'/>
+	<sprite name="mapContainer"/>
+	<displayObject name="dirctionMovie" definition="instance.dirction.arrow" properties='{"x":500, "y":280, "visible":false, "mouseEnabled":false}' />
+	
+	<!--go图标-->
+	<displayObject name="_go" definition="BW.battle.icon.go" properties='{"y":590,"width":212,"height":66,"x":403}'/>
+	
+	
+	<!--<displayObject name="fightingMC" definition="instanceScene.icon.AutoFighting" properties='{"x":430, "y":100, "visible":false, "mouseEnabled":false}' />-->
+	<bitmapMC name="fightingMC" properties='{"sourceName":"instanceScene.icon.AutoFighting", "fps":12, "x":250, "y":150, "visible":false}'/>	
+	<label name="leftNumberText" properties='{"x":190, "y":180, "width":300,  "height":40,  "autoSize":"none", "multiline":true,  "align":"center", "color":"0x00FF00", "stroke":"0x302010","border":false}'/>
+	<!--<button name="autoFightBtn" properties='{"x":510, "y":670, "styleName":"button5","height":48, "width":120}' />-->
+	<BXButton name="autoFightBtn" properties='{"width":120,"x":510,"y":670,"height":48,"label":"自动挂机","styleName":"button5"}'/>
+<!--	<displayObject name="autoArtTextMC" definition="instanceScene.artText.autoArt" properties='{"x":890, "y":429, "mouseEnabled":false}' />
+	<displayObject name="shanliangEffect" definition="instanceScene.effect.shanliangEffect" properties='{"x":940, "y":445,"mouseEnabled":false}' />-->
+	
+	<label name="autoFightText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":70, "height":20, "x":590,"y":864, "color":"0x99FF00", "stroke": "0x2D261E" , "mouseEnabled":false, "textID":"550113", "visible":false}'/>
+
+	
+	<!-- <button name="supplyBtn" properties='{"x":883, "y":460, "styleName":"button8", "labelID":"550115", "visible":false}' /> -->
+
+	<container name="huaInCage" parent="mapContainer" properties='{"x":540, "y":250,"huaPoint":{"x":100,"y":150},"delay":8}'>
+		<sprite name="huahuaContainer" properties='{"x":0,"y":0}'/>
+		<label name="nameText"  properties='{"size":17, "autoSize":"none", "align":"center", "width":70, "height":23, "x":70,"y":160, "color":"0x99FF00", "stroke": "0x2D261E" , "mouseEnabled":false, "textID":"550113"}'/>
+		<displayObject name="cageBg" definition="instance.view.longziBg" properties='{"mouseEnabled":false}' />
+		<displayObject name="cageMC" definition="instance.longzi.longzi" properties='{"x":0,"y":0,"mouseEnabled":false,"mouseChildren":false}' />
+		<sprite name="speakPoPo" properties='{"mouseEnabled":false, "x":50, "y":25}'/>
+		<container name="clickTips" properties='{"x":0,"y":0,"initX":0, "initY":0, "labelProperty":{"x":-30, "y":-15, "width":130,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"560251","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":3},"classPath":"instanceScence.arrow.arrow","visible":true}'/>
+	</container>
+	<!--你已经阵亡了-->
+	<deadView name="deadView" properties='{"x":0, "y":0, "visible":false}'>
+		<modalBG properties='{"alpha":0.2}'/>
+		<label name="deadText" properties='{"size":50, "x":70, "y":570, "width":500, "font":"黑体","autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0xC44400", "textID":"560122"}' />
+	</deadView>
+
+	<!--副本战斗场景小地图-->
+<!--	<container name="miniMap" properties='{
+		"x":500, "y":10,
+		"pointSpace":16,
+		"pointCenterOffset":{"x":66, "y":68},
+		"pointCenterMovieParams":{"duration":0.3, "delay":0.5},
+		"lineColor":"0xFFFF00"
+	}'>
+	<displayObject definition="instancecene.view.MiniMapBG" />
+	<displayObject name="arrow" definition="instance.miniMap.arrow" properties='{"x":63, "y":56,"rotation":-8}' />
+		<sprite name="container" />
+		<sprite parent="container" name="lineGraphics" />
+		<sprite parent="container" name="pointC" />
+		<mask target="container" properties='{"x":6, "y":26, "width":120, "height":85}' />
+		<label name="mapNameText" properties='{"width":120, "height":20, "x":2, "y":2, "size":14, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x302010"}' />
+	</container>
+-->	
+	<displayObject name="arrowMovie" definition="instanceScene.arrowMovie.arrow" properties='{"x":352, "y":442, "visible":false, "mouseEnabled":false}' />
+	
+
+	<container name="relivePanel" properties='{"x":205, "y":350}'>
+		<modalBG/>
+		<displayObject definition="instanceScene.view.Relive" properties='{}' />
+		<label properties='{"width":170, "height":24, "x":30, "y":23, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x302010", "textID":"560107", "bold":true, "size":20}' />		
+		<button name="copperReliveBtn" properties='{"x":48, "y":50, "width":134, "height":33, "styleName":"button2", "style":{"labelStyle":{"size":20}} }' />
+		<button name="exitBtn" properties='{"x":48, "y":95, "width":134, "height":33, "styleName":"button5", "labelID":"560110", "style":{"labelStyle":{"size":20}} }' />
+	</container>
+
+	<newEquipPanel properties='{"styleName":"panel4", "titleID":"550501"
+					, "titlePorp":{"y":8,"size":20}, "showDuration":1, "hideDelay":10, "hideDuration":1
+					, "initX":380, "initY":600,  "bgWidth":240, "bgHeight":240, "defaultNameTextColor":"0xCBCC66"
+					}'>
+		<label name="nameText" properties='{"width":200, "height":30, "x":20, "y":50, "size":20, "bold":true, "autoSize":"none", "align":"center", "color":"0xCBCC66",  "stroke":"0x302010"}' />
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":78 , "y":80, "mouseEnabled":false}'/>	
+		<sprite name="goodsIcon" properties='{"x":85, "y":87}' />	
+		<button name="equipBtn" properties='{"x":60, "y":170,  "width":120,"height":48, "styleName":"button5", "labelID":"550502"}' />
+	</newEquipPanel>
+	
+	<button name="quitBtn" properties='{"x":25, "y":670, "width":120, "height":48, "styleName":"button5", "labelID":"560102"}' />
+		
+	<container name="itemGainEffectContainer" properties='{"x":-180, "y":350, "detaX":40, "detaY":60, "time1":1.5, "time2":0.5, "time3":2, "toX":639, "toY":450}' >
+		<sprite name="deadEffectContainer" />	
+		<displayObject name="resultEffect" definition="instanceScene.view.resultBg"  properties='{"x":0, "y":0 , "visible":false}'/>	
+		<displayObject name="resultText" definition="instanceScene.text.result"  properties='{"x":376, "y":80 , "visible":false}'/>	
+		<sprite name="dropTips" properties='{"x":450, "y":60}' />
+		<displayObject name="boxEffect" definition="instanceScene.effect.Box"  properties='{"x":450, "y":43, "visible":false}'/>	
+		
+	</container>
+	
+	<!-- 结果面板 -->
+	<container name="resultPanel" properties='{
+			"styleName":"panel2", "initX":150, "initY":270, "bgWidth":321, "bgHeight":344,
+		"titleID":"610101"
+	}'>
+		<displayObject definition="gameUI.icon.Layer" properties='{"y":57,"width":293,"height":267,"x":14}' />
+		<displayObject definition="gameUI.icon.Line" properties='{"y":90,"width":261,"x":31}' />
+		<displayObject definition="gameUI.icon.Line" properties='{"x":31, "y":178, "width":261}' />
+		
+		<label name="resultText" properties='{"y":61,"autoSize":"none","x":27,"align":"left","color":"0xFFFFCC","stroke":"0x302010","width":256,"height":40,"textID":610005}'/>
+		<label properties='{"x":27, "y":93, "width":100,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "textID":"610102"}'/>
+		<label properties='{"x":27, "y":183, "width":100,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "textID":"610103"}'/>
+
+		<list name="experienceList" properties='{"x":29, "y":114, "columnCount":1, "rowCount":3, "horizontalGap":3, "verticalGap":3}' />  <!-- 经验获得列表  -->
+		<list name="itemList" properties='{"x":30, "y":208, "columnCount":5, "rowCount":2, "horizontalGap":6, "verticalGap":2}' />  <!-- 物品获得列表  -->
+
+		<button name="sureBtn" properties='{"labelID":610104,"x":119,"y":280,"width":105,"styleName":"button3","height":35}' />
+	</container>
+
+	<!-- 怪物的tip -->
+	<enemyTip properties='{"initWidth":190, "initHeight":50, "labelGap":6, "introTextInitY":39}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":22, "size":14, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":5, "y":36, "width":180}'/>
+		
+		<label name="wakanText" properties='{"x":12, "width":165, "y":44, "size":14, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="attackText" properties='{"x":12, "width":165, "y":61, "size":14, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":12, "width":165, "y":79, "size":14, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</enemyTip>
+	
+	<itemGainRenderer properties='{"defaultNameTextColor":"0xCBCC66"}'>	
+		<displayObject definition="BW.gameUI.BG.itemBG84"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+		<imageLoader name="itemIL" properties='{"pathFormatName":"equip32", "x":4, "y":4}' />
+		<imageLoader name="frameIL" properties='{"pathFormatName":"equipColorFrame32", "x":4, "y":4}' />
+		<label  name="amountText" properties='{"x":4, "y":25, "width":60, "height":30,  "size":20,"autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="nameText" properties='{"x":-20, "y":42, "width":100,"size":20, "autoSize":"none", "textType":"text", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</itemGainRenderer>
+
+	<propRenderer properties='{}'>	
+		<displayObject definition="BW.gameUI.BG.itemBG84"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+		<sprite name="goodsIcon" properties='{"x":4, "y":4, "doubleClickEnabled":true, "mouseChildren":false, "mouseEnabled":true}' />	
+		<label  name="countText" properties='{"x":4, "y":25, "width":60, "height":30,"size":20,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</propRenderer>
+	<expRenderer properties='{}'>	
+			<label  name="nameText" properties='{"x":4, "y":0, "width":100, "height":30,"size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="gainText" properties='{"x":92, "y":0, "width":160, "height":30,"size":20,"autoSize":"none",  "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</expRenderer>
+	
+	<ExpGeneralRenderer properties='{"itemHeight":84}'>	
+		<displayObject definition="instance.bg.expItemBg"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":11 , "y":7, "mouseEnabled":false}'/>	
+		<displayObject name="noFomationArt" definition="instance.art.noFomationText"  properties='{"x":125 , "y":35, "mouseEnabled":false,"visible":false}'/>	
+		<imageLoader name="heroPic" properties='{"pathFormatName":"generalPic40", "x":18, "y":14}' />
+		<label  name="nameText" properties='{"x":112, "y":15, "width":200, "height":30, "size":20,"bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<!-- <label  name="expText" properties='{"x":112, "y":42, "width":160, "height":18,"autoSize":"none",  "align":"left", "color":"0xFFCC00", "stroke":"0x302010" , "mouseEnabled":false}'/> -->
+		<sprite  name="expText" properties='{"x":112, "y":42, "txWidth":160, "txHeight":30,"style":{"autoSize":"none", "size":20, "align":"left", "color":"0xFFCC00", "stroke":"0x302010" , "mouseEnabled":false}}'/>
+		
+		
+	</ExpGeneralRenderer>
+
+	<!--队伍界面，右侧列表-->
+	<container name="teamView" properties='{"x":380, "y":200,"durationArg":{"duration":0.3,"startAngle":180,"endAngle":0,"startX":380,"endX":640}}'>
+		
+		<displayObject name="teamBg" definition="gameUI.taskTraced.BG" properties='{"x":0, "y":25,"width":260,"mouseEnabled":false}'/>
+		<displayObject name="titleBg" definition="gameUI.taskTraced.TitleBG" properties='{"x":0, "y":0,"width":260}'/>
+		<displayObject name="openBtn" definition="gameUI.taskTraced.OpenAndCloseBtn" properties='{"x":-3, "y":10}'/>
+		
+		<label name="showOrHideText" properties='{"x":20,"y":2,"color":"0xFFFFFF", "stroke":"0x302010","textID":"500422","visible":true}' /> 
+		<label name="curMLText" properties='{"x":105,"y":2,"width":140,"height":30,"autoSize":"none","align":"left","color":"0xFFFF00", "stroke":"0x302010"}' /> 
+		<label name="openViewText" properties='{"x":-30,"y":30,"size":24,"color":"0xFFFFFF", "stroke":"0x302010","textID":"500422","visible":false}' /> 
+		<list name="teamList" properties='{ "y":25,"columnCount":1, "rowCount":22, "verticalGap":4,"horizontalGap":1,  "defaultSelected":false, "mouseDownSelect":false}' />
+		
+		<!--添加快速战斗和特效的开关 raynor 2013/12/20-->
+		<BXButton name="fastBtn" properties='{"x":0,"styleName":"button8","width":135,"height":45,"y":-45,"size":17}'/>
+		<BXButton name="effectBtn" properties='{"x":130,"styleName":"button8","width":135,"height":45,"y":-45,"size":17}'/>
+	</container>
+	
+	<!-- 队伍项呈器 -->
+	<TeamRenderer properties='{}'>
+		<displayObject definition='gameUI.icon.TitleLayer' properties='{"mouseEnabled":false}'/>
+		<list name="soldierList" properties='{"y":5,"columnCount":1, "rowCount":3, "verticalGap":4,"horizontalGap":1, "defaultSelected":false, "mouseDownSelect":false}'/>
+		<displayObject name="splitLine" definition='gameUI.icon.Line' properties='{"x":10,"width":240,"height":3 }'/>
+	</TeamRenderer>
+
+	<!--单个敌人呈现器-->	
+	<SoldierRenderer properties='{"itemWidth":36,"itemHeight":30,"textColor":["0xa22041","0xa22041","0x999999"],"mouseEnabled":false}'>
+		<label name="lvText" properties='{"x":4,"y":3,"width":110, "color":"0xffffff", "stroke":"0x302010","mouseEnabled":false}' />
+		<label name="nameText" properties='{"x":68,"y":4,"width":180, "color":"0xffffff", "stroke":"0x302010"}' />
+		<linkText  name="seeText" properties='{"style":{"overStyle":{"underline":true}},"x":180, "y":4, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"500413","textType":"htmlText"}'/>
+	</SoldierRenderer>
+
+</config>

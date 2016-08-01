@@ -1,0 +1,19 @@
+// XXObjectMovieLoader.cpp: implementation of the XXObjectMovieLoader class.
+//
+//////////////////////////////////////////////////////////////////////
+#include "StdAfxflash.h"
+#include "XXObjectMovieLoader.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+XXObjectMovieLoader::XXObjectMovieLoader(ScriptPlayer*pRoot):XXObject(pRoot)
+{
+
+}
+
+XXObjectMovieLoader::~XXObjectMovieLoader()
+{
+
+}

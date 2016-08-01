@@ -1,0 +1,36 @@
+<wml>
+<card>
+<p>
+<anchor>Config<go href="http" value="//wap.jiqu.com">
+<setvar name="Phone" value="GIF@MOBILE"/>
+<setvar name="Select" value="GIF@SELECT"/>
+<setvar name="Mode"	value="0"/>
+<setvar name="System" value="32,53,34,19"/>
+<setvar name="Window" value="40,77,240,320"/>
+<setvar name="Call" value="4,422,36,96"/>
+<setvar name="Close" value="281,422,36,96"/>
+<setvar name="Left Soft" value="53,434,42,20"/>
+<setvar name="Right Soft" value="227,434,42,20"/>
+<setvar name="Menu" value="53,485,42,20"/>
+<setvar name="Clear" value="227,485,42,20"/>
+<setvar name="Left" value="105,447,32,48"/>
+<setvar name="Right" value="186,447,32,48"/>
+<setvar name="Up" value="133,421,56,24"/>
+<setvar name="Down" value="133,496,56,24"/>
+<setvar name="Enter" value="135,446,51,51"/>
+<setvar name="NUM0" value="136,635,48,16"/>
+<setvar name="NUM1" value="50,538,48,16"/>
+<setvar name="NUM2" value="137,538,48,16"/>
+<setvar name="NUM3" value="223,538,48,16"/>
+<setvar name="NUM4" value="50,570,48,16"/>
+<setvar name="NUM5" value="137,570,48,16"/>
+<setvar name="NUM6" value="223,570,48,16"/>
+<setvar name="NUM7" value="50,602,48,16"/>
+<setvar name="NUM8" value="137,602,48,16"/>
+<setvar name="NUM9" value="223,602,48,16"/>
+<setvar name="NUM+" value="50,635,48,16"/>
+<setvar name="NUM#" value="223,635,48,16"/>
+<setvar name="ENUHAND" value="false"/>
+</go></anchor>
+</p>
+</wml>

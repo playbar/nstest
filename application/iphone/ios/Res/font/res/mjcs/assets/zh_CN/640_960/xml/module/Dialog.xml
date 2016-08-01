@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dialogs>
+	<!-- name空的时候默认用玩家的名称  pic为main是主将头像  follow是副将的头像 -->
+
+	
+	<Dialog id="0101001" desc="副本1节点1">
+		<item name="前线军师"  pic="npc8" align="left">将军，前线到了。</item>	
+	</Dialog>
+	<Dialog id="0101002" desc="副本1节点2">
+		<item name="前线军师"  pic="npc8" align="left">这些敌军都是用剑，擅长单人攻击，行动较快。</item>
+	</Dialog>
+	<Dialog id="0101003" desc="副本1节点3">
+		<item name="前线军师"  pic="npc8" align="left">你看赵琳的武器，必定不错，夺来可增强实力。</item>
+	</Dialog>
+	<Dialog id="0120000" desc="第一次组队对话">
+		<item name="前线军师"  pic="npc8" align="left">将军你不是一个人在战斗，可在副本大厅右下角创建或加入队伍。</item>
+		<item name="前线军师"  pic="npc8" align="left">将军组队战斗可获得经验加成，队伍成员越多加成越高。</item>
+	</Dialog>
+	<Dialog id="0102001" desc="副本2节点2">
+		<item name="前线军师"  pic="npc8" align="left">将军，前方的敌军擅长用枪。</item>
+	</Dialog>
+	<Dialog id="0102002" desc="副本2节点3">
+		<item name="前线军师"  pic="npc8" align="left">枪兵擅长多人攻击，行动不快。</item>
+	</Dialog>
+	<Dialog id="0102003" desc="副本2节点4">
+		<item name="华雄"  pic="npc1" align="right">敢来函谷关？找死！</item>
+	</Dialog>	
+	<Dialog id="1111111" desc="副本4节点1"><!--送紫将-->
+		<item name="前线军师"  pic="npc8" align="left">将军！密探来报，华小眉落入董卓之手。  董卓贪其美色，欲强行纳为小妾。</item>
+		<item name="前线军师"  pic="npc8" align="left">华小眉现由董媛看守，望将军去救援。</item>
+	</Dialog>
+	
+	<Dialog id="1111112" desc="首次进入虎牢攻坚战-粮营哨时对话">
+		<item name="军师"  pic="npc8" align="left">将军，查看此处守兵身材，当是善用锤者。</item>
+		<item name="军师"  pic="npc8" align="left">【锤者，善范围攻击，可行动迟缓】，将军切记。</item>
+	</Dialog>	
+	<Dialog id="1111113" desc="首次进入虎牢攻坚战-粮营哨地图2打完一组怪后对话">
+		<item name="军师"  pic="npc8" align="left">将军，需要打败所有的敌人才能出现传送门进入下一个场景！</item>
+	</Dialog>	
+	<Dialog id="1111114" desc="首次进入虎牢攻坚战-粮仓时第一个房间对话">
+		<item name="军师"  pic="npc8" align="left">将军，查看此处守兵身材，当是善用扇者。</item>
+		<item name="军师"  pic="npc8" align="left">【扇者，善单人攻击，行动极快】，将军切记。</item>
+	</Dialog>	
+	<Dialog id="1111115" desc="首次进入虎牢攻坚战-粮仓时第三个房间对话">
+		<item name="军师"  pic="npc8" align="left">将军，前方巡逻敌军有用弓者，请小心。</item>
+		<item name="军师"  pic="npc8" align="left">【弓者，善单人攻击，行动不快】，将军切记。</item>
+	</Dialog>	
+	<Dialog id="0104000" desc="副本4节点0"><!--打通一遍以后-->
+		<item name="华小眉"  pic="hero05" align="left">将军！奴家正是华小眉，感激将军救命之恩，奴家愿追随将军。</item>
+		<item name="华小眉"  pic="hero05" align="left">奴家曾经追随华佗习得妙手回春之术。    愿留军中，帮助将军及时治疗伤口。</item>
+	</Dialog>
+	
+	
+	<Dialog id="0201001" desc="农场未开放时的过场对白">
+		<item name="农夫"  pic="npc3" align="left">听说将军想要修建农场，但修建农场需要土地证哦！</item>
+		<item name="军师"  pic="npc8" align="right"><![CDATA[末将得知农场土地证可在<font color='#FF0000'>虎牢粮营哨</font>获得。]]></item>		
+	</Dialog>
+	
+	<Dialog id="0201002" desc="获得土地证后进农庄的对白">
+		<item name="农夫"  pic="npc3" align="left">将军果然神勇，这么快就得到了土地证。</item>
+		<item name="农夫"  pic="npc3" align="left">将军能把土地证给老夫看看吗？</item>
+		<item name="农夫"  pic="npc3" align="left">哦！果然是土地证，这样将军就拥有自己的农场了，将军快去看看吧。</item>	
+	</Dialog>
+	
+	<Dialog id="0301001" desc="第一次进银矿时的对白">
+		<item name="军师"  pic="npc8" align="left"><![CDATA[将军采集银矿可获得大量银币，点击银矿即可进行采集。]]></item>
+		<item name="军师"  pic="npc8" align="left">使用高档挖矿可挖掘到宝石，银矿共分三层，第三层收益越高。</item>
+	
+	</Dialog>
+	
+	<Dialog id="0401001" desc="失去华华的对白">
+		<item name="华小眉"  pic="hero05" align="left">将军近来实力提升神速，奴家念及家中老小无人照料，故请辞。</item>
+		<item name="华小眉"  pic="hero05" align="left">奴家偶尔会在附近酒肆打工，以补家用。将军，有缘再见！</item>
+	</Dialog>
+	
+	<Dialog id="0402001" desc="进酒肆的对白">
+		<item name="华小眉"  pic="hero05" align="left">将军，连日征战一定身心劳累。[br]听说附近的酒肆第二层经常有各路名将前去畅饮。</item>
+		<item name="华小眉"  pic="hero05" align="left">不如我们也去喝一杯，说不定还能认识一些英雄好汉</item>		
+	</Dialog>
+	<Dialog id="0402002" desc="进酒肆的对白">	
+		<item name="酒肆老板娘"  pic="npc2" align="left">这两位客官且慢，本酒肆二层是贵宾区，20级以下均为未成年人士，谢绝进入。</item>
+		<item name="华小眉"  pic="hero05" align="left">......将军息怒，既然如此我们还是尽快到达20级为好。</item>
+		<item name="华小眉"  pic="hero05" align="left">奴家早前险些被奸贼董卓所害，将军何不多教训那奸贼几次，升到20级。</item>
+	</Dialog>
+	
+	<Dialog id="0403001" desc="老玩家回归奖励对白">	
+		<item name="侍女"  pic="npc9" align="left">将军这些日子不在，奴婢甚是想念！这些东西是奴婢节省下来的，希望可以帮助将军在震雄风！</item>
+	</Dialog>
+	
+	
+	<Dialog id="0501000" desc="将军府开启剧情">	
+		<item name="侍女"  pic="npc9" align="left">将军屡建奇功，丞相特赏赐将军府宅邸。</item>
+		<item name="侍女"  pic="npc9" align="left">如果将军精力不足，请记得到将军府补充，将军也可在将军府休息，恢复精力。</item>
+	</Dialog>
+	<Dialog id="0501001" desc="培养开启剧情">	
+		<item name="前线军师"  pic="npc8" align="left">将军现在可以使用蓝木丹培养武将三围了。看大壮家的许褚，吃蓝木丹，吃得多壮啊，上阵杀敌，毫不含糊。</item>
+	</Dialog>
+	<Dialog id="0501002" desc="洗炼开启剧情">	
+		<item name="前线军师"  pic="npc8" align="left">洗炼功能已经开放，将军可以通过点击强化按钮，选择洗炼来更换和升级主将武器的技能。</item>
+	</Dialog>
+	<Dialog id="0501003" desc="启灵开启剧情">	
+		<item name="前线军师"  pic="npc8" align="left">将军现在可以给装备启灵了，对装备启灵来获得水火土属性，使武器更加锋利，防具更加坚固，大幅度提升实力（点击强化→启灵）。</item>
+	</Dialog>
+	<Dialog id="0501004" desc="马场开启剧情">	
+		<item name="农夫"  pic="npc3" align="left">农庄开放马场了，将军可以饲养一匹自己的专属坐骑。悉心喂养，坐骑的战斗力就越高，造成的伤害也越大。</item>
+	</Dialog>
+	
+	<Dialog id="0501005" desc="督军开启剧情">	
+		<item name="军师"  pic="npc8" align="left">将军现在可以让一名武将成为督军了，由于督军的督促，将军的各项能力都将得到很大提升。</item>
+		<item name="军师"  pic="npc8" align="left">不仅如此，督军本身能力越强，亲密度越高，能力加成也越多。</item>
+	
+	</Dialog>
+	<!--<Dialog id="0501006" desc="南蛮入侵开启剧情">	
+		<item name="军师"  pic="npc8" align="left">将军世界地图新开启南蛮入侵副本，请将军将等级提升至41级，前去保卫边塞，为国效力！</item>		
+	
+	</Dialog>-->
+	
+		<!-- 赠送双倍经验丹剧情 -->
+	<Dialog id="0501007" desc="首次进入仓亭之战-粮道前时对话">	
+		<item name="军师"  pic="npc8" align="left">将军连日征战，升级辛苦，现特为将军开启1小时双倍经验，省时间省精力！</item>
+        <item name="军师"  pic="npc8" align="left">将军也可点击双倍经验图标自行延长时间。</item>
+	</Dialog>
+	
+	<!-- 新手赠送宝石剧情 -->
+	<Dialog id="0501008" desc="完成任务ID：3109后对话">	
+		<item name="军师"  pic="npc8" align="left">将军，全部装备镶满宝石能大幅提升实力。</item>
+        <item name="军师"  pic="npc8" align="left">将军的宝石数量有限，现赠与将军大量宝石，将军请领取任务奖励并自行镶嵌宝石。</item>
+	</Dialog>	
+	<Dialog id="0501009" desc="完成任务ID：3206后对话">	
+		<item name="军师"  pic="npc8" align="left">将军前方副本敌人十分强大，现赠与将军大量宝石提升实力</item>
+        <item name="军师"  pic="npc8" align="left">请将军领取任务奖励并拆卸宝石，进行宝石合成，然后再进行镶嵌。</item>
+	</Dialog>
+</Dialogs>

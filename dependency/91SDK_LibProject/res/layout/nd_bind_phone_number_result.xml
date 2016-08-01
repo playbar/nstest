@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/nd_bind_phone_number_result_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:orientation ="vertical"
+	android:fillViewport="true"
+	>
+
+    <!-- 结果 -->
+	<TextView
+	    android:id="@+id/nd_bind_phone_number_result_content"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="left"
+		android:text="@string/nd_bind_phone_result_fail_format"
+		android:textSize="@dimen/nd3_register_agreement_text_size"
+		android:textColor="@color/nd3_white"		
+		android:layout_marginTop="@dimen/nd3_option_margin_top"
+		style="@style/nd3_option_margin_style"
+		>
+	</TextView>
+
+	<!-- 确认 -->				
+	<Button 
+	    android:id="@+id/nd_bind_phone_number_result_confirm"
+    	android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/nd_bind_phone_result_confirm"
+		style="@style/nd3_option_margin_style"	
+		/>    			
+		
+	<!-- 提示 -->
+	<TextView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="left"
+		android:text="@string/nd_bind_phone_result_tips"
+		android:textSize="@dimen/nd3_register_agreement_text_size"
+		android:textColor="@color/nd3_white"		
+		style="@style/nd3_option_margin_style"
+		>
+	</TextView>
+
+</LinearLayout>

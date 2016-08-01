@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【城镇场景】配置文件-->
+<config properties='{
+	"showEffectDuration":0, "hideEffectDuration":0,
+	"doorNpc":[{"x":4, "y":10, "key":"getOut4", "shape":"npc11", "isOurTown":true, "direction":4, "clickHandler":"getOutNpcClickHandler", "id":4}
+			, {"x":2, "y":10, "key":"getOut2", "shape":"npc11", "isOurTown":false, "direction":4, "clickHandler":"getOutNpcClickHandler", "id":4}],
+			"tipsPoint":{"x":380,"y":360}
+}'>
+
+	<!--主信息区-->
+	<container name="mainArea" properties='{"y":0,"x":0,"autoRemove":false}'>
+	  <displayObject definition="BW.home.BG.townBG" properties='{"x":0,"y":-60}'/>
+
+    <!--<BXActiveIcon properties='{"height":144,"x":585,"y":260,"width":58,"skin":"BW.gameUI.icon.friend"}'/>-->
+
+    <BXActiveIcon name="jail" properties='{"x":353,"y":211,"skin":"BW.home.main.jail"}'/>
+    <BXActiveIcon name="produce" properties='{"x":257,"y":145,"skin":"BW.home.main.produce"}'/>
+    <BXActiveIcon name="home" properties='{"x":142,"y":315,"skin":"BW.home.main.home"}'/>
+		<BXActiveIcon name="office" properties='{"x":321,"y":352,"skin":"BW.home.main.office"}'/>
+		<BXActiveIcon name="farm" properties='{"x":129,"y":200,"skin":"BW.home.main.farm"}'/>
+		<BXActiveIcon name="tavern" properties='{"x":239,"y":506,"skin":"BW.home.main.hotel"}'/>
+		<BXActiveIcon name="trainHouse" properties='{"x":1,"y":418,"skin":"BW.home.main.trainhouse"}'/>					
+		<BXActiveIcon name="billBoard" properties='{"x":182,"y":586,"skin":"BW.home.main.billboard"}'/>
+		<BXActiveIcon name="door" properties='{"x":2,"y":589,"skin":"BW.home.main.door"}'/>
+
+		<!--需删掉的Icon-->
+				<!--<BXActiveIcon name="wareHouse" properties='{"width":160,"height":80,"x":105,"y":590,"skin":"BW.home.main.warehouse"}'/>
+				<BXActiveIcon name="fortress" properties='{"width":0,"height":0,"x":-244,"y":-187,"skin":"BW.home.main.fortress"}'/>
+				<BXActiveIcon name="market" properties='{"width":0,"height":0,"x":-409,"y":-590,"skin":"BW.home.main.market"}'/> -->
+				
+		<container name="trainHousePanel" properties='{"x":75,"y":250}' >
+			
+			<displayObject definition="gameUI.view.PTView" properties='{"width":475,"height":226,"x":0,"y":0}'/>
+			<BXActiveIcon name="xiulian" properties='{"width":108,"skin":"BW.gameUI.icon.xiulianchang","x":161,"height":108,"y":43}'/>
+			<BXActiveIcon name="jingji" properties='{"width":108,"skin":"BW.gameUI.icon.jingjichang","x":13,"height":108,"y":43}'/>
+			<label name="arenaCount" properties='{"width":50,"x":113,"autoSize":"none","mouseEnabled":false,"y":50,"stroke":"0x000000","align":"center","color":"0xe6ef9c","size":24,"border":false}'/>		
+			<BXActiveIcon name="tiaozhan" properties='{"width":108,"skin":"BW.gameUI.icon.tiaozhansai","x":309,"height":108,"y":43}'/>
+		
+		</container>
+       
+       
+       <!--二级菜单栏-->
+   	<displayObject name="farmNotice" definition="BW.home.notice.saima" properties='{"height":54,"x":230,"y":230,"width":60}'/>
+		<displayObject name="produceNotice" definition="BW.home.notice.pengtiao" properties='{"height":54,"x":369,"y":164,"width":60}'/>
+		<displayObject name="trainHouseNotice" definition="BW.home.notice.junshi" properties='{"height":54,"x":187,"y":442,"width":60}'/>
+		<displayObject name="homeNotice" definition="BW.home.notice.star" properties='{"height":54,"x":241,"y":326,"width":60}'/>
+		<displayObject name="billBoardNotice" definition="BW.home.notice.gonggao" properties='{"height":54,"x":290,"y":605,"width":60}'/>
+		<displayObject name="tavernNotice" definition="BW.home.notice.diancai" properties='{"height":54,"x":355,"y":527,"width":60}'/>
+
+
+		<displayObject name="farmNoticeEffect" definition="BW.home.giiftBag.lightEffect" properties='{"height":74,"x":214,"y":222,"width":80}'/>
+		<displayObject name="produceNoticeEffect" definition="BW.home.giiftBag.lightEffect" properties='{"height":74,"x":357,"y":155,"width":80}'/>
+		<displayObject name="trainHouseNoticeEffect" definition="BW.home.giiftBag.lightEffect" properties='{"height":74,"x":174,"y":433,"width":80}'/>
+		<displayObject name="homeNoticeEffect" definition="BW.home.giiftBag.lightEffect" properties='{"height":74,"x":227,"y":316,"width":80}'/>
+		<displayObject name="billBoardNoticeEffect" definition="BW.home.giiftBag.lightEffect" properties='{"height":74,"x":275,"y":596,"width":80}'/>
+		<displayObject name="tavernNoticeEffect" definition="BW.home.giiftBag.lightEffect" properties='{"height":74,"x":343,"y":519,"width":80}'/>
+		
+	</container>
+
+	<!--子菜单-->
+	
+<!--	<subBar id="1" properties='{"y":20, "x":32,"selectID":-1}'>
+		<BXActiveIcon properties='{"width":96,"height":96,"skin":"BW.home.toolBar2.task"}'/>
+		<BXActiveIcon properties='{"width":96,"height":96,"x":96,"skin":"BW.home.toolBar2.billBoard"}'/>
+		<BXActiveIcon properties='{"width":96,"height":96,"x":192,"skin":"BW.home.toolBar2.mail"}'/>
+		<BXActiveIcon properties='{"width":96,"height":96,"x":288,"skin":"BW.home.toolBar2.friend"}'/>
+		<BXActiveIcon properties='{"width":96,"height":96,"x":384,"skin":"BW.home.toolBar2.chat"}'/>
+		<BXActiveIcon properties='{"width":96,"height":96,"x":480,"skin":"BW.home.toolBar2.set"}'/>
+	</subBar>
+-->
+
+	<sprite name="mapContainer" />
+	<imageLoader name="denglongImg" properties='{"pathFormatName":"denglongPNG",  "x":0, "y":0,"mouseEnabled":false}' />
+	<displayObject name="alarmMC" definition="townScene.mc.AlarmMC" properties='{"x":500, "y":610, "visible":false}'/>
+	<sprite name="winCountAN" properties='{"x":270, "y":625, "align":"right", "classPath":"gameUI.winCount.BigNumber",  "mouseEnabled":false, "visible":false}' />
+	<displayObject name="winCountIcon" properties='{"x":270, "y":665, "visible":false}' definition='gameUI.winCount.Icon' />
+	<button name="refreshBtn" properties='{"labelID":110202,"styleName":"button8","width":140,"height":45,"x":487,"visible":false,"y":647}' />
+	<button name="autoAttackBtn" properties='{"x":476,"styleName":"button11","width":160,"height":45,"visible":false,"y":547}' />
+	<displayObject name="autoArtText" definition="townScene.artText.autoArt" properties='{"x":492,"y":548,"width":130.55,"height":43.5,"visible":false,"mouseEnabled":false}' />
+	<displayObject name="shanliangEffect" definition="townScene.effect.shanliangEffect" properties='{"x":577,"y":570,"mouseEnabled":false}' />
+	<button name="enterPrisonBtn" properties='{"x":487,"y":597,"width":140,"height":45,"labelID":110278,"visible":false,"styleName":"button8"}' />
+	<!-- <imageLoader name="intrudePic" properties='{"pathFormatName":"tech32",  "x":525, "y":554, "width":32, "height":32}' /> -->
+	<!--<displayObject name="homeStarBtn" definition="gameUI.btn.getPower"  properties='{"x":900, "y":80,  "visible":false}'/>-->
+	<container name="newGeneralBtn" properties='{"initX":100, "initY":530, "labelProperty":{"x":20, "y":36, "color":"0xffffcc", "stroke":"0x302010", "textID":"110279"},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":2},"classPath":"gameUI.arrow.right","visible":true}'/>
+	<displayObject name="winEnter" definition="townScene.btn.winEnter"  properties='{"x":360, "y":650, "visible":false}'/>	
+	
+	
+	<container name="tradeGuildTip" properties='{"initX":862, "initY":450, "labelProperty":{"x":25, "y":36, "color":"0xffffcc", "stroke":"0x302010", "textID":"110282"},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+	
+	
+	<container name="civilTip" properties='{"initX":732, "initY":450, "labelProperty":{"x":25, "y":-225,"width":90,"height":60,"autoSize":"none","align":"center","color":"0xffffcc","stroke":"0x302010","textID":"110284","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+	
+	<container name="clickJiusiTips" properties='{"x":230,"y":600,"initX":230, "initY":600, "labelProperty":{"x":-60, "y":55, "width":135,"height":40,"autoSize":"none","align":"center","color":"0xE5EF99", "stroke":"0x302010", "textID":"110280","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":4},"classPath":"gameUI.arrow.rightUp","visible":true}'/>
+	
+	<bloodGuidePro properties='{"x":200,"y":0,"initX":200, "initY":0, "labelProperty":{"x":47, "y":-225, "width":90,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"110291","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":2},"classPath":"gameUI.arrow.left","visible":true}'/>
+	
+	<!--<displayObject name="farmGuardBtn" definition="townScene.FarmGuardBtn" properties='{"x":930, "y":400, "visible":false}' />-->
+  <BXActiveIcon name="farmGuardBtn" properties='{"height":80,"x":47,"y":277,"width":160,"skin":"BW.home.main.shouweinongzhuang"}'/>
+	<!--守卫农庄进入面板-->
+	<FarmGuardEnterPanel  properties='{"x":0,"y":140}'>
+		<displayObject definition="skin.Panel$bg"  properties='{"height":570,"width":638,"x":0,"y":0}'/>
+		<displayObject definition="gameUI.icon.Layer"  properties='{"height":498,"width":603,"x":17,"y":59}'/>
+		<displayObject definition="gameUI.icon.BlackBG" properties='{"height":484,"width":359,"x":256,"y":63}' />
+		
+		<displayObject definition="townScene.view.Title"  properties='{"x":287,"y":65}'/>
+		<displayObject definition="townScene.view.GuardBg"  properties='{"height":340,"width":359,"x":255,"y":118}'/>
+		<imageLoader name="npc"  properties='{"height":279,"width":258,"x":274,"scaleX":-1,"fileName":"npc3","y":276,"pathFormatName":"activityPng"}'/>
+		<displayObject definition="townScene.springFest.TalkBlank"  properties='{"height":214.5,"width":207.5,"x":51,"y":77}'/>		
+		<label name="talkText" properties='{"width":230,"x":42,"autoSize":"none","mouseEnabled":false,"y":98,"stroke":"0x000000","align":"center","color":"0xe6ef9c","textID":860001,"size":18,"border":false}'/>		
+		<list name="rewardList" properties='{"x":280, "y":150, "rowCount":3, "columnCount":1, "horizontalGap":0, "verticalGap":35}' />
+		
+		<sprite name="autoBtnC"/>	
+		<button name="btn" properties='{"x":355, "y":490, "styleName":"button11", "width":160, "height":50}' parent="autoBtnC" />
+	
+		<displayObject definition="townScene.BtnWord"  properties='{"mouseChildren":false,"x":372,"y":493,"mouseEnabled":false}'/>		
+		<label name="cdText" properties='{"height":28,"width":326,"y":463,"mouseEnabled":false,"size":18,"stroke":"0x302010","align":"center","color":"0xCBCC66","autoSize":"none","x":273,"border":false}'/>
+		<button name="closeBtn"  properties='{"styleName":"closeBtn","x":579,"y":-9}'/>			
+	</FarmGuardEnterPanel>
+	
+	<!--威望显示容器-->
+	<container  name="weiWangView" properties='{"x":410, "y":140}'>
+		<displayObject definition="townScene.view.weiWang" properties='{"x":0, "y":0}' />
+		<label name="prestige" properties='{"x":0, "y":8, "color":"0xFFFF00", "stroke":"0x302010", "width":200, "height":26, "autoSize":"none", "align":"center"}' />
+	</container>
+	<!--连胜面板 -->
+	<container  name="winStreakPanel" properties='{"styleName":"panel3", "initX":8, "initY":130, "bgWidth":600, "bgHeight":600,"titleID":"110286"}'>
+		<displayObject definition="gameUI.icon.Layer"  properties='{"height":532,"x":20,"y":49,"width":559}'/>
+		<displayObject definition="townScene.view.winBG"  properties='{"height":512,"x":7,"y":-3,"width":539}'/>
+		<sprite name="titleSp" properties='{"y":77,"x":161}'/>
+		<displayObject parent="titleSp" name="mubiao" definition="townScene.art.mubiao"  properties='{}'/>
+		<displayObject parent="titleSp" name="win" definition="townScene.art.win"  properties='{}'/>
+		<sprite parent="titleSp" name="winCountArt" properties='{"x":0, "y":0, "align":"left", "classPath":"townScene.mc.bigNum",  "mouseEnabled":false}' />
+		<list name="list" properties='{"x":20, "y":50, "columnCount":1, "rowCount":3, "horizontalGap":0, "verticalGap":40}' />
+		<label name="titleTxt" properties='{"bold":true,"x":274,"stroke":"0x302010","y":79,"width":205,"height":40,"align":"center","autoSize":"none","size":18,"color":"0xFBE553"}' />
+		
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":275,"y":475,"width":56}'/>
+		<page name="page" properties='{"x":244, "y":467,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":84 },
+							"labelProp":{"x":29, "y":4, "width":64, "height":26, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+		<!--玩家的购买新闻（滚动）-->
+		<container name="news" properties='{"x":105,"y":520}'/>
+	</container>
+	
+	<!--战斗记录面板-->
+	<container  name="attackRecordsPanel" properties='{"listMaxLen":5, "x":0, "y":230,
+			"movieArgs":{
+				"duration":0.3, "openX":0, "closeX":-260,
+				"btnMovieDuration":0.1, "btnOpenRotation":180, "btnCloseRotation":0
+				}}'>
+		<displayObject name="bg" definition="gameUI.taskTraced.BG" properties='{"x":0, "y":0, "width":254, "height":300}' />
+		<displayObject definition="gameUI.taskTraced.TitleBG" properties='{"x":0, "y":-18,"width":254}' />
+		<displayObject properties='{"x":75, "y":-55}' definition='townScene.BattleText' />
+		<label name="title1Text" properties='{"x":115, "y":-16, "color":"0xFFFFFF", "stroke":"0x302010", "textID":"110225", "width":150}' />
+		<label name="title2Text" properties='{"x":260, "y":12, "width":25, "height":180, "autoSize":"none", "multiline":true, "color":"0xFFFFFF", "stroke":"0x302010", "visible":false, "textID":"110226"}' />
+
+		<label name="wantCountText" properties='{"x":20, "y":58, "color":"0xff0000", "stroke":"0x302010", "mouseEnabled":false, "visible":false}'/>
+		<list name="recordsList" properties='{"x":20, "y":30, "columnCount":1, "verticalGap":1, "rowCount":99999, "defaultSelected":true}' />
+   	<scrollBar name="vsb" target="recordsList" properties='{"style":{"autoDisplay":true},"disArea":{"x":20,"y":13,"width":230,"height":280},"y":13,"x":5,"size":280,"styleName":"vScrollBar1"}' />		
+		<displayObject name="openAndCloseBtn" definition="gameUI.taskTraced.OpenAndCloseBtn" properties='{"x":265, "y":-5}' />
+	</container>
+	
+	<!--入侵时被偷袭面板-->
+	<container  name="beBeatBack" properties='{"x":150, "y":250}'>
+		<displayObject properties='{"height":188.5,"x":0,"y":0,"width":336}' definition='gameUI.bg.TipsGB' />
+		<displayObject properties='{"y":-1,"x":0}' definition='townScene.view.BeBeatBack' />
+		<label name="enemyNameText" properties='{"x":13,"stroke":"0x302010","y":105,"width":320,"color":"0xffffff","height":36,"align":"center","autoSize":"none","mouseEnabled":false}'/>
+		<button name="seeBtn" properties='{"x":35,"styleName":"button6","width":80,"height":35,"labelID":670010,"y":140}' />
+		<button name="beatBackBtn" properties='{"x":130,"y":140,"width":80,"height":35,"labelID":110220,"styleName":"button5"}' />
+		<button name="okBtn" properties='{"x":225,"styleName":"button6","width":80,"height":35,"labelID":110221,"y":140}' />
+	</container>	
+	
+	<!--反击列表面板-->
+	<container  name="beatBackPanel" properties='{"initX":30 , "initY":200, "bgWidth":600, "bgHeight":400, "titleID":"110220"}'>
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":25, "y":60, "width":550, "height":320}' />
+		<label properties='{"bold":true,"x":30,"stroke":"0x302010","y":70,"textID":110240,"size":18,"color":"0xCBCC66"}'/>
+		<label name="myAttackCDTitleText" properties='{"bold":true,"x":320,"stroke":"0x302010","y":70,"visible":false,"textID":110242,"size":18,"color":"0xffffff"}'/>
+		<label name="myAttackCDText" properties='{"bold":true,"x":400,"stroke":"0x302010","y":70,"size":18,"color":"0xff0000"}'/>
+		<list name="enemyList" properties='{"x":50,"rowCount":1,"columnCount":3,"y":100,"defaultSelected":false,"horizontalGap":52}' />
+		<displayObject properties='{"height":18,"x":288,"y":350,"width":53}' definition='skin.page2.PageBG' />		
+		<page name="page" properties='{"x":262, "y":345,
+			"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+			"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":76 },
+			"labelProp":{"x":25, "y":3, "width":55, "height":26, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+		}' />
+	</container>
+	
+	<displayObject name="fightingMC" definition="townScene.icon.AutoFighting" properties='{"x":200, "y":150, "visible":false, "mouseEnabled":false}' />
+	<label name="leftNumberText" properties='{"x":206, "y":200, "width":250,  "height":26,  "autoSize":"none",  "align":"left", "color":"0x00FF00", "stroke":"0x302010", "mouseEnabled":false}'/>
+		
+	<!-- 自动入侵设置面板 -->
+	<container name="autoAttackSet" properties='{"x":90, "y":250,"bgWidth":450, "bgHeight":500,"closeBtnPaddingRgiht":40,"closeBtnPorp":{"y":40},"background":"skin.SpecialPanel","maxCount":99}'>
+	
+		<displayObject definition="townScene.artText.autoAtt" properties='{"x":160,"y":15,"mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Line" properties='{"height":2,"x":50,"y":240,"width":340}' />
+		<displayObject definition="townScene.bg.autoBg" properties='{"height":45,"x":53,"y":160,"width":255}' />
+		
+		<label properties='{"x":155,"stroke":"0x302010","y":105,"textID":520122,"size":18,"color":"0xE5EF99","width":360}'/>
+		<!-- 
+		<label properties='{"x":56, "y":160, "width":67,  "height":20,  "autoSize":"none",  "align":"left", "color":"0xEEFD6B", "stroke":"0x302010", "textID":"520128"}'/> -->
+		
+		<inputText name="timeText" properties='{"x":120,"align":"center","restrict":"0-9","y":172,"width":60,"height":30,"stroke":"0x302010","maxChars":2,"autoSize":"none","size":18,"color":"0xFFFFCC"}'/>
+	
+		<button name="reduceBtn" properties='{"x":79,"y":165,"width":35,"height":35,"labelID":520123,"styleName":"button10"}' />
+		<button name="addBtn" properties='{"x":187,"y":165,"width":35,"height":35,"labelID":520124,"styleName":"button10"}' />
+		<button name="add10Btn" properties='{"x":229,"y":165,"width":80,"height":35,"labelID":520125,"styleName":"button10"}' />
+		<button name="add99Btn" properties='{"x":310,"y":165,"width":80,"height":35,"labelID":520152,"styleName":"button10"}' />
+
+		<label properties='{"x":100,"stroke":"0x302010","y":285,"width":292,"leading":5,"multiline":true,"height":126,"textID":520127,"size":15,"color":"0x8D9E3D"}'/>
+		
+		<displayObject name="startBtn"  definition="gameUI2.btn.StartBtn" properties='{"y":420,"x":170}' />
+
+		<!-- 自动入侵结果面板 -->
+		<container name="autoAttackResult" properties='{"styleName":"panel3", "bgWidth":321, "bgHeight":344,"titleID":"520141","x":150, "y":250}'>
+			<displayObject definition="gameUI.icon.Layer" properties='{"height":282,"x":14,"y":47,"width":293}' />
+			<displayObject definition="gameUI.icon.Line" properties='{"x":22,"y":121,"width":261}' />
+			<displayObject definition="gameUI.icon.Line" properties='{"x":22,"y":252,"width":261}' />
+			
+			<label name="powerCostText" properties='{"x":24,"stroke":"0x302010","y":52,"color":"0xCFD897"}'/>
+			
+			<label properties='{"x":69,"stroke":"0x302010","y":85,"textID":520143,"color":"0xEEFD6B"}'/>
+			<label name="winLostCountText" properties='{"x":116,"stroke":"0x302010","y":85,"color":"0xCFD897"}'/>
+			
+			<label properties='{"x":90,"stroke":"0x302010","y":177,"textID":520145,"color":"0xEEFD6B"}'/>
+			<displayObject name="markBg" definition="townScene.winCount.Add" properties='{"height":18,"x":133,"y":177,"width":18}' />
+			<sprite name="prestigeAN" properties='{"x":157,"visible":false,"classPath":"townScene.icon.YellowNumber1","y":177,"mouseEnabled":false}' />
+			<sprite name="prestigeANr" properties='{"x":157,"visible":false,"classPath":"townScene.icon.RedNumber","y":177,"mouseEnabled":false}' />
+				
+			<button name="sureBtn" properties='{"x":105,"styleName":"button3","width":110,"height":35,"labelID":520147,"y":276}' />
+		</container>
+	</container>
+
+
+	
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "stopDuration":1, "artNumProp":{"y":-60, "align":"center", "classPath":"gameUI2.icon.NumberJyan",  "mouseEnabled":false},"startArgs":{"y":-115, "duration":0.2, "delay":0 }, "hideArgs":{"y":-125, "duration":0.3, "delay":0.6 }, "defNameTextY":25}'>
+		<sprite name="gainEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<displayObject name="cdIcon" definition='townScene.view.CD' properties='{"x":-20, "y":-96, "visible":false}' />
+		<sprite name="sp" properties='{"x":-20, "y":25}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<label name="attackCDText" properties='{"height":16, "x":-4, "y":-95, "color":"0xff0000", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="protectCDText" properties='{"height":16, "x":-4, "y":-95, "color":"0xCACB65", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="positionText" properties='{"width":100, "height":26, "x":-50, "y":10, "autoSize":"none", "align":"center", "color":"0xCACB65",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>	
+		<imageLoader name="titleRankIL" properties='{"pathFormatName":"titleRank", "width":151, "mouseEnabled":false, "mouseChildren":false}' /><!--爵位头衔-->
+		
+		<displayObject name="attentionBg" definition="gameUI.view.attentionBg"  properties='{"x":20, "y":-80,  "visible":false}'/>
+		<button name="attentionBtn" parent="attentionBg" properties='{"x":3, "y":3 , "width":40, "height":24, "styleName":"button5", "labelID":"110154"}' />
+		
+	</avatarBasicUI>
+	
+	<!--主城NPC角色UI-->
+	<townNpcUI properties='{"mouseEnabled":false, "mouseChildren":false, "delayReset":2}'>
+		<label name="nameText" properties='{"width":100, "height":16, "x":-50, "y":10, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label name="countText" properties='{"width":100, "height":16, "x":-50, "y":-80, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<displayObject name="arenaStartMC" parent="null" definition="townScene.mc.ArenaStart" />
+	</townNpcUI>	
+	
+	<!--竞技场NPC角色UI-->
+	<arenaNpcUI properties='{"mouseEnabled":false, "mouseChildren":false, "delayReset":2}'>
+		<label name="countText" properties='{"width":100, "height":16, "x":-50, "y":-80, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<displayObject name="arenaStartMC" parent="null" definition="townScene.mc.ArenaStart" />
+	</arenaNpcUI>
+	
+	<!--敌国入侵NPC角色UI-->
+	<avatarArmyUI properties='{"mouseEnabled":false, "mouseChildren":false, "delayWalk":10}'>
+		<label name="protectCDText" properties='{"width":100, "height":16, "x":-50, "y":-85, "autoSize":"none", "align":"center", "color":"0xFF0000",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label name="countryText" properties='{"width":100, "height":16, "x":-50, "y":10, "autoSize":"none", "align":"center", "color":"0xFF0000",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label name="nameText" properties='{"width":100, "height":16, "x":-50, "y":25, "autoSize":"none", "align":"center", "color":"0xFFFFFF",  "stroke":"0x151515", "mouseEnabled":false}' />
+	</avatarArmyUI>	
+	
+	<!--战斗记录渲染器-->
+	<attackRecordsRenderer properties='{"itemWidth":230}'>
+		<label name="titleText" properties='{"x":0, "y":5, "color":"0xCACC67", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label name="contentText" properties='{"x":55, "y":5,"color":"0xffffff", "stroke":"0x302010", "mouseEnabled":false, "width":175, "multiline":true}'/>
+		<linkText name="beatBackText" properties='{"x":20, "style":{"overStyle":{"underline":true, "color":"0x3D81F3"}}, "color":"0x76B0CF", "stroke":"0x302010", "textID":"110222"}' />
+	</attackRecordsRenderer>
+	
+	<!--反击列表条目渲染器-->
+	<beatBackItemRenderer properties='{"itemWidth":115, "itemHeight":164}'>
+		<displayObject definition="townScene.beatBack.ItemBG" properties='{"y":0,"x":0}' />
+		<imageLoader name="picIL" properties='{"mouseChildren":false,"x":35,"y":19,"mouseEnabled":false,"pathFormatName":"generalPic70"}' />
+		<label name="protectCDText" properties='{"bold":true,"x":36,"stroke":"0x302010","y":81,"width":88,"height":44,"align":"center","autoSize":"none","mouseEnabled":false,"color":"0xFFFFCB"}'/>
+		<label name="nameText" properties='{"x":12,"stroke":"0x302010","y":120,"width":135,"height":32,"align":"center","autoSize":"none","mouseEnabled":false,"color":"0xCBCC66"}'/>
+		<label name="levelText" properties='{"x":12,"stroke":"0x302010","y":145,"width":136,"height":30,"align":"center","autoSize":"none","mouseEnabled":false,"color":"0xCBCC66"}'/>
+		<button name="attackBtn" properties='{"x":41,"styleName":"button5","width":80,"height":35,"labelID":110220,"y":180}' />
+	</beatBackItemRenderer>
+	
+	<!--连胜渲染器-->
+	<WinItemRenderer properties='{"itemWidth":560, "itemHeight":69}'>
+		<displayObject definition="townScene.view.winItem" properties='{"height":120,"x":5,"y":70,"width":551}' />
+		<displayObject definition="townScene.art.smallWin" properties='{"y":111,"x":136}' />
+		<displayObject definition="townScene.icon.chenghao" properties='{"y":100,"x":304}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"y":90,"x":214}' />
+		<displayObject name="finish" definition="townScene.art.finish" properties='{"y":80,"x":380}' />
+		<displayObject name="box" definition="townScene.btn.winEnter" properties='{"x":376,"y":95,"mouseEnabled":false}' />				
+		<sprite name="winCountArt" properties='{"classPath":"townScene.mc.smallNum","align":"right","x":140,"y":115,"mouseEnabled":false}' />
+		<sprite name="wpNumArt" properties='{"classPath":"townScene.icon.YellowNumber","align":"left","x":335,"y":98,"mouseEnabled":false}' />			
+		<imageLoader name="picIL" properties='{"x":220,"y":97,"pathFormatName":"activityPng"}' />
+		<label name="intro" properties='{"x":299,"stroke":"0x302010","y":123,"width":180,"height":58,"align":"center","autoSize":"none","multiline":true,"mouseEnabled":false,"color":"0xFFFFCB"}'/>
+		</WinItemRenderer>
+	
+	<!-- 【守卫农庄奖励】列表呈示器  -->
+	 <FarmGuardRewardRenderer properties='{"itemWidth":288, "itemHeight":55}'>
+		<displayObject  definition="gameUI.icon.Grid1" properties='{"x":65,"y":4}'/>
+		<imageLoader name="pic" properties='{"y":11,"height":70,"width":70,"x":72,"pathFormatName":"gemstone32"}' />	
+		<label name="typeText"  properties='{ "width":80, "height":40, "x":0, "y":17, "color":"0xe6ef9c", "stroke":"0x000000", "bold":true}'/>
+		<label name="numText"  properties='{"height":20,"width":70,"mouseEnabled":false,"stroke":"0x000000","color":"0xe6ef9c","y":25,"x":155}'/>
+		<label name="underlineText"  properties='{"height":20,"underline":false,"width":210,"x":155,"stroke":"0x302010","color":"0xf5d300","y":62}'/>
+	</FarmGuardRewardRenderer>
+
+	<!--队伍界面-->
+	<container name="teamView" properties='{"x":380, "y":200,"durationArg":{"duration":0.3,"startAngle":180,"endAngle":0,"startX":380,"endX":640}}'>
+		<displayObject name="teamBg" definition="gameUI.taskTraced.BG" properties='{"x":0, "y":25,"width":260,"mouseEnabled":false}'/>
+		<displayObject name="titleBg" definition="gameUI.taskTraced.TitleBG" properties='{"x":0, "y":0,"width":260}'/>
+		<displayObject name="openBtn" definition="gameUI.taskTraced.OpenAndCloseBtn" properties='{"x":-3, "y":10}'/>
+		
+		<label name="showOrHideText" properties='{"x":20,"y":2,"size":20,"color":"0xFFFFFF", "stroke":"0x302010","visible":true}' /> 
+		<label name="curMLText" properties='{"x":105,"y":2,"width":140,"height":30,"autoSize":"none","align":"left","color":"0xFFFF00", "stroke":"0x302010"}' /> 
+		<label name="openViewText" properties='{"x":-30,"y":25,"size":24,"color":"0xFFFFFF", "stroke":"0x302010","textID":"500422","visible":false}' /> 
+		<list name="teamList" properties='{ "y":25,"columnCount":1, "rowCount":10, "verticalGap":4,"horizontalGap":1,  "defaultSelected":false, "mouseDownSelect":false}' />
+	</container>
+
+	<!-- 队伍项呈器 -->
+	<TeamRenderer properties='{"itemWidth":36,"itemHeight":30,"textColor":["0x76B0CF","0xFF0000","0x999999"],"mouseEnabled":false}'>
+		<displayObject definition='gameUI.icon.TitleLayer' properties='{"mouseEnabled":false}'/>
+		<label name="lvText" properties='{"x":4,"y":3,"width":110, "color":"0xFFFFFF", "stroke":"0x302010","mouseEnabled":false}' />
+		<label name="nameText" properties='{"x":68,"y":4,"width":180, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<linkText  name="seeText" properties='{"style":{"overStyle":{"underline":true}},"x":180, "y":4, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"500413","textType":"htmlText"}'/>
+	</TeamRenderer>
+
+</config>

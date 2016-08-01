@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 浏览器菜单 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menubrowser"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:orientation="vertical" 
+    >
+
+    <!-- home 刷新 后退等所在布局 -->
+
+    <FrameLayout
+        android:id="@+id/frame_browser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#cccccc"
+        >
+
+        <LinearLayout
+            android:id="@+id/mobilemenu"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_gravity="center"
+            android:background="@drawable/bar_background"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_home" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_back" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_fresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/menu_fresh" />
+            </RelativeLayout>
+
+            <!-- 添加“清除缓存按钮” -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_elimiate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="0.17"
+                    android:background="@drawable/menu_eliminate"
+                    android:gravity="bottom|center"
+                    android:padding="@dimen/bwpx2"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/bwpx12" />
+            </RelativeLayout>
+
+            <!-- 添加“关于”按钮 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0" >
+
+                <Button
+                    android:id="@+id/menu_about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="0.17"
+                    android:background="@drawable/menu_about"
+                    android:gravity="bottom|center"
+                    android:padding="@dimen/bwpx2"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="@dimen/bwpx12" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/menu_loading_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bwpx5"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:max="100"
+            android:progressDrawable="@layout/progresscolor" />
+    </FrameLayout>
+
+</LinearLayout>

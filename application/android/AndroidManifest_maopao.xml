@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+		package="com.jqbar"
+		android:installLocation="auto"
+		android:versionName="2.4.1" 
+		android:versionCode="3">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <supports-screens android:anyDensity="true"
+    	android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_INPUT_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.SET_ORIENTATION"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"></uses-permission>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>   
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/> 
+    <!-- FreeSky SDK -->
+	<!-- 需要增加的权限-开始 -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<!-- 结束 -->
+    
+    
+    <application android:label="@string/app_name"
+    		android:icon="@drawable/byone_logo"
+    		android:theme="@style/ThemeActivity"
+    		>
+        <activity android:name="MobileMain"
+        		  android:label="@string/app_name"
+        		  android:screenOrientation="portrait"
+        		  android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="JQBarMain"     android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="AboutActivity" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="LocalFlashAct" android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="HelpActivity"  android:configChanges="orientation|keyboardHidden"></activity>
+        <activity android:name="BwWebView"     android:configChanges="orientation|keyboardHidden" android:theme="@android:style/Theme.Dialog"></activity>
+
+		<service android:name="UpgradeService"/>
+		<service android:name="BwPushService" android:label="BwPushService"></service>
+
+		<!-- FreeSky SDK -->
+		<!-- 需要增加的 Activity-开始 -->
+		<service android:name="com.skymobi.freesky.service.FsSdkService"></service>
+		<!-- 若没有接入支付(freepayment.jar),则不需要以下代码 -->
+		<activity android:name="com.skymobi.free.MainFrameActivity"
+		android:configChanges="orientation|keyboard"
+		android:label="MainFrameActivity">
+		</activity>
+		<activity android:name="com.skymobi.charge.activity.EnterChargeCenter"
+		android:configChanges="orientation|keyboard"
+		android:screenOrientation="landscape"></activity>
+		<service android:name="com.skymobi.charge.service.CheckResultBackgroundService"></service>
+		<service android:name="com.skymobi.pay.sdk.SkyPayCheckService"></service>
+			<receiver android:name="com.skymobi.pay.sdk.SkyPayNetworkReceiver">
+				<intent-filter android:priority="2147483647">
+				<action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+			</intent-filter>
+		</receiver>
+		<!-- 结束 -->
+  
+		
+    </application>
+</manifest>

@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GGBase - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\jq001\LOCALS~1\Temp\RSP55.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\..\..\Include\Base" /I "..\..\..\..\dependency\mad\include" /I "..\..\..\..\dependency\mp3decoder\include" /I "..\..\..\..\dependency\gdiplus\include" /I "..\..\..\..\Resource\Include" /I "..\..\..\..\dependency\loki-0.1.7\include" /D "_ANALY" /D "_WINEMU" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "_LIB" /D "HAVE_CONFIG_H" /D "ASO_ZEROCHECK" /D "FPM_DEFAULT" /FR"..\..\..\..\Tmp\Win32\GGBase\Debug/" /Fp"..\..\..\..\Tmp\Win32\GGBase\Debug/GGBase.pch" /YX"stdafxggbase.h" /Fo"..\..\..\..\Tmp\Win32\GGBase\Debug/" /Fd"..\..\..\..\Tmp\Win32\GGBase\Debug/" /FD /GZ /c 
+"C:\WorkNew\trunk\src\base\win32\GGBase.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\jq001\LOCALS~1\Temp\RSP55.tmp" 
+Creating temporary file "C:\DOCUME~1\jq001\LOCALS~1\Temp\RSP56.tmp" with contents
+[
+/nologo /out:"..\..\..\..\Lib\Win32\Debug\GGBase.lib" 
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\bit.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\decoder.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\fixed.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\frame.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\GGBase.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\huffman.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\layer12.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\layer3.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\StdAfxGGBase.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\stream.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\synth.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\timer.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\version.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XButton.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XData.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XDialog.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XDib.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XEdit.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XFastAlloc.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XFile.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XGraphics.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XHScrollBar.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XImage.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XListBox.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XMenu.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XMp3Decomp.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XMutex.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XNativeSoundMix.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XResource.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XScrollBar.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XSocket.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XSort.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XStream.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XString.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XTabControl.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XTime.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XVector.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XVScrollBar.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XWindow.obj
+\WorkNew\trunk\Tmp\Win32\GGBase\Debug\XZLib.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\jq001\LOCALS~1\Temp\RSP56.tmp"
+<h3>Output Window</h3>
+Compiling...
+GGBase.cpp
+Creating library...
+
+
+
+<h3>Results</h3>
+GGBase.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

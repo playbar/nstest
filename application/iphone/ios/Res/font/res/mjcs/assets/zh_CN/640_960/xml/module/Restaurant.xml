@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--酒肆模块-->
+<config properties='{"titleID":450101, "initX":0, "initY":0, "styleName":"window1" }'>
+	<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+
+	<!--	<displayObject parent="panelMaskC" definition="gameUI.icon.BlackBG"  properties='{"x":0 , "y":-10,"width":640,"height":790}'/> -->
+
+	<!--包间-->
+	<container name="newBuyFood" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.diancai"}'>	
+		<displayObject definition='restaurant.new.BG' properties='{"x":40, "y":45}' />
+		<verbatimText name="tipsText" properties='{"x":300, "y":205, "width":280, "size":20, "color":"0xFEFECA", "stroke":"0x302010", "multiline":true}' />
+ 	  <displayObject definition="restaurant.new.Dishlist" properties='{"width":577.5,"height":352.8,"x":31,"y":352}'/>	
+		<list name="foodList" properties='{"x":45, "y":388, "columnCount":5, "rowCount":2, "horizontalGap":27, "defaultSelected":false, "verticalGap":24}' />
+		 <sprite name="rewardTips" properties='{"x":298, "y":300}' />		
+		<!--玩家的购买新闻（滚动）-->
+		<container name="news" properties='{"x":105,"y":83,"height":27,"movieArgs":{"y":-27, "duration":0.5, "delay":1.8}}'/>
+			
+	</container>
+
+	<!--招募-->
+	<container name="employ" properties='{"tabBtnMC":"BW.gameUI.button.zhaomu"}'>
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":20, "y":40, "width":600, "height":666}' />
+		<displayObject definition="gameUI.bg.ConcaveFrame" properties='{"x":40, "y":160, "width":557, "height":448}' />
+	
+		<label properties='{"x":20, "y":40, "size":22, "color":"0xE6F099", "stroke":"0x302010", "textID":"510502", "bold":true, "autoSize":"none", "align":"center", "width":600}'/>
+		<label name="infoText" properties='{"x":20, "y":70,"size":16, "multiline":"true","color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":600}'/>
+		<label name="infoText2" properties='{"x":20, "y":110,"size":16, "multiline":"true","color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":600}'/>
+		<list name="generalList" properties='{"x":100, "y":170, "columnCount":3, "rowCount":2, "horizontalGap":60,"verticalGap":25, "defaultSelected":false}' />
+		
+		<label name="silverCostText" properties='{"x":217, "y":620,"size":20, "color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"right", "width":100}'/>
+		<label name="goldCostText" properties='{"x":426, "y":620, "color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"right", "width":100,"visible":false}'/>
+		<displayObject definition="gameUI.icon.Copper" properties='{"x":318, "y":623}' />
+		<displayObject definition="gameUI.icon.Gold" properties='{"x":526, "y":623,"visible":false}' />
+		<displayObject name="disIcon" definition="restaurant.icon.discount"  properties='{"x":20 , "y":40,"visible":false}'/>	
+		<button name="silverRefreshBtn" properties='{"x":260, "y":650, "styleName":"button2", "labelID":"510505", "width":110,"height":40 }' />
+		<button name="goldRefreshBtn" properties='{"x":470, "y":650, "styleName":"button2", "labelID":"510506", "width":110,"height":40,"visible":false}' />
+	</container>
+
+	
+	<!--召回-->
+
+<container name="deposit" properties='{"tabBtnMC":"BW.gameUI.button.jicun"}'>
+		<displayObject definition="gameUI.bg.ConcaveFrame" properties='{"x":40, "y":140, "width":557, "height":446}' />
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":302 , "y":622, "width":60,"height":30 }'/>	
+		<label properties='{"x":20, "y":53, "size":24, "color":"0xE6F099", "stroke":"0x302010", "textID":"450509", "bold":true, "autoSize":"none", "align":"center", "width":600 }'/>
+		<label name="canDepositText" properties='{"x":20, "y":95, "size":16,"multiline":"true","color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":590}'/>
+		
+		<list name="generalList" properties='{"x":52, "y":167, "columnCount":5, "rowCount":2, "horizontalGap":4,"verticalGap":15, "defaultSelected":false}' />
+		<page name="page" properties='{"x":257, "y":623,
+						"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":120},	
+					"labelProp":{"x":42, "y":4, "width":60, "height":24, "size":16,"autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+						}' />
+	</container>
+	
+	<!--洗髓-->
+	<container name="xisui" properties='{"args":{"x1":10, "x2":20}}'>
+		<displayObject definition="restaurant.view.LgXsBG1" properties='{"x":16, "y":30}' />
+		<displayObject name="title" definition="restaurant.view.Word" properties='{"x":20, "y":30}' />
+		
+		<container name="left" properties='{"x":110 , "y":90}'/><!--前军-->
+		<container name="right" properties='{"x":415 , "y":90}'/><!--中军-->
+		<label properties='{"textID":"450513", "x":0, "y":375, "color":"0xcbce65", "stroke":"0x000000", "autoSize":"none", "align":"center", "width":605}'/>
+		
+		<button name="changeBtn" properties='{"x":270, "y":290, "styleName":"button2", "labelID":"450514", "width":70, "height":30}' />
+		<sprite name="choosePanel" properties='{"x":0 , "y":0}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":315, "y":274, "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":285, "y":270, "color":"0xcbce65", "stroke":"0x000000", "width":50, "mouseEnabled":false}'/>
+		<displayObject name="tx1" definition="restaurant.view.tx1"  properties='{"x":300 , "y":160}'/>	
+		<displayObject name="tx21" definition="restaurant.view.tx2"  properties='{"x":50 , "y":260}'/>	
+		<displayObject name="tx22" definition="restaurant.view.tx2"  properties='{"x":365 , "y":260}'/>	
+	</container>
+	
+	<!--炼骨-->
+	<container name="liangu" properties='{"args":{"x1":0, "x2":30, "gridX1":86, "gridX2":-35, "gap":4}}'>
+		<displayObject definition="restaurant.view.LgXsBG" properties='{"x":16, "y":30}' />
+		<displayObject name="title" definition="restaurant.view.Word" properties='{"x":21, "y":30}' />
+		
+		<container name="left" properties='{"x":110 , "y":90}'/><!--前军-->
+		<container name="right" properties='{"x":410 , "y":90}'/><!--中军-->
+		<label properties='{"textID":"450522", "x":0, "y":375, "color":"0xcbce65", "stroke":"0x000000", "autoSize":"none", "align":"center", "width":605}'/>
+		
+		<button name="changeBtn" properties='{"x":270, "y":290, "styleName":"button2", "labelID":"450514", "width":70, "height":30}' />
+		<sprite name="choosePanel" properties='{"x":0 , "y":0}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":315, "y":274, "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":285, "y":270, "color":"0xcbce65", "stroke":"0x000000", "width":50, "mouseEnabled":false}'/>
+		
+		<displayObject name="tx1" definition="restaurant.view.tx1"  properties='{"x":300 , "y":160}'/>	
+		<displayObject name="tx21" definition="restaurant.view.tx2"  properties='{"x":50 , "y":260}'/>	
+		<displayObject name="tx22" definition="restaurant.view.tx2"  properties='{"x":365 , "y":260}'/>	
+		
+	</container>
+		<!-- 武将列表界面 -->
+	<choosePanel properties='{"initX":170,"initY":200, "bgWidth":300, "bgHeight":115,"titleID":"430005"}'>
+		
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":105, "y":81, "width":80}'/>
+		
+		<list name="generalList" properties='{"x":20, "y":38, "columnCount":6, "rowCount":1, "horizontalGap":4, "verticalGap":2}' />
+
+		<page name="page" properties='{"x":90, "y":82,
+						"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":95 },
+						"labelProp":{"x":25, "y":0, "width":64, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+						}' />
+		
+		<!--<button name="downHorseBtn" properties='{"x":230, "y":45,  "styleName":"button5", "labelID":"430055", "visible":false}' />--><!-- 下马按钮-->
+	</choosePanel>
+	
+	
+	<!--食物Item-->
+	<foodItemRenderer properties='{"itemWidth":84, "itemHeight":120}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":13 , "y":14, "mouseEnabled":true}'/>	
+		<displayObject name="moveEffect" definition="restaurant.new.Choose"  properties='{"x":0 , "y":0,"visible":false}'/>	
+		<!--<label name="costText" properties='{"y":145, "width":35, "height":16, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="valueText" properties='{"x":8, "y":125, "width":45, "height":16, "autoSize":"none", "align":"right", "color":"0x98CB00", "stroke":"0x302010", "mouseEnabled":false}' />-->
+		<label name="costText" properties='{"x":2,"y":105, "width":74, "height":30,"size":20, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false,"border":false}' />
+		<imageLoader name="recipeIL" properties='{"pathFormatName":"farmProduct32",  "x":21, "y":22, "width":70, "height":70}' />
+		<displayObject name="smoke" definition="restaurant.mc.Smoke"  properties='{"x":42 , "y":-33}'/>	
+		<displayObject name="copperIcon" definition='gameUI.icon.Copper' properties='{"x":69, "y":111, "mouseEnabled":false,"visible":false}'/>
+		<displayObject name="goldIcon" definition='gameUI.icon.Gold' properties='{"x":57, "y":111, "mouseEnabled":false,"visible":false}'/>
+	</foodItemRenderer>
+
+	<!--武将Item-->
+	<generalRenderer properties='{"itemWidth":106, "itemHeight":195, "filePath":["generalPic70", "civil70"]}'>
+		<displayObject name="generalBg" definition="restaurant.employ.NewItem" properties='{"x":0, "y":0}' />		
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":11, "y":30}' />
+		<imageLoader name="picIL" properties='{"x":18, "y":37, "width":70, "height":70}' />
+		<label name="nameText" properties='{"x":6, "y":115,"size":16, "color":"0xCBCC66", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":92, "bold":true}'/>
+		<label name="costText" properties='{"x":6, "y":134, "size":16,"color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":92}'/>
+		<displayObject name="silverIcon" definition="gameUI.icon.Copper" properties='{"x":73, "y":138, "visible":false}' />
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold" properties='{"x":73, "y":138, "visible":false}' />
+		<button name="employBtn" properties='{"x":10, "y":168, "styleName":"button2", "labelID":"510504", "width":86}' />
+	</generalRenderer>
+	<!-- 武将tip -->
+	<generalTip properties='{"initWidth":191, "initHeight":200, "labelGap":10, "lineArr":[34, 235, 129, 85]}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":22, "size":14, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="levelText" properties='{"x":12, "y":33, "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="weaponMC" definition='gameUI.icon.generalTypeSmall' properties='{"x":154, "y":9}'/>
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalShape", "x":112, "y":110}' />
+		<label name="tongText" properties='{"x":12, "y":66, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="yongText" properties='{"x":12, "y":84, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="zhiText" properties='{"x":12, "y":102, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		
+		<label name="skillNameText" properties='{"x":12, "y":138, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="skillIntroText" properties='{"x":12, "y":156, "width":170, "height":60, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false,"border":false}' />
+		<displayObject name="line1" definition='gameUI.icon.Line1' properties='{"x":8, "width":171}'/>
+		<displayObject name="line2" definition='gameUI.icon.Line1' properties='{"x":8, "y":129, "width":171}'/>
+		<label name="generalIntroText" properties='{"x":12, "y":221, "width":170, "height":80, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false,"border":false}' />
+		
+		<label name="civilIntroText" properties='{"x":12, "y":100, "width":170, "height":80, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false,"border":false}' /><!--文官介绍废话-->
+	</generalTip>
+	
+	<!--可召回的武将列表 Item-->
+	<depositGeneralRenderer>
+		<displayObject definition="restaurant.employ.ItemBG" properties='{"x":0, "y":0}' />
+		<imageLoader name="picIL" properties='{"pathFormatName":"generalPic70", "x":18, "y":17, "width":70, "height":70}' />
+		
+		<label name="nameText" properties='{"x":6, "y":95,"size":16, "color":"0xCBCC66", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":92, "bold":true}'/>
+		<button name="comeBackBtn" properties='{"x":10, "y":148, "styleName":"button2", "labelID":"450506", "width":80}' />
+	</depositGeneralRenderer>
+	
+	<!--【洗髓】** 武将呈示器-->
+	<XisuiRenderer>
+		<displayObject name="kick" definition="restaurant.view.SkillBg" properties='{"x":0, "y":0,"width":80, "height":143}' />
+		<label name="nameText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":110, "height":16, "x":-5,"y":10, "color":"0xFFFFCC", "stroke": "0x2D261E","border":false,"mouseEnabled":false}'/>
+		
+		<sprite name="avatars" properties='{"x":0, "y":110,"mouseEnabled":false}'/>
+		<sprite name="sp"/>
+		<label parent="sp" name="tongText" properties='{"x":0,"y":182, "width":130, "height":20, "size":12,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label parent="sp" name="zhiText" properties='{"x":0,"y":228, "width":130, "height":20, "size":12,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label parent="sp" name="yongText" properties='{"x":0,"y":204, "width":130, "height":20,"size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		
+	</XisuiRenderer>
+	
+	<!--【炼骨】** 武将呈示器-->
+	<LianguRenderer>
+		<displayObject name="kick" definition="restaurant.view.SkillBg" properties='{"x":0, "y":0,"width":80, "height":143}' />
+		<label name="nameText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":110, "height":16, "x":-5,"y":10, "color":"0xFFFFCC", "stroke": "0x2D261E","border":false,"mouseEnabled":false}'/>
+		
+		<sprite name="avatars" properties='{"x":0, "y":110,"mouseEnabled":false}'/>
+		<sprite name="sp"/>
+		<label parent="sp" name="jinglianText" properties='{"x":-20,"y":182, "width":130, "height":20, "size":12,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label parent="sp" name="xiangqianText" properties='{"x":-20,"y":204, "width":130, "height":20, "size":12,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label parent="sp" name="qilingText" properties='{"x":-20,"y":228, "width":130, "height":20,"size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<displayObject name="grid" definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":190,"visible":false}'/>	
+		<!--<imageLoader name="pic" properties='{"pathFormatName":"equip32", "x":0 , "y":193}'/>	-->
+		<sprite name="goodsIcon" properties='{"x":0, "y":193}' />	
+	</LianguRenderer>
+
+	
+	<!-- 可选武将列表 -->
+	<ChoosePanelRenderer properties='{"itemHeight":40,"itemWidth":40}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalPic40",  "x":4, "y":4, "width":32, "height":32}' />	
+	</ChoosePanelRenderer>
+	
+</config>

@@ -1,0 +1,22 @@
+//flash.assystem 
+
+include	"LoaderContext.as"
+include "ImageDecodingPolicy.as"
+include "JPEGLoaderContext.as"
+include "SystemUpdater.as"
+include "SystemUpdaterType.as"
+include "TouchscreenType.as"
+include "ApplicationDomain.as"
+include "SecurityDomain.as"
+include "IME.as"
+include "Capabilities.as"
+include "IMEConversionMode.as"
+include "Security.as"
+include "SecurityPanel.as"
+include "System.as"
+
+include "MessageChannel.as"
+include "MessageChannelState.as"
+include "Worker.as"
+include "WorkerDomain.as"
+include "WorkerState.as"

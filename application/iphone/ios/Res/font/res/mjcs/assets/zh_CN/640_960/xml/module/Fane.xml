@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【神庙窗口】配置文件-->
+<config properties='{"hideScene":false,"initX":15, "initY":140, "styleName":"panel3","bgWidth":608, "bgHeight":540, "titleID":"630001", "isSpecial":true}'>
+
+<!-- 神庙界面 -->
+	<container name="fete" properties='{"x":0,"y":0,"dy":1.5,"titleInitY":50,"labelProp":{"width":250, "border":false,"height":30, "autoSize":"none", "align":"center", "font":"黑体",
+		"multiline":true, "size":20, "color":"0xFFFF00", "stroke":"0x302010", "mouseEnabled":false},
+		"contentProp":{"initY":220,"gapY":30,"disY":30}}'>
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":20 , "y":50,"width":568,"height":430}'/>
+		<!-- <displayObject definition="gameUI.icon.BlackBG"  properties='{"x":26 , "y":301,"width":555,"height":92}'/> -->
+		<displayObject definition="fane.view.piousBg"  properties='{"x":20 , "y":328,"height":195}'/>
+		<label name="titleIntroText" properties='{"x":25, "y":88,"color":"0xCBCC64", "stroke":"0x302010", "textID":"630009"}'/>
+		<label name="timeDownText" properties='{"x":330, "y":75,"color":"0xCBCC64", "stroke":"0x302010"}'/>
+		<list name="feteList" properties='{"x":23, "y":97, "columnCount":4, "rowCount":1, "horizontalGap":1, "verticalGap":1}' /> 
+		<label name="introText" properties='{"size":16, "x":120,"y":371,"height":60,"width":413,"align":"center","multiline":"true","autoSize":"none" ,"color":"0xFFCC00", "stroke": "0x2D261E"}'/>
+	<!-- 	<button name="feteBtn" properties='{"x":510, "y":270, "autoSize" :true,"styleName":"button5", "labelID":"630004"}' />
+		<label name="costIntro" properties='{"text":"costinfo","x":270, "y":276,"color":"0xCBCC64", "stroke":"0x302010", "textID":"630005"}'/>
+		<label name="goldCost"  properties='{"text":"goldcost","size":16, "x":430,"y":276,"height":20,"width":50,"align":"right","autoSize":"none" ,"color":"0xE7F19B", "stroke": "0x2D261E"}'/> -->
+		<!-- <displayObject name="goldIcon" definition="gameUI.icon.Gold"  properties='{"x":480 , "y":279}'/> -->
+		<container name="pious" properties='{"x":10 , "y":-10}'>	
+			<label  properties='{"size":16, "x":130,"y":351,"height":24,"width":413,"align":"center","autoSize":"none" ,"color":"0xFFCC00", "stroke": "0x2D261E","textID":"630054"}'/>
+			<displayObject name="rateMC" definition="fane.fete.rate"  properties='{"x":130 , "y":371}'/>
+			<label  name="piousText" properties='{"x":310, "y":373, "color":"0xDEBB46", "stroke":"0x302010", "border":false,"mouseEnabled":false}'/>
+			<list name="rateIntroList" properties='{ "x":177, "y":393,"columnCount":6, "rowCount":1, "horizontalGap":30, "verticalGap":0}' />
+			<label  properties='{"size":16, "x":35,"y":371,"height":24,"width":90,"align":"left","autoSize":"none" ,"color":"0xE7F19B", "stroke": "0x2D261E","textID":"630052"}'/>
+		</container>
+		<container name="msgTips1" properties='{"x":-30 , "y":0,"mouseEnabled":false,"mouseChildren":false}'/>	
+		<container name="msgTips2" properties='{"x":110 , "y":0,"mouseEnabled":false,"mouseChildren":false}'/>		
+		<container name="msgTips3" properties='{"x":248 , "y":0,"mouseEnabled":false,"mouseChildren":false}'/>	
+		<container name="msgTips4" properties='{"x":180 , "y":0,"mouseEnabled":false,"mouseChildren":false}'/>	
+		
+		<list name="iconList" properties='{ "x":65, "y":465, "columnCount":2, "horizontalGap":20, "verticalGap":1, "rowCount":1}' />
+		<list name="techList" properties='{ "x":521, "y":451, "columnCount":10, "horizontalGap":1, "verticalGap":1, "rowCount":1}' />
+		
+	
+		
+		
+	</container>
+
+	<MsgTips  properties='{"mouseEnabled":false,"mouseChildren":false}'>	
+		<sprite name="msgContainer" properties='{"x":0, "y":0}' />	
+		<displayObject name="double" definition="fane.view.double"  properties='{"x":48 , "y":197,"visible":false}'/>
+		<displayObject name="four" definition="fane.view.four"  properties='{"x":48 , "y":197,"visible":false}'/>
+		<displayObject name="ten" definition="fane.view.ten"  properties='{"x":48 , "y":197,"visible":false}'/>
+	</MsgTips>
+	
+	<TechRenderer properties='{"itemWidth":51}'>
+		<imageLoader name="goodIL" properties='{"pathFormatName":"tech32",  "x":0, "y":0, "width":51, "height":51}' />	
+	</TechRenderer>
+	
+	<!-- 祭祀项呈器 -->
+	<FeteRenderer properties='{"itemWidth":140, "feteDefinArr":["fane.btn.shennong" ,"fane.btn.nvwa","fane.btn.fuxi","fane.btn.dajisi"],"labelX":[34, 60]}'>
+		
+		<!-- <displayObject name="fuxiBtn" definition="fane.btn.fuxi"  properties='{"x":0 , "y":0,"visible":false,"height":180}'/>
+		<displayObject name="nvwaBtn" definition="fane.btn.nvwa"  properties='{"x":0 , "y":0,"visible":false,"height":180}'/>
+		<displayObject name="shennongBtn" definition="fane.btn.shennong"  properties='{"x":0 , "y":0,"visible":false,"height":180}'/> -->
+		<displayObject name="noFeteBg" definition="fane.view.noOpen"  properties='{"x":0 , "y":0,"visible":false}'/>
+	
+		<sprite name="feteC"/>
+		<label name="goldCostNumText"  properties='{"size":16, "x":0,"y":200,"height":24,"width":120,"autoSize":"none" ,"color":"0xE7F19B", "stroke": "0x2D261E","border":false}'/>
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold"  properties='{"x":80 , "y":203}'/>
+		<displayObject name="doubleIcon" definition="fane.icon.doubleIcon"  properties='{"x":13 , "y":13,"visible":false}'/>
+	
+		
+	</FeteRenderer>
+	<!-- 祭祀虔诚度说明 项呈器  -->
+	<FeteRateIntroRenderer properties='{"itemWidth":28}'>
+		<!-- <label name="introText"  properties='{"border":false,"autoSize":"none", "align":"left", "width":90, "height":40, "x":0,"y":0, "color":"0xCBCC64", "stroke": "0x2D261E","mouseEnabled":false}'/> -->
+		<displayObject name="iconMC" definition="fane.icon.piousIcon"  properties='{"x":0 , "y":0}'/>
+		<displayObject  name="gridBg" definition='gameUI.icon.Grid1' properties='{"x":-5, "y":16,"visible":false}'/>
+		<imageLoader name="machinePic" properties='{"pathFormatName":"machine32",  "x":2, "y":23, "width":70, "height":70}' />	
+	</FeteRateIntroRenderer>
+</config>

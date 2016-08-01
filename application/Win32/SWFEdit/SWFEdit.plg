@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SWFEdit - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP54F8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_WINEMU" /FR"Debug/" /Fp"Debug/SWFEdit.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\WorkAS3\trunk\application\Win32\SWFEdit\SWFEdit.cpp"
+"D:\WorkAS3\trunk\application\Win32\SWFEdit\SWFEditDlg.cpp"
+"D:\WorkAS3\trunk\application\Win32\SWFEdit\SWFShow.cpp"
+]
+Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP54F8.tmp" 
+Creating temporary file "C:\Users\dell\AppData\Local\Temp\RSP54F9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_WINEMU" /FR"Debug/" /Fp"Debug/SWFEdit.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\WorkAS3\trunk\application\Win32\SWFEdit\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\dell\AppData\Local\Temp\RSP54F9.tmp" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/SWFEdit.pdb" /debug /machine:I386 /out:"Debug/SWFEdit.exe" /pdbtype:sept  .\Debug\StdAfx.obj .\Debug\SWFEdit.obj .\Debug\SWFEditDlg.obj .\Debug\SWFShow.obj .\Debug\SWFEdit.res "
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+d:\workas3\trunk\include\base\xtabcontrol.h(35) : error C2666: '[]' : 2 overloads have similar conversions
+d:\workas3\trunk\include\base\xtabcontrol.h(35) : error C2227: left of '->nData' must point to class/struct/union
+d:\workas3\trunk\include\base\xzlib.h(15) : fatal error C1083: Cannot open include file: 'mozzconf.h': No such file or directory
+执行 cl.exe 时出错.
+Creating command line "bscmake.exe /nologo /o"Debug/SWFEdit.bsc"  .\Debug\StdAfx.sbr .\Debug\SWFEdit.sbr .\Debug\SWFEditDlg.sbr .\Debug\SWFShow.sbr"
+Creating browse info file...
+BSCMAKE: error BK1506 : cannot open file '.\Debug\StdAfx.sbr': No such file or directory
+执行 bscmake.exe 时出错.
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+SWFEdit.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

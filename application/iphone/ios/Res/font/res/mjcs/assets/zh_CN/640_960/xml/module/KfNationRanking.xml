@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--跨服国战排行榜-->
+<config properties='{"x":0,"y":0, "titleID":"830000","styleName":"window1"}'>
+		<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+	<!--势力排行榜-->
+	<container name="forces" properties='{"tabBtnMC":"BW.gameUI.button.shili"}' >	
+		<displayObject definition="kfNationRanking.forces.BG" properties='{}' />
+		<displayObject name="box" definition="kfNationRanking.forces.box" properties='{"x":525,"y":43}' />		
+		<displayObject name="bg2" definition="kfNationRanking.forces.rankBG" properties='{"x":19, "y":116, "visible":false}' />
+		<displayObject name="bg1" definition="gameUI.icon.Layer" properties='{"x":19, "y":116, "width":570, "height":284, "visible":false}' />
+		<displayObject parent="bg2" definition="kfNationRanking.view.paim" properties='{"x":3,"y":25}' />	
+		<label name="tips" properties='{"x":214, "y":204, "size":25, "width":180, "height":40, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0x302010","mouseEnabled":false, "bold":false}'/>
+		
+		<sprite name="allMatchAN" properties='{"x":210, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		<sprite name="ingMatchAN" properties='{"x":440, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		
+		<label parent="bg2" properties='{"x":3, "y":7, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830010"}'/>
+		<label parent="bg2" properties='{"x":55, "y":7, "width":186, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830013"}'/>
+		<label parent="bg2" properties='{"x":262, "y":7, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830016"}'/>
+		<label parent="bg2" properties='{"x":329, "y":7, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830015"}'/>
+		<label parent="bg2" properties='{"x":455, "y":7, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830014"}'/>
+		
+		<list name="list" properties='{"x":0, "y":148, "columnCount":1, "rowCount":11, "horizontalGap":0, "verticalGap":1}' />
+		
+	</container>
+	<!--杀敌排行榜-->
+	<container name="enemy" >	
+		<displayObject definition="kfNationRanking.forces.BG" properties='{}' />		
+		<displayObject name="bg2" definition="kfNationRanking.forces.rankBG" properties='{"x":19, "y":116, "visible":false}' />
+		<displayObject name="bg1" definition="gameUI.icon.Layer" properties='{"x":19, "y":116, "width":570, "height":284, "visible":false}' />
+		<displayObject parent="bg2" definition="kfNationRanking.view.paim" properties='{"x":3,"y":25}' />	
+		<label name="tips" properties='{"x":214, "y":204, "size":25, "width":180, "height":32, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0x302010","mouseEnabled":false, "bold":true}'/>
+		
+		<sprite name="allMatchAN" properties='{"x":210, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		<sprite name="ingMatchAN" properties='{"x":440, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		<label parent="bg2" properties='{"x":3, "y":7, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830010"}'/>
+		<label parent="bg2" properties='{"x":55, "y":7, "width":186, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830011"}'/>
+		<label parent="bg2" properties='{"x":262, "y":7, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830012"}'/>
+		<label parent="bg2" properties='{"x":329, "y":7, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830013"}'/>
+		<label parent="bg2" properties='{"x":455, "y":7, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"830014"}'/>
+		
+		<list name="list" properties='{"x":0, "y":148, "columnCount":1, "rowCount":11, "horizontalGap":0, "verticalGap":1}' />
+	</container>
+	<!--趣闻榜-->
+	<container name="interesting" >	
+		<displayObject definition="kfNationRanking.interesting.BG" properties='{}' />
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":19, "y":116, "width":570, "height":284}' />
+		<label name="tips" properties='{"x":214, "y":204, "size":25, "width":180, "height":32, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0x302010","mouseEnabled":false, "bold":true}'/>
+		
+		<sprite name="allMatchAN" properties='{"x":230, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		<sprite name="ingMatchAN" properties='{"x":460, "y":55, "align":"center", "classPath":"gameUI.kf.BigNumber",  "mouseEnabled":false, "visible":true}' />
+		<list name="list" properties='{"x":30, "y":132, "columnCount":1, "rowCount":11, "horizontalGap":0, "verticalGap":-8}' />
+	</container>
+	
+	<!--等级排行榜-->
+	<container name="level" properties='{"tabBtnMC":"BW.gameUI.button.dengji"}' >	
+		<displayObject definition="kfNationRanking.level.BG" properties='{"height":77,"width":603}' />
+		<displayObject definition="kfNationRanking.level.rankBG" properties='{"x":19, "y":116,"width":605,"height":533}' />			
+		
+		<label properties='{"x":19, "y":130, "width":45, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510203"}'/>
+		<label properties='{"x":84, "y":130, "width":186, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510204"}'/>
+		<label properties='{"x":288, "y":130, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510205"}'/>
+		<label properties='{"x":405, "y":130, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510221"}'/>
+		<label properties='{"x":525, "y":130, "width":95, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510222"}'/>
+	
+		<list name="playerList" properties='{"x":0, "y":185, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":25}' />
+		
+		<displayObject properties='{"x":263, "y":673, "width":55, "height":20}' definition='skin.page2.PageBG' />		
+		<page name="page" properties='{"x":225, "y":662,
+							"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":90 },
+							"labelProp":{"x":40, "y":8, "width":55, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+	</container>
+	
+	<!--威望排行榜-->
+	<container name="prestige" properties='{"tabBtnMC":"BW.gameUI.button.weiwang"}'>	
+		<displayObject definition="kfNationRanking.level.BG" properties='{"height":77,"width":603}' />
+		<displayObject definition="kfNationRanking.level.rankBG" properties='{"x":19, "y":116,"width":605,"height":533}' />	
+						
+		<label properties='{"x":19, "y":130, "width":44, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510203"}'/>
+		<label properties='{"x":84, "y":130, "width":186, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510204"}'/>
+		<label properties='{"x":288, "y":130, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510207"}'/>
+		<label properties='{"x":405, "y":130, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510206"}'/>
+		<label properties='{"x":525, "y":130, "width":95, "height":26, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010", "textID":"510221"}'/>
+		
+		<list name="playerList" properties='{"x":0, "y":185, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":25}' />
+		<displayObject properties='{"x":263, "y":673, "width":55, "height":20}' definition='skin.page2.PageBG' />		
+		<page name="page" properties='{"x":225, "y":662,
+							"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":90 },
+							"labelProp":{"x":40, "y":8, "width":55, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />	
+	</container>
+	
+	<!--呈现器-->
+	<!--威望榜呈现器-->
+	<PrestigePlayerRenderer properties='{"itemHeight":22}'>		
+		<label name="rankingText" properties='{"x":22, "y":0, "width":40, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="playerNameText" properties='{"x":84, "y":0, "width":186, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="prestigeText" properties='{"x":288, "y":0, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="positionText" properties='{"x":400, "y":0, "width":125, "height":26, "size":18, "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="forceText" properties='{"x":525, "y":0, "width":95, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+	</PrestigePlayerRenderer>
+	<!--等级榜呈现器-->
+	<LevelPlayerRenderer properties='{"itemHeight":22}'>		
+		<label name="rankingText" properties='{"x":22, "y":0, "width":40, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="playerNameText" properties='{"x":84, "y":0, "width":186, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="levelText" properties='{"x":288, "y":0, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<label name="forceText" properties='{"x":405, "y":0, "width":105, "height":26, "autoSize":"none", "align":"center", "color":"0xFDFFCD", "stroke":"0x302010"}'/>
+		<linkText name="gzText" properties='{"style":{"overStyle":{"underline":true}}, "x":525, "y":0, "autoSize":"none", "align":"center", "width":95, "height":26, "color":"0xFDFFCD", "stroke":"0x302010","textType":"htmlText"}'/> 
+	</LevelPlayerRenderer>
+		
+	<!--势力榜呈现器-->
+	<ForcesRenderer properties='{"itemHeight":22}'>
+		<displayObject name="selectedItem" definition="kfNationRanking.view.selectedItem" properties='{"x":21, "y":-3, "visible":false}' />
+		<label name="rand" properties='{"x":22, "y":0, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="forces" properties='{"x":74, "y":0, "width":108, "height":20, "autoSize":"none", "align":"right", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="nation" properties='{"x":182, "y":0, "width":108, "height":20, "autoSize":"none", "align":"left", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="city" properties='{"x":281, "y":0, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="win" properties='{"x":348, "y":0, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="killNum" properties='{"x":474, "y":0, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+	</ForcesRenderer>
+	<!--杀敌榜呈现器-->
+	<EnemyRenderer properties='{"itemHeight":22}'>
+		<displayObject name="selectedItem" definition="kfNationRanking.view.selectedItem" properties='{"x":21, "y":-3, "visible":false}' />
+		<label name="rand" properties='{"x":22, "y":0, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="nameText" properties='{"x":74, "y":0, "width":186, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="level" properties='{"x":281, "y":0, "width":40, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="forces" properties='{"x":348, "y":0, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="killNum" properties='{"x":474, "y":0, "width":105, "height":20, "autoSize":"none", "align":"center", "color":"0xCACB65", "stroke":"0x302010"}'/>
+	</EnemyRenderer>
+	<!--趣闻榜呈现器-->
+	<InterestingRenderer properties='{"itemHeight":70}'>
+		<displayObject definition="kfNationRanking.interesting.item" properties='{}' />		
+		<displayObject name="icon" definition="kfNationRanking.interesting.icon" properties='{"x":32}' />
+		
+		<label name="serverName" properties='{"x":128, "y":20, "width":85, "height":20, "autoSize":"none", "align":"left", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="nation" properties='{"x":216, "y":20, "width":30, "height":20, "autoSize":"none", "align":"left", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="playerName" properties='{"x":262, "y":20, "width":93, "height":20, "autoSize":"none", "align":"left", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="info" properties='{"x":353, "y":20, "width":105, "height":20, "autoSize":"none", "align":"right", "color":"0xCACB65", "stroke":"0x302010"}'/>
+		<label name="myInfo" properties='{"x":313, "y":41, "width":145, "height":20, "autoSize":"none", "align":"right", "color":"0xCACB65", "stroke":"0x302010"}'/>
+	</InterestingRenderer>
+	
+	<!--争霸王者界面 2.13-->
+	<container name="king" properties='{"gapX":140,"tabBtnMC":"BW.gameUI.button.wangzhe"}'>	
+<!--<displayObject definition="friends.king.Bg" properties='{"x":18 , "y":40, "mouseEnabled":false}'/>-->
+     
+		<displayObject definition="gameUI.bg.GimpFrameNew" properties='{"width":608,"height":680,"x":320,"y":373}'/>
+		<displayObject definition="friends.king.Bgq" properties='{"x":45,"y":60}'/>
+		<displayObject definition="gameUI.icon.BlackBG" properties='{"width":345,"height":370,"x":140,"y":110}'/>
+		<displayObject definition="gameUI.taskTraced.TitleBG" properties='{"y":74,"width":350,"height":33,"x":138}' />
+
+		<list name="list" properties='{"x":145, "y":115, "columnCount":1, "rowCount":4, "horizontalGap":-2, "verticalGap":17}' />
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":287 , "y":448,"width":56}'/>
+		<page name="page" properties='{"x":260, "y":435,
+							"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":80 },
+							"labelProp":{"x":35, "y":8, "width":56, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+		<label properties='{"x":30, "y":40, "width":260, "height":24,"autoSize":"none", "align":"center", "color":"0xCdCb66", "stroke":"0x302010","textID":"800227","border":false, "mouseEnabled":false}'/>
+		<sprite name="avatars" properties='{"x":160, "y":630}'/>
+		
+		<imageLoader name="titleRank" properties='{"x":225, "y":475,"pathFormatName":"titleRank",  "mouseEnabled":false, "mouseChildren":false, "fileName":"996"}' />
+		<displayObject definition="friends.king.ziti" properties='{"y":75,"x":215}'/>
+		<sprite name="artNum" properties='{"x":255, "y":80, "classPath":"gameUI.art.ArtNum", "align":"center","gap":-8}'/>
+	</container>
+	
+	<info>
+		<sprite name="sp" properties='{"x":-20, "y":15}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":23, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":23, "x":0, "y":-2, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":4}'/>
+		</info>
+	
+	<KingRenderer properties='{"itemWidth":260 , "itemHeight":62}'> 			
+		<displayObject name="bg" definition="friends.king.ItemBg" properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<displayObject name="select" definition="friends.king.Selected" properties='{"x":0 , "y":0, "visible":false}'/>			
+		<displayObject definition="friends.king.ImgBlank" properties='{"x":10 , "y":17, "visible":true}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"generalPic40", "x":13, "y":20, "width":50, "height":50}'/>
+		<label name= "rankText" properties='{"x":135, "y":11, "width":90, "height":24,"autoSize":"none", "align":"center", "color":"0xe6f09a", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label name= "nameText" properties='{"x":70, "y":45, "width":120, "height":24,"autoSize":"none", "align":"left","color":"0xe6f09a", "stroke":"0x302010", "mouseEnabled":false,"bold":true}'/>
+		<label name= "fwqText" properties='{"x":130, "y":45, "width":200, "height":24,"autoSize":"none", "align":"right","color":"0xe6f09a", "stroke":"0x302010", "mouseEnabled":false,"bold":true}'/>
+	</KingRenderer>
+	
+</config>

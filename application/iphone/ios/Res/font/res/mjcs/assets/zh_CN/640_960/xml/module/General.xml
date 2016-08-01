@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【武将窗口】配置文件-->
+<config properties='{"initX":0, "initY":0, "styleName":"window1","titleID":"430001", "isSpecial":true, "duration":3000}'>
+	<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+	<displayObject name="shine" definition="gameUI.effect.ShineShu"  properties='{"x":230 , "y":730,"width":90,"height": 90, "mouseEnabled":false, "mouseChildren":false,"visible":false}'/>	
+	<!--**************************新武将界面【主副将合体版】********************************-->
+	<container name="newGeneral" properties='{"x":0, "y":0, "tabBtnMC":"BW.gameUI.button.wujiang"}'>
+	  <displayObject definition="general.view.NewGeneralBG" properties='{"width":563,"height":568,"x":38,"y":145}'/>
+	 	<displayObject  definition="general.view.bottom"  properties='{"x":232 , "y":422}'/>
+		<label properties='{"textID":"430093", "x":737, "y":44, "width":250,  "height":30,"border":false, "size":16, "autoSize":"none", "align":"center",  "color":"0xCBCC66", "stroke":"0x302010"}'/><!--武将-->
+		<list name="generalList" properties='{"x":90, "y":50, "columnCount":5, "rowCount":1, "horizontalGap":0, "verticalGap":0}' />
+		<page name="page" properties='{"x":90, "y":75,
+						"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn", "x":-70},
+						"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":470 },	
+						
+						"labelProp":{"x":718, "y":0, "width":46, "height":30, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC", "visible":false}						
+						}' />
+		
+		
+		<!--单个武将详情-->
+		<container name="singleGeneral" properties='{"depositedBtnY1":150,"depositedBtnY2":100,"x":20,"y":95 }'>
+			<displayObject definition="general.view.SkillNewBG"  properties='{"x":305 , "y":98,"width":84,"height":84 }'/>
+				<label name="nameText"  properties='{"border":false,"size":24, "bold": false, "color":"0xFFC207", "autoSize":"none", "align":"center", "width":300, "height":30, "x":150,"y":65,"stroke": "0x2D261E","mouseEnabled":false}'/>
+			
+			<label name="robText"  properties='{"border":false,"size":20, "bold": false, "color":"0xFFC207", "autoSize":"none", "align":"center", "width":300, "height":30, "x":22,"y":265,"stroke": "0x2D261E","mouseEnabled":false}'/>
+			<label name="techText"  properties='{"border":false,"size":20, "bold": false, "color":"0xcbcc66", "autoSize":"none", "align":"left", "width":200, "height":30, "x":390,"y":335,"stroke": "0x2D261E","mouseEnabled":false}'/>
+			<!--科技相关文字-->
+			
+			<!--主角信息-->
+			<container name="mainInfo" properties='{"styleName":"panel3","x":100, "y":0,"bgWidth":400 , "bgHeight":450 }'>
+			</container>
+			<!--<button name="closeMainBtn" parent="mainInfo" properties='{"styleName":"button2","width":100,"height":40, "labelID":"430063"}' />-->
+			
+			<!--其他武将信息-->
+			<container name="otherInfo" properties='{"styleName":"panel3","x":120, "y":100,"bgWidth":360 , "bgHeight":210 }'>
+			</container>	
+			<!--<button name="closeOtherBtn" parent="otherInfo" properties='{"styleName":"button2","width":100,"height":40, "labelID":"430063"}' />-->
+
+			<displayObject name="di" parent="mainInfo" definition="general.ch.Di"  properties='{"x":40, "y":70,"mouseEnabled":false,"width":320,"height":40 }'/>
+			<label name="titleText" parent="mainInfo" properties='{"border":false,"size":20, "bold": false, "autoSize":"none", "align":"left", "width":100, "height":30, "x":50,"y":77,"color":"0xCBCC66", "stroke": "0x2D261E","mouseEnabled":false}'/>
+			<!--称号-->
+			<mcLabel name="titleArt" parent="mainInfo" properties='{"multiColor":"gameUI.color.Tips7","mouseEnabled":false,"x":100, "y":77, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":20,"bold":false,"align":"center","width":100,"height":30,"font":"黑体"}}'/>
+			<label name="effectText" parent="mainInfo" properties='{"border":false,"size":20, "bold": false, "autoSize":"none", "align":"left", "width":150, "height":30, "x":100,"y":77,"color":"0xCBCC66", "stroke": "0x2D261E","mouseEnabled":false, "visible":false}'/>
+			<displayObject name="changeTitleEffect" parent="mainInfo" definition="general.effect.ChangeTitle"  properties='{"x":100, "y":77, "scaleX":0.75, "scaleY":0.75}'/>
+			<button name="changeBtn" parent="mainInfo" properties='{"x":250, "y":70,  "styleName":"button2","width":100,"height":40, "labelID":"430063", "visible":false}' />
+			<!-- 修改按钮-->
+			<!--效果-->	
+			
+		
+			<!--战术心法-->
+			
+			<container name="passiveSkillView" parent="mainInfo" properties='{"x":0 , "y":160}'>
+				<label name="passiveSkillText" properties='{"x":0, "y":0, "width":400,  "height":30,"border":false, "size":20, "autoSize":"none", "align":"center",  "color":"0xCBCC66", "stroke":"0x302010"}'/>
+				<list name="passiveSkillList" properties='{"x":40, "y":35, "columnCount":4, "rowCount":2, "horizontalGap":1, "verticalGap":1}' />  <!-- 战术心法 包裹 -->
+	    <!-- 	<button   properties='{"x":150, "y":215,  "styleName":"button5","width":100,"height":40, "label":"前往修炼", "visible":true}' />  -->
+			</container>
+			 
+			<label name="feelDepthText" parent="otherInfo"  properties='{"border":false,"size":20, "bold": false, "color":"0xFFC207", "autoSize":"none", "align":"right", "width":140, "height":30, "x":0,"y":103,"stroke": "0x2D261E"}'/>
+			<!--亲密度-->
+			<button name="rewardBtn"  parent="otherInfo"  properties='{"x":150, "y":50,"width":80,"height":40,"styleName":"button3", "labelID":"430052", "visible":false}' />
+			<button name="bigRewardBtn"  parent="otherInfo"  properties='{"x":150, "y":100,"width":80,"height":40,"styleName":"button3", "labelID":"430074","visible":false}' />
+			<displayObject name="goldIcon"  parent="otherInfo" definition="gameUI.icon.Gold"  properties='{"x":290 , "y":64,"visible":false}'/>	
+			<label name="priceText"  parent="otherInfo"  properties='{"border":false,"size":20, "color":"0xFFC207", "autoSize":"none", "align":"right", "width":60, "height":30, "x":230,"y":58,"stroke": "0x2D261E"}'/>
+			<displayObject name="bigGoldIcon"   parent="otherInfo" definition="gameUI.icon.Gold"  properties='{"x":290 , "y":114,"visible":false}'/>	
+			<label name="bigPriceText"  parent="otherInfo"  properties='{"border":false,"size":20, "color":"0xFFC207", "autoSize":"none", "align":"right", "width":60, "height":30, "x":230,"y":108,"stroke": "0x2D261E"}'/>
+			<button name="depositedBtn"  parent="otherInfo"  properties='{"x":150, "y":140,"width":80,"height":40, "styleName":"button5", "labelID":"430057", "visible":false}' />
+			
+
+			<sprite name="avatars" properties='{"x":235, "y":335}'/>
+			<label name="bloodText"  properties='{"autoSize":"none", "align":"left", "width":200, "height":30, "x":75,"y":480, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+			<!--血-->
+			<label name="attackText"  properties='{"autoSize":"none", "align":"left", "width":200, "height":30, "x":75,"y":513, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+			<!--攻-->
+			<label name="defenceText"  properties='{"autoSize":"none", "align":"left", "width":200, "height":30, "x":75,"y":545, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+			<!--防-->
+			<label name="fightAbilityText"  properties='{ "autoTooltip":false,"bold": false, "autoSize":"none", "align":"left", "width":200, "height":30, "x":75,"y":576, "color":"0xcbce67", "stroke": "0x2D261E", "border":false}'/>
+			<!--战力-->
+			
+			<label name="leaderText"  properties='{"autoSize":"none","align":"left", "width":200, "height":30, "x":335,"y":480, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/>
+			<!--统-->
+			<label name="forcesText"  properties='{"autoSize":"none", "align":"left", "width":200, "height":30, "x":335,"y":513, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/>
+			<!--智-->
+			<label name="intelligenceText"  properties='{"autoSize":"none", "align":"left", "width":200, "height":30, "x":335,"y":545, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/>
+			<!--勇-->
+			<label name="propertyText"  properties='{"border":false, "bold": false, "autoSize":"none", "align":"left", "width":200, "height":30, "x":335,"y":576,"stroke": "0x2D261E","visible":true}'/>
+			<!--五行属性-->
+
+			<container name="equip2" properties='{"x":95, "y":98}' />	<!--头-->
+			<container name="equip3" properties='{"x":95, "y":182}' />	<!--衣-->	
+			<container name="equip6" properties='{ "x":95, "y":266}' /> <!--戒指-->	
+			<container name="equip4" properties='{ "x":95, "y":350}' /> <!--裤-->	
+			
+			<container name="equip5" properties='{ "x":410, "y":98}' /><!--鞋-->
+			<container name="equip8" properties='{"x":410, "y":182}' />	<!--宝物-->
+			<container name="equip7" properties='{"x":410, "y":266}' />	<!--马-->
+			<container name="equip9" properties='{"x":410, "y":350}' />	<!--铜铃-->
+		
+			
+			<container name="equip1" properties='{"x":205, "y":98}' />	<!--武器-->
+			<InitiativeSkill properties='{"x":305, "y":98}' /><!--技能-->
+
+			<!--<container name="skillRender" properties='{"x":475, "y":134}' />	-->
+		
+			
+			<imageLoader name="techPic1" properties='{"pathFormatName":"tech32",  "x":455, "y":325, "width":70, "height":70,"visible":false}' />	
+			
+			<!--修改称号 3.0,移到主角信息页-->
+			<container name="changeTitle" properties='{"styleName":"panel3","initX":70, "initY":50,"bgWidth":500,"bgHeight":500, "titleID":"430064", "args":{"y1":10, "y2":20}}'>
+						 <displayObject definition="gameUI.icon.BlackBG"  properties='{"x":15,"y":50,"width":470 , "height":430}'/>	
+			 <displayObject definition="gameUI.icon.Line"  properties='{"x":20,"y":170,"width":460 , "height":3}'/>	
+			 	 <displayObject definition="gameUI.icon.BlackBG"  properties='{"x":15,"y":172,"width":205 , "height":310}'/>	
+				<label properties='{"border":false, "autoSize":"none", "align":"left", "width":80, "height":30, "size":20,"x":90,"y":180,"color":"0xCBCC66", "stroke": "0x2D261E", "textID":"430078", "mouseEnabled":false}'/>
+<!--称号-->
+				<list name="list" properties='{"x":30, "y":205, "columnCount":1, "rowCount":6, "horizontalGap":2, "verticalGap":2}' />  <!-- 左边列表 -->
+		
+				<label properties='{"border":false, "autoSize":"none", "align":"center", "width":440, "height":30, "x":30,"y":100,"size":20,"color":"0xCBCC66", "stroke": "0x2D261E", "textID":"430075", "mouseEnabled":false}'/>
+<!--总属性-->
+				<label name="totalPropText" properties='{"border":false, "autoSize":"none", "align":"center", "width":440, "height":30, "x":30,"y":125,"color":"0xCBCC66", "stroke": "0x2D261E", "textID":"430075", "mouseEnabled":true}'/>
+<!--总属性内容-->
+				
+				
+				<sprite name="curSp" properties='{"x":90, "y":40}' />
+<!--当前称号容器-->	
+				<label parent="curSp" properties='{"border":false, "autoSize":"none", "align":"left", "width":100, "height":30, "x":10,"y":50,"size":20,"color":"0xCBCC66", "stroke": "0x2D261E", "textID":"430076", "mouseEnabled":false}'/>
+<!--当前称号-->
+				<label parent="curSp" name="deadlineText" properties='{"border":false, "autoSize":"none", "align":"left", "width":100, "height":30, "x":10,"y":80,"size":20,"color":"0xCBCC66", "stroke": "0x2D261E", "textID":"430077", "mouseEnabled":false}'/>
+<!--使用期限-->				
+				<label parent="curSp" name="curTitleText"  properties='{"border":false, "autoSize":"none", "align":"center", "width":160, "height":30, "x":90,"y":50,"size":20,"color":"0xCBCC66", "stroke": "0x2D261E"}'/>
+<!--当前称号-->
+				<label parent="curSp" name="timeText"  properties='{"border":false, "autoSize":"none", "align":"center", "width":160, "height":30, "x":90,"y":80,"size":20,"color":"0xffffcc", "stroke": "0x2D261E"}'/>
+<!--实效-->
+				<mcLabel parent="curSp" name="artCurTitle" properties='{"multiColor":"gameUI.color.Tips7","mouseEnabled":false,"x":82, "y":48, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":20,"bold":false,"align":"center","width":160,"height":30,"font":"黑体"}}'/>
+				
+				<sprite name="chooseSp" properties='{"x":240, "y":200}' />
+<!--选中称号容器-->
+				
+				<mcLabel parent="chooseSp" name="chooseTitle" properties='{"multiColor":"gameUI.color.Tips7","mouseEnabled":false,"x":40, "y":3, "stroke":"0x302010", "labelProp":{ "autoSize":"none","size":20,"bold":false,"align":"center","width":100,"height":30,"font":"黑体"}}'/>				
+				<label parent="chooseSp" name="choosePropText"  properties='{"border":false, "autoSize":"none", "align":"left", "width":240, "height":30,"size":20, "x":0,"y":30,"color":"0xCBCC66", "stroke": "0x2D261E"}'/>
+<!--属性-->
+				<label parent="chooseSp" name="chooseTimeText"  properties='{"border":false, "autoSize":"none", "align":"left", "width":240, "height":30,"size":20, "x":0,"y":50,"color":"0xCBCC66", "stroke": "0x2D261E"}'/>
+<!--时效-->	
+				
+				<label parent="chooseSp" name="staticText" properties='{"border":false,"autoSize":"none", "align":"center", "width":240, "height":30, "y":80,"color":"0xCBCC66", "stroke": "0x2D261E","textID":"430069"}'/>
+				<label parent="chooseSp" name="gainText"  properties='{"border":false, "autoSize":"none", "align":"left", "width":240, "height":80, "x":0,"y":110,"color":"0xCBCC66", "stroke": "0x2D261E","multiline":true,"mouseEnabled":false}'/>
+<!--获得条件-->
+				
+				<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":80, "y":434, "width":60,"height":30 }'/>
+				<page name="page" properties='{"x":40, "y":435,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":110 },
+								"labelProp":{"x":40, "y":0, "width":60, "height":30, "size":20,"autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+				
+				<button name="changeTitleBtn"  properties='{"styleName":"button2","width":120,"height":40, "labelID":"430070", "x":290, "y":430}'/>
+<!--更换称号按钮-->		
+						
+			</container>
+		</container>
+		
+<!-- 对部将的赏赐操作面板 -->
+<!--	<container  properties='{"x":140, "y":200}'>
+	<displayObject definition="gameUI.view.PTView"  properties='{"width":360 , "height":210}'/>	
+			<label name="feelDepthText"  properties='{"border":false,"size":20, "bold": false, "color":"0xFFC207", "autoSize":"none", "align":"right", "width":140, "height":30, "x":0,"y":98,"stroke": "0x2D261E"}'/>
+			<button name="rewardBtn" properties='{"x":150, "y":40,"width":80,"height":40,"styleName":"button3", "labelID":"430052", "visible":false}' />
+			<button name="bigRewardBtn" properties='{"x":150, "y":90,"width":80,"height":40,"styleName":"button3", "labelID":"430074","visible":false}' />
+			<displayObject name="goldIcon" definition="gameUI.icon.Gold"  properties='{"x":290 , "y":54,"visible":false}'/>	
+			<label name="priceText"  properties='{"border":false,"size":20, "color":"0xFFC207", "autoSize":"none", "align":"right", "width":60, "height":30, "x":230,"y":48,"stroke": "0x2D261E"}'/>
+			<displayObject name="bigGoldIcon" definition="gameUI.icon.Gold"  properties='{"x":290 , "y":104,"visible":false}'/>	
+			<label name="bigPriceText"  properties='{"border":false,"size":20, "color":"0xFFC207", "autoSize":"none", "align":"right", "width":60, "height":30, "x":230,"y":98,"stroke": "0x2D261E"}'/>
+			<button name="depositedBtn" properties='{"x":150, "y":140,"width":80,"height":40, "styleName":"button5", "labelID":"430057", "visible":false}' />
+			</container>	
+	-->
+		
+		<!-- 装备装备界面 -->
+		<container name="newGeneralEquipPanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300, "titleID":"430091"}'>
+				
+				
+				<list name="equipList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' />
+           <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":120, "y":240, "width":60,"height":30 }'/>
+				<page name="page" properties='{"x":85, "y":242,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":100 },
+								"labelProp":{"x":35, "y":2, "width":60, "height":20,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+		</container>
+		
+		<!-- 装备宝物界面 -->
+		<container name="tresureUsePanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300, "titleID":"430091"}'>
+				
+				
+				
+				<list name="treasureList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' />
+		        <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":120, "y":240, "width":60,"height":30 }'/>
+				<page name="page" properties='{"x":85, "y":242,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":100 },
+								"labelProp":{"x":35, "y":2, "width":60, "height":20,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+
+				<!--<button name="downTresureBtn" properties='{"x":230, "y":45,  "styleName":"button5", "labelID":"430082", "visible":false}' />--><!-- 收回按钮-->
+		</container>
+		
+		<!-- 装备马匹界面 -->
+		<container name="equipHorsePanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300, "titleID":"430091"}'>
+						
+				<list name="horseList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' />
+        <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":120, "y":240, "width":60,"height":30 }'/>
+				<page name="page" properties='{"x":85, "y":242,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":100 },
+								"labelProp":{"x":35, "y":2, "width":60, "height":20,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+
+				<!--<button name="downHorseBtn" properties='{"x":230, "y":45,  "styleName":"button5", "labelID":"430055", "visible":false}' />--><!-- 下马按钮-->
+		</container>
+		
+		<!-- 装备铜铃界面 -->
+		<container name="horseBellPanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300, "titleID":"430091"}'>
+						
+				<list name="horseBellList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' />
+        <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":120, "y":240, "width":60,"height":30 }'/>
+				<page name="page" properties='{"x":85, "y":242,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":100 },
+								"labelProp":{"x":35, "y":2, "width":60, "height":20,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+
+				
+		</container>
+	</container>
+	
+	<!--**************************布阵界面【布阵/督军合体版】********************************-->
+	<container name="embattle" properties='{"huaID" : "436874","x":17,"y":40, "tabBtnMC":"BW.gameUI.button.buzhen"}'>		
+		<!--**************阵型部分**************-->
+		<displayObject definition="general.embattle.EmbattleBG"  properties='{"x":0, "y":0}'/>
+		<!--<label properties='{"x":30, "y":50, "width":40,  "height":22,  "size":14, "autoSize":"none", "align":"left", "bold":true,  "color":"0xFFFFCC", "stroke":"0x302010", "textID":"430002"}'/>--> <!--阵型-->
+		<container name="formation1" properties='{"x":387 , "y":80}'/><!--前军-->
+		<container name="formation2" properties='{"x":240 , "y":80}'/><!--中军-->
+		<container name="formation3" properties='{"x":90 , "y":80}'/><!--后军-->
+		
+		<label name="lockText"  properties='{"x":300, "y":245, "autoSize":"center", "height":30,"size":20, "color":"0xFFFFCC", "stroke": "0x2D261E", "visible":false}'/>
+		<button name="syncBtn" properties='{"x":235, "y":230,  "styleName":"button11", "labelID":"733002", "visible":false}' /><!-- 同步按钮-->
+	
+		<displayObject  name="guideMC" definition="general.embattle.NewGuide"  properties='{"x":-120 , "y":-10,"visible":false}'/>
+		<mcLabel name="titleText" properties='{"x":250, "y":50, "stroke":"0x302010","labelProp":{ "font":"黑体","size":20,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCD67"},"multiColor":"gameUI.color.Tips7"}'/>
+		<modalBG name="modalBG"/>
+		<!--*******督军部分*******-->
+		<!--<label properties='{"x":30, "y":230, "width":40,  "height":22,  "size":14, "autoSize":"none", "align":"left", "bold":true,  "color":"0xFFFFCC", "stroke":"0x302010", "textID":"430003"}'/> --><!--督军-->
+		<label properties='{"x":192, "y":238, "width":236,  "height":30,  "size":16, "autoSize":"none", "align":"center", "bold":false,  "color":"0xFFFFCC", "stroke":"0x302010", "textID":"430004","mouseEnabled":false}'/> <!--令上阵武将-->
+		
+		<displayObject name="d1" definition="general.view.iconBg"  properties='{"x":108, "y":247}'/>
+		<displayObject name="d2" definition="general.view.iconBg"  properties='{"x":248, "y":247}'/>
+		
+		<label parent="d1" properties='{"x":-3, "y":68, "width":24,  "height":60, "leading":-0.5, "size":16, "autoSize":"none", "align":"left", "bold":false,  "color":"0xFFFFCC", "stroke":"0x302010", "textID":"430009","mouseEnabled":false}'/> 
+		<label parent="d2" properties='{"x":-3, "y":68, "width":24,  "height":60, "leading":-0.5, "size":16, "autoSize":"none", "align":"left", "bold":false,  "color":"0xFFFFCC", "stroke":"0x302010", "textID":"430010","mouseEnabled":false}'/> 
+		
+		<container name="formation10" properties='{"x":124 , "y":276}'/><!--督军1-->
+		<container name="formation11" properties='{"x":264 , "y":276}'/><!--督军2-->
+		<!--<container name="formation12" properties='{"x":262 , "y":302}'/>--><!--督军3-->
+		
+		
+		<label name="attackText"  properties='{"autoSize":"none", "align":"left", "width":240, "height":30,"size":16, "x":380,"y":294, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="defenceText"  properties='{"autoSize":"none", "align":"left", "width":240, "height":30,"size":16, "x":380,"y":314, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="bloodText"  properties='{"autoSize":"none", "align":"left", "width":240, "height":30,"size":16, "x":380,"y":334, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="fightAbilityText"  properties='{"size":16, "autoTooltip":false,"bold": false, "autoSize":"none", "align":"left", "width":240, "height":30, "x":380,"y":354, "color":"0xcbce67", "stroke": "0x2D261E"}'/>
+		
+		<!-- 副将信息 -->
+
+		<displayObject definition="general.view.listBg"  properties='{"x":16, "y":405, "width":571,"height":200 }'/>
+		<displayObject definition="gameUI.icon.Line"  properties='{"x":50, "y":430, "width":503,"height":3 }'/>
+		<label  properties='{"text":"副将信息","x":16, "y":420, "width":570, "height":30, "size":20, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false}'/>	
+		<!--副将1-->
+		 <displayObject definition="gameUI.icon.Grid1" properties='{"y":460,"width":84,"height":84,"x":30}'/>
+    <imageLoader name="deputy1pic" properties='{"pathFormatName":"generalPic40","x":37,"y":467,"width":70,"height":70}'/>
+    <label name="deputy1name" properties='{"y":470,"autoSize":"none","size":20,"x":120,"color":"0xffffff","width":160,"styleName":"label","stroke":0,"height":30}'/>
+    <displayObject name="deputy1expbar" definition="BW.gameUI.bar.expBar" properties='{"y":510,"width":160,"height":30,"x":120}'/>
+     <label name="deputy1exp" properties='{"y":506,"autoSize":"none","size":16,"x":120,"color":"0xffffff","width":160,"align":"center","styleName":"label","stroke":0,"height":30}'/>
+		<!--副将2-->
+     <displayObject definition="gameUI.icon.Grid1" properties='{"y":460,"width":84,"height":84,"x":300}'/>
+    <imageLoader name="deputy2pic" properties='{"pathFormatName":"generalPic40","x":307,"y":467,"width":70,"height":70}'/>
+    <label name="deputy2name" properties='{"y":470,"autoSize":"none","size":20,"x":390,"color":"0xffffff","width":160,"styleName":"label","stroke":0,"height":30}'/>
+    <displayObject name="deputy2expbar" definition="BW.gameUI.bar.expBar" properties='{"y":510,"width":160,"height":30,"x":390}'/>
+     <label name="deputy2exp" properties='{"y":506,"autoSize":"none","size":16,"x":390,"color":"0xffffff","width":160,"align":"center","styleName":"label","stroke":0,"height":30}'/>
+		
+		<!-- 装备武将界面  -->
+		<container name="equipGeneralPanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300,"titleID":"430005"}'>
+						
+				<list name="generalList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' />
+        <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":127, "y":250, "width":60,"height":24 }'/>
+				<page name="page" properties='{"x":85, "y":242,
+								"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":100 },
+								"labelProp":{"x":40, "y":8, "width":60, "height":24,"size":20, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+				<!--<button name="downHorseBtn" properties='{"x":230, "y":45,  "styleName":"button5", "labelID":"430055", "visible":false}' />--><!-- 下马按钮-->
+		</container>
+	</container>
+	
+	<!--**************************培养界面********************************-->
+	<!-- 培养界面 -->
+	<container name="fosterPanel" properties='{"x":0,"y":0, "tabBtnMC":"BW.gameUI.button.peiyang"}'>
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":19 , "y":41,"width":600,"height":670}'/>	
+	<!--	<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":27 , "y":46,"width":167,"height":345}'/>	 
+
+		<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":20 , "y":351,"width":385,"height":140}'/>	
+		<displayObject definition="gameUI.icon.Title"  properties='{"x":28 , "y":46,"width":167,"height":20}'/>	
+		<displayObject definition="general.foster.listBg"  properties='{"x":28 , "y":46}'/>	  -->
+		<displayObject definition="general.forster.ShuxingBg"  properties='{"x":30 , "y":148}'/>	
+		<displayObject name="disIcon" definition="general.icon.discount"  properties='{"x":480 , "y":46,"visible":false}'/>	
+		<displayObject definition="general.foster.itemBg"  properties='{"x":90 , "y":230}'/>	
+		<displayObject definition="general.foster.itemBg"  properties='{"x":350 , "y":230}'/>	
+
+
+		<imageLoader name="techPic1" properties='{"pathFormatName":"tech32",  "x":490, "y":455, "width":70, "height":70}' />	
+		<!--<imageLoader name="techPic2" properties='{"pathFormatName":"tech32",  "x":367, "y":260, "width":32, "height":32}' />	-->
+		
+		<displayObject name="addLeaderBtn" definition="gameUI.btn.addBloodBtn"  properties='{"x":305, "y":237}' /><!-- 添加统按钮-->
+		<displayObject name="addForcesBtn" definition="gameUI.btn.addBloodBtn"  properties='{"x":305, "y":298}' /><!-- 添加勇按钮-->
+		<displayObject name="addIntelligenceBtn" definition="gameUI.btn.addBloodBtn"  properties='{"x":305, "y":358}' /><!-- 添加智按钮-->
+		
+		
+		<list name="modeList" properties='{"x":65, "y":470, "columnCount":1, "rowCount":88, "horizontalGap":0, "verticalGap":1}' />
+		
+		<list name="generalList" properties='{"x":100, "y":50, "columnCount":5, "rowCount":1, "horizontalGap":4, "verticalGap":4}' />
+		<page name="page" properties='{"x":70, "y":70,
+						"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn", "x":-40},
+						"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":490 },	
+						"labelProp":{"x":835, "y":0, "width":46, "height":30, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC", "visible":false}						
+						}' />
+		
+		<label name="generalListText" properties='{"x":730,"y":8, "width":165, "height":20, "size":16,"autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke": "0x2D261E", "mouseEnabled":false, "border":false}'/><!--武将列表文字-->
+		
+		<button name="replaceBtn" properties='{"x":460, "y":540, "width":100,"height":40,  "styleName":"button3", "labelID":"030105", "visible":false}' /><!-- 替换 -->
+		<button name="resumeBtn" properties='{"x":460, "y":640, "width":100,"height":40, "styleName":"button5", "labelID":"030102"}' /><!-- 恢复 -->
+		<button name="fosterBtn" properties='{"x":460, "y":590, "width":100, "height":40, "styleName":"button3", "labelID":"030103", "visible":false}' /><!-- 服用 -->
+		<button name="keepBtn" properties='{"x":460, "y":590, "width":100, "height":40, "styleName":"button3", "labelID":"030104", "visible":false}' /><!-- 维持 -->
+		
+		<displayObject name="shine" definition="gameUI.effect.ShineHeng"  properties='{"y":533,"mouseEnabled":false,"mouseChildren":false,"x":442,"width":137,"height":54,"visible":false}'/>	
+		<label properties='{"x":150,"y":190, "width":100, "height":30, "size":20, "autoSize":"none", "align":"left", "color":"0x788642", "stroke": "0x2D261E", "mouseEnabled":false, "textID":"030106","bold":true}'/>
+		<label properties='{"x":410,"y":190, "width":100, "height":30,  "size":20, "autoSize":"none", "align":"left", "color":"0x788642", "stroke": "0x2D261E", "mouseEnabled":false, "textID":"030107","bold":true}'/>
+		
+		<label properties='{"x":40,"y":460, "width":600, "height":30,  "size":20, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke": "0x2D261E", "mouseEnabled":false, "textID":"030120"}'/>
+					
+		<label name="oldLeaderText" properties='{"x":102,"y":237,"autoTooltip":false, "width":240, "height":30, "size":20,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label name="oldIntelligenceText" properties='{"x":102,"y":358,"autoTooltip":false, "width":240, "height":30, "size":20,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label name="oldForcesText" properties='{"x":102,"y":298,"autoTooltip":false, "width":240, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		
+		<label name="newLeaderText" properties='{"x":362,"y":237,"autoTooltip":false, "width":240, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label name="newIntelligenceText" properties='{"x":362,"y":358, "autoTooltip":false,"width":240, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<label name="newForcesText" properties='{"x":362,"y":298, "autoTooltip":false,"width":240, "height":30, "size":20,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+				
+				<!-- 恢复界面 -->
+			<container name="resumePanel" properties='{"x":220, "y":186}'>
+					<displayObject definition="gameUI.view.PTView"  properties='{"width":240 , "height":230}'/>	
+					<label properties='{"x":30,"y":30, "width":180, "height":30, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "textID":"030115"}'/>
+					<label name="newLeaderText" properties='{"x":30,"y":60, "width":180, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+					<label name="newForcesText" properties='{"x":30,"y":90, "width":180, "height":30, "size":20,"autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+					<label name="newIntelligenceText" properties='{"x":30,"y":120, "width":180, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>	
+					<button name="sureBtn" properties='{"x":70, "y":160, "width":100,"height":40, "styleName":"button3", "labelID":"030111"}' />
+<!-- 确定 -->
+					<buttonBasic name="closeBtn" properties='{"x":204, "y":-10, "skin":"skin.CloseBtn"}' />
+<!-- 关闭 -->
+			</container>
+	</container>
+	
+
+	<!--**************************【战车界面】********************************-->
+	<container name="chariot" properties='{ "x":17,"y":40,"tabBtnMC":"BW.gameUI.button.zhanche"}'>
+		
+		
+		<list name="list" properties='{"x":86, "y":0, "columnCount":3, "rowCount":1, "horizontalGap":12}' />
+		<displayObject name="sp1" definition="general.chariot.ChariotBG"  properties='{"x":0, "y":100,"visible":false}'/>
+		<list name="chooseList" properties='{"x":86, "y":0, "columnCount":3, "rowCount":1, "horizontalGap":12,"defaultSelected":false}' />
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":785, "y":10, "width":60}'/>
+		<page name="page" properties='{"x":30, "y":45,
+						"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":500 },
+						"labelProp":{"x":719, "y":0, "width":46, "height":30, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+						}' />
+		<checkBox name="checkBox" properties='{"labelID":"541012" ,"x":200, "y":465, "width":240, "styleName":"checkBox1","deselect":true,"visible":false}'/>
+		<displayObject definition="general.view.listBg"  properties='{"x":16, "y":510, "width":571,"height":160 }'/>
+		<displayObject definition="gameUI.icon.Line"  properties='{"x":50, "y":530, "width":503,"height":3 }'/>
+		<label  properties='{"text":"战车零件","x":16, "y":520, "width":570, "height":30, "size":20, "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<!-- 装备零件界面 -->
+		<container name="allPartsPanel" properties='{"styleName":"panel3","initX":100, "initY":150,"bgWidth":300, "bgHeight":300,"titleID":"541007"}'>				
+				<list name="allPartsList" properties='{"x":20, "y":60, "columnCount":3, "rowCount":2, "horizontalGap":4, "verticalGap":4}' /><!--弹出装备零件-->
+			 <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":122, "y":245, "width":60,"height":24 }'/>
+				<page name="page" properties='{"x":80, "y":235,
+								"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":100 },
+								"labelProp":{"x":42, "y":8, "width":60, "height":25,"size":20, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+				
+		</container>
+		<displayObject name="sp2" definition="general.chariot.None"  properties='{"x":0, "y":100,"visible":false}'/>
+	</container>
+	
+	<!--单个战车详情-->
+	<ExSprite>	
+		<list name="partsList" properties='{"x":40, "y":570, "columnCount":6, "rowCount":1, "horizontalGap":2, "verticalGap":4,"isColumnSort":false}' />
+		<label  name="nameText" properties='{"x":145, "y":390, "width":300, "height":30,  "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false,"border":false}'/>
+		<label name="naiText" properties='{"x":180, "y":428, "width":60, "height":30,  "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false,"visible":false}'/>
+		<sprite name="avatars" properties='{"x":240, "y":245,"mouseEnabled":false}'/>
+		<displayObject name="rateBG" definition="general.chariot.RateBG"  properties='{"x":230 , "y":430,"visible":false}'/>
+		<displayObject name="rate" definition="general.chariot.ProgressBar"  properties='{"x":232 , "y":431,"visible":false}'/>
+		<label  name="rateText" properties='{"x":190, "y":428, "width":240, "height":30, "size":16, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<displayObject name="addBtn" definition="general.btn.Add"  properties='{"x":400 , "y":425, "visible":false}'/>
+		<label  name="bloodText" properties='{"x":45, "y":170, "width":240, "height":30,"size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="attackText" properties='{"x":45, "y":200, "width":240, "height":30, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="defendText" properties='{"x":45, "y":225, "width":240, "height":30,"size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label  name="shanText" properties='{"x":375, "y":275, "width":240, "height":30,"size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":true}'/>
+		<label  name="baoText" properties='{"x":375, "y":300, "width":240, "height":30,"size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":true}'/>
+		<label  name="yunText" properties='{"x":375, "y":325, "width":240, "height":30, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":true}'/>
+	
+	</ExSprite>
+	<!--==========================================武将界面的renderer==================================================-->
+	
+	
+	<!--【新武将】**武将列表呈示器-->
+	<newGeneralRenderer properties='{"itemWidth":92, "itemHeight":92, "duration" : 3000}'>
+		<displayObject  definition="general.aide.aidelistBg"  properties='{"x":0 , "y":0,"width":84,"height":84, "visible":false}'/>
+		<displayObject name="itemSelected" definition="general.effect.ItemSelected"  properties='{"x":0 , "y":0,"width":84,"height":84, "visible":false}'/>
+		<sprite name="imgZZ"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="generalImg" parent="imgZZ" properties='{"pathFormatName":"generalPic70" , "x":7, "y":7, "width":70, "height":70}' />		
+		<displayObject name="shine" definition="gameUI.effect.ShineBlank"  properties='{"x":0 , "y":0, "width":92, "height":92, "mouseEnabled":false, "mouseChildren":false,"visible":false}'/>	
+		<!--<label name="levelText" properties='{"x":10, "y":2, "width":40,  "height":22, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<label name="nameText" properties='{"x":50, "y":2, "width":105,  "height":22, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>	-->
+	</newGeneralRenderer>
+	
+	<!--【新武将】**战术心法列表呈示器-->
+	<passiveSkillRenderer>
+			<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0}'/>	
+			<imageLoader name="skillIL" properties='{"pathFormatName":"skill32",  "x":7, "y":7, "width":70, "height":70}' />	
+			<label  name="levelText" properties='{"x":7, "y":50, "width":70, "height":30,"size":20,  "autoSize":"none", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</passiveSkillRenderer>
+	
+	<!--【新武将】**已穿装备呈示器 已改-->
+	<RoleEquipRenderer>
+		<displayObject name="equipSlot" definition="general.icon.equipSlot"  properties='{"x":0 , "y":0,"width":84,"height":84 }'/>
+	
+		<label name="equipTypeText"  properties='{"size":20, "alpha":0.4, "bold": false, "autoSize":"none", "align":"center", "width":70, "height":30, "x":7,"y":50, "color":"0xFFFFFF", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+			<sprite name="goodsIcon" properties='{"x":7, "y":7, "doubleClickEnabled":true, "mouseChildren":false}' />	
+	</RoleEquipRenderer>
+	
+	<!--【新武将】** 装备背包呈现器 -->
+	<GeneralEquipChangeRenderer properties='{"mouseChildren":true, "doubleClickEnabled":true,"itemHeight":84, "itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<sprite name="goodsIcon" properties='{"x":7, "y":7, "doubleClickEnabled":true, "mouseChildren":false, "mouseEnabled":true}' />		
+	</GeneralEquipChangeRenderer>
+	
+	<!-- 装备背包呈现器 （供RoleEquipRenderer引用）-->
+	<EquipRenderer properties='{"mouseChildren":true, "doubleClickEnabled":true,"itemHeight":84, "itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<sprite name="goodsIcon" properties='{"x":7, "y":7, "doubleClickEnabled":true, "mouseChildren":false, "mouseEnabled":true}' />		
+	</EquipRenderer>
+	
+	<!--【新武将】**  宝物 -->
+	<TreasureRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"treasure32",  "x":7, "y":7, "width":70, "height":70}' />	
+	</TreasureRenderer>
+	
+	<!--【新武将】** 马匹-->
+	<horseRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="horseIL" properties='{"pathFormatName":"horse32",  "x":7, "y":7, "width":70, "height":70}' />	
+	</horseRenderer>
+	
+		<!--【铜铃】列表呈示器-->
+	<HorseBellRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"stone32",  "x":7, "y":7, "width":70, "height":70}' />		
+	</HorseBellRenderer>
+	
+	
+	<!--【新武将】** 武将技能呈示器-->
+	<RoleSkillRenderer>
+		<sprite name="goodsIcon" properties='{"x":7, "y":7, "mouseChildren":false}' />	
+	</RoleSkillRenderer>
+	
+	<!--【新武将】** 选择称号呈示器 3.0-->
+	<ChangeTitleRenderer  properties='{"itemHeight":33,"itemWidth":180}'>
+		<displayObject name="bg" definition="general.ch.ChooseBlank"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>
+		<displayObject name="move" definition="general.ch.Move"  properties='{"x":0 , "y":0, "mouseEnabled":false, "visible":false}'/>
+		
+		<label name="nameText"  properties='{"size":20, "autoSize":"none", "align":"center", "width":180, "height":30, "x":0,"y":5, "color":"0xCBCC66", "stroke": "0x2D261E","border":false,"mouseEnabled":false}'/>	
+	</ChangeTitleRenderer>
+	<!--************************************布阵界面的renderer************************************************-->
+	
+	<!--【布阵】** 阵型部分武将呈示器-->
+	<ZhenxingGeneralRenderer>
+		<displayObject definition="general.view.SkillBg" properties='{"x":0, "y":0,"width":80, "height":143}' />
+		<label name="nameText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":160, "height":30, "x":-30,"y":5, "color":"0xFFFFCC", "stroke": "0x2D261E","border":false,"mouseEnabled":false}'/>
+		<displayObject name="lock" definition="general.embattle.PeopleLock" properties='{"x":0, "y":0, "visible":false}' />
+		<sprite name="avatars" properties='{"x":0, "y":110,"mouseEnabled":false}'/>
+		
+	</ZhenxingGeneralRenderer>
+	
+	<!--【布阵】** 督军部分武将呈示器-->
+	<DujunGeneralRenderer>
+		<displayObject definition="general.view.SkillBg" properties='{"x":0, "y":0,"width":84, "height":84}' />
+		<!--<displayObject name="imgMask" definition="gameui.view.deputyImgMask" properties='{"x":12, "y":0}' />-->
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalPic40" , "x":13, "y":24, "width":70, "height":70}' />
+		<label name="nameText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":70, "height":30, "x":13,"y":77, "color":"0xFFFFCC", "stroke": "0x2D261E","border":false,"mouseEnabled":false,"visible":false}'/>
+		<displayObject name="lock" definition="general.view.lock" properties='{"x":13, "y":24, "visible":false}' />
+	</DujunGeneralRenderer>
+	
+	<!--【布阵】**  武将列表 -->
+	<EquipGeneralRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalPic40",  "x":7, "y":7, "width":70, "height":70}' />	
+	</EquipGeneralRenderer>
+	
+	<!--************************************培养界面的renderer************************************************-->
+	<!-- 【培养】 培养丹-->
+	<fosterModeRenderer properties='{"itemHeight":72,"itemWidth":300,"textColor":["0x76B0CF","0xDEBB46","0xA861DC"],"picName":["lanmudan","jinyuandan","ziweidan"]}'><!-- 蓝  黄 紫-->
+		<buttonBasic name="selectBtn" properties='{"x":0, "y":0, "skin":"skin.CheckBox1","visible":false}' />
+		<label name="descText" properties='{"x":90,"y":30, "width":300, "height":30,"size":20, "autoSize":"none","bold":true, "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"tech32",  "x":7, "y":7, "width":70, "height":70}' />	
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold"  properties='{"x":190 , "y":37,"visible":false}'/>
+		<displayObject name="selectIt" definition="general.foster.SelectDan"  properties='{"x":0 , "y":0,"visible":false, "mouseEnabled":false,"mouseChildren":false}'/>
+		
+	</fosterModeRenderer>
+	<!-- 【培养】 武将列表-->
+	<GeneralRenderer properties='{"itemWidth":84, "itemHeight":84}'>
+		<!--<displayObject  definition="general.aide.OldAidelistBg"  properties='{"x":0 , "y":0, "visible":true}'/>-->
+		<displayObject name="itemSelected" definition="general.effect.OldItemSelected"  properties='{"x":0 , "y":0, "visible":false}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"generalPic70",  "x":7, "y":2, "width":70, "height":70}' />	
+		<displayObject name="nameBg" definition="general.foster.NameBG"  properties='{"x":-17 , "y":-17,"visible":false}'/>
+		
+		<!--<label name="levelText" properties='{"x":10, "y":2, "width":40,  "height":22, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>-->
+		<label name="nameText" properties='{"x":7, "y":52, "width":70,  "height":30, "size":16, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010","border":false,"mouseEnabled":false}'/>
+	</GeneralRenderer>
+	
+	
+	<!--************************************战车界面的renderer************************************************-->
+	<!--【战车】 我拥有的战车 呈示器 -->
+	<ChariotRenderer properties='{"itemWidth":126, "itemHeight":103}'>	
+		<displayObject definition="general.chariot.NoShineBlock"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"machine32" , "x":39, "y":29, "width":70, "height":70}' />
+		<imageLoader name="frameIL" properties='{"pathFormatName":"equipColorFrame32", "x":39, "y":29}' />
+		<displayObject name="gou" definition="general.chariot.Gou"  properties='{"x":45 , "y":40, "visible":false}'/>
+	</ChariotRenderer>
+	<ChoosechariotCBRenderer properties='{"itemWidth":126, "itemHeight":111,"deselect":true}'>
+		<displayObject definition="general.chariot.Click"  properties='{"x":0 , "y":0}'/>
+		<!--<checkBox name="checkBox" properties='{"x":0, "y":0, "width":25, "styleName":"checkBox1","deselect":true}'/>-->
+		<displayObject name="itemSelected" definition="general.chariot.ShineBlock"  properties='{"x":1 , "y":2, "visible":false}'/>
+	</ChoosechariotCBRenderer>
+	
+	<!--【战车】 配件 呈示器（界面上） -->
+	<PartRenderer properties='{"itemWidth":84, "itemHeight":84}'>		
+		<displayObject name="bg" definition="general.chariot.PartBg"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<displayObject name="lock" definition="general.view.lock"  properties='{"x":7 , "y":7, "mouseEnabled":true}'/>	
+		
+		<imageLoader name="pic" properties='{"pathFormatName":"machine32" , "x":7, "y":7, "width":70, "height":70}' />
+		<imageLoader name="frameIL" properties='{"pathFormatName":"equipColorFrame32", "x":7, "y":7}' />
+	</PartRenderer>
+	
+	<!--【战车】 所有零件 呈示器（弹出） -->
+	<AllPartRenderer properties='{"itemHeight":84,"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="partIL" properties='{"pathFormatName":"machine32",  "x":7, "y":7, "width":70, "height":70}' />	
+		<imageLoader name="frameIL" properties='{"pathFormatName":"equipColorFrame32", "x":7, "y":7}' />
+	</AllPartRenderer>
+	
+
+	<!--*********************************************************【Tips】***********************************************************************-->
+	<!--【新武将】 坐骑的tip -->
+	<HorseEquipTip properties='{"initHeight":110}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":100,"width":190}' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":22, "size":14, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":5, "y":36, "width":180}'/>
+		<label name="fightAttText" properties='{"x":12, "y":45, "width":172, "height":22, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="lastTimeText" properties='{"x":12, "y":65, "width":172, "height":22, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":5, "y":90, "width":180}'/>
+		<label name="introText" properties='{"x":12, "width":165, "y":100, "size":16, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />		
+	</HorseEquipTip>
+	
+	<!--【布阵】 武将信息tip -->
+	<EmbattleGeneralTip>
+		<displayObject definition='skin.DefaultToolTip$bg' properties='{"width":250, "height":190}'/>
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalPic70" , "x":10, "y":14, "width":70, "height":70}' />
+		<label name="nameText" properties='{"x":90, "y":14, "width":150, "height":22, "size":14, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="loveText"  properties='{"border":false,"size":16, "bold": false, "color":"0xFFFFCC", "autoSize":"none", "align":"left", "width":80, "height":20, "x":90,"y":36,"stroke": "0x2D261E"}'/><!--亲密度-->
+		<label name="lveDuoText"  properties='{"border":false,"size":16, "bold": false, "color":"0xFFFFCC", "autoSize":"none", "align":"left", "width":140, "height":20, "x":90,"y":56,"stroke": "0x2D261E"}'/><!--掠夺-->
+		<label name="bloodText"  properties='{"autoSize":"none", "align":"left", "width":140, "height":20, "x":10,"y":100, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/><!--血-->
+		<label name="attackText"  properties='{"autoSize":"none", "align":"left", "width":140, "height":20, "x":10,"y":120, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/><!--攻-->
+		<label name="defendText"  properties='{"autoSize":"none", "align":"left", "width":140, "height":20, "x":10,"y":140, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/><!--防-->
+		<label name="fightText"  properties='{"size":16, "autoTooltip":false,"bold": false, "autoSize":"none", "align":"left", "width":140, "height":23, "x":10,"y":160, "color":"0xcbce67", "stroke": "0x2D261E", "border":false}'/><!--战力-->
+		
+		<label name="tongText"  properties='{"autoSize":"none","align":"left", "width":110, "height":23, "x":160,"y":100, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/><!--统-->
+		<label name="zhiText"  properties='{"autoSize":"none", "align":"left", "width":110, "height":23, "x":160,"y":120, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/><!--智-->
+		<label name="yongText"  properties='{"autoSize":"none", "align":"left", "width":110, "height":23, "x":160,"y":140, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/><!--勇-->
+		<label name="lingText"  properties='{"border":false,"size":16, "bold": false, "autoSize":"none", "align":"left", "width":77, "height":23, "x":160,"y":160,"stroke": "0x2D261E","visible":true}'/><!--五行属性-->
+		
+		
+		<!--<displayObject name="expbar" definition="gameui.icon.expbar"  properties='{"x":150 , "y":10,"width":90}'/>-->
+	</EmbattleGeneralTip>
+	
+	<!--【战车】 零件的tip -->
+	<PartTips properties='{"initHeight":60}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":100,"width":190}' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":22, "size":14, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":5, "y":36, "width":180}'/>
+		<label name="introText" properties='{"x":12, "width":165, "y":45, "size":16, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />		
+	</PartTips>
+	
+	
+</config>

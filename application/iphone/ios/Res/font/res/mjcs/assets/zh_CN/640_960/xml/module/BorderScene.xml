@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【边塞场景】配置文件-->
+<config properties='{"showEffectDuration":0, "hideEffectDuration":0,
+	"doorNpc":[{"x":2, "y":23, "key":"enterEnemyTown", "shape":"npc13", "direction":4, "clickHandler":"enemyTownNpcClickHandler", "id":3}]
+	}'>
+	<sprite name="mapContainer" />
+	<imageLoader name="snow" properties='{"pathFormatName":"effect", "x":0, "y":0, "mouseEnabled":false, "mouseChildren":false}' />
+	<!--进入敌城提示面板-->
+	<container  name="enterEnemyTownTipsPanel" properties='{"style":{
+		"background"		: "gameUI.view.PTView",
+		"dragArea"			: {"width":0, "height":0},
+		"tabBtnGroupPorp"	: {"x":130, "y":800, "layout":"horizontal", "horizontalGap":30,"verticalGap":0},
+		"tabBtnPorp"		: {"styleName":"button3"},
+		"labelPorp"			: {"size":24, "bold": true, "autoSize":"none", "y":30,"width":447, "align":"center","height":60, "mouseEnabled":false, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"skin.CloseBtn", "x":20, "y":800},
+		"closeBtnPaddingRgiht"		:600
+	}, "bgWidth":450, "bgHeight":450,"x":100, "y":140}'>
+		<displayObject properties='{"x":14, "y":33, "width":420, "height":400}' definition='gameUI.icon.Layer' />
+		<displayObject properties='{"x":125, "y":50}' definition='BorderScene.EnterEnemyTownTipsBG' />
+		<displayObject definition="gameUI.icon.Line" properties='{"y":239,"height":2,"x":90,"width":261}'/>
+		<label name="energyCostText" properties='{"y":280,"size":20,"x":15,"stroke":"0x302010","autoSize":"none","align":"center","color":"0xF6FF76","width":400}'/>
+		
+		<button name="enterBtn" properties='{"x":284, "y":348, "styleName":"button13", "labelID":"110276", "width":120,"height":48}' />
+		<button name="cancelBtn" properties='{"x":44, "y":348, "styleName":"button12", "labelID":"520155", "width":120,"height":48}' />
+		<label properties='{"y":115,"color":"0xffffff","x":60,"width":410,"autoSize":"none","height":70,"size":18,"textID":520153,"styleName":"label","stroke":0,"align":"left"}'/>
+		<label properties='{"y":180,"x":60,"width":178,"autoSize":"none","height":31,"color":"0xF6FF76","textID":520154,"styleName":"label","stroke":0,"align":"left"}'/>
+	</container>
+	
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"titleY":[-100, -110, -120, -90],"mouseEnabled":false, "mouseChildren":false, "defNameTextY":25}'>
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<label name="positionText" properties='{"width":100, "height":26, "x":-50, "y":10, "autoSize":"none", "align":"center", "color":"0xCACB65",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<sprite name="sp" properties='{"x":-20, "y":25}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>
+		<imageLoader name="titleRankIL" properties='{"x":-70, "y":-120,"pathFormatName":"titleRank",  "mouseEnabled":false, "mouseChildren":false}' /><!--爵位头衔-->
+	</avatarBasicUI>
+	
+	<!--边塞NPC角色UI-->
+	<borderNpcUI properties='{"mouseEnabled":false, "mouseChildren":false}'>
+		<label name="nameText" properties='{"width":100, "height":16, "x":-50, "y":10, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+	</borderNpcUI>	
+
+</config>

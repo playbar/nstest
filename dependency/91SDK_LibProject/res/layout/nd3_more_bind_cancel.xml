@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/nd3_more_bind_cancel_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" 
+	android:paddingTop="@dimen/nd3_bind_phonenumber_paddingTop"
+	android:gravity="center_horizontal"
+	android:orientation ="vertical"
+	>
+
+	<TextView
+		android:id="@+id/nd3_more_bind_cancel_phone_number"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/nd3_more_bind_cancel_number_format_2"
+		android:textColor="@color/nd3_white"
+		android:textSize="@dimen/nd3_pay_tip_text_size"		
+		android:layout_marginTop="@dimen/nd3_option_margin_top"
+		style="@style/nd3_option_margin_style"
+		>
+	</TextView>
+	
+	<Button
+		android:id="@+id/nd3_more_bind_cancel_cancel"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/nd3_more_bind_cancel_cancel"
+		android:visibility="gone"
+		style="@style/nd3_option_margin_style"
+		>
+	</Button>
+	
+		 
+</LinearLayout>

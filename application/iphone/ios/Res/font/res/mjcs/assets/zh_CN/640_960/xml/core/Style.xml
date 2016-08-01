@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--组件样式配置文件-->
+<config>
+	<!--游戏中文本的默认样式-->
+	<style name="textField" style='{
+		"font"		: "宋体",
+		"size"		: 20,
+		"color"		: "0x333333",
+		"align"		: "left",
+		"bold"		: false,
+		"underline"	: false,
+		"leading"	: 5
+	}' />
+	
+	<!--Label的默认样式-->
+	<style name="label" style='{
+		"moreText"	: "..."
+	}' />
+	
+	<!--提示文本的默认样式-->
+	<style name="alertText" style='{
+		"color"		: "0x00CC00",
+		"stroke"	: "0x282418",
+		"size"    : "20",
+		"delay"		: 0,
+		"duration"	: 2.5,
+		"showEffDuration"	: 0.5,
+		"hideEffDuration"	: 0.5
+	}' />
+	
+	<!--LinkText的默认样式-->
+	<style name="linkText" style='{
+		"upStyle"		: {"color":"0xffd066"},
+		"overStyle"		: {"color":"0xFFFFFF"},
+		"downStyle"		: {"color":"0x999999"},
+		"disabledStyle"	: {"color":"0x666666"},
+		"selectedStyle"	: {"color":"0x666666"},
+		"size"      : 20,
+		"stroke"		: "0x302010"
+	}' />
+	
+	<!--富文本的默认样式-->
+	<style name="richText" style='{
+		"fontFamily": "宋体,Arial",
+		"size"		: 20,
+		"color"		: "0x333333",
+		"leading"	: "150%",
+		"linkNormalFormat"	: {"color":"0x333333"},
+		"linkHoverFormat"	: {"color":"0x666666", "textDecoration":"underline"},
+		"linkActiveFormat"	: {"color":"0xFF0000", "textDecoration":"underline"}
+	}' />
+	
+	
+	<!--ToolTip默认样式-->
+	<style name="toolTip" style='{
+		"background"		: "skin.DefaultToolTip$bg",
+		"labelMaxWidth"		: 190,
+		"size"				  : 20,
+		"showDelay"			: 0.4,
+		"hideDelay"			: 60.0,
+		"scrubDelay"		: 0.2,
+		"showEffDuration"	: 0.3,
+		"hideEffDuration"	: 0.2,
+		
+		"paddingMouseX"		: -1,
+		"paddingMouseY"		: 22,
+		
+		"paddingTop"	: 6,
+		"paddingBottom"	: 6,
+		"paddingLeft"	: 5,
+		"paddingRight"	: 5,
+		"labelStyle"	: {"color":"0xFFFFFF"}
+	}' />
+	
+	<!--自定义ToolTip默认样式-->
+	<style name="richToolTip" style='{
+		"showDelay"			: 0.3,
+		"hideDelay"			: 3.5,
+		"showEffDelay"			:0,
+		"scrubDelay"		: 0.2,
+		"showEffDuration"	: 0.3,
+		"hideEffDuration"	: 0.2,
+		"size"					  : 20,
+		"paddingTopMouseY"	: 10,
+		"paddingBottomMouseY"	: 30,
+		"paddingLeftMouseX"	: 10,
+		"paddingRightMouseX"	: 30,
+		"hGap"		: 5,
+		"vGap"		: 5
+	}' />
+	
+	<!--窗口的默认样式-->
+	<style name="window" style='{
+		"background"		: "skin.Window$bg",
+		"dragArea"			: {"width":620, "height":56},
+		"tabBtnGroupPorp"	: {"x":-33, "y":50, "layout":"vertical", "horizontalGap":3,"verticalGap":-1},
+		"tabBtnPorp"		: {"styleName":"button4"},
+		"labelPorp"			: {"size":24, "bold": true, "autoSize":"none", "y":15, "height":60, "mouseEnabled":false, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"skin.CloseBtn", "x":570, "y":0},
+		"closeBtnPaddingRgiht"		:0
+	}' />
+	
+	<!--面板的默认样式-->
+	<style name="panel" style='{
+		"dragArea"			: {"width":448, "height":56},
+		"background"		: "skin.Panel$bg",
+		"width"				: 448,
+		"height"			: 560,
+		"labelPorp"		: {"size":24, "bold": true, "autoSize":"none", "align":"center", "width":448, "height":30, "mouseEnabled":false,  "y":12, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"skin.CloseBtn", "x":290, "y":0},
+		"closeBtnPaddingRgiht"		:0
+	}' />
+
+	<!--小面板-->
+	<style name="panel2" style='{
+		"dragArea"			: {"width":448, "height":56},
+		"background"		: "skin.Panel2$bg",
+		"width"				: 448,
+		"height"			: 560,
+		"labelPorp"		: {"size":24, "bold": true, "autoSize":"none", "align":"center", "width":560, "height":30, "mouseEnabled":false,  "y":7, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"skin.CloseBtn", "y":0},
+		"closeBtnPaddingRgiht"		:0
+	}' />
+	
+	<!--大关闭面板-->
+	<style name="panel3" style='{
+		"dragArea"			: {"width":0, "height":0},
+		"background"		: "skin.Panel2$bg",
+		"width"				: 448,
+		"height"			: 560,
+		"labelPorp"		: {"size":24, "bold": true, "autoSize":"none", "align":"center", "width":560, "height":30, "mouseEnabled":false,  "y":7, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"BW.gameUI.button.bigcloseButton1", "y":-11 },
+		"closeBtnPaddingRgiht"		:-25
+	}' />
+	
+		<!--无关闭面板-->
+	<style name="panel4" style='{
+		"dragArea"			: {"width":0, "height":0},
+		"background"		: "gameUI.view.PTView",
+		"width"				: 300,
+		"height"			: 400,
+		"labelPorp"		: {"size":24, "bold": true, "autoSize":"none", "align":"center", "width":560, "height":30, "mouseEnabled":false,  "y":7, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"", "y":0},
+		"closeBtnPaddingRgiht"		:0
+	}' />
+	
+			<!--全屏面板-->
+	<style name="window1" style='{
+		"dragArea"			: {"width":0, "height":0},
+		"background"		: "gameUI.view.PTView",
+		"width"				: 640,
+		"height"			: 730,
+		"tabBtnGroupPorp"	: {"x":20, "y":730, "layout":"horizontal", "horizontalGap":7,"verticalGap":0},
+		"tabBtnPorp"		: {"styleName":"button3"},
+		"labelPorp"		: {"size":20, "bold": true, "autoSize":"none", "align":"center", "width":640, "height":30, "mouseEnabled":false,  "y":3, "color":"0xcbce67", "stroke": "0x2D261E"},
+	"closeBtnPorp"		: {"skin":"BW.gameUI.button.exit", "x":500, "y":730},
+		"closeBtnPaddingRgiht"		:20
+	}' />
+	
+	<style name="window2"  style='{
+		"background"		: "skin.Panel2$bg",
+		"dragArea"			: {"width":0, "height":0},
+		"tabBtnGroupPorp"	: {"x":100, "y":60, "layout":"horizontal", "horizontalGap":30,"verticalGap":0},
+		"tabBtnPorp"		: {"styleName":"button8","width":120,"height":48 },
+		"labelPorp"			: {"size":24, "bold": true, "autoSize":"none", "y":15, "height":60, "mouseEnabled":false, "color":"0xcbce67", "stroke": "0x2D261E"},
+		"closeBtnPorp"		: {"skin":"BW.gameUI.button.bigcloseButton1", "y":-11},
+		"closeBtnPaddingRgiht"		:-25
+	}'/>
+	
+		<style name="window3" style='{
+		"dragArea"			: {"width":0, "height":0},
+		"background"		: "gameUI.view.PTView",
+		"width"				: 640,
+		"height"			: 820,
+		"tabBtnGroupPorp"	: {"x":20, "y":730, "layout":"horizontal", "horizontalGap":7,"verticalGap":0},
+		"tabBtnPorp"		: {"styleName":"button3"},
+		"labelPorp"		: {"size":20, "bold": true, "autoSize":"none", "align":"center", "width":640, "height":30, "mouseEnabled":false,  "y":3, "color":"0xcbce67", "stroke": "0x2D261E"},
+	"closeBtnPorp"		: {"skin":"BW.gameUI.button.windowclose", "x":460, "y":755},
+		"closeBtnPaddingRgiht"		:20
+	}' />
+
+	<!--按钮1-->
+	<style name="button1" style='{
+		"skin"					: "skin.Button1",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xCBCD67"}, "overStyle":{"color":"0xFFFFCC"}, "downStyle":{"color":"0x8D9E3D"}, "disabledStyle":{"color":"0x707A36"}},
+		"height" : 34,
+		"labelPaddingTop"		: 5,
+		"labelPaddingBottom"	: 5,
+		"labelPaddingLeft"		: 10,
+		"labelPaddingRight"		: 10,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--按钮2-->
+	<style name="button2" style='{
+		"skin"					: "skin.Button2",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xCBCD67"}, "overStyle":{"color":"0xFFFFCC"}, "downStyle":{"color":"0x8D9E3D"}, "disabledStyle":{"color":"0x707A36"}},
+		"height" : 34,
+		"labelPaddingTop"		: 5,
+		"labelPaddingBottom"	: 5,
+		"labelPaddingLeft"		: 10,
+		"labelPaddingRight"		: 10,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+
+	<!--按钮3-->
+	<style name="button3" style='{
+		"skin"					: "skin.Button3",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xCBCD67"}, "overStyle":{"color":"0xFFFFCC"}, "downStyle":{"color":"0x8D9E3D"}, "disabledStyle":{"color":"0x707A36"}},
+		"height" : 34,
+		"labelPaddingTop"		: 5,
+		"labelPaddingBottom"	: 5,
+		"labelPaddingLeft"		: 10,
+		"labelPaddingRight"		: 10,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮4-->
+	<style name="button4" style='{
+		"skin"					: "skin.Button4",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0x85A344"}, "overStyle":{"color":"0x85A344"}, "downStyle":{"color":"0xE5EF98"}, "selectedStyle":{"color":"0xE5EF98"}, "disabledStyle":{"color":"0x666666"}, "stroke":"0x302010", "width":30,"height":72, "multiline":true,  "bold":true},
+		"height" : 80,
+		"labelPaddingTop"		: 5,
+		"labelPaddingBottom"	: 5,
+		"labelPaddingLeft"		: 9,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 3,
+		"hitAreaPaddingBottom"	: 3,
+		"hitAreaPaddingLeft"	: 3,
+		"hitAreaPaddingRight"	: 0
+	}' />
+	<!--按钮5-->
+	<style name="button5" style='{
+		"skin"					: "skin.Button5",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xFBF08E"}, "overStyle":{"color":"0xFFFFCC"}, "downStyle":{"color":"0xDA7E03"}, "disabledStyle":{"color":"0xBA6227"}},
+		"height" : 34,
+		"labelPaddingTop"		: 5,
+		"labelPaddingBottom"	: 5,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮6-->
+	<style name="button6" style='{
+		"skin"					: "skin.Button6",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮7-->
+	<style name="button7" style='{
+		"skin"					: "skin.Button7",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 3,
+		"labelPaddingRight"		: 3,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />	
+	<!--按钮8-->
+	<style name="button8" style='{
+		"skin"					: "skin.Button8",
+		"labelStyle"			: {"size":20, "bold":true, "upStyle":{"color":"0x85A344"}, "overStyle":{"color":"0xfffecb"},"selectedStyle":{"color":"0xe7ed2a"}, "downStyle":{"color":"0xe7ed2a"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 3,
+		"labelPaddingRight"		: 3,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />	
+	<!--按钮9-->
+	<style name="button9" style='{
+		"skin"					: "skin.Button9",
+		"labelStyle"			: {"size":20, "bold":true, "upStyle":{"color":"0xa22041"}, "overStyle":{"color":"0xa22041"}, "selectedStyle":{"color":"0xe60033"},"downStyle":{"color":"0xe60033"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 3,
+		"labelPaddingRight"		: 3,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮10-->
+	<style name="button10" style='{
+		"skin"					: "skin.Button10",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮11-->
+	<style name="button11" style='{
+		"skin"					: "skin.Button11",
+		"labelStyle"			: {"size":20, "bold":true, "upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮12-->
+	<style name="button12" style='{
+		"skin"					: "skin.Button12",
+		"labelStyle"			: {"size":20, "bold":true, "upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	<!--按钮13-->
+	<style name="button13" style='{
+		"skin"					: "skin.Button13",
+		"labelStyle"			: {"size":20, "bold":true, "upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--按钮14-->
+	<style name="button14" style='{
+		"skin"					: "skin.Button14",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0xfffecb"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--按钮15-->
+	<style name="button15" style='{
+		"skin"					: "skin.Button15",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0xfffecb"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--按钮16-->
+	<style name="button16" style='{
+		"skin"					: "skin.Button16",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0xfffecb"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--按钮17-->
+	<style name="button17" style='{
+		"skin"					: "skin.Button17",
+		"labelStyle"			: {"size":20,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0xfffecb"}},
+		"height" : 34,
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--关闭按钮-->
+	<style name="closeBtn" style='{
+		"skin"					: "skin.CloseBtn",
+		"labelStyle"			: {"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--选项卡按钮1-->
+	<style name="TabButton1" style='{
+		"skin"					: "skin.TabButton1",
+		"labelStyle"			: {"size":24,"upStyle":{"color":"0x85A344"}, "overStyle":{"color":"0xE5EF98"}, "downStyle":{"color":"0xE5EF98"}, "disabledStyle":{"color":"0x666666"}, "selectedStyle":{"color":"0xE5EF98"}},
+		
+		"labelPaddingTop"		: 6,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--选项卡按钮2-->
+	<style name="tabButton2" style='{
+		"skin"					: "skin.TabButton2",
+		"labelStyle"			: {"size":24,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0x666666"}},
+		
+		"labelPaddingTop"		: 6,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--选项卡按钮3-->
+	<style name="tabButton3" style='{
+		"skin"					: "skin.TabButton3",
+		"labelStyle"			: {"size":24,"upStyle":{"color":"0x85A344"}, "overStyle":{"color":"0xE5EF98"}, "downStyle":{"color":"0xE5EF98"}, "disabledStyle":{"color":"0x666666"}, "selectedStyle":{"color":"0xE5EF98"}},
+		
+		"labelPaddingTop"		: 6,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--编辑按钮-->
+	<style name="button100" style='{
+		"skin"					: "skin.Button3",
+		"labelStyle"			: {"size":14,"upStyle":{"color":"0xCBCD67"}, "overStyle":{"color":"0xFFFFCC"}, "downStyle":{"color":"0x8D9E3D"}, "disabledStyle":{"color":"0x707A36"}},
+		"height" : 24,
+		"labelPaddingTop"		: 5,
+		"labelPaddingBottom"	: 5,
+		"labelPaddingLeft"		: 10,
+		"labelPaddingRight"		: 10,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+	<!--多选框1-->
+	<style name="checkBox1" style='{
+		"skin"				: "skin.CheckBox1",
+		"labelStyle"		:	{"upStyle":{"color":"0xFFCC66"}, 
+								"overStyle":{"color":"0xFFFFFF"},
+								"downStyle":{"color":"0xCCCCCC"},
+								"disabledStyle":{"color":"0x666666"},
+								"selectedStyle":{"color":"0xCCCCCC"},
+								"stroke":"0x302010"},
+		"labelPaddingTop"	: 1,
+		"labelPaddingLeft"	: 32
+	}' />
+	
+	<!--单选框1-->
+	<style name="radioButton1" style='{
+		"skin"				: "skin.RadioButton1",
+		"labelStyle"		: {"size":20,"upStyle":{"color":"0x85A344"}, 
+								"overStyle":{"color":"0xFFFFFF"},
+								"downStyle":{"color":"0xE5EF98"},
+								"disabledStyle":{"color":"0x666666"},
+								"selectedStyle":{"color":"0xE5EF98"},
+								"stroke":"0x302010"},
+		"labelPaddingTop"	: -2,
+		"labelPaddingLeft"	: 32
+	}' />
+	
+	
+	<!--垂直滚动条1-->
+	<style name="vScrollBar1" style='{
+		"trackSkin"		: "skin.VScrollBar1$track",
+		"thumbSkin"		: "skin.VScrollBar1$thumb",
+		"upArrowSkin"	: "skin.VScrollBar1$upArrow",
+		"downArrowSkin"	: "skin.VScrollBar1$downArrow",
+		"thumbProp"     : {"height":25}
+	}' />
+	<!--垂直滚动条2-->
+	<style name="vScrollBar2" style='{
+		"trackSkin"		: "skin.VScrollBar2$Track",
+		"thumbSkin"		: "skin.VScrollBar2$Thumb",
+		"upArrowSkin"	: "skin.VScrollBar2$UpArrow",
+		"downArrowSkin"	: "skin.VScrollBar2$DownArrow",
+		
+		"autoThumbSize"	: true,
+		"thumbMinSize"	: 20
+	}' />
+	
+	
+	<!--水平滚动条1-->
+	<style name="hScrollBar1" style='{
+		"trackSkin"		: "skin.HScrollBar1$track",
+		"thumbSkin"		: "skin.HScrollBar1$thumb",
+		"upArrowSkin"	: "skin.HScrollBar1$upArrow",
+		"downArrowSkin"	: "skin.HScrollBar1$downArrow",
+		"direction"		: "horizontal",
+		"autoThumbSize"	: true,
+		"size"			: 310
+	}' />
+	
+	<!--提示框-->
+	<style name="alert" style='{
+		"background"			: "skin.Alert$bg1",
+		"dragArea"				: {"width":400, "height":20},
+		
+		"minWidth"				: 400,
+		"minHeight"				: 240,
+		"maxWidth"				: 400,
+		"maxHeight"				: 240,
+		
+		"labelStyle"			: {"color":"0xE7E3BD", "multiline":true, "stroke":"0x302010"},
+		"labelPaddingTop"		: 23,
+		"labelPaddingBottom"	: 8,
+		"labelPaddingLeft"		: 65,
+		"labelPaddingRight"		: 26,
+		
+		"btnStyleName"			: "button5",
+		"defaultBtnStyleName"	: "button5",
+		"btnGap"				: 50,
+		"btnPorp"				: {"width":100,"height":48, "autoSize":false},
+		"btnPaddingBottom"		: 9
+	}' />
+	
+	<!--提示框2-->
+	<style name="alertFormat" style='{
+		"background"			: "skin.Alert$bg1",
+		"dragArea"				: {"width":265, "height":15},
+		
+		"minWidth"				: 265,
+		"minHeight"				: 165,
+		"maxWidth"				: 265,
+		"maxHeight"				: 165,
+		
+		"labelStyle"			: {"color":"0xE7E3BD", "multiline":true, "stroke":"0x302010"},
+		"labelPaddingTop"		: 23,
+		"labelPaddingBottom"	: 8,
+		"labelPaddingLeft"		: 65,
+		"labelPaddingRight"		: 26,
+		
+		"btnStyleName"			: "button5",
+		"defaultBtnStyleName"	: "button5",
+		"btnGap"				: 30,
+		"btnPorp"				: {"width":60, "autoSize":false},
+		"btnPaddingBottom"		: 7
+	}' />
+	
+	<!--移动端垂直滚动条1-->
+	<style name="vMobileScrollBar1" style='{
+		"thumbSkin"		: "skin.MobileVScrollBar1_Thumb",
+		"thumbMinSize"	: 13
+	}' />
+	
+	<!--移动端水平滚动条1-->
+	<style name="hMobileScrollBar1" style='{
+		"thumbSkin"		: "skin.MobileHScrollBar1_Thumb",
+		"thumbMinSize"	: 13,
+		"direction"		: "horizontal"
+	}' />
+	
+	<!-- 百玩手机扩展控件 -->
+	<style name="HList" style='{
+			"leftArrow":"BW.com.arrow.left",
+			"rightArrow":"BW.com.arrow.right",
+			"pad":[4,4,4,4]
+		}'/>
+	<style name="VList" style='{
+			"downArrow":"BW.com.arrow.down",
+			"upArrow":"BW.com.arrow.up",
+			"pad":[4,4,4,4]
+		}'/>
+	
+	<style name="BottomBar" style='{
+			"image":"BW.Com.BottomBar",
+			"clip":[20,0,20,0]
+		}'/>
+	<style name="TopBar" style='{
+			"image":"BW.home.topBar.BG",
+			"clip":[30,0,30,0]
+		}'/>
+		<style name="ToolBar" style='{
+			"image":"BW.gameUI.BG.toolBarBG",
+			"clip":[30,0,30,0]
+		}'/>
+			<style name="RoleBar" style='{
+			"image":"BW.gameUI.BG.rolebarBG",
+			"clip":[30,0,30,0]
+		}'/>
+				<style name="NoticeBar" style='{
+			"image":"BW.home.noticeBar",
+			"clip":[180,0,180,0]
+		}'/>
+					<style name="ToolBar2" style='{
+			"image":"BW.gameUI.BG.toolBar2BG",
+			"clip":[180,0,180,0]
+		}'/>
+				<style name="RimBox" style='{
+			"image":"BW.gameUI.rimbox",
+			"clip":[50,50,50,50]
+		}'/>
+		<style name="VerList" style='{
+			"image":"BW.gameUI.BG.verlistRimBG1",
+			"clip":[30,30,30,30]
+		}'/>
+			<style name="VerListItem" style='{
+			"image":"BW.gameUI.BG.verlistItemBG1",
+			"clip":[50,26,50,26]
+		}'/>
+<!--			<style name="bwInputBar" style='{
+			"image":"BW.gameUI.bar.inputBar",
+				"clip":[30,0,30,0]
+		}'/>		
+			<style name="VerList1" style='{
+			"image":"BW.gameUI.BG.verlistRimBG1",
+			"clip":[50,50,50,50]
+		}'/>
+			<style name="VerListItem1" style='{
+			"image":"BW.gameUI.BG.verlistItemBG1",
+			"clip":[50,0,50,0]
+		}'/>
+		-->
+					<style name="BattleRim" style='{
+			"image":"BW.gameUI.bar.inputBar",
+			"clip":[30,0,30,0]
+		}'/>
+
+					<style name="RimTop" style='{
+			"image":"BW.gameUI.BG.rimTop",
+			"clip":[20,0,20,0]
+		}'/>
+							<style name="RimMiddle" style='{
+			"image":"BW.gameUI.BG.rimMiddle",
+			"clip":[0,20,0,20]
+		}'/>
+							<style name="RimBottom" style='{
+			"image":"BW.gameUI.BG.rimBottom",
+			"clip":[20,0,20,0]
+		}'/>
+		
+				<style name="LeftTitle" style='{
+			"image":"BW.gameUI.BG.leftTitleBG",
+			"clip":[0,0,50,0]
+		}'/>
+		
+				<style name="CenterLabel" style='{
+			"image":"BW.gameUI.BG.centertabelBG",
+			"clip":[30,0,30,0]
+		}'/>
+	
+	<style name="LeftBar" style='{
+			"image":"BW.Com.LeftBar",
+			"clip":[0,20,0,20]
+		}'/>
+	<style name="BagBar" style='{
+			"image":"BW.Com.bagback",
+			"clip":[120,0,20,0]
+		}'/>
+	<style name="ItemBar" style='{
+			"image":"BW.Com.ItemBar",
+			"clip":[20,0,20,0]
+		}'/>
+	<style name="WindowBack" style='{
+			"image":"BW.Com.WindowBack",
+			"clip":[20,20,20,20]
+		}'/>
+	<style name="Switch" style='{
+		"skin":"BW.Com.Switch",
+		"back":"back",
+		"slider":"slider"
+		}'/>
+			<style name="verline" style='{
+			"image":"BW.gameUI.icon.verline",
+			"clip":[0,5,0,5]
+		}'/>
+			<style name="frameBG" style='{
+			"image":"BW.gameUI.BG.frameBG",
+			"clip":[20,20,20,20]
+		}'/>
+			<style name="windowBG" style='{
+			"image":"BW.gameUI.BG.windowBG",
+			"clip":[20,20,20,20]
+		}'/>
+			<style name="frameBG1" style='{
+			"image":"BW.gameUI.BG.frameBG1",
+			"clip":[120,70,120,70]
+		}'/>
+		
+		<!--按钮16-->
+	<style name="BXButton1" style='{
+		"skin"					: "skin.Button16",
+		"labelStyle"			: {"size":24,"upStyle":{"color":"0xfffecb"}, "overStyle":{"color":"0xfffecb"}, "downStyle":{"color":"0xCCCCCC"}, "disabledStyle":{"color":"0xfffecb"}},
+		"labelPaddingTop"		: 2,
+		"labelPaddingBottom"	: 2,
+		"labelPaddingLeft"		: 5,
+		"labelPaddingRight"		: 5,
+		
+		"hitAreaPaddingTop"		: 2,
+		"hitAreaPaddingBottom"	: 2,
+		"hitAreaPaddingLeft"	: 2,
+		"hitAreaPaddingRight"	: 2
+	}' />
+	
+		<!--多选框1-->
+	<style name="BXCheck1" style='{
+		"skin"				: "skin.CheckBox1",
+		"labelStyle"		:	{"upStyle":{"color":"0xFFCC66"}, 
+								"overStyle":{"color":"0xFFFFFF"},
+								"downStyle":{"color":"0xCCCCCC"},
+								"disabledStyle":{"color":"0x666666"},
+								"selectedStyle":{"color":"0xCCCCCC"},
+								"stroke":"0x302010"},
+		"labelPaddingTop"	: 1,
+		"labelPaddingLeft"	: 32
+	}' />
+	
+	<!--单选框1-->
+	<style name="BXRadio1" style='{
+		"skin"				: "skin.RadioButton1",
+		"labelStyle"		: {"size":20,"upStyle":{"color":"0x85A344"}, 
+								"overStyle":{"color":"0xFFFFFF"},
+								"downStyle":{"color":"0xE5EF98"},
+								"disabledStyle":{"color":"0x666666"},
+								"selectedStyle":{"color":"0xE5EF98"},
+								"stroke":"0x302010"},
+		"labelPaddingTop"	: -2,
+		"labelPaddingLeft"	: 32
+	}' />
+	
+		<!--单选框1-->
+	<style name="BXSlider1" style='{
+		"skin"				: "BW.Com.SliderBar",
+		"backLeft"		: 103,
+		"backRight"	  : 103,
+		"padLeft"		  : 50,
+		"padRight"	  : 50,
+		"numShow"		  : true,
+		"bigShow"		  : true,
+		"fontColor"   : "0xCBCC66"
+	}' />
+	
+</config>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--商业界面-->
+<config properties='{"initX":0, "initY":0,  "isSpecial":true,"styleName":"window1"}'>
+	<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+	<!--集市-->
+	<container name="market" properties='{"tabBtnMC":"BW.gameUI.button.jishi"}'>	
+		<displayObject definition='commercial.market.BG' properties='{"x":12, "y":30,"width":620,"height":688}' />
+		<verbatimText name="tipsText" properties='{"x":127, "y":80, "width":240, "size":18, "color":"0xFEFECA", "stroke":"0x302010"}' />
+		<label name="numText" properties='{"x":14, "y":163, "width":400, "size":18, "autoSize":"none", "color":"0xFEFECA", "stroke":"0x302010", "height":26}'/>
+		<label name="cdText" properties='{"x":410, "y":110, "color":"0xE6F099", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":225,"height":26}'/>
+		<list name="commodityList" properties='{"x":120, "y":185, "columnCount":1, "rowCount":3, "horizontalGap":1, "verticalGap":95}' /> 
+		
+		<!--玩家的购买新闻（滚动）-->
+		<container name="news" properties='{"x":95,"y":650,"height":27,"movieArgs":{"y":-27, "duration":0.5, "delay":1.8}}'/>
+		
+	</container>
+	<!--商品 Item-->
+	<CommodityRenderer properties='{"itemWidth":143, "itemHeight":44}'>
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"height":131,"x":0,"y":0,"width":308}' />
+		<displayObject name="bgBlank" definition="gameUI.icon.Grid1" properties='{"x":15,"visible":true,"y":23}' />
+		<displayObject name="silverIcon" definition="gameUI.icon.Copper" properties='{"x":158,"visible":false,"y":107}' />
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold" properties='{"x":158,"visible":false,"y":107}' />
+		<label name="nameText" properties='{"x":125,"y":34,"width":152,"height":26,"stroke":"0x302010","autoSize":"none","color":"0xCBCC66"}'/>
+		<label name="numText" properties='{"x":125,"y":58,"width":152,"height":26,"stroke":"0x302010","autoSize":"none","color":"0xCBCC66"}'/>
+		<label name="costText" properties='{"x":91,"align":"center","y":101,"width":68,"height":24,"stroke":"0x302010","autoSize":"none","color":"0xE6F099"}'/>
+		<sprite name="goodsIcon" properties='{"y":30,"x":22}' />	
+		
+		<button name="buyBtn" properties='{"x":320,"labelID":710003,"styleName":"button2","width":88,"height":47,"y":44}' />	
+
+	</CommodityRenderer>	
+
+
+		<!--商会-->
+	<container name="trade" properties='{"tabBtnMC":"BW.gameUI.button.shanghui"}'>	
+		<displayObject definition='commercial.trade.BG' properties='{"width":606,"x":17,"y":81,"height":627}' />
+		<displayObject definition="commercial.trade.ewItemBG"  properties='{"x":474,"y":144,"mouseEnabled":false,"width":146,"height":277}'/>
+		<displayObject name="word" definition="commerial.trade.Word"  properties='{"x":530,"y":211,"visible":false,"mouseEnabled":false}'/>
+		<displayObject name="rateBG" definition="commercial.trade.RateBG"  properties='{"width":277,"x":81,"y":642,"height":44,"mouseEnabled":false}'/>
+		<displayObject name="rate" definition="commercial.trade.Rate"  properties='{"x":100,"y":656,"visible":false,"width":238,"mouseEnabled":false,"height":14}'/>		
+		
+		<label name="freeText" properties='{"x":17,"y":40,"width":280,"color":"0xFEFECA","height":26,"stroke":"0x302010","autoSize":"none","size":18,"mouseEnabled":false}'/>		
+		<label  properties='{"autoSize":"none","textID":720128,"color":"0xE5F497","align":"left","stroke":"0x302010","width":416,"x":37,"mouseEnabled":false,"size":18,"height":26,"y":490}'/>	
+		<!--<label  properties='{"textID":"720121", "x":20, "y":285, "width":65, "size":12,"align":"left", "autoSize":"none", "color":"0xE5F497", "stroke":"0x302010", "height":16, "mouseEnabled":false}'/>		-->
+		<label name="qinmiStaticText" properties='{"autoSize":"none","x":19,"y":584,"align":"left","stroke":"0x302010","width":135,"mouseEnabled":false,"color":"0xE5F497","height":26,"size":18}'/>		
+		
+		<label name="expendTlText" properties='{"autoSize":"none","x":488,"y":584,"align":"center","stroke":"0x302010","width":137,"mouseEnabled":false,"color":"0xE5F497","height":26,"size":18}'/>	
+		<label name="buyTimesText" properties='{"x":370,"y":40,"width":250,"height":26,"stroke":"0x302010","autoSize":"none","size":18,"color":"0xFEFECA"}'/>
+		<label name="costText" properties='{"autoSize":"none","x":430,"y":490,"visible":false,"stroke":"0x302010","width":20,"color":"0xE5F497","height":16,"size":12}'/>
+		<label name="gainText" properties='{"bold":false,"y":275,"align":"center","width":132,"mouseEnabled":false,"size":18,"autoSize":"none","leading":10,"x":481,"color":"0xCBCC66","height":130,"stroke":"0x302010","border":false}'/>
+		<!--<label name="noText" properties='{"x":80, "y":285, "width":30, "size":12, "align":"left", "autoSize":"none", "color":"0xE5F497", "stroke":"0x302010", "height":16, "mouseEnabled":false}'/>	-->	
+		<label name="messageText" properties='{"autoSize":"none","x":25,"y":618,"align":"left","stroke":"0x302010","width":440,"mouseEnabled":false,"color":"0xE5F497","height":25,"size":18}'/>
+		<label name="incomeText" properties='{"autoSize":"none","x":356,"color":"0xE5F497","align":"left","stroke":"0x302010","width":112,"mouseEnabled":false,"y":650,"size":18,"height":26}'/>	
+		<label name="qinMiLvText" properties='{"autoSize":"none","x":84,"y":651,"align":"center","stroke":"0x302010","width":275,"mouseEnabled":true,"color":"0xE5F497","height":26,"size":17}'/>
+		
+	
+		<sprite name="rewardTips" properties='{"y":160,"x":218}' />
+		
+		<!--<label name="shenmiBagText" properties='{"x":361, "y":283, "width":360, "size":12,"align":"left", "autoSize":"none", "color":"0xE5F497", "stroke":"0x302010", "height":16}'/>-->
+		<displayObject name="bagBG" definition="gameUI.icon.Grid1"  properties='{"x":505,"y":179,"visible":false,"mouseEnabled":true}'/>	
+		<imageLoader name="goodsPic"  properties='{"pathFormatName":"treasure32","x":511,"y":185}' />
+		<button name="freshBtn" properties='{"x":492,"y":444,"visible":false,"labelID":720103,"width":114,"styleName":"button2","height":37}' />
+		<button name="sureBtn" properties='{"x":477,"y":620,"labelID":720104,"width":145,"styleName":"button2","height":40}' />
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":14,"y":494,"visible":false}' />
+		<displayObject name="combMC" definition="commercial.combMC" properties='{"mouseEnabled":false,"x":552,"y":291,"visible":false,"height":95}' />
+		
+		<list name="tradersList" properties='{"columnCount":3,"x":1,"rowCount":1,"y":115,"verticalGap":1,"horizontalGap":19}' />
+		<list name="techList" properties='{"columnCount":99,"x":370,"rowCount":1,"y":559,"verticalGap":0,"horizontalGap":4}' />
+		
+		
+
+		
+	</container>
+	
+	<TraderRenderer properties='{"itemWidth":132, "itemHeight":201}'>
+		<displayObject name='updateBtn' definition="commercial.trade.TraderBG" properties='{"width":146,"x":18,"y":29,"height":277}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":49,"y":73,"mouseEnabled":false}' />
+		<imageLoader name="pic"  properties='{"pathFormatName":"traders70","x":54,"y":78,"width":72,"mouseEnabled":false,"height":72}' />
+		<label name="nameText" properties='{"autoSize":"none","bold":true,"x":48,"y":39,"align":"center","stroke":"0x302010","width":86,"mouseEnabled":false,"size":16,"height":33}'/>
+		<!-- <label  name="updateText" properties='{"underline":true ,"x":31, "y":173, "size":12, "autoSize":"none", "color":"0xFEFECA","height":16, "stroke":"0x302010", "border":false,"textType":"htmlText"}'/> -->
+		<label name="amountText" properties='{"autoSize":"none","x":32,"y":162,"stroke":"0x302010","width":120,"mouseEnabled":false,"color":"0xCBCC66","height":30}'/>
+		<label name="gainOneText" properties='{"autoSize":"none","x":32,"y":190,"align":"center","stroke":"0x302010","width":120,"mouseEnabled":false,"color":"0xCBCC66","multiline":true,"height":69}'/>
+		<displayObject name="icon" definition="gameUI.icon.Gold" properties='{"x":90,"y":230,"visible":false,"mouseEnabled":false}' />
+		<label  name="upTraderText" properties='{"autoSize":"right","x":85,"y":226,"size":14,"stroke":"0x302010","mouseEnabled":false,"color":"0xFEFECA","height":16}'/>  
+		<!-- <button name="updateBtn" properties='{"x":17, "y":140, "styleName":"button5", "labelID":"720105", "width":80}' /> -->
+	</TraderRenderer>	
+	
+	<!--拍卖-->
+	<container name="auction" properties='{"tabBtnMC":"BW.gameUI.button.baowu"}'>	
+		<displayObject definition="gameUI.icon.Layer" properties='{"height":688,"x":12,"y":29,"mouseEnabled":false,"width":615}' />
+		<displayObject definition="commercial.auction.tips" properties='{"x":25,"y":53,"mouseEnabled":false}' />
+		<label name="urseGoldText" properties='{"x":200,"stroke":"0x302010","y":55,"width":263,"color":"0xCBCD67","multiline":true,"height":100,"align":"left","autoSize":"none","mouseEnabled":false,"size":18}'/>
+		<label name="timeText" properties='{"x":437,"stroke":"0x302010","y":105,"width":189,"color":"0xCBCD67","multiline":true,"height":100,"align":"center","autoSize":"none","size":18,"mouseEnabled":false}'/>
+		<button name="myAuctionBtn" properties='{"x":477,"styleName":"button5","width":100,"height":35,"labelID":760003,"y":58}' />
+		<list name="auctionList" properties='{"x":8, "y":60, "columnCount":1, "rowCount":3, "horizontalGap":1, "verticalGap":3}' />
+		<label name="tipText" properties='{"bold":true,"stroke":"0x302010","autoSize":"none","mouseEnabled":false,"color":"0xffff33","x":45,"align":"center","y":350,"width":544,"height":26,"visible":false,"textID":760014,"size":20}'/>
+						<!--购买记录（滚动）-->
+		<container name="newsView" properties='{"x":8,"y":323}'/>
+		<!--我要拍卖的界面-->
+		<container name="myAuction" properties='{"styleName":"panel3","initX":70, "initY":30, "bgWidth":510, "bgHeight":630, "titleID":"760100"}'>
+
+			<displayObject definition="gameUI.icon.Layer" properties='{"width":470,"mouseEnabled":false,"y":83,"height":495,"x":19}' />
+			<displayObject definition="gameUI.icon.Title" properties='{"width":475,"mouseEnabled":false,"y":50,"height":47,"x":17}' />
+			
+			<button name="mybaoWuBtn" properties='{"x":22,"y":51,"labelID":"760101","width":135,"styleName":"button8","height":45}'/>
+			<button name="auctionBtn" properties='{"x":165,"y":51,"labelID":"760105","width":135,"styleName":"button8","height":45}'/>
+		
+			<list name="treasureList" properties='{"x":27,"y":103,"columnCount":1,"verticalGap":60,"horizontalGap":1,"rowCount":3}' />
+			<label name="tipText" properties='{"bold":true,"y":280,"align":"center","width":419,"mouseEnabled":false,"multiline":true,"size":20,"autoSize":"none","x":42,"color":"0xffff33","height":177,"stroke":"0x302010"}'/>
+			<page name="page" properties='{"x":190, "y":575,
+							"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":76 },
+							"labelProp":{"x":32, "y":8, "width":55, "height":26, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+							}' />
+		</container>
+	</container>
+	
+	<!--拍卖item-->
+	<AuctionRenderer properties='{"itemWidth":556, "itemHeight":82}'>
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":589,"x":0,"y":0,"height":117,"mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":23, "y":16, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Gold" properties='{"x":423, "y":64, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Gold" properties='{"x":505, "y":64, "mouseEnabled":false}' />
+		
+		<sprite name="goodsIcon" properties='{"x":30, "y":23, "mouseChildren":false, "mouseEnabled":true}' />	
+		
+		<label name="itemNameText" properties='{"x":4, "y":58, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"center", "size":12, "width":77, "height":20, "mouseEnabled":false}'/>
+		<label name="tongText" properties='{"x":80, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":70, "height":20, "mouseEnabled":false}'/>
+		<label name="zhiText" properties='{"x":80, "y":38, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":70, "height":20, "mouseEnabled":false}'/>
+		<label name="yongText" properties='{"x":80, "y":61, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":70, "height":20, "mouseEnabled":false}'/>
+		
+		<label properties='{"x":150, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false, "textID":"760020"}'/>
+		<label name="sellerName" properties='{"x":150, "y":38, "color":"0xf1dc42", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		<label name="sellerServerName" properties='{"x":150, "y":61, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		
+		<label properties='{"x":255, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false, "textID":"760021"}'/>
+		<label name="buyerName" properties='{"x":255, "y":38, "color":"0x63b1b2", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		<label name="buyerServerName" properties='{"x":255, "y":61, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		
+		
+		<label name="timeText" properties='{"x":370, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		<label name="infoText" properties='{"x":370, "y":38, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		
+		
+		<label name="price1Text" properties='{"x":359, "y":58, "color":"0xffff33", "stroke":"0x302010", "autoSize":"none", "align":"right", "size":18, "bold":true, "width":61, "height":26, "mouseEnabled":false}'/>
+		<label name="price2Text" properties='{"x":442, "y":58, "color":"0xffff33", "stroke":"0x302010", "autoSize":"none", "align":"right", "size":18, "bold":true, "width":61, "height":26, "mouseEnabled":false}'/>
+		
+		<button name="buyBtn" properties='{"x":450, "y":27, "styleName":"button3", "labelID":"760009", "width":70}'/>
+	</AuctionRenderer>
+	<!--宝物item-->
+	<TreasureRenderer properties='{"itemWidth":290, "itemHeight":96}'>
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":450,"x":3,"y":0,"height":155,"mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":20,"y":18,"mouseEnabled":false}' />
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold" properties='{"mouseEnabled":false,"y":82,"visible":false,"x":278}' />
+		<sprite name="goodsIcon" properties='{"x":27,"y":25,"mouseChildren":false,"mouseEnabled":true}' />	
+		
+		<label name="paimai" properties='{"align":"left","y":38,"visible":true,"width":88,"mouseEnabled":false,"size":18,"autoSize":"none","x":235,"color":"0xCBCD67","height":26,"stroke":"0x302010","textID":760104}'/>
+		
+		<label name="itemNameText" properties='{"autoSize":"none","x":22,"y":101,"align":"center","stroke":"0x302010","width":77,"mouseEnabled":false,"color":"0xCBCD67","size":18,"height":26}'/>
+		<label name="tongText" properties='{"autoSize":"none","x":124,"y":20,"align":"left","stroke":"0x302010","width":70,"mouseEnabled":false,"color":"0xCBCD67","size":18,"height":26}'/>
+		<label name="zhiText" properties='{"autoSize":"none","x":124,"y":59,"align":"left","stroke":"0x302010","width":70,"mouseEnabled":false,"color":"0xCBCD67","size":18,"height":26}'/>
+		<label name="yongText" properties='{"autoSize":"none","x":124,"y":97,"align":"left","stroke":"0x302010","width":70,"mouseEnabled":false,"color":"0xCBCD67","size":18,"height":26}'/>
+		
+		<label name="priceText" properties='{"autoSize":"none","bold":true,"x":202,"y":76,"align":"right","stroke":"0x302010","width":75,"mouseEnabled":false,"color":"0xffff33","size":20,"height":30}'/>
+		<label name="tipsText" properties='{"autoSize":"none","bold":true,"x":353,"y":47,"align":"center","stroke":"0x302010","width":70,"mouseEnabled":false,"color":"0xffff33","size":18,"height":26}'/>
+		
+		<button name="sellBtn" properties='{"width":93,"x":338,"y":47,"labelID":"760102","style":{"labelStyle":{"autoSize":"none","bold":true,"size":16}},"styleName":"button3","height":38}'/>
+		<button name="cancelBtn" properties='{"width":93,"x":338,"y":47,"labelID":"760103","style":{"labelStyle":{"autoSize":"none","bold":true,"size":16}},"styleName":"button3","height":38}'/>
+
+
+	</TreasureRenderer>	
+	
+	
+	<!--铜铃-->
+	<container name="horsebell" properties='{"tabBtnMC":"BW.gameUI.button.maling"}'>			
+		<displayObject definition="gameUI.icon.Layer" properties='{"height":688,"x":12,"y":30,"width":616,"mouseEnabled":false}' />
+		<displayObject definition="commercial.auction.HorsebellTips" properties='{"x":25,"y":53,"mouseEnabled":false}' />
+		<!--<displayObject definition="gameUI.icon.Title" properties='{"height":39,"x":17,"y":35,"width":603,"mouseEnabled":false}' />-->
+		<label name="urseGoldText" properties='{"x":200,"stroke":"0x302010","y":55,"width":304,"color":"0xCBCD67","multiline":true,"height":100,"align":"left","autoSize":"none","mouseEnabled":false,"size":18}'/>
+		<label name="timeText" properties='{"x":437,"stroke":"0x302010","y":105,"width":189,"color":"0xCBCD67","multiline":true,"height":100,"align":"center","autoSize":"none","size":18,"mouseEnabled":false}'/>
+		<button name="myAuctionBtn" properties='{"x":477,"styleName":"button5","width":100,"height":35,"labelID":760003,"y":58}' />
+		<list name="auctionList" properties='{"x":8, "y":60, "columnCount":1, "rowCount":3, "horizontalGap":1, "verticalGap":3}' />
+		<label name="tipText" properties='{"bold":true,"stroke":"0x302010","autoSize":"none","mouseEnabled":false,"color":"0xffff33","x":45,"align":"center","y":350,"width":544,"height":26,"visible":false,"textID":760014,"size":20}'/>
+				<!--购买记录（滚动）-->
+		<container name="newsView" properties='{"x":8,"y":323}'/>
+		<!--我要拍卖的界面-->
+		<container name="myAuction" properties='{"styleName":"panel3","initX":70, "initY":30, "bgWidth":510, "bgHeight":630, "titleID":"760100"}'>
+			<displayObject definition="gameUI.icon.Layer" properties='{"width":470,"mouseEnabled":false,"y":83,"height":495,"x":19}' />
+			<displayObject definition="gameUI.icon.Title" properties='{"width":475,"mouseEnabled":false,"y":50,"height":47,"x":17}' />
+			
+			<button name="mybaoWuBtn" properties='{"x":22,"y":51,"labelID":"760112","width":135,"styleName":"button8","height":45}'/>
+			<button name="auctionBtn" properties='{"x":165,"y":51,"labelID":"760113","width":135,"styleName":"button8","height":45}'/>
+		
+			<list name="treasureList" properties='{"x":27,"y":103,"columnCount":1,"verticalGap":60,"horizontalGap":1,"rowCount":3}' />
+			<label name="tipText" properties='{"bold":true,"y":280,"align":"center","width":419,"mouseEnabled":false,"multiline":true,"size":20,"autoSize":"none","x":42,"color":"0xffff33","height":177,"stroke":"0x302010"}'/>
+			<page name="page" properties='{"x":190, "y":575,
+							"pervBtnProp":{"skin":"BW.gameUI.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"BW.gameUI.page2.NextBtn", "x":76 },
+							"labelProp":{"x":32, "y":8, "width":55, "height":26, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+							}' />
+		</container>
+	</container>
+	
+	<!--拍卖铜铃item-->
+	<HorsebellAuctionRenderer properties='{"itemWidth":556, "itemHeight":82}'>
+		<displayObject definition="commercial.auction.itemBG" properties='{"x":0, "y":0, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":23, "y":16, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Gold" properties='{"x":423, "y":64, "mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Gold" properties='{"x":505, "y":64, "mouseEnabled":false}' />
+		
+		<sprite name="goodsIcon" properties='{"x":30, "y":23, "mouseChildren":false, "mouseEnabled":true}' />	
+		
+		<label name="itemNameText" properties='{"x":4, "y":58, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"center", "size":12, "width":77, "height":20, "mouseEnabled":false}'/>
+		<label name="fightText" properties='{"x":80, "y":30, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":70, "height":60, "mouseEnabled":false}'/>
+		
+		
+		<label properties='{"x":150, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false, "textID":"760020"}'/>
+		<label name="sellerName" properties='{"x":150, "y":38, "color":"0xf1dc42", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		<label name="sellerServerName" properties='{"x":150, "y":61, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		
+		<label properties='{"x":255, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false, "textID":"760021"}'/>
+		<label name="buyerName" properties='{"x":255, "y":38, "color":"0x63b1b2", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		<label name="buyerServerName" properties='{"x":255, "y":61, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		
+		
+		<label name="timeText" properties='{"x":370, "y":16, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		<label name="infoText" properties='{"x":370, "y":38, "color":"0xCBCD67", "stroke":"0x302010", "autoSize":"none", "align":"left", "size":12, "width":115, "height":20, "mouseEnabled":false}'/>
+		
+		
+		<label name="price1Text" properties='{"x":359, "y":58, "color":"0xffff33", "stroke":"0x302010", "autoSize":"none", "align":"right", "size":18, "bold":true, "width":61, "height":26, "mouseEnabled":false}'/>
+		<label name="price2Text" properties='{"x":442, "y":58, "color":"0xffff33", "stroke":"0x302010", "autoSize":"none", "align":"right", "size":18, "bold":true, "width":61, "height":26, "mouseEnabled":false}'/>
+		
+		<button name="buyBtn" properties='{"x":450, "y":27, "styleName":"button3", "labelID":"760009", "width":70}'/>
+	</HorsebellAuctionRenderer>
+	<!--我的铜铃item-->
+	<MyHorsebellRenderer properties='{"itemWidth":290, "itemHeight":96}'>
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":450,"x":3,"y":0,"height":155,"mouseEnabled":false}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":20,"y":18,"mouseEnabled":false}' />
+		<displayObject name="goldIcon" definition="gameUI.icon.Gold" properties='{"mouseEnabled":false,"y":82,"visible":false,"x":278}' />
+		<sprite name="goodsIcon" properties='{"x":27,"y":25,"mouseChildren":false,"mouseEnabled":true}' />	
+		
+		<label name="paimai" properties='{"visible":true,"y":38,"align":"left","width":88,"mouseEnabled":false,"height":26,"autoSize":"none","x":235,"color":"0xCBCD67","size":18,"stroke":"0x302010","textID":760104}'/>
+		
+		<label name="itemNameText" properties='{"autoSize":"none","x":8,"y":101,"align":"center","stroke":"0x302010","width":115,"mouseEnabled":false,"color":"0xCBCD67","size":18,"height":26}'/>
+		<label name="fightText" properties='{"autoSize":"none","x":115,"y":30,"align":"left","stroke":"0x302010","width":70,"mouseEnabled":false,"color":"0xCBCD67","size":12,"height":60}'/>		
+	
+		<label name="priceText" properties='{"autoSize":"none","bold":true,"x":202,"y":76,"align":"right","stroke":"0x302010","width":75,"mouseEnabled":false,"color":"0xffff33","size":20,"height":30}'/>
+		<label name="tipsText" properties='{"autoSize":"none","bold":true,"x":353,"y":47,"align":"center","stroke":"0x302010","width":70,"mouseEnabled":false,"color":"0xffff33","size":18,"height":26}'/>
+			
+		<button name="sellBtn" properties='{"width":93,"x":338,"y":47,"labelID":760102,"style":{"labelStyle":{"autoSize":"none","bold":true,"size":16}},"styleName":"button3","height":38}'/>
+		<button name="cancelBtn" properties='{"width":93,"x":338,"y":47,"labelID":760103,"style":{"labelStyle":{"autoSize":"none","bold":true,"size":16}},"styleName":"button3","height":38}'/>
+	</MyHorsebellRenderer>	
+	
+	<!--科技图标列表 呈示器-->
+	<TechPicList properties='{"itemWidth":70, "itemHeight":70}'>
+		<imageLoader name="pic" properties='{"pathFormatName":"tech32",  "x":0, "y":0, "width":70, "height":70}' />	
+	</TechPicList>
+	
+	<!--商城-->
+	<container name="shop" properties='{"tabBtnMC":"BW.gameUI.button.shangdian"}'>
+
+		<displayObject definition="shop.view.shopBg"  properties='{"x":0 , "y":0}'/>	
+		<displayObject definition="gameUI.icon.Layer"  properties='{"height":622,"x":17,"y":60,"width":604}'/>	
+
+		<itemGroup name="tabBtnGroup" properties='{"layout":"horizontal","height":602,"x":18,"y":33,"width":594}' />
+		<button name="tabBtn1" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440011"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		<button name="tabBtn2" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440012"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		<button name="tabBtn3" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440013"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		<!--<button name="tabBtn4" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440014"}' parent="tabBtnGroup"  group="tabBtnGroup"/>-->
+		<button name="tabBtn5" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"440015"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+		<button name="tabBtn6" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"720003"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+		
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":297,"y":691,"width":45}'/>
+			<page name="page" properties='{"x":269, "y":685,
+						"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":72 },
+						"labelProp":{"x":28, "y":2, "width":46, "height":28, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+						}' />
+		<page name="pageBack" properties='{"x":269, "y":685,
+						"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+						"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":72 },
+						"labelProp":{"x":29, "y":2, "width":46, "height":28, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+		}' />
+		
+		<list name="goodsList" properties='{"x":2, "y":0, "columnCount":2, "rowCount":7, "horizontalGap":153, "verticalGap":43}' /> 
+		<list name="buyBackGoodsList" properties='{"x":23, "y":65, "columnCount":2, "rowCount":5, "horizontalGap":153, "verticalGap":60}' /> 
+		<!--<button name="buyBtn" properties='{"x":130, "y":402, "styleName":"button3", "labelID":"440021"}' />-->
+		
+		<!--点券商城-->
+	<container name="voucher" properties='{"tabBtnMC":"BW.gameUI.button.jishi"}'>
+			<displayObject definition="gameUI.icon.Layer" properties='{"height":620,"x":18,"y":62,"mouseEnabled":false,"width":604}' />
+			
+			<!--<displayObject definition="voucher.view.BG" properties='{"height":595,"x":24,"y":80,"mouseEnabled":false,"width":595}' />-->
+				
+			<label name="voucherNum" properties='{"x":110,"stroke":"0x302010","y":65,"width":415,"color":"0xE5EF99","multiline":true,"height":90,"align":"left","autoSize":"none","size":18,"mouseEnabled":false}'/>		
+			<!--<label name="tipText" properties='{"x":281, "y":21, "color":"0xE5EF99", "stroke":"0x302010", "autoSize":"none", "align":"center", "size":12, "width":258, "height":18, "mouseEnabled":false}'/>-->
+			
+			<list name="shopList" properties='{"x":55,"horizontalGap":1,"columnCount":1,"y":110,"verticalGap":37,"rowCount":7}' />
+			<!--购买记录（滚动）-->
+			<!--<container name="newsView" properties='{"x":80,"y":321}'/>-->
+			<sprite name="rewardTips" properties='{"y":234,"x":88}' />
+		</container>
+	
+		<!-- 购买面板 -->
+		<container name="bugPanel" properties='{"x":150,"y":160,"pricePos":"98,69,88,59"}'>
+			<displayObject definition="skin.Panel2$bg"  properties='{"height":300,"x":0,"y":0,"width":350}'/>	
+			<displayObject definition="shop.view.buyBg"  properties='{"height":131.95,"x":-18,"y":-15,"width":293}'/>	
+			<displayObject definition="gameUI.icon.Grid1"  properties='{"y":58,"x":32}'/>	
+			<displayObject name="priceIcon1" definition="gameUI.icon.Price"  properties='{"height":16.5,"x":285,"y":117,"width":25.5}'/>	
+			<displayObject name="priceIcon2" definition="gameUI.icon.Price"  properties='{"height":16.5,"x":285,"y":207,"width":25.5}'/>	
+			<imageLoader name="goodIL" properties='{"height":68,"x":38,"y":65,"width":70,"pathFormatName":"skill32"}' />	
+
+			<label name="priceIconText1" properties='{"stroke":"0x302010","x":277,"align":"left","y":110,"width":99,"height":26,"autoSize":"none","size":18,"color":"0xFFFFFF"}'/>
+			<label name="priceIconText2" properties='{"stroke":"0x302010","x":277,"align":"left","y":200,"width":60,"height":26,"autoSize":"none","size":18,"color":"0xFFFFFF"}'/>
+			
+			<label name="nameText" properties='{"x":162,"align":"center","y":67,"width":99,"height":28,"stroke":"0x302010","autoSize":"none","size":18,"color":"0xFFFFFF"}'/>
+      <label name="priceText" properties='{"stroke":"0x302010","x":165,"align":"right","y":111,"width":185,"height":28,"autoSize":"none","size":18,"color":"0xFFFFCC"}'/>					
+      <inputText name="numberText" properties='{"x":165,"align":"left","y":157,"width":108,"height":28,"stroke":"0x302010","autoSize":"none","size":18,"color":"0xFFFFCC"}'/>
+			<label name="totalPriceText" properties='{"stroke":"0x302010","x":209,"align":"right","y":201,"width":215,"height":28,"autoSize":"none","size":18,"color":"0xFFFFCC"}'/>
+			<label properties='{"x":120,"align":"left","y":110,"width":95,"color":"0xFFFFCC","height":28,"stroke":"0x302010","textID":440022,"autoSize":"none","size":18}'/>
+			<label properties='{"x":30,"align":"left","y":160,"width":72,"autoSize":"none","height":28,"stroke":"0x302010","textID":440023,"size":18,"color":"0xA69551"}'/>
+			<label properties='{"x":30,"align":"left","y":200,"width":74,"autoSize":"none","height":28,"stroke":"0x302010","textID":440024,"size":18,"color":"0xA69551"}'/>
+
+			<buttonBasic name="reduceBtn" properties='{"height":34,"x":130,"y":154,"width":27,"skin":"skin.page2.PrevBtn"}' />
+			<buttonBasic name="addBtn" properties='{"height":34,"x":287,"y":155,"width":27,"skin":"skin.page2.NextBtn"}' />
+
+			<button name="buyBtn" properties='{"labelID":440025,"x":85,"styleName":"button3","y":243,"width":80}' />
+			<button name="cancelBtn" properties='{"labelID":440026,"x":190,"styleName":"button3","y":243,"width":80}' />
+		</container>
+	</container>	
+	<!--购买物品render-->
+	<GoodRenderer properties='{"itemWidth":143, "itemHeight":44}'>
+		<displayObject name="itemBg" definition="shop.view.itemBg"  properties='{"width":290,"height":84,"x":24,"y":70}'/>	
+		<displayObject name="priceIcon" definition="gameUI.icon.Price"  properties='{"x":275,"y":127}'/>
+		<sprite name="goodsIcon" properties='{"x":34,"y":78}' />	
+		<label name="nameText" properties='{"autoSize":"none","color":"0xFFFFFF","align":"center","x":115,"y":77,"size":18,"width":168,"stroke":"0x302010","height":28}'/>
+		<label name="priceLabel" properties='{"autoSize":"none","color":"0xFFFFCC","align":"left","x":120,"y":120,"size":18,"width":73,"stroke":"0x302010","height":28,"textID":440022}'/>
+		<label name="priceText" properties='{"autoSize":"none","color":"0xFFFFCC","align":"right","x":190,"y":120,"size":18,"width":76,"stroke":"0x302010","height":28}'/>
+			</GoodRenderer>
+	<!--回购物品render-->
+	<BuyBackGoodRenderer properties='{"itemWidth":143, "itemHeight":62,"pricePos":"73,63"}'>
+		<displayObject name="itemBg" definition="shop.view.BackItemBG"  properties='{"height":125,"x":0,"y":0,"width":290}'/>	
+		<displayObject name="priceIcon" definition="gameUI.icon.Price"  properties='{"x":249,"y":61}'/>	
+		<sprite name="goodsIcon" properties='{"x":12,"y":11}' />	
+		
+		<label name="priceIconText" properties='{"x":220,"align":"right","y":55,"width":60,"color":"0xFFFFFF","height":28,"stroke":"0x302010","autoSize":"none","mouseEnabled":false,"size":18}'/>
+		<label  name="countText" properties='{"x":22,"align":"right","textType":"text","y":52,"width":56,"height":26,"stroke":"0x302010","autoSize":"none","mouseEnabled":false,"color":"0xFFFFFF"}'/>
+		<label name="nameText" properties='{"x":135,"align":"center","y":12,"width":96,"height":28,"stroke":"0x302010","autoSize":"none","size":18,"color":"0xFFFFFF"}'/>
+		<label name="priceLabel" properties='{"x":84,"align":"left","size":18,"y":55,"width":89,"height":28,"stroke":"0x302010","autoSize":"none","textID":440022,"color":"0xFFFFCC"}'/>
+		<label name="priceText" properties='{"x":155,"align":"right","y":56,"width":170,"height":28,"stroke":"0x302010","autoSize":"none","size":18,"color":"0xFFFFCC"}'/>
+		<label  name="countDownText" properties='{"x":45,"border":false,"stroke":"0x302010","y":90,"color":"0x99FF00"}'/>
+
+	</BuyBackGoodRenderer>
+	<!--点券商城 Item-->
+	<VoucherRenderer properties='{"itemHeight":42, "itemWidth":288, "pathFormatNames":["gemstone32", "stone32"]}'>
+	
+
+    <displayObject definition="gameUI.bg.GimpFrame" properties='{"height":80,"x":0,"y":12,"width":525}'/>
+    <displayObject definition="gameUI.icon.Grid1" properties='{"height":76,"x":5,"y":14,"width":76}'/>
+		<imageLoader name="goodIL" properties='{"height":68,"x":8,"y":17,"width":68,"pathFormatName":"gemstone32"}' />
+		<label name="goodTypeText" properties='{"bold":true,"x":85,"stroke":"0x302010","y":25,"height":20,"autoSize":"left","mouseEnabled":false,"color":"0xFFFFFF"}' />
+		<label properties='{"x":85,"stroke":"0x2D261E","y":60,"width":70,"height":18,"textID":800105,"mouseEnabled":false,"color":"0xE5EF99"}'/>
+		<label name="priceText" properties='{"x":180,"stroke":"0x302010","y":60,"height":20,"autoSize":"right","mouseEnabled":false,"color":"0xffffCC"}' />
+		<button name="changeBtn" properties='{"x":410,"styleName":"button3","width":100,"labelID":800100,"height":45,"y":40}' />
+		<button name="changeTenBtn" properties='{"x":269,"styleName":"button5","width":100,"labelID":800101,"height":45,"y":40}' />
+		<displayObject definition="voucher.view.dianquan" properties='{"y":65,"x":190}'/>
+	</VoucherRenderer>
+	
+	
+</config>

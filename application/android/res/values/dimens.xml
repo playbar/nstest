@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <dimen name="bwpx2">2px</dimen>
+ <dimen name="bwpx4">4px</dimen>
+	<dimen name="bwpx5">5px</dimen>
+	<dimen name="bwpx8">8px</dimen>
+	<dimen name="bwpx10">10px</dimen>
+	<dimen name="bwpx12">12px</dimen>
+	<dimen name="bwpx14">14px</dimen>
+	<dimen name="bwpx18">18px</dimen>
+	<dimen name="bwpx20">20px</dimen>
+	<dimen name="bwpx24">24px</dimen>
+	<dimen name="bwpx30">30px</dimen>
+	<dimen name="bwpx32">32px</dimen>
+	<dimen name="bwpx38">40dp</dimen>
+	<dimen name="bwpx40">40dp</dimen>
+	<dimen name="bwpx44">66px</dimen>
+	<dimen name="bwpx56">56px</dimen>
+	<dimen name="bwpx64">64px</dimen>
+	<dimen name="bwpx88">88px</dimen>
+	<dimen name="bwpx112">112px</dimen>
+	<dimen name="bwpx240">240px</dimen>
+	<dimen name="bwdp60">60dp</dimen>
+</resources> 

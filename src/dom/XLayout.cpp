@@ -1,0 +1,22 @@
+// XLayout.cpp: implementation of the XLayout class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "StdAfxggdom.h"
+#include "XLayout.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+XLayout::XLayout(DRAWCONTEXT*pDraw,CELLDATA*pData,BORDERDATA*pMargin)
+{
+   m_pDraw=pDraw;
+   m_pData=pData;
+   m_pMargin=pMargin;
+}
+
+XLayout::~XLayout()
+{
+
+}

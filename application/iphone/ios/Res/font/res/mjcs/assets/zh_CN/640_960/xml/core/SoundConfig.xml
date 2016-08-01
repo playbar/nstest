@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--音频配置文件-->
+<config>
+	<background value="assets/{resVersion}/snd/backgroundMusic/{0}.mp3" />
+</config>

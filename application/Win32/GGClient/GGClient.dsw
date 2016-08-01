@@ -1,0 +1,74 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "GGBase"=..\..\..\project\win32\vs6\GGBase\GGBase.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "GGClient"=.\GGClient.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name GGBase
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name GGDom
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name GGFlash
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "GGDom"=..\..\..\project\win32\vs6\GGDom\GGDom.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "GGFlash"=..\..\..\project\win32\vs6\GGFlash\GGFlash.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

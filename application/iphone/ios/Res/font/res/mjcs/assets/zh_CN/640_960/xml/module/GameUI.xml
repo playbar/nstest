@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--游戏UI模块配置文件-->
+<config properties='{}' >
+	<!--城市显示-->
+	<!--<displayObject name="titleBg" definition="gameUI.icon.TitleBg"  properties='{"x":840 , "y":0, "width":160, "visible":false}'/>	-->
+	<!--<displayObject name="titleBg" definition="gameUI.icon.TitleBg"  properties='{"x":0 , "y":-520, "width":160, "visible":false}'/>-->
+	<!--<label name="sceneNameText"  properties='{"size":16, "autoSize":"none", "align":"center", "width":160, "height":20, "x":0,"y":-526, "color":"0xFFFFCC", "stroke": "0x2D261E" , "mouseEnabled":false}'/>-->
+	<!--<displayObject parent="null" name="taskCompleteMovie" definition="gameUI.movie.TaskComplete"  properties='{"x":500 , "y":300, "mouseEnabled":false, "mouseChildren":false}'/>-->
+	<!--<displayObject name="requestBtn" definition="gameUI.btn.Request"  properties='{"x":490, "y":475, "buttonMode":true, "visible":false}'/>-->
+	<!-- <displayObject name="dailyWardBox" definition="gameUI.daily.BoxEffect"  properties='{"x":465, "y":220,  "visible":false}'/>  -->
+
+	<!--<container name="friendTips" properties='{"x":780,"y":440,"initX":780, "initY":440, "labelProperty":{"x":27, "y":30, "width":90,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"030093","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>-->
+
+	<!--<container name="heartFriendTips" properties='{"x":780,"y":440,"initX":780, "initY":440, "labelProperty":{"x":27, "y":30, "width":90,"height":40,"autoSize":"none","align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"030094","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>-->
+    <!-- 完成任务奖励提示 -->
+    <sprite name="rewardTips" properties='{"x":256, "y":440}' />
+	<!-- 时间界面 -->
+<!--	<container name="timeInfo" properties='{"x":0,"y":546}'>
+		<displayObject definition="gameUI.view.TimeBG"  properties='{"x":0 , "y":0}'/>
+		<displayObject name="seasonMC" definition="gameUI.icon.Season"  properties='{"x":95 , "y":2}'/>
+		<label name="timeText"  properties='{"x":14,"y":10, "width":75, "height":20, "size":14, "bold":true, "autoSize":"none", "align":"center", "color":"0xffff33", "stroke": "0x2D261E" , "mouseEnabled":false}'/>
+	</container>
+-->
+	<!-- 控制按钮 -->
+	<container name="controlBar" properties='{"x":0, "y":67, "rightBtnX":522, "btnDetaX":100
+	, "btnOrder":"character,roleBtn|strength,improveBtn|shop,marketBtn|bag,bagBtn|activity,activityBtn|rank,rankingBtn"
+	, "specialBtn":{"roleBtn":true,"generalBtn":true,"improveBtn":true}
+	}'>
+		<BXActiveIcon name="roleBtn" properties='{"height":108,"x":0,"y":718,"width":108,"skin":"BW.home.toolBar.general"}'/>
+		<BXActiveIcon name="improveBtn" properties='{"height":108,"x":112,"y":718,"width":108,"skin":"BW.home.toolBar.improve"}'/>
+		<BXActiveIcon name="marketBtn" properties='{"height":108,"x":219,"y":718,"width":108,"skin":"BW.home.toolBarsh.shop"}'/>
+		<BXActiveIcon name="bagBtn" properties='{"height":108,"x":324,"y":718,"width":108,"skin":"BW.home.toolBar2.bag"}'/>
+		<BXActiveIcon name="activityBtn" properties='{"height":108,"x":432,"y":718,"width":108,"skin":"BW.home.toolBar.activity"}'/>
+		<BXActiveIcon name="rankingBtn" properties='{"height":108,"x":539,"y":718,"width":108,"skin":"BW.home.toolBar2.billBoard"}'/>
+		<!--<displayObject name="roleBtn" definition="gameUI.btn.role" properties='{"x":567, "y":500, "visible":false}' />-->
+<!--		<displayObject name="generalBtn" definition="gemeUI.btn.general" properties='{"x":610, "y":550, "visible":false}' />  -->
+		<!--<displayObject name="bagBtn" definition="gameUI.btn.bag" properties='{"x":653, "y":500, "visible":false}' />-->
+<!--		<displayObject name="taskBtn" definition="gameUI.btn.technology" properties='{"x":739, "y":550, "visible":false}' />  -->
+		<!--<displayObject name="technologyBtn" definition="gameUI.btn.technology" properties='{"x":739, "y":500, "visible":false}' />-->
+		<!--<displayObject name="improveBtn" definition="gameUI.btn.improve" properties='{"x":782, "y":500, "visible":false}' />-->
+		<!--<displayObject name="friendsBtn" definition="gameUI.btn.friendBtn" properties='{"x":825, "y":500, "visible":false}' />-->
+		<!--<displayObject name="officeBtn" definition="gameUI.btn.office" properties='{"x":911, "y":500, "visible":false}' />-->
+		<!--<displayObject name="rankingBtn" definition="gameUI.btn.ranking" properties='{"x":954, "y":500, "visible":false}' />-->
+<!--		<displayObject name="legionBtn" definition="gameUI.btn.legion" properties='{"x":868, "y":500, "visible":false}' />     -->
+		<!--<displayObject name="marketBtn" definition="gameUI.btn.MarketBtn" properties='{"x":868, "y":500, "visible":false}' />-->
+	</container>
+
+	<!--顶条-->
+	<topBar properties='{}'>
+		<!--背景-->
+		<displayObject definition="BW.gameUI.BG.topBarBG" properties='{"height":60,"x":0,"y":0,"width":640}'/>
+		<BXBackBar properties='{"x":266,"clip":[0,5,0,5],"styleName":"BottomBar","width":2,"image":"BW.gameUI.icon.verline","height":50,"y":6}'/>		
+		<BXBackBar properties='{"x":527,"clip":[0,5,0,5],"styleName":"BottomBar","width":2,"image":"BW.gameUI.icon.verline","height":50,"y":6}'/>		
+		<BXBackBar properties='{"x":400,"clip":[0,5,0,5],"styleName":"BottomBar","width":2,"image":"BW.gameUI.icon.verline","height":50,"y":6}'/>
+		<!--左边名称等级-->
+		<label name="nameText" properties='{"color":"0xCBCC66","autoSize":"none","x":95,"y":15,"stroke":0,"size":24,"width":171,"height":30,"styleName":"label"}'/>
+		<label name="countryText"  properties='{"size":24, "autoSize":"none", "width":100, "height":30, "x":5, "y":15,  "color":"0xFFFFCC", "stroke": "0x302010" , "mouseEnabled":false}'/>
+		<displayObject name="vipLevel" definition="BW.home.icon.viplevel" properties='{"width":90,"y":18,"height":20,"x":535}'/>
+		<!--滚动信息-->
+		<BXShow name="topRollInfo" properties='{"dir":"h","y":0,"x":270,"width":260,"height":50}'>
+			<BXRender name="rollInfo1" properties='{"width":260,"height":30}'>
+				<displayObject definition="BW.gameUI.icon.gold" properties='{"height":17,"x":1,"y":20,"width":27}'/>
+				<displayObject definition="BW.gameUI.icon.silver" properties='{"height":17,"x":135,"y":20,"width":27}'/>
+				<label name="goldText" properties='{"x":33,"size":24,"y":15,"width":101,"stroke":0,"height":28,"styleName":"label","autoSize":"none","color":"0xf2be45"}'/>
+				<label name="copperText" properties='{"styleName":"label","x":165,"y":15,"width":100,"stroke":0,"height":28,"autoSize":"none","size":24,"color":"0xffffff"}'/>
+			</BXRender>
+			<BXRender name="rollInfo2" properties='{"width":260,"height":30}'>
+				<label name="areaName" properties='{"stroke":0,"autoSize":"none","size":24,"x":3,"y":15,"color":"0xCBCC64","width":630,"height":30}'/>
+				<label name="timeInfo" properties='{"stroke":0,"autoSize":"none","size":24,"x":138,"y":15,"color":"0xCBCC64","width":580,"height":30}'/>
+			</BXRender>
+		</BXShow>
+	</topBar>
+
+	<!--底条-->
+	<bottomBar properties='{}'>
+		<!--<BXBackBar properties='{"styleName":"ToolBar","y":880,"width":640,"height":110}'/> -->
+		<displayObject definition="BW.gameUI.BG.bottomBarBG" properties='{"y":880,"width":640,"x":0,"height":80}'/>		
+		<BXActiveIcon name="taskBtn" properties='{"y":889,"width":62,"x":25,"height":62,"skin":"BW.gameUI.icon.task"}'/>
+		<!--<BXGroup name="mainBar" properties='{"y":853,"x":15}'>
+			<BXActiveIcon name="town" properties='{"width":108,"height":108,"skin":"BW.home.toolBar.home"}'/>
+			<BXActiveIcon name="general" properties='{"width":108,"height":108,"x":126,"skin":"BW.home.toolBar.general"}'/>
+			<BXActiveIcon name="improve" properties='{"width":108,"height":108,"x":252,"skin":"BW.home.toolBar.improve"}'/>
+			<BXActiveIcon name="battle" properties='{"width":108,"height":108,"x":378,"skin":"BW.home.toolBar.battle"}'/>
+			<BXActiveIcon properties='{"width":108,"height":108,"x":504,"skin":"BW.home.toolBar.activity"}'/>
+		</BXGroup>-->
+	</bottomBar>
+	
+	<!-- 主将信息 -->
+		<container name="roleInfo" properties='{"x":0,"y":0}'>
+		<!-- 主将信息 -->
+		<!--<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":528,"height":42,"x":114,"y":60}'/>
+		<displayObject definition="gameUI.icon.Line" properties='{"width":600,"height":3,"x":20,"y":182}'/>
+		-->
+		<!-- vip等级 -->
+		<displayObject definition="BW.gameUI.BG.roleInfoBG" properties='{"y":60,"x":0}'/>
+		<displayObject definition="BW.gameUI.BG.itemBG108" properties='{"y":66,"width":108,"height":108,"x":24}'/>
+		<imageLoader name="generalImg" properties='{"y":74,"pathFormatName":"generalPic70","x":32,"height":93,"width":93}' />
+		
+		<displayObject definition="BW.gameUI.BG.hpBarBG" properties='{"y":69,"width":168,"x":149,"height":58}'/>
+		<displayObject name="hpbar" definition="BW.gameUI.bar.hpBar" properties='{"width":216,"y":69,"height":60,"x":150,"mouseEnabled":false}'/>
+		<sprite name="hpbarHitArea" />
+		<displayObject name="powerbar" definition="BW.gameUI.bar.mpBar" properties='{"width":216,"y":213,"height":60,"x":198,"mouseEnabled":false}'/>
+		<sprite name="powerbarHitArea" />
+		<displayObject name="expbar" definition="BW.gameUI.bar.expBar" properties='{"width":109,"y":177,"height":23,"x":23}'/>
+		<label name="levelText" properties='{"align":"right","y":140,"autoSize":"none","styleName":"label","size":24,"x":32,"color":"0xffff0","width":90,"height":30,"stroke":0}'/>
+		<!--
+		<displayObject definition="BW.gameUI.cornerMark.enemy" properties='{"width":56,"x":276,"height":50,"y":185}'/>-->
+
+	<!--	<displayObject definition="gameUI.icon.CountryBG"  properties='{"x":80 , "y":30,"visible":false }'/>
+		<label name="countryText"  properties='{"size":16, "textID":"570203","autoSize":"none", "align":"center", "width":50, "height":24, "x":109, "y":7, "color":"0xFFFFCC", "stroke": "0x302010" , "mouseEnabled":false}'/>
+-->
+		<!--<label name="hpText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":76, "height":20, "x":88,"y":28, "color":"0xFFFFCC", "stroke": "0x2D261E" , "mouseEnabled":false}'/>
+		<label name="powerText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":76, "height":20, "x":117,"y":42, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="expText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":76, "height":20, "x":117,"y":57, "color":"0xFFFFCC", "stroke": "0x2D261E" , "mouseEnabled":false}'/>-->
+<!--		<label name="nameText"  properties='{"y":13,"size":24,"align":"left","stroke":"0x2D261E","textID":570203,"height":28,"width":160,"bold":false,"color":"0xFFFFCC","x":134,"autoSize":"none"}'/>-->
+<!--		<displayObject name="goldIcon" definition="gameUI.icon.Gold"  properties='{"x":187 , "y":11}'/>
+		<displayObject name="copperIcon" definition="gameUI.icon.Copper"  properties='{"x":337 , "y":11}'/>
+		<displayObject name="prestigeIcon" definition="gameUI.icon.Prestige"  properties='{"x":414 , "y":7, "visible":false}'/>
+-->
+<!-- 		<displayObject name="woodIcon" definition="gameUI.icon.Wood"  properties='{"x":500 , "y":7, "visible":false}'/> -->
+
+<!--		<label name="goldText"  properties='{"x":211, "y":6,"size":20,"textID":"570203", "width":160, "height":24, "autoTooltip":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="copperText"  properties='{"x":361, "y":8,"size":16,"textID":"570203", "width":160, "height":24, "autoTooltip":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>
+		<label name="prestigeText"  properties='{"x":432, "y":6, "width":59, "height":20, "autoTooltip":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "visible":false}'/>
+-->		<!-- <label name="woodText"  properties='{"x":521, "y":6, "width":59, "height":20, "autoTooltip":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "visible":false}'/> -->
+
+		<!-- <displayObject name="soundBtn" definition="gameUI.btn.Sound" properties='{"x":10, "y":98, "visible":false}' />
+		<displayObject name="hideAvatarBtn" definition="gameUI.btn.HideOther" properties='{"x":30, "y":98, "visible":false}' />
+		<displayObject name="effectBtn" definition="gameUI.btn.EffectOnOff" properties='{"x":57, "y":96, "visible":false}' /> -->
+<!--		<displayObject name="setBtn" definition="gameUI.btn.Set"  properties='{"x":110, "y":73,"visible":false}'/>
+-->
+		<displayObject name="mailBtn" definition="gameUI.btn.Mail"  properties='{"y":82,"x":350,"buttonMode":true}'/>
+
+	<!--	<displayObject name="payVipBtn" definition="BW.gameUI.button.button1"  properties='{"y":75,"x":490}'/> -->
+	<BXButton name="payVipBtn" properties='{"width":120,"x":510,"y":75,"height":48,"label":"充值","styleName":"button12"}'/>
+<!--		<BXActiveIcon properties='{"y":117,"width":140,"height":60,"x":453,"skin":"BW.gameUI.button.button1", "visible":false}'/>
+	<BXActiveIcon properties='{"y":70,"width":48,"skin":"BW.gameUI.button.miniButton","height":48,"x":264}'/> -->	
+	<displayObject name="helpBtn" definition="gameUI.btn.help"  properties='{"y":75,"x":430}'/>
+
+
+	<!--<displayObject  name="helpEffectMC" definition="gameUI.effect.helpEffect" properties='{"x":170, "y":86, "visible":false,"mouseEnabled":false}' />--> 
+
+<!--		<displayObject  definition="gameUI.view.payBtnBg" properties='{"x":80, "y":75, "visible":false}' />
+	  <button name="payVipBtn" properties='{"x":87, "y":78, "styleName":"button7","height":21, "width":65, "labelID":"030027", "visible":false}' />  -->	
+		<!-- <button name="suggestBtn" properties='{"x":151, "y":78, "styleName":"button7","height":21, "width":65, "labelID":"030028", "visible":false}' /> -->
+		<!-- <displayObject  definition="gameUI.text.payAndsuggest" properties='{"x":101, "y":76,"mouseEnabled":false, "visible":false}' /> -->
+
+<!--		<displayObject name="addBloodBtn"  definition="gameUI.btn.addBloodBtnNew2" properties='{"y":122,"x":283}' />
+		<displayObject name="addBloodMC"  definition="gameUI.btn.addBloodMC1" properties='{"y":128,"mouseEnabled":false,"x":285,"mouseChildren":false,"visible":false}' />
+-->
+		<!-- 提建议面板，功能取消-->
+		<!--<container  name="suggest" properties='{"initX":350, "initY":102, "bgWidth":300, "bgHeight":400, "titleID":"050001"}'>
+			<displayObject definition="gameUI.icon.Layer"  properties='{"x":20 , "y":41,"width":260,"height":343}'/>
+			<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":30 , "y":80,"width":240,"height":250}'/>
+			<label  properties='{"x":30, "y":60, "color":"0xFFCC00", "stroke":"0x302010","textID":"050003"}'/>
+			<inputText name="suggestInputText" properties='{"x":43, "y":90, "height":230,"width":215, "size":12, "autoSize":"none", "align":"left","border":false, "multiline":true,"color":"0xFDFFCB","stroke":"0x302010","editable":true,"maxChars":200}'/>
+			<button name="submitBtn" properties='{"x":120, "y":345, "styleName":"button5", "labelID":"050002","autoSize":false,"width":60}' />
+		</container>-->
+
+		<!--设置 用户习惯面板,功能取消-->
+		<!--<container  name="settingPanel" properties='{"initX":370, "initY":140, "bgWidth":321, "bgHeight":344, "background":"gameUI.view.settingPanel", "closeBtnPorp":{"x":299, "y":8}}'>
+			<label  properties='{"x":60, "y":92, "color":"0xCBCC66", "stroke":"0x302010","textID":"050016", "autoSize":"none", "align":"left"}'/>
+			<label  properties='{"x":60, "y":127, "color":"0xCBCC66", "stroke":"0x302010","textID":"050017", "autoSize":"none", "align":"left"}'/>
+			<label  properties='{"x":60, "y":163, "color":"0xCBCC66", "stroke":"0x302010","textID":"050018", "autoSize":"none", "align":"left"}'/>
+			<label  properties='{"x":60, "y":198, "color":"0xCBCC66", "stroke":"0x302010","textID":"050019", "autoSize":"none", "align":"left"}'/>
+			<label  properties='{"x":60, "y":233, "color":"0xCBCC66", "stroke":"0x302010","textID":"050020", "autoSize":"none", "align":"left"}'/>
+
+			<itemGroup name="playerGroup" properties='{"x":120, "y":92, "layout":"horizontal"}' />
+			<checkBox name="playerShowCB" properties='{"x":120, "y":92, "width":20, "styleName":"checkBox1","labelID":"050012","deselect":false}'  group="playerGroup"/>
+			<checkBox name="playerHideCB" properties='{"x":200, "y":92, "width":20, "styleName":"checkBox1","labelID":"050013","deselect":false}'  group="playerGroup"/>
+
+			<itemGroup name="soundGroup" properties='{"x":120, "y":127, "layout":"horizontal"}' />
+			<checkBox name="soundOpenCB" properties='{"x":120, "y":127, "width":20, "styleName":"checkBox1","labelID":"050014","deselect":false}'  group="soundGroup"/>
+			<checkBox name="soundCloseCB" properties='{"x":200, "y":127, "width":20, "styleName":"checkBox1","labelID":"050015","deselect":false}'  group="soundGroup"/>
+
+			<itemGroup name="effectGroup" properties='{"x":120, "y":163, "layout":"horizontal"}' />
+			<checkBox name="effectOpenCB" properties='{"x":120, "y":163, "width":20, "styleName":"checkBox1","labelID":"050014","deselect":false}'  group="effectGroup"/>
+			<checkBox name="effectCloseCB" properties='{"x":200, "y":163, "width":20, "styleName":"checkBox1","labelID":"050015","deselect":false}'  group="effectGroup"/>
+
+			<itemGroup name="fastFightGroup" properties='{"x":120, "y":198, "layout":"horizontal"}' />
+			<checkBox name="fastFightOpenCB" properties='{"x":120, "y":198, "width":20, "styleName":"checkBox1","labelID":"050014","deselect":false}'  group="fastFightGroup"/>
+			<checkBox name="fastFightCloseCB" properties='{"x":200, "y":198, "width":20, "styleName":"checkBox1","labelID":"050015","deselect":false}'  group="fastFightGroup"/>
+
+			<itemGroup name="eatGroup" properties='{"x":120, "y":233, "layout":"horizontal"}' />
+			<checkBox name="eatOneOpenCB" properties='{"x":120, "y":233, "width":20, "styleName":"checkBox1","labelID":"050021","deselect":false}'  group="eatGroup"/>
+			<checkBox name="eatTenOpenCB" properties='{"x":200, "y":233, "width":20, "styleName":"checkBox1","labelID":"050022","deselect":false}'  group="eatGroup"/>
+		</container>-->
+	</container>
+	<!-- 功能解锁推送窗口 -->
+<container name="functionUnlock" properties='{"x":360, "y":565,"visible":false, "args":{"functionILX":75,"functionILY":30,"functionNLX":180,"functionNLY":66,"techILX":65,"techILY":35,"techNLX":155,"techNLY":49,"functionPathName":"function","techPathName":"tech32","shineGain2InitX":90 , "shineGain2InitY":90,  "shineGain2EndX":133, "shineGain2EndY":120, "bezierX": 75, "bezierY":70}}'>
+			<displayObject definition="gameUI.view.PTView"  properties='{"height":208,"x":0,"y":0,"mouseEnabled":false,"width":272}'/>
+			<displayObject  name="txMC" definition="gameUI.icon.functionText"  properties='{"x":15,"y":39,"mouseEnabled":false}'/>
+  	  <imageLoader name="picLoader" properties='{"x":33, "y":18,"pathFormatName":"function"}' />
+			<mcLabel name="functionNameL" properties='{ "x":180, "y":90,"labelProp":{ "font":"宋体","width":100, "height":50,"multiline":true,"size":16, "bold": true, "align":"left", "bold": true, "color":"0xCBCD67"}, "stroke": "0x2D261E","multiColor":"gameUI.color.Tips9"}' />
+			<label name="tipsL" properties='{ "x":0, "y":115, "width":270,"height":49,"font":"宋体","size":16,"multiline":true, "bold": false, "align":"center", "color":"0xCBCD67", "stroke": "0x2D261E"}'/>
+		    <!--<buttonBasic name="closeBtn" properties='{"x":172, "y":13, "skin":"skin.Button12"}' /> -->
+			<displayObject name="unLockAnimation" definition='gameUI.icon.haveUnlocked' properties='{ "x":56, "y":31 ,"visible":false}' />
+			<displayObject name="redBagShine2" definition="gameUI.GainRedBag2" properties='{"x":70, "y":30, "mouseEnabled":false, "mouseChildren":false, "visible":false}' />	<!--爆竹闪烁-->
+			<button name="closeBtn" properties='{"label":"关闭","x":75,"y":146,"width":120,"height":48,"skin":"skin.Button12"}'/>
+	</container>
+	<!-- 活动（按钮）列表 -->
+	<container name="activity" properties='{"x":70,"y":180,"styleName":"panel3","bgWidth":520,"bgHeight":600,"alertTextProp":{"style":{"overStyle":{"underline":true}},"x":205, "y":137, "size":14,"color":"0x00FF00", "stroke":"0x302010", "border":false,"textID":"030049"}}'>
+		<list name="list" properties='{"x":20, "y":60, "columnCount":5, "rowCount":6, "horizontalGap":5, "verticalGap":20}' />
+		<activityConfig>
+			<activity id="1" desc="祭祀" callBack="jiSi" definition="gameUI.btn.fane"  />
+			<activity id="2" desc="国战" callBack="guoZhan" definition="gameUI.btn.StateWar"  />
+			<!-- <activity id="3" desc="首日充值" callBack="shouRiChongZhi" definition="gameUI.btn.FirstDay"  /> -->
+			<activity id="4" desc="礼包" callBack="libao" definition="gameUI.btn.giftBtn"  />
+			<activity id="5" desc="冲级奖励" callBack="chongji" definition="gameUI.btn.uplvBtn"  />
+			<activity id="6" desc="首次充值" callBack="costActivity" definition="gameUI.btn.firstPayBtn"  />
+			<activity id="7" desc="双倍祭祀" callBack="jiSi" definition="gameUI.btn.doubleFeteBtn"  />
+			<activity id="8" desc="送钱啦" callBack="giveMoney" definition="gameUI.btn.giveMoneyBtn"  />
+			<activity id="9" desc="集市" callBack="openMarket" definition="gameUI.btn.Market"  />
+			<activity id="10" desc="充值送宝箱" callBack="giveBox" definition="gameUI.btn.giveBox"  />
+			<activity id="11" desc="宝石促销" callBack="gemPromo" definition="gameUI.btn.gemPromotion"  />
+			<activity id="12" desc="商会" callBack="openTrade" definition="gameUI.btn.Trade"  />
+			<activity id="13" desc="消费送宝箱" callBack="expendGiveBox" definition="gameUI.btn.expendGiveBox"  />
+			<activity id="14" desc="菜肴促销" callBack="recipePromotion" definition="gameUI.btn.recipePromotion"  />
+			<activity id="15" desc="武将打折" callBack="generalDiscount" definition="ganmeUI.btn.generalDiscount"  />
+			<activity id="16" desc="富豪榜排名" callBack="ranking" definition="gameUI.btn.RankingAct"  />
+			<activity id="17" desc="武斗会庆功" callBack="wuDouHappy" definition="gameUI.btn.wudouHappy"  />
+			<activity id="18" desc="操练" callBack="caoLian" definition="gameUI.btn.caolianBtn" />
+			<activity id="20" desc="武斗" callBack="kongfu" definition="gameUI.btn.kongfu"  />
+			<activity id="21" desc="跨服国战" callBack="kfGuoZhan" definition="gameUI.btn.KfNationWar"  />
+			<activity id="22" desc="地产大亨" callBack="landBoss" definition="gameUI.btn.LandBoss"  />
+			<activity id="23" desc="跨服国战宝箱" callBack="kfGuoZhanBox" definition="gameUI.btn.kfWarBox"  />
+			<activity id="24" desc="灵石促销" callBack="spritPromotion" definition="gameUI.btn.spritPromotion" />
+			<activity id="25" desc="宝石通商" callBack="gemTarde" definition="gameUI.btn.GemTrade"  />
+			<activity id="26" desc="宝石榜" callBack="gemList" definition="gameUI.btn.gemList" />
+			<activity id="27" desc="争霸赛" callBack="zhengBaSai" definition="gameUI.btn.zbBtn" />
+			<activity id="28" desc="国战奖励" callBack="guoZhanReward" definition="gameUI.btn.warBox" />
+			<activity id="29" desc="中秋活动" callBack="middleMoon" definition="gameUI.btn.middleMoon" />
+			<activity id="30" desc="吃月饼大赛" callBack="eatMooncake" definition="gameUI.btn.EatMooncake" />
+			<activity id="31" desc="升级奖励" callBack="levelUpReward" definition="gameUI.btn.uplvBtn" />
+			<activity id="32" desc="战车耐久度" callBack="naijiu" definition="gameUI.btn.repairTank" />
+			<activity id="33" desc="灵石排行榜" callBack="lingRank" definition="gameUI.btn.LingRank" />
+			<activity id="34" desc="矿锄促销" callBack="mineHoePromo" definition="gameUI.btn.mineHoePromo" />
+			<activity id="35" desc="今日运势" callBack="luckToday" definition="gameUI.btn.luckToday" />
+			<activity id="36" desc="赛马活动" callBack="horseActivity" definition="gameUI.btn.horseActivity" />
+			<activity id="37" desc="元旦活动" callBack="newYears" definition="gameUI.btn.newYearDay" />
+			<activity id="38" desc="跨服国战排行奖励" callBack="kfReward" definition="gameUI.btn.kfReward" />
+			<activity id="39" desc="银币促销" callBack="silverActivity" definition="gameUI.btn.sliverBtn" />
+			<activity id="40" desc="春节活动" callBack="springFest" definition="gameUI.btn.SpringFest" />
+			<activity id="41" desc="春节吃饺子" callBack="springDumpling" definition="gameUI.btn.Dumpling" />
+			<activity id="42" desc="奥特曼打年糕兽" callBack="monster" definition="gameUI.btn.YearBeast" />
+			<activity id="43" desc="经验副本半价活动" callBack="expInstanceHalf" definition="gameUI.btn.expInstanceHalfDay" />
+			<activity id="44" desc="点击登录奖励" callBack="clickDailyReward" definition="gmeUI.btn.dailyReward" />
+			<activity id="45" desc="点券宝箱" callBack="clickLuckBox" definition="gameUI.btn.luckBox" />
+			<activity id="46" desc="点券商城路口" callBack="clickVoucherEnter" definition="gameUI.btn.voucher" />
+			<activity id="47" desc="五一活动" callBack="clickMayFest" definition="gameUI.btn.MayDay" />
+			<activity id="48" desc="端午活动" callBack="clickDuanwu" definition="gameUI.btn.Wudushou" />
+			<activity id="49" desc="修炼完成" callBack="clickSkillDone" definition="gameUI.btn.SkillDone" />
+			<activity id="50" desc="精英武斗" callBack="kongfu" definition="gameUI.btn.Jywd" />
+
+
+			<activity id="101" desc="势力任务提示" callBack="powerTask" definition="gameUI.btn.powerTip" />
+			<activity id="102" desc="烹饪提示" callBack="cookTip" definition="gameUI.btn.cookTip" />
+			<activity id="103" desc="贸易提示" callBack="tradeTip" definition="gameUI.btn.tradeTip" />
+			<activity id="104" desc="马场提示" callBack="fightTip" definition="gameUI.btn.horseTip" />
+			<activity id="105" desc="战斗提示" callBack="newFightTip" definition="gameUI.btn.fightTip" />
+			<activity id="106" desc="酒肆提示" callBack="restNotice" definition="gameUI.btn.RestNotice" />
+			<activity id="107" desc="洗炼技能提示" callBack="recoinTip" definition="gameUI.btn.recionTip" />
+		</activityConfig>
+	</container>
+
+	<!-- 副将信息 -->
+<!--	<container name="deputyInfo" properties='{"x":5,"y":180}'>
+		<list name="deputyList" properties='{"x":0, "y":0, "columnCount":1, "rowCount":2, "horizontalGap":0, "verticalGap":0}' />
+	</container>
+-->	<!-- 金币补充体力-->
+	
+		<addPowerPanel properties='{"styleName":"panel2", "bgWidth":275, "bgHeight":220, "titleID":"030081"}'>
+			<displayObject properties='{"x":14, "y":32, "width":248, "height":174}' definition='gameUI.icon.Layer' />
+			<label properties='{"x":35, "y":45, "color":"0xFFFECB", "stroke":"0x302010", "textID":"030082", "size":13, "bold":true}' />
+			<itemGroup name="stateGroup" />
+			<radioButton group="stateGroup" name="state3RB" properties='{"x":35, "y":70, "styleName":"radioButton1", "data":3}' />
+			<radioButton group="stateGroup" name="state2RB" properties='{"x":35, "y":90, "styleName":"radioButton1", "data":2}' />
+			<radioButton group="stateGroup" name="state1RB" properties='{"x":35, "y":110, "styleName":"radioButton1", "data":1}' />
+			<radioButton group="stateGroup" name="state0RB" properties='{"x":35, "y":130, "styleName":"radioButton1", "data":0}' />
+			<button name="addPowerBtn" properties='{"x":283, "y":192, "styleName":"button3", "labelID":"030088", "width":70, "visible":false}' />
+			<label name="goldCostText" properties='{"x":173, "y":171, "color":"0xFFCC00", "stroke":"0x302010"}'/>
+			<displayObject name="goldIcon" definition="gameUI.icon.Gold" properties='{"x":197, "y":175}' />
+		</addPowerPanel>
+	<!-- 玩家buff信息 -->
+	<container name="buff" properties='{"x":140, "y":121, "tipsProp":{"labelProp":{"y":50, "color":"0xffffff"}, "stroke":"0x302010"}, "listIntX":10, "py":143 }'>
+		<!-- 金币补充体力-->
+		<container  name="addPower" properties='{"styleName":"panel2", "initX":369, "initY":48, "bgWidth":245, "bgHeight":290
+			, "titleID":"030070"
+		}'>
+			<displayObject properties='{"x":14, "y":32, "width":218, "height":244}' definition='gameUI.icon.Layer' />
+			<label properties='{"x":35, "y":45, "color":"0xFFFECB", "stroke":"0x302010", "textID":"030071", "size":13, "bold":true}' />
+			<label name="tipText" properties='{"x":35, "y":70, "color":"0xFFFECB", "stroke":"0x302010", "size":13}' />
+
+			<button name="addPowerBtn" properties='{"x":80, "y":170, "styleName":"button3", "labelID":"030073", "width":70}' />
+			<button name="cancelBtn" properties='{"x":80, "y":200, "styleName":"button5", "labelID":"030074", "width":70}' />
+			<label name="goldCostText" properties='{"x":156, "y":176, "color":"0xFFCC00", "stroke":"0x302010"}'/>
+
+			<label properties='{"x":35, "y":240, "color":"0xCACC67", "stroke":"0x302010", "textID":"030076"}' />
+		</container>
+		<container name="buyDoubleExp" properties='{"x":10, "y":14}'>
+			<imageLoader name="buffIL" properties='{"pathFormatName":"buff24", "x":0, "y":0}' />
+			<displayObject name="gold" definition="gameUI.icon.Gold"  properties='{"x":32, "y":60}'/>
+			<displayObject name="effect" definition="gameUI.effect.Cincture"  properties='{"x":-1, "y":-1, "mouseEnabled":false,"width":53,"height":53 }'/>
+			<label name="cost" properties='{"x":-10, "y":52, "color":"0xFFFFCC", "stroke":"0x302010","size":20, "autoSize":"none", "align":"right", "width":40, "height":30}'/>
+			<!--购买双倍经验界面-->
+			<container name="expDoublePanel" properties='{"x":0, "y":0}'>
+				<modalBG properties='{"alpha":0.1}' />
+				<displayObject name="backGround" definition="skin.Alert$bg2"  properties='{}'/>
+				<button name="sureBtn" properties='{"x":46, "y":186, "styleName":"button7", "labelID":"010908", "width":100, "height":40}' />
+				<button name="cancelBtn" properties='{"x":236, "y":186, "styleName":"button7", "labelID":"010909", "width":100, "height":40}' />
+				<label name="info" properties='{"x":10, "y":25,"size":20, "color":"0xFFFFCC", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":400, "height":30}'/>
+				<list name="list" properties='{"x":85, "y":72, "columnCount":2, "rowCount":1, "horizontalGap":55, "verticalGap":0}' />
+			</container>
+		</container>
+		<container name="autoEatFood" properties='{"x":0, "y":14}'>
+		<!-- <imageLoader name="buffIL" properties='{"pathFormatName":"buff24", "x":0, "y":0}' /> -->
+			<displayObject properties='{"x":0, "y":0, "width":70, "height":70}' definition='gameUI.bg.BlackBG2' />
+			<label properties='{"x":0, "y":8, "color":"0xCACC67", "stroke":"0x302010", "textID":"760017", "width":70, "autoSize":"none", "align":"center", "multiline":true}' />
+			<button name="openBtn" properties='{"x":0, "y":74, "styleName":"button7", "labelID":"760015", "width":70}' />
+			<button name="closeBtn" properties='{"x":0, "y":74, "styleName":"button7", "labelID":"760016", "width":70}' />
+		</container>
+		<list name="buffList" properties='{"x":10, "y":14, "columnCount":20, "rowCount":1, "horizontalGap":4, "verticalGap":0}' />
+		<!--【背包中药品】2.12版 -->
+		<container name="dragBagPanel" properties='{"x":10, "y":200, "gap":10}'> 
+			<displayObject name="bg" properties='{"x":0, "y":0}' definition='gameUI.buff.Bg' />
+			<list name="list" properties='{"x":8, "y":13, "columnCount":2, "rowCount":1, "horizontalGap":5, "verticalGap":5}' />
+			<label name="noneText" properties='{"x":4, "y":50, "color":"0xCACC67", "stroke":"0x302010", "textID":"020901", "width":200, "height":45, "size":20, "autoSize":"none", "align":"center", "multiline":true,"mouseEnabled":false}' />
+		</container>
+
+		<buffItemRenderer  properties='{"itemWidth":54}'>
+			<imageLoader name="buffIL" properties='{"pathFormatName":"buff24", "x":0, "y":0}' />
+			<displayObject name="tips" properties='{"x":0, "y":40, "mouseEnabled":false}' definition='gameUI.buff.tips' />
+			<button name="addPowerBtn" properties='{"x":0, "y":38, "styleName":"button7", "labelID":"030029", "width":34}' />
+		</buffItemRenderer>
+	</container>
+
+	<!-- 防沉迷 -->
+	<container name="fatigue" properties='{"x":150, "y":307, "tipTextWidth":265}'>
+		<linkText name="tipText" properties='{"style":{"overStyle":{"underline":true}}, "color":"0xFF0000", "mouseWheelEnabled":false, "size":20, "width":265, "multiline":true}'/>
+	</container>
+	<!-- 快捷吃药 物品栏 -->
+	<!--<container name="drugBar" properties='{"x":608,"y":550}'>
+		<list name="drugList" properties='{"x":0, "y":0, "columnCount":2, "rowCount":1, "horizontalGap":0, "verticalGap":0}' />
+		<drugItemRenderer  properties='{"itemWidth":84, "itemHeight":84, "mouseChildren":false, "doubleClickEnabled":true}'>
+			<displayObject definition="gameUI.view.DrugItem" properties='{"x":0, "y":0}' />
+			<imageLoader name="drugIL" properties='{"pathFormatName":"pharmacyProduct32", "x":7, "y":7, "width":70, "height":70}' />
+			<label name="numText"  properties='{"size":16, "autoSize":"none", "align":"right", "width":70, "height":24, "x":7,"y":50, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+			<label name="indexText"  properties='{"size":16, "autoSize":"none", "align":"right", "width":70, "height":24, "x":7,"y":10, "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+		</drugItemRenderer>
+	</container>-->
+	<!--酒肆、返金之类的购买新闻（滚动）-->
+		<NewsView  properties='{"movieArgs":{"y":-16, "duration":0.5, "delay":1.8}}'>
+			<label name="contentText" properties='{"width":395, "multiline":true, "align":"center", "color":"0xA59353", "stroke":"0x302010", "leading":4}' />
+			<label name="contentText2" properties='{"width":395, "multiline":true, "align":"center", "color":"0xA59353", "stroke":"0x302010", "leading":4}' />
+			<mask target="contentText" properties='{"width":395, "height":32}' />
+			<mask target="contentText2" properties='{"width":395, "height":32}' />
+		</NewsView>
+
+	<!--消息滚动提示面板-->
+	<container name="msgPanel" properties='{"x":150, "y":280, "maxMsgCount":2, "delayShow":1, "moveDuration":0.3, "mouseEnabled":false, "verticalGap":3, "itemStartY":120, "mouseChildren":false}'/>
+	<!--单条消息-->
+	<msgItem>
+		<displayObject definition='gameUI.view.MessageBg' properties='{"x":-80,"alpha":0.5, "mouseEnabled":false}'/>
+		<alertText name="contentText" properties='{"width":340, "height":30, "x":0, "y":25, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010", "duration":5, "mouseEnabled":false,"textType":"htmlText"}' />
+	</msgItem>
+	<!--广播消息面板 -->
+	<container name="broadcastPanel" properties='{"x":93, "y":300, "mouseEnabled":false, "mouseChildren":false
+			, "maxPoolMsgNumber":100, "maxShowMsgNumber":2, "itemGapY":50, "jumpCyc":0.8, "jumpDuration":0.3, "alphaDuration":5, "alphaMinDuration":0.3}'>
+	</container>
+	<!--单条广播消息-->
+	<broadcastItem>
+		<displayObject name="bg" definition='gameUI.view.MessageBg' properties='{"alpha":0.5, "width":454, "height":27, "mouseEnabled":false}'/>
+		<label name="contentText" properties='{"x":-77, "y":6,"width":620,"height":50, "autoSize":"center", "bold":true,"size":20,"multiline":true ,"color":"0xFFFFFF", "stroke":"0x302010", "mouseEnabled":false}' />
+	</broadcastItem>
+	<!-- 提示信息容器 -->
+	<container name="tipsPanel" properties='{
+			"y0":390, "detaY":-30, "yDuration":3, "alphaDuration":0.5, "tipsGapY":5, "mouseChildren":false,"mouseEnabled":false,
+			"contentProp":{
+				"width":640, "height":30, "multiColor":"gameUI.color.Tips1", "stroke":"0x000000", "mouseEnabled":false, "mouseChildren":false,
+				"labelProp":{"autoSize":"none", "align":"center", "font":"黑体", "size":26, "autoTooltip":false, "bold":true}
+			}}'>
+	</container>
+
+	<!-- 升级提示信息容器 -->
+	<container name="upgradeTip" properties='{"y0":240, "alphaDuration":2.5, "mouseChildren":false,"mouseEnabled":false}'>
+		<displayObject name="bg" definition='gameUI.view.upgradeTipBg' properties='{"x":85,"y":380, "width":454, "height":90, "mouseEnabled":false,"visible":false}'/>
+		<mcLabel name="label" properties='{"width":640, "height":90, "multiColor":"gameUI.color.Tips6", "stroke":"0x000000", "mouseEnabled":false, "mouseChildren":false,
+		"labelProp":{"autoSize":"none", "align":"center", "font":"黑体", "size":50, "autoTooltip":false, "bold":true}}'/>
+	</container>
+
+
+	<!--任务列表界面-->
+ <container name="taskTraced" properties='{"x":0,"y":380, "styleName":"panel3","bgWidth":340,"bgHeight":500,"padingHeight":10, "noticeTime":5, "noticeCount":3, "flickerColor":"0x64893A", "movieArgs":{
+		"duration":0.3, "openX":0, "closeX":0,
+		"btnMovieDuration":0.1, "btnOpenRotation":180, "btnCloseRotation":0
+		}}' > 
+	<!--	<displayObject name="background" definition="gameUI.icon.BlackBG" properties='{"width":500}' /> -->
+	<!--	<displayObject definition="gameUI.taskTraced.TitleBG" properties='{"x":0, "y":-30, "width":500,"height":30 }' /> -->
+		<list name="taskList" properties='{"x":20, "y":70, "rowCount":999, "columnCount":1, "verticalGap":1, "defaultSelected":false}' />
+		<label name="title1Text" properties='{"x":20, "y":10,"size":20, "color":"0xFFFFFF", "stroke":"0x302010","text":"title" }' />
+<!--		<label name="title2Text" properties='{"x":160, "y":12, "width":25, "height":150, "autoSize":"none", "multiline":true, "color":"0xFFFFFF", "stroke":"0x302010", "visible":false, "textID":"590115"}' /> 
+	<displayObject name="openAndCloseBtn" definition="gameUI.taskTraced.OpenAndCloseBtn" properties='{"x":160, "y":-9,"rotation":180}' /> 
+-->		<displayObject name="rewardBtn" definition="gameUI.taskTraced.RewardBtn" properties='{"x":110, "y":380,"width":120,"height":48,"visible":false}' />
+<!--取消按钮 -->
+<!--		<BXButton properties='{"x":50,"y":500,"width":120,"height":48,"label":"取消","styleName":"button12"}'/> -->
+		<linkText name="rewardText" properties='{"x":30,"y":435, "size":20,"width":280,"align":"center", "multiline":true, "visible":false, "style":{"overStyle":{"underline":true}}, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+	 </container>
+
+	<!--角色外形加载时，显示的loading-->
+	<avatarLoading properties='{"mouseEnabled":false}'>
+		<displayObject definition="gameUI.avatar.Sketch" />
+		<label name="progressText" properties='{"width":50, "height":16, "x":-25, "y":-10, "autoSize":"none", "align":"center", "color":"0xCCCCCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+	</avatarLoading>
+	<!--官职奖励-->
+	<container name="officeRewards" properties='{"x":210, "y":350, "height0":100, "y0":60, "detaY":25}' >
+		<displayObject name="bg" definition="gameUI.bg.TipsGB" properties='{}' />
+		<label name="rankText" properties='{"x":0, "y":37, "color":"0xF8C828", "stroke":"0x302010", "size":14, "bold":true, "width":224, "autoSize":"none", "align":"center"}'/>
+		<label name="rewardsText" properties='{"x":0, "y":60, "color":"0xFDFFCB", "stroke":"0x302010", "width":160, "multiline":true, "width":224, "autoSize":"none", "align":"center"}'/>
+		<button name="getBtn" properties='{"x":90, "y":100, "styleName":"button5", "labelID":"030043"}' />
+	</container>
+	<!--国战公告-->
+	<container name="warNotice" properties='{"x":30, "y":305}' >
+		<displayObject definition="gameUI.view.WarNoticeBg" properties='{}' />
+		<displayObject name="enjoin" definition="gameUI.icon.Enjoin" properties='{"x":108, "y":28, "visible":false}' />
+		<displayObject name="canJoin" definition="gameUI.icon.CanJoin" properties='{"x":152, "y":28, "visible":false}' />
+		<label properties='{"x":58,"y":63,"textID":"030202","align":"left","stroke":"0x302010","width":140,"height":24,"autoSize":"none","size":20,"color":"0xffffcc"}'/>
+		<label properties='{"stroke":"0x302010","x":70,"y":90,"textID":"030203","align":"left","multiline":true,"height":147,"autoSize":"none","color":"0xffffcc","width":337}'/>
+		<label properties='{"size":18,"x":418,"y":73,"textID":"030204","align":"center","stroke":"0x302010","visible":false,"height":22,"autoSize":"none","color":"0xCBCC66","width":78}'/>
+		<label properties='{"x":361,"y":214,"textID":"030219","align":"center","stroke":"0x302010","width":187,"height":30,"autoSize":"none","size":18,"color":"0xCBCC66"}'/>
+		<label properties='{"x":168,"y":186,"textID":"030213","align":"center","stroke":"0x302010","size":18,"bold":true,"height":25,"autoSize":"none","color":"0xFF3300","width":216}'/>
+		<button name="okBtn" properties='{"x":225, "y":210, "width":90, "styleName":"button3", "labelID":"030206"}' />
+		<button name="closeBtn" properties='{"skin":"skin.CloseBtn","x":525,"y":6}' />
+	</container>
+
+	<!--跨服国战公告-->
+	<container name="kfWarNotice" properties='{"x":30, "y":305}' >
+		<displayObject definition="gameUI.view.WarNoticeBg" properties='{}' />
+		<displayObject name="enjoin" definition="gameUI.icon.EnjoinKf" properties='{"x":108, "y":28, "visible":false}' />
+		<displayObject name="canJoin" definition="gameUI.icon.CanJoinKf" properties='{"x":152, "y":28, "visible":false}' />
+		<label properties='{"x":65, "y":95, "width":140, "height":20, "color":"0xffffcc", "stroke":"0x302010", "size":12, "autoSize":"none", "align":"left", "textID":"030214"}'/>
+		<label properties='{"x":70, "y":115, "width":380, "height":110, "color":"0xffffcc", "stroke":"0x302010", "multiline":true, "autoSize":"none", "align":"left", "textID":"030215"}'/>
+		<label properties='{"x":418, "y":83, "width":78, "height":20, "color":"0xCBCC66", "stroke":"0x302010", "size":12, "autoSize":"none", "align":"center", "textID":"030204", "visible":false}'/>
+		<label properties='{"x":392, "y":180, "width":134, "height":20, "color":"0xCBCC66", "stroke":"0x302010", "size":12, "autoSize":"none", "align":"center", "textID":"030205"}'/>
+		<label name="tipsText" properties='{"x":60, "y":70, "width":450, "height":25, "color":"0xffff32", "stroke":"0x302010", "size":18, "autoSize":"none", "align":"center"}'/>
+		<button name="okBtn" properties='{"x":250, "y":210, "width":80, "styleName":"button3", "labelID":"030206", "visible":false}' />
+		<button name="joinBtn" properties='{"x":250, "y":210, "width":80, "styleName":"button3", "labelID":"030218", "visible":false}' />
+		<button name="closeBtn" properties='{"x":525, "y":20, "skin":"skin.CloseBtn"}' />
+	</container>
+
+	<!-- 获取首次充值奖励 ,已修改：11.10by 何明 -->
+	<container name="getFirstPayReward" properties='{"x":100,"y":240}'>
+		<displayObject definition="gameUI.view.PTView" properties='{"width":450,"height":400}' />
+
+		<label  properties='{"textID":"030807","x":24, "y":50, "width":400, "height":40, "color":"0xffffcc", "stroke":"0x302010", "size":24, "autoSize":"none", "align":"center"}'/>
+		<label name="goldText" properties='{"x":25, "y":136, "width":400, "height":300,"bold":"true", "color":"0xFFCC00", "stroke":"0x302010", "size":24, "autoSize":"none", "align":"center"}'/>
+
+		<button name="getRewardBtn" properties='{"x":135, "y":320, "width":180, "styleName":"button5", "labelID":"030802"}' />
+	</container>
+	<!-- 每日登录奖励,已修改：11.10by 何明 -->
+	<container name="dailyAward" properties='{"x":100,"y":200}'>
+		<displayObject definition="gameUI.view.PTView" properties='{"width":450,"height":500}' />
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":12,"y":30,"width":426,"height":456}' />
+		<displayObject definition="gameUI.daily.title" properties='{"x":143,"y":50}' />
+<displayObject definition="gameUI.icon.Line" properties='{"width":420,"height":3,"x":20,"y":110}'/>
+		<label  properties='{"textID":"030712","size":24,"x":40, "y":125, "width":200, "height":40, "bold":true, "autoSize":"none","align":"left", "color":"0xE5EF99", "stroke":"0x302010" , "mouseEnabled":false}'/>
+
+		<!-- <sprite name="baseGoldText" properties='{"x":70, "y":121, "classPath":"gameUI.icon.StarNumber", "align":"center"}' />	 -->
+		<!-- <label  name="baseGoldTitleText" properties='{"textID":"030709","size":15,"x":100, "y":130, "width":35, "height":20,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xE5EF99", "stroke":"0x302010" , "mouseEnabled":false}'/> -->
+
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":70,"y":174}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":70,"y":270}' />
+		<sprite name="baseGoodsIcon" properties='{"x":77, "y":181}' />
+		<imageLoader properties='{"pathFormatName":"goodsPic32","fileName":"3", "x":77, "y":277, "width":70, "height":70}' />
+		<!-- <label  name="baseGoodsNumText" properties='{"size":15,"x":230, "y":130, "width":35, "height":20,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xE5EF99", "stroke":"0x302010" , "mouseEnabled":false}'/> -->
+
+
+		<label  name="todayRPText" properties='{"x":7, "y":370,"size":24,"bold":true, "width":390, "height":40,  "autoSize":"none", "textType":"htmlText", "align":"center", "color":"0xE5EF99", "stroke":"0x302010" , "mouseEnabled":false}'/>
+
+		<sprite name="goldNumberRoll" properties='{"x":160,"y":295,"classPath":"gameUI.icon.goldNumber","playGapTimeArr":[0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.5,1,2,3],"initX":0,"initY":0}'/>
+		<sprite name="recipeNumberRoll" properties='{"x":160,"y":200,"classPath":"gameUI.daily.recipeNumber","playGapTimeArr":[0.3,0.3,0.5,1],"initX":0,"initY":0}'/>
+		<displayObject definition="gameUI.icon.Line" properties='{"width":420,"height":3,"x":20,"y":415}'/>
+
+		<button name="getRewardBtn" properties='{"x":155, "y":435, "width":120, "styleName":"button5", "labelID":"030714"}' />
+	</container>
+
+		<!--势力排行赛时被挑战面板-->
+	<container  name="beChallengeView" properties='{"x":188, "y":360}'>
+		<displayObject properties='{"y":0,"x":1}' definition='gameUI.bg.TipsGB' />
+		<displayObject properties='{"y":-8,"x":19}' definition='gameUI.title.Challenge' />
+		<label name="enemyNameText" properties='{"mouseEnabled":false,"stroke":"0x302010","autoSize":"none","x":56,"align":"center","y":54,"color":"0xffffff","width":224,"height":42}'/>
+		<button name="seeBtn" properties='{"visible":false,"x":55,"labelID":670010,"y":100,"width":70,"styleName":"button6","height":35}' />
+		<button name="attackBtn" properties='{"x":150,"labelID":770001,"y":100,"width":70,"styleName":"button5","height":35}' />
+		<button name="sureBtn" properties='{"x":245,"labelID":110221,"y":100,"width":70,"styleName":"button6","height":35}' />
+	</container>
+
+	<!---势力排行赛 奖励-->
+	<container  name="rankRewardView" properties='{"x":178, "y":244}'>
+		<displayObject properties='{"x":0, "y":0,"width":320, "height":200}' definition='gameUI.view.PTView' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":32, "y":100}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":190, "y":100}' />
+		<imageLoader name="silverIcon"  properties='{"y":107,"pathFormatName":"goodsPic32","x":39}' />
+		<imageLoader name="gemIcon"  properties='{"y":107,"pathFormatName":"gemstone32","x":197}' />
+		<label name="silverText" properties='{"x":75, "y":110,"width":90, "color":"0x9AD15C",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<label name="gemText" properties='{"x":235, "y":110, "width":90, "color":"0x9AD15C",  "stroke":"0x151515", "mouseEnabled":false}' />
+
+		<label name="titleText" properties='{"bold":true,"x":160,  "y":6, "size":16,"height":24, "autoSize":"center", "color":"0xDEBB46", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="rankText" properties='{"bold":true, "x":35,  "y":45, "size":16,"height":24, "autoSize":"left", "color":"0x9AD15C", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label properties='{"x":35,"align":"left","y":71,"width":165,"height":24,"mouseEnabled":false,"color":"0x9AD15C","autoSize":"none","size":16,"textID":770005,"stroke":"0x302010","bold":true}' />
+
+		<button name="gainBtn" properties='{"x":113,"labelID":770009,"y":149,"width":80,"styleName":"button5","height":35}' />
+	</container>
+
+	<!--图纸掉落-->
+	<container name="gainDrawingView" properties='{"x":220, "y":350}'>
+		<displayObject definition="gameUI.bg.TipsGB" properties='{"width":220, "height":190}' />
+		<label name="newText" properties='{"x":0, "y":50, "width":220,  "height":30, "size":14, "autoSize":"none",  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":90 , "y":80}'/>
+		<imageLoader name="icon" properties='{"pathFormatName":"machine32",  "x":94, "y":84, "mouseChildren":false, "mouseEnabled":true}' />
+		<label name="lvText" properties='{"x":0, "y":120, "width":220,  "height":20, "size":12, "autoSize":"none",  "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<button name="wellBtn" properties='{"x":70, "y":150, "width":80, "styleName":"button3", "labelID":"610108"}' />
+
+	</container>
+
+	<!-- 回归奖励 -->
+	<container name="backPlayReward" properties='{"x":85,"y":200}'>
+		<displayObject definition="gameUI.view.PTView" properties='{"width":450,"height":500}' /> 
+<displayObject definition="gameUI.icon.Grid1" properties='{"width":84,"height":84,"x":93,"y":153}'/>
+<displayObject definition="gameUI.icon.Grid1" properties='{"width":84,"height":84,"x":93,"y":253}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":4,"x":25,"y":128}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":4,"x":25,"y":371}'/>
+<!-- 	<displayObject definition="gameUI.backReward.Bg" properties='{"x":12,"y":33}' />  
+		<imageLoader properties='{"fileName":"npc9","pathFormatName":"activityPng","x":25,"y":122}'/>
+		<displayObject definition="gameUI.backReward.SpeakBlank" properties='{"x":33,"y":43,"width":224,"height":100}' /> 
+		<label properties='{"textID":"030762", "size":12, "width":200, "height":70, "x":54,"y":50, "color":"0xFFFFCC", "stroke": "0x2D261E","multiline":true, "leading":2}'/>
+-->
+<!-- 需替换为艺术字 -->
+<label properties='{"text":"回归奖励", "size":48, "width":400, "height":100, "align":"center","x":25,"y":50, "color":"0xFFFFCC", "stroke": "0x2D261E","multiline":true, "leading":2}'/>
+		<imageLoader name="gemPic" properties='{"width":70,"height":70,"fileName":"1", "pathFormatName":"gemstone32",  "x":100, "y":160}' />
+		<imageLoader name="tenPic" properties='{"fileName":"exp1000", "pathFormatName":"farmProduct32",  "x":100, "y":260}' />
+		<sprite name="gem" properties='{"x":200, "y":168, "classPath":"gameUI.art.BackRewardNum", "align":"left"}'/>
+		<sprite name="artTen" properties='{"x":200, "y":268, "classPath":"gameUI.art.BackRewardNum", "align":"left"}'/>
+
+		<button name="lqBtn" properties='{"x":180, "y":400, "width":120,"height":48,"styleName":"button13", "artName":"gameUI.word.Lingqu"}' />
+	</container>
+
+	<!--鸿运宝箱界面 -->
+	<container name="luckBox" properties='{"initX":190, "initY":290, "bgWidth":240, "bgHeight":315}'>
+		<displayObject definition='gameUI2.view.luckBoxBG'  properties='{"x":18, "y":39}' />
+		<label name="numText" properties='{"x":150, "y":145, "width":100, "height":20, "autoSize":"none", "color":"0xFFFFFF", "stroke":"0x302010","border":false,"mouseEnabled":false}' /><!--数量-->
+		<!-- <label name="cdText" properties='{"x":18, "y":250, "width":204, "height":20, "autoSize":"none","align":"center", "color":"0x99FF00", "stroke":"0x302010","border":false}' />--><!--倒计时-->
+		<label name="tipText" properties='{"x":31, "y":263, "width":176, "height":20, "autoSize":"none","align":"center", "color":"0x7e8f3c", "stroke":"0x302010","border":false,"mouseEnabled":false}' />
+		<checkBox name="checkBox" properties='{"x":75, "y":180, "width":120, "styleName":"checkBox1","labelID":"850009"}' />
+		<displayObject name="openBtn" definition="gameUI2.Btn.OpenBtn" properties='{"x":65, "y":210}' />
+		<sprite name="rewardTips" properties='{"x":60, "y":130}' />
+	</container>
+
+<!-- 加体力按钮 -->
+	<!--<displayObject name="addPowerBtn"  definition="gameUI.btn.energyBtn2" properties='{"x":170, "y":50}' />-->
+
+	<!-- 副将呈视器 -->
+	<deputyItemRenderer properties='{"itemWidth":100}'>
+		<displayObject definition="gameui.view.deputyBg"  properties='{"x":0 , "y":0}'/>
+		<displayObject name="generalType" definition="gameUI.icon.generalTypeSmall"  properties='{"x":-14 , "y":31,"visible":false}'/>
+		<displayObject name="imgMask" definition="gameui.view.deputyImgMask" properties='{"x":21, "y":8}' />
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalPic40","fileName":"chuibing" , "x":19, "y":9, "width":40, "height":40}' />
+		<displayObject name="hpbar" definition="gameUI.view.DeputyHpBar"  properties='{"x":0 , "y":0,"visible":true}'/>
+		<displayObject name="expbar" definition="gameUI.view.DeputyExpBar"  properties='{"x":0 , "y":0,"visible":true}'/>
+		<label name="nameText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":70, "height":23, "x":50,"y":4, "color":"0xFFFFFF", "stroke": "0x2D261E","visible":false}'/>
+		<label name="levelText"  properties='{"size":12, "autoSize":"none", "align":"center", "width":38, "height":16, "x":50,"y":15, "color":"0xFFFFCC", "stroke": "0x2D261E","border":false}'/>
+	</deputyItemRenderer>
+	
+	<!--任务子项-->
+	<taskItemRenderer properties='{"labelProp":{"width":240, "stroke":"0x302010", "underline":true}, "labelArgs":{"color1":"0xFFFFFF", "color2":"0xCCCCCC", "lineHeight":30}, "bgPadingHeight":5, "lineOffsetY":5}'>
+		<displayObject name="bg" definition="gameUI.icon.BlackBG" properties='{"width":300,"height":100 }' />
+		<label name="typeText" properties='{"x":10,"y":5, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<label name="nameText" properties='{"x":60, "width":250, "y":5, "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<displayObject name="deleteBtn" definition='gameUI.taskTraced.DeleteBtn' properties='{"x":275, "y":5, "visible":false}' />
+		<sprite name="labelC" properties='{"x":60, "y":35}' />
+		<label name="timeText" properties='{"width":150, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<displayObject name="updateMovie" definition='gameUI.taskTraced.UpdateMovie' />
+		<displayObject name="lineIcon" definition='gameUI.icon.Line' properties='{"x":5, "y":0, "width":290}' /> 
+	</taskItemRenderer>
+	<!--数目输入框-->
+	<enterNumPanel properties='{"background":"skin.Panel2$bg", "initX":375 , "initY":200,  "bgWidth":250, "bgHeight":180, "closeBtnPorp":{"y":8}, "titlePorp":{"y":8}}'>
+		<modalBG/>
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":128 , "y":89, "width":60}'/>
+		<label name="nameText" properties='{"x":40, "y":45, "width":185, "height":18, "size":14, "bold":true,  "autoSize":"none", "textType":"text", "align":"left", "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<label properties='{"x":40, "y":68, "width":66, "height":16,  "autoSize":"none", "textType":"text", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false, "textID":"411101"}'/>
+		<label properties='{"x":40, "y":89, "width":66, "height":16,  "autoSize":"none", "textType":"text", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false, "textID":"411102"}'/>
+		<label name="currentCountText" properties='{"x":108, "y":68, "width":94, "height":18, "size":12,  "autoSize":"none", "textType":"text", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010" , "mouseEnabled":false}'/>
+		<inputText name="numberText" properties='{"x":130, "y":90, "width":65,  "height":20, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<buttonBasic name="reduceBtn" properties='{"x":110, "y":89, "width":17, "height":17,  "skin":"skin.page2.PrevBtn"}' />
+		<buttonBasic name="addBtn" properties='{"x":189, "y":89, "width":17, "height":17,"skin":"skin.page2.NextBtn"}' />
+		<button name="sureBtn" properties='{"x":40, "y":130, "width":64, "styleName":"button3", "labelID":"411103"}' />
+		<button name="cancelBtn" properties='{"x":144, "y":130, "width":64, "styleName":"button3", "labelID":"411104"}' />
+	</enterNumPanel>
+
+	<!-- 功能开放介绍面板 -->
+	<functionOpenPanel properties='{"styleName":"panel2", "initX":330, "initY":120, "bgWidth":321, "bgHeight":344,
+		"hGap":10}'>
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":14, "y":31, "width":293, "height":298}'/>
+		<imageLoader name="picIL" properties='{"pathFormatName":"functionOpenIntroPic", "x":20, "y":75}' />
+		<label name="functionName" properties='{"x":20, "y":45,"size":20, "width":278,"height":30,"align":"center","border":false,"autoSize":"none", "bold":true, "color":"0xFFFF00", "stroke":"0x302010"}'/>
+
+		<label name="functionIntro" properties='{"x":20, "y":90, "size":12,"width":278,  "multiline":true,"align":"left", "border":false, "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<button name="okButton" properties='{"x":128, "y":285, "styleName":"button3", "labelID":"620001","autoSize":false,"width":65}' />
+	</functionOpenPanel>
+
+	<!--战斗次数提示【竞技场，蛮族，积分赛】(3.0版) -->
+	<container name="aboutFightAlerts" properties='{"initX":150, "initY":140, "bgWidth":321, "bgHeight":464, "titleID":"700016","style":{"background":"gameUI.view.AboutFightBg", "labelPorp":{"y":7},"closeBtnPorp":{"x":-15,"y":-15}}}'>
+		<list name="list" properties='{"x":0, "y":30, "columnCount":1, "rowCount":3, "horizontalGap":2, "verticalGap":2}'/>
+		<sprite name="sp"/>
+		<label parent="sp" name="setText" properties='{"textID":"700017","x":0, "y":435, "width":321,"autoSize":"none", "height":30, "size":20,"align":"center", "color":"0xCBCC66", "stroke":"0x302010","underline":true, "mouseEnabled":false}'/>
+	</container>
+
+
+	<!-- 消费提示面板 -->
+	<chargeAlert properties='{}'>
+		<modalBG name="modalBG"/>
+		<displayObject name="backGround" definition="skin.Alert$bg1"  properties='{}'/>
+		<dragArea properties='{"width":290, "height":25}' />
+		<label name="alertText" properties='{"y":54,"autoSize":"none","size":22,"x":88,"align":"left","color":"0xFFFFCC","multiline":true,"width":286,"height":90,"stroke":"0x302010"}'/>
+		<checkBox name="setAlertCB" properties='{"labelID":"030504","x":140,"y":145,"width":116,"styleName":"checkBox1","height":32,"selected":true}'/>
+
+		<button name="okButton" properties='{"labelID":"030502","x":51,"y":182,"width":100,"styleName":"button5","height":48}' />
+		<button name="cacelButton" properties='{"labelID":"030503","x":247,"y":182,"width":100,"styleName":"button5","height":48}' />
+	</chargeAlert>
+		<!-- 消费提示面板 -->
+	<chargeAlertRevert properties='{}'>
+		<modalBG name="modalBG"/>
+		<displayObject name="backGround" definition="skin.Alert$bg1"  properties='{}'/>
+		<dragArea properties='{"width":290, "height":25}' />
+		<label name="alertText" properties='{"x":57, "y":52,"size":12, "width":210, "height":60, "multiline":true,"align":"left","autoSize":"none", "color":"0xFFFFCC", "stroke":"0x302010"}'/>
+		<checkBox name="setAlertCB" properties='{"x":57, "y":116, "width":100, "styleName":"checkBox1", "labelID":"030504"}'/>
+
+		<button name="cacelButton" properties='{"x":168, "y":148, "styleName":"button5", "labelID":"030503","width":65}' />
+		<button name="okButton" properties='{"x":57, "y":148, "styleName":"button5", "labelID":"030502","width":65}' />
+	</chargeAlertRevert>
+	<!--副本文官面板-->
+	<container name="civilPanel" properties='{"x":220, "y":690}'>
+		<list name="list" properties='{"x":0, "y":0, "columnCount":2, "rowCount":1, "horizontalGap":2, "verticalGap":2,"isColumnSort":true}'/>
+	</container>
+
+
+		<!-- 物品装备等tip -->
+	<!-- 宝石的tip -->
+<gemstoneTip properties='{"initWidth":480, "initHeight":120, "labelGap":3}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":20,"y":12,"width":600,"height":28,"align":"left","color":"0xFFFFCC","autoSize":"none","size":24,"stroke":"0x302010","mouseEnabled":false,"bold":true}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":20, "y":42, "width":440}'/>
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":20, "y":263, "width":440}'/>
+		<label name="contentText" properties='{"mouseEnabled":false,"y":44,"autoSize":"left","size":20,"x":20,"color":"0xFFFFCC","multiline":true,"width":600,"stroke":"0x302010"}' />
+		<label name="introText" properties='{"mouseEnabled":false,"y":74,"autoSize":"left","size":20,"x":20,"color":"0xFFFFCC","multiline":true,"width":600,"stroke":"0x302010"}' />
+		<label name="priceText" properties='{"visible":false,"x":20,"textID":"010706","y":104,"width":110,"height":24,"align":"left","color":"0xCBCC66","autoSize":"none","size":20,"stroke":"0x302010","mouseEnabled":false}' />
+		<label name="priceValueText" properties='{"visible":false,"x":205,"y":104,"width":110,"height":24,"align":"right","color":"0xFFFFCC","autoSize":"none","size":20,"stroke":"0x302010","mouseEnabled":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320, "y":115, "visible":false}'/>
+</gemstoneTip>
+	<!-- 农产品的tip -->
+	<farmProductTip properties='{"initWidth":480, "initHeight":120, "labelGap":6}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":20, "y":12, "width":172, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":20, "y":42, "width":440}'/>
+		<label name="contentText" properties='{"x":20, "width":440, "y":45, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":20, "width":440, "y":75, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":20, "width":110, "height":24, "y":99, "size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24, "y":99, "size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320, "y":115, "visible":false}'/>
+	</farmProductTip>
+	<!-- 药方 菜谱等的tip -->
+	<farmComposeTip properties='{"initWidth":480, "initHeight":150, "labelGap":6}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":20, "y":12, "width":172, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="useLevelText" properties='{"x":20, "y":40, "width":440, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":20, "y":70, "width":440}'/>
+		<label name="introText" properties='{"x":20, "width":440, "y":63, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":20, "width":110, "height":24, "y":99, "size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24, "y":99, "size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320, "y":85, "visible":false}'/>
+	</farmComposeTip>
+	<!-- 技能tip -->
+<!--	？？-->
+	<skillTip properties='{"initWidth":190, "initHeight":110, "labelGap":10}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":12, "y":14, "width":160, "height":22, "size":14, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="levelText" properties='{"x":12, "y":36, "width":160,  "height":20, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":8, "y":60, "width":173}'/>
+		<label name="introText" properties='{"x":12, "y":68, "width":160, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="gainText" properties='{"x":12, "y":108, "width":160, "height":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</skillTip>
+	<!-- 装备碎片的tip -->
+	<equipChipItem properties='{"initWidth":480, "initHeight":5, "itemGap":8, "labelGap":5}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":20, "y":12, "width":172, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="needText" properties='{"x":20, "width":195, "height":24, "y":36, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="typeText" properties='{"x":20, "width":165, "height":24, "y":56, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":80, "width":440}'/>
+		<list name="attributeList" properties='{"x":0, "y":91, "rowCount":20, "columnCount":1, "horizontalGap":2, "verticalGap":2, "defaultSelected":false, "enabled":false}' />
+
+		<displayObject name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":110, "width":440}'/>
+		<label name="introText" properties='{"x":20, "width":440, "y":64, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":20, "width":110, "height":24, "y":135, "size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24, "y":135, "size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320, "y":135, "visible":false}'/>
+	</equipChipItem>
+	<!-- 坐骑的tip -->
+	<HorseTip properties='{"initHeight":150}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":150,"width":480}' />
+		<label name="nameText" properties='{"x":20, "y":12, "width":172, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":42, "width":440}'/>
+		<label name="fightAttText" properties='{"x":20, "y":45, "width":172, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="lastTimeText" properties='{"x":20, "y":75, "width":272, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":108, "width":440}'/>
+		<label name="introText" properties='{"x":20, "width":165, "y":100, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</HorseTip>
+
+	<!-- 宝物的tip -->
+	<TreasureTip properties='{"initWidth":480, "initHeight":160,"labelGap":8}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":160,"width":480}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":42, "width":440}'/>
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":115, "width":440}'/>
+		<displayObject  name="line3" definition='gameUI.icon.Line1' properties='{"x":20, "y":200, "width":440,"visible":false}'/>
+		<label name="nameText" properties='{"x":20, "y":12, "width":180, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="tongText" properties='{"x":20, "y":45, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="zhiText" properties='{"x":20, "y":65, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="yongText" properties='{"x":20, "y":85, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introTitleText" properties='{"x":20, "width":440, "y":125, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":20, "width":440, "y":150, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":20, "width":110, "height":24,"size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24,"size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320,  "visible":false}'/>
+	</TreasureTip>
+
+	<!-- 藏宝图 的tip -->
+	<TreasureMapTip properties='{"initWidth":480, "initHeight":160,"labelGap":8}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":160,"width":480}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":42, "width":440}'/>
+		<!-- <displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":5, "y":110, "width":180}'/> -->
+		<displayObject  name="line3" definition='gameUI.icon.Line1' properties='{"x":20, "y":200, "width":440,"visible":false}'/>
+		<label name="nameText" properties='{"x":20, "y":12, "width":180, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+
+		<!-- <label name="introTitleText" properties='{"x":12, "width":165, "y":120, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />	 -->
+		<label name="introText" properties='{"x":20, "width":440, "y":140, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":20, "width":110, "height":24,"size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24,"size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320,  "visible":false}'/>
+	</TreasureMapTip>
+	<!-- 装备的tip  -->
+	<equipTip properties='{ "vGap":3}'>
+		<sprite name="tipC"/>
+	</equipTip>
+	<!-- 礼包、宝箱等的tip -->
+<!--??-->
+	<GiftTip properties='{}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":160,"width":480}' />
+		<label name="nameText" properties='{"x":20, "y":12, "width":172, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":36, "width":440}'/>
+		<label name="introText" properties='{"x":20, "width":165, "y":44, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</GiftTip>
+
+	<!-- 装备的tip 单个装备 -->
+	<equipItem properties='{"initWidth":480, "initHeight":160, "itemGap":0, "labelGap":5}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":20, "y":20, "width":200, "height":28, "size":24, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="starMCBg" definition='gameUI.icon.StarBg' properties='{"x":290, "y":12}'/>
+		<sprite name="starNnm" properties='{"x":325, "y":23, "classPath":"gameUI.icon.StarNumber", "align":"center"}'/>
+		<displayObject name="fullIcon" definition='gameUI.icon.FullIcon' properties='{"x":298, "y":58, "visible":true}'/>
+		<displayObject name="equipedIcon" definition='gameUI.icon.Equiped' properties='{"x":433, "y":0}'/>
+		<label name="typeText" properties='{"x":20, "width":165, "height":24, "y":46, "size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="descText" properties='{"x":20, "width":165, "height":24, "y":68, "size":20,  "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":99, "width":440}'/>
+		<list name="attributeList" properties='{"x":10, "y":112, "rowCount":20, "columnCount":1, "horizontalGap":2, "verticalGap":2, "defaultSelected":false, "enabled":false}' />
+		<list name="holeList" properties='{"x":10, "y":86, "rowCount":20, "columnCount":1, "horizontalGap":4, "verticalGap":16, "defaultSelected":false, "enabled":false}' />
+		<label name="waterText" properties='{"x":212, "y":0, "width":165, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0x00CBFF", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="fireText" properties='{"x":212, "y":0, "width":165, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0xFF3300", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="earthText" properties='{"x":212, "y":0, "width":165, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":86, "width":440}'/>
+		<label name="effectNameText" properties='{"x":20, "y":66, "width":165, "height":24, "size":20, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="effectIntroText" properties='{"x":20, "width":440, "y":64, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="line3" definition='gameUI.icon.Line1' properties='{"x":20, "y":76, "width":440, "visible":false}'/>
+		<label name="introText" properties='{"x":20, "width":165, "y":64, "size":20, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="priceText" properties='{"x":20, "width":110, "height":24, "y":353, "size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24, "y":353, "size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+		<displayObject name="priceIcon" definition='gameUI.icon.Copper' properties='{"x":320, "y":353, "visible":false}'/>
+	</equipItem>
+
+	<!-- 战车的tip -->
+	<CombatCarTip properties='{"initWidth":480, "initHeight":200,"labelGap":8}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":200,"width":480}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":95, "width":440}'/>
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":110, "width":440}'/>
+
+		<label name="nameText" properties='{"x":20, "y":12, "width":180, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="mechLevelText" properties='{"x":20, "y":45, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="durableText" properties='{"x":20, "y":65, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+
+		<label name="attText" properties='{"x":20, "y":95, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="defText" properties='{"x":20, "y":115, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="hpText" properties='{"x":20, "y":135, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+
+		<list name="holesList" properties='{"x":10, "y":160, "rowCount":20, "columnCount":1, "horizontalGap":2, "verticalGap":8, "defaultSelected":false, "enabled":false}' />
+
+		<label name="priceText" properties='{"x":20, "width":110, "height":24,"size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24,"size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+
+	</CombatCarTip>
+
+	<!-- 战车零件的tip -->
+	<CombatCarPartTip properties='{"initWidth":480, "initHeight":240,"labelGap":8}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":240,"width":480}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":75, "width":440}'/>
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":105, "width":440}'/>
+		<displayObject  name="line3" definition='gameUI.icon.Line1' properties='{"x":20, "y":198, "width":440}'/>
+
+		<label name="nameText" properties='{"x":20, "y":12, "width":180, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="mechLevelText" properties='{"x":20, "y":45, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="propText" properties='{"x":20, "y":76, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="skillText" properties='{"x":20, "y":108, "width":440, "height":90, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "multiline":true}' />
+
+		<label name="priceText" properties='{"x":20, "width":110, "height":24,"size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24,"size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+
+	</CombatCarPartTip>
+
+	<!-- 银矿道具的tip -->
+	<SilverWidgetTip properties='{"initWidth":480, "initHeight":160,"labelGap":8}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":160,"width":480}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":74, "width":440}'/>
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":0, "width":440,"visible":false}'/>
+
+		<label name="nameText" properties='{"x":20, "y":12, "width":180, "height":24, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="mechLevelText" properties='{"x":20, "y":45, "width":180, "height":24, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":20, "y":82, "width":440, "height":100,"size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "multiline":true}' />
+
+
+		<label name="priceText" properties='{"x":20, "width":110, "height":24,"size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010706", "visible":false}' />
+		<label name="priceValueText" properties='{"x":205, "width":110, "height":24,"size":20, "autoSize":"none", "align":"right", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+	</SilverWidgetTip>
+	<!--副本文官tip-->
+<!--	??-->
+	<CivilInstanceTip properties='{}'>
+		<displayObject definition='skin.DefaultToolTip$bg' properties='{"height":155,"width":290}' />
+		<displayObject  definition='gameUI.icon.Line1' properties='{"x":5, "y":121, "width":280}'/>
+		<label name="nameText" properties='{"x":12, "y":10, "width":280, "height":28, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xE46565", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="skillText" properties='{"x":12, "y":38, "width":280, "height":80,"multiline":true, "size":18, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="expText" properties='{"x":12, "y":128, "width":280, "height":30,"size":18, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "multiline":true}' />
+	</CivilInstanceTip>
+
+	<!--矿石，铜铃TIP-->
+	<StoneTip properties='{"gap":7}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"height":280,"width":480}' />
+		<displayObject  name="line1" definition='gameUI.icon.Line1' properties='{"x":20, "y":45, "width":440}'/>
+		<displayObject  name="line2" definition='gameUI.icon.Line1' properties='{"x":20, "y":110, "width":440}'/>
+		<label name="nameText" properties='{"x":20, "y":12, "width":480, "height":28, "size":24, "bold":true, "autoSize":"none", "align":"left", "color":"0xE46565", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="fightText" properties='{"x":20, "y":50, "width":480, "height":30,"multiline":true, "size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":20, "y":80, "width":440, "height":100,"size":20, "bold":false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "multiline":true}' />
+		<label name="staticText" properties='{"x":20, "y":120, "width":110, "height":24,"size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false, "textID":"010788"}' />
+		<label name="priceText" properties='{"x":205, "y":120, "width":110, "height":24,"size":20, "autoSize":"none", "align":"right", "color":"0xffffcc", "stroke":"0x302010", "mouseEnabled":false}' />
+	</StoneTip>
+
+	<!--战斗面板-->
+	<container name="fightPanel" properties='{"initX":50, "initY":150, "styleName":"panel3","bgWidth":536, "bgHeight":354, "titleID":"031001"}'>
+		<modalBG name="modalBG" properties='{"alpha":0.4}' />
+		<sprite name="mapContainer" properties='{"x":18, "y":39}' />
+	</container>
+
+	<!--喊话泡泡-->
+	<SpeakPoPo properties='{"mouseEnabled":false, "showDuration":0.15, "hideDuration":0.1, "duration":5}'>
+		<displayObject name="popoBg" definition="gameUI.icon.BlackBG" properties='{"x":0, "y":0,"height":70,"width":220 }'/>
+		<label name="contentText" properties='{"width":180, "height":60, "x":10, "y":5,"size":20, "autoSize":"none", "multiline":true, "align":"left", "color":"0xFFFFCD",  "stroke":"0x302010", "mouseEnabled":false}' />
+	</SpeakPoPo>
+
+	<!--反击面板角色基本UI-->
+	<avatarBasicUI properties='{
+		"mouseEnabled":false, "mouseChildren":false, "defNameTextY":25
+	}'>
+		<sprite name="effectC"/>
+		<sprite name="sp" properties='{"x":-20, "y":10}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":16, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":16, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":2}'/>
+	</avatarBasicUI>
+
+	<!--装备tip的属性呈视器-->
+	<equipAttributeRenderer properties='{"itemHeight":16}'>
+		<label name="attributeText" properties='{"x":14, "width":220, "height":24, "size":20, "color":"0xFFFFCC", "autoSize":"none", "align":"left",  "stroke":"0x302010", "mouseEnabled":false}' />
+	</equipAttributeRenderer>
+	<!--装备tip的孔呈视器-->
+	<equipHoleRenderer properties='{"itemHeight":16}'>
+		<displayObject definition='gameUI.icon.HoleRect' properties='{"x":14, "y":1, "mouseEnabled":false}'/>
+		<imageLoader name="gemIL" properties='{"pathFormatName":"gemstone32", "x":15, "y":2, "width":20, "height":20}' />
+		<label name="attributeText" properties='{"x":33, "width":220, "height":24, "size":20, "color":"0x99FF00", "autoSize":"none", "align":"left",  "stroke":"0x302010", "mouseEnabled":false}' />
+	</equipHoleRenderer>
+	<!--战车tip的孔呈视器-->
+	<CommbatCarHoleRenderer properties='{"itemHeight":16,"itemWidth":90}'>
+		<displayObject definition='gameUI.icon.HoleRect' properties='{"x":14, "y":1, "mouseEnabled":false}'/>
+		<imageLoader name="gemIL" properties='{"pathFormatName":"machine32", "x":15, "y":2, "width":20, "height":20}' />
+		<label name="attributeText" properties='{"x":33, "width":220, "height":24, "size":20, "color":"0x99FF00", "autoSize":"none", "align":"left",  "stroke":"0x302010", "mouseEnabled":false}' />
+	</CommbatCarHoleRenderer>
+
+
+
+
+	<!--活动按钮渲染器-->
+	<activityRenderer properties='{"itemWidth":90}' >
+		<displayObject name="lightEffect" definition="gameUI.giiftBag.lightEffect" properties='{"x":45, "y":45, "visible":false, "mouseEnabled":false}' />
+
+		<label name="tipCountText" properties='{"x":45, "y":18,"width":45, "height":24,"bold":true, "size":16, "color":"0xFFFF00", "autoSize":"none", "align":"center",  "stroke":"0x302010","border":false, "mouseEnabled":false}' />
+	</activityRenderer>
+
+	<!--VIP的ICON列表-->
+	<VipIconRenderer properties='{"itemHeight":50, "itemWidth":60}'>
+		<displayObject name="icon" definition='gameUI.icon.VIPIcon' properties='{"x":0, "y":0}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"vipIcon",  "x":-17, "y":-13}' />
+		<!--<displayObject name="tx" definition='gameUI.mc.VIPtx' properties='{"x":0, "y":0}'/>-->
+		<sprite name="artNumber" properties='{"x":0, "y":6, "classPath":"gameUI.icon.VIPNumber", "align":"center"}'/>
+	</VipIconRenderer>
+
+	<!--提示文本+图片-->
+	<TipsIconRenderer properties='{"itemHeight":80}'>
+		<displayObject name="grid" definition="gameUI.icon.Grid1" properties='{"x":0, "y":0,"width":72,"height":72}' />
+		<imageLoader name="goodIL" properties='{"pathFormatName":"statePropPic", "x":4, "y":4, "width":64, "height":64, "mouseEnabled":false}' />
+		<displayObject name="bg" definition="gameUI.bg.tipsIcon"  properties='{"y":0, "mouseEnabled":false, "width":200}'/>
+		<label name="info" properties='{ "height":30, "size":24, "autoSize":"left",  "color":"0xE5EF99", "stroke": "0x2D261E", "mouseEnabled":false}'/>
+	</TipsIconRenderer>
+
+	<!--副本文官进度呈示器 -->
+	<CivilRateRenderer properties='{"itemWidth":105, "itemHeight":90,"showDuration":0.3, "duration":3, "moveDuration":0.5, "expArrY":[60,25,15]}'>
+		<displayObject definition="gameUI.view.CivilListBg" properties='{"x":0, "y":0}'/>
+	<!--	<displayObject definition="gameUI.icon.Pic70BG" properties='{"x":12, "y":7}' /> -->
+		<imageLoader name="pic" properties='{"pathFormatName":"civil70","x":14, "y":8}' />
+		<displayObject definition="gameUI.view.RateBg" properties='{"x":86, "y":82}'/>
+		<displayObject name="rate" definition="gameUI.view.RateExp"  properties='{"x":86, "y":82}'/>
+		<displayObject name="feel" definition="gameUI.view.TipFeel" properties='{"x":86, "y":82}'/>
+		<displayObject name="full" definition="gameUI.view.ProFull" properties='{"x":90, "y":43, "visible":false}' />
+		<displayObject name="speakPopo" definition="gameUI.view.SpeakPopo" properties='{"x":-25, "y":-75, "visible":false, "mouseEnabled":false, "mouseChildren":false}' />
+		<mcLabel name="msgText" properties='{"x":-22, "y":-55, "lineFill":true, "stroke":"0x302010","labelProp":{ "font":"黑体","size":16,"width":165, "color":"0xCBCD67", "multiline":true,"leading":9},"multiColor":"gameUI.color.Tips7", "mouseEnabled":false}'/>
+		<sprite name="exp" properties='{"x":80, "y":60, "classPath":"gameUI.icon.Number", "align":"center"}'/>
+	</CivilRateRenderer>
+
+	<!--渐加的数字，点击显示最终结果-->
+	<NumberRun>
+			<label name="tx" properties='{"x":0,"y":0, "bold":false, "color":"0xFFFFCC", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":100,"height":16}'/>
+	</NumberRun>
+
+	<!--双倍药的呈现器-->
+	<expItemRenderer  properties='{"itemWidth":84}'>
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":0, "y":0}' />
+		<imageLoader name="goodIL" properties='{"pathFormatName":"farmProduct32", "x":7, "y":7, "width":70, "height":70}' />
+	</expItemRenderer>
+
+	<!--【布阵】 武将信息tip -->
+	<EmbattleGeneralTip>
+		<displayObject definition='skin.DefaultToolTip$bg' properties='{"width":280, "height":190}'/>
+		<imageLoader name="generalImg" properties='{"pathFormatName":"generalPic70" , "x":10, "y":14, "width":70, "height":70}' />
+		<label name="nameText" properties='{"x":90, "y":14, "width":150, "height":24, "size":19, "bold":false, "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="loveText"  properties='{"border":false,"size":19, "bold": false, "color":"0xFFFFCC", "autoSize":"none", "align":"left", "width":180, "height":24, "x":90,"y":36,"stroke": "0x2D261E"}'/><!--亲密度-->
+		<label name="lveDuoText"  properties='{"border":false,"size":19, "bold": false, "color":"0xFFFFCC", "autoSize":"none", "align":"left", "width":240, "height":24, "x":90,"y":56,"stroke": "0x2D261E"}'/><!--掠夺-->
+		<label name="bloodText"  properties='{"size":19, "align":"left", "width":140, "height":24, "x":10,"y":100, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/><!--血-->
+		<label name="attackText"  properties='{"size":19, "align":"left", "width":140, "height":24, "x":10,"y":120, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/><!--攻-->
+		<label name="defendText"  properties='{"size":19, "align":"left", "width":140, "height":24, "x":10,"y":140, "color":"0xFFFFCC", "stroke": "0x2D261E"}'/><!--防-->
+		<label name="fightText"  properties='{"size":19, "autoTooltip":false,"bold": false, "autoSize":"none", "align":"left", "width":140, "height":24, "x":10,"y":160, "color":"0xcbce67", "stroke": "0x2D261E", "border":false}'/><!--战力-->
+
+		<label name="tongText"  properties='{"size":19,"align":"left", "width":110, "height":24, "x":160,"y":100, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/><!--统-->
+		<label name="zhiText"  properties='{"size":19, "align":"left", "width":110, "height":24, "x":160,"y":120, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/><!--智-->
+		<label name="yongText"  properties='{"size":19, "align":"left", "width":110, "height":24, "x":160,"y":140, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/><!--勇-->
+		<label name="lingText"  properties='{"border":false,"size":19, "bold": false, "autoSize":"none", "align":"left", "width":177, "height":23, "x":160,"y":160,"stroke": "0x2D261E","visible":true}'/><!--五行属性-->
+
+
+		<!--<displayObject name="expbar" definition="gameui.icon.expbar"  properties='{"x":150 , "y":10,"width":90}'/>-->
+	</EmbattleGeneralTip>
+
+	<!--国战奖励排行TIP-->
+	<KillRankTip>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' properties='{"width":200, "height":210}'/>
+		<list name="list" properties='{"x":10, "y":5, "columnCount":1, "rowCount":10, "horizontalGap":0, "verticalGap":0}' />
+		<label name="lvText"  properties='{"autoSize":"none","align":"left", "width":200, "height":20, "x":10,"y":0, "color":"0xFF0000", "stroke": "0x2D261E"}'/>
+	</KillRankTip>
+
+
+
+	<killTipRenderer properties='{"itemHeight":20, "itemWidth":200}'>
+		<label name="rankText"  properties='{"autoSize":"none","align":"left", "width":65, "height":20, "x":0,"y":0, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/>
+		<label name="reward1Text"  properties='{"autoSize":"none", "align":"left", "width":90, "height":20, "x":50,"y":0, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/>
+		<label name="reward2Text"  properties='{"autoSize":"none", "align":"left", "width":90, "height":20, "x":120,"y":0, "color":"0xFFFFCC", "stroke": "0x2D261E","autoTooltip":false}'/>
+	</killTipRenderer>
+
+	<!--【戰鬥次數提示】 呈示器(3.0版)-->
+	<AboutFightRenderer properties='{"itemWidth":280,"itemHeight":120, "args":{"y1":25, "y2":40}}'>
+		<displayObject name="bgPic" definition='gameUI.btn.SelectBtn' properties='{"x":20,"y":20}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"activityPic" , "x":38, "y":27,"mouseEnabled":false}' />
+		<label name="nameText"  properties='{"x":30, "y":60,"autoSize":"none","align":"center", "width":80, "height":30,"size":20,"color":"0xfdf56e", "stroke": "0x000000", "mouseEnabled":false,"bold":false, "border":false}'/>
+		<displayObject name="gou" definition='gameUI.view.GreenGou' properties='{"x":35,"y":45, "mouseEnabled":false}'/>
+		<label name="desText"  properties='{"autoSize":"none","align":"left", "width":180, "height":60,"size":16, "x":130,"y":30, "color":"0xd4d3ce", "stroke": "0x000000", "mouseEnabled":false,"bold":false}'/>
+	</AboutFightRenderer>
+
+		<!--文字动画（加血、减血）-->
+	<BloodNumber properties='{"addHpClassPath":"fight.ui.NumberGreed", "subHpClassPath":"fight.ui.NumberRed", "mouseEnabled":false, "mouseChildren":false,"args":{"initScaleX":0.7, "initScaleY":0.7, "initX":-20, "initY":-10, "blurX":20, "blurY":100, "moveX":40, "moveY":55, "firstMove":0.3, "secondMove":0.2, "during":0.1, "scaleX":2.2, "scaleY":2.2}}'>
+
+		<sprite name="content" properties='{"mouseEnabled":false}' />
+	</BloodNumber>
+
+	<!--【背包中药品列表呈示器】2.12版 -->
+	<DragBagItemRenderer properties='{"itemWidth":84,"itemHeight":84}'>
+		<sprite name="goodIcon" properties='{"x":13, "y":23,"mouseChildren":false, "mouseEnabled":true}' />
+		<label  name="numText" properties='{"x":7, "y":50, "width":70, "height":30, "size":16, "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>
+	</DragBagItemRenderer>
+</config>

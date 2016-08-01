@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--【蛮族入侵场景】配置文件-->
+<config properties='{
+	  "prepareTime":3.1
+	, "myPlaceX":4, "myPlaceY":17
+	, "attackerPlaceX":5, "attackerPlaceY":15
+	}'>
+	<sprite name="mapContainer" />
+	<button name="backBtn" properties='{"x":850, "y":120, "styleName":"button5", "labelID":"790005", "width":70, "visible":false}' />
+	
+	
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "artNumProp":{"y":-60, "align":"center", "classPath":"gameUI2.icon.NumberJyan",  "mouseEnabled":false},"startArgs":{"y":-98, "duration":0.2, "delay":0 },"hideArgs":{"y":-115, "duration":0.3, "delay":0.6 }, "mouseChildren":false, "defNameTextY":25}'>	
+		<sprite name="effectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="gainEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="sp" properties='{"x":-20, "y":10}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<displayObject name="enemyFlag" definition="gameUI.avatar.EnemyFlag" properties='{"visible":false, "mouseEnabled":false, "mouseChildren":false}'/>
+		<label name="cdText" properties='{"x":-54, "y":-72, "width":100, "height":26, "autoSize":"none", "align":"center", "color":"0xff0000", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":5}'/>
+	</avatarBasicUI>
+	
+	
+	<!--<sprite name="rewardTips" properties='{"x":855, "y":340}' />-->
+	
+	<!--道具面板-->
+<container  name="itemsView" properties='{"x":120, "y":660}'>	
+<displayObject properties='{"x":0, "y":0, "width":398, "height":140}' definition='gameUI.bg.GimpFrame' />
+<!--	<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"y":45,"x":295}'/>
+<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"y":45,"x":203}'/>
+<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"y":45,"x":111}'/>
+<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"y":45,"x":19}'/>
+-->
+	<label name="titleText" properties='{"width":280,"height":28,"autoSize":"none","x":10,"align":"left","y":8,"color":"0xFFFFCC","mouseEnabled":false,"stroke":"0x151515","text":"点击使用道具"}' />	
+		<label name="rateText" properties='{"width":150,"autoSize":"none","x":220,"align":"right","y":8,"color":"0xfacd00","mouseEnabled":false,"height":28,"stroke":"0x151515","text":"第 2/6 波"}' />
+	
+		<list name="iconList" properties='{"horizontalGap":22,"x":25,"verticalGap":1,"y":51,"rowCount":1,"columnCount":5}'/>
+	
+	<!--<button name="attackFastBtn" properties='{"x":190, "y":50, "styleName":"button2", "labelID":"790026", "width":78,"height":42, "visible":true}' />
+		<label name="attackFirstText" properties='{"x":25,"y":105, "bold":false, "color":"0xfacd00", "stroke":"0x302010", "autoSize":"none", "align":"right", "width":240,"height":16,"border":false}'/>
+ -->
+</container>
+	
+	<!--战斗结果面板-->
+<container name="manzuResultView" properties='{"x":20, "y":180}'>
+		<displayObject definition="skin.Panel2$bg" properties='{"width":600,"height":440}' />
+		<displayObject definition="manzuScene.Andi" properties='{"x":60,"y":115,"width":481,"height":225}' />
+		<displayObject name="bg1" definition="manzuScene.ResultGreen" properties='{"x":64,"y":123, "visible":false}' />
+		<displayObject name="bg2" definition="manzuScene.ResultGreen" properties='{"x":64,"y":228, "visible":false}' />
+		<label name="titleText" properties='{"x":245, "y":7, "bold":true, "width":150, "height":28, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false}' />
+		<displayObject name="result" definition="manzuScene.ResultMC" properties='{"x":180,"y":58}' />
+<!--胜负-->
+		<displayObject name="fail" definition="manzuScene.Failed" properties='{"x":60,"y":130, "visible":false}' />
+		
+		<displayObject name="box1" definition="manzuScene.GoldBox" properties='{"x":120,"y":137, "visible":false}' />
+<!--宝箱-->
+		<displayObject name="box2" definition="manzuScene.GoldBox" properties='{"x":120,"y":242, "visible":false}' />
+		
+		<displayObject name="gold" definition="BW.gameUI.icon.gold" properties='{"x":440, "y":245, "mouseEnabled":false, "visible":false}' />
+		
+		<!--<label name="introText" properties='{"x":160, "y":92, "color":"0xFFFFCC", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":500,"height":16}'/>-->
+		<label name="costText" properties='{"x":470, "y":240,"size":18, "color":"0xFFFFCC", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":60,"height":24}'/>
+		<label name="loseText" properties='{"x":0, "y":95,"size":14, "color":"0xFFCC00", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":610,"height":16,"mouseEnabled":false}'/>
+		<button name="getBtn" properties='{"x":400, "y":157, "styleName":"button15","width":120,"height":48, "labelID":"790032","style":{"labelStyle":{"bold":true,"size":18}}}' />
+		<button name="doubleBtn" properties='{"x":400, "y":272, "styleName":"button14","width":120,"height":48,  "labelID":"790032","style":{"labelStyle":{"bold":true,"size":18}}}' />
+		<button name="returnBtn" properties='{"x":250, "y":360, "styleName":"button5", "labelID":"790033","width":150,"height":48,"visible":false}' />
+		
+		<displayObject name="sixTimes" definition="manzuScene.SixTimes" properties='{"x":210,"y":140,"visible":false}' />
+		
+		<displayObject name="extra" definition="manzuScene.view.ExtraReward" properties='{"x":210,"y":245, "visible":false}' />
+		
+		<sprite name="simpleSilverText" properties='{"x":265,"y":135,"txHeight":28, "txWidth":140, "style":{"bold":true,"size":18}}'/> <!--普通奖励渐增数字-->
+		<sprite name="simpleBaoText" properties='{"x":265,"y":161,"txHeight":28, "txWidth":140, "style":{"bold":true,"size":18}}'/> 
+		<sprite name="simpleLingText" properties='{"x":265,"y":187,"txHeight":28, "txWidth":140, "style":{"bold":true,"size":18}}'/> 
+				
+		<sprite name="doubleSilverText" properties='{"x":265,"y":240,"txHeight":28, "txWidth":140, "style":{"bold":true,"size":18}}'/> <!--双倍奖励渐增数字-->
+		<sprite name="doubleBaoText" properties='{"x":265,"y":266,"txHeight":28, "txWidth":140, "style":{"bold":true,"size":18}}'/> 
+		<sprite name="doubleLingText" properties='{"x":265,"y":292,"txHeight":28, "txWidth":140, "style":{"bold":true,"size":18}}'/> 
+		
+	</container>
+	
+	
+	<!--道具icon 呈示器-->
+	<manzuIconRenderer properties='{"itemWidth":70, "itemHeight":70}'>
+		<imageLoader name="icon"  properties='{"pathFormatName":"manzuPic","x":0,"y":0}'/>
+	</manzuIconRenderer>
+	
+	<label name="historyItemText" properties='{"x":20, "y":180, "width":120, "height":300, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "multiline":true}' />
+		
+	<sprite name="zhudongTips" properties='{"x":540, "y":450}' />
+	
+	<!-- 怪物的tip -->
+	<enemyTip properties='{"initWidth":190, "initHeight":50, "labelGap":6, "introTextInitY":39}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label name="nameText" properties='{"x":12, "y":12, "width":172, "height":22, "size":14, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":5, "y":36, "width":180}'/>
+		
+		<label name="wakanText" properties='{"x":12, "width":165, "y":44, "size":12, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="attackText" properties='{"x":12, "width":165, "y":61, "size":12, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="introText" properties='{"x":12, "width":165, "y":79, "size":12, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</enemyTip>
+	
+</config>

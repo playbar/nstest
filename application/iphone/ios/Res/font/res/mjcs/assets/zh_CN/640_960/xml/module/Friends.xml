@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config properties='{"titleID":800201, "initX":217, "initY":102, "bgWidth":608, "bgHeight":419}'>
+	<container name="friendsInfoPanel" properties='{}'>
+		<displayObject definition="friends.view.bg" properties='{"x":18 , "y":40, "mouseEnabled":false}'/>
+		
+		<sprite name="other" properties='{"visible":false}'/>
+		<displayObject parent="other" definition="friends.view.friendsTrendBg" properties='{"x":252 , "y":40, "mouseEnabled":false}'/>			
+		<label parent="other" name= "friendsTrendText" properties='{"x":131, "y":45, "width":580, "height":23, "size":"12", "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010","mouseEnabled":false}'/>
+		<button parent="other" name="attentionBtn" properties='{"x":343, "y":363, "width":70,"height":32, "styleName":"button3", "labelID":"800204"}' />
+		<button parent="other" name="lookStrengthBtn" properties='{"x":435, "y":363, "width":70,"height":32, "styleName":"button5", "labelID":"800205"}' />
+		<list parent="other" name="friendsTrendsList" properties='{"x":260, "y":65, "columnCount":1, "rowCount":8, "horizontalGap":1, "verticalGap":0}'/>	
+		<displayObject name="mainBtn" definition="gameUI.btn.Mail" properties='{"x":500 , "y":47}'/>	
+		<label name= "friendsConutText" properties='{"x":190, "y":42, "width":80, "height":23,"color":"0xCBCC66", "stroke":"0x302010"}'/>
+		<label properties='{"x":103, "y":42, "width":90, "height":23, "size":"12", "color":"0xCBCC66", "stroke":"0x302010","textID":"800202"}'/>
+		<list name="friendsList" properties='{"x":19, "y":122, "columnCount":1, "rowCount":4, "horizontalGap":1, "verticalGap":-4}' />
+		<displayObject properties='{"x":107, "y":378, "width":41, "height":18}' definition='skin.page2.PageBG' />
+		<page name="page" properties='{"x":80, "y":380,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":76 },
+								"labelProp":{"x":20, "y":0, "width":55, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xE5EF99"}
+								}' />
+		<container name="followPeoplePanel" properties='{"titleID":800201, "initX":120, "initY":0,"bgWidth":310, "bgHeight":419 ,"contentStrokeColor":"0x302010", "nameColor":"0xFFFFFF"}'>
+			<displayObject definition="friends.follow.bg" properties='{"x":18, "y":40, "width":273}' />
+			<displayObject definition="friends.view.inputBg" properties='{"x":78, "y":64,"width":140}' />
+			<displayObject definition="friends.follow.attentionBg2" properties='{"x":41, "y":184}' />
+			<displayObject definition="friends.follow.attentionBg3" properties='{"x":41, "y":306}' />	
+			<displayObject definition="friends.follow.frame" properties='{"x":37, "y":180}' />
+			<displayObject definition="friends.follow.frame" properties='{"x":37, "y":302}' />
+			
+			<sprite name="contentC" />
+			<richText name="nameText" parent="contentC" properties='{"x":25, "y":120, "width":266, "selectable":true, "color":"0xFFFFFF"}' />
+			<label properties='{"x":25, "y":45, "width":266, "height":23,"color":"0xCBCC66", "stroke":"0x302010", "textID":"800208"}'/>
+			<label properties='{"x":25, "y":97, "width":266, "height":23,"color":"0xCBCC66", "stroke":"0x302010", "textID":"800209"}'/>
+			<label properties='{"x":25, "y":160, "width":266, "height":23,"color":"0xCBCC66", "stroke":"0x302010", "textID":"800210"}'/>
+			<label properties='{"x":25, "y":282, "width":266, "height":23,"color":"0xCBCC66", "stroke":"0x302010", "textID":"800211"}'/>
+			<label properties='{"x":25, "y":70, "width":60, "height":23,"color":"0xCBCC66", "stroke":"0x302010", "size":"14", "bold":true, "textID":"800215"}'/>
+			<inputText name= "nameTextInput" properties='{"x":80, "y":70, "width":138, "height":23,"autoSize":"none",  "align":"left","color":"0xCBCC66","stroke":"0x302010", "maxChars":7}'/>
+			<button name="attentionBtn" properties='{"x":228, "y":67, "width":60,"height":26, "styleName":"button3", "labelID":"800212"}' />
+			
+		</container>
+		
+		<container name="myInfo" properties='{"x":19,"y":60}'>
+			<displayObject name="picBack" definition="friends.view.MyInfoBg" properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+			<imageLoader name="headPic" properties='{"pathFormatName":"generalPic40", "x":13, "y":13, "width":40, "height":40}' />
+	
+			<label name= "levelText" properties='{"x":12, "y":40, "width":43, "height":23,"autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010"}'/>
+			<label name= "nameText" properties='{"textID":"800216", "x":65, "y":10, "width":100, "height":23,"color":"0xCBCC66", "stroke":"0x302010"}'/>
+			<label name= "infoText" properties='{"x":65, "y":30, "width":100, "height":23,"color":"0xCBCC66", "stroke":"0x302010"}'/>
+			
+			<displayObject name="rate" definition="friends.view.Rate" properties='{"x":55 , "y":25}'/>	
+			<displayObject name="giftBtn" definition="friends.btn.Gift" properties='{"x":180 , "y":15}'/>	
+			<displayObject name="lightEffect" definition="gameUI.giiftBag.lightEffect" properties='{"x":203, "y":40, "mouseEnabled":false, "visible":false}' />
+		</container>
+		
+		<container name="myLookInfo" properties='{}'>
+			<displayObject definition="friends.view.friendsTrendBg" properties='{"x":252,"y":40, "mouseEnabled":false,"visible":true}'/>	
+			<label properties='{"textID":"800217", "x":131, "y":45, "width":580, "height":23, "size":"12", "autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010"}'/>
+			<button name="attentionBtn" properties='{"x":388, "y":363, "width":70,"height":32, "styleName":"button3", "labelID":"800204"}' />	
+			<list name="friendsTrendsList" properties='{"x":260, "y":65, "columnCount":1, "rowCount":8, "horizontalGap":1, "verticalGap":0}'/>				
+		</container>
+		<sprite name="rewardTips" properties='{"x":220, "y":130}' />
+	</container>
+	
+	<!--黑名单 2.13-->
+	<container name="blackNames" properties='{}'>	
+		<displayObject definition="friends.blackNames.Bg" properties='{"x":300 , "y":47, "mouseEnabled":false}'/>
+		<list name="blackList" properties='{"x":313, "y":104, "columnCount":1, "rowCount":4, "horizontalGap":-12, "verticalGap":-12}' />
+		<imageLoader name="npc"  properties='{"fileName":"npc","pathFormatName":"activityPng","x":30,"y":118}'/>
+		
+		<displayObject name="popo" definition="friends.blackNames.TalkBlank" properties='{"x":45 , "y":60}'/>	
+		<label name="popoText" properties='{ "x":45, "y":70, "size":12,"width":230,"autoSize":"none", "align":"center", "border":false, "color":"0xCBCC66", "stroke":"0x302010","mouseEnabled":false}'/>	
+		<button name="addBlackBtn" properties='{"x":545, "y":70, "width":28, "height":28, "styleName":"button10", "labelID":"800233"}' />
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":420 , "y":362,"width":56}'/>
+		<page name="page" properties='{"x":400, "y":364,
+							"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+							"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":80 },
+							"labelProp":{"x":20, "y":0, "width":56, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+							}' />
+		
+		<inputText name= "nameInputText" properties='{"x":343, "y":77, "width":138, "height":23,"autoSize":"none",  "align":"left","color":"0xCBCC66","stroke":"0x302010", "maxChars":7, "border":false}'/>
+	</container>
+	
+	<friendsRenderer properties='{}'> 
+		<displayObject name="picBack" definition="friends.view.friendsListBg" properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+		<imageLoader name="headPic" properties='{"pathFormatName":"generalPic40", "x":13, "y":13, "width":40, "height":40}' />
+		
+		<label name= "levelText" properties='{"x":12, "y":40, "width":43, "height":23,"autoSize":"none", "align":"center", "color":"0xCBCC66", "stroke":"0x302010"}'/>
+		<label name= "nameText" properties='{"x":65, "y":10, "width":100, "height":23,"color":"0xCBCC66", "stroke":"0x302010"}'/>
+		<label name= "infoText" properties='{"x":65, "y":30, "width":100, "height":23,"color":"0xCBCC66", "stroke":"0x302010"}'/>
+		
+		<displayObject name="chatBtn" definition="friends.btn.chatBtn" properties='{"x":135, "y":38}'/>
+		<displayObject name="cancelBtn" definition="friends.btn.cancel" properties='{"x":195, "y":38}'/>
+		<displayObject name="addToBlackBtn" definition="friends.blackNames.ToBlack" properties='{"x":165, "y":36}'/>
+	</friendsRenderer>
+	<friendsTrendsRenderer properties='{"itemWidth":335 , "itemHeight":35}'>		
+		<displayObject definition="friends.ClickArea" properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"friendsActivityPic34", "x":0, "y":4, "width":34, "height":34}'/>
+		<label name= "infoText" properties='{"x":40, "y":15, "width":230, "height":23,"mouseEnabled":false, "autoSize":"none","border":false, "color":"0xCBCC66", "stroke":"0x302010"}'/>
+		<button name="attBtn" properties='{"x":275, "y":12, "width":50,"height":23, "styleName":"button5", "labelID":"800219","visible":false}' />	
+		<button name="gxBtn" properties='{"x":275, "y":12, "width":50,"height":23, "styleName":"button3", "labelID":"800220","visible":false}' />
+		
+	</friendsTrendsRenderer>
+	
+	<!--黑名单列表呈示器 2.13-->
+	<BlackNameRenderer properties='{"itemWidth":265 , "itemHeight":75}'>
+		<displayObject name="bg" definition="friends.blackNames.ItemBg" properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<displayObject name="selectIt" definition="friends.blackNames.Selected" properties='{"x":0 , "y":0, "mouseEnabled":false,"visible":false}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"generalPic40", "x":22, "y":17}'/>
+		<label name= "nameText" properties='{"x":75, "y":15, "width":100, "height":20,"autoSize":"none", "align":"left","color":"0xe6f09a", "stroke":"0x302010", "mouseEnabled":false,"bold":true}'/>
+		
+		<displayObject name="nameBg" definition="" properties='{"x":0 , "y":0, "mouseEnabled":true}'/>	
+		<label name= "levelText" properties='{"x":20, "y":45, "width":45, "height":20,"autoSize":"none", "align":"center","color":"0xe6f09a", "stroke":"0x302010", "mouseEnabled":false, "border":false}'/>
+		
+		<displayObject name="removeBtn" definition="friends.btn.cancel" properties='{"x":230, "y":38}'/>
+
+	</BlackNameRenderer>
+	
+</config>

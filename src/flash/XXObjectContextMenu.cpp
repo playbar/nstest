@@ -1,0 +1,19 @@
+// XXObjectContextMenu.cpp: implementation of the XXObjectContextMenu class.
+//
+//////////////////////////////////////////////////////////////////////
+#include "StdAfxflash.h"
+#include "XXObjectContextMenu.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+XXObjectContextMenu::XXObjectContextMenu(ScriptPlayer*pRoot):XXObject(pRoot)
+{
+
+}
+
+XXObjectContextMenu::~XXObjectContextMenu()
+{
+
+}

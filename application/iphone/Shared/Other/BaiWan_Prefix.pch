@@ -1,0 +1,25 @@
+//
+// Prefix header for all source files of the 'BaiWan' target in the 'BaiWan' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+    #import "module.h"
+    #import "BaiWan_Config.h"
+	
+#ifdef _DEBUG
+#define APPLEASSERT(e)  assert(e)
+#define APPLELOG(p)   NSLog(p)
+#else
+#define APPLEASSERT(e)
+#define APPLELOG(p)   //NSLog(p)
+#endif
+
+#define APPLERELEASE(p) if(p){[p release]; p=nil;}
+#define APPLECANCEL(p) if(p) {[p cancel]; [p release]; p=nil;}
+#define APPLECHECKRANGE(p) ((p.location!=NSNotFound)&&(p.length!=0))
+
+
+
+#endif

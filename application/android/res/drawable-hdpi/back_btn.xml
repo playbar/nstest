@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<selector xmlns:android="http://schemas.android.com/apk/res/android">        
+      <item android:state_pressed="true">   
+            <shape>                        
+				<gradient android:startColor="#009ACD" android:endColor="#009ACD" />   
+				<stroke  android:width="@dimen/bwpx2" android:color="#009ACD" />   
+				<corners android:radius="@dimen/bwpx5" />    
+				 
+              </shape>   
+      </item>  
+     <item >
+		<shape>                        
+				<gradient android:startColor="#0099cc" android:endColor="#0099cc" />   
+				<stroke  android:width="@dimen/bwpx2" android:color="#0099cc" />   
+				<corners android:radius="@dimen/bwpx5" />    
+				
+         </shape> 
+      </item>  
+              
+
+</selector> 
+<!-- 
+shape是用来定义形状的，gradient定义该形状里面为渐变色填充，
+startColor起始颜色，endColor结束颜色，
+angle表示方向角度。当angle=0时，渐变色是从左向右。
+然后逆时针方向转，当angle=90时为从下往上。
+stroke 可以理解为边缘，
+corners为拐角这里 radius 属性为半径，
+最后是相对位置属性 padding。
+ -->  

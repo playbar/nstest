@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【银矿战场景】配置文件-->
+<config properties='{"silverOwnerTextY":"-76,-79,-84,-97,-108", "silverOwnerTextAndBattleIconDetaY":24, "tipsProp":{"yDuration":3}
+					, "showEffectDuration":0, "hideEffectDuration":0,"artArr":["silver.artText.secondDig","silver.artText.threeDig"],"someBtnProp":{"initH":269,"bgHeight":219,"autoBtnY":0,"initY":-50,"otherBtnY":-50}}	'>	
+	<sprite name="mapContainer" />
+	<!--科技-->
+	<imageLoader name="techPic" properties='{"pathFormatName":"tech32", "x":560, "y":458 }' />	
+<!--		<displayObject  definition="areaScene.btn.Prev" properties='{"x":28, "y":415, "visible":true}' />
+	<displayObject  definition="areaScene.btn.Next" properties='{"x":538, "y":415, "visible":true}' /> -->
+	<!--角色基本UI-->
+	<avatarBasicUI properties='{"mouseEnabled":false, "mouseChildren":false}'>
+		<displayObject name="cdIcon" definition='silverScene.view.CD' properties='{"x":-20, "y":-96, "visible":false}' />
+		<label name="cdText" properties='{"height":16, "x":-4, "y":-95, "color":"0xCACB65", "stroke":"0x302010", "mouseEnabled":false}' />
+		<sprite name="sp" properties='{"x":-20, "y":10}'/>
+		<displayObject parent="sp" name="nameBG" definition='gameUI.view.nameBG' properties='{"x":0, "y":0}' />
+		<label parent="sp" name="nameText" properties='{"width":160, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<label parent="sp" name="levelText" properties='{"width":54, "height":26, "x":0, "y":0, "autoSize":"none", "align":"left", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<displayObject parent="sp" name="fiveStar" definition="gameUI.icon.FiveStar" properties='{"x":0, "y":5}'/>
+	</avatarBasicUI>
+	
+	<!--银矿基本UI-->
+	<silverBasicUI  properties='{"mouseEnabled":false, "mouseChildren":false, "x":-50, "ys":[-87, -90, -95, -100, -120], "y":-87, "x0":8, "y0":7, "detaY":28}' >
+		<displayObject name="tipBG" definition='gameUI.bg.BlackBG2' properties='{"x":0, "y":0, "width":200,"height":90, "alpha":0.5}' />
+		<label name="t0Text" properties='{"height":28,"size":20, "x":8, "y":7, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="t1Text" properties='{"height":28,"size":20, "x":8, "y":35, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="t2Text" properties='{"height":28, "size":20,"x":8, "y":63, "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="digIcon" definition='silverScene.view.BeDigrIcon' properties='{"x":80, "y":28, "visible":false}' />	
+		<displayObject name="bombEffect" definition='silverScene.effect.bombEffect' properties='{"x":90, "y":150,"mouseEnabled":false,"rotation":120, "visible":false}' />
+	</silverBasicUI>
+
+	<!-- 挖矿方式tip（独占、申请）-->
+	<container name="digTypeTip" properties='{"x":0, "y":0, "gapX":-100, "gapY":-70}' >
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"x":0, "y":0,"width":160,"height":160}' />
+		<button name="onlyMeBtn" properties='{"x":20, "y":20, "width":120,"height":48, "styleName":"button3", "labelID":"530220"}' />
+		<button name="applyBtn" properties='{"x":20, "y":90, "width":120,"height":48,  "styleName":"button3", "visible":false, "labelID":"530221"}' />
+	</container>		
+	
+	<!-- 物品掉落（挖到宝石）-->
+	<container name="silverTip" properties='{"x":100, "y":300,"labelStyle":{"contentHeight":52,"borderHeight":32}}' >
+		<displayObject  definition="gameUI.bg.GimpFrame" properties='{"width":450,"height":200}' />
+		<sprite name="spC" />
+		<label name="contentText" properties='{"width":440, "height":120, "x":0, "y":40, "autoSize":"none", "align":"center", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "border":false}' />
+		<button name="okBtn" properties='{"x":170, "y":135, "width":120,"height":48,"styleName":"button6", "labelID":"530281"}' />
+	</container> 	
+	
+	<!-- 银库已满 -->
+	<container name="bagFill" properties='{"x":170, "y":350}' >
+		<displayObject  definition="gameUI.bg.GimpFrame" properties='{"width":300,"height":200}' />
+		<displayObject  definition="silverScene.view.BagFill" properties='{"x":148, "y":60}' />	
+		<button name="okBtn" properties='{"width":120,"height":48,"x":90, "y":120, "styleName":"button6", "labelID":"530281"}' />
+	</container>
+	
+	<!-- 左侧银库-->
+	<!-- <container name="bag" properties='{"x":850, "y":175, "bagProbarWidth":121, "bagProbarHeight":14, "showEffectDuration":0, "hideEffectDuration":0, "mouseEnabled":false}' >	
+		<displayObject name="bg" definition="silverScene.view.BagBG" properties='{"x":0, "y":0}' />
+		<label name="bagText" properties='{"x":4, "y":31, "width":121, "height":20, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		
+		<button name="exchangeBtn" properties='{"x":25, "y":50, "styleName":"button6", "width":65, "labelID":"530291"}' />
+		<radioButton name="autoExchangeRB" properties='{"x":2, "y":75, "styleName":"radioButton1", "deselect":true, "labelID":530292}' />
+	</container>	 -->
+	<!-- 消息滚动提示面板 -->
+	<container name="msgPanel" properties='{"x":220, "y":170, "maxMsgCount":2, "delayShow":0.2, "mouseEnabled":false}'>
+		<MsgText properties='{"x":0,"y":0, "multiline":true,"width":150, "height":40, "size":12, "bold": false, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E", "mouseEnabled":false,"textType":"htmlText"}'/>
+	</container>
+	
+	<!-- 炸弹列表 -->
+	<container name="bombView" properties='{"x":20, "y":455,"itemGap":10,"effectProp":{"durTime":2,"initY":0,"distance":-20}}'>
+		<list name="bombList" properties='{"x":0, "y":0, "columnCount":2, "rowCount":1, "horizontalGap":5, "verticalGap":0}' />
+		<label name="owerTrapText" properties='{"x":40, "y":15, "size":20,"width":280, "height":40, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<label name="installSuccessText" properties='{"x":40, "y":15, "size":20,"width":280, "height":40, "autoSize":"none", "align":"left", "color":"0x99FF00", "stroke":"0x302010", "mouseEnabled":false,"textID":"530376","visible":false}' />
+	</container>
+	
+	<displayObject name="doDigText" definition="silverScence.text.doDig" properties='{"x":235, "y":280,"visible":false}' />
+		<displayObject name="autoMC" definition="silverScence.icon.AutoFighting" properties='{"x":250, "y":280, "visible":false, "mouseEnabled":false}' />
+	<label name="autoText" properties='{"x":225, "y":250, "width":200,  "height":40, "size":20, "autoSize":"none", "multiline":true,  "align":"center", "color":"0x00FF00", "stroke":"0x302010"}'/>
+	<sprite name="autoOccupy"/>
+	
+	<button name="leftBtn" properties='{"x":20, "y":560, "width":120, "height":48, "styleName":"button5"}' />
+	<button name="rightBtn" properties='{"x":500, "y":560, "width":120, "height":48, "styleName":"button5"}' />
+	<sprite name="btnC" properties='{"x":0, "y":-40,"visible":true}'/>
+	
+	<displayObject  parent="btnC" name="autoOccupyBtn" definition="silverScence.btn.autoBtn" properties='{"x":265, "y":613,"visible":true}' />
+	<displayObject parent="btnC" name="autoArtTextMC" definition="silverScence.text.autoText" properties='{"x":270, "y":611,"mouseEnabled":false}' />
+	<displayObject  parent="btnC"  name="zhuanquanEffect" definition="silverScence.effect.zhuanquan" properties='{"x":320, "y":635,"mouseEnabled":false}'/>
+	<!-- 收益面板-->
+	<container name="income" properties='{
+		"x":20, "y":610, "showEffectDuration":0, "hideEffectDuration":0, "mouseEnabled":false,
+		"gemDropEffect":{"startPoint":{"x":30,"y":265},"middlePoint":{"x":30,"y":295},"endPoint":{"x":-180,"y":350},"durationTime":1.5}
+	}' >	
+		<!-- <displayObject definition="gameUI.icon.Layer" properties='{"x":0,"y":0,"width":600,"height":110 }' />-->
+		<displayObject name="bg" definition="silverScene.view.IncomePanelBG" properties='{"x":0,"y":0,"width":600,"height":110}' />
+		<!-- <label properties='{"x":200, "y":19,"width":120, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false,"text":"矿车容量"}' /> -->
+		<label name="timeText" properties='{"x":235, "y":65, "width":160, "height":40,"size":18, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+		<!-- <label properties='{"x":200, "y":58,"width":120, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false,"text":"采矿进度"}' /> -->
+		<label name="bagText" properties='{"x":235, "y":26, "width":160, "height":40, "size":18,"autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false }' />
+		<label name="findGemText" properties='{"x":240, "y":-180, "size":20,"width":120, "height":40, "autoSize":"none","bold":true, "align":"center", "color":"0x99FF00", "stroke":"0x302010", "mouseEnabled":false }' />
+		
+		<displayObject name="digBtn" definition="sllverScence.icon.digLvSelected" properties='{"x":104, "y":4,"width":70,"height":70}' />
+		<displayObject  definition="silverScence.text.changeText" properties='{"x":108, "y":70,"width":70,"height":22}' />
+		<!-- <label properties='{"x":15, "y":19,"width":120, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false,"text":"当前选择："}' />		-->
+		<label name="curDigLvText" properties='{"x":15, "y":58,"width":120, "height":30,"size":20, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false}' />
+		<displayObject name="lightEffect" definition="gameUI.giiftBag.lightEffect" properties='{"x":145, "y":45, "visible":false,"mouseEnabled":false,"width":72,"height":72}' />
+		
+		<list name="gemList" properties='{"x":0, "y":50, "columnCount":7, "rowCount":1, "horizontalGap":5, "verticalGap":0}' />
+		<!-- <label properties='{"x":440, "y":35,"width":120, "height":30,"size":22, "autoSize":"none", "align":"left", "color":"0xFFCC00", "stroke":"0x302010", "mouseEnabled":false,"text":"文官列表"}' /> -->
+		<list name="civilOfficalList" properties='{ "x":440, "y":32, "columnCount":2, "horizontalGap":20, "verticalGap":1, "rowCount":1}' />
+		<!-- <list name="digLvList" properties='{"x":18, "y":85, "columnCount":1, "rowCount":12, "horizontalGap":1, "verticalGap":1,"visible":false}' /> -->
+		<button name="giveUpBtn" properties='{"x":480, "y":-150, "styleName":"button3", "width":120,"height":48,"labelID":"530207"} ' />
+		<button name="manageBtn" properties='{"x":0, "y":-150, "styleName":"button3","width":120,"height":48, "labelID":"530206", "visible":false}'  />
+		<!-- <button name="exchangeBtn" properties='{"x":66, "y":280, "styleName":"button8", "labelID":"530294"}'/> -->
+		<!--<radioButton name="autoExchangeRB" properties='{"x":18, "y":115, "styleName":"radioButton1", "deselect":true, "labelID":530295}' />-->
+	
+		
+	
+		<!--独占矿的成员列表-->
+			<container name="memberPanel" properties='{"styleName":"panel3","initX":70, "initY":-500, "bgWidth":500, "bgHeight":600, "titleID":"530231"}'>
+			<displayObject definition="gameUI.bg.GimpFrame" properties='{"x":20, "y":75,"width":460,"height":505}' />		
+			<label properties='{"x":56, "y":82, "color":"0xE7ED97", "stroke":"0x302010", "textID":"530234", "size":16}'/>
+			<label properties='{"x":168, "y":82, "color":"0xE7ED97", "stroke":"0x302010", "textID":"530235", "size":16}'/>
+			<label properties='{"x":300, "y":82, "color":"0xE7ED97", "stroke":"0x302010", "textID":"530236", "size":16}'/>
+	    <displayObject definition="gameUI.icon.Line" properties='{"x":25, "y":105,"width":450,"height":3}' />			
+			<itemGroup name="tabBtnGroup" properties='{"x":24, "y":45, "layout":"horizontal"}' />
+			<button name="tabBtn1" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"530232"}' parent="tabBtnGroup" group="tabBtnGroup"/>
+			<button name="tabBtn2" properties='{"x":0, "y":0, "styleName":"TabButton1", "labelID":"530233"}' parent="tabBtnGroup"  group="tabBtnGroup"/>
+			<list name="memberList" properties='{"x":0, "y":110, "columnCount":1, "rowCount":10, "horizontalGap":1, "verticalGap":1}' />
+			<displayObject properties='{"x":220, "y":539, "width":60, "height":30}' definition='skin.page2.PageBG' />		
+			<page name="page" properties='{"x":180, "y":539,
+				"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+				"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":115 },
+				"labelProp":{"x":40, "y":0, "width":60, "height":30,"size":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+			}' />
+		</container>
+		<!-- 挖矿设置面板 -->
+		<container name="digSetPanel" properties='{"styleName":"panel3","initX":-15, "initY":-500,"x":-15,"y":-500, "bgWidth":626, "bgHeight":632, "titleID":"530350"}'>			
+			<label  properties='{"x":270,"y":245, "width":120, "height":40, "size":20,"autoSize":"none","align":"left", "color":"0xCBCC66", "stroke": "0x2D261E", "mouseEnabled":false,"textID":"530355" }'/>	
+			<list name="digLvList" properties='{"x":27, "y":55, "columnCount":3, "rowCount":1, "horizontalGap":7, "verticalGap":0}' />
+			<list name="twoPriceList" properties='{"x":40, "y":275, "columnCount":1, "rowCount":3, "horizontalGap":0, "verticalGap":14}' />
+			<list name="threePriceList" properties='{"x":340, "y":275, "columnCount":1, "rowCount":3, "horizontalGap":0, "verticalGap":14}' />
+		</container>
+		
+			
+		<!-- 文官说话面板 -->
+			<container name="civilDialog" properties='{"styleName":"panel3","initX":0, "initY":0,"x":100,"y":-300,"bgWidth":400,"bgHeight":280}' >
+			<displayObject properties='{"x":17, "y":60, "width":366, "height":198}' definition='gameUI.icon.Layer' />
+			<displayObject properties='{"x":22, "y":172, "width":355, "height":80}' definition='gameUI.bg.CivilBg' />
+			<displayObject properties='{"x":21, "y":80}' definition='gameUI.icon.Grid1' />	
+			<label properties='{"x":105, "y":67, "color":"0xE7ED97", "stroke":"0x302010", "textID":"530384", "size":16}'/>
+			<imageLoader name="civilPic" properties='{"x":28, "y":87}' />	
+			<label name="dialogText" properties='{"x":105, "y":90, "width":260,  "height":80, "size":16, "autoSize":"none", "multiline":true,  "align":"left", "color":"0xE7ED97", "stroke":"0x302010"}'/>
+			<label name="cdText" properties='{"x":105, "y":142, "width":260,  "height":40,  "size":16,"autoSize":"none", "multiline":true,  "align":"left", "color":"0xE7ED97", "stroke":"0x302010"}'/>
+			<label name="introText" properties='{"x":27, "y":182, "width":350,  "height":60, "size":16, "autoSize":"none", "multiline":true,  "align":"left", "color":"0xE7ED97", "stroke":"0x302010"}'/>
+		</container>
+		
+		
+	</container>
+
+<!--<displayObject definition="gameUI.icon.Line2" properties='{"width":2,"height":90,"x":208,"y":711}'/>
+<displayObject definition="gameUI.icon.Line2" properties='{"width":2,"height":90,"x":445,"y":711}'/>-->
+
+	<!-- 自动占矿设置面板 -->
+	<container name="autoOccupyPanel" properties='{"styleName":"panel3","x":90, "y":200,"bgWidth":500, "bgHeight":520,"maxCount":999}' >
+		<!-- <displayObject definition="gameUI.icon.InputTextBG" properties='{"x":108, "y":62, "width":50}' /> -->
+		
+		<!-- <displayObject definition="gameUI.icon.Line" properties='{"x":22, "y":85, "width":271}' /> -->
+		<displayObject definition="gameUI.icon.Line" properties='{"x":85, "y":219, "width":369}' />
+		<displayObject definition="silverScene.artText.autoMine" properties='{"x":208, "y":10,"mouseEnabled":false}' />
+		<displayObject definition="silverScene.bg.offLine" properties='{"x":58, "y":377,"width":390,"height":44,"mouseEnabled":false}' />
+	<!-- <button name="closeBtn" properties='{"x":447,"y":5 ,"skin":"skin.CloseBtn"}' /> -->
+
+		<label properties='{"x":51, "y":65, "width":240,  "height":40,  "autoSize":"none",  "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "textID":"531006"}'/>
+		
+		<itemGroup name="wayGroup" properties='{"x":57, "y":100, "layout":"vertical"}' />
+		<checkBox name="shareSilverCB" properties='{"x":55, "y":105, "width":32,"height":32, "styleName":"checkBox1"}'  group="wayGroup"/>
+		<checkBox name="onlyOccupySilverCB" properties='{"x":55, "y":165, "width":32,"height":32, "styleName":"checkBox1"}'  group="wayGroup"/>
+		
+		<label name="shareSilverText1" properties='{"x":83, "y":108, "width":100,  "height":28,  "autoSize":"none",  "align":"left", "color":"0xE5EF99", "stroke":"0x302010", "textID":"531002"}'/>
+		<label name="shareSilverText2" properties='{"x":184, "y":108, "width":280,  "height":80, "autoSize":"none",  "align":"left", "color":"0x8D9E3D", "stroke":"0x302010", "textID":"531004","multiline":true}'/>
+		
+		<label name="onlyOccupySilverText1" properties='{"x":83, "y":168, "width":100,  "height":28,  "autoSize":"none",  "align":"left", "color":"0xE5EF99", "stroke":"0x302010", "textID":"531003"}'/>
+		<label name="onlyOccupySilverText2" properties='{"x":184, "y":168, "width":280,  "height":80, "autoSize":"none",  "align":"left", "color":"0x8D9E3D", "stroke":"0x302010", "textID":"531005","multiline":true}'/>
+		
+		
+		<label properties='{"x":51, "y":232, "width":200,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "textID":"531011"}'/>
+		
+		<checkBox name="autoEnterSilverCB" properties='{"x":55, "y":263, "width":32,"height":32, "styleName":"checkBox1"}'  group="wayGroup"/>
+		<checkBox name="autoOccupySilverCB" properties='{"x":55, "y":323, "width":32,"height":32, "styleName":"checkBox1"}'  group="wayGroup"/>
+		
+		<label name="autoEnterSilverText1" properties='{"x":83, "y":266, "width":100,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xE5EF99", "stroke":"0x302010", "textID":"531007"}'/>
+		<label name="autoEnterSilverText2" properties='{"x":184, "y":266, "width":280,  "height":80, "autoSize":"none",  "align":"left", "color":"0x8D9E3D", "stroke":"0x302010", "textID":"531008","multiline":true}'/>
+		
+		<label name="autoOccupySilverText1" properties='{"x":83, "y":326, "width":100,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xE5EF99", "stroke":"0x302010", "textID":"531009"}'/>
+		<label name="autoOccupySilverText2" properties='{"x":184, "y":326, "width":280,  "height":80, "autoSize":"none",  "align":"left", "color":"0x8D9E3D", "stroke":"0x302010", "textID":"531010","multiline":true}'/>
+		
+		
+		<label properties='{"x":120, "y":388, "width":400,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xE5EF99", "stroke":"0x302010", "textID":"520151"}'/>
+		
+		<displayObject name="startBtn"  definition="gameUI2.btn.StartBtn" properties='{"x":196, "y":433, "width":120,  "height":48,"visible":false}' />
+		
+	</container>
+	
+	<!-- 挂机收益面板 -->
+	<container name="endAutoPanel" properties='{"styleName":"panel3","x":120, "y":150,"bgWidth":400, "bgHeight":554,"titleID":"531035"}' >
+		<displayObject definition="gameUI.icon.Line" properties='{"x":57, "y":85, "width":271}' />
+		
+		<displayObject definition="gameUI.icon.Line" properties='{"x":57, "y":465, "width":271}' />
+
+		<label name="autoIntroText" properties='{"x":30, "y":50,  "size":20,"width":340,  "height":30,  "autoSize":"none",  "align":"center", "color":"0xCBCC66", "stroke":"0x302010"}'/>		
+		<list name="incomeList" properties='{"x":70, "y":95, "columnCount":1, "rowCount":4, "horizontalGap":2, "verticalGap":2}' />
+		
+		<button name="exitBtn" properties='{"x":140, "y":490, "width":120,"height":48, "styleName":"button3", "labelID":"531034"}' />
+	</container>
+	
+	<!--银矿事件面板 -->
+	<container name="silverEventPanel" properties='{"x":63, "y":300,"muColor":["gameUI.color.Tips7","gameUI.color.Tips4","gameUI.color.Tips5"]}' >
+		<displayObject definition="silverScence.view.eventBg" properties='{"x":0, "y":0}' />
+		<mcLabel name="titleText" properties='{"x":100, "y":50, "stroke":"0x302010","labelProp":{ "font":"黑体","size":20,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCD67"},"multiColor":"gameUI.color.Tips7"}'/>
+		<label name="countText" properties='{"x":380, "y":50,  "size":16,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xCBCD67", "stroke":"0x302010"}'/>
+		<mcLabel name="contentText" properties='{"x":100, "y":80, "stroke":"0x302010", "labelProp":{"font":"黑体","size":20,"width":305,  "height":60, "multiline":true, "autoSize":"none",  "align":"left", "color":"0xFFFFCC"},"multiColor":"gameUI.color.Tips7"}'/>
+		<displayObject name="selectBtn1" definition="silverScence.btn.silverEventBtn"  properties='{"x":115, "y":140}' />
+		<label name="selectText1" properties='{"x":148, "y":148,  "size":16,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xFFFFCC", "stroke":"0x302010","mouseEnabled":false}'/>
+		<label name="reawrdText1" properties='{"x":350, "y":148,  "size":16,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xFFFFCC", "stroke":"0x302010","mouseEnabled":false}'/>
+		<displayObject name="selectBtn2" definition="silverScence.btn.silverEventBtn"  properties='{"x":115, "y":180}' />
+		<label name="selectText2" properties='{"x":148, "y":188,  "size":16,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xFFFFCC", "stroke":"0x302010","mouseEnabled":false}'/>
+		<label name="reawrdText2" properties='{"x":350, "y":188,  "size":16,"width":270,  "height":30,  "autoSize":"none",  "align":"left", "color":"0xFFFFCC", "stroke":"0x302010","mouseEnabled":false}'/>
+	</container>
+	<sprite name="dropsTip" properties='{"x":220, "y":310}' />
+
+	<!-- ==================================================================分割线===================================================================== -->
+	<!-- ==================================================================分割线===================================================================== -->
+	<!-- ==================================================================分割线===================================================================== -->
+	<!--[银矿结算列表呈示器]2.13-->
+	<EndIncomeItemrenderer properties='{"itemHeight":84,"path":["gemstone32", "treasureMap"]}'>
+		<sprite name="artNum" properties='{"x":90, "y":35,"classPath":"silverScence.get.artistNumber", "align":"left"}'/>	
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"gemstone32", "x":7, "y":7}' />	
+	</EndIncomeItemrenderer>
+	
+	<memberRenderer properties='{"itemHeight":40}'>
+<displayObject definition="gameUI.icon.Line" properties='{"x":5, "y":40,"width":450,"height":3}' />		
+		<label name="nameText" properties='{"x":0, "y":10, "width":140,"size":20, "autoSize":"none", "align":"center", "color":"0xE7ED97", "stroke":"0x302010"}'/>
+		<label name="levelText" properties='{"x":142, "y":10, "width":80, "size":20,"autoSize":"none", "align":"center", "color":"0xE7ED97", "stroke":"0x302010"}'/>
+		<button name="kickBtn" properties='{"x":310, "y":2, "styleName":"button6", "visible":false, "labelID":"530223", "height":38,"width":80}' />
+		<button name="accpetBtn" properties='{"x":225, "y":2, "styleName":"button6", "visible":false, "labelID":"530224", "height":38,"width":80 }' />
+		<button name="refuseBtn" properties='{"x":395, "y":2, "styleName":"button6", "visible":false, "labelID":"530225", "height":38,"width":80}' />
+	</memberRenderer>
+	
+	<!-- 挖矿档次项呈器 -->
+	<DigLvRenderer properties='{"itemHeight":190,"itemWidth":190,"def":["silverScence.btn.oneDigLv","silverScence.btn.twoDigLv","silverScence.btn.threeDigLv"]}'>
+		<displayObject definition="silverScence.bg.selectedDidBG" properties='{"x":0, "y":0,"width":180,"height":180 }' />	
+		<sprite name="digLvIconsp"  properties='{"x":50, "y":35}' />			
+		
+		<buttonBasic name="selectedBtn" properties='{"x":10, "y":135, "skin":"skin.CheckBox1","width":32,"height":32}' />
+		<label name="countText" properties='{"x":60,"y":135, "width":160, "height":28,"size":20, "autoSize":"none","align":"left", "color":"0xFFFFCC", "stroke": "0x2D261E"}'/>	
+	</DigLvRenderer>
+		
+	
+		<!-- 【挖矿设置界面】铁锹价格 项呈器  -->
+	<DigLvPriceRenderer properties='{"itemHeight":96,"itemWidth":246}'>
+		<displayObject definition="silverScence.bg.priceBg" properties='{"x":0, "y":0,"width":246,"height":96 }' />	
+		
+		<displayObject name="iconMC" definition="gameUI.silver.digTool" properties='{"x":8, "y":12, "mouseEnabled":false,"width":70,"height":70}' />			
+				
+		<label name="countText" properties='{"x":85,"y":20, "width":200, "height":30,"size":20, "autoSize":"none","align":"left", "color":"0xCBCC66", "stroke": "0x2D261E", "mouseEnabled":false,"text":"数量：123次"}'/>	
+		<label name="priceText" properties='{"x":85,"y":50, "width":200, "height":30, "size":20,"autoSize":"none","align":"left", "color":"0xCBCC66", "stroke": "0x2D261E", "mouseEnabled":false,"text":"售价：12"}'/>	
+		<displayObject definition="BW.gameUI.icon.gold" properties='{"x":180, "y":55}' />	
+	</DigLvPriceRenderer>
+	
+	<!-- 银矿掉落物品 -->
+	<GetItemRenderer properties='{}'>	
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "mouseEnabled":false}'/>	
+		<imageLoader name="itemIL" properties='{"pathFormatName":"gemstone32", "x":7, "y":7}' />	
+		<label  name="amountText" properties='{"x":7, "y":50, "width":70, "height":30,"size":20,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>	
+	</GetItemRenderer>
+		
+	<!-- 炸弹呈现器 -->
+	<BombItemRenderer properties='{}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0, "width":84, "height":84, "mouseEnabled":false}'/>
+		
+		<imageLoader name="bombPic" properties='{"pathFormatName":"machine32",  "x":7, "y":7, "width":70, "height":70}' />	
+		<!-- <label  name="countText" properties='{"x":0, "y":20, "width":32, "height":20,  "autoSize":"none", "textType":"text", "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>	 -->
+	</BombItemRenderer>
+	
+		<!-- 文官呈现器 -->
+	<CivilOfficalRenderer properties='{}'>
+		<displayObject definition="silverScene.bg.civilBg"  properties='{"x":0 , "y":0, "mouseEnabled":false,"width":44,"height":44}'/>
+		<imageLoader name="officalPic" properties='{"x":1, "y":1}' />	
+		<displayObject name="cdBg" properties='{"x":1, "y":30,"visible":false}' definition='silverScene.civil.cdBg' />
+		<label  name="cdText" properties='{"x":-5, "y":27, "width":50, "height":20,  "autoSize":"none",  "align":"right", "color":"0xFFFFFF", "stroke":"0x302010" , "mouseEnabled":false}'/>	
+	</CivilOfficalRenderer>
+</config>

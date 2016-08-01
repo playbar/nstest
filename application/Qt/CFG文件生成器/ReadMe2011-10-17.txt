@@ -1,0 +1,64 @@
+将文件夹下所有文件拷贝到一个文件夹下，运行CFGBuilder即可
+运行必要文件及文件夹：
+CFGBuilderX.X.exe		主程序
+libgcc_s_dw2-1.dll
+mingwm10.dll
+QtCore4.dll
+QtGui4.dll
+/ModelPic				触屏手机所需要的手机图片
+Model.txt				触屏手机机型
+ModelPicSize.txt		触屏手机图片尺寸
+ModelOffsetSize.txt		触屏手机屏幕偏移尺寸
+ModelScreenSize.txt		触屏手机屏幕大小	
+
+版本说明:
+0.1
+生成器已基本完成
+
+已知BUG:
+1.上传积分URL不可以包含回车，否则URL出错
+2.帮助在读取时会将内容中的回车丢掉
+
+2010-10-21
+版本更新为0.2 对应DTD版本为20101011
+
+1.修正鼠标通常模式读取时列表为空
+2.当cfg文件中mouse_normal_map的virtual_key或mouse_act有一项为空时，丢掉此项
+3.当cfg文件中mouse_table_map的virtual_key或mouse_act有一项为空时，丢掉此项
+4.当cfg文件中key_map的key_pressed或key_map_to有一项为空时，丢掉此项
+5.当cfg文件中touch_map的button_name或button_map_to为空时，丢掉此项
+6.生成的cfg不再包含注释及一些其他无法识别的数据
+7.生成器主窗口的四个标签可以拖动为自己喜欢的顺序
+
+2010-10-25
+版本更新为0.3 对应DTD版本为20101020
+
+1.file_info的default_operate_mode属性变为CDATA类型，不再是(Normal|Table)
+2.网络部分添加积分类型(var|obj)，默认为var类型，在读取时如果此属性值错误，一律采用默认属性
+3.删除txt_define的子元素txt，并修改txt_define为(#PCDATA)
+4.修正sound_define中属性顺序混乱的问题
+5.添加打开，保存，另存为的快捷键，新建，关闭，退出为防止误操作，未添加
+
+2010-10-29
+1.修正帮助部分的小BUG
+
+2010-11-03
+1.按键映射里手机按键已经取消手动输入，更改为真实手机按键选择
+2.映射PC按键也取消手动输入，更改为PC键盘选择
+3.修改一处打开按键的小bug
+4.更改鼠标通常模式中虚拟按键，变更为VK1~VK10
+5.更改鼠标列表模式中虚拟按键，变更为VK1~VK10
+6.更改GROUPTWO中的布局，将按键映射，触屏映射上移
+2010-11-12
+版本更新为0.4
+1.ContengID算法变为对(文件名+文件前100字节数据)进行MD5运算，取结果的前16为作为ContentID
+2.添加CheckBox，可以选择是以前16位MD5或后16位MD5为ContentID3.ContentID右键事件又清除更改为复制到剪贴板，方便用户上传
+
+2010-11-19
+版本更新为0.5
+1.触屏按键的添加已经可以可视化添加，还待优化，且目前只支持第一个方案，其他方案会自动作废
+
+2010-12-03
+版本更新为0.5beta
+1.根据config_20101203.dtd更新，触屏部分还未添加完善，其他的未测试
+2.如属性值为空，该属性不再出现

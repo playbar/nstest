@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>logo/xiaologo.gif</file>
+        <file>logo/E71.png</file>
+        <file>logo/N73.png</file>
+        <file>logo/keymap.png</file>
+        <file>logo/longlock/a.png</file>
+        <file>logo/longlock/b.png</file>
+        <file>logo/longlock/down.png</file>
+        <file>logo/longlock/left.png</file>
+        <file>logo/longlock/right.png</file>
+        <file>logo/longlock/up.png</file>
+        <file>logo/unlonglock/up.png</file>
+        <file>logo/unlonglock/a.png</file>
+        <file>logo/unlonglock/b.png</file>
+        <file>logo/unlonglock/down.png</file>
+        <file>logo/unlonglock/left.png</file>
+        <file>logo/unlonglock/right.png</file>
+    </qresource>
+    <qresource prefix="/Model">
+        <file>logo/NOKIA5800.png</file>
+    </qresource>
+    <qresource prefix="/Spin">
+        <file>logo/Clockwise.png</file>
+        <file>logo/Eastern.png</file>
+    </qresource>
+</RCC>

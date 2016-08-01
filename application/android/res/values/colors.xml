@@ -1,0 +1,12 @@
+<resources>
+	        <drawable name="dark_gray">#8F8F8F</drawable>
+	        <drawable name="light_gray">#EEEEEE</drawable>
+	        <drawable name="white">#FFFFFF</drawable>
+	        <drawable name="black">#000000</drawable>
+	        <drawable name="blue">#2A00FF</drawable>
+	        <drawable name="green">#f0f0</drawable>
+	        <drawable name="yellow">#EFA930</drawable>
+	        <color name="background_color">#a2d03b</color>
+			<color name="text_color">#FFFFFF</color>
+			<color name="dialog_color">#01FFFFFF</color>
+</resources>

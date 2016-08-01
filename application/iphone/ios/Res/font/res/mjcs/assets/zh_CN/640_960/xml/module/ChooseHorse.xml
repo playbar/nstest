@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【背包 面板】配置文件-->
+<config properties='{}'>
+			
+		<!-- 马场新面板（整合）-->
+		<BXRender name="horseInfoPanel" properties='{"width":640,"height":790,"alx":"fit","aly":"fit"}'>
+			<displayObject definition="BW.Com.iconListBack" properties='{"y":0,"width":640,"alx":"fit","height":650,"x":0,"aly":"fit"}'/>
+			<displayObject definition="BW.Com.iconListBack" properties='{"y":650,"width":640,"aly":"bottom","alx":"fit","aly":"bottom","height":170,"x":0}'/>
+			<list name="landList" properties='{"y":690,"horizontalGap":10,"alx":"right","x":50,"aly":"bottom","verticalGap":2,"rowCount":1,"width":390,"defaultSelected":false,"height":88,"columnCount":4}' />
+			<BXButton name="_return" properties='{"aly":"bottom","x":475,"y":715,"width":120,"styleName":"BXButton1","height":60,"label":"返回"}'/>
+			<BXList name="horseSmallList" properties='{"alx":"fit","aly":"fit","x":29,"dir":"v","y":30,"width":583,"styleName":"VList","height":580,"backColor":"0x2E3413"}'>
+				<BXRender properties='{"width":612,"height":135}'>
+						<BXBackBar name="_back" properties='{"clip":[20,20,20,20],"x":0,"y":0,"width":585,"height":135,"image":"BW.Com.listItemBack"}'/>
+						<BXButton name="feedBtn" properties='{"common":true,"height":60,"x":445,"y":54,"width":120,"styleName":"button12","alx":"right","label":"喂养"}'/>
+						<BXRender name="_opt" properties='{"y":19,"width":542,"height":92,"x":23}'>
+							<label name="infoText" properties='{"y":67,"autoSize":"none","size":20,"x":94,"text":"练习赛马的好品种","color":"0xcaca80","width":370,"styleName":"label","height":28,"stroke":0}'/>
+							<label name="costText" properties='{"y":32,"autoSize":"none","size":24,"x":94,"text":90888,"color":"0xe0e0e0","width":370,"styleName":"label","height":28,"stroke":0}'/>
+							<label name="warFareText" properties='{"y":0,"autoSize":"none","size":24,"x":94,"text":9000,"color":"0xcaca80","width":370,"styleName":"label","height":28,"stroke":0}'/>
+														
+							<displayObject definition="farmScene.view.seedItemBg" properties='{"y":5,"width":90,"height":90,"x":0}'/>
+							<imageLoader name="hostlerIL" properties='{"pathFormatName":"horse32","x":11,"y":15,"width":72,"height":72,"fileName":"ma6"}'/>	
+							<label name="nameText" properties='{"alx":"right","align":"center","y":6,"autoSize":"none","styleName":"label","x":408,"text":"三级赤兔","color":"0xffffff","stroke":0,"width":155,"height":28}'/>
+						</BXRender>
+				</BXRender>
+			</BXList>
+
+			<!--container name="horseSmallList" properties='{"x":128, "y":45}' >
+				<list name="list" properties='{"x":0, "y":0, "rowCount":4, "columnCount":1, "horizontalGap":2, "verticalGap":1, "defaultSelected":false}' />
+				<displayObject properties='{"x":214, "y":332, "width":41, "height":18}' definition='skin.page2.PageBG' />
+				<page name="page" properties='{"x":180, "y":334,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":84 },
+								"labelProp":{"x":23, "y":0, "width":64, "height":16, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+			</container-->
+			<BXRender name="foodSkill" properties='{"x":28, "y":36, "baoZhiX":130, "baoZhiLen":270, "msgTextProp":{"x":100, "y":200, "width":400,  "height":40, 
+				"multiline":true, "size":24, "autoSize":"none", "align":"left", "color":"0xFFFFDD", "stroke":"0x302010", "mouseEnabled":false, "omission":false},
+				 "colorArr":["0xFFFFDD","0xFFFF00","0xE46565","0xA861DC"], "moveHeight":50,"alx":"lc"
+			}' >
+						
+			<BXBackBar properties='{"clip":[210,0,270,0],"x":0,"y":0,"width":585,"styleName":"BottomBar","height":200,"image":"chooseHorse.view.itemBG"}'/>
+			<BXBackBar properties='{"clip":[80,60,80,60],"x":0,"y":199,"width":585,"styleName":"BottomBar","height":190,"image":"chooseHorse.view.itemBG2"}'/>
+			<BXBackBar properties='{"clip":[80,60,80,60],"x":0,"y":390,"width":585,"styleName":"BottomBar","height":190,"image":"chooseHorse.view.itemBG2"}'/>
+				<label name="horseName"  properties='{"x":29,"align":"right","y":63,"width":106,"height":28,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":24,"textID":750319,"bold":false,"stroke":"0x302010"}'/>
+				<label  name="lvText" properties='{"mouseEnabled":false,"y":14,"autoSize":"none","size":24,"x":60,"align":"left","color":"0xcbcc66","width":150,"bold":false,"stroke":"0x302010","height":28}'/>
+				<displayObject definition="ChooseHorse.cion.BarBg" properties='{"y":22,"x":211}' />
+				<displayObject definition="ChooseHorse.view.raceIcon" properties='{"y":155,"x":56}'/>
+				<label  properties='{"x":27,"align":"right","y":108,"width":106,"height":28,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":24,"textID":750319,"bold":false,"stroke":"0x302010"}'/>
+				<label name="raceTimes" properties='{"x":90,"align":"left","y":151,"width":330,"height":28,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":20,"textID":750331,"bold":false,"stroke":"0x302010"}'/>
+				<displayObject name="expBar" definition="gameui.icon.expbar" properties='{"y":22,"x":211}' />
+				<displayObject name="pro" definition="ChooseHorse.view.Progress" properties='{"y":112,"x":142}' />
+				<displayObject name="baozhi" definition="ChooseHorse.view.biaoZhi" properties='{"mouseEnabled":false,"y":93,"x":144}' />
+				
+				<label name="expText" properties='{"text":"hello","y":13,"autoSize":"none","size":24,"x":202,"align":"center","color":"0xFFFFCC","width":126,"stroke":"0x302010","height":28}'/>
+				
+				<label name="allAttack" properties='{"x":160,"text":"Hello","y":62,"width":207,"height":28,"align":"left","color":"0xcbcc66","autoSize":"none","size":24,"mouseEnabled":false,"bold":false,"stroke":"0x302010"}'/>
+				<button name="marketBtn" properties='{"enabled":false,"height":48,"x":452,"y":50,"width":105,"styleName":"button3","labelID":750320}' />
+				<button name="giveUpBtn" properties='{"labelID":750312,"x":451,"y":119,"width":105,"styleName":"button5","height":48}' />
+				
+				<list name="foodList" properties='{"rowCount":1,"verticalGap":2,"defaultSelected":false,"x":15,"y":233,"width":420,"height":126,"columnCount":4,"horizontalGap":3}' />
+				
+				<label name="tips" properties='{"mouseEnabled":false,"y":244,"autoSize":"none","size":20,"x":439,"align":"center","color":"0xcbcc66","width":128,"bold":false,"stroke":"0x302010","height":28}'/>
+				<label  name="foodNumText" properties='{"mouseEnabled":false,"y":216,"autoSize":"none","size":24,"x":459,"align":"center","color":"0xDEBB46","width":88,"bold":false,"stroke":"0x302010","height":28}'/>
+				<button name="jiaSuFaYuBtn" properties='{"height":48,"x":452,"y":273,"width":105,"styleName":"button5","labelID":750332}' />
+				<displayObject definition='gameUI.icon.Gold' properties='{"mouseEnabled":false,"y":335,"x":521}' />
+				<label name="costText" properties='{"mouseEnabled":false,"y":326,"autoSize":"none","size":24,"x":460,"align":"right","color":"0xFFFFCC","width":60,"border":false,"stroke":"0x302010","height":28}'/>
+				
+				
+					
+				<label name="freeText"  properties='{"mouseEnabled":false,"y":534,"autoSize":"none","size":24,"width":248,"x":109,"align":"center","color":"0xcbcc66","stroke":"0x302010","border":false,"height":28}'/>	
+
+				
+				<label  name="matchNum" properties='{"mouseEnabled":false,"y":400,"autoSize":"none","bold":false,"size":24,"x":458,"align":"center","color":"0xDEBB46","stroke":"0x302010","width":88,"height":28}'/>
+				<list  name="skillList" properties='{"rowCount":1,"verticalGap":2,"defaultSelected":false,"x":15,"y":406,"width":420,"height":126,"columnCount":4,"horizontalGap":3}' />
+				<button  name="startRaceBtn" properties='{"labelID":750103,"x":452,"y":431,"width":105,"styleName":"button5","height":48}' />
+				<button  name="refreshBtn" properties='{"labelID":750102,"x":452,"y":491,"width":105,"styleName":"button3","height":48}' />	
+								
+                
+				<displayObject definition="gameUI.icon.Gold"  properties='{"y":549,"visible":false,"width":17,"height":11,"x":532}'/>
+				<label name="refreshCostText" properties='{"mouseEnabled":false,"y":542,"visible":false,"autoSize":"none","size":24,"x":448,"align":"left","color":"0xcbcc66","stroke":"0x302010","width":77,"height":28}'/>
+				
+				<displayObject name="breakOutMC" definition="farmScene.cion.BreakOut" properties='{"mouseEnabled":false,"y":256,"visible":false,"x":197,"mouseChildren":false}' />		
+
+			</BXRender>
+			<BXRender name="marketPanel" properties='{"x":28, "y":36,"alx":"lc"}' >				
+				<displayObject definition="ChooseHorse.view.markBG"  properties='{"x":-9, "y":-8}'/>
+				
+				<label properties='{"textID":750315,"bold":false,"stroke":"0x302010","x":10,"align":"center","y":25,"width":244,"height":24,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":20,"border":false}'/>
+				<label properties='{"textID":750316,"bold":false,"stroke":"0x302010","x":298,"align":"center","y":25,"width":246,"height":24,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":20,"border":false}'/>
+				<label properties='{"textID":750317,"bold":false,"stroke":"0x302010","x":305,"align":"center","y":224,"width":238,"height":24,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":20,"border":false}'/>
+				<label properties='{"textID":750322,"bold":false,"stroke":"0x302010","x":12,"align":"center","y":214,"width":257,"height":24,"mouseEnabled":false,"color":"0xcbcc66","autoSize":"none","size":20,"border":false}'/>
+				
+				<sprite name="att1" properties='{"x":140, "y":335,"classPath":"gameUI.icon.StarNumber", "align":"center"}'/>
+				<sprite name="att2" properties='{"x":140, "y":100,"classPath":"gameUI.icon.StarNumber", "align":"center"}'/>
+				<sprite name="att3" properties='{"x":440, "y":100,"classPath":"gameUI.icon.StarNumber", "align":"center"}'/>
+				<sprite name="att4" properties='{"x":440, "y":310,"classPath":"gameUI.icon.StarNumber", "align":"center"}'/>
+				
+				<button name="upgradeEquipBtn" properties='{"x":82,"y":415,"width":120,"styleName":"button5","height":48,"labelID":460835}' />
+				<button name="harvestBtn" properties='{"x":383,"y":416,"width":120,"styleName":"button3","height":48,"labelID":460831}' />
+				<list name="equipList" properties='{"width":255,"rowCount":1,"x":19,"y":244,"columnCount":3,"verticalGap":3,"height":76,"horizontalGap":5}' />
+				
+				<!-- 升级马具界面 -->
+				<container name="upgradeHorseEquip" properties='{
+					"styleName":"panel2","bgWidth":570, "bgHeight":425}'>
+					<displayObject definition="gameUI.icon.Layer" properties='{"y":50,"width":534,"height":357,"x":17}' />
+					<displayObject definition="gameUI.icon.BlackBG" properties='{"y":62,"width":319,"height":235,"x":221}' />
+					<displayObject definition="gameUI.bg.GimpFrame" properties='{"y":69,"width":307,"height":183,"x":227}' />
+					<displayObject definition="gameUI.icon.TextBG" properties='{"y":252,"width":303,"height":39,"x":236}' />
+
+					<label name="nameText" properties='{"y":255,"autoSize":"none","size":24,"x":236,"align":"center","color":"0xFFFFCC","width":303,"stroke":"0x302010","height":28}'/>
+					<label name="attText" properties='{"y":110,"autoSize":"none","bold":true,"size":28,"x":236,"align":"center","color":"0xDEBB46","width":303,"stroke":"0x302010","height":33}'/>
+
+					<list name="levelList" properties='{"y":62,"height":232,"x":24,"horizontalGap":0,"rowCount":4,"width":192,"verticalGap":0,"columnCount":1}' />
+					<list name="equipList" properties='{"y":147,"height":80,"x":263,"horizontalGap":3,"rowCount":1,"width":240,"verticalGap":3,"columnCount":3}' />
+					
+					<displayObject name="priceIcon" definition="gameUI.icon.Price" properties='{"y":363,"x":422}' />
+					<label name="priceText" properties='{"y":360,"autoSize":"none","size":24,"x":257,"align":"right","color":"0xFFFFCC","width":150,"stroke":"0x302010","height":28}'/>
+					<button name="upgradeBtn" properties='{"x":314,"y":306,"width":120,"styleName":"button5","labelID":460839,"height":48}' />
+				</container>		
+			</BXRender>
+			<!-- 马农升级提示界面 -->
+			<BXRender name="hostlerUp" properties='{"x":100, "y":400,"mouseEnabled":false,"alx":"map","aly":"map"}'>
+				<displayObject definition="ChooseHorse.view.hostlerBG" properties='{"x":0, "y":0, "mouseEnabled":false}' />
+				<label name="lvText" properties='{"x":95, "y":77, "width":254,  "height":32, "bold":true, "size":28, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0x302010", "mouseEnabled":false}'/>
+				<label properties='{"textID":"750326", "x":0, "y":130, "width":440,  "height":24, "bold":true, "size":20, "autoSize":"none", "align":"center", "color":"0xFFFF00", "stroke":"0x302010", "mouseEnabled":false}'/>
+			</BXRender>	
+		</BXRender>
+		
+		<!-- 马的呈视器 -->
+	<horseRenderer properties='{"itemWidth":40,"itemHeight":40}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="horseIL" properties='{"pathFormatName":"horse32",  "x":4, "y":4, "width":32, "height":32}' />
+	</horseRenderer>
+	<!-- 马技能的呈视器 -->
+	<horseSkillRenderer properties='{"itemWidth":55}'>
+		<displayObject definition="chooseHorse.view.HorseSkillItem"  properties='{"x":0 , "y":0}'/>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":34 , "y":20}'/>
+		<imageLoader name="horseSkillIL" properties='{"pathFormatName":"horseSkill32",  "x":38, "y":24, "width":32, "height":32}' />
+		<label name="introText" properties='{"x":15, "y":66, "width":83,  "height":100, "multiline":true,  "size":12, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010", "mouseEnabled":false}'/>
+		<label name="levelText" properties='{"x":8, "y":165, "width":93,  "height":35, "size":22, "autoSize":"none", "align":"center", "color":"0xDEBB46", "stroke":"0x302010", "mouseEnabled":false, "bold":true}'/>
+		<button name="upgradeBtn" properties='{"x":14, "y":206, "styleName":"button5", "labelID":"750104", "width":80}' />
+		<displayObject definition="gameUI.icon.Gold"  properties='{"x":30 , "y":235}'/>
+		<label name="costText" properties='{"x":50, "y":232, "width":50,  "height":22, "size":12, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}'/>
+	</horseSkillRenderer>
+	<!--马食物呈视器 -->	
+	<horseFoodRenderer properties='{"itemWidth":102}'>
+		<displayObject definition="ChooseHorse.view.itemBG"  properties='{"y":0,"width":102,"height":126,"x":0}'/>	
+		<imageLoader name="foodIL" properties='{"pathFormatName":"horseFood", "x":27, "y":27, "width":48, "height":48, "mouseEnabled":false}' />	
+		<displayObject name="priceIcon" definition='gameUI.icon.Price' properties='{"mouseEnabled":false,"y":103,"x":73}' />
+		<label name="tipText" properties='{"x":8,"align":"right","y":47,"width":70,"height":30,"textID":750323,"mouseEnabled":false,"color":"0xDEBB46","autoSize":"none","size":24,"stroke":"0x302010","bold":true}' />
+		<label name="priceText" properties='{"mouseEnabled":false,"y":94,"autoSize":"none","size":24,"x":0,"align":"right","color":"0xFFFFCC","stroke":"0x302010","width":70,"height":28}' />
+	</horseFoodRenderer>
+	<!--马匹界面左边地块呈视器 -->
+	<horseLandRenderer properties='{"itemHeight":86}'>
+		<displayObject definition="ChooseHorse.view.HeadBG" properties='{"x":0, "y":0}' />
+		<displayObject name="kong" definition="ChooseHorse.view.HeadKongBG" properties='{"x":0, "y":0, "visible":false}' />
+		<displayObject name="unOpen" definition="ChooseHorse.view.UnOpen" properties='{"x":8, "y":8, "visible":false}' />
+		<displayObject name="selectedBG" definition="ChooseHorse.view.selected" properties='{"x":-2, "y":-2, "visible":false}' />
+		<imageLoader name="hostlerIL" properties='{"pathFormatName":"horse70", "fileName":"ma1", "x":9, "y":9, "width":70, "height":70}' />	
+		<label name="marketText" properties='{"x":9, "y":60, "width":70, "height":18, "size":12, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "border":false}' />
+	</horseLandRenderer>
+	<!--马崽的呈视器 -->	
+	<!--horseSmallRenderer properties='{"itemHeight":82}'>
+		<displayObject definition="ChooseHorse.view.ChooseHouseItem" properties='{"x":0, "y":0}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":22, "y":15}' />
+		<imageLoader name="hostlerIL" properties='{"pathFormatName":"horse32",  "x":26, "y":19, "width":32, "height":32}' />	
+		<label name="nameText" properties='{"x":12, "y":57, "width":60, "height":18, "size":12, "autoSize":"none", "align":"center", "color":"0xcbcc66", "stroke":"0x302010"}' />
+		<label name="warFareText" properties='{"x":82, "y":16, "width":170, "height":18, "size":12, "autoSize":"none", "align":"left", "color":"0xcbcc66", "stroke":"0x302010"}' />
+		<label name="costText" properties='{"x":82, "y":40, "width":170, "height":18, "size":12, "autoSize":"none", "align":"left", "color":"0xcbcc66", "stroke":"0x302010"}' />
+		<label name="infoText" properties='{"x":202, "y":40, "width":200, "height":36, "size":12, "autoSize":"none", "align":"left", "color":"0xcbcc66", "stroke":"0x302010", "multiline":true}' />
+		<button name="feedBtn" properties='{"x":372, "y":16, "width":70, "styleName":"button5", "labelID":"460816"}' />
+	</horseSmallRenderer-->
+	<!--马技能呈视器 -->
+  <skillRenderer properties='{"itemWidth":102}'>
+		<displayObject definition="ChooseHorse.view.itemBG"  properties='{"y":0,"width":102,"height":126,"x":0}'/>	
+		<imageLoader name="horseSkillIL" properties='{"pathFormatName":"horseSkill32", "x":27, "y":27, "width":48, "height":48, "mouseEnabled":false}' />	
+		<displayObject definition='gameUI.icon.Gold' properties='{"mouseEnabled":false,"y":104,"x":60}' />
+		<label name="levelText" properties='{"x":19,"text":"lv.4","y":50,"width":57,"height":28,"align":"right","color":"0xDEBB46","autoSize":"none","size":24,"mouseEnabled":false,"stroke":"0x302010","bold":true}'/>
+		<label name="priceText" properties='{"text":200,"y":94,"autoSize":"none","size":24,"x":6,"align":"right","color":"0xFFFFCC","stroke":"0x302010","width":49,"height":28,"mouseEnabled":false}' />
+	</skillRenderer>
+	<!-- 马具的呈视器 -->
+	<horseEquipRenderer properties='{"itemWidth":80,"itemHeight":80, "equipName":["maan","mabian","mati"]}'>
+		<displayObject definition="gameUI.icon.Grid1"  properties='{"x":0 , "y":0,"width":80,"height":80}'/>
+		<imageLoader name="equipIL" properties='{"pathFormatName":"horseEquip32",  "x":8, "y":8, "width":64, "height":64}' />
+	</horseEquipRenderer>
+	<!-- 马具等级的呈视器 -->
+	<horseEquipTypeRenderer properties='{"itemWidth":192,"itemHeight":58}'>
+		<displayObject name="bg" definition="farmScene.cion.GradeItemBG"  properties='{"x":0 , "y":0,"width":192,"height":58}'/>
+		<label name="nameText" properties='{"x":0, "y":16, "width":192, "height":28, "size":24, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</horseEquipTypeRenderer>
+	
+	<!-- 赛马进度呈现器 -->
+	<horseProgressRenderer properties='{"itemWidth":20,"itemHeight":17}'>
+		<displayObject name="pro" definition="ChooseHorse.view.Progress"  properties='{"x":0 , "y":0}'/>
+		<label name="tipsText" properties='{"x":0, "y":0, "width":30, "height":20, "size":12, "bold":false, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</horseProgressRenderer>
+</config>

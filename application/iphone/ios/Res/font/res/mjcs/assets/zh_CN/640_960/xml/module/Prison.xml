@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--监狱系统-->
+<config properties='{"styleName":"panel3","initX":0, "initY":0, "bgWidth":620, "bgHeight":820, "titleID":"510101" }'>
+<!--			<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>  -->
+	<modalBG name="modal" properties='{"alpha":0.3}' />
+	
+	<!--敌人的监狱（我被关进去的监狱） -->
+	<container name="enemyPrison" properties='{"x":110, "y":75, "showEffectDuration":0, "hideEffectDuration":0}' >
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":20, "y":55, "width":360, "height":600}' />
+		<label name="enemyNameText" properties='{"x":25, "y":65, "color":"0xE5DB4E", "stroke":"0x302010", "bold":true, "size":20}'/>
+		<button name="seeBtn" properties='{"x":155, "y":95, "styleName":"button6", "labelID":"670010", "width":100, "height":34}' />
+		<button name="wantBtn" properties='{"x":260, "y":95, "styleName":"button6", "labelID":"640120", "width":100, "height":34}' />
+		<label name="wantCostText" properties='{"x":240, "y":65, "color":"0xFFFFCB","size":20, "stroke":"0x302010", "bold":true, "width":100,  "autoSize":"none", "align":"right"}'/>
+		<displayObject definition="gameUI.icon.Copper" properties='{"x":340, "y":70}' />
+		
+		<displayObject definition="prison.view.roomBG" properties='{"x":25, "y":130, "width":350, "height":170}' />
+	<!--	<displayObject definition="prison.view.enemyPrisonBG" properties='{"x":34, "y":99}' /> -->
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":80, "y":145}' />
+		<imageLoader name="generalIL" properties='{"pathFormatName":"generalPic70", "x":87, "y":152,"width":70,"height":70}' />
+		<displayObject name="window" definition="prison.view.WindowBG" properties='{"x":108, "y":126}' />
+		<label name="myNameText" properties='{"x":62, "y":235, "color":"0xFFFFCB", "stroke":"0x302010", "bold":true, "size":20, "width":120,  "autoSize":"none", "align":"center"}'/>
+		<label name="flogText" properties='{"x":34, "y":265, "color":"0xFF0000", "stroke":"0x302010", "bold":true, "size":20, "width":340,  "autoSize":"none", "align":"center"}'/>
+	
+		<button name="runBtn" properties='{"x":170, "y":145, "styleName":"button5", "labelID":"640122", "width":100,"height":40}' />
+		<label name="freeCDText" properties='{"x":280, "y":152,"size":20, "color":"0xFFFFCB", "stroke":"0x302010", "bold":true}'/>
+		<button name="bailBtn" properties='{"x":170, "y":195, "styleName":"button6", "labelID":"640123", "width":100,"height":40}' />
+		<label name="bailCostText" properties='{"x":280, "y":202,"size":20, "color":"0xFFFFCB", "stroke":"0x302010", "bold":true}'/>
+		<displayObject definition="gameUI.icon.Copper" properties='{"x":340, "y":208}' />
+		
+	<!--	<displayObject definition="gameUI.icon.Layer" properties='{"x":280, "y":40, "width":367, "height":383}' /> -->
+	
+		<list name="enemyPrisonerList" properties='{"x":38, "y":310, "columnCount":3, "rowCount":2, "defaultSelected":false}' />
+		<displayObject properties='{"x":160, "y":610, "width":60, "height":30}' definition='skin.page2.PageBG' />		
+		<page name="page" properties='{"x":115, "y":610,
+			"pervBtnProp":{"skin":"skin.page2.PrevBtn"},
+			"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":120 },
+			"labelProp":{"x":45, "y":0, "width":60, "height":30,"size":20, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+		}' />
+	</container>
+	
+	
+	<!--敌人的俘虏renderer-->
+	<enemyPrisonerRenderer properties='{"itemWidth":108, "itemHeight":145}'>
+		<displayObject definition="prison.view.roomBG" properties='{"x":0, "y":0, "width":108, "height":145}' />
+		<displayObject definition="gameUI.icon.Grid1" properties='{"x":12, "y":10}' />
+		<imageLoader name="generalIL" properties='{"pathFormatName":"generalPic70", "x":19, "y":17,"width":70,"height":70}' />
+		<displayObject name="window" definition="prison.view.WindowBG" properties='{"x":14, "y":10}' />
+		<label name="nameText" properties='{"x":0, "y":98, "color":"0xFFFFCB", "stroke":"0x302010", "width":108,  "autoSize":"none", "align":"center", "bold":true, "size":16, "mouseEnabled":false}'/>
+		<label name="freeCDText" properties='{"x":0, "y":118, "size":16,"color":"0xFFFFCB", "stroke":"0x302010", "width":108,  "autoSize":"none", "align":"center", "bold":true, "mouseEnabled":false}'/>
+	</enemyPrisonerRenderer>
+	<!--我的监狱-->
+	<container name="myPrison" properties='{"x":0, "y":0}' >
+		<displayObject definition="gameUI.icon.Layer" properties='{"x":18, "y":50, "width":575, "height":747}' />
+     <BXBackBar properties='{"width":575,"height":200,"x":18,"y":600,"styleName":"VerListItem"}'/>
+		<!--<displayObject definition="prison.view.RateBG" properties='{"x":18, "y":290, "width":575, "height":262}' />-->
+		<label properties='{"x":25, "y":55, "color":"0x637b30", "stroke":"0x302010", "size":24, "textID":"640043", "bold":true}'/>
+		
+		
+		
+		
+		<list name="myPrisonerList" properties='{"x":60, "y":90, "columnCount":3, "rowCount":3, "horizontalGap":3, "verticalGap":3, "defaultSelected":false}' />
+		
+		
+		<container name="workingInPrison" properties='{"x":0, "y":312}' >
+			<label properties='{"x":10, "y":303, "color":"0xE5DA4D","autoSize":"none","align":"center", "stroke":"0x302010", "size":16, "textID":"640010" ,"width":582}'/>
+			<label properties='{"x":25, "y":340, "color":"0xCBCD67","width":90, "stroke":"0x302010", "size":16, "textID":"640038"}'/>
+			<!--<label properties='{"x":25, "y":345, "color":"0xCBCD67","width":120,  "stroke":"0x302010", "size":12, "textID":"640039"}'/>-->
+			<list name="rewardList" properties='{"x":143, "y":365, "columnCount":6, "rowCount":1, "horizontalGap":16,"defaultSelected":false}' />			
+			<displayObject name="rewardBtn" definition="prison.view.BoxBtn" properties='{"x":260, "y":405}' />
+			<displayObject name="lightEffect" definition="gameUI.giiftBag.lightEffect" properties='{"x":287, "y":438, "mouseEnabled":false, "visible":false}' />
+			<displayObject name="rateBG" definition="prison.view.RateNew"  properties='{"x":120 , "y":340}'/>
+			<displayObject name="rate" definition="prison.view.RateIn"  properties='{"x":123 , "y":346, "visible":false, "mouseEnabled":false}'/>
+			<label name="rateText" properties='{"text":"rate","x":120, "y":339,"size":16, "width":420,"height":24,"align":"center", "color":"0xFFFFCC", "stroke":"0x302010","border":false,"autoSize":"none", "visible":false, "mouseEnabled":false}' />
+			<label name="speedText" properties='{"text":"speed","x":18, "y":360, "size":16,"width":100,"height":24,"align":"center", "color":"0xFFFFCC", "stroke":"0x302010","border":false,"autoSize":"none", "mouseEnabled":false}' />
+			<sprite name="rewardTips" properties='{"x":220, "y":130}' />
+		</container>
+		<label name="messageText" properties='{"text":"message","x":10, "y":692,"width":575, "autoSize":"none","align":"center", "color":"0xE5DA4D", "stroke":"0x302010", "size":20}'/>
+	</container>
+	<!--我的俘虏renderer-->
+	<myPrisonerRenderer properties='{"itemWidth":167, "itemHeight":167}'>
+		<displayObject definition="prison.view.roomBG" properties='{"x":0, "y":0, "width":147, "height":167}' />
+		<displayObject name="generalBG" definition="gameUI.icon.Grid1" properties='{"x":33, "y":30}' />
+		<imageLoader name="generalIL" properties='{"pathFormatName":"generalPic40", "x":40, "y":37,"width":69,"height":69}' />
+		<!--<displayObject name="window" definition="prison.view.WindowBG" properties='{"x":19, "y":8}' />-->
+		<label name="lvText" properties='{"x":40, "y":87, "size":18,"width":70,"height":30,"align":"center", "color":"0xCBCD67", "stroke":"0x302010","border":false,"autoSize":"none", "mouseEnabled":false, "bold":false}' />
+		<label name="freeCDText" properties='{"size":18,"x":50, "y":85, "color":"0xCBCD67", "stroke":"0x302010", "width":50,  "autoSize":"none", "align":"center", "mouseEnabled":false, "bold":false}'/>	
+		<label name="nameText" properties='{"x":0, "y":4, "color":"0xCBCD67", "stroke":"0x302010", "width":147,  "autoSize":"none", "align":"center", "bold":false, "size":18}'/>
+		
+		<button name="flogBtn" properties='{"x":5, "y":130, "styleName":"button5", "labelID":"640011", "width":60, "height":30}' />
+		<button name="setFreeBtn" properties='{"x":75, "y":130, "styleName":"button6", "labelID":"640012", "width":60, "height":30}' />
+		
+		<label name="costText" properties='{"x":37, "y":105, "color":"0xCBCD67", "stroke":"0x302010", "bold":false}'/>
+		<displayObject name="goldIcon" definition="gameUI.icon.Copper" properties='{"x":90, "y":112}' />
+		<displayObject name="lock" definition="prison.view.Lock" properties='{"x":55, "y":50}' />
+		<label name="addSizeTips" properties='{"size":16,"x":2, "y":80, "color":"0xFFFFCB", "stroke":"0x302010", "width":140,  "autoSize":"none", "align":"center", "textID":"640013", "visible":false, "bold":true}' />
+		<button name="addSizeBtn" properties='{"x":47, "y":110, "styleName":"button5", "labelID":"640014", "width":60, "height":30, "visible":false}' />
+	</myPrisonerRenderer>
+
+	<!--工作奖励 项呈器-->
+	<workRewardRenderer properties='{"itemWidth":52, "itemHeight":70}'>
+		<displayObject name="arrow" definition='prison.view.Arrow' properties='{"x":15, "y":0,"visible":true}'/>
+		<label name="nameText" properties='{"x":4, "y":17, "size":16,"width":52,"height":30,"align":"center", "color":"0xCBCD67", "stroke":"0x302010","border":false,"autoSize":"none", "mouseEnabled":false}' />
+		<label name="lvText" properties='{"x":4, "y":37,"size":16, "width":52,"height":30,"align":"center", "color":"0xCBCD67", "stroke":"0x302010","border":false,"autoSize":"none", "mouseEnabled":false}' />
+	</workRewardRenderer>
+	
+</config>

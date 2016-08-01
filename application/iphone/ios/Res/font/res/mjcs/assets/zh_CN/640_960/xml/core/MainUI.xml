@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--核心UI配置文件-->
+<config>
+
+	<!--加载条-->
+	<loadBar properties='{"x":335, "y":260}' >
+		<modalBG name="modalBG" properties='{"alpha":0.6}' />
+		<displayObject name="view" definition="mainUI.view.LoadBar" />
+	</loadBar>
+	
+	<!--将与服务端通信的请求进行模态的界面-->
+	<requestModal properties='{"bgSemiModalAlpha":0.01, "bgModalAlpha":0.2}' >
+		<modalBG name="modalBG" />
+		<displayObject name="view" definition="mainUI.view.RequestModal" />
+		<button name="closeBtn" properties='{"x":30, "y":50, "width":60, "styleName":"button1", "labelID":"010405"}' />
+		<alertText patent="null" properties='{"key":"serviceError", "size":20, "color":"0xCC3300", "topLayerShow":true, "autoRemove":true}' /> 
+		<alertText patent="null" properties='{"key":"public", "topLayerShow":true, "autoRemove":true}' /> 
+	</requestModal>
+	
+	
+	<!--npc对话框（左侧）-->
+	<avatarDialog1 properties='{
+		"actionBtnPaddingTop": 23,
+		"actionBtnProp":{"skin":"mainUI.btn.NpcDialogAction", "style":{"hAlign":"left", "labelPaddingLeft":12}},
+		"centerPoint":{"x":260, "y":220},
+		"arrPoint":{"x":160, "y":135}
+	}'>
+		<displayObject definition="mainUI.bg.NpcDialog" />
+		<buttonBasic name="closeBtn" properties='{"x":482, "y":6, "skin":"skin.CloseBtn"}' />
+		<imageLoader name="picLoader" properties='{"x":170, "y":164, "pathFormatName":"feature"}' />
+		<label name="nameText" properties='{"x":180, "y":27, "size":14, "bold":true, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<verbatimText name="contentText" properties='{"x":180, "y":47, "width":307, "multiline":true, "color":"0xFFFFCC", "stroke":"0x302010", "allTimer":1000}' />
+		<sprite name="actionBtnC" properties='{"x":180, "y":80}' />
+	</avatarDialog1>
+	
+	<!--角色对话框（右侧）-->
+	<avatarDialog2 properties='{
+		"actionBtnPaddingTop": 23,
+		"actionBtnProp":{"skin":"mainUI.btn.NpcDialogAction", "style":{"hAlign":"left", "labelPaddingLeft":12}},
+		"centerPoint":{"x":260, "y":220},
+		"arrPoint":{"x":332, "y":315}
+	}'>
+		<displayObject definition="mainUI.bg.NpcDialog" />
+		<buttonBasic name="closeBtn" properties='{"x":6, "y":6, "skin":"skin.CloseBtn"}' />
+		<imageLoader name="picLoader" properties='{"x":340, "y":164, "pathFormatName":"feature", "scaleX":-1}' />
+		<label name="nameText" properties='{"x":30, "y":27, "size":14, "bold":true, "color":"0xFFFFFF", "stroke":"0x302010"}' />
+		<verbatimText name="contentText" properties='{"x":30, "y":47, "width":307, "multiline":true, "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<sprite name="actionBtnC" properties='{"x":30, "y":100}' />
+	</avatarDialog2>
+	<!--	装备图片（含颜色外框）-->
+	<equipIcon properties='{"delayGetData":0.3}' >
+		<imageLoader name="itemIL" properties='{"pathFormatName":"equip32", "x":0, "y":0}' />
+		<imageLoader name="frameIL" properties='{"pathFormatName":"equipColorFrame32", "x":0, "y":0}' />
+		<displayObject name="starIcon" definition="gameUI.icon.Star" properties='{"x":48, "y":46, "visible":false}'/>		
+		<label name="starText" properties='{"x":0, "y":47, "width":50, "height":30,"size":16, "autoSize":"none", "align":"right", "color":"0xCFCF80", "stroke":"0x302010", "visible":false}' />
+	</equipIcon>
+	<!--场景对话框452，467-->
+	<sceneDialog properties='{
+		"leftImgPos": ["258,635","381,635","497,635"],
+		"rightImgPos": ["381,635","259,635","143,635"],
+		"imgPathName":"feature",
+		"autoNextDelay":5,
+		"delay":1500,
+		"landDefiniton":"mainUI.mc.landProve"}'>
+		<modalBG/>
+		<sprite name="imgLoaderC" />
+		<sprite name="goodsC" properties='{"x":270,"y":420}'/>
+		<displayObject definition="mainUI.bg.SceneDialog" />
+		<displayObject name="leftNameBg" definition="mainUI.bg.HeroNameBg" properties='{"x":0, "y":635}' />
+		<displayObject name="rightNameBg" definition="mainUI.bg.HeroNameBg" properties='{"x":723, "y":635}' />
+		<!--<displayObject name="mouseIcon" definition="mainIU.icon.MousePic" properties='{"x":517, "y":765}' />-->
+		
+		<label name="leftNameText" properties='{"x":67, "y":646, "width":125, "size":24, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<label name="rightNameText" properties='{"x":430, "y":646, "width":125, "size":24, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<verbatimText name="contentText" properties='{"x":70, "y":684, "size":24, "bold":true, "font":"黑体", "width":447, "multiline":true,"autoSize":"none", "align":"left",  "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<!-- <label name="contentText" properties='{"x":275, "y":444, "size":24, "bold":true, "font":"黑体", "width":447, "multiline":true,"autoSize":"none", "align":"left",  "color":"0xFFFFCC", "stroke":"0x302010"}' /> -->
+		<label name="continueText" properties='{"x":529, "y":802, "size":24, "underline":true, "color":"0xA5CD61", "stroke":"0x302010", "textID":"040001"}' />
+		<button name="sureBtn" properties='{"x":529, "y":802, "styleName":"button3", "labelID":"040002", "height":32, "width":72, "visible":false, "style":{"labelStyle":{"size":16, "bold":true}}}' />
+	</sceneDialog>
+	<!-- 新的场景对话 -->
+	<NewScenceDialog properties='{
+		"leftImgPos": ["258,635","381,635","497,635"],
+		"rightImgPos": ["381,635","619,635","503,635"],
+		"contentPos":["70,684","70,684"],
+		"imgPathName":"feature",
+		"autoNextDelay":10		
+		}'>
+		<modalBG/>
+		<sprite name="imgLoaderC" />
+		
+		<displayObject name="bg" definition="mainUI.bg.SceneDialog" />
+		<displayObject name="leftNameBg" definition="mainUI.bg.HeroNameBg" properties='{"x":0, "y":635}' />
+		<displayObject name="rightNameBg" definition="mainUI.bg.HeroNameBg" properties='{"x":363, "y":635}' />
+		<!--<displayObject name="mouseIcon" definition="mainIU.icon.MousePic" properties='{"x":517, "y":765,"visible":false}' />-->
+		
+		<label name="leftNameText" properties='{"x":67, "y":646, "width":125, "size":24, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<label name="rightNameText" properties='{"x":430, "y":646, "width":125, "size":24, "bold":true, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010"}' />
+		<verbatimText name="contentText" properties='{"x":70, "y":684, "size":24, "bold":true, "font":"黑体", "width":500,"height": 140,"multiline":true,"autoSize":"none", "align":"left",  "color":"0xFFFFCC", "stroke":"0x302010","textShowSpeed":1,"delay":50}' />	
+		
+		<list name="btnList" properties='{"x":213, "y":760, "rowCount":20, "columnCount":1, "horizontalGap":2, "verticalGap":2, "visible":false,"defaultSelected":false}' />
+		
+		<label name="continueText" properties='{"x":529, "y":802, "size":24, "underline":true, "color":"0xA5CD61", "stroke":"0x302010", "textID":"040001","visible":false}' />
+		
+	</NewScenceDialog>
+	
+	
+	<!--新的场景对话 按钮呈视器-->
+	<DialogBtnRenderer properties='{}'>
+		<displayObject name="selectedBtn" definition='mainUI.btn.dialogBtn' properties='{"x":0, "y":0}'/>		
+		<label name="contentText" properties='{"x":40, "y":12,"width":300, "height":30, "size":20, "color":"0x99FF00", "autoSize":"none", "align":"left",  "stroke":"0x302010", "mouseEnabled":false}' />
+	</DialogBtnRenderer>
+	
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:drawable="@drawable/bar_home" /> <!-- pressed -->
+    <item android:state_focused="true"
+          android:drawable="@drawable/bar_home" /> <!-- focused -->
+    <item android:drawable="@drawable/bar_home_touch" /> <!-- default -->
+</selector>

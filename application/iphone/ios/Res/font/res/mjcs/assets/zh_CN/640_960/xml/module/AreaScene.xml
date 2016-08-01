@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--【地区场景】配置文件-->
+<config properties='{"silverBtnPositionArr":[{"x":315, "y":269}, {"x":253, "y":364}, {"x":50, "y":452},{"x":363, "y":146},{"x":422,"y":96},{"x":490,"y":550},{"x":85,"y":121},{"x":105,"y":85},{"x":90,"y":130}]
+
+	}'>
+	
+
+	<sprite name="viewC" />
+
+	<displayObject name="backBtn" definition="areaScene.btn.Back" properties='{"x":525, "y":720}' />
+	<displayObject name="prevBtn" definition="areaScene.btn.Prev" properties='{"x":28, "y":15, "visible":false}' />
+	<displayObject name="nextBtn" definition="areaScene.btn.Next" properties='{"x":538, "y":15, "visible":false}' />
+	<displayObject name="frontierBtn" definition="areaScene.btn.Frontier" properties='{"x":31, "y":720, "visible":false}' />
+	<displayObject name="silverBtn" definition="areaScene.btn.Silver" properties='{"x":31, "y":720, "visible":false}' />
+	<displayObject name="manzuBtn" definition="areaScene.btn.ManzuBtn" properties='{"x":125, "y":720, "visible":false}' />
+	<displayObject name="expInstance" definition="areaScene.btn.expInstance" properties='{"x":234, "y":720, "visible":true}' />
+
+	<displayObject name="titleMC" definition="areaScene.view.Title" properties='{"x":76, "y":68}' />
+	
+	<!--显示区背景样式-->
+	<!--<BXBackBar properties='{"y":134,"width":610,"styleName":"VerList","clip":[30,30,30,30],"height":540,"x":14}'/>-->
+
+	<!--副本列表-->
+<!--	<BXList name="powerInfoList" properties='{"styleName":"VList", "y":181,"x":25,"width":590,"height":450,"acc":true,"itemSize2":200,"backColor":"0x1E201A"}'>
+		<BXRender  properties='{"width":590,"height":134}'>
+			<BXBackBar name="_back" properties='{"y":0,"styleName":"VerListItem","x":0,"clip":[50,26,50,26],"width":590,"height":127}'/>
+			<BXRender name="_opt" properties='{"y":10,"width":332,"cache":true,"height":108,"x":16}'>
+				<label name="_name" properties='{"y":10,"autoSize":"none","size":24,"x":132,"text":"赤壁之战-前营","color":"0x000000","width":200,"styleName":"label","stroke":0,"height":30}'/>
+				<displayObject definition="BW.gameUI.BG.itemBG108" properties='{"y":0,"width":108,"height":108,"x":0}'/>
+				<imageLoader name="_pic" properties='{"fileName":"ma8","x":8,"y":8,"width":92,"pathFormatName":"horse70","height":92}'/>
+			</BXRender>
+			<BXButton name="_sweep" properties='{"styleName":"button5","x":298,"label":"扫荡","y":59,"width":120,"height":60}'/>
+			<BXButton name="_attack" properties='{"styleName":"button10","x":450,"label":"攻","y":59,"width":120,"height":60}'/>
+		</BXRender>
+	</BXList>
+-->
+	<!--子菜单条-->
+<!--	<subBar id="4" properties='{"y":20,"x":32,"selectID":0}'>
+		<BXActiveIcon properties='{"y":0,"width":96,"skin":"BW.battle.toolBar2.points","height":96,"x":0}'/>
+		<BXActiveIcon properties='{"y":0,"width":96,"skin":"BW.battle.toolBar2.silverMine","height":96,"x":117}'/>
+		<BXActiveIcon properties='{"y":0,"width":96,"skin":"BW.battle.toolBar2.castle","height":96,"x":234}'/>
+		<BXActiveIcon properties='{"y":0,"width":96,"skin":"BW.battle.toolBar2.invade","height":96,"x":351}'/>
+		<BXActiveIcon properties='{"y":0,"width":96,"skin":"BW.battle.toolBar2.enemyState","height":96,"x":468}'/>
+	</subBar>
+-->
+
+	<label name="autoBattleText" properties='{"color":"0xFF0000", "stroke":"0x302010", "mouseEnabled":false, "visible":false}' />
+	
+	<container name="silverTip" properties='{"x":290,"y":280,"initX":290, "initY":280, "labelProperty":{"x":25, "y":20, "width":95,"height":50,"size":18,"align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"120550","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+	
+	<container name="enterBorderTip" properties='{"x":0,"y":580,"initX":0, "initY":580, "labelProperty":{"x":20, "y":32, "width":100,"height":50,"size":18,"align":"center","color":"0xffffcc", "stroke":"0x302010", "textID":"120551","multiline":true},"tweenProperty":{"duration":0.5,"moveGap":8,"direction":1},"classPath":"gameUI.arrow.down","visible":true}'/>
+	
+	
+	<!--地区中势力的详情面板-->
+	<container name="powerInfo">
+		<modalBG/>
+		<!--旧势力背景框-->
+		<!--<displayObject definition="areaScene.bg.PowerInfo" />-->
+		<sprite name="picC" properties='{"x":8, "y":6}' />
+		<buttonBasic name="closeBtn" properties='{"x":275, "y":5, "skin":"skin.CloseBtn"}' />
+		<button name="autoBattleBtn" properties='{"x":240, "y":142, "width":50, "styleName":"button5", "labelID":"120204", "visible":false}' />
+
+<displayObject definition="gameUI.view.PTView" properties='{"width":614,"height":733,"x":16,"y":42}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":568,"height":3,"x":40,"y":686}'/>
+
+		<list name="powerList" properties='{"x":0, "y":0, "columnCount":1, "rowCount":5, "horizontalGap":2, "verticalGap":5}'/>
+
+		<displayObject name="notOpenImage" definition="areaScene.img.NotOpen" properties='{"x":263, "y":150}' />
+		  <!--副本入口样式 -->
+
+<BXButton name="closeBxtn" properties='{"width":160,"x":247,"y":702,"height":48,"label":"取消","styleName":"button12"}'/>
+
+<!-- 增加关卡头像 -->
+	<actpicConfig>
+		<actpic id="1" definition="chuibing" />
+		<actpic id="2" definition="qiangbing" />
+		<actpic id="3" definition="yamenjiang" />
+		<actpic id="4" definition="nishangwuji" />
+		<actpic id="6" definition="nushou" />
+		<actpic id="7" definition="yamenjiang" />
+		<actpic id="8" definition="lianchuiyongshi" />
+		<actpic id="9" definition="lidian" />
+		<actpic id="10" definition="guojia" />
+		<actpic id="11" definition="chihou" />
+		<actpic id="12" definition="dianwei" />
+		<actpic id="13" definition="pangtong" />
+		<actpic id="14" definition="mengshi" />
+		<actpic id="15" definition="qingqibing" />
+		<actpic id="16" definition="jianbing" />
+		<actpic id="17" definition="jinweiqibing" />
+		<actpic id="18" definition="yamenjiang" />
+		<actpic id="19" definition="yongshi" />
+		<actpic id="20" definition="lianchuiyongshi" />
+		<actpic id="21" definition="wuzhang" />
+		<actpic id="22" definition="dutong" />
+		<actpic id="23" definition="lidian" />
+		<actpic id="24" definition="zhangliao" />
+		<actpic id="301" definition="shanbing" />
+		<actpic id="302" definition="chihou" />
+		<actpic id="303" definition="dianwei" />
+		<actpic id="304" definition="pangtong" />
+		<actpic id="305" definition="shensheshou" />
+		<actpic id="306" definition="wuzhang" />
+		<actpic id="307" definition="jianbing" />
+		<actpic id="308" definition="jinweiqibing" />
+		<actpic id="309" definition="yamenjiang" />
+		<actpic id="310" definition="gongbing" />
+		<actpic id="311" definition="mengshi" />
+		<actpic id="312" definition="qingqibing" />
+		<actpic id="313" definition="dutong" />
+		<actpic id="314" definition="lidian" />
+		<actpic id="315" definition="zhugeliang" />
+		<actpic id="401" definition="yuewu" />
+		<actpic id="402" definition="chihou" />
+		<actpic id="403" definition="dianwei" />
+		<actpic id="404" definition="pangtong" />
+		<actpic id="405" definition="zhangfei" />
+		<actpic id="406" definition="shanbing" />
+		<actpic id="407" definition="jianbing" />
+		<actpic id="408" definition="jinweiqibing" />
+		<actpic id="409" definition="yamenjiang" />
+		<actpic id="410" definition="zhaoyun" />
+		<actpic id="411" definition="mengshi" />
+		<actpic id="412" definition="qingqibing" />
+		<actpic id="413" definition="dutong" />
+		<actpic id="414" definition="lidian" />
+		<actpic id="415" definition="sunce" />
+		<actpic id="501" definition="jujinushou" />
+		<actpic id="502" definition="jianbing" />
+		<actpic id="503" definition="jinweiqibing" />
+		<actpic id="504" definition="yamenjiang" />
+		<actpic id="505" definition="tujiyongshi" />
+		<actpic id="506" definition="juchuiyongshi" />
+		<actpic id="507" definition="chihou" />
+		<actpic id="508" definition="dianwei" />
+		<actpic id="509" definition="pangtong" />
+		<actpic id="510" definition="guojia" />
+		<actpic id="511" definition="qingqibing" />
+		<actpic id="512" definition="mengshi" />
+		<actpic id="513" definition="dutong" />
+		<actpic id="514" definition="lidian" />
+		<actpic id="515" definition="xiahoudun" />
+		<actpic id="601" definition="diaochan" />
+		<actpic id="602" definition="chihou" />
+		<actpic id="603" definition="dianwei" />
+		<actpic id="604" definition="pangtong" />
+		<actpic id="605" definition="tujiyongshi" />
+		<actpic id="606" definition="jianshi" />
+		<actpic id="607" definition="jianbing" />
+		<actpic id="608" definition="jinweiqibing" />
+		<actpic id="609" definition="yamenjiang" />
+		<actpic id="610" definition="lianchuiyongshi" />
+		<actpic id="611" definition="mengshi" />
+		<actpic id="612" definition="qingqibing" />
+		<actpic id="613" definition="dutong" />
+		<actpic id="614" definition="lidian" />
+		<actpic id="615" definition="menghuo" />
+		<actpic id="701" definition="jujinushou" />
+		<actpic id="702" definition="jianbing" />
+		<actpic id="703" definition="jinweiqibing" />
+		<actpic id="704" definition="yamenjiang" />
+		<actpic id="705" definition="tujiyongshi" />
+		<actpic id="706" definition="juchuiyongshi" />
+		<actpic id="707" definition="chihou" />
+		<actpic id="708" definition="dianwei" />
+		<actpic id="709" definition="pangtong" />
+		<actpic id="710" definition="guojia" />
+		<actpic id="711" definition="qingqibing" />
+		<actpic id="712" definition="mengshi" />
+		<actpic id="713" definition="dutong" />
+		<actpic id="714" definition="lidian" />
+		<actpic id="715" definition="xiahoudun" />
+		<actpic id="801" definition="diaochan" />
+		<actpic id="802" definition="chihou" />
+		<actpic id="803" definition="dianwei" />
+		<actpic id="804" definition="pangtong" />
+		<actpic id="805" definition="tujiyongshi" />
+		<actpic id="806" definition="jianshi" />
+		<actpic id="807" definition="jianbing" />
+		<actpic id="808" definition="jinweiqibing" />
+		<actpic id="809" definition="yamenjiang" />
+		<actpic id="810" definition="lianchuiyongshi" />
+		<actpic id="811" definition="mengshi" />
+		<actpic id="812" definition="qingqibing" />
+		<actpic id="813" definition="dutong" />
+		<actpic id="814" definition="lidian" />
+		<actpic id="815" definition="menghuo" />
+		<actpic id="901" definition="jujinushou" />
+		<actpic id="902" definition="jianbing" />
+		<actpic id="903" definition="jinweiqibing" />
+		<actpic id="904" definition="yamenjiang" />
+		<actpic id="905" definition="tujiyongshi" />
+		<actpic id="906" definition="juchuiyongshi" />
+		<actpic id="907" definition="chihou" />
+		<actpic id="908" definition="dianwei" />
+		<actpic id="909" definition="pangtong" />
+		<actpic id="910" definition="guojia" />
+		<actpic id="911" definition="qingqibing" />
+		<actpic id="912" definition="mengshi" />
+		<actpic id="913" definition="dutong" />
+		<actpic id="914" definition="lidian" />
+		<actpic id="915" definition="xiahoudun" />
+	</actpicConfig>
+
+	</container>
+
+	<powerRenderer properties='{"itemWidth":571, "itemHeight":111}'>
+		<button name="enterBtn" properties='{"x":0, "y":0, "width":44, "styleName":"button2", "style":{"labelPaddingLeft":0, "labelPaddingRight":0}}' />
+		<displayObject name="tipBG" definition="areaScene.bg.NewSystemOpenTipBG" properties='{"x":19, "y":20, "visible":false}' />
+		<label name="newSystemText" properties='{"x":21, "y":30, "width":65, "autoSize":"none", "align":"center", "color":"0xFFFFFF", "stroke":"0x302010", "mouseEnabled":false, "multiline":true, "height":40, "visible":false}'/>
+<BXRender name='_pwrender' properties='{"width":571,"height":124,"x":38,"y":80}'>
+<BXBackBar properties='{"width":571,"height":111,"x":0,"y":0,"styleName":"VerListItem"}'/>
+<displayObject definition="BW.gameUI.BG.itemBG84" properties='{"width":84,"height":84,"x":18,"y":14}'/>
+<imageLoader name="_attackPic" properties='{"width":70,"height":70,"fileName":"ma8","y":21,"x":26,"pathFormatName":"generalPic70"}'/>
+<label name="_energyText" properties='{"width":120,"size":20,"x":451,"y":15,"autoSize":"none","stroke":0,"height":30,"styleName":"label"}'/>
+<label name="_prestigeText" properties='{"width":130,"size":20,"x":302,"y":62,"autoSize":"none","stroke":0,"height":30,"styleName":"label"}'/>
+<label name="_levelText" properties='{"width":120,"size":20,"x":170,"y":62,"autoSize":"none","stroke":0,"height":30,"styleName":"label"}'/>
+<displayObject name="_ableMic" definition="gameUI.view.HaveDone" properties='{"y":54,"x":108}'/>
+<BXButton name="_attackBtn" properties='{"width":120,"x":435,"y":45,"height":48,"label":"攻","styleName":"button13"}'/>
+<label name="_attackText" properties='{"width":200,"size":24,"x":170,"text":"赤壁之战-前营","y":11,"color":"0xFFFF64","autoSize":"none","stroke":0,"height":30,"styleName":"label"}'/>
+</BXRender>
+	</powerRenderer>
+
+	<!-- 副本信息tip -->
+	<powerIntroTip properties='{"initWidth":130, "initHeight":54, "labelGap":10}'>
+		<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+		<label properties='{"x":12, "y":10, "width":160, "height":30, "size":16, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "textID":"120300"}' />
+		<displayObject definition='gameUI.icon.Line1' properties='{"x":8, "y":32, "width":113}'/>
+		<label name="introText" properties='{"x":12, "y":38, "width":100, "multiline":true, "autoSize":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	</powerIntroTip>
+	
+	<!--进入银矿提示面板-->
+	<container  name="enterSilverTipsPanel" properties='{"styleName":"panel3", "bgWidth":500, "bgHeight":500,"x":70,"y":150 }'>
+		<displayObject properties='{"x":14, "y":49, "width":472, "height":434}' definition='gameUI.icon.Layer' />
+		<displayObject properties='{"x":45, "y":60}' definition='areaScene.EnterSilverTipsBG' /> 
+		<label name="energyCostText" properties='{"x":148, "y":345,"size":20, "color":"0xF6FF76", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":400,"height":30 }'/>
+		<button name="enterBtn" properties='{"x":190, "y":400, "styleName":"button5", "labelID":"110276", "width":120,"height":48}' />
+	</container>
+	
+	<!--蛮族入侵进入面板-->
+
+  <container name="manzuEnterView" properties='{"x":5, "y":70, "args":{"maxW":330, "initX":23, "picPos":[-291, 24, 339, 0], "dur":0.3}}'>
+	<!-- <displayObject definition="gameUI.icon.BlackBG" properties='{"width":640,"height":780,"x":-5,"y":-70}'/> -->
+		<displayObject definition="gameUI.view.PTView" properties='{"width":615,"x":9,"height":703}' />
+		<sprite name="sp" properties='{"y":0}'/>
+		<!--										<mask name="imgMask" target="sp" properties='{"x":24, "y":20,"width":315, "height":350}' />
+													<imageLoader name="img1" parent="sp" properties='{"pathFormatName":"manzuSkimPic",  "y":66, "width":315}' />
+													<imageLoader name="img2" parent="sp" properties='{"pathFormatName":"manzuSkimPic", "y":66, "width":315}' />
+													<imageLoader name="img3" parent="sp" properties='{"pathFormatName":"manzuSkimPic", "y":66, "width":315}' />
+													
+													
+													<displayObject name="libao" definition="areaScene.manzuScene.Box" properties='{"x":150,"y":315,"visible":false}' />
+		-->
+<!-- <displayObject definition="areaScene.manzu.EnterView" properties='{"y":133,"x":177}' /> -->
+<displayObject definition="gameUI.bg.ConcaveFrame" properties='{"width":262,"height":42,"x":164,"y":79}'/>
+	<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":150,"height":447,"x":24,"y":133}'/>
+		<displayObject definition="gameUI.bg.GimpFrame" properties='{"width":435,"height":447,"x":174,"y":133}'/>
+		<displayObject name="double" definition="areaScene.manzu.SixTimes" properties='{"mouseEnabled":false,"x":152,"y":32}'/>
+		<displayObject name="rewardDis" definition="areaScene.manzu.FbReward" properties='{"y":143,"x":49}' />
+		<list name="rewardList" properties='{"x":59, "y":190, "columnCount":1, "rowCount":3,  "horizontalGap":1, "verticalGap":34}'/>
+<!--奖励列表-->
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":3,"x":202,"y":207}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":3,"x":202,"y":281}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":3,"x":202,"y":355}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":3,"x":202,"y":429}'/>
+<displayObject definition="gameUI.icon.Line" properties='{"width":400,"height":3,"x":202,"y":503}'/>
+		<list name="hardList" properties='{"x":270, "y":160, "columnCount":1, "rowCount":6,  "horizontalGap":18, "verticalGap":12}'/>
+<!--奖励列表-->
+		
+	<displayObject name="attackBtn" definition="areaScene.manzu.AttakBtn" properties='{"width":150,"x":403,"height":50,"y":635}' />	
+		<label name="titleText" properties='{"color":"0xFFFFCC","size":18,"bold":true,"x":226,"align":"center","y":3,"width":160,"autoSize":"none","mouseEnabled":false,"stroke":"0x302010"}'/>
+		<label name="leftTimesText" properties='{"size":20,"border":false,"x":161,"y":590,"color":"0xCBCC66","autoSize":"none","stroke":"0x302010","align":"center","width":300,"mouseEnabled":false,"height":28}'/>
+		<label name="levelText" properties='{"color":"0xf8cf11","autoSize":"none","x":178,"align":"right","y":82,"width":170,"size":24,"mouseEnabled":false,"stroke":"0x302010","height":28}'/>
+	
+		<label name="introText" properties='{"color":"0xFFFFCC","autoSize":"none","multiline":true,"x":259,"align":"left","y":369,"width":260,"mouseEnabled":false,"stroke":"0x302010","height":70}'/> 
+		<displayObject name="lastBtn" definition="gameUI.btn.LeftBig1" properties='{"x":90,"visible":true,"y":65}' />
+		<displayObject name="nextBtn" definition="gameUI.btn.LeftBig1" properties='{"scaleX":-1,"x":500,"visible":true,"y":65}' />
+	<!--	<button name="closeBtn" properties='{"skin":"skin.CloseBtn","x":583,"y":6}' /> -->
+     <button name="closeBtn" properties='{"x":100,"y":625,"width":120,"height":48,"label":"取消","styleName":"button12"}'/>
+		<imageLoader  name="namePic" properties='{"pathFormatName":"manzuSkimPic","x":210, "y":83}' /> 
+		<displayObject  definition="areaScene.view.Lv" properties='{"y":89,"x":286}' />
+		<sprite name="level" properties='{"gap":-5,"x":324,"align":"left","classPath":"areaScene.art.ArtNum","y":89}'/>
+	</container>
+	
+	<!-- 经验副本进入面板 -->
+	<container name="expPanel" properties='{"styleName":"panel3","initX":10, "initY":180, "bgWidth":620, "bgHeight":460,"itemGap":10,"titleID":"120604"}'>
+	
+		<displayObject parent="panelMaskC" definition="gameUI.icon.BlackBG"  properties='{"x":-10 , "y":-180,"width":640,"height":790}'/> 
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":19 , "y":60,"width":584,"height":385}'/>
+		
+		<sprite name="introC" properties='{}' />
+		<displayObject definition="areaScene.artText.reward"  properties='{"x":357 , "y":67}'/>
+		<displayObject parent="introC" definition="gameUI.bg.GimpFrame"  properties='{"x":320 , "y":140,"width":260,"height":120}'/>
+		<displayObject parent="introC" definition="BW.gameUI.BG.itemBG84"  properties='{"x":360 , "y":188,"width":54,"height":54}'/>		
+		<displayObject name="goldIcon" definition="BW.gameUI.icon.gold"  properties='{"x":470 , "y":403,"visible":false}'/>		
+		<!-- <displayObject definition="areaScene.bg.fightBtnBg"  properties='{"x":390 , "y":300}'/>	-->	
+		<imageLoader  parent="introC" properties='{"pathFormatName":"goodsPic32","fileName":"exp", "x":362, "y":190,"width":48,"height":48}' />
+		<!-- <displayObject name="fightBtn"  definition="areaScene.manzu.AttakBtn"  properties='{"x":403 , "y":312}'/> -->
+		<label parent="introC" properties='{"x":320, "y":150, "width":120, "height":28, "size":20, "autoSize":"none", "align":"center", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false, "textID":"120601"}' />
+		<label name="expText" parent="introC" properties='{"x":450, "y":198, "color":"0xf8cf11","size":24, "stroke":"0x302010", "autoSize":"none", "align":"left", "width":240, "height":40}'/>
+		<label name="enterNeedText" properties='{"x":210, "y":265,"size":18, "color":"0xf8cf11", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":500, "height":28}'/>
+		
+		<label name="goldText" properties='{"x":368, "y":398,"size":20, "color":"0xf8cf11", "stroke":"0x302010", "autoSize":"none", "align":"right", "width":100, "multiline":true, "height":28,"visible":false}'/>
+		<label name="freeText" properties='{"x":388, "y":398,"size":20, "color":"0xf8cf11", "stroke":"0x302010", "autoSize":"none", "align":"center", "width":120,  "height":28,"textID":"120606","visible":false}'/>
+		
+		<label name="useExpBallIntroText" properties='{"x":356, "y":308,"size":18, "textID":"120605","color":"0xf8cf11", "stroke":"0x302010", "autoSize":"none", "align":"left", "width":240, "height":28 }'/>
+		<label properties='{"text":"25","size":18,"width":30,"height":28,"x":525,"y":308,"color":"0xf8cf11", "stroke":"0x302010", "autoSize":"none", "align":"left"}'/>
+		<displayObject  definition="BW.gameUI.icon.gold"  properties='{"x":547 , "y":312}'/>		
+		<buttonBasic name="expSeclectBtn" properties='{"x":322 , "y":308,"skin":"skin.CheckBox1","width":32,"height":32 }'/>
+		
+		<button name="fightBtn" properties='{"x":380, "y":348, "width":140,"height":48, "artName":"areaScene.artBtn.fight","styleName":"button11"}' /> 
+		
+		<sprite name="underC" properties='{ "x": 35, "y": 78 }' />
+
+	
+	
+	
+	</container>
+	
+	
+	<ExpSpItem properties='{"scale":0.95,"itemHeight":117,"tweenDur":0.2}' >		
+		<sprite name="picC" properties='{"mouseEnabled":false}' />
+		<displayObject name="noOpenArtText" definition="areaScene.img.NotOpen" properties='{"x":90, "y":48, "visible":false,"mouseEnabled":false}' />
+		<displayObject name="noSelected" definition="areaScene.view.noSelected" properties='{"x":-2, "y":-2, "visible":false,"mouseEnabled":false}' />
+		<displayObject name="selectedView" definition="areaScene.view.selectedState" properties='{"x":-9, "y":-9, "visible":false,"mouseEnabled":false}' />
+		<displayObject name="halfPriceView" definition="areaScene.view.halfPrice" properties='{"x":194, "y":0, "visible":false,"mouseEnabled":false}' />
+	</ExpSpItem>
+	
+	<!--蛮族奖励 呈示器 -->
+	<ManzuRewardRenderer properties='{"itemHeight":100,"itemWidth":100}'>
+		<displayObject definition="BW.gameUI.BG.itemBG84"  properties='{"x":0 , "y":0,"height":84,"width":84}'/>	
+		<imageLoader name="pic" properties='{"pathFormatName":"gemstone32",  "x":6, "y":6, "width":70, "height":70}' />	
+		<label  name="rewardText" properties='{"x":0, "y":90, "width":120, "height":28, "size":20, "autoSize":"none", "align":"left", "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false, "border":false}'/>
+	</ManzuRewardRenderer>
+	
+	<!--蛮族难度列表 呈示器 2.12版 -->
+	<ManzuLevelRenderer properties='{"itemWidth":340, "itemHeight":60}'>
+		<label  name="levelText" properties='{"x":0, "y":0, "width":100, "height":40, "size":24, "bold":true, "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false, "border":false}'/>	
+		<displayObject name="pro" definition="areaScene.manzu.Process" properties='{"x":120, "y":10, "visible":false}' />		
+		<label  name="needText" properties='{"x":90, "y":0, "width":200, "height":40,  "autoSize":"none", "align":"center", "size":24, "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false, "border":false,"text":"needtext" }'/>
+		<label  name="proText" properties='{"x":90, "y":0, "width":200, "height":40,   "autoSize":"none", "align":"center","size":24, "color":"0xCBCC66", "stroke":"0x302010" , "mouseEnabled":false, "border":false,"text":"protext"}'/>				
+		
+		<displayObject name="done" definition="gameUI.view.HaveDone"  properties='{"x":140 , "y":16,"visible":false}'/>	<!--已完成-->
+		
+	</ManzuLevelRenderer>
+	
+	
+
+	
+</config>

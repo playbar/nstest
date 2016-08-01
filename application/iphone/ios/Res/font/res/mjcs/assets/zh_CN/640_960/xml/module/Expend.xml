@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--礼包。VIP-->
+<config properties='{"styleName":"window1","titleID":"660009"}'>
+		<BXRender parent="panelMaskC" properties='{"x":0 , "y":0,"width":640,"height":820,"bgColor":"0xff5b6356"}'/>
+<!-- VIP界面 暂时不要-->
+<!-- <container name="vip">
+	<displayObject definition="gameUI.icon.Layer"  properties='{"x":20 , "y":41,"width":620,"height":372}'/>
+	<displayObject name="vipRate" definition="Vip.view.rate"  properties='{"x":34 , "y":55}'/>
+	<displayObject name="payBtn" definition="Vip.btn.payBtn"  properties='{"x":262 , "y":85}'/>
+	<displayObject definition="Vip.icon.triangle"  properties='{"x":33 , "y":80}'/>
+	<displayObject name="nextTriIcon" definition="Vip.icon.triangle"  properties='{"x":617 , "y":80}'/>
+	<label  name="vipCostText" properties='{"x":306, "y":58, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+	<label  name="curLvText" properties='{"x":30, "y":90, "color":"0xCBCC64", "stroke":"0x302010", "border":false}'/>
+	<label  name="nextLvText" properties='{"x":625, "y":90, "color":"0xCBCC64", "autoSize":"right","stroke":"0x302010", "border":false}'/>
+	<label  name="nextFunText" properties='{"x":30, "y":140, "color":"0xCBCC64", "stroke":"0x302010", "border":false}'/>
+	
+	<label  properties='{"x":180, "y":140, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"660006"}'/> 
+	<linkText  name="moreFunURL" properties='{"style":{"overStyle":{"underline":true}},"x":265, "y":140, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"660007","textType":"htmlText"}'/> 
+	
+	<label  name="myFunText" properties='{"x":30, "y":255, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"textID":"660006"}'/>
+	
+	<list name="nextFunList" properties='{"x":35, "y":172, "columnCount":3, "rowCount":1, "horizontalGap":16, "verticalGap":0}' />
+	<list name="curFunList" properties='{"x":35, "y":275, "columnCount":15, "rowCount":3, "horizontalGap":3, "verticalGap":3}' />
+</container> -->
+
+<!-- 新VIP界面 -->
+<container name="newVip" properties='{"y":18,"tabBtnMC":"BW.gameUI.button.vip"}'>
+	<displayObject definition="gameUI.icon.Layer"  properties='{"x":20 , "y":20,"width":600,"height":665}'/>
+	<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":27 , "y":48,"width":585,"height":230}'/>
+	<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":27 , "y":280,"width":585,"height":395}'/>
+	<displayObject definition="BW.gameUI.BG.itemBG108"  properties='{"x":38 , "y":60}'/>
+	<imageLoader name="generalPic" properties='{"pathFormatName":"generalPic70",  "x":46, "y":68}' />
+
+	<label  name="generalNameText" properties='{"x":160, "y":60, "bold":true,"color":"0xE5EF99", "stroke":"0x302010", "border":false}'/>
+	<label  name="upVipText" properties='{"x":160, "y":85,"size":20,"autoSize":"none","width":200,"height":80,"align":"left","color":"0xE5EF99","stroke":"0x302010","multiline":true}'/>
+	
+	<displayObject name="vipIconMC" definition="Expend.newVip.vipIcon"  properties='{"x":440 , "y":56}'/>
+	<label  name="vipLvText" properties='{"x":362, "y":176,"size":20,"autoSize":"none","width":300,"height":30,"align":"center","color":"0xDEBB46","stroke":"0x302010"}'/>
+		<displayObject definition="gameUI.icon.Line"  properties='{"x":93 , "y":200, "width":425,"mouseEnabled":false}'/>	
+		<label  properties='{"x":286, "y":190, "size":20,"autoSize":"none","width":200,"height":30,"align":"left","color":"0x8D9E3D", "stroke":"0x302010","text":"当前特权", "mouseEnabled":false}'/>
+	<list name="funList" properties='{"x":40, "y":215, "columnCount":10, "rowCount":1, "horizontalGap":5, "verticalGap":0}' />
+	
+	<displayObject  definition="Expend.newVip.bigTitleText"  properties='{"x":40 , "y":295}'/>
+	<list name="bigPicList" properties='{"x":40, "y":330, "columnCount":4, "rowCount":1, "horizontalGap":13, "verticalGap":0}' />
+	<displayObject name="payBtn" definition="Vip.btn.payBtn"  properties='{"x":240 , "y":607}'/>
+	<linkText  name="seeVipText" properties='{"style":{"overStyle":{"underline":true}},"x":400, "y":295, "color":"0xDEBB46", "stroke":"0x302010", "border":false,"textID":"660512","textType":"htmlText"}'/> 
+</container>
+
+<!-- 礼包界面 -->
+<container name="giftBag" properties='{"y":18,"tabBtnMC":"BW.gameUI.button.libao"}'>
+	<displayObject definition="gameUI.icon.Layer"  properties='{"x":17 , "y":41,"width":600,"height":430}'/>
+	<displayObject definition="gameUI.icon.BlackBG"  properties='{"x":240 , "y":475,"width":300,"height":36}'/>
+  <displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":280 , "y":435,"width":60,"height":30}'/>
+	
+	<label properties='{"x":90, "y":58, "width":200,  "height":28, "size":24, "autoSize":"none", "align":"left", "bold":true, "color":"0xCBCC66", "stroke":"0x302010", "textID":"660202"}'/>
+	<label properties='{"x":350, "y":58, "width":200,  "height":28, "size":24, "autoSize":"none", "align":"left", "bold":true, "color":"0xCBCC66", "stroke":"0x302010", "textID":"660203"}'/>
+	<label properties='{"x":470, "y":58, "width":200,  "height":28, "size":24, "autoSize":"none", "align":"left", "bold":true, "color":"0xCBCC66", "stroke":"0x302010", "textID":"660204"}'/>
+	<label properties='{"x":70, "y":478, "width":200,  "height":28, "size":24, "autoSize":"none", "align":"left", "bold":true, "color":"0xDEBB46", "stroke":"0x302010", "textID":"660205"}'/>
+
+	<list name="giftBagList" properties='{"x":40, "y":90, "columnCount":1, "rowCount":5, "horizontalGap":16, "verticalGap":12}' />
+	<page name="page" properties='{"x":240, "y":435,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":104 },
+								"labelProp":{"x":40, "y":2, "width":60, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+								
+	<inputText name="giftYardsIT" properties='{"text":"input","x":240, "y":480, "height":28,"width":260,"border":false, "size":20, "autoSize":"none", "align":"left", "color":"0xFDFFCB","stroke":"0x302010","editable":true}'/>
+	<button name="getBtn" properties='{"x":540, "y":476, "width":64, "styleName":"button3", "labelID":"660201"}' />
+</container>
+
+<!-- VIP特权介绍界面 -->
+<container name="vipIntro" properties='{"btnCount":7,"y":18,"tabBtnMC":"BW.gameUI.button.tequan"}' >
+	<displayObject definition="gameUI.icon.Layer"  properties='{"x":17 , "y":41,"width":600,"height":465}'/>
+	<displayObject definition="gameUI.icon.Layer"  properties='{"x":80 , "y":41,"width":531,"height":455}'/>
+	<label   properties='{"x":15, "y":125, "size":32,"autoSize":"none","width":75,"height":300,"align":"center","color":"0xDEBB46", "stroke":"0x302010","bold":true, "border":false,"textID":"660303"}'/>
+	<label   properties='{"x":90, "y":90, "size":20,"color":"0xCBCC64", "stroke":"0x302010","bold":true, "border":false,"textID":"660304"}'/>
+	<label   properties='{"x":90, "y":150, "size":20,"color":"0xCBCC64", "stroke":"0x302010","bold":true, "border":false,"textID":"660305"}'/>
+	<list name="btnList" properties='{"x":80, "y":43, "columnCount":16, "rowCount":1, "horizontalGap":0, "verticalGap":0}' />
+	<label  name="vipCostText" properties='{"x":100, "y":120,"size":20, "color":"0xDEBB46", "stroke":"0x302010", "border":false}'/>
+	<label  name="vipIntroText" properties='{"x":100, "y":180,"size":20, "color":"0xFFFFCC", "stroke":"0x302010", "border":false,"leading":10}'/>
+	
+	
+</container>
+
+<!-- 消费提示界面 -->
+	<container name="chargeTipPanel" properties='{"y":18,"tabBtnMC":"BW.gameUI.button.xiaofei"}' >
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":17 , "y":38,"width":600,"height":605}'/>
+		<displayObject definition="gameUI.icon.Line"  properties='{"x":27 , "y":80,"width":575}'/>
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":280 , "y":605,"width":60,"height":30}'/>
+		<label   properties='{"x":27, "y":45, "size":24,"autoSize":"none","width":650,"height":200,"align":"center","color":"0xDEBB46", "stroke":"0x302010","textID":"660402"}'/>
+		<list name="chargeList" properties='{"x":30, "y":100, "columnCount":2, "rowCount":12,"horizontalGap":50, "verticalGap":18}' />
+		<page name="page" properties='{"x":240, "y":605,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":104 },
+								"labelProp":{"x":40, "y":2, "width":60, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+		
+		<button name="selectAllBtn" properties='{"x":160, "y":655, "width":110, "styleName":"button3", "labelID":"660403"}' />
+		<button name="cancelAllBtn" properties='{"x":370, "y":655, "width":110, "styleName":"button3", "labelID":"660404"}' />
+	</container>
+	
+<!-- 提醒面板 -->
+	<container name="alertPanel" properties='{"y":18,"tabBtnMC":"BW.gameUI.button.tixing"}' >
+		<displayObject definition="gameUI.icon.Layer"  properties='{"x":17 , "y":38,"width":600,"height":605}'/>
+		<displayObject definition="gameUI.icon.Line"  properties='{"x":27 , "y":80,"width":575}'/>
+		<displayObject definition="gameUI.icon.InputTextBG"  properties='{"x":280 , "y":605,"width":60,"height":30}'/>
+		<label   properties='{"x":27, "y":45, "size":24,"autoSize":"none","width":570,"height":200,"align":"center","color":"0xDEBB46", "stroke":"0x302010","textID":"660602"}'/>
+		<list name="alertList" properties='{"x":30, "y":100, "columnCount":3, "rowCount":12,"horizontalGap":2, "verticalGap":18}' />
+		<page name="page" properties='{"x":240, "y":605,
+								"pervBtnProp":{"skin":"skin.page2.PrevBtn","x":8},
+								"nextBtnProp":{"skin":"skin.page2.NextBtn", "x":104 },
+								"labelProp":{"x":40, "y":2, "width":60, "height":24, "autoSize":"none", "align":"center", "stroke":"0x282418","color":"0xCCCCCC"}
+								}' />
+		
+		<button name="selectAllBtn" properties='{"x":160, "y":655, "width":110, "styleName":"button3", "labelID":"660403"}' />
+		<button name="cancelAllBtn" properties='{"x":370, "y":655, "width":110, "styleName":"button3", "labelID":"660404"}' />
+	</container>
+
+
+<!-- =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 分割 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@分割@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- =@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@分割@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+<GiftTips properties='{"initWidth":190, "initHeight":55}'>
+	<displayObject name="bg" definition='skin.DefaultToolTip$bg' />
+	<label name="giftName" properties='{"x":12, "y":12, "width":172, "height":22, "size":20, "bold":true, "autoSize":"none", "align":"left", "color":"0xFFFFCC", "stroke":"0x302010", "mouseEnabled":false}' />
+	<displayObject definition='gameUI.icon.Line1' properties='{"x":5, "y":36, "width":180}'/>
+	<list name="tipsList" properties='{"x":12, "y":44, "columnCount":1, "rowCount":88, "horizontalGap":0, "verticalGap":0}' />
+</GiftTips>
+
+	<!-- 下级VIP特权项呈器 -->
+	<VipNextFunRenderer>
+		<displayObject  definition="Vip.view.nextFunBg"  properties='{"x":0 , "y":0}'/>
+		<imageLoader name="pic" properties='{"pathFormatName":"vipIcon",  "x":15, "y":15}' />	
+		<label  name="introText" properties='{"x":55, "y":20, "color":"0xCBCC64", "stroke":"0x302010", "border":false,"multiline":"true","width":120}'/>
+	</VipNextFunRenderer>
+	
+	<!-- 已经有的VIP特权项呈器 -->
+	<VipCurFunRenderer properties='{"itemWidth":52,"itemHeight":52}'>		
+		<imageLoader name="pic" properties='{"pathFormatName":"vipIcon",  "x":0, "y":0}' />	
+		<displayObject name="blackMask" definition="Expend.view.blackMask"  properties='{"x":0 , "y":0,"visible":false}'/>
+	</VipCurFunRenderer>	
+	
+	<!-- 新VIP界面大图片项呈器 -->
+	<NewVipBigPicRenderer properties='{"itemWidth":135,"itemHeight":136}'>
+		<displayObject  definition="Expend.newVip.bigPicBG"  properties='{"x":0 , "y":0}'/>
+		<displayObject name="bigPicMC"  definition="expend.newVip.bigPic"  properties='{"x":7 , "y":7}'/>	
+		<label  name="funIntroText" properties='{"mouseEnabled":true,"x":0, "y":130, "color":"0xE5EF99", "size":20,"stroke":"0x302010","autoSize":"none", "height":130,"align":"left","width":130,"textType":"htmlText","multiline":true}'/>
+	</NewVipBigPicRenderer>
+	
+	<!-- 礼包列表项呈器 -->
+	<GiftBagRenderer properties='{"itemWidth":545,"itemHeight":56}'>
+		<displayObject  definition="gameUI.bg.ConcaveFrame"  properties='{"x":0 , "y":0,"width":545,"height":50}'/>
+		<button name="getBtn" properties='{"x":285, "y":7, "width":80, "styleName":"button3", "labelID":"660200","visible":false}' />
+		<label  name="giftNameText" properties='{"x":10, "y":10, "color":"0xCBCC64", "stroke":"0x302010", "border":false}'/> 
+		<label  name="useTimeText" properties='{"x":400, "y":10, "color":"0xCBCC64", "stroke":"0x302010", "border":false}'/> 
+	</GiftBagRenderer>	
+	
+	
+	<!-- tip -->
+	<GiftTipsItemRenderer properties='{"itemWidth":36,"itemHeight":20}'>
+		<label  name="nameText" properties='{"x":10, "y":0, "color":"0xCBCC64", "stroke":"0x302010", "border":false}'/> 
+		<label  name="countText" properties='{"x":120, "y":0, "color":"0xFFFFCC", "stroke":"0x302010", "border":false}'/> 
+	</GiftTipsItemRenderer>	
+	
+	<!-- tip -->
+	<VipIntroRenderer properties='{"itemWidth":48,"itemHeight":20,"skin":"skin.TabButton2","width":76}'>
+		<!-- <displayObject  definition="skin.TabButton2"  properties='{"x":0 , "y":0,"width":560,"height":40}'/> -->
+		<label  name="titleText" properties='{"x":17, "y":8, "size":20,"bold":true,"color":"0xCBCD67", "stroke":"0x302010", "border":false}'/> 
+	</VipIntroRenderer>	
+
+		<!-- 消费呈视器 -->
+	<ChargeRenderer properties='{"itemWidth":220,"itemHeight":25}'>
+		<checkBox name="ifTipCB" properties='{"x":0, "y":0, "width":220, "styleName":"checkBox1"}'/>
+	</ChargeRenderer>	
+
+
+</config>

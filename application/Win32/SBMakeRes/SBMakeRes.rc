@@ -1,0 +1,267 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\SBMakeRes.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Vp3000Doc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SBMakeRes"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "SBMakeRes 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_SBMAKERES_DIALOG DIALOGEX 0, 0, 258, 294
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SBMakeRes"
+FONT 9, "System"
+BEGIN
+    EDITTEXT        IDC_SOURCE,25,7,212,14,ES_AUTOHSCROLL
+    LTEXT           "资源",IDC_STATIC,7,10,17,8
+    PUSHBUTTON      "...",IDC_BROWNS,238,7,13,14
+    EDITTEXT        IDC_DST,25,23,212,14,ES_AUTOHSCROLL
+    LTEXT           "目标",IDC_STATIC,7,25,17,8
+    PUSHBUTTON      "...",IDC_BROWNS2,238,23,13,14
+    EDITTEXT        IDC_OUTPUT,7,41,195,175,ES_MULTILINE | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    PUSHBUTTON      "生成",IDC_START,207,41,44,14
+    PUSHBUTTON      "停止",IDC_STOP,207,58,44,14
+    PUSHBUTTON      "退出",IDCANCEL,208,273,43,14
+    CONTROL         "Progress1",IDC_PROCESS,"msctls_progress32",WS_BORDER,7,
+                    276,195,11
+    PUSHBUTTON      "清除",IDC_CLEAR,207,78,44,14
+    PUSHBUTTON      "排序表",IDC_SORTTAB,207,97,44,14
+    PUSHBUTTON      "哈希表",IDC_HASH,207,116,44,14
+    PUSHBUTTON      "指数表",IDC_LOG,207,135,44,16
+    PUSHBUTTON      "字库",IDC_FONTS,207,223,44,14
+    PUSHBUTTON      "汉字表",IDC_CHINESE,207,155,44,16
+    LTEXT           "字体",IDC_STATIC,7,220,17,8
+    COMBOBOX        IDC_FONTLIST,25,218,86,244,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_SAMPLE,"Button",BS_OWNERDRAW | WS_TABSTOP,7,233,
+                    195,54,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "转换数组",IDC_ARRAY,208,177,43,14
+    COMBOBOX        IDC_FONTLIST2,116,218,86,244,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "比例:",IDC_STATIC,209,197,19,8
+    EDITTEXT        IDC_PECENT,210,207,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_PSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,240,209,10,14
+    CONTROL         "全字库",IDC_FULLFONT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,208,242,40,10
+END
+
+DIRBROWNS DIALOG DISCARDABLE  0, 0, 187, 164
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "浏览目录"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定[&O]",IDOK,136,17,44,14
+    PUSHBUTTON      "取消[&C]",IDCANCEL,136,36,44,14
+    LTEXT           "目录名称:",IDC_STATIC,7,7,35,8
+    EDITTEXT        IDC_PATHNAME,7,17,123,14,ES_AUTOHSCROLL
+    LTEXT           "驱动器:",IDC_STATIC,7,135,27,8
+    COMBOBOX        IDC_DRVLIST,7,145,124,94,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_DIRTREE,7,33,123,100,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "SBMakeRes Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "SBMakeRes\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SBMakeRes.EXE\0"
+            VALUE "ProductName", "SBMakeRes 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_SBMAKERES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    "DIRBROWNS", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DIRBROWNS           BITMAP  DISCARDABLE     "res\\dirbrown.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于Symbian资源生成(&A)..."
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\SBMakeRes.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

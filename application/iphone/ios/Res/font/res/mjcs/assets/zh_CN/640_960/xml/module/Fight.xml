@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--战斗模块配置文件-->
+<config>
+	<sprite name="imageMovieC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+	<sprite name="numberMovieC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+	<sprite name="bitmapEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+	
+	
+	<!--角色战斗中UI-->
+	<avatarFightUI properties='{"mouseEnabled":false, "mouseChildren":false}'>
+		<sprite name="stateEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<sprite name="otherEffectC" properties='{"mouseEnabled":false, "mouseChildren":false}'/>
+		<displayObject name="ui" definition="fight.ui.Fight" properties='{"x":-10, "y":-115}' />
+		<label name="levelText" properties='{"width":40, "height":16, "x":-48, "y":-83, "autoSize":"none", "align":"right", "color":"0xFFFFCC",  "stroke":"0x151515", "mouseEnabled":false, "visible":false}' />
+	</avatarFightUI>
+	
+	<!--角色身上的“获得UI”-->
+	<avatarGainUI properties='{
+		"mouseEnabled":false, "mouseChildren":false,
+		"textProp":{"y":-60, "alpha":0, "color":"0x00CC00", "stroke":"0x151515"},
+		"artNumProp":{"y":-60, "align":"center", "classPath":"fight.ui.NumberJyan",  "mouseEnabled":false},
+		"startArgs":{"y":-80, "duration":0.2, "delay":0 },
+		"endArgs":{"y":-98, "duration":0.2, "delay":0.2 },
+		"stopArgs":{"addY":-18, "duration":0.2, "delay":0.4 },
+		"hideArgs":{"duration":0.3, "delay":0.7 }
+		}'>
+	</avatarGainUI>
+	
+	<!--图片动画（暴击、闪避等）-->
+	<imageMovie properties='{"mouseEnabled":false, "mouseChildren":false, "yOffsets":-40, "yOffsets1":-70}' />
+	
+	<!--文字动画（加血、减血）-->
+	<numberMovie properties='{"addHpTextColor":"0x00FF00", "subHpTextColor":"0xEE2222", "addHpClassPath":"fight.ui.NumberGreed", "subHpClassPath":"fight.ui.NumberRed",  "yForm":-55, "yOffsets":-40, "mouseEnabled":false, "mouseChildren":false, "yOffsets1":-70}'>
+		<!--<label name="contentText" properties='{"font":"Arial", "size":25, "stroke":"0x151515", "mouseEnabled":false}' />-->
+		<sprite name="content" properties='{"mouseEnabled":false}' />
+	</numberMovie>
+	
+	<!--技能名称动画-->
+	<skillNameMovie params='{"startY":20, "showY":0, "hideY":-10}' />
+</config>
